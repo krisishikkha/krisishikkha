@@ -598,5 +598,4 @@ const QUESTIONS = [
   answer: 2,
   explanation: "IPM-এর লক্ষ্য পরিবেশবান্ধব ও সমন্বিত উপায়ে বালাই দমন করা, যাতে রাসায়নিকের ব্যবহার সীমিত থাকে। (Source: FAO IPM Guide)(https://www.fao.org/3/y5053e/y5053e.pdf?utm_source=chatgpt.com)"
 }
-
 ];
