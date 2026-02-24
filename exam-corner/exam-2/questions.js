@@ -251,8 +251,6 @@ const QUESTIONS = [
   answer: 0,
   explanation: "উঠোন বৈঠকে সাধারণত কোনো কঠিন সংখ্যা নির্দিষ্ট থাকে না; ২৫‑৩০ জন অংশগ্রহণ সাধারণ কথা, তবে স্থানভেদে বেশি‑ কম হতে পারে। (Source: FAO Agricultural Extension):contentReference[oaicite:20]{index=20}"
 },
-  const QUESTIONS_NEXT = [
-
 {
   question: "কৃষক সভায় কৃষকদের মধ্যে কী সরবরাহ করা হয়?",
   options: [
