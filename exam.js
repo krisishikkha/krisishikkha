@@ -1,3 +1,11 @@
+// -------------------- Bengali Font Base64 --------------------
+// এখানে SolaimanLipi.ttf ফন্টের base64 কোড বসাতে হবে
+// উদাহরণ:
+const solaimanLipiBase64 = `
+AAEAAAATAQAABAAwR0RFRgAA... (এখানে পুরো base64 কোড থাকবে)
+`;
+
+// -------------------- Global Variables --------------------
 let examStartTime;
 let allResults = [];
 let userAnswers = [];
@@ -70,7 +78,6 @@ function initExam(examId) {
 
     document.body.appendChild(script);
 }
-
 // -------------------- Render Questions --------------------
 function renderQuestions() {
     const container = document.getElementById("examContainer");
@@ -225,7 +232,6 @@ function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // বাংলা ফন্ট এম্বেড করতে হবে (solaimanLipiBase64 আগে ডিফাইন করতে হবে)
     doc.addFileToVFS("SolaimanLipi.ttf", solaimanLipiBase64);
     doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
     doc.setFont("SolaimanLipi");
@@ -271,4 +277,4 @@ function downloadAllResultsPDF() {
     });
 
     doc.save("all-results.pdf");
-             }
+}
