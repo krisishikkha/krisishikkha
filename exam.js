@@ -13,9 +13,7 @@ function validateAccess() {
         return;
     }
 
-    const params = new URLSearchParams(window.location.search);
-    const examId = params.get("exam");
-
+    let examId = getActiveExamId();
     const validCodes = (EXAM_STATUS[examId].codes || []);
 
     if (!validCodes.includes(code)) {
@@ -26,14 +24,27 @@ function validateAccess() {
     document.getElementById("loginSection").style.display = "none";
     document.getElementById("examMain").style.display = "block";
 
-    initExam();
+    initExam(examId);
 }
 
-function initExam() {
-    examStartTime = new Date();
-
+// ✅ অটোমেটিক examId সিলেকশন
+function getActiveExamId() {
     const params = new URLSearchParams(window.location.search);
-    const examId = params.get("exam");
+    let examId = params.get("exam");
+
+    if (!examId) {
+        for (const id in EXAM_STATUS) {
+            if (EXAM_STATUS[id].visible && EXAM_STATUS[id].status === "live") {
+                examId = id;
+                break;
+            }
+        }
+    }
+    return examId;
+}
+
+function initExam(examId) {
+    examStartTime = new Date();
 
     if (!examId || !EXAM_STATUS[examId]) {
         document.body.innerHTML = "<h2>Invalid Exam ID</h2>";
@@ -208,4 +219,23 @@ function submitExam() {
 }
 
 function downloadAnswerSheetPDF() {
-    const { jsPDF } = window.jsp
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(14);
+    doc.text("উত্তরপত্র", 10, 10);
+
+    QUESTIONS.forEach((q, index) => {
+        const userAns = userAnswers[index];
+        const correctAns = q.answer;
+
+        let ansText = userAns === undefined ? "উত্তর দেননি" : q.options[userAns];
+        doc.text(`${index + 1}. ${q.question}`, 10, 20 + index * 30);
+        doc.text(`আপনার উত্তর: ${ansText}`, 10, 25 + index * 30);
+        doc.text(`সঠিক উত্তর: ${q.options[correctAns]}`, 10, 30 + index * 30);
+        doc.text(`ব্যাখ্যা: ${q.explanation}`, 10, 35 + index * 30);
+    });
+
+    doc.save("answer-sheet.pdf");
+}
