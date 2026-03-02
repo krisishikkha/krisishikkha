@@ -218,11 +218,21 @@ function submitExam() {
     `;
 }
 
+// ✅ বাংলা ফন্ট এম্বেড করে PDF তৈরি
 function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    doc.setFont("helvetica", "normal");
+    // এখানে একাধিক বাংলা ফন্ট যুক্ত করা যাবে
+    doc.addFileToVFS("SolaimanLipi.ttf", solaimanLipiBase64);
+    doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
+
+    doc.addFileToVFS("NotoSansBengali.ttf", notoSansBengaliBase64);
+    doc.addFont("NotoSansBengali.ttf", "NotoSansBengali", "normal");
+
+    // ✅ ডিফল্ট বাংলা ফন্ট সেট করুন
+    doc.setFont("SolaimanLipi");
+
     doc.setFontSize(14);
     doc.text("উত্তরপত্র", 10, 10);
 
@@ -231,10 +241,12 @@ function downloadAnswerSheetPDF() {
         const correctAns = q.answer;
 
         let ansText = userAns === undefined ? "উত্তর দেননি" : q.options[userAns];
-        doc.text(`${index + 1}. ${q.question}`, 10, 20 + index * 30);
-        doc.text(`আপনার উত্তর: ${ansText}`, 10, 25 + index * 30);
-        doc.text(`সঠিক উত্তর: ${q.options[correctAns]}`, 10, 30 + index * 30);
-        doc.text(`ব্যাখ্যা: ${q.explanation}`, 10, 35 + index * 30);
+        let y = 20 + index * 40;
+
+        doc.text(`${index + 1}. ${q.question}`, 10, y);
+        doc.text(`আপনার উত্তর: ${ansText}`, 10, y + 5);
+        doc.text(`সঠিক উত্তর: ${q.options[correctAns]}`, 10, y + 10);
+        doc.text(`ব্যাখ্যা: ${q.explanation}`, 10, y + 15);
     });
 
     doc.save("answer-sheet.pdf");
