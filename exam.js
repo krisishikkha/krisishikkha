@@ -208,7 +208,6 @@ function submitExam() {
         end: examEndTime
     });
 
-    // ✅ নতুন ফিচার: উত্তরপত্র PDF ডাউনলোড বাটন
     examMain.innerHTML += `
       <div style="margin-top:20px;">
         <button onclick="downloadAnswerSheetPDF()">
@@ -218,12 +217,11 @@ function submitExam() {
     `;
 }
 
-// ✅ বাংলা ফন্ট এম্বেড করে উত্তরপত্র PDF তৈরি
+// ✅ উত্তরপত্র PDF (বাংলা ফন্ট সহ)
 function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // বাংলা ফন্ট এম্বেড (base64 ফন্ট কোড আগে যোগ করতে হবে)
     doc.addFileToVFS("SolaimanLipi.ttf", solaimanLipiBase64);
     doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
     doc.setFont("SolaimanLipi");
@@ -247,7 +245,7 @@ function downloadAnswerSheetPDF() {
     doc.save("answer-sheet.pdf");
 }
 
-// ✅ বাংলা ফন্ট এম্বেড করে রেজাল্টস PDF তৈরি (Admin)
+// ✅ সকল পরীক্ষার্থীর ফলাফল PDF (Admin, বাংলায়)
 function downloadAllResultsPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -259,4 +257,8 @@ function downloadAllResultsPDF() {
     doc.setFontSize(14);
     doc.text("সকল পরীক্ষার্থীর ফলাফল", 10, 10);
 
-    allResults.forEach((
+    allResults.forEach((res, index) => {
+        let y = 20 + index * 30;
+        doc.text(`${index + 1}. ${res.name}`, 10, y);
+        doc.text(`✔️ সঠিক: ${res.correct}`, 10, y + 5);
+        doc.text(`❌ ভুল: ${res.wrong}`, 10, y + 10
