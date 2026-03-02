@@ -226,65 +226,65 @@ function submitExam() {
     });
 }
 function downloadAllResultsPDF() {
-    const doc = new jsPDF();
+  const doc = new jsPDF();
 
-    // Exam ID থেকে Exam Title আনা
-    const params = new URLSearchParams(window.location.search);
-    const examId = params.get("exam") || "Exam";
-    const examTitle = EXAM_STATUS[examId]?.title || examId;
+  // Exam ID থেকে Exam Title আনা
+  const params = new URLSearchParams(window.location.search);
+  const examId = params.get("exam") || "Exam";
+  const examTitle = EXAM_STATUS[examId]?.title || examId;
 
-    // উপরের হেডার অংশ
-    doc.setFontSize(22);
-    doc.text("রেজাল্ট শীট", 105, 20, { align: "center" });
+  // Header Section
+  doc.setFontSize(22);
+  doc.text("Result Sheet", 105, 20, { align: "center" });
 
-    doc.setFontSize(18);
-    doc.text("কৃষি শিক্ষা শিক্ষক নিবন্ধন পরীক্ষা ২০২৬", 105, 30, { align: "center" });
+  doc.setFontSize(18);
+  doc.text("Agriculture Teacher Registration Exam 2026", 105, 30, { align: "center" });
 
-    doc.setFontSize(14);
-    doc.text(`পরীক্ষা : ${examTitle}`, 105, 40, { align: "center" });
+  doc.setFontSize(14);
+  doc.text(`Exam : ${examTitle}`, 105, 40, { align: "center" });
 
-    // ওয়াটারমার্ক
-    doc.setFontSize(40);
-    doc.setTextColor(200, 200, 200);
-    doc.text("krisishikkha.com", 105, 150, { align: "center", angle: 30 });
-    doc.setTextColor(0, 0, 0);
+  // Watermark
+  doc.setFontSize(40);
+  doc.setTextColor(200, 200, 200);
+  doc.text("krisishikkha.com", 105, 150, { align: "center", angle: 30 });
+  doc.setTextColor(0, 0, 0);
 
-    // টেবিল হেডার
-    let startY = 60;
-    doc.setFontSize(12);
-    doc.text("নাম", 20, startY);
-    doc.text("সঠিক", 60, startY);
-    doc.text("ভুল", 80, startY);
-    doc.text("উত্তর দেয়নি", 100, startY);
-    doc.text("শতাংশ", 130, startY);
-    doc.text("শুরু সময়", 160, startY);
-    doc.text("জমা সময়", 190, startY);
+  // Table Header (English)
+  let startY = 60;
+  doc.setFontSize(12);
+  doc.text("Name", 20, startY);
+  doc.text("Correct", 60, startY);
+  doc.text("Wrong", 80, startY);
+  doc.text("Unanswered", 100, startY);
+  doc.text("Percent", 130, startY);
+  doc.text("Start Time", 160, startY);
+  doc.text("End Time", 190, startY);
+  startY += 10;
+
+  // Sort results by percent (descending)
+  allResults.sort((a, b) => b.percent - a.percent);
+
+  allResults.forEach(result => {
+    doc.text(result.name, 20, startY);
+    doc.text(String(result.correct), 60, startY);
+    doc.text(String(result.wrong), 80, startY);
+    doc.text(String(result.unanswered), 100, startY);
+    doc.text(result.percent + "%", 130, startY);
+    doc.text(formatDateTime(result.start), 160, startY);
+    doc.text(formatDateTime(result.end), 190, startY);
     startY += 10;
+  });
 
-    // ফলাফল সাজানো (descending order by percent)
-    allResults.sort((a, b) => b.percent - a.percent);
-
-    allResults.forEach(result => {
-        doc.text(result.name, 20, startY);
-        doc.text(String(result.correct), 60, startY);
-        doc.text(String(result.wrong), 80, startY);
-        doc.text(String(result.unanswered), 100, startY);
-        doc.text(result.percent + "%", 130, startY);
-        doc.text(formatDateTime(result.start), 160, startY);
-        doc.text(formatDateTime(result.end), 190, startY);
-        startY += 10;
-    });
-
-    // PDF ফাইল ডাউনলোড
-    doc.save(`${examId}_All_Results.pdf`);
+  // Save PDF
+  doc.save(`${examId}_All_Results.pdf`);
 }
 
 function formatDateTime(dateTime) {
-    const d = new Date(dateTime);
-    const day = String(d.getDate()).padStart(2, '0');
-    const month = String(d.getMonth() + 1).padStart(2, '0');
-    const year = d.getFullYear();
-    const hours = String(d.getHours()).padStart(2, '0');
-    const minutes = String(d.getMinutes()).padStart(2, '0');
-    return `${day}/${month}/${year} ${hours}:${minutes}`;
+  const d = new Date(dateTime);
+  const day = String(d.getDate()).padStart(2, '0');
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const year = d.getFullYear();
+  const hour = String(d.getHours()).padStart(2, '0');
+  const minutes = String(d.getMinutes()).padStart(2, '0');
+  return `${day}/${month}/${year} ${hour}:${minutes}`;
 }
