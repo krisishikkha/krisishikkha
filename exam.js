@@ -218,19 +218,14 @@ function submitExam() {
     `;
 }
 
-// ✅ বাংলা ফন্ট এম্বেড করে PDF তৈরি
+// ✅ বাংলা ফন্ট এম্বেড করে উত্তরপত্র PDF তৈরি
 function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // এখানে একাধিক বাংলা ফন্ট যুক্ত করা যাবে
+    // বাংলা ফন্ট এম্বেড (base64 ফন্ট কোড আগে যোগ করতে হবে)
     doc.addFileToVFS("SolaimanLipi.ttf", solaimanLipiBase64);
     doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
-
-    doc.addFileToVFS("NotoSansBengali.ttf", notoSansBengaliBase64);
-    doc.addFont("NotoSansBengali.ttf", "NotoSansBengali", "normal");
-
-    // ✅ ডিফল্ট বাংলা ফন্ট সেট করুন
     doc.setFont("SolaimanLipi");
 
     doc.setFontSize(14);
@@ -251,3 +246,17 @@ function downloadAnswerSheetPDF() {
 
     doc.save("answer-sheet.pdf");
 }
+
+// ✅ বাংলা ফন্ট এম্বেড করে রেজাল্টস PDF তৈরি (Admin)
+function downloadAllResultsPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.addFileToVFS("SolaimanLipi.ttf", solaimanLipiBase64);
+    doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
+    doc.setFont("SolaimanLipi");
+
+    doc.setFontSize(14);
+    doc.text("সকল পরীক্ষার্থীর ফলাফল", 10, 10);
+
+    allResults.forEach((
