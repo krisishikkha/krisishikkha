@@ -1,60 +1,53 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LGK67QBZD3');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exam | Krishishikkha</title>
-
-<link rel="stylesheet" href="assets/css/style.css">
-
-<script src="./exam-status.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LGK67QBZD3');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam | Krisishikkha</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="./exam-status.js"></script>
 </head>
-
 <body>
 
 <!-- LOGIN SECTION -->
 <div id="loginSection">
-    <h2>NTRCA Agriculture Online Model Test</h2>
-
-    <div id="warning" style="color:red;"></div>
-
-    <input type="text" id="studentName" placeholder="আপনার নাম লিখুন"><br><br>
-    <input type="password" id="accessCode" placeholder="এক্সেস কোড লিখুন"><br><br>
-
-    <button onclick="validateAccess()">পরীক্ষা শুরু করুন</button>
+  <h2>NTRCA Agriculture Online Model Test</h2>
+  <div id="warning" style="color:red;"></div>
+  <input type="text" id="studentName" placeholder="আপনার নাম লিখুন"><br><br>
+  <input type="password" id="accessCode" placeholder="এ্যাক্সেস কোড লিখুন"><br><br>
+  <button onclick="validateAccess()">পরীক্ষা শুরু করুন</button>
 </div>
 
 <!-- EXAM SECTION -->
 <div id="examMain" style="display:none; padding:20px;">
-
-    <h2 id="examTitle"></h2>
-
-    <div class="timer-wrapper">
-  <div class="timer-box">
-    ⏳ Time Left: <span id="timeLeft">25:00</span>
-  </div>
+  <h2 id="examTitle"></h2>
+  <div class="timer-wrapper">
+    <div class="timer-box">
+      ⏱ Time Left: <span id="timeLeft">25:00</span>
     </div>
-
-    <div id="examContainer"></div>
-
-    <br>
-    <button onclick="submitExam()">পরীক্ষা জমা করুন</button>
-
+  </div>
+  <div id="examContainer"></div>
+  <br>
+  <button onclick="submitExam()">পরীক্ষা জমা করুন</button>
 </div>
+
 <!-- jsPDF লাইব্রেরি -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <!-- SCRIPTS -->
 <script src="./exam.js"></script>
-<button onclick="downloadAllResultsPDF()">Download All Results PDF</button>
-<script src="./exam.js"></script>
+
+<!-- Admin Section (শুধু তোমার জন্য, পরীক্ষার্থীরা দেখতে পাবে না) -->
+<div id="adminSection" style="display:none; margin-top:20px;">
+  <button onclick="downloadAllResultsPDF()">Download All Results PDF (Admin Only)</button>
+</div>
+
 </body>
 </html>
