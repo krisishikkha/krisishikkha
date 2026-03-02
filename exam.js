@@ -144,7 +144,6 @@ function startTimer() {
 
   }, 1000);
 }
-
 function submitExam() {
     clearInterval(timerInterval);
 
@@ -171,10 +170,10 @@ function submitExam() {
     examMain.innerHTML = `
     <div class="scoreboard-card">
         <h2 style="font-size:22px; margin-bottom:10px;">${studentName}</h2>
-        <p>✔️ সঠিকঃ ${correct}</p>
-        <p>❌ ভুলঃ ${wrong}</p>
-        <p>⏺️ উত্তর দেননিঃ ${unanswered}</p>
-        <h3 style="margin-top:10px;">📊 শতাংশঃ ${percent}%</h3>
+        <p>✔️ সঠিক: ${correct}</p>
+        <p>❌ ভুল: ${wrong}</p>
+        <p>⏺️ উত্তর দেননি: ${unanswered}</p>
+        <h3 style="margin-top:10px;">📊 শতাংশ: ${percent}%</h3>
     </div>
     `;
 
@@ -184,30 +183,25 @@ function submitExam() {
         const correctAns = q.answer;
 
         let statusClass = "";
-        let statusText = "";
-
         if (userAns === undefined) {
             statusClass = "red";
-            statusText = "উত্তর দেননি";
         } else if (userAns === correctAns) {
             statusClass = "green";
-            statusText = "সঠিক";
         } else {
             statusClass = "red";
-            statusText = "ভুল";
         }
 
         examMain.innerHTML += `
         <div class="review-card">
             <h4>প্রশ্ন ${index + 1}: ${q.question}</h4>
             <p class="${statusClass}">
-                আপনার উত্তরঃ ${userAns !== undefined ? q.options[userAns] : "উত্তর দেননি"}
+                আপনার উত্তর: ${userAns !== undefined ? q.options[userAns] : "উত্তর দেননি"}
             </p>
             <p style="color:green;">
-                সঠিক উত্তরঃ ${q.options[correctAns]}
+                সঠিক উত্তর: ${q.options[correctAns]}
             </p>
             <p class="explanation">
-                <strong>ব্যাখ্যাঃ</strong> ${q.explanation}
+                <strong>ব্যাখ্যা:</strong> ${q.explanation}
             </p>
         </div>
         `;
@@ -219,9 +213,22 @@ function submitExam() {
     // জমা দেওয়ার সময় বের করো
     let examEndTime = new Date();
 
-    // PDF বানাও
+    // Individual PDF (পরীক্ষার্থীর জন্য)
     downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent, examStartTime, examEndTime);
+
+    // অ্যাডমিনের জন্য সব ফলাফল জমা করো
+    allResults.push({
+        name: studentName,
+        correct,
+        wrong,
+        unanswered,
+        percent,
+        start: examStartTime,
+        end: examEndTime
+    });
 }
+
+// Helper function সময় ফরম্যাট করার জন্য
 function formatDateTime(dateObj) {
     return dateObj.toLocaleString("bn-BD", {
         dateStyle: "medium",
@@ -229,6 +236,7 @@ function formatDateTime(dateObj) {
     });
 }
 
+// Individual PDF
 function downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent, examStartTime, examEndTime) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -243,9 +251,40 @@ function downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent,
     doc.text(`⏺️ উত্তর দেননি: ${unanswered}`, 20, 85);
     doc.text(`📊 শতাংশ: ${percent}%`, 20, 100);
 
-    // সময় যোগ করা
     doc.text(`🕒 শুরু: ${formatDateTime(examStartTime)}`, 20, 115);
     doc.text(`🕒 জমা: ${formatDateTime(examEndTime)}`, 20, 130);
 
     doc.save(`${studentName}_Scoreboard.pdf`);
+}
+
+// Admin PDF (সব পরীক্ষার্থীর ফলাফল)
+function downloadAllResultsPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text("All Exam Results", 20, 20);
+
+    let startY = 40;
+    doc.setFontSize(12);
+    doc.text("নাম", 20, startY);
+    doc.text("সঠিক", 60, startY);
+    doc.text("ভুল", 80, startY);
+    doc.text("শতাংশ", 100, startY);
+    doc.text("শুরু সময়", 130, startY);
+    doc.text("জমা সময়", 170, startY);
+
+    startY += 10;
+
+    allResults.forEach(result => {
+        doc.text(result.name, 20, startY);
+        doc.text(String(result.correct), 60, startY);
+        doc.text(String(result.wrong), 80, startY);
+        doc.text(result.percent + "%", 100, startY);
+        doc.text(formatDateTime(result.start), 130, startY);
+        doc.text(formatDateTime(result.end), 170, startY);
+        startY += 10;
+    });
+
+    doc.save("All_Results.pdf");
 }
