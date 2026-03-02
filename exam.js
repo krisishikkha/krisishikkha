@@ -1,3 +1,4 @@
+let examStartTime;
 let userAnswers = [];
 let timerInterval;
 
@@ -29,7 +30,11 @@ if (!validCodes.includes(code)) {
 }
 
 function initExam() {
-
+examStartTime = new Date(); // পরীক্ষার শুরুর সময় ধরে রাখো
+    const params = new URLSearchParams(window.location.search);
+    const examId = params.get("exam");
+    ...
+}
   const params = new URLSearchParams(window.location.search);
   const examId = params.get("exam");
 
