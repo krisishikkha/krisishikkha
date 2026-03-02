@@ -225,3 +225,38 @@ function submitExam() {
         end: examEndTime
     });
 }
+function downloadAllResultsPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // examId বের করো যাতে ফাইলের নাম আলাদা হয়
+    const params = new URLSearchParams(window.location.search);
+    const examId = params.get("exam") || "Exam";
+
+    doc.setFontSize(16);
+    doc.text("All Exam Results", 20, 20);
+
+    let startY = 40;
+    doc.setFontSize(12);
+    doc.text("নাম", 20, startY);
+    doc.text("সঠিক", 60, startY);
+    doc.text("ভুল", 80, startY);
+    doc.text("শতাংশ", 100, startY);
+    doc.text("শুরু সময়", 130, startY);
+    doc.text("জমা সময়", 170, startY);
+
+    startY += 10;
+
+    allResults.forEach(result => {
+        doc.text(result.name, 20, startY);
+        doc.text(String(result.correct), 60, startY);
+        doc.text(String(result.wrong), 80, startY);
+        doc.text(result.percent + "%", 100, startY);
+        doc.text(formatDateTime(result.start), 130, startY);
+        doc.text(formatDateTime(result.end), 170, startY);
+        startY += 10;
+    });
+
+    // ফাইলের নাম হবে ExamID_All_Results.pdf
+    doc.save(`${examId}_All_Results.pdf`);
+}
