@@ -2,39 +2,39 @@
 <html lang="bn">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6K7Q82D3"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6K7Q8203"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-L6K7Q82D3');
+    gtag('config', 'G-L6K7Q8203');
   </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exam | krisishikha</title>
+  <title>Exam | krisishikkha</title>
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Exam Status Controller -->
-  <script src="./exam-status.js"></script>
+  <script src="exam-status.js"></script>
 </head>
 <body>
 
   <!-- LOGIN SECTION -->
   <div id="loginSection">
-    <h2>NTRCA Agriculture Online Model Test</h2>
+    <h2>NTCA Agriculture Online Model Test</h2>
     <div id="warning" style="color:red;"></div>
     <input type="text" id="studentName" placeholder="আপনার নাম লিখুন"><br>
-    <input type="password" id="accessCode" placeholder="এন্ট্রি কোড লিখুন"><br>
+    <input type="password" id="accessCode" placeholder="কোড লিখুন"><br>
     <button onclick="validateAccess()">পরীক্ষায় অংশগ্রহণ করুন</button>
   </div>
 
   <!-- EXAM SECTION -->
   <div id="examMain" style="display:none; padding:20px;">
-    <h2 id="examTitle"></h2>
+    <div id="examTitle"></div>
     <div class="timer-wrapper">
       <div class="timer-box">
-        ⏰ Time Left: <span id="timeLeft">25:00</span>
+        Time Left: <span id="timeLeft">25:00</span>
       </div>
     </div>
     <div id="examContainer"></div>
@@ -45,7 +45,10 @@
   <!-- jsPDF লাইব্রেরি -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-  <!-- SCRIPTS -->
+  <!-- প্রথমে ফন্ট ফাইল লোড করুন -->
+  <script src="./solaimanlipi.js"></script>
+
+  <!-- তারপর exam.js লোড করুন -->
   <script src="./exam.js"></script>
 
   <!-- Admin Section -->
