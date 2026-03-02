@@ -218,19 +218,30 @@ function submitExam() {
     // PDF বানাও
     downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent, examStartTime, examEndTime);
 }
-function downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent) {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
+function formatDateTime(dateObj) {
+    return dateObj.toLocaleString("bn-BD", {
+        dateStyle: "medium",
+        timeStyle: "short"
+    });
+}
 
-  doc.setFontSize(18);
-  doc.text("Exam Scoreboard", 20, 20);
+function downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent, examStartTime, examEndTime) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
 
-  doc.setFontSize(14);
-  doc.text(`👤 নাম: ${studentName}`, 20, 40);
-  doc.text(`✔️ সঠিক: ${correct}`, 20, 55);
-  doc.text(`❌ ভুল: ${wrong}`, 20, 70);
-  doc.text(`⏺️ অনুত্তরিত: ${unanswered}`, 20, 85);
-  doc.text(`📊 শতাংশ: ${percent}%`, 20, 100);
+    doc.setFontSize(18);
+    doc.text("Exam Scoreboard", 20, 20);
 
-  doc.save(`${studentName}_Scoreboard.pdf`);
+    doc.setFontSize(14);
+    doc.text(`👤 নাম: ${studentName}`, 20, 40);
+    doc.text(`✔️ সঠিক: ${correct}`, 20, 55);
+    doc.text(`❌ ভুল: ${wrong}`, 20, 70);
+    doc.text(`⏺️ উত্তর দেননি: ${unanswered}`, 20, 85);
+    doc.text(`📊 শতাংশ: ${percent}%`, 20, 100);
+
+    // সময় যোগ করা
+    doc.text(`🕒 শুরু: ${formatDateTime(examStartTime)}`, 20, 115);
+    doc.text(`🕒 জমা: ${formatDateTime(examEndTime)}`, 20, 130);
+
+    doc.save(`${studentName}_Scoreboard.pdf`);
 }
