@@ -213,3 +213,19 @@ function submitExam() {
   // Scroll to top
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+function downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent) {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  doc.setFontSize(18);
+  doc.text("Exam Scoreboard", 20, 20);
+
+  doc.setFontSize(14);
+  doc.text(`👤 নাম: ${studentName}`, 20, 40);
+  doc.text(`✔️ সঠিক: ${correct}`, 20, 55);
+  doc.text(`❌ ভুল: ${wrong}`, 20, 70);
+  doc.text(`⏺️ অনুত্তরিত: ${unanswered}`, 20, 85);
+  doc.text(`📊 শতাংশ: ${percent}%`, 20, 100);
+
+  doc.save(`${studentName}_Scoreboard.pdf`);
+}
