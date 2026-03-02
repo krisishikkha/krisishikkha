@@ -226,27 +226,28 @@ function submitExam() {
     });
 }
 function downloadAllResultsPDF() {
-    const { jsPDF } = window.jspdf;
+    // নতুন PDF ডকুমেন্ট তৈরি
     const doc = new jsPDF();
 
-    // examId বের করো যাতে ফাইলের নাম আলাদা হয়
-    const params = new URLSearchParams(window.location.search);
-    const examId = params.get("exam") || "Exam";
-
+    // শিরোনাম
     doc.setFontSize(16);
     doc.text("All Exam Results", 20, 20);
 
-    let startY = 40;
+    // টেবিল হেডার
     doc.setFontSize(12);
+    let startY = 40;
     doc.text("নাম", 20, startY);
     doc.text("সঠিক", 60, startY);
     doc.text("ভুল", 80, startY);
     doc.text("শতাংশ", 100, startY);
     doc.text("শুরু সময়", 130, startY);
     doc.text("জমা সময়", 170, startY);
-
     startY += 10;
 
+    // ফলাফলগুলো শতাংশ অনুযায়ী সাজানো (descending order)
+    allResults.sort((a, b) => b.percent - a.percent);
+
+    // প্রতিটি পরীক্ষার্থীর ফলাফল লিখে দেওয়া
     allResults.forEach(result => {
         doc.text(result.name, 20, startY);
         doc.text(String(result.correct), 60, startY);
@@ -257,6 +258,21 @@ function downloadAllResultsPDF() {
         startY += 10;
     });
 
-    // ফাইলের নাম হবে ExamID_All_Results.pdf
+    // URL থেকে Exam ID নেওয়া
+    const params = new URLSearchParams(window.location.search);
+    const examId = params.get("exam") || "Exam";
+
+    // PDF ফাইল ডাউনলোড করা
     doc.save(`${examId}_All_Results.pdf`);
+}
+
+// সময় ফরম্যাট করার হেল্পার ফাংশন
+function formatDateTime(dateTime) {
+    const d = new Date(dateTime);
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+    const hours = String(d.getHours()).padStart(2, '0');
+    const minutes = String(d.getMinutes()).padStart(2, '0');
+    return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
