@@ -196,10 +196,48 @@ function submitExam() {
         start: examStartTime,
         end: examEndTime
     });
+
+    // ✅ নতুন ফিচার: উত্তরপত্র PDF ডাউনলোড বাটন
+    examMain.innerHTML += `
+      <div style="margin-top:20px;">
+        <button onclick="downloadAnswerSheetPDF()">
+          📄 উত্তরপত্র (PDF) ডাউনলোড করুন
+        </button>
+      </div>
+    `;
+}
+
+function downloadAnswerSheetPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFontSize(18);
+    doc.text("উত্তরপত্র (Answer Sheet)", 105, 20, { align: "center" });
+
+    let startY = 40;
+
+    QUESTIONS.forEach((q, index) => {
+        doc.setFontSize(12);
+        doc.text(`${index + 1}. ${q.question}`, 20, startY);
+        startY += 8;
+
+        doc.text(`সঠিক উত্তর: ${q.options[q.answer]}`, 25, startY);
+        startY += 8;
+
+        doc.text(`ব্যাখ্যা: ${q.explanation}`, 25, startY);
+        startY += 12;
+
+        if (startY > 270) {
+            doc.addPage();
+            startY = 20;
+        }
+    });
+
+    doc.save("AnswerSheet.pdf");
 }
 
 function downloadAllResultsPDF() {
-    const { jsPDF } = window.jspdf; // ✅ সঠিকভাবে jsPDF ইনিশিয়ালাইজ
+    const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
     const params = new URLSearchParams(window.location.search);
@@ -233,20 +271,4 @@ function downloadAllResultsPDF() {
         doc.text(String(result.correct), 60, startY);
         doc.text(String(result.wrong), 80, startY);
         doc.text(String(result.unanswered), 100, startY);
-        doc.text(result.percent + "%", 130, startY);
-        doc.text(formatDateTime(result.start), 160, startY);
-        doc.text(formatDateTime(result.end), 190, startY);
-    });
-
-    doc.save((examId || "Exam") + "_All_Results.pdf"); // ✅ fallback নাম
-}
-
-function formatDateTime(dateTime) {
-    const d = new Date(dateTime);
-    const day = String(d.getDate()).padStart(2, '0');
-    const month = String(d.getMonth() + 1).padStart(2, '0');
-    const year = d.getFullYear();
-    const hour = String(d.getHours()).padStart(2, '0');
-    const minutes = String(d.getMinutes()).padStart(2, '0');
-    return `${day}/${month}/${year} ${hour}:${minutes}`;
-}
+        doc.text(result.percent
