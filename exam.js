@@ -3,6 +3,7 @@ let allResults = [];
 let userAnswers = [];
 let timerInterval;
 
+// -------------------- Login Validation --------------------
 function validateAccess() {
     const name = document.getElementById("studentName").value.trim();
     const code = document.getElementById("accessCode").value.trim();
@@ -27,7 +28,7 @@ function validateAccess() {
     initExam(examId);
 }
 
-// ✅ অটোমেটিক examId সিলেকশন
+// -------------------- Auto Exam ID --------------------
 function getActiveExamId() {
     const params = new URLSearchParams(window.location.search);
     let examId = params.get("exam");
@@ -43,6 +44,7 @@ function getActiveExamId() {
     return examId;
 }
 
+// -------------------- Exam Init --------------------
 function initExam(examId) {
     examStartTime = new Date();
 
@@ -69,6 +71,7 @@ function initExam(examId) {
     document.body.appendChild(script);
 }
 
+// -------------------- Render Questions --------------------
 function renderQuestions() {
     const container = document.getElementById("examContainer");
     container.innerHTML = "";
@@ -101,6 +104,7 @@ function selectAnswer(qIndex, optIndex, btn) {
     btn.classList.add("selected");
 }
 
+// -------------------- Timer --------------------
 let totalTime = 25 * 60;
 
 function startTimer() {
@@ -131,7 +135,7 @@ function startTimer() {
         totalTime--;
     }, 1000);
 }
-
+// -------------------- Submit Exam --------------------
 function submitExam() {
     clearInterval(timerInterval);
 
@@ -157,11 +161,11 @@ function submitExam() {
 
     examMain.innerHTML = `
         <div class="scoreboard-card">
-          <h2 style="font-size:22px; margin-bottom:10px;">${studentName}</h2>
+          <h2>${studentName}</h2>
           <p>✔️ সঠিক: ${correct}</p>
           <p>❌ ভুল: ${wrong}</p>
           <p>❓ উত্তর দেয়নি: ${unanswered}</p>
-          <h3 style="margin-top:10px;">📊 শতাংশ: ${percent}%</h3>
+          <h3>📊 শতাংশ: ${percent}%</h3>
         </div>
     `;
 
@@ -210,18 +214,18 @@ function submitExam() {
 
     examMain.innerHTML += `
       <div style="margin-top:20px;">
-        <button onclick="downloadAnswerSheetPDF()">
-          📄 উত্তরপত্র (PDF) ডাউনলোড করুন
-        </button>
+        <button onclick="downloadAnswerSheetPDF()">📄 উত্তরপত্র (PDF) ডাউনলোড করুন</button>
+        <button onclick="downloadAllResultsPDF()">📄 সকল ফলাফল (Admin)</button>
       </div>
     `;
 }
 
-// ✅ উত্তরপত্র PDF (বাংলা ফন্ট সহ)
+// -------------------- Answer Sheet PDF --------------------
 function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
+    // বাংলা ফন্ট এম্বেড করতে হবে (solaimanLipiBase64 আগে ডিফাইন করতে হবে)
     doc.addFileToVFS("SolaimanLipi.ttf", solaimanLipiBase64);
     doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
     doc.setFont("SolaimanLipi");
@@ -245,7 +249,7 @@ function downloadAnswerSheetPDF() {
     doc.save("answer-sheet.pdf");
 }
 
-// ✅ সকল পরীক্ষার্থীর ফলাফল PDF (Admin, বাংলায়)
+// -------------------- All Results PDF --------------------
 function downloadAllResultsPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -261,4 +265,10 @@ function downloadAllResultsPDF() {
         let y = 20 + index * 30;
         doc.text(`${index + 1}. ${res.name}`, 10, y);
         doc.text(`✔️ সঠিক: ${res.correct}`, 10, y + 5);
-        doc.text(`❌ ভুল: ${res.wrong}`, 10, y + 10
+        doc.text(`❌ ভুল: ${res.wrong}`, 10, y + 10);
+        doc.text(`❓ উত্তর দেয়নি: ${res.unanswered}`, 10, y + 15);
+        doc.text(`📊 শতাংশ: ${res.percent}%`, 10, y + 20);
+    });
+
+    doc.save("all-results.pdf");
+             }
