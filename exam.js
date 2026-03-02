@@ -1,4 +1,5 @@
 let examStartTime;
+let allResults = [];
 let userAnswers = [];
 let timerInterval;
 
@@ -30,35 +31,38 @@ if (!validCodes.includes(code)) {
 }
 
 function initExam() {
-examStartTime = new Date(); // পরীক্ষার শুরুর সময় ধরে রাখো
+    // পরীক্ষার শুরু সময় সেট করো
+    examStartTime = new Date();
+
+    // URL থেকে examId বের করো
     const params = new URLSearchParams(window.location.search);
     const examId = params.get("exam");
-    ...
-}
-  const params = new URLSearchParams(window.location.search);
-  const examId = params.get("exam");
 
-  if (!examId || !EXAM_STATUS[examId]) {
-    document.body.innerHTML = "<h2>Invalid Exam ID</h2>";
-    return;
-  }
+    // যদি examId ভুল হয়
+    if (!examId || !EXAM_STATUS[examId]) {
+        document.body.innerHTML = "<h2>Invalid Exam ID</h2>";
+        return;
+    }
 
-  if (EXAM_STATUS[examId].status !== "live") {
-    document.body.innerHTML = "<h2>Exam Locked</h2>";
-    return;
-  }
+    // যদি এক্সাম লাইভ না থাকে
+    if (EXAM_STATUS[examId].status !== "live") {
+        document.body.innerHTML = "<h2>Exam Locked</h2>";
+        return;
+    }
 
-  document.getElementById("examTitle").innerText =
-    EXAM_STATUS[examId].title;
-const script = document.createElement("script");
-script.src = `./exam-corner/${examId}/questions.js`;
+    // শিরোনাম দেখাও
+    document.getElementById("examTitle").innerText = EXAM_STATUS[examId].title;
 
-script.onload = function () {
-    renderQuestions();
-    startTimer();
-};
+    // প্রশ্ন লোড করো
+    const script = document.createElement("script");
+    script.src = `./exam-corner/${examId}/questions.js`;
 
-document.body.appendChild(script);
+    script.onload = function () {
+        renderQuestions();
+        startTimer();
+    };
+
+    document.body.appendChild(script);
 }
 
 function renderQuestions() {
