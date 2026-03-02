@@ -2,12 +2,12 @@
 <html lang="bn">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6K7QB2D3"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6K7Q82D3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-L6K7QB2D3');
+    gtag('config', 'G-L6K7Q82D3');
   </script>
 
   <meta charset="UTF-8">
@@ -24,8 +24,8 @@
   <div id="loginSection">
     <h2>NTRCA Agriculture Online Model Test</h2>
     <div id="warning" style="color:red;"></div>
-    <input type="text" id="studentName" placeholder="আপনার নাম লিখুন"><br><br>
-    <input type="password" id="accessCode" placeholder="এ্যাক্সেস কোড লিখুন"><br><br>
+    <input type="text" id="studentName" placeholder="আপনার নাম লিখুন"><br>
+    <input type="password" id="accessCode" placeholder="এন্ট্রি কোড লিখুন"><br>
     <button onclick="validateAccess()">পরীক্ষায় অংশগ্রহণ করুন</button>
   </div>
 
@@ -42,14 +42,14 @@
     <button onclick="submitExam()">পরীক্ষা জমা দিন</button>
   </div>
 
-  <!-- ✅ jsPDF লাইব্রেরি সঠিকভাবে যুক্ত -->
+  <!-- ✅ jsPDF লাইব্রেরি -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <!-- SCRIPTS -->
   <script src="./exam.js"></script>
 
   <!-- Admin Section (শুধু এডমিনদের জন্য, পরীক্ষার্থীরা দেখতে পাবে না) -->
-  <div id="adminSection" style="display:none; margin-top:20px;">
+  <div id="adminSection" style="display:block; margin-top:20px;">
     <button onclick="downloadAllResultsPDF()">Download All Results PDF (Admin Only)</button>
   </div>
 
