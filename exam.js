@@ -142,81 +142,81 @@ function startTimer() {
 }
 
 function submitExam() {
+    clearInterval(timerInterval);
 
-  clearInterval(timerInterval);
+    const studentName = document.getElementById("studentName").value;
 
-  const studentName = document.getElementById("studentName").value;
+    let correct = 0;
+    let wrong = 0;
+    let unanswered = 0;
 
-  let correct = 0;
-  let wrong = 0;
-  let unanswered = 0;
+    QUESTIONS.forEach((q, index) => {
+        if (userAnswers[index] === undefined) {
+            unanswered++;
+        } else if (userAnswers[index] === q.answer) {
+            correct++;
+        } else {
+            wrong++;
+        }
+    });
 
-  QUESTIONS.forEach((q, index) => {
-    if (userAnswers[index] === undefined) {
-      unanswered++;
-    } else if (userAnswers[index] === q.answer) {
-      correct++;
-    } else {
-      wrong++;
-    }
-  });
+    let percent = ((correct / QUESTIONS.length) * 100).toFixed(2);
 
-  let percent = ((correct / QUESTIONS.length) * 100).toFixed(2);
+    const examMain = document.getElementById("examMain");
 
-  const examMain = document.getElementById("examMain");
-
-  examMain.innerHTML = `
+    examMain.innerHTML = `
     <div class="scoreboard-card">
-      <h2 style="font-size:22px; margin-bottom:10px;">${studentName}</h2>
-      <p>✅ সঠিক: ${correct}</p>
-      <p>❌ ভুল: ${wrong}</p>
-      <p>⚪ উত্তর দেয়নি: ${unanswered}</p>
-      <h3 style="margin-top:10px;">📊 পারসেন্ট: ${percent}%</h3>
+        <h2 style="font-size:22px; margin-bottom:10px;">${studentName}</h2>
+        <p>✔️ সঠিকঃ ${correct}</p>
+        <p>❌ ভুলঃ ${wrong}</p>
+        <p>⏺️ উত্তর দেননিঃ ${unanswered}</p>
+        <h3 style="margin-top:10px;">📊 শতাংশঃ ${percent}%</h3>
     </div>
-  `;
+    `;
 
-  // Review Section
-  QUESTIONS.forEach((q, index) => {
+    // Review Section
+    QUESTIONS.forEach((q, index) => {
+        const userAns = userAnswers[index];
+        const correctAns = q.answer;
 
-    const userAns = userAnswers[index];
-    const correctAns = q.answer;
+        let statusClass = "";
+        let statusText = "";
 
-    let statusClass = "";
-    let statusText = "";
+        if (userAns === undefined) {
+            statusClass = "red";
+            statusText = "উত্তর দেননি";
+        } else if (userAns === correctAns) {
+            statusClass = "green";
+            statusText = "সঠিক";
+        } else {
+            statusClass = "red";
+            statusText = "ভুল";
+        }
 
-    if (userAns === undefined) {
-      statusClass = "red";
-      statusText = "উত্তর দেয়নি";
-    } else if (userAns === correctAns) {
-      statusClass = "green";
-      statusText = "সঠিক";
-    } else {
-      statusClass = "red";
-      statusText = "ভুল";
-    }
+        examMain.innerHTML += `
+        <div class="review-card">
+            <h4>প্রশ্ন ${index + 1}: ${q.question}</h4>
+            <p class="${statusClass}">
+                আপনার উত্তরঃ ${userAns !== undefined ? q.options[userAns] : "উত্তর দেননি"}
+            </p>
+            <p style="color:green;">
+                সঠিক উত্তরঃ ${q.options[correctAns]}
+            </p>
+            <p class="explanation">
+                <strong>ব্যাখ্যাঃ</strong> ${q.explanation}
+            </p>
+        </div>
+        `;
+    });
 
-    examMain.innerHTML += `
-  <div class="review-card">
-    <h4>প্রশ্ন ${index + 1}: ${q.question}</h4>
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
-    <p class="${statusClass}">
-      আপনার উত্তর: ${userAns !== undefined ? q.options[userAns] : "উত্তর দেননি"}
-    </p>
+    // জমা দেওয়ার সময় বের করো
+    let examEndTime = new Date();
 
-    <p style="color:green;">
-      সঠিক উত্তর: ${q.options[correctAns]}
-    </p>
-
-    <p class="explanation">
-      <strong>ব্যাখ্যা:</strong> ${q.explanation}
-    </p>
-
-  </div>
-`;
-  });
-
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: "smooth" });
+    // PDF বানাও
+    downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent, examStartTime, examEndTime);
 }
 function downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent) {
   const { jsPDF } = window.jspdf;
