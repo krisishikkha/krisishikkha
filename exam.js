@@ -226,47 +226,59 @@ function submitExam() {
     });
 }
 function downloadAllResultsPDF() {
-    // নতুন PDF ডকুমেন্ট তৈরি
     const doc = new jsPDF();
 
-    // শিরোনাম
-    doc.setFontSize(16);
-    doc.text("All Exam Results", 20, 20);
+    // Exam ID থেকে Exam Title আনা
+    const params = new URLSearchParams(window.location.search);
+    const examId = params.get("exam") || "Exam";
+    const examTitle = EXAM_STATUS[examId]?.title || examId;
+
+    // উপরের হেডার অংশ
+    doc.setFontSize(22);
+    doc.text("রেজাল্ট শীট", 105, 20, { align: "center" });
+
+    doc.setFontSize(18);
+    doc.text("কৃষি শিক্ষা শিক্ষক নিবন্ধন পরীক্ষা ২০২৬", 105, 30, { align: "center" });
+
+    doc.setFontSize(14);
+    doc.text(`পরীক্ষা : ${examTitle}`, 105, 40, { align: "center" });
+
+    // ওয়াটারমার্ক
+    doc.setFontSize(40);
+    doc.setTextColor(200, 200, 200);
+    doc.text("krisishikkha.com", 105, 150, { align: "center", angle: 30 });
+    doc.setTextColor(0, 0, 0);
 
     // টেবিল হেডার
+    let startY = 60;
     doc.setFontSize(12);
-    let startY = 40;
     doc.text("নাম", 20, startY);
     doc.text("সঠিক", 60, startY);
     doc.text("ভুল", 80, startY);
-    doc.text("শতাংশ", 100, startY);
-    doc.text("শুরু সময়", 130, startY);
-    doc.text("জমা সময়", 170, startY);
+    doc.text("উত্তর দেয়নি", 100, startY);
+    doc.text("শতাংশ", 130, startY);
+    doc.text("শুরু সময়", 160, startY);
+    doc.text("জমা সময়", 190, startY);
     startY += 10;
 
-    // ফলাফলগুলো শতাংশ অনুযায়ী সাজানো (descending order)
+    // ফলাফল সাজানো (descending order by percent)
     allResults.sort((a, b) => b.percent - a.percent);
 
-    // প্রতিটি পরীক্ষার্থীর ফলাফল লিখে দেওয়া
     allResults.forEach(result => {
         doc.text(result.name, 20, startY);
         doc.text(String(result.correct), 60, startY);
         doc.text(String(result.wrong), 80, startY);
-        doc.text(result.percent + "%", 100, startY);
-        doc.text(formatDateTime(result.start), 130, startY);
-        doc.text(formatDateTime(result.end), 170, startY);
+        doc.text(String(result.unanswered), 100, startY);
+        doc.text(result.percent + "%", 130, startY);
+        doc.text(formatDateTime(result.start), 160, startY);
+        doc.text(formatDateTime(result.end), 190, startY);
         startY += 10;
     });
 
-    // URL থেকে Exam ID নেওয়া
-    const params = new URLSearchParams(window.location.search);
-    const examId = params.get("exam") || "Exam";
-
-    // PDF ফাইল ডাউনলোড করা
+    // PDF ফাইল ডাউনলোড
     doc.save(`${examId}_All_Results.pdf`);
 }
 
-// সময় ফরম্যাট করার হেল্পার ফাংশন
 function formatDateTime(dateTime) {
     const d = new Date(dateTime);
     const day = String(d.getDate()).padStart(2, '0');
