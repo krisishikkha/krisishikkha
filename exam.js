@@ -167,6 +167,7 @@ function submitExam() {
 
     const examMain = document.getElementById("examMain");
 
+    // স্কোরবোর্ড দেখাও (শুধু স্ক্রিনে, কোনো PDF নয়)
     examMain.innerHTML = `
     <div class="scoreboard-card">
         <h2 style="font-size:22px; margin-bottom:10px;">${studentName}</h2>
@@ -210,11 +211,8 @@ function submitExam() {
     // Scroll to top
     window.scrollTo({ top: 0, behavior: "smooth" });
 
-    // জমা দেওয়ার সময় বের করো
+    // পরীক্ষা শেষের সময় সেট করা
     let examEndTime = new Date();
-
-    // Individual PDF (পরীক্ষার্থীর জন্য)
-    downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent, examStartTime, examEndTime);
 
     // অ্যাডমিনের জন্য সব ফলাফল জমা করো
     allResults.push({
@@ -226,65 +224,4 @@ function submitExam() {
         start: examStartTime,
         end: examEndTime
     });
-}
-
-// Helper function সময় ফরম্যাট করার জন্য
-function formatDateTime(dateObj) {
-    return dateObj.toLocaleString("bn-BD", {
-        dateStyle: "medium",
-        timeStyle: "short"
-    });
-}
-
-// Individual PDF
-function downloadScoreboardPDF(studentName, correct, wrong, unanswered, percent, examStartTime, examEndTime) {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-
-    doc.setFontSize(18);
-    doc.text("Exam Scoreboard", 20, 20);
-
-    doc.setFontSize(14);
-    doc.text(`👤 নাম: ${studentName}`, 20, 40);
-    doc.text(`✔️ সঠিক: ${correct}`, 20, 55);
-    doc.text(`❌ ভুল: ${wrong}`, 20, 70);
-    doc.text(`⏺️ উত্তর দেননি: ${unanswered}`, 20, 85);
-    doc.text(`📊 শতাংশ: ${percent}%`, 20, 100);
-
-    doc.text(`🕒 শুরু: ${formatDateTime(examStartTime)}`, 20, 115);
-    doc.text(`🕒 জমা: ${formatDateTime(examEndTime)}`, 20, 130);
-
-    doc.save(`${studentName}_Scoreboard.pdf`);
-}
-
-// Admin PDF (সব পরীক্ষার্থীর ফলাফল)
-function downloadAllResultsPDF() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-
-    doc.setFontSize(16);
-    doc.text("All Exam Results", 20, 20);
-
-    let startY = 40;
-    doc.setFontSize(12);
-    doc.text("নাম", 20, startY);
-    doc.text("সঠিক", 60, startY);
-    doc.text("ভুল", 80, startY);
-    doc.text("শতাংশ", 100, startY);
-    doc.text("শুরু সময়", 130, startY);
-    doc.text("জমা সময়", 170, startY);
-
-    startY += 10;
-
-    allResults.forEach(result => {
-        doc.text(result.name, 20, startY);
-        doc.text(String(result.correct), 60, startY);
-        doc.text(String(result.wrong), 80, startY);
-        doc.text(result.percent + "%", 100, startY);
-        doc.text(formatDateTime(result.start), 130, startY);
-        doc.text(formatDateTime(result.end), 170, startY);
-        startY += 10;
-    });
-
-    doc.save("All_Results.pdf");
 }
