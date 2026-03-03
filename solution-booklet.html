@@ -79,18 +79,23 @@ footer {
 <script src="../exam-status.js"></script>
 
 <script>
-// ===== Admin Only Display =====
-const adminOnly = true; // true means button visible only for admin
-if(adminOnly){
-    document.getElementById('downloadBtn').style.display = 'block';
-}
-
 // ===== Read Exam ID from URL =====
 const params = new URLSearchParams(window.location.search);
 const examId = params.get('exam'); // e.g., "exam-10"
 
 // ===== Load Exam Title =====
 const examTitle = EXAM_STATUS[examId] ? EXAM_STATUS[examId].title : "Krisishikkha Exam";
+
+// ===== Admin + Visible Check =====
+const adminOnly = true; // only admin can see download
+if(adminOnly && EXAM_STATUS[examId] && EXAM_STATUS[examId].visible){
+    document.getElementById('downloadBtn').style.display = 'block';
+}else{
+    document.getElementById('downloadBtn').style.display = 'none';
+    if(adminOnly){
+        alert("This exam is hidden. Download not allowed.");
+    }
+}
 
 // ===== Dynamic load of Questions JS file =====
 function loadQuestionsJS(path, callback){
@@ -151,14 +156,15 @@ function generateContent(){
     setTimeout(() => {
         const totalPages = Math.ceil(document.body.scrollHeight / 1122); // approx A4 page height
         document.getElementById('totalPages').textContent = totalPages;
-        const pages = document.querySelectorAll('footer #pageNumber');
         document.getElementById('pageNumber').textContent = 1; // first page
     }, 1000);
 }
 
 // ===== Load Questions file dynamically =====
-loadQuestionsJS(`../exam-corner/${examId}/questions.js`, generateContent);
+if(EXAM_STATUS[examId] && EXAM_STATUS[examId].visible){
+    loadQuestionsJS(`../exam-corner/${examId}/questions.js`, generateContent);
+}
 
 </script>
 </body>
-  </html>
+</html>
