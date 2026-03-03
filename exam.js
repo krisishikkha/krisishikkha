@@ -135,12 +135,14 @@ function startTimer() {
         totalTime--;
     }, 1000);
 }
+
 // ---------------- Submit Exam ----------------
 function submitExam() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 
     let examEndTime = new Date();
 
+    // ফলাফল লিস্টে যোগ করা
     allResults.push({
         name: studentName,
         correct,
@@ -151,12 +153,43 @@ function submitExam() {
         end: examEndTime
     });
 
-    document.getElementById("examMain").innerHTML = `
+    // স্কোরবোর্ড তৈরি
+    let resultHTML = `
+        <h3>📊 স্কোরবোর্ড</h3>
+        <p>✔️ সঠিক: ${correct}</p>
+        <p>❌ ভুল: ${wrong}</p>
+        <p>❓ উত্তর নেই: ${unanswered}</p>
+        <p>📈 শতাংশ: ${percent}%</p>
+        <hr>
+        <h3>📄 উত্তরপত্র</h3>
+    `;
+
+    // প্রতিটি প্রশ্নের উত্তর ও ব্যাখ্যা দেখানো
+    QUESTIONS.forEach((q, index) => {
+        const userAns = userAnswers[index];
+        const correctAns = q.answer;
+        let ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
+
+        resultHTML += `
+            <div style="margin-bottom:15px; padding:10px; border:1px solid #ddd;">
+                <strong>${index + 1}. ${q.question}</strong><br>
+                ➤ আপনার উত্তর: ${ansText}<br>
+                ✔ সঠিক উত্তর: ${q.options[correctAns]}<br>
+                <em>ব্যাখ্যা:</em> ${q.explanation}
+            </div>
+        `;
+    });
+
+    // ডাউনলোড বাটন যোগ করা
+    resultHTML += `
         <div style="margin-top:20px;">
             <button onclick="downloadAnswerSheetPDF()">➤ উত্তরপত্র (PDF) ডাউনলোড</button>
             <button onclick="downloadAllResultsPDF()">➤ সকল ফলাফল (Admin)</button>
         </div>
     `;
+
+    // examMain এ সবকিছু দেখানো
+    document.getElementById("examMain").innerHTML = resultHTML;
 }
 
 // ---------------- Answer Sheet PDF ----------------
@@ -164,7 +197,7 @@ function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // ফন্ট লোড করুন (SolaimanLipi.js থেকে আসবে)
+    // ফন্ট লোড (SolaimanLipi.js থেকে আসছে)
     doc.setFont("SolaimanLipi_20-04-07", "normal");
 
     doc.setFontSize(14);
@@ -191,11 +224,11 @@ function downloadAllResultsPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // ফন্ট লোড করুন (SolaimanLipi.js থেকে আসবে)
+    // ফন্ট লোড (SolaimanLipi.js থেকে আসছে)
     doc.setFont("SolaimanLipi_20-04-07", "normal");
 
     doc.setFontSize(14);
-    doc.text("সকল পরীক্ষার্থীর ফলাফল", 10, 10);
+    doc.text("সকল শিক্ষার্থীর ফলাফল", 10, 10);
 
     allResults.forEach((res, index) => {
         let y = 20 + index * 30;
