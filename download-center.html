@@ -4,11 +4,49 @@
 <meta charset="UTF-8">
 <title>Admin Download Center</title>
 <style>
-body { font-family: SolaimanLipi, Arial, sans-serif; padding: 20px; }
-button { padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer; }
-button:hover { background:#246b45; }
-select { padding:5px 10px; font-size:16px; margin-right:10px; }
+body { font-family: SolaimanLipi, Arial, sans-serif; padding: 20px; color:#000; }
 h2 { margin-bottom: 20px; }
+select { padding:5px 10px; font-size:16px; margin-right:10px; }
+button { padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer; }
+button:hover{ background:#246b45; }
+
+/* Cover Page */
+.cover-page {
+  text-align:center;
+  margin-top:50px;
+  page-break-after: always;
+  padding:30px;
+  background-color:#f0f4f8;
+  border-radius:10px;
+  box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+}
+.cover-page img{ width:200px; margin-bottom:20px; }
+.cover-page h1{ font-size:36px; margin:15px 0; }
+.cover-page p{ font-size:20px; margin:10px 0; }
+
+/* Question card style */
+.question-block {
+  margin-bottom:20px;
+  padding:15px 20px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  background-color:#f9f9f9;
+  box-shadow:2px 2px 8px rgba(0,0,0,0.1);
+}
+.question-block h4 { font-size:22px; margin-bottom:10px; }
+.question-block p { font-size:18px; margin:5px 0; }
+.correct { color:#2E8B57; font-weight:bold; }
+
+/* Watermark */
+.logo-watermark {
+  position: fixed;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  opacity:0.06;
+  width:250px;
+  z-index:-1;
+}
 </style>
 </head>
 <body>
@@ -20,8 +58,12 @@ h2 { margin-bottom: 20px; }
 </select>
 <button id="downloadBtn">Download Solution PDF</button>
 
+<div id="content" style="display:none;"></div> <!-- Hidden container for PDF generation -->
+
 <script src="exam-status.js"></script>
+
 <script>
+// Admin only
 const adminOnly = true;
 const examSelect = document.getElementById('examSelect');
 const downloadBtn = document.getElementById('downloadBtn');
@@ -41,16 +83,83 @@ for(const examId in EXAM_STATUS){
     }
 }
 
-// Open solution booklet page
+// Load questions dynamically
+function loadQuestionsJS(path, callback){
+    let script = document.createElement('script');
+    script.src = path;
+    script.onload = callback;
+    document.body.appendChild(script);
+}
+
+// Generate content in hidden div
+function generateContent(examId){
+    const container = document.getElementById('content');
+    container.innerHTML = "";
+    const examTitle = EXAM_STATUS[examId].title;
+
+    // Cover Page
+    let cover = document.createElement('div');
+    cover.className="cover-page";
+    cover.innerHTML=`
+      <img src="assets/icons/icon-192.png" alt="Logo">
+      <h1>${examTitle}</h1>
+      <p>Answer with Detailed Solution</p>
+      <p>Date: ${new Date().toLocaleDateString('bn-BD')}</p>
+      <div class="pagebreak"></div>
+    `;
+    container.appendChild(cover);
+
+    // Watermark
+    let watermark = document.createElement('img');
+    watermark.src="assets/icons/icon-192.png";
+    watermark.className="logo-watermark";
+    container.appendChild(watermark);
+
+    // Questions
+    QUESTIONS.forEach((q,i)=>{
+        let block = document.createElement('div');
+        block.className="question-block";
+        block.innerHTML=`
+          <h4>${i+1}. ${q.question}</h4>
+          ${q.options.map((opt,idx)=>`<p class="${idx===q.answer?'correct':''}">${String.fromCharCode(65+idx)}. ${opt}</p>`).join('')}
+          <p><strong>ব্যাখ্যা:</strong> ${q.explanation}</p>
+        `;
+        container.appendChild(block);
+    });
+}
+
+// Download PDF on button click
 downloadBtn.addEventListener('click', ()=>{
     const selectedExam = examSelect.value;
-    if(selectedExam){
-        window.open(`solution-booklet.html?exam=${selectedExam}`, '_blank');
-    } else {
-        alert("Please select an exam first.");
+    if(!selectedExam){
+        alert("Please select an exam first!");
+        return;
     }
+
+    // Load questions first
+    loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, async ()=>{
+        generateContent(selectedExam);
+
+        // jsPDF + html2canvas
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p','pt','a4');
+        const content = document.getElementById('content');
+
+        await html2canvas(content, {scale:2}).then(canvas=>{
+            const imgData = canvas.toDataURL('image/png');
+            const imgProps = doc.getImageProperties(imgData);
+            const pdfWidth = doc.internal.pageSize.getWidth();
+            const pdfHeight = (imgProps.height*pdfWidth)/imgProps.width;
+            doc.addImage(imgData,'PNG',0,0,pdfWidth,pdfHeight);
+            doc.save(`${EXAM_STATUS[selectedExam].title}.pdf`);
+        });
+    });
 });
 </script>
+
+<!-- jsPDF + html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </body>
 </html>
