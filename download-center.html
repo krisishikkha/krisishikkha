@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Admin Download Center</title>
+<style>
+body { font-family: SolaimanLipi, Arial, sans-serif; padding: 20px; }
+button { padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer; }
+button:hover { background:#246b45; }
+select { padding:5px 10px; font-size:16px; }
+</style>
+</head>
+<body>
+
+<h2>Admin Download Center</h2>
+
+<select id="examSelect">
+  <!-- Options dynamically loaded from exam-status.js -->
+</select>
+<button id="downloadBtn">Download Solution PDF</button>
+
+<script src="exam-status.js"></script>
+<script>
+// Admin only
+const adminOnly = true;
+if(!adminOnly){
+    document.getElementById('downloadBtn').style.display = 'none';
+    document.getElementById('examSelect').style.display = 'none';
+}
+
+// Load only visible exams into dropdown
+const examSelect = document.getElementById('examSelect');
+for(const examId in EXAM_STATUS){
+    if(EXAM_STATUS[examId].visible){
+        const option = document.createElement('option');
+        option.value = examId;
+        option.text = EXAM_STATUS[examId].title;
+        examSelect.appendChild(option);
+    }
+}
+
+// Button click → open solution-booklet.html
+document.getElementById('downloadBtn').addEventListener('click', ()=>{
+    const selectedExam = examSelect.value;
+    if(selectedExam){
+        window.open(`solution-booklet.html?exam=${selectedExam}`, '_blank');
+    }
+});
+</script>
+
+</body>
+  </html>
