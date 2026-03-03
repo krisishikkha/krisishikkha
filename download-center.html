@@ -7,9 +7,14 @@
 body{
   font-family: SolaimanLipi, Arial, sans-serif;
   padding:20px;
+  background:#f8f8f8;
 }
 h2{ margin-bottom:20px; }
-select{ padding:8px 12px; font-size:16px; margin-right:10px; }
+select{
+  padding:8px 12px;
+  font-size:16px;
+  margin-right:10px;
+}
 button{
   padding:10px 20px;
   background:#2E8B57;
@@ -18,7 +23,9 @@ button{
   border-radius:6px;
   cursor:pointer;
 }
-button:hover{ background:#246b45; }
+button:hover{
+  background:#246b45;
+}
 </style>
 </head>
 <body>
@@ -28,14 +35,17 @@ button:hover{ background:#246b45; }
 <select id="examSelect">
   <option value="">-- Select Exam --</option>
 </select>
+
 <button id="downloadBtn">Download Solution PDF</button>
 
 <script src="exam-status.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
-// Load only visible exams
+// Load visible exams
 const examSelect = document.getElementById("examSelect");
+const downloadBtn = document.getElementById("downloadBtn");
+
 for(const examId in EXAM_STATUS){
   if(EXAM_STATUS[examId].visible){
     let option = document.createElement("option");
@@ -45,7 +55,7 @@ for(const examId in EXAM_STATUS){
   }
 }
 
-// Load questions JS dynamically
+// Load Questions JS dynamically
 function loadQuestionsJS(path, callback){
   let script = document.createElement("script");
   script.src = path;
@@ -53,13 +63,13 @@ function loadQuestionsJS(path, callback){
   document.body.appendChild(script);
 }
 
-// Load Bangla font into jsPDF
+// Embed SolaimanLipi font
 async function loadFont(doc){
-  const response = await fetch("assets/fonts/SolaimanLipi_20-04-07.ttf");
-  const fontBuffer = await response.arrayBuffer();
-  const fontBase64 = btoa(new Uint8Array(fontBuffer).reduce((data, byte) => data + String.fromCharCode(byte), ""));
-  doc.addFileToVFS("SolaimanLipi.ttf", fontBase64);
-  doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
+  const res = await fetch("assets/fonts/SolaimanLipi_20-04-07.ttf");
+  const buffer = await res.arrayBuffer();
+  const base64 = btoa(new Uint8Array(buffer).reduce((data, byte)=>data+String.fromCharCode(byte),""));
+  doc.addFileToVFS("SolaimanLipi.ttf", base64);
+  doc.addFont("SolaimanLipi.ttf","SolaimanLipi","normal");
   doc.setFont("SolaimanLipi");
 }
 
@@ -72,10 +82,10 @@ async function generatePDF(examTitle, questions){
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
   const margin = 40;
-  let y = 60;
+  let y = 80;
 
   // Cover Page
-  doc.setFontSize(24);
+  doc.setFontSize(28);
   doc.text(examTitle, pageWidth/2, 200, {align:"center"});
   doc.setFontSize(16);
   doc.text("Answer with Detailed Solution", pageWidth/2, 240, {align:"center"});
@@ -85,24 +95,29 @@ async function generatePDF(examTitle, questions){
 
   // Questions
   questions.forEach((q,i)=>{
-    if(y > pageHeight-80){ doc.addPage(); y=50; }
+    if(y > pageHeight - 80){ doc.addPage(); y=50; }
 
-    doc.setFontSize(14);
+    // Question
+    doc.setFontSize(16);
     let qLines = doc.splitTextToSize(`${i+1}. ${q.question}`, pageWidth - 2*margin);
     doc.text(qLines, margin, y);
-    y += qLines.length*18 + 10;
+    y += qLines.length * 18 + 10;
 
-    q.options.forEach((opt,idx)=>{
-      if(y > pageHeight-60){ doc.addPage(); y=50; }
-      doc.setTextColor(idx===q.answer ? [34,139,34] : [0,0,0]);
+    // Options
+    q.options.forEach((opt, idx)=>{
+      if(y > pageHeight - 60){ doc.addPage(); y=50; }
+      doc.setFontSize(14);
+      doc.setTextColor(idx===q.answer?34:0, idx===q.answer?139:0, idx===q.answer?34:0);
       let optLines = doc.splitTextToSize(`${String.fromCharCode(65+idx)}. ${opt}`, pageWidth - 2*margin - 20);
-      doc.text(optLines, margin+20, y);
+      doc.text(optLines, margin + 20, y);
       y += optLines.length*16 + 5;
     });
 
+    // Explanation
     doc.setTextColor(0,0,0);
+    doc.setFontSize(12);
     let expLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth - 2*margin);
-    if(y + expLines.length*15 > pageHeight-60){ doc.addPage(); y=50; }
+    if(y + expLines.length*15 > pageHeight - 60){ doc.addPage(); y=50; }
     doc.text(expLines, margin, y);
     y += expLines.length*15 + 20;
   });
@@ -111,9 +126,12 @@ async function generatePDF(examTitle, questions){
 }
 
 // Button click
-document.getElementById("downloadBtn").addEventListener("click", ()=>{
+downloadBtn.addEventListener("click", ()=>{
   const selectedExam = examSelect.value;
-  if(!selectedExam){ alert("Please select an exam first!"); return; }
+  if(!selectedExam){
+    alert("Please select an exam first!");
+    return;
+  }
 
   loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, ()=>{
     generatePDF(EXAM_STATUS[selectedExam].title, QUESTIONS);
