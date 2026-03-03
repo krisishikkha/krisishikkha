@@ -135,69 +135,8 @@ function startTimer() {
         totalTime--;
     }, 1000);
 }
-// -------------------- Submit Exam --------------------
+// ---------------- Submit Exam ----------------
 function submitExam() {
-    clearInterval(timerInterval);
-
-    const studentName = document.getElementById("studentName").value;
-
-    let correct = 0;
-    let wrong = 0;
-    let unanswered = 0;
-
-    QUESTIONS.forEach((q, index) => {
-        if (userAnswers[index] === undefined) {
-            unanswered++;
-        } else if (userAnswers[index] === q.answer) {
-            correct++;
-        } else {
-            wrong++;
-        }
-    });
-
-    let percent = ((correct / QUESTIONS.length) * 100).toFixed(2);
-
-    const examMain = document.getElementById("examMain");
-
-    examMain.innerHTML = `
-        <div class="scoreboard-card">
-          <h2>${studentName}</h2>
-          <p>✔️ সঠিক: ${correct}</p>
-          <p>❌ ভুল: ${wrong}</p>
-          <p>❓ উত্তর দেয়নি: ${unanswered}</p>
-          <h3>📊 শতাংশ: ${percent}%</h3>
-        </div>
-    `;
-
-    QUESTIONS.forEach((q, index) => {
-        const userAns = userAnswers[index];
-        const correctAns = q.answer;
-
-        let statusClass = "";
-        if (userAns === undefined) {
-            statusClass = "red";
-        } else if (userAns === correctAns) {
-            statusClass = "green";
-        } else {
-            statusClass = "red";
-        }
-
-        examMain.innerHTML += `
-          <div class="review-card">
-            <h4>${index + 1}: ${q.question}</h4>
-            <p class="${statusClass}">
-              ${userAns === undefined ? "উত্তর দেননি" : "উত্তর: " + q.options[userAns]}
-            </p>
-            <p style="color:green;">
-              সঠিক উত্তর: ${q.options[correctAns]}
-            </p>
-            <p class="explanation">
-              <strong>ব্যাখ্যা:</strong> ${q.explanation}
-            </p>
-          </div>
-        `;
-    });
-
     window.scrollTo({ top: 0, behavior: "smooth" });
 
     let examEndTime = new Date();
@@ -212,22 +151,21 @@ function submitExam() {
         end: examEndTime
     });
 
-    examMain.innerHTML += `
-      <div style="margin-top:20px;">
-        <button onclick="downloadAnswerSheetPDF()">📄 উত্তরপত্র (PDF) ডাউনলোড করুন</button>
-        <button onclick="downloadAllResultsPDF()">📄 সকল ফলাফল (Admin)</button>
-      </div>
+    document.getElementById("examMain").innerHTML = `
+        <div style="margin-top:20px;">
+            <button onclick="downloadAnswerSheetPDF()">➤ উত্তরপত্র (PDF) ডাউনলোড</button>
+            <button onclick="downloadAllResultsPDF()">➤ সকল ফলাফল (Admin)</button>
+        </div>
     `;
 }
 
-// -------------------- Answer Sheet PDF --------------------
+// ---------------- Answer Sheet PDF ----------------
 function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    doc.addFileToVFS("SolaimanLipi.ttf", solaimanLipiBase64);
-    doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
-    doc.setFont("SolaimanLipi");
+    // ফন্ট লোড করুন (SolaimanLipi.js থেকে আসবে)
+    doc.setFont("SolaimanLipi_20-04-07", "normal");
 
     doc.setFontSize(14);
     doc.text("উত্তরপত্র", 10, 10);
@@ -236,7 +174,7 @@ function downloadAnswerSheetPDF() {
         const userAns = userAnswers[index];
         const correctAns = q.answer;
 
-        let ansText = userAns === undefined ? "উত্তর দেননি" : q.options[userAns];
+        let ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
         let y = 20 + index * 40;
 
         doc.text(`${index + 1}. ${q.question}`, 10, y);
@@ -248,14 +186,13 @@ function downloadAnswerSheetPDF() {
     doc.save("answer-sheet.pdf");
 }
 
-// -------------------- All Results PDF --------------------
+// ---------------- All Results PDF ----------------
 function downloadAllResultsPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    doc.addFileToVFS("SolaimanLipi.ttf", solaimanLipiBase64);
-    doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
-    doc.setFont("SolaimanLipi");
+    // ফন্ট লোড করুন (SolaimanLipi.js থেকে আসবে)
+    doc.setFont("SolaimanLipi_20-04-07", "normal");
 
     doc.setFontSize(14);
     doc.text("সকল পরীক্ষার্থীর ফলাফল", 10, 10);
@@ -265,7 +202,7 @@ function downloadAllResultsPDF() {
         doc.text(`${index + 1}. ${res.name}`, 10, y);
         doc.text(`✔️ সঠিক: ${res.correct}`, 10, y + 5);
         doc.text(`❌ ভুল: ${res.wrong}`, 10, y + 10);
-        doc.text(`❓ উত্তর দেয়নি: ${res.unanswered}`, 10, y + 15);
+        doc.text(`❓ উত্তর নেই: ${res.unanswered}`, 10, y + 15);
         doc.text(`📊 শতাংশ: ${res.percent}%`, 10, y + 20);
     });
 
