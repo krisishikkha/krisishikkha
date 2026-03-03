@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <title>Admin Download Center</title>
 <style>
-body { font-family: SolaimanLipi, Arial, sans-serif; padding: 20px; color:#000; }
-h2 { margin-bottom: 20px; }
+body { font-family: SolaimanLipi, Arial, sans-serif; padding:20px; color:#000; }
+h2{margin-bottom:20px;}
 select { padding:5px 10px; font-size:16px; margin-right:10px; }
 button { padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer; }
-button:hover{ background:#246b45; }
+button:hover{background:#246b45;}
 
 /* Cover Page */
 .cover-page {
@@ -58,7 +58,7 @@ button:hover{ background:#246b45; }
 </select>
 <button id="downloadBtn">Download Solution PDF</button>
 
-<div id="content" style="display:none;"></div> <!-- Hidden container for PDF generation -->
+<div id="content"></div>
 
 <script src="exam-status.js"></script>
 
@@ -91,10 +91,10 @@ function loadQuestionsJS(path, callback){
     document.body.appendChild(script);
 }
 
-// Generate content in hidden div
+// Generate content
 function generateContent(examId){
     const container = document.getElementById('content');
-    container.innerHTML = "";
+    container.innerHTML="";
     const examTitle = EXAM_STATUS[examId].title;
 
     // Cover Page
@@ -105,7 +105,6 @@ function generateContent(examId){
       <h1>${examTitle}</h1>
       <p>Answer with Detailed Solution</p>
       <p>Date: ${new Date().toLocaleDateString('bn-BD')}</p>
-      <div class="pagebreak"></div>
     `;
     container.appendChild(cover);
 
@@ -128,19 +127,17 @@ function generateContent(examId){
     });
 }
 
-// Download PDF on button click
-downloadBtn.addEventListener('click', ()=>{
+// Download PDF
+downloadBtn.addEventListener('click', async ()=>{
     const selectedExam = examSelect.value;
     if(!selectedExam){
         alert("Please select an exam first!");
         return;
     }
 
-    // Load questions first
     loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, async ()=>{
         generateContent(selectedExam);
 
-        // jsPDF + html2canvas
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF('p','pt','a4');
         const content = document.getElementById('content');
@@ -157,7 +154,6 @@ downloadBtn.addEventListener('click', ()=>{
 });
 </script>
 
-<!-- jsPDF + html2canvas -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
