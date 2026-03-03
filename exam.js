@@ -136,13 +136,29 @@ function startTimer() {
         totalTime--;
     }, 1000);
 }
-
-// -------------------- Submit Exam --------------------
 function submitExam() {
     // অটো স্ক্রল করে উপরে যাবে
     window.scrollTo({ top: 0, behavior: "smooth" });
 
     let examEndTime = new Date();
+
+    // স্কোর ক্যালকুলেশন
+    let correct = 0;
+    let wrong = 0;
+    let unanswered = 0;
+
+    QUESTIONS.forEach((q, index) => {
+        const userAns = userAnswers[index];
+        if (userAns === undefined) {
+            unanswered++;
+        } else if (userAns === q.answer) {
+            correct++;
+        } else {
+            wrong++;
+        }
+    });
+
+    let percent = Math.round((correct / QUESTIONS.length) * 100);
 
     // ফলাফল লিস্টে যোগ করা
     allResults.push({
