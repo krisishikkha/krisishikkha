@@ -15,9 +15,9 @@ body { font-family: SolaimanLipi, Arial, sans-serif; padding:20px; color:#000; }
 <div id="content"></div>
 
 <script src="exam-status.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
-// Read examId from URL
 const params = new URLSearchParams(window.location.search);
 const examId = params.get('exam');
 
@@ -43,60 +43,61 @@ loadQuestionsJS(`exam-corner/${examId}/questions.js`, ()=>{
     });
 });
 
-// Generate PDF function (text-based, optimized)
-function generatePDF(examTitle, questions){
+// Generate PDF with embedded SolaimanLipi
+async function generatePDF(examTitle, questions){
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF('p','pt','a4');
-    const pageWidth = doc.internal.pageSize.getWidth();
-    const margin = 40;
-    let y = 50;
 
-    // Add cover page
+    // Load font
+    const response = await fetch("assets/fonts/SolaimanLipi_20-04-07.ttf");
+    const fontBuffer = await response.arrayBuffer();
+    const fontBase64 = btoa(String.fromCharCode(...new Uint8Array(fontBuffer)));
+    doc.addFileToVFS("SolaimanLipi.ttf", fontBase64);
+    doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
+    doc.setFont("SolaimanLipi");
+
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 40;
+    let y = 80;
+
+    // Cover Page
     doc.setFontSize(28);
-    doc.text(examTitle, pageWidth/2, 150, {align:'center'});
+    doc.text(examTitle, pageWidth/2, 200, {align:'center'});
     doc.setFontSize(16);
-    doc.text("Answer with Detailed Solution", pageWidth/2, 200, {align:'center'});
-    doc.text(`Date: ${new Date().toLocaleDateString('bn-BD')}`, pageWidth/2, 230, {align:'center'});
+    doc.text("Answer with Detailed Solution", pageWidth/2, 240, {align:'center'});
+    doc.text(`তারিখ: ${new Date().toLocaleDateString('bn-BD')}`, pageWidth/2, 270, {align:'center'});
     doc.addPage();
     y = 50;
 
-    doc.setFontSize(14);
-
-    // Loop questions
+    // Questions
     questions.forEach((q,i)=>{
-        if(y > 700){ doc.addPage(); y=50; } // page break
+        if(y>750){ doc.addPage(); y=50; }
 
         doc.setFontSize(16);
-        doc.text(`${i+1}. ${q.question}`, margin, y);
-        y += 25;
+        let qLines = doc.splitTextToSize(`${i+1}. ${q.question}`, pageWidth-2*margin);
+        doc.text(qLines, margin, y);
+        y += qLines.length*18 + 8;
 
         q.options.forEach((opt,idx)=>{
-            doc.setFontSize(14);
-            if(idx === q.answer){
-                doc.setTextColor(34,139,34); // green for correct
-            } else {
-                doc.setTextColor(0,0,0);
-            }
-            doc.text(`${String.fromCharCode(65+idx)}. ${opt}`, margin+20, y);
-            y += 20;
             if(y>750){ doc.addPage(); y=50; }
+            doc.setFontSize(14);
+            doc.setTextColor(idx===q.answer?34:0, idx===q.answer?139:0, idx===q.answer?34:0);
+            let optLines = doc.splitTextToSize(`${String.fromCharCode(65+idx)}. ${opt}`, pageWidth-2*margin-20);
+            doc.text(optLines, margin+20, y);
+            y += optLines.length*16 + 5;
         });
 
-        // Explanation
         doc.setTextColor(0,0,0);
-        doc.setFontSize(12);
-        let explanationLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth - 2*margin);
-        doc.text(explanationLines, margin, y);
-        y += explanationLines.length*15 + 15;
-
-        if(y>750){ doc.addPage(); y=50; }
+        let expLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth-2*margin);
+        if(y + expLines.length*15 > pageHeight-60){ doc.addPage(); y=50; }
+        doc.text(expLines, margin, y);
+        y += expLines.length*15 + 20;
     });
 
-    doc.save(`${EXAM_STATUS[examId].title}.pdf`);
+    doc.save(`${examTitle}.pdf`);
 }
 </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </body>
 </html>
