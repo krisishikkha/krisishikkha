@@ -4,63 +4,21 @@
 <meta charset="UTF-8">
 <title>Solution Booklet</title>
 <style>
-body {
-  font-family: SolaimanLipi, Arial, sans-serif;
-  padding: 20px;
-  line-height: 1.6;
-  color: #000;
-}
-#downloadBtn {
-  display: none;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #2E8B57;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+body { font-family: SolaimanLipi, Arial, sans-serif; padding: 20px; line-height: 1.6; color: #000; }
+#downloadBtn { display: none; margin-bottom: 20px; padding: 10px 20px; font-size: 16px; background-color: #2E8B57; color: white; border: none; border-radius: 5px; cursor: pointer; }
 #downloadBtn:hover { background-color: #246b45; }
 
-.cover-page {
-  text-align: center;
-  margin-top: 100px;
-  page-break-after: always;
-}
-.cover-page img {
-  width: 200px;
-  margin-bottom: 20px;
-}
+.cover-page { text-align: center; margin-top: 100px; page-break-after: always; }
+.cover-page img { width: 200px; margin-bottom: 20px; }
 .cover-page h1 { font-size: 32px; margin: 10px 0; }
 .cover-page p { font-size: 18px; margin: 5px 0; }
 
 .question-block { margin-bottom: 20px; }
 .correct { color: green; font-weight: bold; }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-}
-.logo-watermark {
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.08;
-  width: 300px;
-  z-index: -1;
-}
-footer {
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-}
+header { position: fixed; top: 0; width: 100%; text-align: center; font-size: 14px; }
+.logo-watermark { position: fixed; top: 40%; left: 50%; transform: translate(-50%, -50%); opacity: 0.08; width: 300px; z-index: -1; }
+footer { position: fixed; bottom: 10px; width: 100%; text-align: center; font-size: 12px; }
 
 .pagebreak { page-break-before: always; }
 
@@ -76,95 +34,90 @@ footer {
 <button id="downloadBtn" onclick="window.print()">Download PDF</button>
 <div id="content"></div>
 
-<script src="../exam-status.js"></script>
-
+<script src="exam-status.js"></script>
 <script>
-// ===== Read Exam ID from URL =====
+// Admin-only display
+const adminOnly = true;
+if(adminOnly){
+    document.getElementById('downloadBtn').style.display = 'block';
+}
+
+// Read exam ID from URL
 const params = new URLSearchParams(window.location.search);
 const examId = params.get('exam'); // e.g., "exam-10"
 
-// ===== Load Exam Title =====
-const examTitle = EXAM_STATUS[examId] ? EXAM_STATUS[examId].title : "Krisishikkha Exam";
-
-// ===== Admin + Visible Check =====
-const adminOnly = true; // only admin can see download
-if(adminOnly && EXAM_STATUS[examId] && EXAM_STATUS[examId].visible){
-    document.getElementById('downloadBtn').style.display = 'block';
-}else{
+// Check if exam visible
+if(!EXAM_STATUS[examId] || !EXAM_STATUS[examId].visible){
+    alert("This exam is hidden. Download not allowed.");
     document.getElementById('downloadBtn').style.display = 'none';
-    if(adminOnly){
-        alert("This exam is hidden. Download not allowed.");
+} else {
+    // Load exam title
+    const examTitle = EXAM_STATUS[examId].title;
+
+    // Dynamically load questions.js
+    function loadQuestionsJS(path, callback){
+        let script = document.createElement('script');
+        script.src = path;
+        script.onload = callback;
+        document.body.appendChild(script);
     }
-}
 
-// ===== Dynamic load of Questions JS file =====
-function loadQuestionsJS(path, callback){
-    let script = document.createElement('script');
-    script.src = path;
-    script.onload = callback;
-    document.body.appendChild(script);
-}
+    function generateContent(){
+        let container = document.getElementById('content');
 
-// ===== Generate PDF Content =====
-function generateContent(){
-    let container = document.getElementById('content');
-    
-    // Cover Page
-    let cover = document.createElement('div');
-    cover.className = "cover-page";
-    cover.innerHTML = `
-      <img src="../assets/icons/icon-192.png" alt="Logo">
-      <h1>${examTitle}</h1>
-      <p>Answer with Detailed Solution</p>
-      <p>Date: ${new Date().toLocaleDateString('bn-BD')}</p>
-      <div class="pagebreak"></div>
-    `;
-    container.appendChild(cover);
-    
-    // Header + Watermark
-    let header = document.createElement('header');
-    header.innerHTML = examTitle;
-    document.body.appendChild(header);
-
-    let watermark = document.createElement('img');
-    watermark.src = "../assets/icons/icon-192.png";
-    watermark.className = "logo-watermark";
-    document.body.appendChild(watermark);
-
-    // Footer with Page X of Y
-    let footer = document.createElement('footer');
-    footer.innerHTML = "Page <span id='pageNumber'></span> of <span id='totalPages'></span>";
-    document.body.appendChild(footer);
-
-    // Generate Questions
-    QUESTIONS.forEach((q,index)=>{
-        let block = document.createElement('div');
-        block.className = "question-block";
-        block.innerHTML = `
-          <h4>${index+1}. ${q.question}</h4>
-          ${q.options.map((opt,i)=>`
-            <p class="${i===q.answer?'correct':''}">
-              ${String.fromCharCode(65+i)}. ${opt}
-            </p>`).join('')}
-          <p><strong>ব্যাখ্যা:</strong> ${q.explanation}</p>
-          <hr>
+        // Cover page
+        let cover = document.createElement('div');
+        cover.className = "cover-page";
+        cover.innerHTML = `
+          <img src="assets/icons/icon-192.png" alt="Logo">
+          <h1>${examTitle}</h1>
+          <p>Answer with Detailed Solution</p>
+          <p>Date: ${new Date().toLocaleDateString('bn-BD')}</p>
+          <div class="pagebreak"></div>
         `;
-        container.appendChild(block);
-    });
+        container.appendChild(cover);
 
-    // Page number calculation for print
-    setTimeout(() => {
-        const totalPages = Math.ceil(document.body.scrollHeight / 1122); // approx A4 page height
-        document.getElementById('totalPages').textContent = totalPages;
-        document.getElementById('pageNumber').textContent = 1; // first page
-    }, 1000);
+        // Header + Watermark
+        let header = document.createElement('header');
+        header.innerHTML = examTitle;
+        document.body.appendChild(header);
+
+        let watermark = document.createElement('img');
+        watermark.src = "assets/icons/icon-192.png";
+        watermark.className = "logo-watermark";
+        document.body.appendChild(watermark);
+
+        // Footer
+        let footer = document.createElement('footer');
+        footer.innerHTML = "Page <span id='pageNumber'></span> of <span id='totalPages'></span>";
+        document.body.appendChild(footer);
+
+        // Questions
+        QUESTIONS.forEach((q,index)=>{
+            let block = document.createElement('div');
+            block.className = "question-block";
+            block.innerHTML = `
+              <h4>${index+1}. ${q.question}</h4>
+              ${q.options.map((opt,i)=>`
+                <p class="${i===q.answer?'correct':''}">
+                  ${String.fromCharCode(65+i)}. ${opt}
+                </p>`).join('')}
+              <p><strong>ব্যাখ্যা:</strong> ${q.explanation}</p>
+              <hr>
+            `;
+            container.appendChild(block);
+        });
+
+        // Page numbers calculation (approx)
+        setTimeout(() => {
+            const totalPages = Math.ceil(document.body.scrollHeight / 1122);
+            document.getElementById('totalPages').textContent = totalPages;
+            document.getElementById('pageNumber').textContent = 1;
+        }, 1000);
+    }
+
+    loadQuestionsJS(`exam-corner/${examId}/questions.js`, generateContent);
 }
-
-// ===== Load Questions file dynamically =====
-if(EXAM_STATUS[examId] && EXAM_STATUS[examId].visible){
-    loadQuestionsJS(`../exam-corner/${examId}/questions.js`, generateContent);
-}
-
 </script>
 </body>
 </html>
