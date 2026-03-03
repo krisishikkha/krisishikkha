@@ -136,7 +136,6 @@ function startTimer() {
     }, 1000);
 }
 
-// ---------------- Submit Exam ----------------
 function submitExam() {
     // অটো স্ক্রল করে উপরে যাবে
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -156,13 +155,13 @@ function submitExam() {
 
     // স্কোরবোর্ড তৈরি
     let resultHTML = `
-        <h2>📊 স্কোরবোর্ড</h2>
+        <h2>✅ পরীক্ষার ফলাফল</h2>
         <p>✔️ সঠিক: ${correct}</p>
         <p>❌ ভুল: ${wrong}</p>
         <p>❓ উত্তর নেই: ${unanswered}</p>
-        <p>📈 শতাংশ: ${percent}%</p>
+        <p>📊 শতাংশ: ${percent}%</p>
         <hr>
-        <h2>📄 উত্তরপত্র</h2>
+        <h2>📋 উত্তরপত্র</h2>
     `;
 
     // প্রতিটি প্রশ্নের উত্তর ও ব্যাখ্যা দেখানো
@@ -172,11 +171,11 @@ function submitExam() {
         let ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
 
         resultHTML += `
-            <div style="margin-bottom:15px; padding:10px; border:1px solid #ddd;">
+            <div style="margin-bottom:15px; padding:10px; border:1px solid #ccc;">
                 <strong>${index + 1}. ${q.question}</strong><br>
-                ➤ আপনার উত্তর: ${ansText}<br>
-                ✔ সঠিক উত্তর: ${q.options[correctAns]}<br>
-                <em>ব্যাখ্যা:</em> ${q.explanation}
+                ➡️ আপনার উত্তর: ${ansText}<br>
+                ✔️ সঠিক উত্তর: ${q.options[correctAns]}<br>
+                🧠 ব্যাখ্যা: <em>${q.explanation}</em>
             </div>
         `;
     });
@@ -184,20 +183,18 @@ function submitExam() {
     // সবশেষে ডাউনলোড বাটন
     resultHTML += `
         <div style="margin-top:20px;">
-            <button onclick="downloadAnswerSheetPDF()">➤ উত্তরপত্র (PDF) ডাউনলোড</button>
-            <button onclick="downloadAllResultsPDF()">➤ সকল ফলাফল (Admin)</button>
+            <button onclick="downloadAnswerSheetPDF()">📄 উত্তরপত্র (PDF) ডাউনলোড</button>
+            <button onclick="downloadAllResultsPDF()">📊 সমস্ত ফলাফল (Admin)</button>
         </div>
     `;
 
     document.getElementById("examMain").innerHTML = resultHTML;
 }
-
-// ---------------- Answer Sheet PDF ----------------
 function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // বাংলা ফন্ট লোড (SolaimanLipi.js থেকে আসছে)
+    // বাংলা ফন্ট লোড (SolaimanLipi.js থেকে এসেছে)
     doc.setFont("SolaimanLipi_20-04-07", "normal");
 
     doc.setFontSize(14);
@@ -211,20 +208,18 @@ function downloadAnswerSheetPDF() {
         let y = 20 + index * 40;
 
         doc.text(`${index + 1}. ${q.question}`, 10, y);
-        doc.text(`আপনার উত্তর: ${ansText}`, 10, y + 5);
-        doc.text(`সঠিক উত্তর: ${q.options[correctAns]}`, 10, y + 10);
-        doc.text(`ব্যাখ্যা: ${q.explanation}`, 10, y + 15);
+        doc.text(`➡️ আপনার উত্তর: ${ansText}`, 10, y + 5);
+        doc.text(`✔️ সঠিক উত্তর: ${q.options[correctAns]}`, 10, y + 10);
+        doc.text(`🧠 ব্যাখ্যা: ${q.explanation}`, 10, y + 15);
     });
 
     doc.save("answer-sheet.pdf");
-}
-
-// ---------------- All Results PDF ----------------
+                      }
 function downloadAllResultsPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // বাংলা ফন্ট লোড (SolaimanLipi.js থেকে আসছে)
+    // বাংলা ফন্ট লোড (SolaimanLipi.js থেকে এসেছে)
     doc.setFont("SolaimanLipi_20-04-07", "normal");
 
     doc.setFontSize(14);
