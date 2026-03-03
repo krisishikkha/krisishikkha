@@ -71,6 +71,7 @@ function initExam(examId) {
 
     document.body.appendChild(script);
 }
+
 // -------------------- Render Questions --------------------
 function renderQuestions() {
     const container = document.getElementById("examContainer");
@@ -136,6 +137,7 @@ function startTimer() {
     }, 1000);
 }
 
+// -------------------- Submit Exam --------------------
 function submitExam() {
     // অটো স্ক্রল করে উপরে যাবে
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -190,6 +192,8 @@ function submitExam() {
 
     document.getElementById("examMain").innerHTML = resultHTML;
 }
+
+// -------------------- Answer Sheet PDF --------------------
 function downloadAnswerSheetPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -214,7 +218,9 @@ function downloadAnswerSheetPDF() {
     });
 
     doc.save("answer-sheet.pdf");
-                      }
+}
+
+// -------------------- All Results PDF --------------------
 function downloadAllResultsPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
