@@ -4,115 +4,9 @@
 <meta charset="UTF-8">
 <title>Solution Booklet</title>
 <style>
-body { font-family: SolaimanLipi, Arial, sans-serif; padding: 20px; color:#000; line-height:1.6; }
+body { font-family: SolaimanLipi, Arial, sans-serif; padding:20px; color:#000; }
 #downloadBtn { padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer; margin-bottom:20px; }
 #downloadBtn:hover{ background:#246b45; }
-
-/* Cover Page */
-.cover-page {
-  text-align:center;
-  margin-top:50px;
-  page-break-after: always;
-  padding:30px;
-  background-color:#f0f4f8;
-  border-radius:10px;
-  box-shadow:0px 4px 10px rgba(0,0,0,0.1);
-}
-.cover-page img{ width:200px; margin-bottom:20px; }
-.cover-page h1{ font-size:36px; margin:15px 0; }
-.cover-page p{ font-size:20px; margin:10px 0; }
-
-/* Question card style */
-.question-block {
-  margin-bottom:20px;
-  padding:15px 20px;
-  border:1px solid #ccc;
-  border-radius:10px;
-  background-color:#f9f9f9;
-  box-shadow:2px 2px 8px rgba(0,0,0,0.1);
-}
-.question-block h4 { font-size:22px; margin-bottom:10px; }
-.question-block p { font-size:18px; margin:5px 0; }
-.correct { color:#2E8B57; font-weight:bold; }
-
-/* Watermark */
-.logo-watermark {
-  position: fixed;
-  top:45%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  opacity:0.06;
-  width:250px;
-  z-index:-1;
-}
-</style>
-</head>
-<body>
-
-<button id="downloadBtn">Download PDF</button>
-<div id="content"></div>
-
-<script src="exam-status.js"></script>
-
-<script>
-// Read examId from URL
-const params = new URLSearchParams(window.location.search);
-const examId = params.get('exam');
-if(!examId || !EXAM_STATUS[examId] || !EXAM_STATUS[examId].visible){
-    alert("Exam hidden or invalid!");
-    document.getElementById('downloadBtn').style.display='none';
-}
-
-// Load questions JS dynamically
-function loadQuestionsJS(path, callback){
-    let script = document.createElement('script');
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<title>Solution Booklet</title>
-<style>
-body { font-family: SolaimanLipi, Arial, sans-serif; padding:20px; color:#000; line-height:1.6; }
-#downloadBtn { padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer; margin-bottom:20px; }
-#downloadBtn:hover{ background:#246b45; }
-
-/* Cover Page */
-.cover-page {
-  text-align:center;
-  margin-top:50px;
-  page-break-after: always;
-  padding:30px;
-  background-color:#f0f4f8;
-  border-radius:10px;
-  box-shadow:0px 4px 10px rgba(0,0,0,0.1);
-}
-.cover-page img{ width:200px; margin-bottom:20px; }
-.cover-page h1{ font-size:36px; margin:15px 0; }
-.cover-page p{ font-size:20px; margin:10px 0; }
-
-/* Question card style */
-.question-block {
-  margin-bottom:20px;
-  padding:15px 20px;
-  border:1px solid #ccc;
-  border-radius:10px;
-  background-color:#f9f9f9;
-  box-shadow:2px 2px 8px rgba(0,0,0,0.1);
-}
-.question-block h4 { font-size:22px; margin-bottom:10px; }
-.question-block p { font-size:18px; margin:5px 0; }
-.correct { color:#2E8B57; font-weight:bold; }
-
-/* Watermark */
-.logo-watermark {
-  position: fixed;
-  top:45%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  opacity:0.06;
-  width:250px;
-  z-index:-1;
-}
 </style>
 </head>
 <body>
@@ -140,67 +34,69 @@ function loadQuestionsJS(path, callback){
     document.body.appendChild(script);
 }
 
-// Generate content
-function generateContent(){
-    const container = document.getElementById('content');
-    container.innerHTML = ""; // Clear
+// Load questions
+loadQuestionsJS(`exam-corner/${examId}/questions.js`, ()=>{
     const examTitle = EXAM_STATUS[examId].title;
 
-    // Cover Page
-    let cover = document.createElement('div');
-    cover.className="cover-page";
-    cover.innerHTML=`
-      <img src="assets/icons/icon-192.png" alt="Logo">
-      <h1>${examTitle}</h1>
-      <p>Answer with Detailed Solution</p>
-      <p>Date: ${new Date().toLocaleDateString('bn-BD')}</p>
-    `;
-    container.appendChild(cover);
-
-    // Watermark
-    let watermark = document.createElement('img');
-    watermark.src="assets/icons/icon-192.png";
-    watermark.className="logo-watermark";
-    container.appendChild(watermark);
-
-    // Questions
-    QUESTIONS.forEach((q,i)=>{
-        let block = document.createElement('div');
-        block.className="question-block";
-        block.innerHTML=`
-          <h4>${i+1}. ${q.question}</h4>
-          ${q.options.map((opt,idx)=>`<p class="${idx===q.answer?'correct':''}">${String.fromCharCode(65+idx)}. ${opt}</p>`).join('')}
-          <p><strong>ব্যাখ্যা:</strong> ${q.explanation}</p>
-        `;
-        container.appendChild(block);
-    });
-}
-
-// Load question file
-loadQuestionsJS(`exam-corner/${examId}/questions.js`, generateContent);
-
-</script>
-
-<!-- jsPDF + html2canvas -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-<script>
-document.getElementById('downloadBtn').addEventListener('click', async ()=>{
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF('p','pt','a4');
-    const content = document.getElementById('content');
-
-    await html2canvas(content, {scale:2}).then(canvas=>{
-        const imgData = canvas.toDataURL('image/png');
-        const imgProps = doc.getImageProperties(imgData);
-        const pdfWidth = doc.internal.pageSize.getWidth();
-        const pdfHeight = (imgProps.height*pdfWidth)/imgProps.width;
-        doc.addImage(imgData,'PNG',0,0,pdfWidth,pdfHeight);
-        doc.save(`${EXAM_STATUS[examId].title}.pdf`);
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+        generatePDF(examTitle, QUESTIONS);
     });
 });
+
+// Generate PDF function (text-based, optimized)
+function generatePDF(examTitle, questions){
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF('p','pt','a4');
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const margin = 40;
+    let y = 50;
+
+    // Add cover page
+    doc.setFontSize(28);
+    doc.text(examTitle, pageWidth/2, 150, {align:'center'});
+    doc.setFontSize(16);
+    doc.text("Answer with Detailed Solution", pageWidth/2, 200, {align:'center'});
+    doc.text(`Date: ${new Date().toLocaleDateString('bn-BD')}`, pageWidth/2, 230, {align:'center'});
+    doc.addPage();
+    y = 50;
+
+    doc.setFontSize(14);
+
+    // Loop questions
+    questions.forEach((q,i)=>{
+        if(y > 700){ doc.addPage(); y=50; } // page break
+
+        doc.setFontSize(16);
+        doc.text(`${i+1}. ${q.question}`, margin, y);
+        y += 25;
+
+        q.options.forEach((opt,idx)=>{
+            doc.setFontSize(14);
+            if(idx === q.answer){
+                doc.setTextColor(34,139,34); // green for correct
+            } else {
+                doc.setTextColor(0,0,0);
+            }
+            doc.text(`${String.fromCharCode(65+idx)}. ${opt}`, margin+20, y);
+            y += 20;
+            if(y>750){ doc.addPage(); y=50; }
+        });
+
+        // Explanation
+        doc.setTextColor(0,0,0);
+        doc.setFontSize(12);
+        let explanationLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth - 2*margin);
+        doc.text(explanationLines, margin, y);
+        y += explanationLines.length*15 + 15;
+
+        if(y>750){ doc.addPage(); y=50; }
+    });
+
+    doc.save(`${EXAM_STATUS[examId].title}.pdf`);
+}
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </body>
 </html>
