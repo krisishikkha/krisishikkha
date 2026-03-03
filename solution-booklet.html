@@ -66,6 +66,75 @@ if(!examId || !EXAM_STATUS[examId] || !EXAM_STATUS[examId].visible){
 // Load questions JS dynamically
 function loadQuestionsJS(path, callback){
     let script = document.createElement('script');
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Solution Booklet</title>
+<style>
+body { font-family: SolaimanLipi, Arial, sans-serif; padding:20px; color:#000; line-height:1.6; }
+#downloadBtn { padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer; margin-bottom:20px; }
+#downloadBtn:hover{ background:#246b45; }
+
+/* Cover Page */
+.cover-page {
+  text-align:center;
+  margin-top:50px;
+  page-break-after: always;
+  padding:30px;
+  background-color:#f0f4f8;
+  border-radius:10px;
+  box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+}
+.cover-page img{ width:200px; margin-bottom:20px; }
+.cover-page h1{ font-size:36px; margin:15px 0; }
+.cover-page p{ font-size:20px; margin:10px 0; }
+
+/* Question card style */
+.question-block {
+  margin-bottom:20px;
+  padding:15px 20px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  background-color:#f9f9f9;
+  box-shadow:2px 2px 8px rgba(0,0,0,0.1);
+}
+.question-block h4 { font-size:22px; margin-bottom:10px; }
+.question-block p { font-size:18px; margin:5px 0; }
+.correct { color:#2E8B57; font-weight:bold; }
+
+/* Watermark */
+.logo-watermark {
+  position: fixed;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  opacity:0.06;
+  width:250px;
+  z-index:-1;
+}
+</style>
+</head>
+<body>
+
+<button id="downloadBtn">Download PDF</button>
+<div id="content"></div>
+
+<script src="exam-status.js"></script>
+
+<script>
+// Read examId from URL
+const params = new URLSearchParams(window.location.search);
+const examId = params.get('exam');
+
+if(!examId || !EXAM_STATUS[examId] || !EXAM_STATUS[examId].visible){
+    alert("Exam hidden or invalid!");
+    document.getElementById('downloadBtn').style.display='none';
+}
+
+// Load questions JS dynamically
+function loadQuestionsJS(path, callback){
+    let script = document.createElement('script');
     script.src = path;
     script.onload = callback;
     document.body.appendChild(script);
@@ -74,6 +143,7 @@ function loadQuestionsJS(path, callback){
 // Generate content
 function generateContent(){
     const container = document.getElementById('content');
+    container.innerHTML = ""; // Clear
     const examTitle = EXAM_STATUS[examId].title;
 
     // Cover Page
@@ -84,7 +154,6 @@ function generateContent(){
       <h1>${examTitle}</h1>
       <p>Answer with Detailed Solution</p>
       <p>Date: ${new Date().toLocaleDateString('bn-BD')}</p>
-      <div class="pagebreak"></div>
     `;
     container.appendChild(cover);
 
@@ -92,7 +161,7 @@ function generateContent(){
     let watermark = document.createElement('img');
     watermark.src="assets/icons/icon-192.png";
     watermark.className="logo-watermark";
-    document.body.appendChild(watermark);
+    container.appendChild(watermark);
 
     // Questions
     QUESTIONS.forEach((q,i)=>{
