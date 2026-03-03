@@ -7,7 +7,8 @@
 body { font-family: SolaimanLipi, Arial, sans-serif; padding: 20px; }
 button { padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer; }
 button:hover { background:#246b45; }
-select { padding:5px 10px; font-size:16px; }
+select { padding:5px 10px; font-size:16px; margin-right:10px; }
+h2 { margin-bottom: 20px; }
 </style>
 </head>
 <body>
@@ -15,21 +16,22 @@ select { padding:5px 10px; font-size:16px; }
 <h2>Admin Download Center</h2>
 
 <select id="examSelect">
-  <!-- Options dynamically loaded from exam-status.js -->
+  <option value="">-- Select Exam --</option>
 </select>
 <button id="downloadBtn">Download Solution PDF</button>
 
 <script src="exam-status.js"></script>
 <script>
-// Admin only
 const adminOnly = true;
+const examSelect = document.getElementById('examSelect');
+const downloadBtn = document.getElementById('downloadBtn');
+
 if(!adminOnly){
-    document.getElementById('downloadBtn').style.display = 'none';
-    document.getElementById('examSelect').style.display = 'none';
+    downloadBtn.style.display='none';
+    examSelect.style.display='none';
 }
 
-// Load only visible exams into dropdown
-const examSelect = document.getElementById('examSelect');
+// Load only visible exams
 for(const examId in EXAM_STATUS){
     if(EXAM_STATUS[examId].visible){
         const option = document.createElement('option');
@@ -39,14 +41,16 @@ for(const examId in EXAM_STATUS){
     }
 }
 
-// Button click → open solution-booklet.html
-document.getElementById('downloadBtn').addEventListener('click', ()=>{
+// Open solution booklet page
+downloadBtn.addEventListener('click', ()=>{
     const selectedExam = examSelect.value;
     if(selectedExam){
         window.open(`solution-booklet.html?exam=${selectedExam}`, '_blank');
+    } else {
+        alert("Please select an exam first.");
     }
 });
 </script>
 
 </body>
-  </html>
+</html>
