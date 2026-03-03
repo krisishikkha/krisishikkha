@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam | Krisishikkha</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6K7Q8203"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,12 +15,7 @@
     gtag('config', 'G-L6K7Q8203');
   </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exam | krisishikha</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Exam Status Controller -->
+  <!-- Exam Status -->
   <script src="exam-status.js"></script>
 </head>
 <body>
@@ -42,18 +42,18 @@
     <button onclick="submitExam()">পরীক্ষা জমা দিন</button>
   </div>
 
-  <!-- jsPDF লাইব্রেরি -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- jsPDF (optional, কিন্তু এখন আর দরকার নেই) -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
 
-  <!-- সোলায়মান লিপি ফন্ট লোড করুন -->
-  <script src="SolaimanLipi.js"></script>
+  <!-- SolaimanLipi font (optional) -->
+  <!-- <script src="SolaimanLipi.js"></script> -->
 
-  <!-- পরীক্ষার exam.js লোড করুন -->
+  <!-- Exam JS -->
   <script src="exam.js"></script>
 
-  <!-- Admin Section -->
+  <!-- Admin Section hidden -->
   <div id="adminSection" style="display:none; margin-top:20px;">
-    <button onclick="downloadAllResultsPDF()">Download All Results PDF (Admin Only)</button>
+    <!-- ডাউনলোড বাটন আর নেই -->
   </div>
 
 </body>
