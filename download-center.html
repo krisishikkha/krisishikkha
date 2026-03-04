@@ -4,27 +4,27 @@
 <meta charset="UTF-8">
 <title>Admin Download Center</title>
 <style>
-body{
+body {
   font-family: Arial, sans-serif;
-  padding:20px;
-  background:#f8f8f8;
+  padding: 20px;
+  background: #f8f8f8;
 }
-h2{ margin-bottom:20px; }
-select{
-  padding:8px 12px;
-  font-size:16px;
-  margin-right:10px;
+h2 { margin-bottom: 20px; }
+select {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-right: 10px;
 }
-button{
-  padding:10px 20px;
-  background:#2E8B57;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
+button {
+  padding: 10px 20px;
+  background: #2E8B57;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
-button:hover{
-  background:#246b45;
+button:hover {
+  background: #246b45;
 }
 </style>
 </head>
@@ -42,12 +42,12 @@ button:hover{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
-// Load exams into select
+// Load exams
 const examSelect = document.getElementById("examSelect");
 const downloadBtn = document.getElementById("downloadBtn");
 
-for(const examId in EXAM_STATUS){
-  if(EXAM_STATUS[examId].visible){
+for (const examId in EXAM_STATUS) {
+  if (EXAM_STATUS[examId].visible) {
     const option = document.createElement("option");
     option.value = examId;
     option.textContent = EXAM_STATUS[examId].title;
@@ -63,17 +63,16 @@ function loadQuestionsJS(path, callback){
   document.body.appendChild(script);
 }
 
-// Download button click
-downloadBtn.addEventListener("click", ()=>{
+// Download PDF
+downloadBtn.addEventListener("click", () => {
   const selectedExam = examSelect.value;
-  if(!selectedExam){
+  if (!selectedExam) {
     alert("Please select an exam first!");
     return;
   }
 
-  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, ()=>{
+  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, () => {
 
-    // Container capturing browser's default format
     const contentDiv = document.createElement("div");
     contentDiv.style.fontFamily = "Arial, sans-serif";
     contentDiv.style.lineHeight = "1.7";
@@ -81,18 +80,19 @@ downloadBtn.addEventListener("click", ()=>{
 
     // Cover page
     contentDiv.innerHTML = `
-      <h1 style="text-align:center;">${EXAM_STATUS[selectedExam].title}</h1>
-      <p style="text-align:center;">Answer with Detailed Solution</p>
-      <p style="text-align:center;">তারিখ: ${new Date().toLocaleDateString("bn-BD")}</p>
-      <hr style="margin:20px 0;">
+      <div style="text-align:center; page-break-after: always;">
+        <h1>${EXAM_STATUS[selectedExam].title}</h1>
+        <p>Answer with Detailed Solution</p>
+        <p>তারিখ: ${new Date().toLocaleDateString("bn-BD")}</p>
+      </div>
     `;
 
-    // Add questions in browser's format
-    QUESTIONS.forEach((q,i)=>{
+    // Questions
+    QUESTIONS.forEach((q, i) => {
       const qHTML = `
         <div style="margin-top:20px; page-break-inside: avoid;">
           <div><strong>${i+1}. ${q.question}</strong></div>
-          ${q.options.map((opt,j)=>`
+          ${q.options.map((opt, j) => `
             <div style="margin-left:20px; color:${j===q.answer?'green':'black'}">
               ${String.fromCharCode(65+j)}. ${opt}
             </div>
@@ -105,14 +105,16 @@ downloadBtn.addEventListener("click", ()=>{
       contentDiv.innerHTML += qHTML;
     });
 
-    // Generate PDF using html2pdf
-    html2pdf().set({
-      margin: 10,
+    // Page numbers & multiple pages
+    const opt = {
+      margin: [20, 20, 20, 20],
       filename: `${EXAM_STATUS[selectedExam].title}.pdf`,
-      html2canvas: {scale:2},
-      jsPDF: {unit:'pt', format:'a4'}
-    }).from(contentDiv).save();
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['css', 'legacy'] }
+    };
 
+    html2pdf().set(opt).from(contentDiv).save();
   });
 });
 </script>
