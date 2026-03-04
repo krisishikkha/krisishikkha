@@ -3,22 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <title>Solution Booklet</title>
+
+<style>
+body{
+  font-family: "SolaimanLipi", "Noto Sans Bengali", sans-serif;
+  margin:40px;
+  line-height:1.7;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.cover{
+  text-align:center;
+  margin-top:150px;
+  page-break-after: always;
+}
+
+.question-block{
+  margin-bottom:30px;
+  page-break-inside: avoid;
+}
+
+.question{
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.option{
+  margin-left:20px;
+}
+
+.correct{
+  color:green;
+  font-weight:600;
+}
+
+.explanation{
+  margin-top:8px;
+  font-size:14px;
+  background:#f5f5f5;
+  padding:8px;
+  border-left:4px solid #2E8B57;
+}
+
+@media print {
+  button{
+    display:none;
+  }
+}
+</style>
 </head>
+
 <body>
+
+<button onclick="window.print()">Download PDF</button>
+
 <div id="content"></div>
 
 <script src="exam-status.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
-// Read exam ID from URL
 const params = new URLSearchParams(window.location.search);
 const examId = params.get("exam");
+
 if(!examId || !EXAM_STATUS[examId] || !EXAM_STATUS[examId].visible){
   alert("Exam hidden or invalid!");
 }
 
-// Load questions dynamically
 function loadQuestionsJS(path, callback){
   let script = document.createElement("script");
   script.src = path;
@@ -26,64 +80,49 @@ function loadQuestionsJS(path, callback){
   document.body.appendChild(script);
 }
 
-async function loadFont(doc){
-  const response = await fetch("assets/fonts/SolaimanLipi_20-04-07.ttf");
-  const fontBuffer = await response.arrayBuffer();
-  const fontBase64 = btoa(new Uint8Array(fontBuffer).reduce((data, byte) => data + String.fromCharCode(byte), ""));
-  doc.addFileToVFS("SolaimanLipi.ttf", fontBase64);
-  doc.addFont("SolaimanLipi.ttf", "SolaimanLipi", "normal");
-  doc.setFont("SolaimanLipi");
-}
+loadQuestionsJS(`exam-corner/${examId}/questions.js`, ()=>{
 
-async function generatePDF(examTitle, questions){
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF("p","pt","a4");
-  await loadFont(doc);
-
-  const pageWidth = doc.internal.pageSize.getWidth();
-  const pageHeight = doc.internal.pageSize.getHeight();
-  const margin = 40;
-  let y = 60;
+  const container = document.getElementById("content");
 
   // Cover Page
-  doc.setFontSize(24);
-  doc.text(examTitle, pageWidth/2, 200, {align:"center"});
-  doc.setFontSize(16);
-  doc.text("Answer with Detailed Solution", pageWidth/2, 240, {align:"center"});
-  doc.text(`তারিখ: ${new Date().toLocaleDateString("bn-BD")}`, pageWidth/2, 270, {align:"center"});
-  doc.addPage();
-  y = 50;
+  container.innerHTML += `
+    <div class="cover">
+      <h1>${EXAM_STATUS[examId].title}</h1>
+      <p>Answer with Detailed Solution</p>
+      <p>তারিখ: ${new Date().toLocaleDateString("bn-BD")}</p>
+    </div>
+  `;
 
-  questions.forEach((q,i)=>{
-    if(y > pageHeight-80){ doc.addPage(); y=50; }
+  QUESTIONS.forEach((q,index)=>{
 
-    doc.setFontSize(14);
-    let qLines = doc.splitTextToSize(`${i+1}. ${q.question}`, pageWidth - 2*margin);
-    doc.text(qLines, margin, y);
-    y += qLines.length*18 + 10;
+    let block = document.createElement("div");
+    block.className = "question-block";
 
-    q.options.forEach((opt,idx)=>{
-      if(y > pageHeight-60){ doc.addPage(); y=50; }
-      doc.setTextColor(idx===q.answer ? [34,139,34] : [0,0,0]);
-      let optLines = doc.splitTextToSize(`${String.fromCharCode(65+idx)}. ${opt}`, pageWidth - 2*margin - 20);
-      doc.text(optLines, margin+20, y);
-      y += optLines.length*16 + 5;
+    let html = `
+      <div class="question">${index+1}. ${q.question}</div>
+    `;
+
+    q.options.forEach((opt,i)=>{
+      html += `
+        <div class="option ${i===q.answer ? "correct":""}">
+          ${String.fromCharCode(65+i)}. ${opt}
+        </div>
+      `;
     });
 
-    doc.setTextColor(0,0,0);
-    let expLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth - 2*margin);
-    if(y + expLines.length*15 > pageHeight-60){ doc.addPage(); y=50; }
-    doc.text(expLines, margin, y);
-    y += expLines.length*15 + 20;
+    html += `
+      <div class="explanation">
+        <strong>ব্যাখ্যা:</strong> ${q.explanation}
+      </div>
+    `;
+
+    block.innerHTML = html;
+    container.appendChild(block);
+
   });
 
-  doc.save(`${examTitle}.pdf`);
-}
-
-// Load questions & attach PDF generation
-loadQuestionsJS(`exam-corner/${examId}/questions.js`, ()=>{
-  generatePDF(EXAM_STATUS[examId].title, QUESTIONS);
 });
 </script>
+
 </body>
 </html>
