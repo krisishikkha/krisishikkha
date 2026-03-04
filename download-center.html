@@ -5,7 +5,7 @@
 <title>Admin Download Center</title>
 <style>
 body{
-  font-family: Arial, sans-serif;
+  font-family: "Nirmala UI", Arial, sans-serif;
   padding:20px;
   background:#f8f8f8;
 }
@@ -28,7 +28,6 @@ button:hover{
 }
 </style>
 </head>
-
 <body>
 
 <h2>Admin Download Center</h2>
@@ -43,28 +42,28 @@ button:hover{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
-// Load visible exams
+// Load exams into select
 const examSelect = document.getElementById("examSelect");
 const downloadBtn = document.getElementById("downloadBtn");
 
 for(const examId in EXAM_STATUS){
   if(EXAM_STATUS[examId].visible){
-    let option = document.createElement("option");
+    const option = document.createElement("option");
     option.value = examId;
-    option.text = EXAM_STATUS[examId].title;
+    option.textContent = EXAM_STATUS[examId].title;
     examSelect.appendChild(option);
   }
 }
 
-// Load Questions JS dynamically
+// Load questions dynamically
 function loadQuestionsJS(path, callback){
-  let script = document.createElement("script");
+  const script = document.createElement("script");
   script.src = path;
   script.onload = callback;
   document.body.appendChild(script);
 }
 
-// Generate PDF (A4, readable Bengali)
+// Generate PDF
 async function generatePDF(examTitle, questions){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF('p','pt','a4');
@@ -82,40 +81,39 @@ async function generatePDF(examTitle, questions){
   doc.addPage();
   y = 50;
 
-  // Questions
-  questions.forEach((q, i)=>{
+  questions.forEach((q,i)=>{
     if(y > pageHeight - 80){ doc.addPage(); y=50; }
 
     // Question
     doc.setFontSize(14);
-    let qLines = doc.splitTextToSize(`${i+1}. ${q.question}`, pageWidth - 2*margin);
+    const qLines = doc.splitTextToSize(`${i+1}. ${q.question}`, pageWidth - 2*margin);
     doc.text(qLines, margin, y);
-    y += qLines.length * 18 + 8;
+    y += qLines.length*18 + 8;
 
     // Options
     q.options.forEach((opt, idx)=>{
       if(y > pageHeight - 60){ doc.addPage(); y=50; }
       doc.setFontSize(13);
-      if(idx===q.answer){ doc.setTextColor(34,139,34); } else { doc.setTextColor(0,0,0); }
-      let optLines = doc.splitTextToSize(`${String.fromCharCode(65+idx)}. ${opt}`, pageWidth - 2*margin - 20);
-      doc.text(optLines, margin+20, y);
+      doc.setTextColor(idx===q.answer ? 34 : 0, idx===q.answer ? 139 : 0, idx===q.answer ? 34 : 0);
+      const optLines = doc.splitTextToSize(`${String.fromCharCode(65+idx)}. ${opt}`, pageWidth - 2*margin - 20);
+      doc.text(optLines, margin + 20, y);
       y += optLines.length*16 + 5;
     });
 
     // Explanation
-    doc.setTextColor(0,0,0);
     doc.setFontSize(12);
-    let expLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth - 2*margin);
+    doc.setTextColor(0,0,0);
+    const expLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth - 2*margin);
     if(y + expLines.length*15 > pageHeight - 60){ doc.addPage(); y=50; }
     doc.text(expLines, margin, y);
     y += expLines.length*15 + 15;
   });
 
-  // Save PDF
+  // Auto download PDF
   doc.save(`${examTitle}.pdf`);
 }
 
-// Button click → Load questions & generate PDF
+// Download button click
 downloadBtn.addEventListener("click", ()=>{
   const selectedExam = examSelect.value;
   if(!selectedExam){
