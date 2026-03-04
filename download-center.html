@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Admin Download Center - Pro Version</title>
+<title>Admin Download Center - Professional Pro PDF</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -88,10 +88,10 @@ downloadBtn.addEventListener("click", ()=>{
       </div>
     `;
 
-    // Questions in boxes
+    // Questions in boxes with light background
     QUESTIONS.forEach((q, i) => {
       const qHTML = `
-        <div style="margin-top:15px; page-break-inside: avoid; border:1px solid #ccc; padding:12px; border-radius:6px; background:#fdfdfd;">
+        <div style="margin-top:15px; page-break-inside: avoid; border:1px solid #ccc; padding:12px; border-radius:6px; background:#fcfcfc;">
           <div style="font-weight:600; margin-bottom:6px; font-size:14px;">${i+1}. ${q.question}</div>
           ${q.options.map((opt,j)=>`
             <div style="margin-left:20px; color:${j===q.answer?'green':'black'}; margin-bottom:3px; font-size:13px;">
@@ -106,18 +106,21 @@ downloadBtn.addEventListener("click", ()=>{
       contentDiv.innerHTML += qHTML;
     });
 
-    // Professional PDF Options
+    // Professional PDF Options with header & footer
     const opt = {
-      margin: [30,30,30,30],
+      margin: [50,30,50,30], // top,right,bottom,left
       filename: `${EXAM_STATUS[selectedExam].title}.pdf`,
       html2canvas: { scale: 2, logging: true },
       jsPDF: { unit:'pt', format:'a4', orientation:'portrait' },
       pagebreak: { mode:['css','legacy'] },
-      // Header & Footer
+      // Header/Footer
       page: function (currentPage, totalPages) {
         return `
-          <div style="width:100%; text-align:center; font-size:10px; color:#555; position: absolute; bottom: 20px;">
-            পৃষ্ঠা ${currentPage} / ${totalPages}
+          <div style="width:100%; text-align:center; font-size:10px; color:#555; position: absolute; top:20px;">
+            ${EXAM_STATUS[selectedExam].title}
+          </div>
+          <div style="width:100%; text-align:center; font-size:10px; color:#555; position: absolute; bottom:20px;">
+            ${new Date().toLocaleDateString("bn-BD")} | পৃষ্ঠা ${currentPage} / ${totalPages}
           </div>
         `;
       }
