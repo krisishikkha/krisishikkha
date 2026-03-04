@@ -5,48 +5,25 @@
 <title>Download Solution PDF</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body{
-  font-family: Arial, sans-serif;
-  padding:20px;
-  background:#f8f8f8;
-  margin:0;
-}
-h2{ margin-bottom:20px; text-align:center; }
-select, button{
-  display:block;
-  width:90%;
-  max-width:400px;
-  margin:10px auto;
-  padding:10px;
-  font-size:16px;
-}
-button{
-  background:#2E8B57;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-}
-button:hover{
-  background:#246b45;
-}
+body{ font-family: Arial, sans-serif; padding:20px; background:#f8f8f8; margin:0; }
+h2{text-align:center;}
+select, button{ display:block; width:90%; max-width:400px; margin:10px auto; padding:10px; font-size:16px; }
+button{ background:#2E8B57; color:white; border:none; border-radius:6px; cursor:pointer; }
+button:hover{ background:#246b45; }
 </style>
 </head>
 <body>
 
 <h2>Download Center</h2>
-
 <select id="examSelect">
   <option value="">-- Select Exam --</option>
 </select>
-
 <button id="downloadBtn">Download Solution PDF</button>
 
 <script src="exam-status.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
-// Load visible exams
 const examSelect = document.getElementById("examSelect");
 const downloadBtn = document.getElementById("downloadBtn");
 
@@ -59,7 +36,6 @@ for(const examId in EXAM_STATUS){
   }
 }
 
-// Load Questions JS dynamically
 function loadQuestionsJS(path, callback){
   let script = document.createElement("script");
   script.src = path;
@@ -67,7 +43,6 @@ function loadQuestionsJS(path, callback){
   document.body.appendChild(script);
 }
 
-// Generate PDF
 function generatePDF(examTitle, questions){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF('p','pt','a4');
@@ -85,48 +60,37 @@ function generatePDF(examTitle, questions){
   doc.addPage();
   y = 50;
 
-  // Questions
-  questions.forEach((q, i)=>{
-    if(y > pageHeight - 80){ doc.addPage(); y=50; }
-
-    // Question
+  questions.forEach((q,i)=>{
+    if(y > pageHeight-80){ doc.addPage(); y=50; }
     doc.setFontSize(14);
-    let qLines = doc.splitTextToSize(`${i+1}. ${q.question}`, pageWidth - 2*margin);
+    let qLines = doc.splitTextToSize(`${i+1}. ${q.question}`, pageWidth-2*margin);
     doc.text(qLines, margin, y);
-    y += qLines.length * 18 + 8;
+    y += qLines.length*18 + 8;
 
-    // Options
     q.options.forEach((opt, idx)=>{
-      if(y > pageHeight - 60){ doc.addPage(); y=50; }
+      if(y > pageHeight-60){ doc.addPage(); y=50; }
       doc.setFontSize(13);
-      doc.setTextColor(idx===q.answer?34:0, idx===q.answer?139:0, idx===q.answer?34:0);
-      let optLines = doc.splitTextToSize(`${String.fromCharCode(65+idx)}. ${opt}`, pageWidth - 2*margin - 20);
+      if(idx===q.answer){ doc.setTextColor(34,139,34); } else { doc.setTextColor(0,0,0); }
+      let optLines = doc.splitTextToSize(`${String.fromCharCode(65+idx)}. ${opt}`, pageWidth-2*margin-20);
       doc.text(optLines, margin+20, y);
       y += optLines.length*16 + 5;
     });
 
-    // Explanation
     doc.setTextColor(0,0,0);
     doc.setFontSize(12);
-    let expLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth - 2*margin);
-    if(y + expLines.length*15 > pageHeight - 60){ doc.addPage(); y=50; }
+    let expLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth-2*margin);
+    if(y + expLines.length*15 > pageHeight-60){ doc.addPage(); y=50; }
     doc.text(expLines, margin, y);
     y += expLines.length*15 + 15;
   });
 
-  // Auto file name: exam-title.pdf
   const fileName = examTitle.replace(/[^\w\s]/gi,'').replace(/\s+/g,'_') + ".pdf";
   doc.save(fileName);
 }
 
-// Button click → Load questions & generate PDF
 downloadBtn.addEventListener("click", ()=>{
   const selectedExam = examSelect.value;
-  if(!selectedExam){
-    alert("Please select an exam first!");
-    return;
-  }
-
+  if(!selectedExam){ alert("Please select an exam first!"); return; }
   loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, ()=>{
     generatePDF(EXAM_STATUS[selectedExam].title, QUESTIONS);
   });
