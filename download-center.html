@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>Admin Download Center</title>
 
+<!-- jsPDF CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 <style>
 body{
   font-family: SolaimanLipi, Arial, sans-serif;
@@ -43,10 +46,13 @@ button:hover{
 <script src="exam-status.js"></script>
 
 <script>
-// Load visible exams
+
+const { jsPDF } = window.jspdf;
+
 const examSelect = document.getElementById("examSelect");
 const downloadBtn = document.getElementById("downloadBtn");
 
+// Visible exam load
 for(const examId in EXAM_STATUS){
   if(EXAM_STATUS[examId].visible){
     let option = document.createElement("option");
@@ -56,8 +62,9 @@ for(const examId in EXAM_STATUS){
   }
 }
 
-// ✅ FINAL BUTTON LOGIC (jsPDF বাদ)
-downloadBtn.addEventListener("click", ()=>{
+// ✅ DIRECT PDF DOWNLOAD
+downloadBtn.addEventListener("click", async ()=>{
+
   const selectedExam = examSelect.value;
 
   if(!selectedExam){
@@ -65,9 +72,36 @@ downloadBtn.addEventListener("click", ()=>{
     return;
   }
 
-  // নতুন ট্যাবে solution page খুলবে
-  window.open(`solution-booklet.html?exam=${selectedExam}`, "_blank");
+  try{
+
+    // solution page থেকে HTML content fetch
+    const response = await fetch(`solution-booklet.html?exam=${selectedExam}`);
+    const htmlText = await response.text();
+
+    // Temporary container বানানো
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = htmlText;
+
+    // শুধু body text নেওয়া
+    const textContent = tempDiv.innerText;
+
+    // PDF create
+    const doc = new jsPDF();
+    doc.setFont("helvetica");
+    doc.setFontSize(12);
+
+    const lines = doc.splitTextToSize(textContent, 180);
+    doc.text(lines, 10, 10);
+
+    doc.save(`${selectedExam}-solution.pdf`);
+
+  }catch(err){
+    alert("PDF Generate Failed!");
+    console.error(err);
+  }
+
 });
+
 </script>
 
 </body>
