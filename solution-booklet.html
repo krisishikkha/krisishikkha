@@ -13,7 +13,6 @@ body{
 
 h1{
   text-align:center;
-  margin-bottom:10px;
 }
 
 .cover{
@@ -49,8 +48,17 @@ h1{
   border-left:4px solid #2E8B57;
 }
 
+.print-btn{
+  margin-bottom:20px;
+  padding:8px 16px;
+  background:#2E8B57;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
 @media print {
-  button{
+  .print-btn{
     display:none;
   }
 }
@@ -59,13 +67,17 @@ h1{
 
 <body>
 
-<button onclick="window.print()">Download PDF</button>
+<button class="print-btn" onclick="printPage()">Download PDF</button>
 
 <div id="content"></div>
 
 <script src="exam-status.js"></script>
 
 <script>
+function printPage(){
+  window.print();
+}
+
 const params = new URLSearchParams(window.location.search);
 const examId = params.get("exam");
 
@@ -84,7 +96,6 @@ loadQuestionsJS(`exam-corner/${examId}/questions.js`, ()=>{
 
   const container = document.getElementById("content");
 
-  // Cover Page
   container.innerHTML += `
     <div class="cover">
       <h1>${EXAM_STATUS[examId].title}</h1>
@@ -120,6 +131,11 @@ loadQuestionsJS(`exam-corner/${examId}/questions.js`, ()=>{
     container.appendChild(block);
 
   });
+
+  // ✅ Auto open print dialog (optional)
+  setTimeout(() => {
+    window.print();
+  }, 500);
 
 });
 </script>
