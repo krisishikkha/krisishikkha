@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Admin Download Center</title>
+
 <style>
 body{
-  font-family: "SolaimanLipi", "Noto Sans Bengali", sans-serif;
+  font-family: Arial, sans-serif;
   padding:20px;
   background:#f8f8f8;
 }
@@ -26,35 +27,9 @@ button{
 button:hover{
   background:#246b45;
 }
-.question-block{
-  margin-bottom:30px;
-  page-break-inside: avoid;
-}
-.question{
-  font-weight:600;
-  margin-bottom:8px;
-}
-.option{
-  margin-left:20px;
-}
-.correct{
-  color:green;
-  font-weight:600;
-}
-.explanation{
-  margin-top:8px;
-  font-size:14px;
-  background:#f5f5f5;
-  padding:8px;
-  border-left:4px solid #2E8B57;
-}
-.cover{
-  text-align:center;
-  margin-top:150px;
-  page-break-after: always;
-}
 </style>
 </head>
+
 <body>
 
 <h2>Admin Download Center</h2>
@@ -65,78 +40,89 @@ button:hover{
 
 <button id="downloadBtn">Download Solution PDF</button>
 
-<div id="pdfContent" style="display:none;"></div>
-
 <script src="exam-status.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.11.0/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
-// Populate exam dropdown
+// Load visible exams
 const examSelect = document.getElementById("examSelect");
+const downloadBtn = document.getElementById("downloadBtn");
+
 for(const examId in EXAM_STATUS){
   if(EXAM_STATUS[examId].visible){
-    const option = document.createElement("option");
+    let option = document.createElement("option");
     option.value = examId;
     option.text = EXAM_STATUS[examId].title;
     examSelect.appendChild(option);
   }
 }
 
-// Load Questions JS dynamically
+// Load questions JS dynamically
 function loadQuestionsJS(path, callback){
-  const script = document.createElement("script");
+  let script = document.createElement("script");
   script.src = path;
   script.onload = callback;
   document.body.appendChild(script);
 }
 
-// Generate PDF using html2pdf
+// Generate PDF with default font (no custom font)
 function generatePDF(examTitle, questions){
-  const container = document.getElementById("pdfContent");
-  container.innerHTML = ""; // clear previous
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF('p','pt','a4');
+  const pageWidth = doc.internal.pageSize.getWidth();
+  const pageHeight = doc.internal.pageSize.getHeight();
+  const margin = 40;
+  let y = 60;
 
   // Cover page
-  container.innerHTML += `
-    <div class="cover">
-      <h1>${examTitle}</h1>
-      <p>Answer with Detailed Solution</p>
-      <p>তারিখ: ${new Date().toLocaleDateString("bn-BD")}</p>
-    </div>
-  `;
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(24);
+  doc.text(examTitle, pageWidth/2, 200, {align:'center'});
+  doc.setFontSize(16);
+  doc.text("Answer with Detailed Solution", pageWidth/2, 240, {align:'center'});
+  doc.text(`তারিখ: ${new Date().toLocaleDateString("bn-BD")}`, pageWidth/2, 270, {align:'center'});
+  doc.addPage();
+  y = 50;
 
-  // Questions
-  questions.forEach((q,index)=>{
-    const block = document.createElement("div");
-    block.className = "question-block";
+  questions.forEach((q, i)=>{
+    if(y > pageHeight - 80){ doc.addPage(); y=50; }
 
-    let html = `<div class="question">${index+1}. ${q.question}</div>`;
-    q.options.forEach((opt,i)=>{
-      html += `<div class="option ${i===q.answer ? "correct":""}">${String.fromCharCode(65+i)}. ${opt}</div>`;
+    // Question
+    doc.setFontSize(14);
+    let qLines = doc.splitTextToSize(`${i+1}. ${q.question}`, pageWidth - 2*margin);
+    doc.text(qLines, margin, y);
+    y += qLines.length * 18 + 8;
+
+    // Options
+    q.options.forEach((opt, idx)=>{
+      if(y > pageHeight - 60){ doc.addPage(); y=50; }
+      doc.setFontSize(13);
+      if(idx===q.answer){ doc.setTextColor(34,139,34); } else { doc.setTextColor(0,0,0); }
+      let optLines = doc.splitTextToSize(`${String.fromCharCode(65+idx)}. ${opt}`, pageWidth - 2*margin - 20);
+      doc.text(optLines, margin+20, y);
+      y += optLines.length*16 + 5;
     });
-    html += `<div class="explanation"><strong>ব্যাখ্যা:</strong> ${q.explanation}</div>`;
 
-    block.innerHTML = html;
-    container.appendChild(block);
+    // Explanation
+    doc.setTextColor(0,0,0);
+    doc.setFontSize(12);
+    let expLines = doc.splitTextToSize(`ব্যাখ্যা: ${q.explanation}`, pageWidth - 2*margin);
+    if(y + expLines.length*15 > pageHeight - 60){ doc.addPage(); y=50; }
+    doc.text(expLines, margin, y);
+    y += expLines.length*15 + 15;
   });
 
-  // PDF options
-  const opt = {
-    margin: [0.5,0.5,0.5,0.5],
-    filename: `${examTitle}.pdf`,
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, letterRendering: true },
-    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-  };
-  html2pdf().set(opt).from(container).save();
+  doc.save(`${examTitle}.pdf`);
 }
 
 // Button click → Load questions & generate PDF
-document.getElementById("downloadBtn").addEventListener("click", ()=>{
+downloadBtn.addEventListener("click", ()=>{
   const selectedExam = examSelect.value;
   if(!selectedExam){
     alert("Please select an exam first!");
     return;
   }
+
   loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, ()=>{
     generatePDF(EXAM_STATUS[selectedExam].title, QUESTIONS);
   });
