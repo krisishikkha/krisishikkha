@@ -5,7 +5,7 @@
 <title>Admin Download Center</title>
 <style>
 body {
-  font-family: "Nirmala UI", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   padding: 20px;
   background: #f8f8f8;
 }
@@ -42,7 +42,7 @@ button:hover {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
-// Load exams
+// Exams load
 const examSelect = document.getElementById("examSelect");
 const downloadBtn = document.getElementById("downloadBtn");
 
@@ -64,17 +64,16 @@ function loadQuestionsJS(path, callback){
 }
 
 // Download PDF
-downloadBtn.addEventListener("click", () => {
+downloadBtn.addEventListener("click", ()=>{
   const selectedExam = examSelect.value;
   if (!selectedExam) {
     alert("Please select an exam first!");
     return;
   }
 
-  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, () => {
-
+  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, ()=>{
     const contentDiv = document.createElement("div");
-    contentDiv.style.fontFamily = "Nirmala UI, Arial, sans-serif";
+    contentDiv.style.fontFamily = "Arial, sans-serif";
     contentDiv.style.lineHeight = "1.7";
     contentDiv.style.margin = "20px";
 
@@ -92,7 +91,7 @@ downloadBtn.addEventListener("click", () => {
       const qHTML = `
         <div style="margin-top:20px; page-break-inside: avoid;">
           <div><strong>${i+1}. ${q.question}</strong></div>
-          ${q.options.map((opt, j) => `
+          ${q.options.map((opt, j)=>`
             <div style="margin-left:20px; color:${j===q.answer?'green':'black'}">
               ${String.fromCharCode(65+j)}. ${opt}
             </div>
@@ -105,16 +104,15 @@ downloadBtn.addEventListener("click", () => {
       contentDiv.innerHTML += qHTML;
     });
 
-    // PDF Options
+    // PDF options
     const opt = {
-      margin: [20, 20, 20, 20],
+      margin: [20,20,20,20],
       filename: `${EXAM_STATUS[selectedExam].title}.pdf`,
       html2canvas: { scale: 2 },
-      jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' },
-      pagebreak: { mode: ['css', 'legacy'] }
+      jsPDF: { unit:'pt', format:'a4', orientation:'portrait' },
+      pagebreak: { mode:['css','legacy'] }
     };
 
-    // Generate PDF
     html2pdf().set(opt).from(contentDiv).save();
   });
 });
