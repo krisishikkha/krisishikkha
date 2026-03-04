@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Admin Download Center - Professional Pro PDF</title>
+<title>Admin Download Center - Clean Question Boxes</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -30,13 +30,13 @@ button:hover {
 </head>
 <body>
 
-<h2>Admin Download Center - Pro PDF</h2>
+<h2>Admin Download Center - Question Box Style PDF</h2>
 
 <select id="examSelect">
   <option value="">-- Select Exam --</option>
 </select>
 
-<button id="downloadBtn">Download Professional PDF</button>
+<button id="downloadBtn">Download PDF</button>
 
 <script src="exam-status.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -88,17 +88,24 @@ downloadBtn.addEventListener("click", ()=>{
       </div>
     `;
 
-    // Questions in boxes with light background
+    // Questions with full block milky background
     QUESTIONS.forEach((q, i) => {
       const qHTML = `
-        <div style="margin-top:15px; page-break-inside: avoid; border:1px solid #ccc; padding:12px; border-radius:6px; background:#fcfcfc;">
-          <div style="font-weight:600; margin-bottom:6px; font-size:14px;">${i+1}. ${q.question}</div>
+        <div style="
+          margin-top:15px; 
+          page-break-inside: avoid; 
+          border-radius:6px; 
+          background-color:#fcfcfc; 
+          padding:12px; 
+          border:1px solid #ddd;
+        ">
+          <div style="font-weight:600; font-size:14px; margin-bottom:6px;">${i+1}. ${q.question}</div>
           ${q.options.map((opt,j)=>`
-            <div style="margin-left:20px; color:${j===q.answer?'green':'black'}; margin-bottom:3px; font-size:13px;">
+            <div style="margin-left:20px; font-size:13px; color:${j===q.answer?'green':'black'}; margin-bottom:3px;">
               ${String.fromCharCode(65+j)}. ${opt}
             </div>
           `).join('')}
-          <div style="margin-top:6px; font-size:12px; background:#f5f5f5; padding:8px; border-left:4px solid #2E8B57;">
+          <div style="margin-top:6px; font-size:12px; padding:6px; border-left:4px solid #2E8B57;">
             ব্যাখ্যা: ${q.explanation}
           </div>
         </div>
@@ -106,28 +113,27 @@ downloadBtn.addEventListener("click", ()=>{
       contentDiv.innerHTML += qHTML;
     });
 
-    // Professional PDF Options with header & footer
+    // PDF options with header/footer/page numbers
     const opt = {
-      margin: [50,30,50,30], // top,right,bottom,left
+      margin: [50,30,50,30],
       filename: `${EXAM_STATUS[selectedExam].title}.pdf`,
-      html2canvas: { scale: 2, logging: true },
+      html2canvas: { scale: 2, backgroundColor: null },
       jsPDF: { unit:'pt', format:'a4', orientation:'portrait' },
       pagebreak: { mode:['css','legacy'] },
-      // Header/Footer
-      page: function (currentPage, totalPages) {
+      page: function(currentPage, totalPages){
         return `
-          <div style="width:100%; text-align:center; font-size:10px; color:#555; position: absolute; top:20px;">
+          <div style="width:100%; text-align:center; font-size:10px; color:#555; position:absolute; top:20px;">
             ${EXAM_STATUS[selectedExam].title}
           </div>
-          <div style="width:100%; text-align:center; font-size:10px; color:#555; position: absolute; bottom:20px;">
+          <div style="width:100%; text-align:center; font-size:10px; color:#555; position:absolute; bottom:20px;">
             ${new Date().toLocaleDateString("bn-BD")} | পৃষ্ঠা ${currentPage} / ${totalPages}
           </div>
         `;
       }
     };
 
-    // Generate PDF
     html2pdf().set(opt).from(contentDiv).save();
+
   });
 });
 </script>
