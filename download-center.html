@@ -35,15 +35,19 @@ button:hover{
 background:#246b45;
 }
 
-/* PDF Content Layout */
+/* ===== PDF Layout ===== */
 
 .pdf-container{
 
-width:794px;
+width:694px;
 margin:auto;
 
 column-count:2;
-column-gap:40px;
+
+column-gap:0;
+
+/* middle margin divider */
+column-rule:20px solid white;
 
 }
 
@@ -52,15 +56,20 @@ column-gap:40px;
 .qbox{
 
 background:#fdfdf7;
+
 border:1px solid #ddd;
+
 border-radius:6px;
 
 padding:12px;
-margin-bottom:14px;
+
+margin-bottom:12px;
 
 break-inside:avoid;
 
 }
+
+/* Question Title */
 
 .qtitle{
 
@@ -70,6 +79,8 @@ margin-bottom:6px;
 
 }
 
+/* Options */
+
 .option{
 
 margin-left:18px;
@@ -78,6 +89,8 @@ margin-bottom:2px;
 
 }
 
+/* Correct Answer */
+
 .answer{
 
 color:green;
@@ -85,12 +98,16 @@ font-weight:600;
 
 }
 
+/* Explanation */
+
 .explanation{
 
 margin-top:6px;
 font-size:12px;
 
 }
+
+/* Cover Page */
 
 .cover{
 
@@ -121,6 +138,8 @@ page-break-after:always;
 const examSelect=document.getElementById("examSelect")
 const downloadBtn=document.getElementById("downloadBtn")
 
+/* Load Exams */
+
 for(const examId in EXAM_STATUS){
 
 if(EXAM_STATUS[examId].visible){
@@ -136,6 +155,8 @@ examSelect.appendChild(option)
 
 }
 
+/* Load Questions */
+
 function loadQuestionsJS(path,callback){
 
 const script=document.createElement("script")
@@ -147,6 +168,8 @@ script.onload=callback
 document.body.appendChild(script)
 
 }
+
+/* Download PDF */
 
 downloadBtn.addEventListener("click",()=>{
 
@@ -240,7 +263,7 @@ contentDiv.appendChild(container)
 
 const opt={
 
-margin:[60,40,60,40],
+margin:[50,50,50,50],
 
 filename:`${EXAM_STATUS[selectedExam].title}.pdf`,
 
@@ -262,25 +285,29 @@ pdf.setPage(i)
 
 pdf.setFontSize(10)
 
+/* Header */
+
 pdf.text(
 
 EXAM_STATUS[selectedExam].title,
 
 pdf.internal.pageSize.getWidth()/2,
 
-20,
+25,
 
 {align:'center'}
 
 )
 
+/* Footer */
+
 pdf.text(
 
-`${new Date().toLocaleDateString("bn-BD")} | পৃষ্ঠা ${i} / ${totalPages}`,
+`পৃষ্ঠা ${i} / ${totalPages}`,
 
 pdf.internal.pageSize.getWidth()/2,
 
-pdf.internal.pageSize.getHeight()-20,
+pdf.internal.pageSize.getHeight()-25,
 
 {align:'center'}
 
