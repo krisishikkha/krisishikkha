@@ -2,107 +2,95 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Admin Download Center - Balanced Two-Column PDF</title>
+<title>Admin Download Center - Advanced Balanced PDF</title>
 <style>
-body {
+body{
   font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f8f8f8;
+  padding:20px;
+  background:#f8f8f8;
+}
+h2{
+  margin-bottom:20px;
+}
+select{
+  padding:8px 12px;
+  font-size:16px;
+  margin-right:10px;
+}
+button{
+  padding:10px 20px;
+  background:#2E8B57;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+button:hover{
+  background:#246b45;
 }
 
-h2 {
-  margin-bottom: 20px;
-}
-
-select {
-  padding: 8px 12px;
-  font-size: 16px;
-  margin-right: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  background: #2E8B57;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #246b45;
-}
-
-/* Page container */
-.pdf-page {
-  width: 794px; /* A4 width in px */
-  margin: 0 auto;
-  padding: 40px 30px;
-  box-sizing: border-box;
-  page-break-after: always;
-  display: flex;
-  gap: 20px; /* gap between two columns */
-}
-
-/* Column container */
-.pdf-col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px; /* spacing between question boxes */
+/* PDF container */
+.pdf-container{
+  width:794px; /* A4 width in px */
+  margin:auto;
+  column-count:2; /* Auto balance columns */
+  column-gap:10px;
+  page-break-inside: avoid;
 }
 
 /* Question Box */
-.qbox {
-  background: #fcfcf7;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 12px;
+.qbox{
+  background:#fcfcf7;
+  border:1px solid #ddd;
+  border-radius:6px;
+  padding:12px;
+  margin-bottom:10px;
+  break-inside: avoid; /* Avoid splitting box */
 }
 
-.qtitle {
-  font-weight: 600;
-  font-size: 15px;
-  margin-bottom: 6px;
+.qtitle{
+  font-weight:600;
+  font-size:15px;
+  margin-bottom:6px;
 }
 
-.option {
-  margin-left: 18px;
-  font-size: 14px;
-  margin-bottom: 3px;
+.option{
+  margin-left:18px;
+  font-size:14px;
+  margin-bottom:3px;
 }
 
-.answer {
-  color: green;
-  font-weight: 600;
+.answer{
+  color:green;
+  font-weight:600;
 }
 
-.explanation {
-  margin-top: 6px;
-  font-size: 13px;
-  padding: 6px;
-  background: #f5f5f5;
-  border-left: 4px solid #2E8B57;
-  border-radius: 3px;
+.explanation{
+  margin-top:6px;
+  font-size:13px;
+  padding:6px;
+  background:#f5f5f5;
+  border-left:4px solid #2E8B57;
+  border-radius:3px;
 }
 
 /* Cover Page */
-.cover {
-  text-align: center;
-  page-break-after: always;
-  margin-bottom: 20px;
+.cover{
+  text-align:center;
+  page-break-after:always;
+  margin-bottom:20px;
 }
-.cover h1 {
-  font-size: 22px;
+.cover h1{
+  font-size:22px;
 }
-.cover p {
-  font-size: 16px;
+.cover p{
+  font-size:16px;
 }
 </style>
 </head>
 <body>
 
-<h2>Admin Download Center - Balanced Two-Column PDF</h2>
+<h2>Admin Download Center - Advanced Balanced PDF</h2>
 
 <select id="examSelect">
   <option value="">-- Select Exam --</option>
@@ -134,15 +122,6 @@ function loadQuestionsJS(path, callback){
   document.body.appendChild(script);
 }
 
-// Split questions into pages for 2-column layout
-function paginateQuestions(questions, perPage = 16) {
-  const pages = [];
-  for(let i=0; i<questions.length; i+=perPage){
-    pages.push(questions.slice(i,i+perPage));
-  }
-  return pages;
-}
-
 // Download PDF
 downloadBtn.addEventListener("click", ()=>{
   const selectedExam = examSelect.value;
@@ -164,49 +143,33 @@ downloadBtn.addEventListener("click", ()=>{
       </div>
     `;
 
-    // Paginate Questions (16 per page, 8 per column)
-    const pages = paginateQuestions(QUESTIONS, 16);
+    // Question Container
+    const container = document.createElement("div");
+    container.className = "pdf-container";
 
-    pages.forEach(pageQs=>{
-      const pageDiv = document.createElement("div");
-      pageDiv.className = "pdf-page";
+    QUESTIONS.forEach((q,i)=>{
+      const box = document.createElement("div");
+      box.className = "qbox";
 
-      const col1 = document.createElement("div");
-      col1.className = "pdf-col";
-      const col2 = document.createElement("div");
-      col2.className = "pdf-col";
-
-      pageQs.forEach((q,i)=>{
-        const box = document.createElement("div");
-        box.className = "qbox";
-
-        let optionsHTML = "";
-        q.options.forEach((opt,j)=>{
-          optionsHTML += `<div class="option ${j===q.answer?'answer':''}">${String.fromCharCode(65+j)}. ${opt}</div>`;
-        });
-
-        box.innerHTML = `
-          <div class="qtitle">${i+1}. ${q.question}</div>
-          ${optionsHTML}
-          <div class="explanation">ব্যাখ্যা: ${q.explanation}</div>
-        `;
-
-        // Column-wise distribution
-        if(i < pageQs.length/2){
-          col1.appendChild(box);
-        } else {
-          col2.appendChild(box);
-        }
+      let optionsHTML = "";
+      q.options.forEach((opt,j)=>{
+        optionsHTML += `<div class="option ${j===q.answer?'answer':''}">${String.fromCharCode(65+j)}. ${opt}</div>`;
       });
 
-      pageDiv.appendChild(col1);
-      pageDiv.appendChild(col2);
-      contentDiv.appendChild(pageDiv);
+      box.innerHTML = `
+        <div class="qtitle">${i+1}. ${q.question}</div>
+        ${optionsHTML}
+        <div class="explanation">ব্যাখ্যা: ${q.explanation}</div>
+      `;
+
+      container.appendChild(box);
     });
+
+    contentDiv.appendChild(container);
 
     // PDF Options
     const opt = {
-      margin:[50,30,50,30],
+      margin:[50,30,50,30], // top, left, bottom, right
       filename:`${EXAM_STATUS[selectedExam].title}.pdf`,
       html2canvas:{scale:2, backgroundColor:null},
       jsPDF:{unit:'pt', format:'a4', orientation:'portrait'},
@@ -230,6 +193,5 @@ downloadBtn.addEventListener("click", ()=>{
   });
 });
 </script>
-
 </body>
 </html>
