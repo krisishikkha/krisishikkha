@@ -241,86 +241,200 @@ box.innerHTML=`
 
 ${i+1}. ${q.question}
 
-</div>
-
-${optionsHTML}
-
-<div class="explanation">
-
-ব্যাখ্যা: ${q.explanation}
-
-</div>
-
-`
-
-container.appendChild(box)
-
-})
-
-contentDiv.appendChild(container)
-
-/* PDF Options */
-
-const opt={
-
-margin:[50,50,50,50],
-
-filename:`${EXAM_STATUS[selectedExam].title}.pdf`,
-
-html2canvas:{scale:2},
-
-jsPDF:{unit:'pt',format:'a4',orientation:'portrait'},
-
-pagebreak:{mode:['css','legacy']}
-
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Admin Download Center - Compact Two-Column PDF</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  padding:20px;
+  background:#f8f8f8;
+}
+h2{
+  margin-bottom:20px;
+}
+select{
+  padding:8px 12px;
+  font-size:16px;
+  margin-right:10px;
+}
+button{
+  padding:10px 20px;
+  background:#2E8B57;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+button:hover{
+  background:#246b45;
 }
 
-html2pdf().set(opt).from(contentDiv).toPdf().get('pdf').then(function(pdf){
-
-const totalPages=pdf.internal.getNumberOfPages()
-
-for(let i=1;i<=totalPages;i++){
-
-pdf.setPage(i)
-
-pdf.setFontSize(10)
-
-/* Header */
-
-pdf.text(
-
-EXAM_STATUS[selectedExam].title,
-
-pdf.internal.pageSize.getWidth()/2,
-
-25,
-
-{align:'center'}
-
-)
-
-/* Footer */
-
-pdf.text(
-
-`পৃষ্ঠা ${i} / ${totalPages}`,
-
-pdf.internal.pageSize.getWidth()/2,
-
-pdf.internal.pageSize.getHeight()-25,
-
-{align:'center'}
-
-)
-
+/* PDF container */
+.pdf-container{
+  width:794px; /* A4 width in px */
+  margin:auto;
+  column-count:2;
+  column-gap:0; /* No gap between columns */
+  padding:10px;
 }
 
-}).save()
+/* Question Box */
+.qbox{
+  background:#fcfcf7;
+  border:1px solid #ddd;
+  border-radius:6px;
+  padding:12px;
+  margin-bottom:12px; /* small spacing to separate questions */
+  break-inside:avoid;
+}
 
-})
+.qtitle{
+  font-weight:600;
+  font-size:15px;
+  margin-bottom:6px;
+}
 
-})
+.option{
+  margin-left:18px;
+  font-size:14px;
+  margin-bottom:3px;
+}
 
+.answer{
+  color:green;
+  font-weight:600;
+}
+
+.explanation{
+  margin-top:6px;
+  font-size:13px;
+  padding:6px;
+  background:#f5f5f5;
+  border-left:4px solid #2E8B57;
+  border-radius:3px;
+}
+
+/* Cover Page */
+.cover{
+  text-align:center;
+  page-break-after:always;
+  margin-bottom:20px;
+}
+.cover h1{
+  font-size:22px;
+}
+.cover p{
+  font-size:16px;
+}
+</style>
+</head>
+<body>
+
+<h2>Admin Download Center - Compact Two-Column PDF</h2>
+
+<select id="examSelect">
+  <option value="">-- Select Exam --</option>
+</select>
+
+<button id="downloadBtn">Download PDF</button>
+
+<script src="exam-status.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+const examSelect = document.getElementById("examSelect");
+const downloadBtn = document.getElementById("downloadBtn");
+
+// Load exams
+for(const examId in EXAM_STATUS){
+  if(EXAM_STATUS[examId].visible){
+    const option = document.createElement("option");
+    option.value = examId;
+    option.textContent = EXAM_STATUS[examId].title;
+    examSelect.appendChild(option);
+  }
+}
+
+// Load questions dynamically
+function loadQuestionsJS(path, callback){
+  const script = document.createElement("script");
+  script.src = path;
+  script.onload = callback;
+  document.body.appendChild(script);
+}
+
+// Download PDF
+downloadBtn.addEventListener("click", ()=>{
+  const selectedExam = examSelect.value;
+  if(!selectedExam){
+    alert("Please select an exam first!");
+    return;
+  }
+
+  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, ()=>{
+    const contentDiv = document.createElement("div");
+
+    // Cover Page
+    contentDiv.innerHTML = `
+      <div class="cover">
+        <h1>${EXAM_STATUS[selectedExam].title}</h1>
+        <p>Answer with Detailed Solution</p>
+        <p>তারিখ: ${new Date().toLocaleDateString("bn-BD")}</p>
+        <hr>
+      </div>
+    `;
+
+    // Question Container
+    const container = document.createElement("div");
+    container.className = "pdf-container";
+
+    QUESTIONS.forEach((q,i)=>{
+      const box = document.createElement("div");
+      box.className = "qbox";
+
+      let optionsHTML = "";
+      q.options.forEach((opt,j)=>{
+        optionsHTML += `<div class="option ${j===q.answer?'answer':''}">${String.fromCharCode(65+j)}. ${opt}</div>`;
+      });
+
+      box.innerHTML = `
+        <div class="qtitle">${i+1}. ${q.question}</div>
+        ${optionsHTML}
+        <div class="explanation">ব্যাখ্যা: ${q.explanation}</div>
+      `;
+
+      container.appendChild(box);
+    });
+
+    contentDiv.appendChild(container);
+
+    // PDF Options
+    const opt = {
+      margin:[50,30,50,30], // top, left, bottom, right
+      filename:`${EXAM_STATUS[selectedExam].title}.pdf`,
+      html2canvas:{scale:2, backgroundColor:null},
+      jsPDF:{unit:'pt', format:'a4', orientation:'portrait'},
+      pagebreak:{mode:['css','legacy']}
+    };
+
+    html2pdf().set(opt).from(contentDiv).toPdf().get('pdf').then(function(pdf){
+      const totalPages = pdf.internal.getNumberOfPages();
+      for(let i=1; i<=totalPages; i++){
+        pdf.setPage(i);
+        pdf.setFontSize(10);
+        // Header
+        pdf.text(EXAM_STATUS[selectedExam].title, pdf.internal.pageSize.getWidth()/2, 20, {align:'center'});
+        // Footer
+        pdf.text(`${new Date().toLocaleDateString("bn-BD")} | পৃষ্ঠা ${i} / ${totalPages}`,
+                 pdf.internal.pageSize.getWidth()/2,
+                 pdf.internal.pageSize.getHeight()-20,
+                 {align:'center'});
+      }
+    }).save();
+  });
+});
 </script>
 
 </body>
