@@ -2,21 +2,24 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Admin Download Center - Advanced Two-Column PDF</title>
+<title>Admin Download Center - Balanced Two-Column PDF</title>
 <style>
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
   background: #f8f8f8;
 }
+
 h2 {
   margin-bottom: 20px;
 }
+
 select {
   padding: 8px 12px;
   font-size: 16px;
   margin-right: 10px;
 }
+
 button {
   padding: 10px 20px;
   background: #2E8B57;
@@ -25,17 +28,28 @@ button {
   border-radius: 6px;
   cursor: pointer;
 }
+
 button:hover {
   background: #246b45;
 }
 
-/* PDF container */
-.pdf-container {
+/* Page container */
+.pdf-page {
   width: 794px; /* A4 width in px */
-  margin: auto;
-  column-count: 2;
-  column-gap: 20px; /* space between columns */
-  padding: 10px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  page-break-after: always;
+  display: flex;
+  gap: 20px; /* gap between two columns */
+}
+
+/* Column container */
+.pdf-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* spacing between question boxes */
 }
 
 /* Question Box */
@@ -44,8 +58,6 @@ button:hover {
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 12px;
-  margin-bottom: 12px;
-  break-inside: avoid;
 }
 
 .qtitle {
@@ -90,23 +102,23 @@ button:hover {
 </head>
 <body>
 
-<h2>Admin Download Center - Advanced Two-Column PDF</h2>
+<h2>Admin Download Center - Balanced Two-Column PDF</h2>
 
 <select id="examSelect">
   <option value="">-- Select Exam --</option>
 </select>
+
 <button id="downloadBtn">Download PDF</button>
 
 <script src="exam-status.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 <script>
 const examSelect = document.getElementById("examSelect");
 const downloadBtn = document.getElementById("downloadBtn");
 
 // Load exams
-for (const examId in EXAM_STATUS) {
-  if (EXAM_STATUS[examId].visible) {
+for(const examId in EXAM_STATUS){
+  if(EXAM_STATUS[examId].visible){
     const option = document.createElement("option");
     option.value = examId;
     option.textContent = EXAM_STATUS[examId].title;
@@ -115,22 +127,31 @@ for (const examId in EXAM_STATUS) {
 }
 
 // Load questions dynamically
-function loadQuestionsJS(path, callback) {
+function loadQuestionsJS(path, callback){
   const script = document.createElement("script");
   script.src = path;
   script.onload = callback;
   document.body.appendChild(script);
 }
 
+// Split questions into pages for 2-column layout
+function paginateQuestions(questions, perPage = 16) {
+  const pages = [];
+  for(let i=0; i<questions.length; i+=perPage){
+    pages.push(questions.slice(i,i+perPage));
+  }
+  return pages;
+}
+
 // Download PDF
-downloadBtn.addEventListener("click", () => {
+downloadBtn.addEventListener("click", ()=>{
   const selectedExam = examSelect.value;
-  if (!selectedExam) {
+  if(!selectedExam){
     alert("Please select an exam first!");
     return;
   }
 
-  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, () => {
+  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, ()=>{
     const contentDiv = document.createElement("div");
 
     // Cover Page
@@ -143,32 +164,49 @@ downloadBtn.addEventListener("click", () => {
       </div>
     `;
 
-    // Question Container
-    const container = document.createElement("div");
-    container.className = "pdf-container";
+    // Paginate Questions (16 per page, 8 per column)
+    const pages = paginateQuestions(QUESTIONS, 16);
 
-    QUESTIONS.forEach((q,i)=>{
-      const box = document.createElement("div");
-      box.className = "qbox";
+    pages.forEach(pageQs=>{
+      const pageDiv = document.createElement("div");
+      pageDiv.className = "pdf-page";
 
-      let optionsHTML = "";
-      q.options.forEach((opt,j)=>{
-        optionsHTML += `<div class="option ${j===q.answer?'answer':''}">${String.fromCharCode(65+j)}. ${opt}</div>`;
+      const col1 = document.createElement("div");
+      col1.className = "pdf-col";
+      const col2 = document.createElement("div");
+      col2.className = "pdf-col";
+
+      pageQs.forEach((q,i)=>{
+        const box = document.createElement("div");
+        box.className = "qbox";
+
+        let optionsHTML = "";
+        q.options.forEach((opt,j)=>{
+          optionsHTML += `<div class="option ${j===q.answer?'answer':''}">${String.fromCharCode(65+j)}. ${opt}</div>`;
+        });
+
+        box.innerHTML = `
+          <div class="qtitle">${i+1}. ${q.question}</div>
+          ${optionsHTML}
+          <div class="explanation">ব্যাখ্যা: ${q.explanation}</div>
+        `;
+
+        // Column-wise distribution
+        if(i < pageQs.length/2){
+          col1.appendChild(box);
+        } else {
+          col2.appendChild(box);
+        }
       });
 
-      box.innerHTML = `
-        <div class="qtitle">${i+1}. ${q.question}</div>
-        ${optionsHTML}
-        <div class="explanation">ব্যাখ্যা: ${q.explanation}</div>
-      `;
-      container.appendChild(box);
+      pageDiv.appendChild(col1);
+      pageDiv.appendChild(col2);
+      contentDiv.appendChild(pageDiv);
     });
-
-    contentDiv.appendChild(container);
 
     // PDF Options
     const opt = {
-      margin:[50,40,50,40],
+      margin:[50,30,50,30],
       filename:`${EXAM_STATUS[selectedExam].title}.pdf`,
       html2canvas:{scale:2, backgroundColor:null},
       jsPDF:{unit:'pt', format:'a4', orientation:'portrait'},
