@@ -2,354 +2,111 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Admin Download Center</title>
-
+<title>Admin Download Center - Advanced Two-Column PDF</title>
 <style>
-
-body{
-font-family: Arial, sans-serif;
-padding:20px;
-background:#f8f8f8;
-}
-
-h2{
-margin-bottom:20px;
-}
-
-select{
-padding:8px 12px;
-font-size:16px;
-margin-right:10px;
-}
-
-button{
-padding:10px 20px;
-background:#2E8B57;
-color:white;
-border:none;
-border-radius:6px;
-cursor:pointer;
-}
-
-button:hover{
-background:#246b45;
-}
-
-/* ===== PDF Layout ===== */
-
-.pdf-container{
-
-width:694px;
-margin:auto;
-
-column-count:2;
-
-column-gap:0;
-
-/* middle margin divider */
-column-rule:20px solid white;
-
-}
-
-/* Question Box */
-
-.qbox{
-
-background:#fdfdf7;
-
-border:1px solid #ddd;
-
-border-radius:6px;
-
-padding:12px;
-
-margin-bottom:12px;
-
-break-inside:avoid;
-
-}
-
-/* Question Title */
-
-.qtitle{
-
-font-weight:600;
-font-size:14px;
-margin-bottom:6px;
-
-}
-
-/* Options */
-
-.option{
-
-margin-left:18px;
-font-size:13px;
-margin-bottom:2px;
-
-}
-
-/* Correct Answer */
-
-.answer{
-
-color:green;
-font-weight:600;
-
-}
-
-/* Explanation */
-
-.explanation{
-
-margin-top:6px;
-font-size:12px;
-
-}
-
-/* Cover Page */
-
-.cover{
-
-text-align:center;
-page-break-after:always;
-
-}
-
-</style>
-</head>
-
-<body>
-
-<h2>Admin Download Center - Question PDF</h2>
-
-<select id="examSelect">
-<option value="">-- Select Exam --</option>
-</select>
-
-<button id="downloadBtn">Download PDF</button>
-
-<script src="exam-status.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-<script>
-
-const examSelect=document.getElementById("examSelect")
-const downloadBtn=document.getElementById("downloadBtn")
-
-/* Load Exams */
-
-for(const examId in EXAM_STATUS){
-
-if(EXAM_STATUS[examId].visible){
-
-const option=document.createElement("option")
-
-option.value=examId
-option.textContent=EXAM_STATUS[examId].title
-
-examSelect.appendChild(option)
-
-}
-
-}
-
-/* Load Questions */
-
-function loadQuestionsJS(path,callback){
-
-const script=document.createElement("script")
-
-script.src=path
-
-script.onload=callback
-
-document.body.appendChild(script)
-
-}
-
-/* Download PDF */
-
-downloadBtn.addEventListener("click",()=>{
-
-const selectedExam=examSelect.value
-
-if(!selectedExam){
-
-alert("Please select an exam first!")
-
-return
-
-}
-
-loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`,()=>{
-
-const contentDiv=document.createElement("div")
-
-/* Cover Page */
-
-contentDiv.innerHTML=`
-
-<div class="cover">
-
-<h1>${EXAM_STATUS[selectedExam].title}</h1>
-
-<p>Answer with Detailed Solution</p>
-
-<p>তারিখ: ${new Date().toLocaleDateString("bn-BD")}</p>
-
-<hr>
-
-</div>
-
-`
-
-/* Question Container */
-
-const container=document.createElement("div")
-
-container.className="pdf-container"
-
-/* Questions */
-
-QUESTIONS.forEach((q,i)=>{
-
-const box=document.createElement("div")
-
-box.className="qbox"
-
-let optionsHTML=""
-
-q.options.forEach((opt,j)=>{
-
-optionsHTML+=`
-
-<div class="option ${j===q.answer?'answer':''}">
-
-${String.fromCharCode(65+j)}. ${opt}
-
-</div>
-
-`
-
-})
-
-box.innerHTML=`
-
-<div class="qtitle">
-
-${i+1}. ${q.question}
-
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<title>Admin Download Center - Compact Two-Column PDF</title>
-<style>
-body{
+body {
   font-family: Arial, sans-serif;
-  padding:20px;
-  background:#f8f8f8;
+  padding: 20px;
+  background: #f8f8f8;
 }
-h2{
-  margin-bottom:20px;
+h2 {
+  margin-bottom: 20px;
 }
-select{
-  padding:8px 12px;
-  font-size:16px;
-  margin-right:10px;
+select {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-right: 10px;
 }
-button{
-  padding:10px 20px;
-  background:#2E8B57;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
+button {
+  padding: 10px 20px;
+  background: #2E8B57;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
-button:hover{
-  background:#246b45;
+button:hover {
+  background: #246b45;
 }
 
 /* PDF container */
-.pdf-container{
-  width:794px; /* A4 width in px */
-  margin:auto;
-  column-count:2;
-  column-gap:0; /* No gap between columns */
-  padding:10px;
+.pdf-container {
+  width: 794px; /* A4 width in px */
+  margin: auto;
+  column-count: 2;
+  column-gap: 20px; /* space between columns */
+  padding: 10px;
 }
 
 /* Question Box */
-.qbox{
-  background:#fcfcf7;
-  border:1px solid #ddd;
-  border-radius:6px;
-  padding:12px;
-  margin-bottom:12px; /* small spacing to separate questions */
-  break-inside:avoid;
+.qbox {
+  background: #fcfcf7;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  break-inside: avoid;
 }
 
-.qtitle{
-  font-weight:600;
-  font-size:15px;
-  margin-bottom:6px;
+.qtitle {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 6px;
 }
 
-.option{
-  margin-left:18px;
-  font-size:14px;
-  margin-bottom:3px;
+.option {
+  margin-left: 18px;
+  font-size: 14px;
+  margin-bottom: 3px;
 }
 
-.answer{
-  color:green;
-  font-weight:600;
+.answer {
+  color: green;
+  font-weight: 600;
 }
 
-.explanation{
-  margin-top:6px;
-  font-size:13px;
-  padding:6px;
-  background:#f5f5f5;
-  border-left:4px solid #2E8B57;
-  border-radius:3px;
+.explanation {
+  margin-top: 6px;
+  font-size: 13px;
+  padding: 6px;
+  background: #f5f5f5;
+  border-left: 4px solid #2E8B57;
+  border-radius: 3px;
 }
 
 /* Cover Page */
-.cover{
-  text-align:center;
-  page-break-after:always;
-  margin-bottom:20px;
+.cover {
+  text-align: center;
+  page-break-after: always;
+  margin-bottom: 20px;
 }
-.cover h1{
-  font-size:22px;
+.cover h1 {
+  font-size: 22px;
 }
-.cover p{
-  font-size:16px;
+.cover p {
+  font-size: 16px;
 }
 </style>
 </head>
 <body>
 
-<h2>Admin Download Center - Compact Two-Column PDF</h2>
+<h2>Admin Download Center - Advanced Two-Column PDF</h2>
 
 <select id="examSelect">
   <option value="">-- Select Exam --</option>
 </select>
-
 <button id="downloadBtn">Download PDF</button>
 
 <script src="exam-status.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 <script>
 const examSelect = document.getElementById("examSelect");
 const downloadBtn = document.getElementById("downloadBtn");
 
 // Load exams
-for(const examId in EXAM_STATUS){
-  if(EXAM_STATUS[examId].visible){
+for (const examId in EXAM_STATUS) {
+  if (EXAM_STATUS[examId].visible) {
     const option = document.createElement("option");
     option.value = examId;
     option.textContent = EXAM_STATUS[examId].title;
@@ -358,7 +115,7 @@ for(const examId in EXAM_STATUS){
 }
 
 // Load questions dynamically
-function loadQuestionsJS(path, callback){
+function loadQuestionsJS(path, callback) {
   const script = document.createElement("script");
   script.src = path;
   script.onload = callback;
@@ -366,14 +123,14 @@ function loadQuestionsJS(path, callback){
 }
 
 // Download PDF
-downloadBtn.addEventListener("click", ()=>{
+downloadBtn.addEventListener("click", () => {
   const selectedExam = examSelect.value;
-  if(!selectedExam){
+  if (!selectedExam) {
     alert("Please select an exam first!");
     return;
   }
 
-  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, ()=>{
+  loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`, () => {
     const contentDiv = document.createElement("div");
 
     // Cover Page
@@ -404,7 +161,6 @@ downloadBtn.addEventListener("click", ()=>{
         ${optionsHTML}
         <div class="explanation">ব্যাখ্যা: ${q.explanation}</div>
       `;
-
       container.appendChild(box);
     });
 
@@ -412,7 +168,7 @@ downloadBtn.addEventListener("click", ()=>{
 
     // PDF Options
     const opt = {
-      margin:[50,30,50,30], // top, left, bottom, right
+      margin:[50,40,50,40],
       filename:`${EXAM_STATUS[selectedExam].title}.pdf`,
       html2canvas:{scale:2, backgroundColor:null},
       jsPDF:{unit:'pt', format:'a4', orientation:'portrait'},
