@@ -2,141 +2,179 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Automatic Exam Scoreboard PDF</title>
+<title>Admin Auto Scoreboard - NTRCA Agriculture</title>
 <style>
-body { font-family: Arial,sans-serif; padding:20px; background:#f8f8f8; }
-h2 { margin-bottom:20px; }
-select, button { padding:8px 12px; font-size:16px; margin-right:10px; }
-button { background:#2E8B57; color:white; border:none; border-radius:6px; cursor:pointer; }
-button:hover { background:#246b45; }
+body{
+    font-family: Arial, sans-serif;
+    background:#f8f8f8;
+    padding:20px;
+}
+h2{
+    margin-bottom:20px;
+}
+select, button{
+    padding:8px 12px;
+    font-size:16px;
+    margin-right:10px;
+}
+button{
+    padding:10px 20px;
+    background:#2E8B57;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+button:hover{
+    background:#246b45;
+}
 
-.pdf-container { width:794px; margin:auto; padding:20px; background:white; }
-.pdf-header { text-align:center; margin-bottom:20px; }
-.pdf-header h1 { margin:0; font-size:20px; }
-.pdf-header h2 { margin:5px 0; font-size:16px; }
-
+/* PDF container */
+.pdf-container{
+    width:100%;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:6px;
+}
+/* Header */
+.pdf-header{
+    text-align:center;
+    margin-bottom:20px;
+}
+.pdf-header h1{
+    font-size:20px;
+    margin:0;
+}
+.pdf-header h3{
+    font-size:16px;
+    margin:5px 0;
+}
 /* Table */
-table { width:100%; border-collapse: collapse; margin-top:20px; }
-th, td { border:1px solid #ccc; padding:8px; text-align:center; font-size:13px; }
-th { background:#2E8B57; color:white; }
-tr.pass { background:#d4edda; }
-tr.fail { background:#f8d7da; }
-tr:nth-child(even):not(.header){ background:#f1f1f1; }
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th, td{
+    border:1px solid #ddd;
+    padding:8px;
+    text-align:center;
+    font-size:14px;
+}
+th{
+    background:#2E8B57;
+    color:white;
+}
+.pass{background:#d4edda;}
+.fail{background:#f8d7da;}
 </style>
 </head>
 <body>
 
-<h2>Admin Automatic Scoreboard PDF</h2>
+<h2>Admin Auto Scoreboard PDF</h2>
 
 <select id="examSelect">
-  <option value="">-- Select Exam --</option>
+    <option value="">-- Select Exam --</option>
 </select>
-<button id="downloadBtn">Download Scoreboard PDF</button>
+<button id="downloadBtn">Download PDF</button>
 
 <script src="exam-status.js"></script>
-<script src="exam.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="exam.js"></script> <!-- আপনার মূল exam.js -->
 
 <script>
+// Load exams
 const examSelect = document.getElementById("examSelect");
-const downloadBtn = document.getElementById("downloadBtn");
-
-// Load exams dynamically
 for(const examId in EXAM_STATUS){
-  if(EXAM_STATUS[examId].visible){
-    const option = document.createElement("option");
-    option.value = examId;
-    option.textContent = EXAM_STATUS[examId].title;
-    examSelect.appendChild(option);
-  }
-}
-
-// Rank labels
-function getRankLabel(i){
-  switch(i){
-    case 0: return "1st";
-    case 1: return "2nd";
-    case 2: return "3rd";
-    case 3: return "4th";
-    case 4: return "5th";
-    default: return "";
-  }
+    if(EXAM_STATUS[examId].visible){
+        const opt = document.createElement("option");
+        opt.value = examId;
+        opt.textContent = EXAM_STATUS[examId].title;
+        examSelect.appendChild(opt);
+    }
 }
 
 // Download PDF
-downloadBtn.addEventListener("click", ()=>{
-  const examId = examSelect.value;
-  if(!examId){ alert("Please select an exam first!"); return; }
-
-  // Filter results for selected exam
-  let results = allResults.filter(r => r.examId===examId);
-  if(results.length===0){ alert("No results found!"); return; }
-
-  // Sort by score descending
-  results.sort((a,b)=>b.score - a.score);
-
-  // Create PDF container
-  const contentDiv = document.createElement("div");
-  contentDiv.className="pdf-container";
-
-  contentDiv.innerHTML = `
-    <div class="pdf-header">
-      <h1>NTRCA Agriculture Teacher Registration-2026</h1>
-      <h2>${EXAM_STATUS[examId].title}</h2>
-      <p>Date: ${new Date().toLocaleDateString()}</p>
-    </div>
-  `;
-
-  // Table HTML
-  let tableHTML = `<table><tr class="header">
-    <th>Name (Rank)</th>
-    <th>Score</th>
-    <th>Percentage</th>
-    <th>Wrong</th>
-    <th>Unanswered</th>
-    <th>Time</th>
-    <th>Result</th>
-  </tr>`;
-
-  results.forEach((student,index)=>{
-    const percent = Math.round((student.score/student.total)*100);
-    const passMark = 40;
-    const resultText = percent>=passMark ? "PASS":"FAIL";
-    const rowClass = percent>=passMark?"pass":"fail";
-    const rankLabel = index<5 ? getRankLabel(index) : "";
-    tableHTML += `<tr class="${rowClass}">
-      <td>${student.name}${rankLabel ? ` (${rankLabel})` : ""}</td>
-      <td>${student.score}/${student.total}</td>
-      <td>${percent}%</td>
-      <td>${student.wrong}</td>
-      <td>${student.unanswered}</td>
-      <td>${student.time}</td>
-      <td>${resultText}</td>
-    </tr>`;
-  });
-
-  tableHTML += `</table>`;
-  contentDiv.innerHTML += tableHTML;
-
-  // PDF Options
-  const opt = {
-    margin:[20,20,20,20],
-    filename:`${EXAM_STATUS[examId].title}-Scoreboard.pdf`,
-    html2canvas:{scale:2, backgroundColor:null},
-    jsPDF:{unit:'pt', format:'a4', orientation:'portrait'},
-    pagebreak:{mode:['css','legacy']}
-  };
-
-  html2pdf().set(opt).from(contentDiv).toPdf().get('pdf').then(pdf=>{
-    const totalPages = pdf.internal.getNumberOfPages();
-    for(let i=1;i<=totalPages;i++){
-      pdf.setPage(i);
-      pdf.setFontSize(10);
-      pdf.text("NTRCA Agriculture Teacher Registration-2026", pdf.internal.pageSize.getWidth()/2,20,{align:'center'});
-      pdf.text(`Page ${i} / ${totalPages}`, pdf.internal.pageSize.getWidth()/2,
-               pdf.internal.pageSize.getHeight()-20,{align:'center'});
+document.getElementById("downloadBtn").addEventListener("click", ()=>{
+    const selectedExam = examSelect.value;
+    if(!selectedExam){
+        alert("Please select an exam!");
+        return;
     }
-  }).save();
+
+    const contentDiv = document.createElement("div");
+    contentDiv.className = "pdf-container";
+
+    // Header
+    const header = document.createElement("div");
+    header.className = "pdf-header";
+    header.innerHTML = `
+        <h1>NTRCA Agriculture Teacher Registration-2026</h1>
+        <h3>Exam Title: ${EXAM_STATUS[selectedExam].title}</h3>
+        <h3>Date: ${new Date().toLocaleDateString("en-GB")}</h3>
+    `;
+    contentDiv.appendChild(header);
+
+    // Table
+    const table = document.createElement("table");
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Name (Rank)</th>
+                <th>Score</th>
+                <th>Percentage</th>
+                <th>Wrong</th>
+                <th>Unanswered</th>
+                <th>Time</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="scoreBody"></tbody>
+    `;
+    contentDiv.appendChild(table);
+    const tbody = table.querySelector("#scoreBody");
+
+    // Filter and sort results
+    const results = allResults
+        .filter(r => r.examId === selectedExam)
+        .sort((a,b) => b.score - a.score); // sort by score descending
+
+    results.forEach((r, i)=>{
+        const percent = Math.round((r.score / r.total)*100);
+        const status = percent >= 40 ? "PASS" : "FAIL";
+
+        // Name + rank (top 5)
+        let nameDisplay = r.name;
+        if(i<5){
+            const rankText = ["1st","2nd","3rd","4th","5th"][i];
+            nameDisplay += ` (${rankText})`;
+        }
+
+        const tr = document.createElement("tr");
+        tr.className = percent >= 40 ? "pass" : "fail";
+
+        tr.innerHTML = `
+            <td>${nameDisplay}</td>
+            <td>${r.score} / ${r.total}</td>
+            <td>${percent}%</td>
+            <td>${r.wrong}</td>
+            <td>${r.unanswered}</td>
+            <td>${r.time}</td>
+            <td>${status}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    // PDF Options
+    const opt = {
+        margin:[20,10,20,10],
+        filename:`${EXAM_STATUS[selectedExam].title}-Scoreboard.pdf`,
+        html2canvas:{scale:2, backgroundColor:null},
+        jsPDF:{unit:'pt', format:'a4', orientation:'portrait'},
+        pagebreak:{mode:['css','legacy']}
+    };
+
+    html2pdf().set(opt).from(contentDiv).save();
 });
 </script>
 
