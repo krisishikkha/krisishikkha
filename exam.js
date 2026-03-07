@@ -166,7 +166,9 @@ function submitExam() {
     let passMark = 40;
     let status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
 
+    // ✅ মূল লাইন: examId যুক্ত করে results push করা
     allResults.push({
+        examId: getActiveExamId(),  // <-- এই লাইনটি নতুন
         name: studentName,
         correct,
         wrong,
@@ -175,6 +177,9 @@ function submitExam() {
         start: examStartTime,
         end: examEndTime
     });
+
+    // ✅ এই লাইনটি যোগ করুন: localStorage-এ সেভ হবে যাতে admin scoreboard দেখাতে পারে
+    localStorage.setItem("krisishikkha_results", JSON.stringify(allResults));
 
     let resultHTML = `
         <div style="padding:20px;">
