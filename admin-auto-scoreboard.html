@@ -111,70 +111,168 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
     header.innerHTML = `
         <h1>NTRCA Agriculture Teacher Registration-2026</h1>
         <h3>Exam Title: ${EXAM_STATUS[selectedExam].title}</h3>
-        <h3>Date: ${new Date().toLocaleDateString("en-GB")}</h3>
-    `;
-    contentDiv.appendChild(header);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Live Scoreboard - NTRCA Agriculture</title>
+<style>
+body{ font-family: Arial,sans-serif; background:#f8f8f8; padding:20px;}
+h2{ margin-bottom:20px;}
+select, button, input{ padding:8px 12px; font-size:16px; margin-right:10px;}
+button{ padding:10px 20px; background:#2E8B57; color:white; border:none; border-radius:6px; cursor:pointer;}
+button:hover{ background:#246b45;}
+.pdf-container{ width:100%; margin:auto; background:#fff; padding:20px; border-radius:6px;}
+.pdf-header{text-align:center; margin-bottom:20px;}
+.pdf-header h1{ font-size:20px; margin:0;}
+.pdf-header h3{ font-size:16px; margin:5px 0;}
+table{ width:100%; border-collapse:collapse;}
+th, td{ border:1px solid #ddd; padding:8px; text-align:center; font-size:14px;}
+th{ background:#2E8B57; color:white;}
+.pass{background:#d4edda;}
+.fail{background:#f8d7da;}
+</style>
+</head>
+<body>
 
-    // Table
-    const table = document.createElement("table");
-    table.innerHTML = `
-        <thead>
-            <tr>
-                <th>Name (Rank)</th>
-                <th>Score</th>
-                <th>Percentage</th>
-                <th>Wrong</th>
-                <th>Unanswered</th>
-                <th>Time</th>
-                <th>Result</th>
-            </tr>
-        </thead>
-        <tbody id="scoreBody"></tbody>
-    `;
-    contentDiv.appendChild(table);
-    const tbody = table.querySelector("#scoreBody");
+<h2>Admin Live Scoreboard</h2>
 
-    // Filter and sort results
+<div id="loginSection">
+    <input type="password" id="adminPass" placeholder="Enter Admin Password">
+    <button id="loginBtn">Login</button>
+    <span id="loginWarning" style="color:red;"></span>
+</div>
+
+<div id="scoreboardSection" style="display:none;">
+    <select id="examSelect">
+        <option value="">-- Select Exam --</option>
+    </select>
+    <button id="downloadBtn">Download PDF</button>
+    <div class="pdf-container" id="liveTableContainer">
+        <div class="pdf-header">
+            <h1>NTRCA Agriculture Teacher Registration-2026</h1>
+            <h3 id="examTitleHeader">Exam Title</h3>
+            <h3 id="examDateHeader"></h3>
+        </div>
+        <table id="scoreTable">
+            <thead>
+                <tr>
+                    <th>Name (Rank)</th>
+                    <th>Correct</th>
+                    <th>Wrong</th>
+                    <th>Unanswered</th>
+                    <th>Percentage</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="scoreBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="exam-status.js"></script>
+<script src="exam.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+const ADMIN_PASSWORD = "krisihigh123"; 
+const loginBtn = document.getElementById("loginBtn");
+loginBtn.addEventListener("click", ()=>{
+    const pass = document.getElementById("adminPass").value.trim();
+    if(pass === ADMIN_PASSWORD){
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("scoreboardSection").style.display = "block";
+        initExamDropdown();
+    } else {
+        document.getElementById("loginWarning").innerText = "❌ ভুল পাসওয়ার্ড";
+    }
+});
+
+// Populate Exam Dropdown
+function initExamDropdown(){
+    const examSelect = document.getElementById("examSelect");
+    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
+    for(const examId in EXAM_STATUS){
+        if(EXAM_STATUS[examId].visible){
+            const opt = document.createElement("option");
+            opt.value = examId;
+            opt.textContent = EXAM_STATUS[examId].title;
+            examSelect.appendChild(opt);
+        }
+    }
+}
+
+// Live Scoreboard Rendering
+let currentExamId = "";
+let renderedResultsCount = 0;
+
+function renderLiveScoreboard(examId){
+    const tbody = document.getElementById("scoreBody");
+    const titleHeader = document.getElementById("examTitleHeader");
+    const dateHeader = document.getElementById("examDateHeader");
+
+    titleHeader.innerText = "Exam Title: " + EXAM_STATUS[examId].title;
+    dateHeader.innerText = "Date: " + new Date().toLocaleDateString("en-GB");
+
     const results = allResults
-        .filter(r => r.examId === selectedExam)
-        .sort((a,b) => b.score - a.score); // sort by score descending
+        .filter(r => r.examId === examId)
+        .sort((a,b)=>b.correct - a.correct);
 
-    results.forEach((r, i)=>{
-        const percent = Math.round((r.score / r.total)*100);
-        const status = percent >= 40 ? "PASS" : "FAIL";
+    // Clear table if exam changed
+    if(currentExamId !== examId){
+        tbody.innerHTML = "";
+        renderedResultsCount = 0;
+        currentExamId = examId;
+    }
 
-        // Name + rank (top 5)
-        let nameDisplay = r.name;
+    // Append new results only
+    for(let i = renderedResultsCount; i<results.length; i++){
+        const r = results[i];
+        const status = r.percent >= 40 ? "PASS" : "FAIL";
+        let displayName = r.name;
         if(i<5){
             const rankText = ["1st","2nd","3rd","4th","5th"][i];
-            nameDisplay += ` (${rankText})`;
+            displayName += ` (${rankText})`;
         }
-
         const tr = document.createElement("tr");
-        tr.className = percent >= 40 ? "pass" : "fail";
-
+        tr.className = r.percent>=40?"pass":"fail";
         tr.innerHTML = `
-            <td>${nameDisplay}</td>
-            <td>${r.score} / ${r.total}</td>
-            <td>${percent}%</td>
+            <td>${displayName}</td>
+            <td>${r.correct}</td>
             <td>${r.wrong}</td>
             <td>${r.unanswered}</td>
-            <td>${r.time}</td>
+            <td>${r.percent}%</td>
             <td>${status}</td>
         `;
         tbody.appendChild(tr);
-    });
+        renderedResultsCount++;
+    }
+}
 
-    // PDF Options
-    const opt = {
+// Polling for live updates every 1.5 seconds
+setInterval(()=>{
+    if(currentExamId){
+        renderLiveScoreboard(currentExamId);
+    }
+}, 1500);
+
+// Download PDF
+document.getElementById("downloadBtn").addEventListener("click", ()=>{
+    if(!currentExamId) return alert("Please select an exam!");
+    const contentDiv = document.getElementById("liveTableContainer");
+    html2pdf().set({
         margin:[20,10,20,10],
-        filename:`${EXAM_STATUS[selectedExam].title}-Scoreboard.pdf`,
+        filename:`${EXAM_STATUS[currentExamId].title}-Scoreboard.pdf`,
         html2canvas:{scale:2, backgroundColor:null},
         jsPDF:{unit:'pt', format:'a4', orientation:'portrait'},
         pagebreak:{mode:['css','legacy']}
-    };
+    }).from(contentDiv).save();
+});
 
-    html2pdf().set(opt).from(contentDiv).save();
+// Update scoreboard when exam selected
+document.getElementById("examSelect").addEventListener("change",(e)=>{
+    const examId = e.target.value;
+    if(examId) renderLiveScoreboard(examId);
 });
 </script>
 
