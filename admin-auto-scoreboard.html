@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Auto Scoreboard - NTRCA Agriculture</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f8f8f8;
+    padding:20px;
+}
+h2{
+    margin-bottom:20px;
+}
+select, button{
+    padding:8px 12px;
+    font-size:16px;
+    margin-right:10px;
+}
+button{
+    padding:10px 20px;
+    background:#2E8B57;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+button:hover{
+    background:#246b45;
+}
+
+/* PDF container */
+.pdf-container{
+    width:100%;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:6px;
+}
+/* Header */
+.pdf-header{
+    text-align:center;
+    margin-bottom:20px;
+}
+.pdf-header h1{
+    font-size:20px;
+    margin:0;
+}
+.pdf-header h3{
+    font-size:16px;
+    margin:5px 0;
+}
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th, td{
+    border:1px solid #ddd;
+    padding:8px;
+    text-align:center;
+    font-size:14px;
+}
+th{
+    background:#2E8B57;
+    color:white;
+}
+.top-rank-1{background:gold;}
+.top-rank-2{background:silver;}
+.top-rank-3{background:#cd7f32;} /* bronze */
+.top-rank-4{background:#b0c4de;}
+.top-rank-5{background:#d3d3d3;}
+.pass{background:#d4edda;}
+.fail{background:#f8d7da;}
+</style>
+</head>
+<body>
+
+<h2>Admin Auto Scoreboard PDF</h2>
+
+<select id="examSelect">
+    <option value="">-- Select Exam --</option>
+</select>
+<button id="downloadBtn">Download PDF</button>
+
+<script src="exam-status.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="exam.js"></script> <!-- এটা আপনার মূল exam.js ফাইল -->
+
+<script>
+// Load exams
+const examSelect = document.getElementById("examSelect");
+for(const examId in EXAM_STATUS){
+    if(EXAM_STATUS[examId].visible){
+        const opt = document.createElement("option");
+        opt.value = examId;
+        opt.textContent = EXAM_STATUS[examId].title;
+        examSelect.appendChild(opt);
+    }
+}
+
+// Download PDF
+downloadBtn.addEventListener("click", ()=>{
+    const selectedExam = examSelect.value;
+    if(!selectedExam){
+        alert("Please select an exam!");
+        return;
+    }
+
+    const contentDiv = document.createElement("div");
+    contentDiv.className = "pdf-container";
+
+    // Header
+    const header = document.createElement("div");
+    header.className = "pdf-header";
+    header.innerHTML = `
+        <h1>NTRCA Agriculture Teacher Registration-2026</h1>
+        <h3>Exam Title: ${EXAM_STATUS[selectedExam].title}</h3>
+        <h3>Date: ${new Date().toLocaleDateString("en-GB")}</h3>
+    `;
+    contentDiv.appendChild(header);
+
+    // Table
+    const table = document.createElement("table");
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Percentage</th>
+                <th>Wrong</th>
+                <th>Unanswered</th>
+                <th>Time</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="scoreBody">
+        </tbody>
+    `;
+    contentDiv.appendChild(table);
+
+    const tbody = table.querySelector("#scoreBody");
+
+    // Filter results for selected exam
+    const results = allResults
+        .filter(r => r.examId === selectedExam)
+        .sort((a,b) => b.score - a.score); // sort by score descending
+
+    results.forEach((r, i)=>{
+        const percent = Math.round((r.score / r.total)*100);
+        const status = percent >= 40 ? "PASS" : "FAIL";
+
+        const tr = document.createElement("tr");
+
+        // Top 5 rank coloring
+        let rankClass = "";
+        if(i===0) rankClass="top-rank-1";
+        else if(i===1) rankClass="top-rank-2";
+        else if(i===2) rankClass="top-rank-3";
+        else if(i===3) rankClass="top-rank-4";
+        else if(i===4) rankClass="top-rank-5";
+
+        tr.className = rankClass + " " + (percent>=40?"pass":"fail");
+        tr.innerHTML = `
+            <td>${i<5?i+1:""}</td>
+            <td>${r.name}</td>
+            <td>${r.score} / ${r.total}</td>
+            <td>${percent}%</td>
+            <td>${r.wrong}</td>
+            <td>${r.unanswered}</td>
+            <td>${r.time}</td>
+            <td>${status}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    // PDF Options
+    const opt = {
+        margin:[20,10,20,10],
+        filename:`${EXAM_STATUS[selectedExam].title}-Scoreboard.pdf`,
+        html2canvas:{scale:2, backgroundColor:null},
+        jsPDF:{unit:'pt', format:'a4', orientation:'landscape'},
+        pagebreak:{mode:['css','legacy']}
+    };
+
+    html2pdf().set(opt).from(contentDiv).save();
+});
+</script>
+
+</body>
+  </html>
