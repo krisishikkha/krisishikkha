@@ -1,118 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Admin Auto Scoreboard - NTRCA Agriculture</title>
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f8f8f8;
-    padding:20px;
-}
-h2{
-    margin-bottom:20px;
-}
-select, button{
-    padding:8px 12px;
-    font-size:16px;
-    margin-right:10px;
-}
-button{
-    padding:10px 20px;
-    background:#2E8B57;
-    color:white;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-}
-button:hover{
-    background:#246b45;
-}
-
-/* PDF container */
-.pdf-container{
-    width:100%;
-    margin:auto;
-    background:#fff;
-    padding:20px;
-    border-radius:6px;
-}
-/* Header */
-.pdf-header{
-    text-align:center;
-    margin-bottom:20px;
-}
-.pdf-header h1{
-    font-size:20px;
-    margin:0;
-}
-.pdf-header h3{
-    font-size:16px;
-    margin:5px 0;
-}
-/* Table */
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-th, td{
-    border:1px solid #ddd;
-    padding:8px;
-    text-align:center;
-    font-size:14px;
-}
-th{
-    background:#2E8B57;
-    color:white;
-}
-.pass{background:#d4edda;}
-.fail{background:#f8d7da;}
-</style>
-</head>
-<body>
-
-<h2>Admin Auto Scoreboard PDF</h2>
-
-<select id="examSelect">
-    <option value="">-- Select Exam --</option>
-</select>
-<button id="downloadBtn">Download PDF</button>
-
-<script src="exam-status.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script src="exam.js"></script> <!-- আপনার মূল exam.js -->
-
-<script>
-// Load exams
-const examSelect = document.getElementById("examSelect");
-for(const examId in EXAM_STATUS){
-    if(EXAM_STATUS[examId].visible){
-        const opt = document.createElement("option");
-        opt.value = examId;
-        opt.textContent = EXAM_STATUS[examId].title;
-        examSelect.appendChild(opt);
-    }
-}
-
-// Download PDF
-document.getElementById("downloadBtn").addEventListener("click", ()=>{
-    const selectedExam = examSelect.value;
-    if(!selectedExam){
-        alert("Please select an exam!");
-        return;
-    }
-
-    const contentDiv = document.createElement("div");
-    contentDiv.className = "pdf-container";
-
-    // Header
-    const header = document.createElement("div");
-    header.className = "pdf-header";
-    header.innerHTML = `
-        <h1>NTRCA Agriculture Teacher Registration-2026</h1>
-        <h3>Exam Title: ${EXAM_STATUS[selectedExam].title}</h3>
-<!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <title>Admin Live Scoreboard - NTRCA Agriculture</title>
@@ -171,12 +58,12 @@ th{ background:#2E8B57; color:white;}
 </div>
 
 <script src="exam-status.js"></script>
-<script src="exam.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
 const ADMIN_PASSWORD = "krisihigh123"; 
 const loginBtn = document.getElementById("loginBtn");
+
 loginBtn.addEventListener("click", ()=>{
     const pass = document.getElementById("adminPass").value.trim();
     if(pass === ADMIN_PASSWORD){
@@ -188,7 +75,6 @@ loginBtn.addEventListener("click", ()=>{
     }
 });
 
-// Populate Exam Dropdown
 function initExamDropdown(){
     const examSelect = document.getElementById("examSelect");
     examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
@@ -202,7 +88,9 @@ function initExamDropdown(){
     }
 }
 
-// Live Scoreboard Rendering
+// Load allResults from localStorage
+let allResults = JSON.parse(localStorage.getItem("krisishikkha_results")) || [];
+
 let currentExamId = "";
 let renderedResultsCount = 0;
 
@@ -218,14 +106,12 @@ function renderLiveScoreboard(examId){
         .filter(r => r.examId === examId)
         .sort((a,b)=>b.correct - a.correct);
 
-    // Clear table if exam changed
     if(currentExamId !== examId){
         tbody.innerHTML = "";
         renderedResultsCount = 0;
         currentExamId = examId;
     }
 
-    // Append new results only
     for(let i = renderedResultsCount; i<results.length; i++){
         const r = results[i];
         const status = r.percent >= 40 ? "PASS" : "FAIL";
@@ -249,9 +135,11 @@ function renderLiveScoreboard(examId){
     }
 }
 
-// Polling for live updates every 1.5 seconds
+// Polling for live updates
 setInterval(()=>{
     if(currentExamId){
+        // Refresh allResults from localStorage
+        allResults = JSON.parse(localStorage.getItem("krisishikkha_results")) || [];
         renderLiveScoreboard(currentExamId);
     }
 }, 1500);
@@ -269,7 +157,6 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
     }).from(contentDiv).save();
 });
 
-// Update scoreboard when exam selected
 document.getElementById("examSelect").addEventListener("change",(e)=>{
     const examId = e.target.value;
     if(examId) renderLiveScoreboard(examId);
