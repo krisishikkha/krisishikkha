@@ -112,7 +112,7 @@ function initExamDropdown(){
 // ==================== Load & Render Results ====================
 let allResults=JSON.parse(localStorage.getItem("krisishikkha_results"))||[];
 let currentExamId="";
-let renderedResultsCount=0;
+let pushedResults = new Set(); // Already pushed results
 
 function renderLiveScoreboard(examId){
     const tbody=document.getElementById("scoreBody");
@@ -151,7 +151,7 @@ function renderLiveScoreboard(examId){
         tbody.appendChild(tr);
     });
 
-    // ===== Step 5: Push to Google Sheet =====
+    // ===== Push results safely =====
     pushResultsToGoogleSheet(results);
 }
 
@@ -190,18 +190,27 @@ document.getElementById("examSelect").addEventListener("change",(e)=>{
     }
 });
 
-// ==================== Step 5: Google Sheet Push ====================
+// ==================== Step 5: Google Sheet Push (Safe) ====================
 function pushResultsToGoogleSheet(results){
     const url="https://script.google.com/macros/s/AKfycbzSQpFaE6Poa16AJXiFu7l0JB1Kq2QcSXaz2vNgm9dA7uaU19jtp7sg0p6aQOc-66L0/exec";
+
     results.forEach(r=>{
+        const key = r.examId + "_" + r.name;
+        if(pushedResults.has(key)) return; // Already pushed
+
         fetch(url,{
             method:"POST",
             body:JSON.stringify(r),
             headers:{"Content-Type":"application/json"}
         })
         .then(res=>res.text())
-        .then(resText=>{ console.log("Pushed:", r.name, resText); })
-        .catch(err=>{ console.error("Error pushing:", r.name, err); });
+        .then(resText=>{
+            console.log("✅ Pushed:", r.name, resText);
+            pushedResults.add(key); // Mark as pushed
+        })
+        .catch(err=>{ 
+            console.error("❌ Error pushing:", r.name, err); 
+        });
     });
 }
 </script>
