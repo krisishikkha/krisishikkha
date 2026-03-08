@@ -167,7 +167,7 @@ function submitExam() {
     let status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
 
     // ✅ মূল লাইন: examId যুক্ত করে results push করা
-    allResults.push({
+    const resultObj = {
         examId: getActiveExamId(),  // <-- এই লাইনটি নতুন
         name: studentName,
         correct,
@@ -176,11 +176,17 @@ function submitExam() {
         percent,
         start: examStartTime,
         end: examEndTime
-    });
+    };
 
-    // ✅ এই লাইনটি যোগ করুন: localStorage-এ সেভ হবে যাতে admin scoreboard দেখাতে পারে
+    allResults.push(resultObj);
+
+    // ✅ localStorage-এ সেভ
     localStorage.setItem("krisishikkha_results", JSON.stringify(allResults));
 
+    // -------------------- New Feature: Send to Google Sheet --------------------
+    sendToGoogleSheet(resultObj);
+
+    // -------------------- Result Display --------------------
     let resultHTML = `
         <div style="padding:20px;">
             <h2>📊 পরীক্ষার ফলাফল</h2>
@@ -229,4 +235,20 @@ function submitExam() {
     resultHTML += `</div>`;
 
     document.getElementById("examMain").innerHTML = resultHTML;
+}
+
+// -------------------- New Function: Send Result to Google Sheet --------------------
+function sendToGoogleSheet(result) {
+    const SCRIPT_URL = "const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxRMHuj22VWjJeEXGeDldnclygMExaBDFT0BGm-YEDviRYFxO9LM6i9O0fEVB_JhOku/exec";"; // <-- এখানে আপনার deployed Web App URL দিন
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify(result),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => response.text())
+    .then(data => console.log("Google Sheet Response:", data))
+    .catch(err => console.error("Error sending to Sheet:", err));
 }
