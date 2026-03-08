@@ -192,7 +192,7 @@ document.getElementById("examSelect").addEventListener("change",(e)=>{
 
 // ==================== Step 5: Google Sheet Push ====================
 function pushResultsToGoogleSheet(results){
-    const url="https://script.google.com/macros/s/AKfycbxRMHuj22VWjJeEXGeDldnclygMExaBDFT0BGm-YEDviRYFxO9LM6i9O0fEVB_JhOku/exec";
+    const url="https://script.google.com/macros/s/AKfycbzSQpFaE6Poa16AJXiFu7l0JB1Kq2QcSXaz2vNgm9dA7uaU19jtp7sg0p6aQOc-66L0/exec";
     results.forEach(r=>{
         fetch(url,{
             method:"POST",
