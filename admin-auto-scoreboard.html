@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Admin Live Scoreboard - NTRCA Agriculture</title>
+<title>Live Scoreboard - NTRCA Agriculture</title>
 <style>
 body{ font-family: Arial,sans-serif; background:#f8f8f8; padding:20px;}
 h2{ margin-bottom:20px;}
@@ -28,15 +28,9 @@ thead { display:table-header-group }
 </head>
 
 <body>
-<h2>Admin Live Scoreboard</h2>
+<h2>Live Scoreboard</h2>
 
-<div id="loginSection">
-<input type="password" id="adminPass" placeholder="Enter Admin Password">
-<button id="loginBtn">Login</button>
-<span id="loginWarning" style="color:red;"></span>
-</div>
-
-<div id="scoreboardSection" style="display:none;">
+<div id="scoreboardSection">
 <select id="examSelect">
 <option value="">-- Select Exam --</option>
 </select>
@@ -73,20 +67,6 @@ thead { display:table-header-group }
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
-// ==================== Admin Login ====================
-const ADMIN_PASSWORD = "krisi123";
-
-document.getElementById("loginBtn").onclick = function() {
-    const pass = document.getElementById("adminPass").value.trim();
-    if(pass === ADMIN_PASSWORD){
-        document.getElementById("loginSection").style.display = "none";
-        document.getElementById("scoreboardSection").style.display = "block";
-        initExamDropdown();
-    } else {
-        document.getElementById("loginWarning").innerText = "❌ ভুল পাসওয়ার্ড";
-    }
-}
-
 // ==================== Exam Dropdown ====================
 function initExamDropdown(){
     const examSelect = document.getElementById("examSelect");
@@ -117,7 +97,6 @@ function renderLiveScoreboard(examId){
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
 
-    // Filter results for selected exam
     let results = allResults.filter(r => r.examId === examId);
 
     if(startDate){
@@ -130,10 +109,8 @@ function renderLiveScoreboard(examId){
         results = results.filter(r => new Date(r.start) <= e);
     }
 
-    // Sort by score descending
     results.sort((a,b) => b.correct - a.correct);
 
-    // Render table with top 5 ranking
     tbody.innerHTML = "";
     results.forEach((r, i) => {
         const status = r.percent >= 40 ? "PASS" : "FAIL";
@@ -202,6 +179,9 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
         jsPDF:{unit:'pt',format:'a4',orientation:'portrait'}
     }).from(element).save();
 });
+
+// ==================== Init Dropdown ====================
+initExamDropdown();
 
 </script>
 </body>
