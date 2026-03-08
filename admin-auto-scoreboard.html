@@ -29,7 +29,6 @@ th{ background:#2E8B57; color:white;}
 </style>
 
 </head>
-
 <body>
 
 <h2>Admin Live Scoreboard</h2>
@@ -74,7 +73,6 @@ th{ background:#2E8B57; color:white;}
 <tbody id="scoreBody"></tbody>
 
 </table>
-
 </div>
 </div>
 
@@ -82,9 +80,8 @@ th{ background:#2E8B57; color:white;}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
-
+// ==================== Admin Login ====================
 const ADMIN_PASSWORD = "krisi123";
-
 const loginBtn = document.getElementById("loginBtn");
 
 loginBtn.addEventListener("click", ()=>{
@@ -98,6 +95,7 @@ loginBtn.addEventListener("click", ()=>{
     }
 });
 
+// ==================== Exam Dropdown ====================
 function initExamDropdown(){
     const examSelect=document.getElementById("examSelect");
     examSelect.innerHTML='<option value="">-- Select Exam --</option>';
@@ -111,7 +109,7 @@ function initExamDropdown(){
     }
 }
 
-// Load results
+// ==================== Load & Render Results ====================
 let allResults=JSON.parse(localStorage.getItem("krisishikkha_results"))||[];
 let currentExamId="";
 let renderedResultsCount=0;
@@ -124,22 +122,13 @@ function renderLiveScoreboard(examId){
     titleHeader.innerText="Exam Title: "+EXAM_STATUS[examId].title;
     dateHeader.innerText="Date: "+new Date().toLocaleDateString("en-GB");
 
-    // Step 2: Date-Range Filter
+    // ===== Date Filter =====
     const startDate=document.getElementById("startDate").value;
     const endDate=document.getElementById("endDate").value;
 
     let results=allResults.filter(r=>r.examId===examId);
-
-    if(startDate){
-        const s=new Date(startDate);
-        results=results.filter(r=>new Date(r.start)>=s);
-    }
-
-    if(endDate){
-        const e=new Date(endDate);
-        e.setHours(23,59,59,999);
-        results=results.filter(r=>new Date(r.start)<=e);
-    }
+    if(startDate){ const s=new Date(startDate); results=results.filter(r=>new Date(r.start)>=s); }
+    if(endDate){ const e=new Date(endDate); e.setHours(23,59,59,999); results=results.filter(r=>new Date(r.start)<=e); }
 
     results.sort((a,b)=>b.correct-a.correct);
 
@@ -147,9 +136,7 @@ function renderLiveScoreboard(examId){
     results.forEach((r,i)=>{
         const status=r.percent>=40?"PASS":"FAIL";
         let displayName=r.name;
-        if(i<5){
-            displayName+=` (${["1st","2nd","3rd","4th","5th"][i]})`;
-        }
+        if(i<5){ displayName+=` (${["1st","2nd","3rd","4th","5th"][i]})`; }
         const tr=document.createElement("tr");
         tr.className=r.percent>=40?"pass":"fail";
         if(i<5) tr.classList.add("top-rank");
@@ -163,8 +150,12 @@ function renderLiveScoreboard(examId){
         `;
         tbody.appendChild(tr);
     });
+
+    // ===== Step 5: Push to Google Sheet =====
+    pushResultsToGoogleSheet(results);
 }
 
+// Auto-refresh every 1.5 sec
 setInterval(()=>{
     if(currentExamId){
         allResults=JSON.parse(localStorage.getItem("krisishikkha_results"))||[];
@@ -172,20 +163,14 @@ setInterval(()=>{
     }
 },1500);
 
-// Step 4: Professional PDF with Top-5 & Page Breaks
+// ==================== Download PDF ====================
 document.getElementById("downloadBtn").addEventListener("click",()=>{
     if(!currentExamId) return alert("Please select an exam!");
-
     const liveTable = document.getElementById("liveTableContainer");
     const pdfTable = liveTable.cloneNode(true);
 
-    // Highlight Top 5 in PDF
     const pdfRows = pdfTable.querySelectorAll("#scoreBody tr");
-    pdfRows.forEach((tr, idx)=>{
-        if(idx<5){
-            tr.classList.add("top-rank");
-        }
-    });
+    pdfRows.forEach((tr, idx)=>{ if(idx<5) tr.classList.add("top-rank"); });
 
     html2pdf().set({
         margin:[20,10,20,10],
@@ -196,6 +181,7 @@ document.getElementById("downloadBtn").addEventListener("click",()=>{
     }).from(pdfTable).save();
 });
 
+// ==================== Exam Select Event ====================
 document.getElementById("examSelect").addEventListener("change",(e)=>{
     const examId=e.target.value;
     if(examId){
@@ -204,6 +190,20 @@ document.getElementById("examSelect").addEventListener("change",(e)=>{
     }
 });
 
+// ==================== Step 5: Google Sheet Push ====================
+function pushResultsToGoogleSheet(results){
+    const url="https://script.google.com/macros/s/AKfycbxRMHuj22VWjJeEXGeDldnclygMExaBDFT0BGm-YEDviRYFxO9LM6i9O0fEVB_JhOku/exec";
+    results.forEach(r=>{
+        fetch(url,{
+            method:"POST",
+            body:JSON.stringify(r),
+            headers:{"Content-Type":"application/json"}
+        })
+        .then(res=>res.text())
+        .then(resText=>{ console.log("Pushed:", r.name, resText); })
+        .catch(err=>{ console.error("Error pushing:", r.name, err); });
+    });
+}
 </script>
 
 </body>
