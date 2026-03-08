@@ -28,15 +28,15 @@ thead { display:table-header-group }
 </head>
 
 <body>
-<h2>Live Scoreboard</h2>
+<h2>Live Scoreboard - NTRCA Agriculture</h2>
 
 <div id="scoreboardSection">
 <select id="examSelect">
 <option value="">-- Select Exam --</option>
 </select>
 
-<input type="date" id="startDate">
-<input type="date" id="endDate">
+<input type="date" id="startDate" placeholder="Start Date">
+<input type="date" id="endDate" placeholder="End Date">
 
 <button id="downloadBtn">Download PDF</button>
 
@@ -97,6 +97,7 @@ function renderLiveScoreboard(examId){
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
 
+    // Filter results for selected exam
     let results = allResults.filter(r => r.examId === examId);
 
     if(startDate){
@@ -109,11 +110,14 @@ function renderLiveScoreboard(examId){
         results = results.filter(r => new Date(r.start) <= e);
     }
 
+    // Sort by score descending
     results.sort((a,b) => b.correct - a.correct);
 
+    // Render table with top 5 ranking
     tbody.innerHTML = "";
     results.forEach((r, i) => {
         const status = r.percent >= 40 ? "PASS" : "FAIL";
+
         let rank = "";
         if(i==0) rank="1st";
         else if(i==1) rank="2nd";
@@ -180,9 +184,8 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
     }).from(element).save();
 });
 
-// ==================== Init Dropdown ====================
+// Initialize exam dropdown on page load
 initExamDropdown();
-
 </script>
 </body>
 </html>
