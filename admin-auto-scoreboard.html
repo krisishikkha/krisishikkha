@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Admin Live Scoreboard - NTRCA Agriculture</title>
+
 <style>
 body{ font-family: Arial,sans-serif; background:#f8f8f8; padding:20px;}
 h2{ margin-bottom:20px;}
@@ -19,148 +20,284 @@ th{ background:#2E8B57; color:white;}
 .pass{background:#d4edda;}
 .fail{background:#f8d7da;}
 </style>
+
 </head>
+
 <body>
 
 <h2>Admin Live Scoreboard</h2>
 
 <div id="loginSection">
-    <input type="password" id="adminPass" placeholder="Enter Admin Password">
-    <button id="loginBtn">Login</button>
-    <span id="loginWarning" style="color:red;"></span>
+<input type="password" id="adminPass" placeholder="Enter Admin Password">
+<button id="loginBtn">Login</button>
+<span id="loginWarning" style="color:red;"></span>
 </div>
 
+
 <div id="scoreboardSection" style="display:none;">
-    <select id="examSelect">
-        <option value="">-- Select Exam --</option>
-    </select>
-    <button id="downloadBtn">Download PDF</button>
-    <div class="pdf-container" id="liveTableContainer">
-        <div class="pdf-header">
-            <h1>NTRCA Agriculture Teacher Registration-2026</h1>
-            <h3 id="examTitleHeader">Exam Title</h3>
-            <h3 id="examDateHeader"></h3>
-        </div>
-        <table id="scoreTable">
-            <thead>
-                <tr>
-                    <th>Name (Rank)</th>
-                    <th>Correct</th>
-                    <th>Wrong</th>
-                    <th>Unanswered</th>
-                    <th>Percentage</th>
-                    <th>Result</th>
-                </tr>
-            </thead>
-            <tbody id="scoreBody"></tbody>
-        </table>
-    </div>
+
+<select id="examSelect">
+<option value="">-- Select Exam --</option>
+</select>
+
+<input type="date" id="startDate">
+<input type="date" id="endDate">
+
+<button id="downloadBtn">Download PDF</button>
+
+
+<div class="pdf-container" id="liveTableContainer">
+
+<div class="pdf-header">
+<h1>NTRCA Agriculture Teacher Registration-2026</h1>
+<h3 id="examTitleHeader">Exam Title</h3>
+<h3 id="examDateHeader"></h3>
 </div>
+
+<table id="scoreTable">
+<thead>
+<tr>
+<th>Name (Rank)</th>
+<th>Correct</th>
+<th>Wrong</th>
+<th>Unanswered</th>
+<th>Percentage</th>
+<th>Result</th>
+</tr>
+</thead>
+
+<tbody id="scoreBody"></tbody>
+
+</table>
+
+</div>
+</div>
+
 
 <script src="exam-status.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
-const ADMIN_PASSWORD = "krisihigh123"; 
+
+const ADMIN_PASSWORD = "krisi123";
+
 const loginBtn = document.getElementById("loginBtn");
 
 loginBtn.addEventListener("click", ()=>{
-    const pass = document.getElementById("adminPass").value.trim();
-    if(pass === ADMIN_PASSWORD){
-        document.getElementById("loginSection").style.display = "none";
-        document.getElementById("scoreboardSection").style.display = "block";
-        initExamDropdown();
-    } else {
-        document.getElementById("loginWarning").innerText = "❌ ভুল পাসওয়ার্ড";
-    }
+
+const pass = document.getElementById("adminPass").value.trim();
+
+if(pass === ADMIN_PASSWORD){
+
+document.getElementById("loginSection").style.display="none";
+document.getElementById("scoreboardSection").style.display="block";
+
+initExamDropdown();
+
+}
+
+else{
+
+document.getElementById("loginWarning").innerText="❌ ভুল পাসওয়ার্ড";
+
+}
+
 });
+
+
 
 function initExamDropdown(){
-    const examSelect = document.getElementById("examSelect");
-    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
-    for(const examId in EXAM_STATUS){
-        if(EXAM_STATUS[examId].visible){
-            const opt = document.createElement("option");
-            opt.value = examId;
-            opt.textContent = EXAM_STATUS[examId].title;
-            examSelect.appendChild(opt);
-        }
-    }
+
+const examSelect=document.getElementById("examSelect");
+
+examSelect.innerHTML='<option value="">-- Select Exam --</option>';
+
+for(const examId in EXAM_STATUS){
+
+if(EXAM_STATUS[examId].visible){
+
+const opt=document.createElement("option");
+
+opt.value=examId;
+
+opt.textContent=EXAM_STATUS[examId].title;
+
+examSelect.appendChild(opt);
+
 }
 
-// Load allResults from localStorage
-let allResults = JSON.parse(localStorage.getItem("krisishikkha_results")) || [];
+}
 
-let currentExamId = "";
-let renderedResultsCount = 0;
+}
+
+
+
+// Load results
+
+let allResults=JSON.parse(localStorage.getItem("krisishikkha_results"))||[];
+
+let currentExamId="";
+
+let renderedResultsCount=0;
+
+
 
 function renderLiveScoreboard(examId){
-    const tbody = document.getElementById("scoreBody");
-    const titleHeader = document.getElementById("examTitleHeader");
-    const dateHeader = document.getElementById("examDateHeader");
 
-    titleHeader.innerText = "Exam Title: " + EXAM_STATUS[examId].title;
-    dateHeader.innerText = "Date: " + new Date().toLocaleDateString("en-GB");
+const tbody=document.getElementById("scoreBody");
 
-    const results = allResults
-        .filter(r => r.examId === examId)
-        .sort((a,b)=>b.correct - a.correct);
+const titleHeader=document.getElementById("examTitleHeader");
 
-    if(currentExamId !== examId){
-        tbody.innerHTML = "";
-        renderedResultsCount = 0;
-        currentExamId = examId;
-    }
+const dateHeader=document.getElementById("examDateHeader");
 
-    for(let i = renderedResultsCount; i<results.length; i++){
-        const r = results[i];
-        const status = r.percent >= 40 ? "PASS" : "FAIL";
-        let displayName = r.name;
-        if(i<5){
-            const rankText = ["1st","2nd","3rd","4th","5th"][i];
-            displayName += ` (${rankText})`;
-        }
-        const tr = document.createElement("tr");
-        tr.className = r.percent>=40?"pass":"fail";
-        tr.innerHTML = `
-            <td>${displayName}</td>
-            <td>${r.correct}</td>
-            <td>${r.wrong}</td>
-            <td>${r.unanswered}</td>
-            <td>${r.percent}%</td>
-            <td>${status}</td>
-        `;
-        tbody.appendChild(tr);
-        renderedResultsCount++;
-    }
+titleHeader.innerText="Exam Title: "+EXAM_STATUS[examId].title;
+
+dateHeader.innerText="Date: "+new Date().toLocaleDateString("en-GB");
+
+
+
+const startDate=document.getElementById("startDate").value;
+
+const endDate=document.getElementById("endDate").value;
+
+
+
+let results=allResults.filter(r=>r.examId===examId);
+
+
+
+if(startDate){
+
+const s=new Date(startDate);
+
+results=results.filter(r=>new Date(r.start)>=s);
+
 }
 
-// Polling for live updates
-setInterval(()=>{
-    if(currentExamId){
-        // Refresh allResults from localStorage
-        allResults = JSON.parse(localStorage.getItem("krisishikkha_results")) || [];
-        renderLiveScoreboard(currentExamId);
-    }
-}, 1500);
 
-// Download PDF
-document.getElementById("downloadBtn").addEventListener("click", ()=>{
-    if(!currentExamId) return alert("Please select an exam!");
-    const contentDiv = document.getElementById("liveTableContainer");
-    html2pdf().set({
-        margin:[20,10,20,10],
-        filename:`${EXAM_STATUS[currentExamId].title}-Scoreboard.pdf`,
-        html2canvas:{scale:2, backgroundColor:null},
-        jsPDF:{unit:'pt', format:'a4', orientation:'portrait'},
-        pagebreak:{mode:['css','legacy']}
-    }).from(contentDiv).save();
+
+if(endDate){
+
+const e=new Date(endDate);
+
+e.setHours(23,59,59,999);
+
+results=results.filter(r=>new Date(r.start)<=e);
+
+}
+
+
+
+results.sort((a,b)=>b.correct-a.correct);
+
+
+
+tbody.innerHTML="";
+
+
+
+results.forEach((r,i)=>{
+
+const status=r.percent>=40?"PASS":"FAIL";
+
+let displayName=r.name;
+
+
+
+if(i<5){
+
+const rankText=["1st","2nd","3rd","4th","5th"][i];
+
+displayName+=` (${rankText})`;
+
+}
+
+
+
+const tr=document.createElement("tr");
+
+tr.className=r.percent>=40?"pass":"fail";
+
+
+
+tr.innerHTML=`
+
+<td>${displayName}</td>
+
+<td>${r.correct}</td>
+
+<td>${r.wrong}</td>
+
+<td>${r.unanswered}</td>
+
+<td>${r.percent}%</td>
+
+<td>${status}</td>
+
+`;
+
+
+
+tbody.appendChild(tr);
+
 });
+
+}
+
+
+
+setInterval(()=>{
+
+if(currentExamId){
+
+allResults=JSON.parse(localStorage.getItem("krisishikkha_results"))||[];
+
+renderLiveScoreboard(currentExamId);
+
+}
+
+},1500);
+
+
+
+document.getElementById("downloadBtn").addEventListener("click",()=>{
+
+if(!currentExamId) return alert("Please select an exam!");
+
+const contentDiv=document.getElementById("liveTableContainer");
+
+html2pdf().set({
+
+margin:[20,10,20,10],
+
+filename:`${EXAM_STATUS[currentExamId].title}-Scoreboard.pdf`,
+
+html2canvas:{scale:2,backgroundColor:null},
+
+jsPDF:{unit:'pt',format:'a4',orientation:'portrait'},
+
+pagebreak:{mode:['css','legacy']}
+
+}).from(contentDiv).save();
+
+});
+
+
 
 document.getElementById("examSelect").addEventListener("change",(e)=>{
-    const examId = e.target.value;
-    if(examId) renderLiveScoreboard(examId);
+
+const examId=e.target.value;
+
+if(examId){
+
+currentExamId=examId;
+
+renderLiveScoreboard(examId);
+
+}
+
 });
+
 </script>
 
 </body>
