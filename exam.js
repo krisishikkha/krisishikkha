@@ -68,8 +68,16 @@ function initExam(examId) {
     script.src = `./exam-corner/${examId}/questions.js`;
 
     script.onload = function () {
+        if (typeof QUESTIONS === "undefined" || QUESTIONS.length === 0) {
+            alert("⚠️ প্রশ্ন ফাইল লোড হয়নি!");
+            return;
+        }
         renderQuestions();
         startTimer();
+    };
+
+    script.onerror = function () {
+        alert("⚠️ questions.js লোড করতে সমস্যা হয়েছে!");
     };
 
     document.body.appendChild(script);
@@ -166,9 +174,8 @@ function submitExam() {
     let passMark = 40;
     let status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
 
-    // ✅ মূল লাইন: examId যুক্ত করে results push করা
     const resultObj = {
-        examId: getActiveExamId(),  // <-- এই লাইনটি নতুন
+        examId: getActiveExamId(),
         name: studentName,
         correct,
         wrong,
@@ -179,18 +186,13 @@ function submitExam() {
     };
 
     allResults.push(resultObj);
-
-    // ✅ localStorage-এ সেভ
     localStorage.setItem("krisishikkha_results", JSON.stringify(allResults));
 
-    // -------------------- New Feature: Send to Google Sheet --------------------
     sendToGoogleSheet(resultObj);
 
-    // -------------------- Result Display --------------------
     let resultHTML = `
         <div style="padding:20px;">
             <h2>📊 পরীক্ষার ফলাফল</h2>
-
             <div style="
                 background:${percent >= passMark ? '#d4edda' : '#f8d7da'};
                 padding:15px;
@@ -205,7 +207,6 @@ function submitExam() {
                 📈 শতাংশ: ${percent}%<br>
                 🎯 ফলাফল: <strong>${status}</strong>
             </div>
-
             <hr>
             <h3>📋 উত্তর ও ব্যাখ্যা</h3>
     `;
@@ -233,13 +234,12 @@ function submitExam() {
     });
 
     resultHTML += `</div>`;
-
     document.getElementById("examMain").innerHTML = resultHTML;
 }
 
-// -------------------- New Function: Send Result to Google Sheet --------------------
+// -------------------- Send Result to Google Sheet --------------------
 function sendToGoogleSheet(result) {
-    const SCRIPT_URL = "const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxRMHuj22VWjJeEXGeDldnclygMExaBDFT0BGm-YEDviRYFxO9LM6i9O0fEVB_JhOku/exec";"; // <-- এখানে আপনার deployed Web App URL দিন
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxRMHuj22VWjJeEXGeDldnclygMExaBDFT0BGm-YEDviRYFxO9LM6i9O0fEVB_JhOku/exec";
 
     fetch(SCRIPT_URL, {
         method: "POST",
