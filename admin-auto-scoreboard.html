@@ -19,14 +19,11 @@ th{ background:#2E8B57; color:white;}
 .pass{background:#d4edda;}
 .fail{background:#f8d7da;}
 .top-rank{ font-weight:bold; color:#ff8c00; }
-@media print {
-table { page-break-inside:auto }
-tr { page-break-inside:avoid; page-break-after:auto }
-thead { display:table-header-group }
-}
+@media print { table { page-break-inside:auto } tr { page-break-inside:avoid; page-break-after:auto } thead { display:table-header-group } }
 </style>
 </head>
 <body>
+
 <h2>Live Scoreboard - NTRCA Agriculture</h2>
 
 <div id="scoreboardSection">
@@ -64,15 +61,16 @@ thead { display:table-header-group }
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
-
 <script>
+// ==================== Supabase ====================
 const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 let currentExamId = "";
+let allResults = [];
 
-// ==================== Fetch Exams from Supabase ====================
+// ==================== Fetch Exams ====================
 async function fetchExams(){
     const { data, error } = await supabaseClient
         .from("exams")
@@ -92,7 +90,7 @@ async function initExamDropdown(){
     const exams = await fetchExams();
     exams.forEach(exam=>{
         const opt = document.createElement("option");
-        opt.value = exam.id; // Supabase exam ID
+        opt.value = exam.id;
         opt.textContent = exam.title;
         examSelect.appendChild(opt);
     });
@@ -120,11 +118,12 @@ async function renderLiveScoreboard(examId){
     titleHeader.innerText = "Exam Title: " + (examData?.title || "");
     dateHeader.innerText = "Generated: " + new Date().toLocaleString("en-GB");
 
-    let results = await fetchResults(examId);
+    allResults = await fetchResults(examId);
 
     // Date Filter
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
+    let results = allResults;
     if(startDate){ const s = new Date(startDate); results = results.filter(r=>new Date(r.timestamp)>=s); }
     if(endDate){ const e = new Date(endDate); e.setHours(23,59,59,999); results = results.filter(r=>new Date(r.timestamp)<=e); }
 
@@ -133,11 +132,11 @@ async function renderLiveScoreboard(examId){
 
     tbody.innerHTML = "";
     results.forEach((r,i)=>{
-        const status = r.percent >=40 ? "PASS":"FAIL";
+        const status = r.percent >= 40 ? "PASS":"FAIL";
         let rank="";
         if(i==0) rank="1st"; else if(i==1) rank="2nd"; else if(i==2) rank="3rd"; else if(i==3) rank="4th"; else if(i==4) rank="5th";
         let name = r.studentName + (rank?` (${rank})`:"");
-        const tr = document.createElement("tr");
+        const tr=document.createElement("tr");
         if(i<5) tr.classList.add("top-rank");
         tr.classList.add(status==="PASS"?"pass":"fail");
         tr.innerHTML=`
