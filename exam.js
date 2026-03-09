@@ -237,18 +237,4 @@ function submitExam() {
     document.getElementById("examMain").innerHTML = resultHTML;
 }
 
-// -------------------- Send Result to Google Sheet --------------------
-function sendToGoogleSheet(result) {
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxRMHuj22VWjJeEXGeDldnclygMExaBDFT0BGm-YEDviRYFxO9LM6i9O0fEVB_JhOku/exec";
-
-    fetch(SCRIPT_URL, {
-        method: "POST",
-        body: JSON.stringify(result),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(response => response.text())
-    .then(data => console.log("Google Sheet Response:", data))
-    .catch(err => console.error("Error sending to Sheet:", err));
-}
+//
