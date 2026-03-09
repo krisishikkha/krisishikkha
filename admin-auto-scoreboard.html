@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Live Scoreboard - NTRCA Agriculture</title>
+<title>Live Scoreboard Update- NTRCA Agriculture</title>
 <style>
 body{ font-family: Arial,sans-serif; background:#f8f8f8; padding:20px;}
 h2{ margin-bottom:20px;}
@@ -79,7 +79,7 @@ function initExamDropdown(){
     examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
     for(const examId in EXAM_STATUS){
         const exam = EXAM_STATUS[examId];
-        if(exam.visible){
+        if(exam.visible === true){  // Strict boolean check
             const opt = document.createElement("option");
             opt.value = examId;
             opt.textContent = exam.title;
@@ -180,7 +180,7 @@ document.getElementById("downloadBtn").addEventListener("click",()=>{
 });
 
 // ==================== Initialize ====================
-initExamDropdown();
+window.onload = initExamDropdown;
 </script>
 
 </body>
