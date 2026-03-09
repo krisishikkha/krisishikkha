@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Update Live Scoreboard - NTRCA Agriculture</title>
+<title>Live Scoreboard - NTRCA Agriculture</title>
 <style>
 body{ font-family: Arial,sans-serif; background:#f8f8f8; padding:20px;}
 h2{ margin-bottom:20px;}
@@ -26,7 +26,6 @@ thead { display:table-header-group }
 }
 </style>
 </head>
-
 <body>
 <h2>Live Scoreboard - NTRCA Agriculture</h2>
 
@@ -63,99 +62,84 @@ thead { display:table-header-group }
 </div>
 </div>
 
-<!-- Exam Status -->
-<script>
-const EXAM_STATUS = {
-  "exam-1": { title: "ডেমো পরীক্ষা", visible: true, status: "live", codes: ["krisi"] },
-  "exam-2": { title: "HSC 1st Paper 1st Chapter", visible: true, status: "live", codes: ["exam28"] },
-  "exam-3": { title: "HSC 1st Paper 2nd Chapter", visible: true, status: "live", codes: ["exam31"] },
-  "exam-4": { title: "HSC 1st Paper 3rd Chapter", visible: true, status: "live", codes: ["exam39"] },
-  "exam-5": { title: "HSC 1st Paper 4rth Chapter", visible: false, status: "live", codes: ["exam2code"] },
-  "exam-6": { title: "HSC 1st Paper 5th Chapter", visible: false, status: "live", codes: ["exam2code"] }
-};
-</script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
 
 <script>
-// ==================== Supabase ====================
 const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// ==================== Exam Dropdown ====================
-function initExamDropdown(){
-    const examSelect = document.getElementById("examSelect");
-    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
-    for(const examId in EXAM_STATUS){
-        const exam = EXAM_STATUS[examId];
-        if(exam.visible && exam.status === "live"){
-            const opt = document.createElement("option");
-            opt.value = examId;
-            opt.textContent = exam.title;
-            examSelect.appendChild(opt);
-        }
-    }
+let currentExamId = "";
+
+// ==================== Fetch Exams from Supabase ====================
+async function fetchExams(){
+    const { data, error } = await supabaseClient
+        .from("exams")
+        .select("*")
+        .eq("visible", true)
+        .eq("status", "live")
+        .order("created_at", { ascending: true });
+
+    if(error){ console.error("Supabase exams fetch error:", error); return []; }
+    return data;
 }
 
-// ==================== Fetch Supabase ====================
-async function fetchResultsFromSupabase(examId){
+// ==================== Init Dropdown ====================
+async function initExamDropdown(){
+    const examSelect = document.getElementById("examSelect");
+    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
+    const exams = await fetchExams();
+    exams.forEach(exam=>{
+        const opt = document.createElement("option");
+        opt.value = exam.id; // Supabase exam ID
+        opt.textContent = exam.title;
+        examSelect.appendChild(opt);
+    });
+}
+
+// ==================== Fetch Results ====================
+async function fetchResults(examId){
     const { data, error } = await supabaseClient
         .from("exam_results")
         .select("*")
         .eq("examId", examId)
         .order("correct", { ascending: false });
-
-    if(error){ console.error("Supabase fetch error:", error); return []; }
+    if(error){ console.error(error); return []; }
     return data;
 }
 
 // ==================== Render Scoreboard ====================
-let currentExamId = "";
 async function renderLiveScoreboard(examId){
     const tbody = document.getElementById("scoreBody");
     const titleHeader = document.getElementById("examTitleHeader");
     const dateHeader = document.getElementById("examDateHeader");
 
-    titleHeader.innerText = "Exam Title: " + EXAM_STATUS[examId].title;
+    // Get exam title from Supabase
+    const { data: examData } = await supabaseClient.from("exams").select("title").eq("id", examId).single();
+    titleHeader.innerText = "Exam Title: " + (examData?.title || "");
     dateHeader.innerText = "Generated: " + new Date().toLocaleString("en-GB");
 
-    let results = await fetchResultsFromSupabase(examId);
+    let results = await fetchResults(examId);
 
     // Date Filter
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
+    if(startDate){ const s = new Date(startDate); results = results.filter(r=>new Date(r.timestamp)>=s); }
+    if(endDate){ const e = new Date(endDate); e.setHours(23,59,59,999); results = results.filter(r=>new Date(r.timestamp)<=e); }
 
-    if(startDate){
-        const s = new Date(startDate);
-        results = results.filter(r => new Date(r.timestamp) >= s);
-    }
-    if(endDate){
-        const e = new Date(endDate);
-        e.setHours(23,59,59,999);
-        results = results.filter(r => new Date(r.timestamp) <= e);
-    }
-
-    // Sort Descending
+    // Sort Descending by Correct
     results.sort((a,b)=>b.correct - a.correct);
 
-    // Render Table
     tbody.innerHTML = "";
     results.forEach((r,i)=>{
-        const status = r.percent >= 40 ? "PASS" : "FAIL";
+        const status = r.percent >=40 ? "PASS":"FAIL";
         let rank="";
-        if(i==0) rank="1st"; else if(i==1) rank="2nd";
-        else if(i==2) rank="3rd"; else if(i==3) rank="4th";
-        else if(i==4) rank="5th";
-
-        let name = r.studentName;
-        if(rank!="") name += " (" + rank + ")";
-
+        if(i==0) rank="1st"; else if(i==1) rank="2nd"; else if(i==2) rank="3rd"; else if(i==3) rank="4th"; else if(i==4) rank="5th";
+        let name = r.studentName + (rank?` (${rank})`:"");
         const tr = document.createElement("tr");
         if(i<5) tr.classList.add("top-rank");
         tr.classList.add(status==="PASS"?"pass":"fail");
-
         tr.innerHTML=`
             <td>${name}</td>
             <td>${r.correct}</td>
@@ -171,7 +155,7 @@ async function renderLiveScoreboard(examId){
 // ==================== Auto Refresh ====================
 setInterval(()=>{ if(currentExamId) renderLiveScoreboard(currentExamId); }, 3000);
 
-// ==================== Date Change ====================
+// ==================== Date Filters ====================
 document.getElementById("startDate").addEventListener("change", ()=>{ if(currentExamId) renderLiveScoreboard(currentExamId); });
 document.getElementById("endDate").addEventListener("change", ()=>{ if(currentExamId) renderLiveScoreboard(currentExamId); });
 
@@ -187,7 +171,7 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
     const element = document.getElementById("liveTableContainer");
     html2pdf().set({
         margin:[20,10,20,10],
-        filename: EXAM_STATUS[currentExamId].title+"-Scoreboard.pdf",
+        filename: `Scoreboard-${new Date().toLocaleDateString()}.pdf`,
         html2canvas:{scale:2},
         jsPDF:{unit:'pt',format:'a4',orientation:'portrait'}
     }).from(element).save();
@@ -196,6 +180,5 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
 // ===== Initialize =====
 initExamDropdown();
 </script>
-
 </body>
 </html>
