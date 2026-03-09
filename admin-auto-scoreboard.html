@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Live Scoreboard - NTRCA Agriculture</title>
+<title>Update Live Scoreboard - NTRCA Agriculture</title>
 <style>
 body{ font-family: Arial,sans-serif; background:#f8f8f8; padding:20px;}
 h2{ margin-bottom:20px;}
@@ -19,11 +19,6 @@ th{ background:#2E8B57; color:white;}
 .pass{background:#d4edda;}
 .fail{background:#f8d7da;}
 .top-rank{ font-weight:bold; color:#ff8c00; }
-.rank-1{ color:#ff0000; font-weight:bold;}
-.rank-2{ color:#ff4500; font-weight:bold;}
-.rank-3{ color:#ff8c00; font-weight:bold;}
-.rank-4{ color:#008b8b; font-weight:bold;}
-.rank-5{ color:#006400; font-weight:bold;}
 @media print {
 table { page-break-inside:auto }
 tr { page-break-inside:avoid; page-break-after:auto }
@@ -31,8 +26,8 @@ thead { display:table-header-group }
 }
 </style>
 </head>
-<body>
 
+<body>
 <h2>Live Scoreboard - NTRCA Agriculture</h2>
 
 <div id="scoreboardSection">
@@ -68,12 +63,23 @@ thead { display:table-header-group }
 </div>
 </div>
 
-<script src="exam-status.js"></script>
+<!-- Exam Status -->
+<script>
+const EXAM_STATUS = {
+  "exam-1": { title: "ডেমো পরীক্ষা", visible: true, status: "live", codes: ["krisi"] },
+  "exam-2": { title: "HSC 1st Paper 1st Chapter", visible: true, status: "live", codes: ["exam28"] },
+  "exam-3": { title: "HSC 1st Paper 2nd Chapter", visible: true, status: "live", codes: ["exam31"] },
+  "exam-4": { title: "HSC 1st Paper 3rd Chapter", visible: true, status: "live", codes: ["exam39"] },
+  "exam-5": { title: "HSC 1st Paper 4rth Chapter", visible: false, status: "live", codes: ["exam2code"] },
+  "exam-6": { title: "HSC 1st Paper 5th Chapter", visible: false, status: "live", codes: ["exam2code"] }
+};
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
 
 <script>
-// ==================== Supabase Connection ====================
+// ==================== Supabase ====================
 const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -82,7 +88,6 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 function initExamDropdown(){
     const examSelect = document.getElementById("examSelect");
     examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
-
     for(const examId in EXAM_STATUS){
         const exam = EXAM_STATUS[examId];
         if(exam.visible && exam.status === "live"){
@@ -94,7 +99,7 @@ function initExamDropdown(){
     }
 }
 
-// ==================== Supabase Data Fetch ====================
+// ==================== Fetch Supabase ====================
 async function fetchResultsFromSupabase(examId){
     const { data, error } = await supabaseClient
         .from("exam_results")
@@ -102,16 +107,12 @@ async function fetchResultsFromSupabase(examId){
         .eq("examId", examId)
         .order("correct", { ascending: false });
 
-    if(error){
-        console.error("Supabase fetch error:", error);
-        return [];
-    }
+    if(error){ console.error("Supabase fetch error:", error); return []; }
     return data;
 }
 
 // ==================== Render Scoreboard ====================
 let currentExamId = "";
-
 async function renderLiveScoreboard(examId){
     const tbody = document.getElementById("scoreBody");
     const titleHeader = document.getElementById("examTitleHeader");
@@ -122,6 +123,7 @@ async function renderLiveScoreboard(examId){
 
     let results = await fetchResultsFromSupabase(examId);
 
+    // Date Filter
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
 
@@ -135,35 +137,27 @@ async function renderLiveScoreboard(examId){
         results = results.filter(r => new Date(r.timestamp) <= e);
     }
 
-    results.sort((a,b)=>b.correct-a.correct);
+    // Sort Descending
+    results.sort((a,b)=>b.correct - a.correct);
 
+    // Render Table
     tbody.innerHTML = "";
     results.forEach((r,i)=>{
         const status = r.percent >= 40 ? "PASS" : "FAIL";
-
-        let rankClass="";
-        if(i==0) rankClass="rank-1";
-        else if(i==1) rankClass="rank-2";
-        else if(i==2) rankClass="rank-3";
-        else if(i==3) rankClass="rank-4";
-        else if(i==4) rankClass="rank-5";
-
-        let rankText = "";
-        if(i==0) rankText="1st";
-        else if(i==1) rankText="2nd";
-        else if(i==2) rankText="3rd";
-        else if(i==3) rankText="4th";
-        else if(i==4) rankText="5th";
+        let rank="";
+        if(i==0) rank="1st"; else if(i==1) rank="2nd";
+        else if(i==2) rank="3rd"; else if(i==3) rank="4th";
+        else if(i==4) rank="5th";
 
         let name = r.studentName;
-        if(rankText!="") name += " (" + rankText + ")";
+        if(rank!="") name += " (" + rank + ")";
 
         const tr = document.createElement("tr");
-        if(rankClass!="") tr.classList.add("top-rank");
+        if(i<5) tr.classList.add("top-rank");
         tr.classList.add(status==="PASS"?"pass":"fail");
 
         tr.innerHTML=`
-            <td class="${rankClass}">${name}</td>
+            <td>${name}</td>
             <td>${r.correct}</td>
             <td>${r.wrong}</td>
             <td>${r.unanswered}</td>
@@ -175,35 +169,21 @@ async function renderLiveScoreboard(examId){
 }
 
 // ==================== Auto Refresh ====================
-setInterval(()=>{
-    if(currentExamId){
-        renderLiveScoreboard(currentExamId);
-    }
-}, 3000);
+setInterval(()=>{ if(currentExamId) renderLiveScoreboard(currentExamId); }, 3000);
 
-// ==================== Date Change Refresh ====================
-document.getElementById("startDate").addEventListener("change", ()=>{
-    if(currentExamId) renderLiveScoreboard(currentExamId);
-});
-document.getElementById("endDate").addEventListener("change", ()=>{
-    if(currentExamId) renderLiveScoreboard(currentExamId);
-});
+// ==================== Date Change ====================
+document.getElementById("startDate").addEventListener("change", ()=>{ if(currentExamId) renderLiveScoreboard(currentExamId); });
+document.getElementById("endDate").addEventListener("change", ()=>{ if(currentExamId) renderLiveScoreboard(currentExamId); });
 
-// ==================== Exam Select Event ====================
+// ==================== Exam Select ====================
 document.getElementById("examSelect").addEventListener("change", function(){
     const examId = this.value;
-    if(examId){
-        currentExamId = examId;
-        renderLiveScoreboard(examId);
-    }
+    if(examId){ currentExamId = examId; renderLiveScoreboard(examId); }
 });
 
 // ==================== Download PDF ====================
 document.getElementById("downloadBtn").addEventListener("click", ()=>{
-    if(!currentExamId){
-        alert("Please select exam");
-        return;
-    }
+    if(!currentExamId){ alert("Please select exam"); return; }
     const element = document.getElementById("liveTableContainer");
     html2pdf().set({
         margin:[20,10,20,10],
@@ -213,8 +193,9 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
     }).from(element).save();
 });
 
-// Initialize dropdown
+// ===== Initialize =====
 initExamDropdown();
 </script>
+
 </body>
 </html>
