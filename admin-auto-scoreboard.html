@@ -26,7 +26,6 @@ thead { display:table-header-group }
 }
 </style>
 </head>
-
 <body>
 <h2>Live Scoreboard - NTRCA Agriculture</h2>
 
@@ -63,7 +62,6 @@ thead { display:table-header-group }
 </div>
 </div>
 
-<!-- Existing Exam Status -->
 <script src="exam-status.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
@@ -79,10 +77,11 @@ function initExamDropdown(){
     const examSelect = document.getElementById("examSelect");
     examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
     for(const examId in EXAM_STATUS){
-        if(EXAM_STATUS[examId].visible){
+        const exam = EXAM_STATUS[examId];
+        if(exam.visible){
             const opt = document.createElement("option");
             opt.value = examId;
-            opt.textContent = EXAM_STATUS[examId].title;
+            opt.textContent = exam.title;
             examSelect.appendChild(opt);
         }
     }
@@ -91,7 +90,7 @@ function initExamDropdown(){
 // ==================== Supabase Data Fetch ====================
 async function fetchResultsFromSupabase(examId){
     const { data, error } = await supabaseClient
-        .from("exam_results")  // আপনার table name
+        .from("exam_results")
         .select("*")
         .eq("examId", examId)
         .order("correct", { ascending: false });
