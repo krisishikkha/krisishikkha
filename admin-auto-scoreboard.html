@@ -63,10 +63,17 @@ thead { display:table-header-group }
 </div>
 </div>
 
+<!-- Existing Exam Status -->
 <script src="exam-status.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
 
 <script>
+// ==================== Supabase Connection ====================
+const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 // ==================== Exam Dropdown ====================
 function initExamDropdown(){
     const examSelect = document.getElementById("examSelect");
@@ -81,58 +88,69 @@ function initExamDropdown(){
     }
 }
 
-// ==================== Data ====================
-let allResults = JSON.parse(localStorage.getItem("krisishikkha_results")) || [];
-let currentExamId = "";
+// ==================== Supabase Data Fetch ====================
+async function fetchResultsFromSupabase(examId){
+    const { data, error } = await supabaseClient
+        .from("exam_results")  // আপনার table name
+        .select("*")
+        .eq("examId", examId)
+        .order("correct", { ascending: false });
+
+    if(error){
+        console.error("Supabase fetch error:", error);
+        return [];
+    }
+    return data;
+}
 
 // ==================== Render Scoreboard ====================
-function renderLiveScoreboard(examId){
+let currentExamId = "";
+
+async function renderLiveScoreboard(examId){
     const tbody = document.getElementById("scoreBody");
     const titleHeader = document.getElementById("examTitleHeader");
     const dateHeader = document.getElementById("examDateHeader");
     titleHeader.innerText = "Exam Title: " + EXAM_STATUS[examId].title;
     dateHeader.innerText = "Generated: " + new Date().toLocaleString("en-GB");
 
-    // ===== Date Filter =====
+    // Fetch data from Supabase
+    let results = await fetchResultsFromSupabase(examId);
+
+    // Date filter
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
-
-    // Filter results for selected exam
-    let results = allResults.filter(r => r.examId === examId);
-
     if(startDate){
         const s = new Date(startDate);
-        results = results.filter(r => new Date(r.start) >= s);
+        results = results.filter(r => new Date(r.timestamp) >= s);
     }
     if(endDate){
         const e = new Date(endDate);
         e.setHours(23,59,59,999);
-        results = results.filter(r => new Date(r.start) <= e);
+        results = results.filter(r => new Date(r.timestamp) <= e);
     }
 
-    // Sort by score descending
-    results.sort((a,b) => b.correct - a.correct);
+    // Sort by correct descending
+    results.sort((a,b)=>b.correct-a.correct);
 
-    // Render table with top 5 ranking
+    // Render table
     tbody.innerHTML = "";
-    results.forEach((r, i) => {
+    results.forEach((r,i)=>{
         const status = r.percent >= 40 ? "PASS" : "FAIL";
-
-        let rank = "";
+        let rank="";
         if(i==0) rank="1st";
         else if(i==1) rank="2nd";
         else if(i==2) rank="3rd";
         else if(i==3) rank="4th";
         else if(i==4) rank="5th";
 
-        let name = r.name;
-        if(rank != "") name += " (" + rank + ")";
+        let name = r.studentName;
+        if(rank!="") name += " (" + rank + ")";
 
         const tr = document.createElement("tr");
         if(i<5) tr.classList.add("top-rank");
-        tr.classList.add(status === "PASS" ? "pass" : "fail");
+        tr.classList.add(status==="PASS"?"pass":"fail");
 
-        tr.innerHTML = `
+        tr.innerHTML=`
             <td>${name}</td>
             <td>${r.correct}</td>
             <td>${r.wrong}</td>
@@ -147,10 +165,9 @@ function renderLiveScoreboard(examId){
 // ==================== Auto Refresh ====================
 setInterval(()=>{
     if(currentExamId){
-        allResults = JSON.parse(localStorage.getItem("krisishikkha_results")) || [];
         renderLiveScoreboard(currentExamId);
     }
-}, 1500);
+}, 3000);
 
 // ==================== Date Change Refresh ====================
 document.getElementById("startDate").addEventListener("change", ()=>{
@@ -160,7 +177,7 @@ document.getElementById("endDate").addEventListener("change", ()=>{
     if(currentExamId) renderLiveScoreboard(currentExamId);
 });
 
-// ==================== Exam Select ====================
+// ==================== Exam Select Event ====================
 document.getElementById("examSelect").addEventListener("change", function(){
     const examId = this.value;
     if(examId){
