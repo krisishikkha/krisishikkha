@@ -13,28 +13,27 @@ function validateAccess() {
     const code = document.getElementById("accessCode").value.trim();
     const warning = document.getElementById("warning");
 
-    if (name === "") {
+    if (!name) {
         warning.innerText = "নাম লিখুন";
         return;
     }
 
     let examId = getActiveExamId();
-    const validCodes = (EXAM_STATUS[examId].codes || []);
+    const validCodes = EXAM_STATUS[examId].codes || [];
 
     if (!validCodes.includes(code)) {
         warning.innerText = "❌ ভুল এক্সেস কোড";
         return;
     }
 
-    studentName = name; // save globally
-
+    studentName = name;
     document.getElementById("loginSection").style.display = "none";
     document.getElementById("examMain").style.display = "block";
 
     initExam(examId);
 }
 
-// -------------------- Auto Exam ID --------------------
+// -------------------- Exam ID --------------------
 function getActiveExamId() {
     const params = new URLSearchParams(window.location.search);
     let examId = params.get("exam");
@@ -70,11 +69,12 @@ function initExam(examId) {
     script.src = `./exam-corner/${examId}/questions.js`;
 
     script.onload = function () {
-        if (typeof QUESTIONS === "undefined" || QUESTIONS.length === 0) {
+        if (!QUESTIONS || QUESTIONS.length === 0) {
             alert("⚠️ প্রশ্ন ফাইল লোড হয়নি!");
             return;
         }
         renderQuestions();
+        addSubmitButton();
         startTimer();
     };
 
@@ -90,15 +90,12 @@ function renderQuestions() {
     const container = document.getElementById("examContainer");
     container.innerHTML = "";
 
-    QUESTIONS.forEach((q, index) => {
+    QUESTIONS.forEach((q, i) => {
         const div = document.createElement("div");
         div.classList.add("card");
-        div.innerHTML = `
-            <h4>${index + 1}. ${q.question}</h4>
-            ${q.options.map((opt, i) =>
-                `<button onclick="selectAnswer(${index}, ${i}, this)">
-                    ${opt}
-                </button><br>`
+        div.innerHTML = `<h4>${i + 1}. ${q.question}</h4>
+            ${q.options.map((opt, idx) =>
+                `<button onclick="selectAnswer(${i}, ${idx}, this)">${opt}</button><br>`
             ).join("")}
         `;
         container.appendChild(div);
@@ -111,10 +108,7 @@ function selectAnswer(qIndex, optIndex, btn) {
     userAnswers[qIndex] = optIndex;
 
     const buttons = btn.parentElement.querySelectorAll("button");
-    buttons.forEach(function(b) {
-        b.disabled = true;
-    });
-
+    buttons.forEach(b => b.disabled = true);
     btn.classList.add("selected");
 }
 
@@ -123,17 +117,14 @@ function startTimer() {
     const timerBox = document.querySelector(".timer-box");
     const timeDisplay = document.getElementById("timeLeft");
 
-    timerInterval = setInterval(function () {
+    timerInterval = setInterval(() => {
         let minutes = Math.floor(totalTime / 60);
         let seconds = totalTime % 60;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        timeDisplay.innerText = minutes + ":" + seconds;
+        timeDisplay.innerText = `${minutes}:${seconds}`;
 
-        if (totalTime <= 300 && totalTime > 120) {
-            timerBox.classList.add("timer-warning");
-        }
-
+        if (totalTime <= 300 && totalTime > 120) timerBox.classList.add("timer-warning");
         if (totalTime <= 120) {
             timerBox.classList.remove("timer-warning");
             timerBox.classList.add("timer-danger");
@@ -148,84 +139,95 @@ function startTimer() {
     }, 1000);
 }
 
+// -------------------- Submit Button --------------------
+function addSubmitButton() {
+    const container = document.getElementById("examContainer");
+    const btn = document.createElement("button");
+    btn.innerText = "পরীক্ষা শেষ করুন";
+    btn.style.marginTop = "20px";
+    btn.style.padding = "10px 20px";
+    btn.style.fontSize = "16px";
+    btn.onclick = submitExam;
+    container.appendChild(btn);
+}
+
 // -------------------- Submit Exam --------------------
 async function submitExam() {
     clearInterval(timerInterval);
 
-    let examEndTime = new Date();
+    const examEndTime = new Date();
     let correct = 0, wrong = 0, unanswered = 0;
 
     QUESTIONS.forEach((q, i) => {
-        const userAns = userAnswers[i];
-        if (userAns === undefined) unanswered++;
-        else if (userAns === q.answer) correct++;
+        const ans = userAnswers[i];
+        if (ans === undefined) unanswered++;
+        else if (ans === q.answer) correct++;
         else wrong++;
     });
 
-    let percent = Math.round((correct / QUESTIONS.length) * 100);
-    let passMark = 40;
-    let status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
+    const percent = Math.round((correct / QUESTIONS.length) * 100);
+    const passMark = 40;
+    const status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
 
     const resultObj = {
         examId: getActiveExamId(),
         name: studentName,
-        correct,
-        wrong,
-        unanswered,
-        percent,
+        correct, wrong, unanswered, percent,
         start: examStartTime,
         end: examEndTime
     };
 
-    // ---------------- Supabase Save ----------------
-    const supabaseClient = supabase.createClient(
-        "https://bpkheipwdjzlyuzyqdxz.supabase.co",
-        "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2"
-    );
+    // Supabase Save
     try {
+        const supabaseClient = supabase.createClient(
+            "https://bpkheipwdjzlyuzyqdxz.supabase.co",
+            "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2"
+        );
         await supabaseClient.from("exam_results").insert([resultObj]);
     } catch (err) {
         console.error("Supabase connection failed:", err);
     }
 
-    // ---------------- Scoreboard & Explanation ----------------
-    let resultContainer = document.getElementById("examResultContainer");
-    if (!resultContainer) {
-        resultContainer = document.createElement("div");
-        resultContainer.id = "examResultContainer";
-        resultContainer.style.padding = "20px";
-        resultContainer.style.marginTop = "20px";
-        document.getElementById("examMain").appendChild(resultContainer);
+    renderScoreboard(resultObj);
+}
+
+// -------------------- Render Scoreboard --------------------
+function renderScoreboard(resultObj) {
+    let container = document.getElementById("examResultContainer");
+    if (!container) {
+        container = document.createElement("div");
+        container.id = "examResultContainer";
+        container.style.marginTop = "20px";
+        container.style.padding = "20px";
+        document.getElementById("examMain").appendChild(container);
     }
 
-    let resultHTML = `<h2>📊 পরীক্ষার ফলাফল</h2>
-    <div style="background:${percent>=passMark?'#d4edda':'#f8d7da'}; padding:15px; border-radius:8px; margin-bottom:20px; font-size:18px;">
-        <strong>${studentName}</strong><br>
-        ✔️ সঠিক: ${correct}<br>
-        ❌ ভুল: ${wrong}<br>
-        ❓ উত্তর নেই: ${unanswered}<br>
-        📈 শতাংশ: ${percent}%<br>
-        🎯 ফলাফল: <strong>${status}</strong>
-    </div>
-    <hr>
-    <h3>📋 উত্তর ও ব্যাখ্যা</h3>`;
+    let html = `<h2>📊 পরীক্ষার ফলাফল</h2>
+        <div style="background:${resultObj.percent >= 40 ? '#d4edda':'#f8d7da'}; padding:15px; border-radius:8px; font-size:18px; margin-bottom:20px;">
+            <strong>${resultObj.name}</strong><br>
+            ✔️ সঠিক: ${resultObj.correct}<br>
+            ❌ ভুল: ${resultObj.wrong}<br>
+            ❓ উত্তর নেই: ${resultObj.unanswered}<br>
+            📈 শতাংশ: ${resultObj.percent}%<br>
+            🎯 ফলাফল: <strong>${resultObj.percent >= 40 ? 'PASS ✅':'FAIL ❌'}</strong>
+        </div>
+        <hr>
+        <h3>📋 প্রশ্ন ও উত্তর ও ব্যাখ্যা</h3>`;
 
     QUESTIONS.forEach((q, i) => {
         const userAns = userAnswers[i];
         const correctAns = q.answer;
-        let ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
-        let boxColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
+        const ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
+        const bgColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
 
-        resultHTML += `<div style="margin-bottom:15px; padding:10px; border-radius:6px; background:${boxColor};">
-            <strong>${i + 1}. ${q.question}</strong><br>
+        html += `<div style="margin-bottom:15px; padding:10px; border-radius:6px; background:${bgColor};">
+            <strong>${i+1}. ${q.question}</strong><br>
             ➡️ আপনার উত্তর: ${ansText}<br>
             ✔️ সঠিক উত্তর: ${q.options[correctAns]}<br>
             🧠 ব্যাখ্যা: <em>${q.explanation}</em>
         </div>`;
     });
 
-    resultContainer.innerHTML = resultHTML;
-
-    // Scroll scoreboard into view
-    resultContainer.scrollIntoView({behavior: "smooth"});
+    container.innerHTML = html;
+    container.scrollIntoView({behavior:"smooth"});
 }
