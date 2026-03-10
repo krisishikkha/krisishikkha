@@ -27,7 +27,7 @@ th{ background:#2E8B57; color:white;}
 
 <div id="scoreboardSection">
 <select id="examSelect">
-<option value="">-- Select Exam --</option>
+<option value="">-- Loading Exams --</option>
 </select>
 
 <button id="downloadBtn">Download PDF</button>
@@ -56,67 +56,88 @@ th{ background:#2E8B57; color:white;}
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
 
 <script>
-// ==================== Exam Data ====================
-const EXAM_STATUS = {
-  "exam-1": { title: "ডেমো পরীক্ষা", visible: true, status: "live", codes: ["krisi"] },
-  "exam-2": { title: "HSC 1st Paper 1st Chapter", visible: true, status: "live", codes: ["exam28"] },
-  "exam-3": { title: "HSC 1st Paper 2nd Chapter", visible: true, status: "live", codes: ["exam31"] },
-  "exam-4": { title: "HSC 1st Paper 3rd Chapter", visible: true, status: "live", codes: ["exam39"] },
-  "exam-5": { title: "HSC 1st Paper 4rth Chapter", visible: false, status: "live", codes: ["exam2code"] }
-};
-
-// ==================== Dummy Results (demo) ====================
-const DUMMY_RESULTS = {
-  "exam-1": [
-    { name:"Alice", correct:45, wrong:5, unanswered:0, percent:90 },
-    { name:"Bob", correct:35, wrong:15, unanswered:0, percent:70 },
-    { name:"Charlie", correct:25, wrong:25, unanswered:0, percent:50 },
-  ],
-  "exam-2": [
-    { name:"David", correct:40, wrong:10, unanswered:0, percent:80 },
-    { name:"Eve", correct:30, wrong:20, unanswered:0, percent:60 }
-  ],
-  "exam-3": [],
-  "exam-4": [],
-};
+// ==================== Supabase Config ====================
+const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ==================== Globals ====================
+let EXAMS = [];
+let allResults = [];
 let currentExamId = "";
 
-// ==================== Populate Exam Dropdown ====================
-function initExamDropdown(){
-    const examSelect = document.getElementById("examSelect");
-    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
-    for(const examId in EXAM_STATUS){
-        const exam = EXAM_STATUS[examId];
-        if(exam && exam.visible){
-            const opt = document.createElement("option");
-            opt.value = examId;
-            opt.textContent = exam.title;
-            examSelect.appendChild(opt);
-        }
+// ==================== Fetch Exams ====================
+async function fetchExams(){
+    try{
+        const { data, error } = await supabase
+            .from("exams")
+            .select("*")
+            .order("id", { ascending:true });
+        if(error) throw error;
+        EXAMS = data.filter(e => e.visible);
+        populateExamDropdown();
+    }catch(err){
+        console.error("Failed to fetch exams:", err);
+        document.getElementById("examSelect").innerHTML = '<option value="">-- Failed to load exams --</option>';
     }
 }
 
+// ==================== Populate Exam Dropdown ====================
+function populateExamDropdown(){
+    const examSelect = document.getElementById("examSelect");
+    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
+    EXAMS.forEach(exam=>{
+        const opt = document.createElement("option");
+        opt.value = exam.id;
+        opt.textContent = exam.title;
+        examSelect.appendChild(opt);
+    });
+}
+
+// ==================== Fetch Results ====================
+async function fetchResults(){
+    if(!currentExamId) return;
+    try{
+        const { data, error } = await supabase
+            .from("exam_results")
+            .select("*")
+            .eq("examId", currentExamId)
+            .order("correct", { ascending:false });
+        if(error) throw error;
+        allResults = data;
+        renderScoreboard();
+    }catch(err){
+        console.error("Failed to fetch results:", err);
+    }
+}
+
+// ==================== Realtime Subscription ====================
+function subscribeRealtime(){
+    supabase.channel('exam_results')
+        .on('postgres_changes', { event:'*', schema:'public', table:'exam_results' }, payload => {
+            if(payload.new && payload.new.examId === currentExamId){
+                fetchResults();
+            }
+        })
+        .subscribe();
+}
+
 // ==================== Render Scoreboard ====================
-function renderScoreboard(examId){
+function renderScoreboard(){
     const tbody = document.getElementById("scoreBody");
     const titleHeader = document.getElementById("examTitleHeader");
     const dateHeader = document.getElementById("examDateHeader");
-
-    const exam = EXAM_STATUS[examId];
+    const exam = EXAMS.find(e => e.id === currentExamId);
     if(!exam) return;
 
     titleHeader.innerText = "Exam Title: " + exam.title;
     dateHeader.innerText = "Generated: " + new Date().toLocaleString("en-GB");
 
-    let results = DUMMY_RESULTS[examId] || [];
-    results.sort((a,b)=>b.correct - a.correct);
-
     tbody.innerHTML = "";
-    results.forEach((r,i)=>{
+    allResults.forEach((r,i)=>{
         const status = r.percent >= 40 ? "PASS" : "FAIL";
         let rank="";
         if(i==0) rank="1st"; else if(i==1) rank="2nd"; else if(i==2) rank="3rd"; else if(i==3) rank="4th"; else if(i==4) rank="5th";
@@ -139,22 +160,26 @@ function renderScoreboard(examId){
 // ==================== Event Listeners ====================
 document.getElementById("examSelect").addEventListener("change", function(){
     currentExamId = this.value;
-    if(currentExamId) renderScoreboard(currentExamId);
+    if(currentExamId){
+        fetchResults();
+        subscribeRealtime();
+    }
 });
 
 document.getElementById("downloadBtn").addEventListener("click", ()=>{
     if(!currentExamId){ alert("Please select exam"); return; }
     const element = document.getElementById("liveTableContainer");
+    const exam = EXAMS.find(e => e.id === currentExamId);
     html2pdf().set({
         margin:[20,10,20,10],
-        filename: EXAM_STATUS[currentExamId].title+"-Scoreboard.pdf",
+        filename: exam.title+"-Scoreboard.pdf",
         html2canvas:{scale:2},
         jsPDF:{unit:'pt',format:'a4',orientation:'portrait'}
     }).from(element).save();
 });
 
-// ==================== Initialize ====================
-window.onload = initExamDropdown;
+// ==================== Init ====================
+window.addEventListener("load", fetchExams);
 </script>
 
 </body>
