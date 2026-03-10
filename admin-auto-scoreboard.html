@@ -61,21 +61,22 @@ th{ background:#2E8B57; color:white;}
 
 import { EXAM_STATUS } from './exam-status.js';
 
-// Supabase Config
+// ==================== Supabase Config ====================
 const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+// ==================== Globals ====================
 let allResults = [];
 let currentExamId = "";
 
-// Populate Dropdown (visible + live)
+// ==================== Populate Dropdown ====================
 function populateExamDropdown(){
     const examSelect = document.getElementById("examSelect");
     examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
     Object.keys(EXAM_STATUS).forEach(examId=>{
         const exam = EXAM_STATUS[examId];
-        if(exam.visible && exam.status === "live"){
+        if(exam.visible){
             const opt = document.createElement("option");
             opt.value = examId;
             opt.textContent = exam.title;
@@ -84,7 +85,7 @@ function populateExamDropdown(){
     });
 }
 
-// Fetch Results
+// ==================== Fetch Results ====================
 async function fetchResults(){
     if(!currentExamId) return;
     try{
@@ -101,7 +102,7 @@ async function fetchResults(){
     }
 }
 
-// Realtime subscription
+// ==================== Realtime Subscription ====================
 function subscribeRealtime(){
     supabase.channel('exam_results')
         .on('postgres_changes', { event:'*', schema:'public', table:'exam_results' }, payload=>{
@@ -111,7 +112,7 @@ function subscribeRealtime(){
         }).subscribe();
 }
 
-// Render Scoreboard
+// ==================== Render Scoreboard ====================
 function renderScoreboard(){
     const tbody = document.getElementById("scoreBody");
     const titleHeader = document.getElementById("examTitleHeader");
@@ -142,7 +143,7 @@ function renderScoreboard(){
     });
 }
 
-// Event listeners
+// ==================== Event Listeners ====================
 document.getElementById("examSelect").addEventListener("change", function(){
     currentExamId = this.value;
     if(currentExamId){
@@ -163,9 +164,11 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
     }).from(element).save();
 });
 
-// Init
-window.addEventListener("load", populateExamDropdown);
-
+// ==================== Init ====================
+window.addEventListener("load", ()=>{
+    populateExamDropdown();
+});
 </script>
+
 </body>
 </html>
