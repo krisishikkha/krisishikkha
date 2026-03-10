@@ -1,6 +1,7 @@
+// ==================== exam.js ====================
+
 // -------------------- Global Variables --------------------
 let examStartTime;
-let allResults = JSON.parse(localStorage.getItem("krisishikkha_results")) || []; // <-- ফিক্স
 let userAnswers = [];
 let timerInterval;
 let studentName = "";
@@ -148,8 +149,8 @@ function startTimer() {
     }, 1000);
 }
 
-// -------------------- Submit Exam --------------------
-function submitExam() {
+// -------------------- Submit Exam (Supabase Only) --------------------
+async function submitExam() {
     window.scrollTo({ top: 0, behavior: "smooth" });
     clearInterval(timerInterval);
 
@@ -185,15 +186,23 @@ function submitExam() {
         end: examEndTime
     };
 
-    // ------------------- LOCAL STORAGE FIX -------------------
-    let existingResults = JSON.parse(localStorage.getItem("krisishikkha_results")) || [];
-    existingResults.push(resultObj);
-    localStorage.setItem("krisishikkha_results", JSON.stringify(existingResults));
-    allResults = existingResults; // update global array
+    // ------------------- SUPABASE -------------------
+    const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    // ------------------- SEND TO GOOGLE SHEET -----------------
-    if (typeof sendToGoogleSheet === "function") {
-        sendToGoogleSheet(resultObj);
+    try {
+        const { data, error } = await supabaseClient
+            .from("exam_results")
+            .insert([resultObj]);
+
+        if (error) {
+            console.error("Supabase insert error:", error);
+        } else {
+            console.log("Result saved to Supabase:", data);
+        }
+    } catch (err) {
+        console.error("Supabase connection failed:", err);
     }
 
     // ------------------- DISPLAY RESULT ---------------------
