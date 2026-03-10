@@ -5,7 +5,7 @@ let examStartTime;
 let userAnswers = [];
 let timerInterval;
 let studentName = "";
-let totalTime = 25 * 60;
+let totalTime = 25 * 60; // 25 মিনিট
 
 // -------------------- Login Validation --------------------
 function validateAccess() {
@@ -74,7 +74,7 @@ function initExam(examId) {
             return;
         }
         renderQuestions();
-        startTimer(); // Submit button HTML থেকে handle হবে, তাই JS থেকে add করা হয়নি
+        startTimer();
     };
 
     script.onerror = function () {
@@ -94,22 +94,16 @@ function renderQuestions() {
         div.classList.add("card");
         div.innerHTML = `<h4>${i + 1}. ${q.question}</h4>
             ${q.options.map((opt, idx) =>
-                `<button onclick="selectAnswer(${i}, ${idx}, this)">${opt}</button><br>`
-            ).join("")}
+                `<button onclick="selectAnswer(${i}, ${idx}, this)">${opt}</button>`
+            ).join("<br>")}
         `;
         container.appendChild(div);
     });
 
-    // Add single Submit Button at bottom
-    const btn = document.createElement("button");
-    btn.innerText = "পরীক্ষা শেষ করুন";
-    btn.style.marginTop = "20px";
-    btn.style.padding = "10px 20px";
-    btn.style.fontSize = "16px";
-    btn.onclick = submitExam;
-    container.appendChild(btn);
+    // **HTML-এ থাকা Submit Button ব্যবহার হবে, JS থেকে আর তৈরি হবে না**
 }
 
+// -------------------- Select Answer --------------------
 function selectAnswer(qIndex, optIndex, btn) {
     if (userAnswers[qIndex] !== undefined) return;
 
@@ -162,18 +156,18 @@ async function submitExam() {
     });
 
     const percent = Math.round((correct / QUESTIONS.length) * 100);
-    const passMark = 40;
-    const status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
-
     const resultObj = {
         examId: getActiveExamId(),
         name: studentName,
-        correct, wrong, unanswered, percent,
+        correct,
+        wrong,
+        unanswered,
+        percent,
         start: examStartTime,
         end: examEndTime
     };
 
-    // Supabase Save
+    // Save to Supabase
     try {
         const supabaseClient = supabase.createClient(
             "https://bpkheipwdjzlyuzyqdxz.supabase.co",
@@ -199,13 +193,13 @@ function renderScoreboard(resultObj) {
     }
 
     let html = `<h2>📊 পরীক্ষার ফলাফল</h2>
-    <div style="background:${resultObj.percent >= 40 ? '#d4edda':'#f8d7da'}; padding:15px; border-radius:8px; font-size:18px; margin-bottom:20px;">
+    <div class="scoreboard-card">
         <strong>${resultObj.name}</strong><br>
         ✔️ সঠিক: ${resultObj.correct}<br>
         ❌ ভুল: ${resultObj.wrong}<br>
         ❓ উত্তর নেই: ${resultObj.unanswered}<br>
         📈 শতাংশ: ${resultObj.percent}%<br>
-        🎯 ফলাফল: <strong>${resultObj.percent >= 40 ? 'PASS ✅':'FAIL ❌'}</strong>
+        🎯 ফলাফল: <strong>${resultObj.percent >= 40 ? 'PASS ✅' : 'FAIL ❌'}</strong>
     </div>
     <hr>
     <h3>📋 প্রশ্ন ও উত্তর ও ব্যাখ্যা</h3>`;
@@ -215,21 +209,21 @@ function renderScoreboard(resultObj) {
         const correctAns = q.answer;
         const ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
 
-        let cardColor = "#ffffff";
-        if (userAns === undefined) cardColor = "#fff3cd"; // unanswered Yellow
-        else if (userAns === correctAns) cardColor = "#d4edda"; // correct Green
-        else cardColor = "#f8d7da"; // wrong Red
+        let bgColor = "#ffffff";
+        if (userAns === undefined) bgColor = "#fff3cd"; // unanswered yellow
+        else if (userAns === correctAns) bgColor = "#d4edda"; // correct green
+        else bgColor = "#f8d7da"; // wrong red
 
         html += `
-        <div style="margin-bottom:18px;padding:15px;border-radius:10px;background:${cardColor};border-left:5px solid ${userAns === correctAns ? '#28a745':'#dc3545'}">
-            <strong>${i+1}. ${q.question}</strong><br><br>
-            <span style="color:#333">➡️ আপনার উত্তর:</span> <b>${ansText}</b><br>
-            <span style="color:green">✔️ সঠিক উত্তর:</span> <b style="color:green">${q.options[correctAns]}</b><br>
-            <span style="color:#555">🧠 ব্যাখ্যা:</span><br>
+        <div class="review-card" style="background:${bgColor}; border-left:5px solid ${userAns === correctAns ? '#28a745' : '#dc3545'}">
+            <strong>${i + 1}. ${q.question}</strong><br><br>
+            ➡️ আপনার উত্তর: <b>${ansText}</b><br>
+            ✔️ সঠিক উত্তর: <b style="color:#28a745">${q.options[correctAns]}</b><br>
+            🧠 ব্যাখ্যা:<br>
             <i>${q.explanation}</i>
         </div>`;
     });
 
     container.innerHTML = html;
-    container.scrollIntoView({behavior:"smooth"});
+    container.scrollIntoView({ behavior: "smooth" });
 }
