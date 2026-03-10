@@ -27,7 +27,7 @@ th{ background:#2E8B57; color:white;}
 
 <div id="scoreboardSection">
 <select id="examSelect">
-<option value="">-- Loading Exams --</option>
+  <option value="">-- Select Exam --</option>
 </select>
 
 <button id="downloadBtn">Download PDF</button>
@@ -74,7 +74,7 @@ let currentExamId = "";
 // ==================== Populate Dropdown ====================
 function populateExamDropdown(){
     const examSelect = document.getElementById("examSelect");
-    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
+    examSelect.innerHTML = '<option value="">-- Select Exam --</option>'; // ✅ শুধুমাত্র Select Exam
     Object.keys(EXAM_STATUS).forEach(examId=>{
         const exam = EXAM_STATUS[examId];
         if(exam.visible && exam.status === "live"){
