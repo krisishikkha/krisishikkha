@@ -74,8 +74,7 @@ function initExam(examId) {
             return;
         }
         renderQuestions();
-        addSubmitButton();
-        startTimer();
+        startTimer(); // Submit button HTML থেকে handle হবে, তাই JS থেকে add করা হয়নি
     };
 
     script.onerror = function () {
@@ -100,6 +99,15 @@ function renderQuestions() {
         `;
         container.appendChild(div);
     });
+
+    // Add single Submit Button at bottom
+    const btn = document.createElement("button");
+    btn.innerText = "পরীক্ষা শেষ করুন";
+    btn.style.marginTop = "20px";
+    btn.style.padding = "10px 20px";
+    btn.style.fontSize = "16px";
+    btn.onclick = submitExam;
+    container.appendChild(btn);
 }
 
 function selectAnswer(qIndex, optIndex, btn) {
@@ -137,18 +145,6 @@ function startTimer() {
 
         totalTime--;
     }, 1000);
-}
-
-// -------------------- Submit Button --------------------
-function addSubmitButton() {
-    const container = document.getElementById("examContainer");
-    const btn = document.createElement("button");
-    btn.innerText = "পরীক্ষা শেষ করুন";
-    btn.style.marginTop = "20px";
-    btn.style.padding = "10px 20px";
-    btn.style.fontSize = "16px";
-    btn.onclick = submitExam;
-    container.appendChild(btn);
 }
 
 // -------------------- Submit Exam --------------------
@@ -203,28 +199,34 @@ function renderScoreboard(resultObj) {
     }
 
     let html = `<h2>📊 পরীক্ষার ফলাফল</h2>
-        <div style="background:${resultObj.percent >= 40 ? '#d4edda':'#f8d7da'}; padding:15px; border-radius:8px; font-size:18px; margin-bottom:20px;">
-            <strong>${resultObj.name}</strong><br>
-            ✔️ সঠিক: ${resultObj.correct}<br>
-            ❌ ভুল: ${resultObj.wrong}<br>
-            ❓ উত্তর নেই: ${resultObj.unanswered}<br>
-            📈 শতাংশ: ${resultObj.percent}%<br>
-            🎯 ফলাফল: <strong>${resultObj.percent >= 40 ? 'PASS ✅':'FAIL ❌'}</strong>
-        </div>
-        <hr>
-        <h3>📋 প্রশ্ন ও উত্তর ও ব্যাখ্যা</h3>`;
+    <div style="background:${resultObj.percent >= 40 ? '#d4edda':'#f8d7da'}; padding:15px; border-radius:8px; font-size:18px; margin-bottom:20px;">
+        <strong>${resultObj.name}</strong><br>
+        ✔️ সঠিক: ${resultObj.correct}<br>
+        ❌ ভুল: ${resultObj.wrong}<br>
+        ❓ উত্তর নেই: ${resultObj.unanswered}<br>
+        📈 শতাংশ: ${resultObj.percent}%<br>
+        🎯 ফলাফল: <strong>${resultObj.percent >= 40 ? 'PASS ✅':'FAIL ❌'}</strong>
+    </div>
+    <hr>
+    <h3>📋 প্রশ্ন ও উত্তর ও ব্যাখ্যা</h3>`;
 
     QUESTIONS.forEach((q, i) => {
         const userAns = userAnswers[i];
         const correctAns = q.answer;
         const ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
-        const bgColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
 
-        html += `<div style="margin-bottom:15px; padding:10px; border-radius:6px; background:${bgColor};">
-            <strong>${i+1}. ${q.question}</strong><br>
-            ➡️ আপনার উত্তর: ${ansText}<br>
-            ✔️ সঠিক উত্তর: ${q.options[correctAns]}<br>
-            🧠 ব্যাখ্যা: <em>${q.explanation}</em>
+        let cardColor = "#ffffff";
+        if (userAns === undefined) cardColor = "#fff3cd"; // unanswered Yellow
+        else if (userAns === correctAns) cardColor = "#d4edda"; // correct Green
+        else cardColor = "#f8d7da"; // wrong Red
+
+        html += `
+        <div style="margin-bottom:18px;padding:15px;border-radius:10px;background:${cardColor};border-left:5px solid ${userAns === correctAns ? '#28a745':'#dc3545'}">
+            <strong>${i+1}. ${q.question}</strong><br><br>
+            <span style="color:#333">➡️ আপনার উত্তর:</span> <b>${ansText}</b><br>
+            <span style="color:green">✔️ সঠিক উত্তর:</span> <b style="color:green">${q.options[correctAns]}</b><br>
+            <span style="color:#555">🧠 ব্যাখ্যা:</span><br>
+            <i>${q.explanation}</i>
         </div>`;
     });
 
