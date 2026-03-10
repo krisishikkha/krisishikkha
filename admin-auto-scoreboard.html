@@ -75,8 +75,7 @@ let currentExamId = "";
 function populateExamDropdown(){
     const examSelect = document.getElementById("examSelect");
     examSelect.innerHTML = '<option value="">-- Select Exam --</option>'; // ✅ শুধু select
-    console.log("Loaded EXAM_STATUS:", EXAM_STATUS);
-  Object.keys(EXAM_STATUS).forEach(examId=>{
+    Object.keys(EXAM_STATUS).forEach(examId=>{
         const exam = EXAM_STATUS[examId];
         if(exam.visible && exam.status === "live"){
             const opt = document.createElement("option");
