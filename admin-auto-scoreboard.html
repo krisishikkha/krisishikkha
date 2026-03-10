@@ -26,149 +26,145 @@ th{ background:#2E8B57; color:white;}
 <h2>Live Scoreboard - NTRCA Agriculture</h2>
 
 <div id="scoreboardSection">
-  <select id="examSelect">
-    <option value="">-- Loading Exams --</option>
-  </select>
+<select id="examSelect">
+<option value="">-- Loading Exams --</option>
+</select>
 
-  <button id="downloadBtn">Download PDF</button>
+<button id="downloadBtn">Download PDF</button>
 
-  <div class="pdf-container" id="liveTableContainer">
-    <div class="pdf-header">
-      <h1>NTRCA Agriculture Teacher Registration-2026</h1>
-      <h3 id="examTitleHeader">Exam Title</h3>
-      <h3 id="examDateHeader"></h3>
-    </div>
+<div class="pdf-container" id="liveTableContainer">
+<div class="pdf-header">
+<h1>NTRCA Agriculture Teacher Registration-2026</h1>
+<h3 id="examTitleHeader">Exam Title</h3>
+<h3 id="examDateHeader"></h3>
+</div>
 
-    <table id="scoreTable">
-      <thead>
-        <tr>
-          <th>Name (Rank)</th>
-          <th>Correct</th>
-          <th>Wrong</th>
-          <th>Unanswered</th>
-          <th>Percentage</th>
-          <th>Result</th>
-        </tr>
-      </thead>
-      <tbody id="scoreBody"></tbody>
-    </table>
-  </div>
+<table id="scoreTable">
+<thead>
+<tr>
+<th>Name (Rank)</th>
+<th>Correct</th>
+<th>Wrong</th>
+<th>Unanswered</th>
+<th>Percentage</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody id="scoreBody"></tbody>
+</table>
+</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
 <script type="module">
 
-// ==================== EXAM_STATUS import ====================
 import { EXAM_STATUS } from './exam-status.js';
 
-// ==================== Supabase Config ====================
+// Supabase Config
 const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// ==================== Globals ====================
 let allResults = [];
 let currentExamId = "";
 
-// ==================== Populate Dropdown ====================
-function populateExamDropdown() {
-  const examSelect = document.getElementById("examSelect");
-  examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
-  Object.keys(EXAM_STATUS).forEach(examId => {
-    const exam = EXAM_STATUS[examId];
-    if(exam.visible) {
-      const opt = document.createElement("option");
-      opt.value = examId;
-      opt.textContent = exam.title;
-      examSelect.appendChild(opt);
+// Populate Dropdown (visible + live)
+function populateExamDropdown(){
+    const examSelect = document.getElementById("examSelect");
+    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
+    Object.keys(EXAM_STATUS).forEach(examId=>{
+        const exam = EXAM_STATUS[examId];
+        if(exam.visible && exam.status === "live"){
+            const opt = document.createElement("option");
+            opt.value = examId;
+            opt.textContent = exam.title;
+            examSelect.appendChild(opt);
+        }
+    });
+}
+
+// Fetch Results
+async function fetchResults(){
+    if(!currentExamId) return;
+    try{
+        const { data, error } = await supabase
+            .from("exam_results")
+            .select("*")
+            .eq("examId", currentExamId)
+            .order("correct", { ascending:false });
+        if(error) throw error;
+        allResults = data;
+        renderScoreboard();
+    }catch(err){
+        console.error("Failed to fetch results:", err);
     }
-  });
 }
 
-// ==================== Fetch Results from Supabase ====================
-async function fetchResults() {
-  if(!currentExamId) return;
-  try {
-    const { data, error } = await supabase
-      .from("exam_results")
-      .select("*")
-      .eq("examId", currentExamId)
-      .order("correct", { ascending:false });
-    if(error) throw error;
-    allResults = data;
-    renderScoreboard();
-  } catch(err) {
-    console.error("Failed to fetch results:", err);
-  }
+// Realtime subscription
+function subscribeRealtime(){
+    supabase.channel('exam_results')
+        .on('postgres_changes', { event:'*', schema:'public', table:'exam_results' }, payload=>{
+            if(payload.new && payload.new.examId === currentExamId){
+                fetchResults();
+            }
+        }).subscribe();
 }
 
-// ==================== Realtime Subscription ====================
-function subscribeRealtime() {
-  supabase.channel('exam_results')
-    .on('postgres_changes', { event:'*', schema:'public', table:'exam_results' }, payload => {
-      if(payload.new && payload.new.examId === currentExamId){
-        fetchResults();
-      }
-    }).subscribe();
+// Render Scoreboard
+function renderScoreboard(){
+    const tbody = document.getElementById("scoreBody");
+    const titleHeader = document.getElementById("examTitleHeader");
+    const dateHeader = document.getElementById("examDateHeader");
+    const exam = EXAM_STATUS[currentExamId];
+    if(!exam) return;
+
+    titleHeader.innerText = "Exam Title: " + exam.title;
+    dateHeader.innerText = "Generated: " + new Date().toLocaleString("en-GB");
+
+    tbody.innerHTML = "";
+    allResults.forEach((r,i)=>{
+        const status = r.percent >= 40 ? "PASS" : "FAIL";
+        let rank = ["1st","2nd","3rd","4th","5th"][i] || "";
+        const name = r.name + (rank ? ` (${rank})` : "");
+        const tr = document.createElement("tr");
+        if(i<5) tr.classList.add("top-rank");
+        tr.classList.add(status==="PASS" ? "pass" : "fail");
+        tr.innerHTML=`
+            <td>${name}</td>
+            <td>${r.correct}</td>
+            <td>${r.wrong}</td>
+            <td>${r.unanswered}</td>
+            <td>${r.percent}%</td>
+            <td>${status}</td>
+        `;
+        tbody.appendChild(tr);
+    });
 }
 
-// ==================== Render Scoreboard ====================
-function renderScoreboard() {
-  const tbody = document.getElementById("scoreBody");
-  const titleHeader = document.getElementById("examTitleHeader");
-  const dateHeader = document.getElementById("examDateHeader");
-  const exam = EXAM_STATUS[currentExamId];
-  if(!exam) return;
-
-  titleHeader.innerText = "Exam Title: " + exam.title;
-  dateHeader.innerText = "Generated: " + new Date().toLocaleString("en-GB");
-
-  tbody.innerHTML = "";
-  allResults.forEach((r,i) => {
-    const status = r.percent >= 40 ? "PASS" : "FAIL";
-    const rank = ["1st","2nd","3rd","4th","5th"][i] || "";
-    const name = r.name + (rank ? ` (${rank})` : "");
-    const tr = document.createElement("tr");
-    if(i < 5) tr.classList.add("top-rank");
-    tr.classList.add(status==="PASS" ? "pass" : "fail");
-    tr.innerHTML = `
-      <td>${name}</td>
-      <td>${r.correct}</td>
-      <td>${r.wrong}</td>
-      <td>${r.unanswered}</td>
-      <td>${r.percent}%</td>
-      <td>${status}</td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
-
-// ==================== Event Listeners ====================
+// Event listeners
 document.getElementById("examSelect").addEventListener("change", function(){
-  currentExamId = this.value;
-  if(currentExamId){
-    fetchResults();
-    subscribeRealtime();
-  }
+    currentExamId = this.value;
+    if(currentExamId){
+        fetchResults();
+        subscribeRealtime();
+    }
 });
 
-document.getElementById("downloadBtn").addEventListener("click", () => {
-  if(!currentExamId){ alert("Please select exam"); return; }
-  const element = document.getElementById("liveTableContainer");
-  const exam = EXAM_STATUS[currentExamId];
-  html2pdf().set({
-    margin:[20,10,20,10],
-    filename: exam.title+"-Scoreboard.pdf",
-    html2canvas:{scale:2},
-    jsPDF:{unit:'pt',format:'a4',orientation:'portrait'}
-  }).from(element).save();
+document.getElementById("downloadBtn").addEventListener("click", ()=>{
+    if(!currentExamId){ alert("Please select exam"); return; }
+    const element = document.getElementById("liveTableContainer");
+    const exam = EXAM_STATUS[currentExamId];
+    html2pdf().set({
+        margin:[20,10,20,10],
+        filename: exam.title+"-Scoreboard.pdf",
+        html2canvas:{scale:2},
+        jsPDF:{unit:'pt',format:'a4',orientation:'portrait'}
+    }).from(element).save();
 });
 
-// ==================== Init ====================
-window.addEventListener("load", () => {
-  populateExamDropdown();
-});
+// Init
+window.addEventListener("load", populateExamDropdown);
 
 </script>
 </body>
