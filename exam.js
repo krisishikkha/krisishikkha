@@ -236,3 +236,5 @@ function submitExam() {
     resultHTML += `</div>`;
     document.getElementById("examMain").innerHTML = resultHTML;
 }
+
+//
