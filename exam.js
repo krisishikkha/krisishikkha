@@ -1,176 +1,121 @@
+// ==================== exam.js ====================
+
 // -------------------- Global Variables --------------------
 let examStartTime;
-let allResults = [];
-let userAnswers = [];
 let timerInterval;
+let userAnswers = [];
 let studentName = "";
+let allResults = JSON.parse(localStorage.getItem("krisishikkha_results") || "[]");
 
-// -------------------- Login Validation --------------------
-function validateAccess() {
-    const name = document.getElementById("studentName").value.trim();
-    const code = document.getElementById("accessCode").value.trim();
-    const warning = document.getElementById("warning");
-
-    if (name === "") {
-        warning.innerText = "নাম লিখুন";
-        return;
-    }
-
-    let examId = getActiveExamId();
-    const validCodes = (EXAM_STATUS[examId].codes || []);
-
-    if (!validCodes.includes(code)) {
-        warning.innerText = "❌ ভুল এক্সেস কোড";
-        return;
-    }
-
-    studentName = name; // save globally
-
-    document.getElementById("loginSection").style.display = "none";
-    document.getElementById("examMain").style.display = "block";
-
-    initExam(examId);
-}
-
-// -------------------- Auto Exam ID --------------------
+// -------------------- Helpers --------------------
 function getActiveExamId() {
     const params = new URLSearchParams(window.location.search);
-    let examId = params.get("exam");
-
-    if (!examId) {
-        for (const id in EXAM_STATUS) {
-            if (EXAM_STATUS[id].visible && EXAM_STATUS[id].status === "live") {
-                examId = id;
-                break;
-            }
-        }
-    }
-    return examId;
+    return params.get("exam") || "exam-1";
 }
 
-// -------------------- Exam Init --------------------
-function initExam(examId) {
+function sendToGoogleSheet(resultObj) {
+    // Optional: এখানে আপনি Google Sheet integration কোড দিতে পারেন
+}
+
+// -------------------- LOGIN --------------------
+function validateAccess() {
+    const nameInput = document.getElementById("studentName").value.trim();
+    const codeInput = document.getElementById("accessCode").value.trim();
+
+    if (!nameInput || !codeInput) {
+        document.getElementById("warning").innerText = "নাম ও কোড অবশ্যই দিতে হবে।";
+        return;
+    }
+
+    // Optional: Access code validation
+    // যদি codeInput !== "KRISHI01" { ... warning }
+
+    studentName = nameInput;
+    document.getElementById("loginSection").style.display = "none";
+    startExam();
+}
+
+// -------------------- EXAM --------------------
+function startExam() {
     examStartTime = new Date();
+    const examMain = document.getElementById("examMain");
+    examMain.style.display = "block";
+    renderQuestions();
 
-    if (!examId || !EXAM_STATUS[examId]) {
-        document.body.innerHTML = "<h2>Invalid Exam ID</h2>";
-        return;
-    }
-
-    if (EXAM_STATUS[examId].status !== "live") {
-        document.body.innerHTML = "<h2>Exam Locked</h2>";
-        return;
-    }
-
-    document.getElementById("examTitle").innerText = EXAM_STATUS[examId].title;
-
-    const script = document.createElement("script");
-    script.src = `./exam-corner/${examId}/questions.js`;
-
-    script.onload = function () {
-        if (typeof QUESTIONS === "undefined" || QUESTIONS.length === 0) {
-            alert("⚠️ প্রশ্ন ফাইল লোড হয়নি!");
-            return;
-        }
-        renderQuestions();
-        startTimer();
-    };
-
-    script.onerror = function () {
-        alert("⚠️ questions.js লোড করতে সমস্যা হয়েছে!");
-    };
-
-    document.body.appendChild(script);
+    startTimer(25 * 60); // 25 মিনিট
 }
 
-// -------------------- Render Questions --------------------
 function renderQuestions() {
     const container = document.getElementById("examContainer");
     container.innerHTML = "";
 
-    QUESTIONS.forEach((q, index) => {
+    QUESTIONS.forEach((q, idx) => {
         const div = document.createElement("div");
-        div.classList.add("card");
-        div.innerHTML = `
-            <h4>${index + 1}. ${q.question}</h4>
-            ${q.options.map((opt, i) =>
-                `<button onclick="selectAnswer(${index}, ${i}, this)">
+        div.className = "question-box";
+        div.style.marginBottom = "15px";
+
+        let optionsHTML = "";
+        q.options.forEach((opt, oidx) => {
+            optionsHTML += `
+                <label style="display:block; margin-left:15px;">
+                    <input type="radio" name="q${idx}" value="${oidx}" onchange="userAnswers[${idx}] = ${oidx}">
                     ${opt}
-                </button><br>`
-            ).join("")}
+                </label>
+            `;
+        });
+
+        div.innerHTML = `
+            <strong>${idx + 1}. ${q.question}</strong>
+            <div>${optionsHTML}</div>
         `;
         container.appendChild(div);
     });
 }
 
-function selectAnswer(qIndex, optIndex, btn) {
-    if (userAnswers[qIndex] !== undefined) return;
+// -------------------- TIMER --------------------
+function startTimer(seconds) {
+    const display = document.getElementById("timeLeft");
+    let remaining = seconds;
 
-    userAnswers[qIndex] = optIndex;
+    function updateTimer() {
+        const min = Math.floor(remaining / 60);
+        const sec = remaining % 60;
+        display.innerText = `${min.toString().padStart(2,"0")}:${sec.toString().padStart(2,"0")}`;
 
-    const buttons = btn.parentElement.querySelectorAll("button");
-    buttons.forEach(function(b) {
-        b.disabled = true;
-    });
-
-    btn.classList.add("selected");
-}
-
-// -------------------- Timer --------------------
-let totalTime = 25 * 60;
-
-function startTimer() {
-    const timerBox = document.querySelector(".timer-box");
-    const timeDisplay = document.getElementById("timeLeft");
-
-    timerInterval = setInterval(function () {
-        let minutes = Math.floor(totalTime / 60);
-        let seconds = totalTime % 60;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        timeDisplay.innerText = minutes + ":" + seconds;
-
-        if (totalTime <= 300 && totalTime > 120) {
-            timerBox.classList.add("timer-warning");
-        }
-
-        if (totalTime <= 120) {
-            timerBox.classList.remove("timer-warning");
-            timerBox.classList.add("timer-danger");
-        }
-
-        if (totalTime <= 0) {
+        if (remaining <= 0) {
             clearInterval(timerInterval);
             submitExam();
         }
+        remaining--;
+    }
 
-        totalTime--;
-    }, 1000);
+    updateTimer();
+    timerInterval = setInterval(updateTimer, 1000);
 }
-// -------------------- Submit Exam --------------------
-function submitExam() {
-    window.scrollTo({ top: 0, behavior: "auto" }); // smooth না, সরাসরি উপরে
-    clearInterval(timerInterval);
-    let examEndTime = new Date();
 
-    // Calculate results
+// -------------------- SUBMIT & SCOREBOARD --------------------
+function submitExam() {
+    clearInterval(timerInterval);
+    const examEndTime = new Date();
+
     let correct = 0, wrong = 0, unanswered = 0;
-    QUESTIONS.forEach((q, index) => {
-        const userAns = userAnswers[index];
-        if (userAns === undefined) {
+
+    QUESTIONS.forEach((q, idx) => {
+        const ans = userAnswers[idx];
+        if (ans === undefined) {
             unanswered++;
-        } else if (userAns === q.answer) {
+        } else if (ans === q.answer) {
             correct++;
         } else {
             wrong++;
         }
     });
 
-    let percent = Math.round((correct / QUESTIONS.length) * 100);
+    const percent = Math.round((correct / QUESTIONS.length) * 100);
     const passMark = 40;
-    let status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
+    const status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
 
-    // Save result object
+    // Save result
     const resultObj = {
         examId: getActiveExamId(),
         name: studentName,
@@ -185,17 +130,11 @@ function submitExam() {
     localStorage.setItem("krisishikkha_results", JSON.stringify(allResults));
     sendToGoogleSheet(resultObj);
 
-    // Render scoreboard + all questions
-    let resultHTML = `
+    // Render scoreboard + questions + explanation
+    let html = `
         <div style="padding:20px;">
             <h2>📊 পরীক্ষার ফলাফল</h2>
-            <div style="
-                background:${percent >= passMark ? '#d4edda' : '#f8d7da'};
-                padding:15px;
-                border-radius:8px;
-                margin-bottom:20px;
-                font-size:18px;
-            ">
+            <div style="background:${percent >= passMark ? '#d4edda' : '#f8d7da'}; padding:15px; border-radius:8px; margin-bottom:20px; font-size:18px;">
                 <strong>${studentName}</strong><br>
                 ✔️ সঠিক: ${correct}<br>
                 ❌ ভুল: ${wrong}<br>
@@ -207,21 +146,17 @@ function submitExam() {
             <h3>📋 প্রশ্ন ও উত্তর ও ব্যাখ্যা</h3>
     `;
 
-    QUESTIONS.forEach((q, index) => {
-        const userAns = userAnswers[index];
+    QUESTIONS.forEach((q, idx) => {
+        const userAns = userAnswers[idx];
         const correctAns = q.answer;
-        let userText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
-        let correctText = q.options[correctAns];
-        let boxColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
 
-        resultHTML += `
-            <div style="
-                margin-bottom:15px;
-                padding:10px;
-                border-radius:6px;
-                background:${boxColor};
-            ">
-                <strong>${index + 1}. ${q.question}</strong><br>
+        const userText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
+        const correctText = q.options[correctAns];
+        const bgColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
+
+        html += `
+            <div style="margin-bottom:15px; padding:10px; border-radius:6px; background:${bgColor};">
+                <strong>${idx + 1}. ${q.question}</strong><br>
                 ➡️ আপনার উত্তর: ${userText}<br>
                 ✔️ সঠিক উত্তর: ${correctText}<br>
                 🧠 ব্যাখ্যা: <em>${q.explanation}</em>
@@ -229,8 +164,11 @@ function submitExam() {
         `;
     });
 
-    resultHTML += `</div>`;
+    html += `</div>`;
 
-    // একসাথে সব দেখানো
-    document.getElementById("examMain").innerHTML = resultHTML;
+    const examMain = document.getElementById("examMain");
+    examMain.style.display = "block";
+    examMain.innerHTML = html;
+
+    window.scrollTo({ top: 0, behavior: "auto" });
 }
