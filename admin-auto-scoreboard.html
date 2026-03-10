@@ -57,10 +57,15 @@ th{ background:#2E8B57; color:white;}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
-<script type="module">
 
-// ==================== Import EXAM_STATUS ====================
-import { EXAM_STATUS } from './exam-status.js';
+<script>
+// ==================== EXAM_STATUS ====================
+const EXAM_STATUS = {
+  "exam-1": { title:"ডেমো পরীক্ষা", visible:true, status:"live", codes:["krisi"] },
+  "exam-2": { title:"HSC 1st Paper 1st Chapter", visible:true, status:"live", codes:["exam28"] },
+  "exam-3": { title:"HSC 1st Paper 2nd Chapter", visible:true, status:"live", codes:["exam31"] },
+  "exam-4": { title:"HSC 1st Paper 3rd Chapter", visible:true, status:"live", codes:["exam39"] }
+};
 
 // ==================== Supabase Config ====================
 const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
@@ -74,7 +79,7 @@ let currentExamId = "";
 // ==================== Populate Dropdown ====================
 function populateExamDropdown(){
     const examSelect = document.getElementById("examSelect");
-    examSelect.innerHTML = '<option value="">-- Select Exam --</option>'; // ✅ শুধুমাত্র Select Exam
+    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
     Object.keys(EXAM_STATUS).forEach(examId=>{
         const exam = EXAM_STATUS[examId];
         if(exam.visible && exam.status === "live"){
@@ -169,7 +174,7 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
 window.addEventListener("load", ()=>{
     populateExamDropdown();
 });
-
 </script>
+
 </body>
 </html>
