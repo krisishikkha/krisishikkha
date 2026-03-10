@@ -198,14 +198,10 @@ renderTable();
 }
 
 
-// ================= Render Table =================
-
 function renderTable(){
 
 const tbody=document.getElementById("scoreBody");
-
 const title=document.getElementById("examTitleHeader");
-
 const date=document.getElementById("examDateHeader");
 
 const exam=EXAM_STATUS[currentExamId];
@@ -213,23 +209,36 @@ const exam=EXAM_STATUS[currentExamId];
 if(!exam) return;
 
 title.innerText="Exam Title: "+exam.title;
-
 date.innerText="Generated: "+new Date().toLocaleString();
 
 tbody.innerHTML="";
 
+let lastScore=null;
+let rank=0;
 
 allResults.forEach((r,i)=>{
 
+// tie score ranking
+if(r.percent!==lastScore){
+rank=i+1;
+}
+
+lastScore=r.percent;
+
+// rank label
+let rankLabel="";
+if(rank===1) rankLabel="1st";
+else if(rank===2) rankLabel="2nd";
+else if(rank===3) rankLabel="3rd";
+else rankLabel=rank+"th";
+
+const name=r.name+" ("+rankLabel+")";
+
 const status=r.percent>=40?"PASS":"FAIL";
-
-let rank=["1st","2nd","3rd","4th","5th"][i] || "";
-
-const name=r.name+(rank?` (${rank})`:"");
 
 const tr=document.createElement("tr");
 
-if(i<5) tr.classList.add("top-rank");
+if(rank<=5) tr.classList.add("top-rank");
 
 tr.classList.add(status==="PASS"?"pass":"fail");
 
@@ -249,7 +258,6 @@ tbody.appendChild(tr);
 });
 
 }
-
 
 // ================= Realtime =================
 
