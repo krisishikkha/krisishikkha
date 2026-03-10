@@ -65,40 +65,48 @@ const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ==================== Globals ====================
-let EXAMS = [];
 let allResults = [];
 let currentExamId = "";
+let EXAMS = []; // will hold unique visible exams
 
-// ==================== Fetch Exams ====================
-async function fetchExams(){
-    try{
+// ==================== Fetch Exams Dynamically ====================
+async function fetchExams() {
+    try {
         const { data, error } = await supabase
-            .from("exams")
-            .select("*")
-            .order("id", { ascending:true });
+            .from("exam_results")
+            .select("examId, title, visible")
+            .order("start", { ascending: true });
         if(error) throw error;
-        EXAMS = data.filter(e => e.visible);
-        populateExamDropdown();
-    }catch(err){
+
+        // filter unique visible exams
+        const unique = {};
+        data.forEach(r => {
+            if(r.visible && !unique[r.examId]){
+                unique[r.examId] = { id: r.examId, title: r.title };
+            }
+        });
+        EXAMS = Object.values(unique);
+        populateDropdown();
+    } catch(err) {
         console.error("Failed to fetch exams:", err);
         document.getElementById("examSelect").innerHTML = '<option value="">-- Failed to load exams --</option>';
     }
 }
 
-// ==================== Populate Exam Dropdown ====================
-function populateExamDropdown(){
-    const examSelect = document.getElementById("examSelect");
-    examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
-    EXAMS.forEach(exam=>{
+// ==================== Populate Dropdown ====================
+function populateDropdown() {
+    const select = document.getElementById("examSelect");
+    select.innerHTML = '<option value="">-- Select Exam --</option>';
+    EXAMS.forEach(exam => {
         const opt = document.createElement("option");
         opt.value = exam.id;
         opt.textContent = exam.title;
-        examSelect.appendChild(opt);
+        select.appendChild(opt);
     });
 }
 
 // ==================== Fetch Results ====================
-async function fetchResults(){
+async function fetchResults() {
     if(!currentExamId) return;
     try{
         const { data, error } = await supabase
@@ -109,7 +117,7 @@ async function fetchResults(){
         if(error) throw error;
         allResults = data;
         renderScoreboard();
-    }catch(err){
+    } catch(err) {
         console.error("Failed to fetch results:", err);
     }
 }
@@ -180,6 +188,7 @@ document.getElementById("downloadBtn").addEventListener("click", ()=>{
 
 // ==================== Init ====================
 window.addEventListener("load", fetchExams);
+
 </script>
 
 </body>
