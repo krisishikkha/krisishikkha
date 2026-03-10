@@ -53,7 +53,98 @@ function initExam(examId) {
     examStartTime = new Date();
 
     if (!examId || !EXAM_STATUS[examId]) {
-        document.body.innerHTML = "<h2>Invalid Exam ID</h2>";
+function submitExam() {
+    clearInterval(timerInterval);
+
+    let examEndTime = new Date();
+
+    let correct = 0;
+    let wrong = 0;
+    let unanswered = 0;
+
+    QUESTIONS.forEach((q, index) => {
+        const userAns = userAnswers[index];
+        if (userAns === undefined) {
+            unanswered++;
+        } else if (userAns === q.answer) {
+            correct++;
+        } else {
+            wrong++;
+        }
+    });
+
+    let percent = Math.round((correct / QUESTIONS.length) * 100);
+    let passMark = 40;
+    let status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
+
+    const resultObj = {
+        examId: getActiveExamId(),
+        name: studentName,
+        correct,
+        wrong,
+        unanswered,
+        percent,
+        start: examStartTime,
+        end: examEndTime
+    };
+
+    allResults.push(resultObj);
+    localStorage.setItem("krisishikkha_results", JSON.stringify(allResults));
+
+    sendToGoogleSheet(resultObj);
+
+    // এবার ফলাফল দেখানোর HTML তৈরি
+    let resultHTML = `
+        <div style="padding:20px;">
+            <h2>📊 পরীক্ষার ফলাফল</h2>
+            <div style="
+                background:${percent >= passMark ? '#d4edda' : '#f8d7da'};
+                padding:15px;
+                border-radius:8px;
+                margin-bottom:20px;
+                font-size:18px;
+            ">
+                <strong>${studentName}</strong><br>
+                ✔️ সঠিক: ${correct}<br>
+                ❌ ভুল: ${wrong}<br>
+                ❓ উত্তর নেই: ${unanswered}<br>
+                📈 শতাংশ: ${percent}%<br>
+                🎯 ফলাফল: <strong>${status}</strong>
+            </div>
+            <hr>
+            <h3>📋 উত্তর ও ব্যাখ্যা</h3>
+    `;
+
+    QUESTIONS.forEach((q, index) => {
+        const userAns = userAnswers[index];
+        const correctAns = q.answer;
+
+        let ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
+        let boxColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
+
+        resultHTML += `
+            <div style="
+                margin-bottom:15px;
+                padding:10px;
+                border-radius:6px;
+                background:${boxColor};
+            ">
+                <strong>${index + 1}. ${q.question}</strong><br>
+                ➡️ আপনার উত্তর: ${ansText}<br>
+                ✔️ সঠিক উত্তর: ${q.options[correctAns]}<br>
+                🧠 ব্যাখ্যা: <em>${q.explanation}</em>
+            </div>
+        `;
+    });
+
+    resultHTML += `</div>`;
+
+    // এই অংশ আপডেট করুন
+    const examMainDiv = document.getElementById("examMain");
+    examMainDiv.style.display = "block";  // যদি আগে hide করা থাকে
+    examMainDiv.scrollIntoView({ behavior: "smooth" });  // page scroll করে না, শুধু div এ focus করে
+    examMainDiv.innerHTML = resultHTML;
+}        document.body.innerHTML = "<h2>Invalid Exam ID</h2>";
         return;
     }
 
@@ -147,94 +238,3 @@ function startTimer() {
         totalTime--;
     }, 1000);
 }
-
-// -------------------- Submit Exam --------------------
-function submitExam() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    clearInterval(timerInterval);
-
-    let examEndTime = new Date();
-
-    let correct = 0;
-    let wrong = 0;
-    let unanswered = 0;
-
-    QUESTIONS.forEach((q, index) => {
-        const userAns = userAnswers[index];
-        if (userAns === undefined) {
-            unanswered++;
-        } else if (userAns === q.answer) {
-            correct++;
-        } else {
-            wrong++;
-        }
-    });
-
-    let percent = Math.round((correct / QUESTIONS.length) * 100);
-    let passMark = 40;
-    let status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
-
-    const resultObj = {
-        examId: getActiveExamId(),
-        name: studentName,
-        correct,
-        wrong,
-        unanswered,
-        percent,
-        start: examStartTime,
-        end: examEndTime
-    };
-
-    allResults.push(resultObj);
-    localStorage.setItem("krisishikkha_results", JSON.stringify(allResults));
-
-    sendToGoogleSheet(resultObj);
-
-    let resultHTML = `
-        <div style="padding:20px;">
-            <h2>📊 পরীক্ষার ফলাফল</h2>
-            <div style="
-                background:${percent >= passMark ? '#d4edda' : '#f8d7da'};
-                padding:15px;
-                border-radius:8px;
-                margin-bottom:20px;
-                font-size:18px;
-            ">
-                <strong>${studentName}</strong><br>
-                ✔️ সঠিক: ${correct}<br>
-                ❌ ভুল: ${wrong}<br>
-                ❓ উত্তর নেই: ${unanswered}<br>
-                📈 শতাংশ: ${percent}%<br>
-                🎯 ফলাফল: <strong>${status}</strong>
-            </div>
-            <hr>
-            <h3>📋 উত্তর ও ব্যাখ্যা</h3>
-    `;
-
-    QUESTIONS.forEach((q, index) => {
-        const userAns = userAnswers[index];
-        const correctAns = q.answer;
-
-        let ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
-        let boxColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
-
-        resultHTML += `
-            <div style="
-                margin-bottom:15px;
-                padding:10px;
-                border-radius:6px;
-                background:${boxColor};
-            ">
-                <strong>${index + 1}. ${q.question}</strong><br>
-                ➡️ আপনার উত্তর: ${ansText}<br>
-                ✔️ সঠিক উত্তর: ${q.options[correctAns]}<br>
-                🧠 ব্যাখ্যা: <em>${q.explanation}</em>
-            </div>
-        `;
-    });
-
-    resultHTML += `</div>`;
-    document.getElementById("examMain").innerHTML = resultHTML;
-}
-
-//
