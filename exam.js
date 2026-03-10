@@ -13,10 +13,6 @@ function getActiveExamId() {
     return params.get("exam") || "exam-1";
 }
 
-function sendToGoogleSheet(resultObj) {
-    // Optional: এখানে আপনি Google Sheet integration কোড দিতে পারেন
-}
-
 // -------------------- LOGIN --------------------
 function validateAccess() {
     const nameInput = document.getElementById("studentName").value.trim();
@@ -27,11 +23,9 @@ function validateAccess() {
         return;
     }
 
-    // Optional: Access code validation
-    // যদি codeInput !== "KRISHI01" { ... warning }
-
     studentName = nameInput;
     document.getElementById("loginSection").style.display = "none";
+
     startExam();
 }
 
@@ -40,8 +34,8 @@ function startExam() {
     examStartTime = new Date();
     const examMain = document.getElementById("examMain");
     examMain.style.display = "block";
-    renderQuestions();
 
+    renderQuestions();   // ✅ এখন questions show হবে
     startTimer(25 * 60); // 25 মিনিট
 }
 
@@ -128,19 +122,23 @@ function submitExam() {
     };
     allResults.push(resultObj);
     localStorage.setItem("krisishikkha_results", JSON.stringify(allResults));
-    sendToGoogleSheet(resultObj);
 
     // Render scoreboard + questions + explanation
+    renderScoreboard(resultObj);
+}
+
+function renderScoreboard(resultObj) {
+    const examMain = document.getElementById("examMain");
     let html = `
         <div style="padding:20px;">
             <h2>📊 পরীক্ষার ফলাফল</h2>
-            <div style="background:${percent >= passMark ? '#d4edda' : '#f8d7da'}; padding:15px; border-radius:8px; margin-bottom:20px; font-size:18px;">
-                <strong>${studentName}</strong><br>
-                ✔️ সঠিক: ${correct}<br>
-                ❌ ভুল: ${wrong}<br>
-                ❓ উত্তর নেই: ${unanswered}<br>
-                📈 শতাংশ: ${percent}%<br>
-                🎯 ফলাফল: <strong>${status}</strong>
+            <div style="background:${resultObj.percent >= 40 ? '#d4edda' : '#f8d7da'}; padding:15px; border-radius:8px; margin-bottom:20px; font-size:18px;">
+                <strong>${resultObj.name}</strong><br>
+                ✔️ সঠিক: ${resultObj.correct}<br>
+                ❌ ভুল: ${resultObj.wrong}<br>
+                ❓ উত্তর নেই: ${resultObj.unanswered}<br>
+                📈 শতাংশ: ${resultObj.percent}%<br>
+                🎯 ফলাফল: <strong>${resultObj.percent >= 40 ? 'PASS ✅' : 'FAIL ❌'}</strong>
             </div>
             <hr>
             <h3>📋 প্রশ্ন ও উত্তর ও ব্যাখ্যা</h3>
@@ -165,10 +163,6 @@ function submitExam() {
     });
 
     html += `</div>`;
-
-    const examMain = document.getElementById("examMain");
-    examMain.style.display = "block";
     examMain.innerHTML = html;
-
     window.scrollTo({ top: 0, behavior: "auto" });
 }
