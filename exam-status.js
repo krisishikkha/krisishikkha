@@ -1,4 +1,4 @@
-export const EXAM_STATUS = {
+const EXAM_STATUS = {
   "exam-1": {
     title: "ডেমো পরীক্ষা ",
     visible: true,   // ✅ নতুন
