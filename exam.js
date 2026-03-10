@@ -5,6 +5,7 @@ let examStartTime;
 let userAnswers = [];
 let timerInterval;
 let studentName = "";
+let totalTime = 25 * 60;
 
 // -------------------- Login Validation --------------------
 function validateAccess() {
@@ -118,8 +119,6 @@ function selectAnswer(qIndex, optIndex, btn) {
 }
 
 // -------------------- Timer --------------------
-let totalTime = 25 * 60;
-
 function startTimer() {
     const timerBox = document.querySelector(".timer-box");
     const timeDisplay = document.getElementById("timeLeft");
@@ -149,26 +148,18 @@ function startTimer() {
     }, 1000);
 }
 
-// -------------------- Submit Exam (Supabase Only) --------------------
+// -------------------- Submit Exam --------------------
 async function submitExam() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
     clearInterval(timerInterval);
 
     let examEndTime = new Date();
+    let correct = 0, wrong = 0, unanswered = 0;
 
-    let correct = 0;
-    let wrong = 0;
-    let unanswered = 0;
-
-    QUESTIONS.forEach((q, index) => {
-        const userAns = userAnswers[index];
-        if (userAns === undefined) {
-            unanswered++;
-        } else if (userAns === q.answer) {
-            correct++;
-        } else {
-            wrong++;
-        }
+    QUESTIONS.forEach((q, i) => {
+        const userAns = userAnswers[i];
+        if (userAns === undefined) unanswered++;
+        else if (userAns === q.answer) correct++;
+        else wrong++;
     });
 
     let percent = Math.round((correct / QUESTIONS.length) * 100);
@@ -186,69 +177,55 @@ async function submitExam() {
         end: examEndTime
     };
 
-    // ------------------- SUPABASE -------------------
-    const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
-    const SUPABASE_ANON_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
-    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
+    // ---------------- Supabase Save ----------------
+    const supabaseClient = supabase.createClient(
+        "https://bpkheipwdjzlyuzyqdxz.supabase.co",
+        "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2"
+    );
     try {
-        const { data, error } = await supabaseClient
-            .from("exam_results")
-            .insert([resultObj]);
-
-        if (error) {
-            console.error("Supabase insert error:", error);
-        } else {
-            console.log("Result saved to Supabase:", data);
-        }
+        await supabaseClient.from("exam_results").insert([resultObj]);
     } catch (err) {
         console.error("Supabase connection failed:", err);
     }
 
-    // ------------------- DISPLAY RESULT ---------------------
-    let resultHTML = `
-        <div style="padding:20px;">
-            <h2>📊 পরীক্ষার ফলাফল</h2>
-            <div style="
-                background:${percent >= passMark ? '#d4edda' : '#f8d7da'};
-                padding:15px;
-                border-radius:8px;
-                margin-bottom:20px;
-                font-size:18px;
-            ">
-                <strong>${studentName}</strong><br>
-                ✔️ সঠিক: ${correct}<br>
-                ❌ ভুল: ${wrong}<br>
-                ❓ উত্তর নেই: ${unanswered}<br>
-                📈 শতাংশ: ${percent}%<br>
-                🎯 ফলাফল: <strong>${status}</strong>
-            </div>
-            <hr>
-            <h3>📋 উত্তর ও ব্যাখ্যা</h3>
-    `;
+    // ---------------- Scoreboard & Explanation ----------------
+    let resultContainer = document.getElementById("examResultContainer");
+    if (!resultContainer) {
+        resultContainer = document.createElement("div");
+        resultContainer.id = "examResultContainer";
+        resultContainer.style.padding = "20px";
+        resultContainer.style.marginTop = "20px";
+        document.getElementById("examMain").appendChild(resultContainer);
+    }
 
-    QUESTIONS.forEach((q, index) => {
-        const userAns = userAnswers[index];
+    let resultHTML = `<h2>📊 পরীক্ষার ফলাফল</h2>
+    <div style="background:${percent>=passMark?'#d4edda':'#f8d7da'}; padding:15px; border-radius:8px; margin-bottom:20px; font-size:18px;">
+        <strong>${studentName}</strong><br>
+        ✔️ সঠিক: ${correct}<br>
+        ❌ ভুল: ${wrong}<br>
+        ❓ উত্তর নেই: ${unanswered}<br>
+        📈 শতাংশ: ${percent}%<br>
+        🎯 ফলাফল: <strong>${status}</strong>
+    </div>
+    <hr>
+    <h3>📋 উত্তর ও ব্যাখ্যা</h3>`;
+
+    QUESTIONS.forEach((q, i) => {
+        const userAns = userAnswers[i];
         const correctAns = q.answer;
-
         let ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
         let boxColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
 
-        resultHTML += `
-            <div style="
-                margin-bottom:15px;
-                padding:10px;
-                border-radius:6px;
-                background:${boxColor};
-            ">
-                <strong>${index + 1}. ${q.question}</strong><br>
-                ➡️ আপনার উত্তর: ${ansText}<br>
-                ✔️ সঠিক উত্তর: ${q.options[correctAns]}<br>
-                🧠 ব্যাখ্যা: <em>${q.explanation}</em>
-            </div>
-        `;
+        resultHTML += `<div style="margin-bottom:15px; padding:10px; border-radius:6px; background:${boxColor};">
+            <strong>${i + 1}. ${q.question}</strong><br>
+            ➡️ আপনার উত্তর: ${ansText}<br>
+            ✔️ সঠিক উত্তর: ${q.options[correctAns]}<br>
+            🧠 ব্যাখ্যা: <em>${q.explanation}</em>
+        </div>`;
     });
 
-    resultHTML += `</div>`;
-    document.getElementById("examMain").innerHTML = resultHTML;
+    resultContainer.innerHTML = resultHTML;
+
+    // Scroll scoreboard into view
+    resultContainer.scrollIntoView({behavior: "smooth"});
 }
