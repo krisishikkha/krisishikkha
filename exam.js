@@ -147,18 +147,14 @@ function startTimer() {
         totalTime--;
     }, 1000);
 }
-
 // -------------------- Submit Exam --------------------
 function submitExam() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "auto" }); // smooth না, সরাসরি উপরে
     clearInterval(timerInterval);
-
     let examEndTime = new Date();
 
-    let correct = 0;
-    let wrong = 0;
-    let unanswered = 0;
-
+    // Calculate results
+    let correct = 0, wrong = 0, unanswered = 0;
     QUESTIONS.forEach((q, index) => {
         const userAns = userAnswers[index];
         if (userAns === undefined) {
@@ -171,9 +167,10 @@ function submitExam() {
     });
 
     let percent = Math.round((correct / QUESTIONS.length) * 100);
-    let passMark = 40;
+    const passMark = 40;
     let status = percent >= passMark ? "✅ PASS" : "❌ FAIL";
 
+    // Save result object
     const resultObj = {
         examId: getActiveExamId(),
         name: studentName,
@@ -184,12 +181,11 @@ function submitExam() {
         start: examStartTime,
         end: examEndTime
     };
-
     allResults.push(resultObj);
     localStorage.setItem("krisishikkha_results", JSON.stringify(allResults));
-
     sendToGoogleSheet(resultObj);
 
+    // Render scoreboard + all questions
     let resultHTML = `
         <div style="padding:20px;">
             <h2>📊 পরীক্ষার ফলাফল</h2>
@@ -208,14 +204,14 @@ function submitExam() {
                 🎯 ফলাফল: <strong>${status}</strong>
             </div>
             <hr>
-            <h3>📋 উত্তর ও ব্যাখ্যা</h3>
+            <h3>📋 প্রশ্ন ও উত্তর ও ব্যাখ্যা</h3>
     `;
 
     QUESTIONS.forEach((q, index) => {
         const userAns = userAnswers[index];
         const correctAns = q.answer;
-
-        let ansText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
+        let userText = userAns === undefined ? "কোনও উত্তর নেই" : q.options[userAns];
+        let correctText = q.options[correctAns];
         let boxColor = userAns === correctAns ? "#d4edda" : "#f8d7da";
 
         resultHTML += `
@@ -226,15 +222,15 @@ function submitExam() {
                 background:${boxColor};
             ">
                 <strong>${index + 1}. ${q.question}</strong><br>
-                ➡️ আপনার উত্তর: ${ansText}<br>
-                ✔️ সঠিক উত্তর: ${q.options[correctAns]}<br>
+                ➡️ আপনার উত্তর: ${userText}<br>
+                ✔️ সঠিক উত্তর: ${correctText}<br>
                 🧠 ব্যাখ্যা: <em>${q.explanation}</em>
             </div>
         `;
     });
 
     resultHTML += `</div>`;
+
+    // একসাথে সব দেখানো
     document.getElementById("examMain").innerHTML = resultHTML;
 }
-
-//
