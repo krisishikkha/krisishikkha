@@ -140,7 +140,6 @@ function startTimer() {
         totalTime--;
     }, 1000);
 }
-
 // -------------------- Submit Exam --------------------
 async function submitExam() {
     clearInterval(timerInterval);
@@ -156,6 +155,8 @@ async function submitExam() {
     });
 
     const percent = Math.round((correct / QUESTIONS.length) * 100);
+    
+    // ✅ শুধুমাত্র table-এ থাকা ফিল্ডগুলো পাঠানো হচ্ছে
     const resultObj = {
         examId: getActiveExamId(),
         name: studentName,
@@ -163,8 +164,8 @@ async function submitExam() {
         wrong,
         unanswered,
         percent,
-        start: examStartTime,
-        end: examEndTime
+        start: examStartTime // table-এ আছে এমন ফিল্ড
+        // end field বাদ দেওয়া হলো
     };
 
     // Save to Supabase
@@ -180,7 +181,6 @@ async function submitExam() {
 
     renderScoreboard(resultObj);
 }
-
 // -------------------- Render Scoreboard --------------------
 function renderScoreboard(resultObj) {
     let container = document.getElementById("examResultContainer");
