@@ -108,6 +108,7 @@ const QUESTIONS = [
   ],
   answer: 0,
   explanation: "প্রতিকূল পরিবেশে সফল ফসল উৎপাদনের জন্য প্রধান পূর্বশর্ত হলো ফসলের জাত সঠিকভাবে নির্বাচন করা। এটি ফসলের সহিষ্ণুতা ও উৎপাদন ক্ষমতা নিশ্চিত করে। (Source: FAO – Food and Agricultu
+},
 {
   question: "শিশির ও কুয়াশা বেড়ে গেলে আলুর কোন রোগ হয়?",
   options: [
@@ -437,7 +438,7 @@ const QUESTIONS = [
   answer: 0,
   explanation: "মাটির উর্বরতা প্রধানত মাটির সার গ্রহণ ক্ষমতার ওপর নির্ভর করে। (Source: Soil Science Textbook)"
 },
-  {
+{
   question: "চরাঞ্চলের বৈশিষ্ট্যপূর্ণ উদ্ভিদ কোনটি?",
   options: [
     "পেয়ারা",
