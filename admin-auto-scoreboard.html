@@ -2,418 +2,528 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Live Scoreboard - NTRCA Agriculture</title>
 
 <style>
-
 body{
-font-family: Arial,sans-serif;
-background:#f8f8f8;
-padding:20px;
-margin:0;
+  font-family: Arial,sans-serif;
+  background:#f8f8f8;
+  padding:20px;
+  margin:0;
 }
 
 h2{
-margin-bottom:20px;
+  margin-bottom:20px;
+  color:#000;
 }
 
 .control-bar{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-align-items:center;
-margin-bottom:18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  margin-bottom:18px;
 }
 
-select,button{
-padding:10px 12px;
-font-size:16px;
-border-radius:6px;
-border:1px solid #ccc;
+select,
+input[type="date"],
+button{
+  padding:10px 12px;
+  font-size:16px;
+  border-radius:6px;
+  border:1px solid #ccc;
 }
 
 button{
-background:#2E8B57;
-color:white;
-border:none;
-cursor:pointer;
+  background:#2E8B57;
+  color:#fff;
+  border:none;
+  cursor:pointer;
 }
 
 button:hover{
-background:#246b45;
+  background:#246b45;
+}
+
+.analytics-box{
+  background:#ffffff;
+  padding:16px;
+  border-radius:10px;
+  margin:16px 0;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.analytics-box h3{
+  margin:0 0 10px 0;
+  color:#000;
+}
+
+.analytics-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+}
+
+.analytics-item{
+  background:#f7fdf9;
+  border:1px solid #d9efe1;
+  border-radius:8px;
+  padding:12px;
+  font-size:16px;
+  font-weight:bold;
+  color:#000 !important;
 }
 
 .pdf-container{
-width:100%;
-max-width:900px;
-margin:auto;
-background:#ffffff;
-padding:25px;
-border-radius:8px;
-position:relative;
-overflow:hidden;
+  width:100%;
+  max-width:1000px;
+  margin:auto;
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  position:relative;
+  overflow:hidden;
 }
 
-/* ===== WATERMARK ===== */
-
+/* Watermark */
 .watermark{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%) rotate(-25deg);
-font-size:120px;
-color:rgba(0,0,0,0.05);
-font-weight:bold;
-pointer-events:none;
-white-space:nowrap;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(-25deg);
+  font-size:140px;
+  color:rgba(0,0,0,0.08);
+  font-weight:bold;
+  pointer-events:none;
+  user-select:none;
+  white-space:nowrap;
+  z-index:0;
 }
 
-/* ===== HEADER ===== */
-
+/* Header */
 .pdf-header{
-text-align:center;
-margin-bottom:20px;
+  text-align:center;
+  margin-bottom:20px;
+  position:relative;
+  z-index:1;
 }
 
-.pdf-header img{
-width:55px;
-margin-bottom:10px;
+.header-logo{
+  width:78px;
+  height:78px;
+  object-fit:contain;
+  margin-bottom:8px;
 }
 
 .pdf-header h1{
-font-size:22px;
-margin:0;
-color:#2E8B57;
+  font-size:24px;
+  margin:0;
+  color:#2E8B57;
 }
 
 .pdf-header h3{
-font-size:17px;
-margin:6px 0;
-color:#000;
+  font-size:17px;
+  margin:6px 0;
+  color:#000 !important;
 }
 
 .report-range{
-font-size:15px;
-color:#000;
-margin-top:4px;
+  font-size:15px;
+  color:#000 !important;
+  margin-top:4px;
 }
 
-/* ===== TABLE ===== */
-
+/* Table */
 table{
-width:100%;
-border-collapse:collapse;
-margin-top:10px;
+  width:100%;
+  border-collapse:collapse;
+  margin-top:14px;
+  position:relative;
+  z-index:1;
 }
 
-th,td{
-border:1px solid #ddd;
-padding:16px 12px;
-text-align:center;
-font-size:17px;
-color:#000;
+th, td{
+  border:1px solid #ddd;
+  padding:16px 12px;
+  text-align:center;
+  font-size:17px;
+  color:#000 !important;
 }
 
 th{
-background:#2E8B57;
-color:#ffffff;
+  background:#2E8B57;
+  color:#fff !important;
 }
 
-/* PASS FAIL ROW COLOR */
-
 .pass{
-background:#d4edda;
+  background:#d4edda;
 }
 
 .fail{
-background:#f8d7da;
+  background:#f8d7da;
 }
 
-/* TOP RANK STYLE */
+.pass td,
+.fail td{
+  color:#000 !important;
+}
 
 .top-rank{
-font-weight:bold;
+  font-weight:bold;
+  color:#000 !important;
 }
 
+.top-rank td{
+  color:#000 !important;
+}
+
+.empty-message{
+  text-align:center;
+  padding:18px;
+  font-size:17px;
+  color:#000;
+}
+
+/* Optional nicer highlight for top 3 */
+.rank-1{
+  box-shadow: inset 0 0 0 9999px rgba(255, 215, 0, 0.10);
+}
+.rank-2{
+  box-shadow: inset 0 0 0 9999px rgba(192, 192, 192, 0.14);
+}
+.rank-3{
+  box-shadow: inset 0 0 0 9999px rgba(205, 127, 50, 0.10);
+}
+
+@media (max-width: 768px){
+  body{
+    padding:12px;
+  }
+
+  .control-bar{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  select,
+  input[type="date"],
+  button{
+    width:100%;
+    font-size:16px;
+  }
+
+  .pdf-header h1{
+    font-size:20px;
+  }
+
+  .pdf-header h3{
+    font-size:16px;
+  }
+
+  th, td{
+    padding:12px 8px;
+    font-size:15px;
+  }
+
+  .watermark{
+    font-size:90px;
+  }
+
+  .header-logo{
+    width:64px;
+    height:64px;
+  }
+}
 </style>
-
 </head>
-
 <body>
 
 <h2>Live Scoreboard - NTRCA Agriculture</h2>
 
 <div class="control-bar">
+  <select id="examSelect">
+    <option value="">-- Select Exam --</option>
+  </select>
 
-<select id="examSelect">
-<option value="">-- Select Exam --</option>
-</select>
+  <input type="date" id="fromDate">
+  <input type="date" id="toDate">
 
-<button id="downloadBtn">Download PDF</button>
+  <button id="filterBtn">Filter</button>
+  <button id="downloadBtn">Download PDF</button>
+</div>
 
+<div class="analytics-box">
+  <h3>Exam Attempt Analytics</h3>
+  <div class="analytics-grid">
+    <div class="analytics-item" id="totalAttempts">Total Attempts: 0</div>
+    <div class="analytics-item" id="uniqueStudents">Unique Students: 0</div>
+    <div class="analytics-item" id="avgPercent">Average Percentage: 0%</div>
+    <div class="analytics-item" id="highestPercent">Highest Percentage: 0%</div>
+  </div>
 </div>
 
 <div class="pdf-container" id="liveTableContainer">
+  <div class="watermark">krisishikkha.com</div>
 
-<div class="watermark">
-krisishikkha.com
+  <div class="pdf-header">
+    <img src="assets/icons/icon-192.png" alt="Krisishikkha Logo" class="header-logo">
+    <h1>NTRCA Agriculture Teacher Registration-2026</h1>
+    <h3 id="examTitleHeader">Exam Title</h3>
+    <h3 id="examDateHeader"></h3>
+    <div class="report-range" id="reportRangeText">Showing all available results</div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name (Rank)</th>
+        <th>Correct</th>
+        <th>Wrong</th>
+        <th>Unanswered</th>
+        <th>Percentage</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody id="scoreBody"></tbody>
+  </table>
+
+  <div id="emptyMessage" class="empty-message" style="display:none;">
+    No results found for this filter.
+  </div>
 </div>
 
-<div class="pdf-header">
-
-<img src="assets/icons/icon-192.png">
-
-<h1>NTRCA Agriculture Teacher Registration-2026</h1>
-
-<h3 id="examTitleHeader">Exam Title</h3>
-
-<h3 id="examDateHeader"></h3>
-
-<div class="report-range">
-Showing all available results
-</div>
-
-</div>
-
-<table>
-
-<thead>
-<tr>
-<th>Name (Rank)</th>
-<th>Correct</th>
-<th>Wrong</th>
-<th>Unanswered</th>
-<th>Percentage</th>
-<th>Result</th>
-</tr>
-</thead>
-
-<tbody id="scoreBody"></tbody>
-
-</table>
-
-</div>
-
-<!-- exam status -->
 <script src="exam-status.js"></script>
-
-<!-- supabase -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<!-- pdf -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
+const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
+const SUPABASE_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-/* ================= SUPABASE ================= */
+let currentExamId = "";
+let allResults = [];
+let realtimeChannel = null;
 
-const SUPABASE_URL="https://bpkheipwdjzlyuzyqdxz.supabase.co";
-const SUPABASE_KEY="sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
+function populateExamDropdown() {
+  const examSelect = document.getElementById("examSelect");
+  examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
 
-const supabaseClient=supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-
-
-/* ================= GLOBAL ================= */
-
-let currentExamId="";
-let allResults=[];
-
-
-/* ================= DROPDOWN ================= */
-
-function populateExamDropdown(){
-
-const examSelect=document.getElementById("examSelect");
-
-examSelect.innerHTML='<option value="">-- Select Exam --</option>';
-
-Object.keys(EXAM_STATUS).forEach(id=>{
-
-const exam=EXAM_STATUS[id];
-
-if(exam.visible && exam.status==="live"){
-
-const option=document.createElement("option");
-
-option.value=id;
-option.textContent=exam.title;
-
-examSelect.appendChild(option);
-
+  Object.keys(EXAM_STATUS).forEach(id => {
+    const exam = EXAM_STATUS[id];
+    if (exam.visible && exam.status === "live") {
+      const option = document.createElement("option");
+      option.value = id;
+      option.textContent = exam.title;
+      examSelect.appendChild(option);
+    }
+  });
 }
 
+function updateReportRangeText() {
+  const fromDate = document.getElementById("fromDate").value;
+  const toDate = document.getElementById("toDate").value;
+  const reportRangeText = document.getElementById("reportRangeText");
+
+  if (fromDate && toDate) {
+    reportRangeText.innerText = `Report Range: ${fromDate} to ${toDate}`;
+  } else if (fromDate) {
+    reportRangeText.innerText = `Report From: ${fromDate}`;
+  } else if (toDate) {
+    reportRangeText.innerText = `Report Until: ${toDate}`;
+  } else {
+    reportRangeText.innerText = "Showing all available results";
+  }
+}
+
+async function fetchResults() {
+  if (!currentExamId) return;
+
+  const fromDate = document.getElementById("fromDate").value;
+  const toDate = document.getElementById("toDate").value;
+
+  let query = supabaseClient
+    .from("exam_results")
+    .select("*")
+    .eq("examId", currentExamId)
+    .order("percent", { ascending: false })
+    .order("correct", { ascending: false })
+    .limit(10);
+
+  if (fromDate) {
+    query = query.gte("start", fromDate + "T00:00:00");
+  }
+
+  if (toDate) {
+    query = query.lte("start", toDate + "T23:59:59");
+  }
+
+  const { data, error } = await query;
+
+  if (error) {
+    console.error(error);
+    alert("Result fetch failed");
+    return;
+  }
+
+  allResults = data || [];
+  updateReportRangeText();
+  renderAnalytics();
+  renderTable();
+}
+
+function renderAnalytics() {
+  const totalAttempts = allResults.length;
+
+  const uniqueNames = new Set(
+    allResults.map(r => (r.name || "").trim().toLowerCase()).filter(Boolean)
+  );
+
+  const uniqueStudents = uniqueNames.size;
+
+  const avg =
+    totalAttempts > 0
+      ? Math.round(allResults.reduce((sum, r) => sum + (Number(r.percent) || 0), 0) / totalAttempts)
+      : 0;
+
+  const highest =
+    totalAttempts > 0
+      ? Math.max(...allResults.map(r => Number(r.percent) || 0))
+      : 0;
+
+  document.getElementById("totalAttempts").innerText = "Total Attempts: " + totalAttempts;
+  document.getElementById("uniqueStudents").innerText = "Unique Students: " + uniqueStudents;
+  document.getElementById("avgPercent").innerText = "Average Percentage: " + avg + "%";
+  document.getElementById("highestPercent").innerText = "Highest Percentage: " + highest + "%";
+}
+
+function renderTable() {
+  const tbody = document.getElementById("scoreBody");
+  const title = document.getElementById("examTitleHeader");
+  const date = document.getElementById("examDateHeader");
+  const emptyMessage = document.getElementById("emptyMessage");
+
+  const exam = EXAM_STATUS[currentExamId];
+  if (!exam) return;
+
+  title.innerText = "Exam Title: " + exam.title;
+  date.innerText = "Generated: " + new Date().toLocaleString();
+  tbody.innerHTML = "";
+
+  if (!allResults.length) {
+    emptyMessage.style.display = "block";
+    return;
+  } else {
+    emptyMessage.style.display = "none";
+  }
+
+  let lastScore = null;
+  let rank = 0;
+
+  allResults.forEach((r, i) => {
+    const currentPercent = Number(r.percent) || 0;
+
+    if (currentPercent !== lastScore) {
+      rank = i + 1;
+    }
+
+    lastScore = currentPercent;
+
+    let rankLabel = "";
+    if (rank === 1) rankLabel = "1st";
+    else if (rank === 2) rankLabel = "2nd";
+    else if (rank === 3) rankLabel = "3rd";
+    else rankLabel = rank + "th";
+
+    let medal = "";
+    if (rank === 1) medal = " 🥇";
+    else if (rank === 2) medal = " 🥈";
+    else if (rank === 3) medal = " 🥉";
+
+    const name = `${r.name} (${rankLabel})${medal}`;
+    const status = currentPercent >= 40 ? "PASS" : "FAIL";
+
+    const tr = document.createElement("tr");
+
+    if (rank <= 5) tr.classList.add("top-rank");
+    if (rank === 1) tr.classList.add("rank-1");
+    if (rank === 2) tr.classList.add("rank-2");
+    if (rank === 3) tr.classList.add("rank-3");
+
+    tr.classList.add(status === "PASS" ? "pass" : "fail");
+
+    tr.innerHTML = `
+      <td>${name}</td>
+      <td>${r.correct}</td>
+      <td>${r.wrong}</td>
+      <td>${r.unanswered}</td>
+      <td>${r.percent}%</td>
+      <td>${status}</td>
+    `;
+
+    tbody.appendChild(tr);
+  });
+}
+
+function subscribeRealtime() {
+  if (realtimeChannel) {
+    supabaseClient.removeChannel(realtimeChannel);
+  }
+
+  realtimeChannel = supabaseClient
+    .channel("exam_results_changes")
+    .on(
+      "postgres_changes",
+      { event: "*", schema: "public", table: "exam_results" },
+      payload => {
+        if (payload.new && payload.new.examId === currentExamId) {
+          fetchResults();
+        }
+      }
+    )
+    .subscribe();
+}
+
+document.getElementById("examSelect").addEventListener("change", function () {
+  currentExamId = this.value;
+
+  if (currentExamId) {
+    fetchResults();
+    subscribeRealtime();
+  }
 });
 
-}
-
-
-/* ================= FETCH RESULTS ================= */
-
-async function fetchResults(){
-
-if(!currentExamId) return;
-
-const {data,error}=await supabaseClient
-.from("exam_results")
-.select("*")
-.eq("examId",currentExamId)
-.order("percent",{ascending:false});
-
-if(error){
-console.error(error);
-return;
-}
-
-allResults=data;
-
-renderTable();
-
-}
-
-
-/* ================= RENDER TABLE ================= */
-
-function renderTable(){
-
-const tbody=document.getElementById("scoreBody");
-const title=document.getElementById("examTitleHeader");
-const date=document.getElementById("examDateHeader");
-
-const exam=EXAM_STATUS[currentExamId];
-
-if(!exam) return;
-
-title.innerText="Exam Title: "+exam.title;
-
-date.innerText="Generated: "+new Date().toLocaleString();
-
-tbody.innerHTML="";
-
-let lastScore=null;
-let rank=0;
-
-allResults.forEach((r,i)=>{
-
-if(r.percent!==lastScore){
-rank=i+1;
-}
-
-lastScore=r.percent;
-
-let rankLabel="";
-
-if(rank===1) rankLabel="🥇 1st";
-else if(rank===2) rankLabel="🥈 2nd";
-else if(rank===3) rankLabel="🥉 3rd";
-else rankLabel=rank+"th";
-
-const name=r.name+" ("+rankLabel+")";
-
-const status=r.percent>=40?"PASS":"FAIL";
-
-const tr=document.createElement("tr");
-
-if(rank<=3){
-tr.classList.add("top-rank");
-}
-
-tr.classList.add(status==="PASS"?"pass":"fail");
-
-tr.innerHTML=`
-
-<td>${name}</td>
-<td>${r.correct}</td>
-<td>${r.wrong}</td>
-<td>${r.unanswered}</td>
-<td>${r.percent}%</td>
-<td>${status}</td>
-
-`;
-
-tbody.appendChild(tr);
-
+document.getElementById("filterBtn").addEventListener("click", function () {
+  if (!currentExamId) {
+    alert("Select exam first");
+    return;
+  }
+  fetchResults();
 });
 
-}
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  if (!currentExamId) {
+    alert("Select exam first");
+    return;
+  }
 
+  const exam = EXAM_STATUS[currentExamId];
+  const element = document.getElementById("liveTableContainer");
 
-/* ================= REALTIME ================= */
-
-function subscribeRealtime(){
-
-supabaseClient
-.channel("exam_results")
-.on("postgres_changes",
-{event:"*",schema:"public",table:"exam_results"},
-payload=>{
-
-if(payload.new && payload.new.examId===currentExamId){
-
-fetchResults();
-
-}
-
-})
-.subscribe();
-
-}
-
-
-/* ================= SELECT EXAM ================= */
-
-document.getElementById("examSelect").addEventListener("change",function(){
-
-currentExamId=this.value;
-
-if(currentExamId){
-
-fetchResults();
-subscribeRealtime();
-
-}
-
+  html2pdf().set({
+    margin: [20, 10, 20, 10],
+    filename: exam.title + "-Scoreboard.pdf",
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: "pt", format: "a4", orientation: "portrait" }
+  }).from(element).save();
 });
 
-
-/* ================= PDF DOWNLOAD ================= */
-
-document.getElementById("downloadBtn").addEventListener("click",()=>{
-
-if(!currentExamId){
-
-alert("Select exam first");
-
-return;
-
-}
-
-const exam=EXAM_STATUS[currentExamId];
-
-const element=document.getElementById("liveTableContainer");
-
-html2pdf().set({
-
-margin:[20,10,20,10],
-
-filename:exam.title+"-Scoreboard.pdf",
-
-html2canvas:{scale:2},
-
-jsPDF:{unit:"pt",format:"a4",orientation:"portrait"}
-
-}).from(element).save();
-
-});
-
-
-/* ================= START ================= */
-
-window.onload=()=>{
-
-populateExamDropdown();
-
+window.onload = () => {
+  populateExamDropdown();
+  updateReportRangeText();
 };
-
 </script>
 
 </body>
