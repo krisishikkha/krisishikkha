@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Download Center - Final Answer PDF</title>
+  <title>Admin Download Center - Final Clean PDF</title>
 
   <style>
     body{
@@ -45,17 +45,6 @@
       background:#246b45;
     }
 
-    .note-box{
-      max-width:900px;
-      margin:0 auto 20px auto;
-      background:#fff;
-      border-radius:10px;
-      padding:16px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      font-size:15px;
-      line-height:1.6;
-    }
-
     .pdf-root{
       width:794px;
       margin:0 auto;
@@ -63,17 +52,15 @@
       color:#111;
     }
 
-    /* ===== COVER PAGE ===== */
+    /* প্রথম cover page */
     .cover-page{
-      width:794px;
-      height:1123px;
+      min-height:1123px;
       box-sizing:border-box;
+      padding:80px 55px;
+      text-align:center;
       position:relative;
       background:#fff;
       page-break-after:always;
-      overflow:hidden;
-      padding:80px 55px;
-      text-align:center;
     }
 
     .cover-watermark{
@@ -130,19 +117,15 @@
       color:#444;
     }
 
-    /* ===== CONTENT PAGE ===== */
-    .pdf-page{
-      width:794px;
-      height:1123px;
-      box-sizing:border-box;
+    /* content section */
+    .content-section{
       position:relative;
       background:#fff;
-      page-break-after:always;
-      overflow:hidden;
-      padding:28px 30px 34px 30px; /* চারদিকে margin */
+      padding:28px 30px 34px 30px;
+      box-sizing:border-box;
     }
 
-    .watermark{
+    .content-watermark{
       position:absolute;
       top:50%;
       left:50%;
@@ -156,40 +139,38 @@
       z-index:0;
     }
 
-    .page-top{
+    .content-title{
       text-align:center;
-      font-size:18px;
+      font-size:20px;
       font-weight:700;
       color:#1f6f46;
-      margin-bottom:12px;
+      margin-bottom:6px;
       position:relative;
       z-index:2;
     }
 
-    .page-sub{
+    .content-sub{
       text-align:center;
-      font-size:14px;
-      margin-bottom:14px;
+      font-size:15px;
       color:#333;
+      margin-bottom:16px;
       position:relative;
       z-index:2;
     }
 
-    /* ===== TWO COLUMN WITH BLACK DIVIDER ===== */
+    /* 2 column layout */
     .question-grid{
       position:relative;
       z-index:2;
       display:grid;
-      grid-template-columns: 1fr 6px 1fr; /* মাঝখানে deep black divider */
+      grid-template-columns: 1fr 6px 1fr;
       column-gap:0;
-      row-gap:10px;
       align-items:start;
     }
 
     .divider{
       background:#111;
       border-radius:4px;
-      grid-row:1 / span 20;
       min-height:100%;
     }
 
@@ -215,6 +196,7 @@
       box-sizing:border-box;
       break-inside:avoid;
       page-break-inside:avoid;
+      -webkit-column-break-inside:avoid;
     }
 
     .qtitle{
@@ -256,44 +238,25 @@
       line-height:1.55;
     }
 
-    .page-footer{
-      position:absolute;
-      left:30px;
-      right:30px;
-      bottom:12px;
+    .footer-note{
       text-align:center;
       font-size:11px;
       color:#555;
+      margin-top:18px;
+      position:relative;
       z-index:2;
-    }
-
-    @media (max-width: 860px){
-      .pdf-root{
-        width:100%;
-      }
-
-      .pdf-page,
-      .cover-page{
-        width:100%;
-        height:auto;
-        min-height:1123px;
-      }
     }
   </style>
 </head>
 <body>
 
-  <h2>Admin Download Center - Final Answer PDF</h2>
+  <h2>Admin Download Center - Final Clean PDF</h2>
 
   <div class="control-bar">
     <select id="examSelect">
       <option value="">-- Select Exam --</option>
     </select>
     <button id="downloadBtn">Download PDF</button>
-  </div>
-
-  <div class="note-box">
-    এই version-এ cover page শুধু প্রথমে থাকবে। বাকি page-এ icon/logo repeat হবে না। দুই কলামের মাঝে deep black divider থাকবে, font বড় হবে, আর ফাঁকা জায়গা কম থাকবে।
   </div>
 
   <script src="exam-status.js"></script>
@@ -330,38 +293,26 @@
     function loadQuestionsJS(path) {
       return new Promise((resolve, reject) => {
         clearOldQuestionScripts();
-
         const script = document.createElement("script");
         script.src = path + "?t=" + Date.now();
         script.dataset.questionLoader = "true";
-
         script.onload = () => resolve();
         script.onerror = () => reject(new Error("questions.js load failed"));
-
         document.body.appendChild(script);
       });
     }
 
     function getQuestionsArray() {
-      if (typeof QUESTIONS !== "undefined" && Array.isArray(QUESTIONS)) {
-        return QUESTIONS;
-      }
-      if (typeof window.QUESTIONS !== "undefined" && Array.isArray(window.QUESTIONS)) {
-        return window.QUESTIONS;
-      }
+      if (typeof QUESTIONS !== "undefined" && Array.isArray(QUESTIONS)) return QUESTIONS;
+      if (typeof window.QUESTIONS !== "undefined" && Array.isArray(window.QUESTIONS)) return window.QUESTIONS;
       return null;
     }
 
-    function chunkArray(arr, size) {
-      const result = [];
-      for (let i = 0; i < arr.length; i += size) {
-        result.push(arr.slice(i, i + size));
-      }
-      return result;
-    }
-
-    function buildCoverPage(selectedExam, questions) {
+    function buildPdfDocument(selectedExam, questions) {
       const examTitle = EXAM_STATUS[selectedExam].title;
+      const root = document.createElement("div");
+      root.className = "pdf-root";
+
       const cover = document.createElement("div");
       cover.className = "cover-page";
       cover.innerHTML = `
@@ -377,100 +328,77 @@
         </div>
         <div class="cover-footer">কৃষিশিক্ষা - স্মার্ট প্রস্তুতির নির্ভরযোগ্য ঠিকানা</div>
       `;
-      return cover;
-    }
+      root.appendChild(cover);
 
-    // প্রতি content page-এ 8 question = left 4 + right 4
-    function buildContentPages(selectedExam, questions) {
-      const examTitle = EXAM_STATUS[selectedExam].title;
-      const pages = [];
-      const pageChunks = chunkArray(questions, 8);
+      const content = document.createElement("div");
+      content.className = "content-section";
 
-      pageChunks.forEach((pageQuestions, pageIndex) => {
-        const page = document.createElement("div");
-        page.className = "pdf-page";
+      const watermark = document.createElement("div");
+      watermark.className = "content-watermark";
+      watermark.textContent = "krisishikkha.com";
+      content.appendChild(watermark);
 
-        const watermark = document.createElement("div");
-        watermark.className = "watermark";
-        watermark.textContent = "krisishikkha.com";
-        page.appendChild(watermark);
+      const title = document.createElement("div");
+      title.className = "content-title";
+      title.textContent = examTitle;
+      content.appendChild(title);
 
-        const top = document.createElement("div");
-        top.className = "page-top";
-        top.textContent = examTitle;
-        page.appendChild(top);
+      const sub = document.createElement("div");
+      sub.className = "content-sub";
+      sub.textContent = `মোট প্রশ্ন: ${questions.length}`;
+      content.appendChild(sub);
 
-        const sub = document.createElement("div");
-        sub.className = "page-sub";
-        sub.textContent = `মোট প্রশ্ন: ${questions.length} | পৃষ্ঠা: ${pageIndex + 1}`;
-        page.appendChild(sub);
+      const grid = document.createElement("div");
+      grid.className = "question-grid";
 
-        const grid = document.createElement("div");
-        grid.className = "question-grid";
+      const leftCol = document.createElement("div");
+      leftCol.className = "col left-col";
 
-        const leftCol = document.createElement("div");
-        leftCol.className = "col left-col";
+      const divider = document.createElement("div");
+      divider.className = "divider";
 
-        const divider = document.createElement("div");
-        divider.className = "divider";
+      const rightCol = document.createElement("div");
+      rightCol.className = "col right-col";
 
-        const rightCol = document.createElement("div");
-        rightCol.className = "col right-col";
+      questions.forEach((q, index) => {
+        const qbox = document.createElement("div");
+        qbox.className = "qbox";
 
-        pageQuestions.forEach((q, i) => {
-          const globalIndex = pageIndex * 8 + i;
-          const qbox = document.createElement("div");
-          qbox.className = "qbox";
+        const optionsHtml = (q.options || []).map((opt, idx) => {
+          const correct = idx === q.answer ? "correct-option" : "";
+          return `<div class="option ${correct}">${String.fromCharCode(65 + idx)}. ${escapeHtml(opt)}</div>`;
+        }).join("");
 
-          const optionsHtml = (q.options || []).map((opt, idx) => {
-            const correct = idx === q.answer ? "correct-option" : "";
-            return `<div class="option ${correct}">${String.fromCharCode(65 + idx)}. ${escapeHtml(opt)}</div>`;
-          }).join("");
+        const correctText =
+          q.options && q.options[q.answer] !== undefined
+            ? q.options[q.answer]
+            : "";
 
-          const correctText =
-            q.options && q.options[q.answer] !== undefined
-              ? q.options[q.answer]
-              : "";
+        qbox.innerHTML = `
+          <div class="qtitle">${index + 1}. ${escapeHtml(q.question)}</div>
+          ${optionsHtml}
+          <div class="answer-line">✔ সঠিক উত্তর: ${escapeHtml(correctText)}</div>
+          <div class="explanation"><strong>ব্যাখ্যা:</strong> ${escapeHtml(q.explanation || "")}</div>
+        `;
 
-          qbox.innerHTML = `
-            <div class="qtitle">${globalIndex + 1}. ${escapeHtml(q.question)}</div>
-            ${optionsHtml}
-            <div class="answer-line">✔ সঠিক উত্তর: ${escapeHtml(correctText)}</div>
-            <div class="explanation"><strong>ব্যাখ্যা:</strong> ${escapeHtml(q.explanation || "")}</div>
-          `;
-
-          if (i < 4) {
-            leftCol.appendChild(qbox);
-          } else {
-            rightCol.appendChild(qbox);
-          }
-        });
-
-        grid.appendChild(leftCol);
-        grid.appendChild(divider);
-        grid.appendChild(rightCol);
-        page.appendChild(grid);
-
-        const footer = document.createElement("div");
-        footer.className = "page-footer";
-        footer.textContent = `krisishikkha.com | Page ${pageIndex + 1} of ${pageChunks.length}`;
-        page.appendChild(footer);
-
-        pages.push(page);
+        if (index % 2 === 0) {
+          leftCol.appendChild(qbox);
+        } else {
+          rightCol.appendChild(qbox);
+        }
       });
 
-      return pages;
-    }
+      grid.appendChild(leftCol);
+      grid.appendChild(divider);
+      grid.appendChild(rightCol);
+      content.appendChild(grid);
 
-    function buildPdfDocument(selectedExam, questions) {
-      const root = document.createElement("div");
-      root.className = "pdf-root";
+      const footer = document.createElement("div");
+      footer.className = "footer-note";
+      footer.textContent = "krisishikkha.com";
+      content.appendChild(footer);
 
-      root.appendChild(buildCoverPage(selectedExam, questions));
-
-      const contentPages = buildContentPages(selectedExam, questions);
-      contentPages.forEach(page => root.appendChild(page));
-
+      root.appendChild(content);
       return root;
     }
 
@@ -496,7 +424,7 @@
         const pdfDoc = buildPdfDocument(selectedExam, questions);
 
         const opt = {
-          margin: [0, 0, 0, 0],
+          margin: [8, 8, 8, 8],
           filename: `${EXAM_STATUS[selectedExam].title}-Answer-Sheet.pdf`,
           image: { type: "jpeg", quality: 0.98 },
           html2canvas: {
@@ -510,7 +438,7 @@
             orientation: "portrait"
           },
           pagebreak: {
-            mode: ["css", "legacy"]
+            mode: ["css", "legacy", "avoid-all"]
           }
         };
 
