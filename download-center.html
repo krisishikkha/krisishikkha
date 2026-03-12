@@ -44,8 +44,6 @@ button:hover{
   background:#246b45;
 }
 
-/* ========= PDF ROOT ========= */
-
 .pdf-root{
   width:794px;
   margin:auto;
@@ -53,8 +51,6 @@ button:hover{
   position:relative;
   color:#111;
 }
-
-/* ========= COVER PAGE ========= */
 
 .cover-page{
   width:100%;
@@ -118,8 +114,6 @@ button:hover{
   font-size:16px;
   color:#333;
 }
-
-/* ========= CONTENT PAGES ========= */
 
 .content-page{
   position:relative;
@@ -188,8 +182,6 @@ button:hover{
   width:50%;
 }
 
-/* ========= QUESTION ITEM ========= */
-
 .qitem{
   break-inside:avoid;
   page-break-inside:avoid;
@@ -241,8 +233,6 @@ button:hover{
   border-left:4px solid #2E8B57;
   border-radius:4px;
 }
-
-/* ========= PREVIEW BOX ========= */
 
 .preview-box{
   width:794px;
@@ -308,6 +298,7 @@ button:hover{
 <script>
 const examSelect = document.getElementById("examSelect");
 const downloadBtn = document.getElementById("downloadBtn");
+const BASE_PATH = "/krisishikkha";
 
 for (const examId in EXAM_STATUS) {
   if (EXAM_STATUS[examId].visible) {
@@ -318,7 +309,6 @@ for (const examId in EXAM_STATUS) {
   }
 }
 
-// script loader with cleanup
 function loadQuestionsJS(path) {
   return new Promise((resolve, reject) => {
     if (window.QUESTIONS) {
@@ -356,10 +346,9 @@ function chunkArray(arr, size) {
   return result;
 }
 
-// 2-column balanced page builder
 function buildQuestionPages(questions, examTitle) {
   const pages = [];
-  const perPage = 12; // 6 left + 6 right roughly
+  const perPage = 12;
   const pageChunks = chunkArray(questions, perPage);
 
   pageChunks.forEach((pageQuestions, pageIndex) => {
@@ -374,7 +363,7 @@ function buildQuestionPages(questions, examTitle) {
     const header = document.createElement("div");
     header.className = "page-header";
     header.innerHTML = `
-      <img src="assets/icons/icon-192.png" alt="Logo">
+      <img src="${BASE_PATH}/assets/icons/icon-192.png" alt="Logo">
       <h1>${escapeHtml(examTitle)}</h1>
       <h3>Answer Sheet with Detailed Explanation</h3>
       <div class="page-subline">
@@ -445,7 +434,7 @@ function buildPdfDocument(selectedExam) {
   cover.className = "cover-page";
   cover.innerHTML = `
     <div class="cover-watermark">krisishikkha.com</div>
-    <img src="assets/icons/icon-192.png" alt="Logo" class="cover-logo">
+    <img src="${BASE_PATH}/assets/icons/icon-192.png" alt="Logo" class="cover-logo">
     <div class="cover-title">${escapeHtml(examTitle)}</div>
     <div class="cover-subtitle">Answer Sheet with Detailed Solution</div>
     <div class="cover-line"></div>
@@ -476,7 +465,7 @@ downloadBtn.addEventListener("click", async () => {
   }
 
   try {
-    await loadQuestionsJS(`exam-corner/${selectedExam}/questions.js`);
+    await loadQuestionsJS(`${BASE_PATH}/exam-corner/${selectedExam}/questions.js`);
 
     if (!Array.isArray(window.QUESTIONS) || window.QUESTIONS.length === 0) {
       alert("প্রশ্ন ফাইল লোড হয়নি!");
@@ -516,7 +505,6 @@ downloadBtn.addEventListener("click", async () => {
         pdf.setFontSize(10);
         pdf.setTextColor(60, 60, 60);
 
-        // top header line except cover can still show on all pages
         if (i > 1) {
           pdf.text(
             EXAM_STATUS[selectedExam].title,
@@ -526,7 +514,6 @@ downloadBtn.addEventListener("click", async () => {
           );
         }
 
-        // footer
         pdf.text(
           `krisishikkha.com | ${new Date().toLocaleDateString("bn-BD")} | পৃষ্ঠা ${i} / ${totalPages}`,
           pageWidth / 2,
