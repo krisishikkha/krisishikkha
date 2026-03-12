@@ -12,12 +12,10 @@ body{
   background:#f8f8f8;
   margin:0;
 }
-
 h2{
   margin-bottom:20px;
   color:#111;
 }
-
 .control-bar{
   display:flex;
   flex-wrap:wrap;
@@ -25,25 +23,21 @@ h2{
   align-items:center;
   margin-bottom:20px;
 }
-
 select, button{
   padding:10px 14px;
   font-size:16px;
   border-radius:6px;
   border:1px solid #ccc;
 }
-
 button{
   background:#2E8B57;
   color:white;
   border:none;
   cursor:pointer;
 }
-
 button:hover{
   background:#246b45;
 }
-
 .pdf-root{
   width:794px;
   margin:auto;
@@ -51,7 +45,6 @@ button:hover{
   position:relative;
   color:#111;
 }
-
 .cover-page{
   width:100%;
   min-height:1040px;
@@ -62,7 +55,6 @@ button:hover{
   page-break-after:always;
   background:#fff;
 }
-
 .cover-watermark{
   position:absolute;
   top:50%;
@@ -74,33 +66,28 @@ button:hover{
   white-space:nowrap;
   pointer-events:none;
 }
-
 .cover-logo{
   width:110px;
   height:110px;
   object-fit:contain;
   margin-bottom:18px;
 }
-
 .cover-title{
   font-size:30px;
   font-weight:700;
   color:#1f6f46;
   margin-bottom:10px;
 }
-
 .cover-subtitle{
   font-size:20px;
   color:#222;
   margin-bottom:20px;
 }
-
 .cover-meta{
   font-size:17px;
   line-height:1.9;
   color:#111;
 }
-
 .cover-line{
   width:180px;
   height:4px;
@@ -108,13 +95,11 @@ button:hover{
   margin:28px auto;
   border-radius:8px;
 }
-
 .cover-footer{
   margin-top:40px;
   font-size:16px;
   color:#333;
 }
-
 .content-page{
   position:relative;
   min-height:1040px;
@@ -124,7 +109,6 @@ button:hover{
   page-break-after:always;
   overflow:hidden;
 }
-
 .page-watermark{
   position:absolute;
   top:50%;
@@ -136,40 +120,34 @@ button:hover{
   white-space:nowrap;
   pointer-events:none;
 }
-
 .page-header{
   text-align:center;
   margin-bottom:18px;
   position:relative;
   z-index:2;
 }
-
 .page-header img{
   width:58px;
   height:58px;
   object-fit:contain;
   margin-bottom:6px;
 }
-
 .page-header h1{
   margin:0;
   font-size:21px;
   color:#1f6f46;
 }
-
 .page-header h3{
   margin:6px 0 0 0;
   font-size:15px;
   font-weight:600;
   color:#111;
 }
-
 .page-subline{
   font-size:13px;
   color:#333;
   margin-top:5px;
 }
-
 .two-col{
   display:flex;
   gap:18px;
@@ -177,11 +155,9 @@ button:hover{
   position:relative;
   z-index:2;
 }
-
 .col{
   width:50%;
 }
-
 .qitem{
   break-inside:avoid;
   page-break-inside:avoid;
@@ -191,7 +167,6 @@ button:hover{
   margin-bottom:12px;
   background:#fffefb;
 }
-
 .qtitle{
   font-size:14px;
   font-weight:700;
@@ -199,19 +174,16 @@ button:hover{
   color:#111;
   margin-bottom:8px;
 }
-
 .option{
   font-size:13px;
   line-height:1.5;
   margin:0 0 4px 16px;
   color:#111;
 }
-
 .correct-option{
   color:#0d7a36;
   font-weight:700;
 }
-
 .answer-line{
   margin-top:7px;
   font-size:13px;
@@ -222,7 +194,6 @@ button:hover{
   border-radius:5px;
   border-left:4px solid #2E8B57;
 }
-
 .explanation{
   margin-top:8px;
   font-size:12.5px;
@@ -233,44 +204,12 @@ button:hover{
   border-left:4px solid #2E8B57;
   border-radius:4px;
 }
-
-.preview-box{
-  width:794px;
-  margin:20px auto 0 auto;
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 4px 14px rgba(0,0,0,0.08);
-  box-sizing:border-box;
-}
-
-.preview-note{
-  font-size:15px;
-  color:#333;
-  margin-bottom:10px;
-}
-
 @media (max-width: 900px){
-  .preview-box,
-  .pdf-root{
-    width:100%;
-  }
-
-  .two-col{
-    flex-direction:column;
-  }
-
-  .col{
-    width:100%;
-  }
-
-  .content-page{
-    padding:50px 18px 50px 18px;
-  }
-
-  .cover-page{
-    padding:50px 20px;
-  }
+  .pdf-root{ width:100%; }
+  .two-col{ flex-direction:column; }
+  .col{ width:100%; }
+  .content-page{ padding:50px 18px; }
+  .cover-page{ padding:50px 20px; }
 }
 </style>
 </head>
@@ -282,14 +221,7 @@ button:hover{
   <select id="examSelect">
     <option value="">-- Select Exam --</option>
   </select>
-
   <button id="downloadBtn">Download PDF</button>
-</div>
-
-<div class="preview-box">
-  <div class="preview-note">
-    এই PDF-তে থাকবে: Logo, Cover Page, 2-Column Layout, Answer Highlight, Explanation, Watermark, Page Number
-  </div>
 </div>
 
 <script src="exam-status.js"></script>
@@ -304,6 +236,7 @@ for (const examId in EXAM_STATUS) {
   if (EXAM_STATUS[examId].visible) {
     const option = document.createElement("option");
     option.value = examId;
+    option.textContent = exam.title || EXAM_STATUS[examId].title;
     option.textContent = EXAM_STATUS[examId].title;
     examSelect.appendChild(option);
   }
@@ -311,10 +244,7 @@ for (const examId in EXAM_STATUS) {
 
 function loadQuestionsJS(path) {
   return new Promise((resolve, reject) => {
-    if (window.QUESTIONS) {
-      try { delete window.QUESTIONS; } catch (e) {}
-      window.QUESTIONS = undefined;
-    }
+    window.QUESTIONS = undefined;
 
     const oldScripts = document.querySelectorAll('script[data-question-loader="true"]');
     oldScripts.forEach(s => s.remove());
@@ -323,8 +253,15 @@ function loadQuestionsJS(path) {
     script.src = path + "?t=" + Date.now();
     script.dataset.questionLoader = "true";
 
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error("questions.js load failed"));
+    script.onload = () => {
+      console.log("Loaded:", script.src);
+      resolve();
+    };
+
+    script.onerror = () => {
+      console.error("Failed to load:", script.src);
+      reject(new Error("questions.js load failed"));
+    };
 
     document.body.appendChild(script);
   });
@@ -366,9 +303,7 @@ function buildQuestionPages(questions, examTitle) {
       <img src="${BASE_PATH}/assets/icons/icon-192.png" alt="Logo">
       <h1>${escapeHtml(examTitle)}</h1>
       <h3>Answer Sheet with Detailed Explanation</h3>
-      <div class="page-subline">
-        মোট প্রশ্ন: ${questions.length} | পৃষ্ঠা অংশ: ${pageIndex + 1}
-      </div>
+      <div class="page-subline">মোট প্রশ্ন: ${questions.length} | পৃষ্ঠা অংশ: ${pageIndex + 1}</div>
     `;
     page.appendChild(header);
 
@@ -377,7 +312,6 @@ function buildQuestionPages(questions, examTitle) {
 
     const leftCol = document.createElement("div");
     leftCol.className = "col";
-
     const rightCol = document.createElement("div");
     rightCol.className = "col";
 
@@ -388,16 +322,10 @@ function buildQuestionPages(questions, examTitle) {
 
       const optionsHtml = (q.options || []).map((opt, j) => {
         const isCorrect = j === q.answer;
-        return `
-          <div class="option ${isCorrect ? "correct-option" : ""}">
-            ${String.fromCharCode(65 + j)}. ${escapeHtml(opt)}
-          </div>
-        `;
+        return `<div class="option ${isCorrect ? "correct-option" : ""}">${String.fromCharCode(65 + j)}. ${escapeHtml(opt)}</div>`;
       }).join("");
 
-      const correctText = q.options && q.options[q.answer] !== undefined
-        ? q.options[q.answer]
-        : "";
+      const correctText = q.options && q.options[q.answer] !== undefined ? q.options[q.answer] : "";
 
       qEl.innerHTML = `
         <div class="qtitle">${globalIndex + 1}. ${escapeHtml(q.question)}</div>
@@ -406,17 +334,13 @@ function buildQuestionPages(questions, examTitle) {
         <div class="explanation"><strong>ব্যাখ্যা:</strong> ${escapeHtml(q.explanation || "")}</div>
       `;
 
-      if (localIndex % 2 === 0) {
-        leftCol.appendChild(qEl);
-      } else {
-        rightCol.appendChild(qEl);
-      }
+      if (localIndex % 2 === 0) leftCol.appendChild(qEl);
+      else rightCol.appendChild(qEl);
     });
 
     wrapper.appendChild(leftCol);
     wrapper.appendChild(rightCol);
     page.appendChild(wrapper);
-
     pages.push(page);
   });
 
@@ -444,15 +368,11 @@ function buildPdfDocument(selectedExam) {
       <div><strong>মোট প্রশ্ন:</strong> ${questions.length}</div>
       <div><strong>ফরম্যাট:</strong> Premium Two-Column PDF</div>
     </div>
-    <div class="cover-footer">
-      কৃষিশিক্ষা - স্মার্ট প্রস্তুতির নির্ভরযোগ্য ঠিকানা
-    </div>
+    <div class="cover-footer">কৃষিশিক্ষা - স্মার্ট প্রস্তুতির নির্ভরযোগ্য ঠিকানা</div>
   `;
   root.appendChild(cover);
 
-  const pages = buildQuestionPages(questions, examTitle);
-  pages.forEach(p => root.appendChild(p));
-
+  buildQuestionPages(questions, examTitle).forEach(p => root.appendChild(p));
   return root;
 }
 
@@ -464,11 +384,14 @@ downloadBtn.addEventListener("click", async () => {
     return;
   }
 
+  const questionPath = `${BASE_PATH}/exam-corner/${selectedExam}/questions.js`;
+  console.log("Trying to load:", questionPath);
+
   try {
-    await loadQuestionsJS(`${BASE_PATH}/exam-corner/${selectedExam}/questions.js`);
+    await loadQuestionsJS(questionPath);
 
     if (!Array.isArray(window.QUESTIONS) || window.QUESTIONS.length === 0) {
-      alert("প্রশ্ন ফাইল লোড হয়নি!");
+      alert("প্রশ্ন ফাইল লোড হয়েছে, কিন্তু QUESTIONS পাওয়া যায়নি।");
       return;
     }
 
@@ -490,9 +413,7 @@ downloadBtn.addEventListener("click", async () => {
         format: "a4",
         orientation: "portrait"
       },
-      pagebreak: {
-        mode: ["css", "legacy"]
-      }
+      pagebreak: { mode: ["css", "legacy"] }
     };
 
     html2pdf().set(opt).from(pdfDoc).toPdf().get("pdf").then(function(pdf) {
@@ -506,12 +427,7 @@ downloadBtn.addEventListener("click", async () => {
         pdf.setTextColor(60, 60, 60);
 
         if (i > 1) {
-          pdf.text(
-            EXAM_STATUS[selectedExam].title,
-            pageWidth / 2,
-            18,
-            { align: "center" }
-          );
+          pdf.text(EXAM_STATUS[selectedExam].title, pageWidth / 2, 18, { align: "center" });
         }
 
         pdf.text(
@@ -525,9 +441,10 @@ downloadBtn.addEventListener("click", async () => {
 
   } catch (err) {
     console.error(err);
-    alert("PDF তৈরি করতে সমস্যা হয়েছে!");
+    alert(`প্রশ্ন ফাইল লোড হয়নি!\nPath: ${questionPath}`);
   }
 });
 </script>
+
 </body>
 </html>
