@@ -52,15 +52,16 @@
       color:#111;
     }
 
-    /* প্রথম cover page */
+    /* ===== COVER PAGE ===== */
     .cover-page{
-      min-height:1123px;
+      height:1123px;
       box-sizing:border-box;
       padding:80px 55px;
       text-align:center;
       position:relative;
       background:#fff;
       page-break-after:always;
+      overflow:hidden;
     }
 
     .cover-watermark{
@@ -117,7 +118,7 @@
       color:#444;
     }
 
-    /* content section */
+    /* ===== CONTENT SECTION ===== */
     .content-section{
       position:relative;
       background:#fff;
@@ -158,7 +159,7 @@
       z-index:2;
     }
 
-    /* 2 column layout */
+    /* ===== 2 COLUMN LAYOUT ===== */
     .question-grid{
       position:relative;
       z-index:2;
@@ -313,6 +314,7 @@
       const root = document.createElement("div");
       root.className = "pdf-root";
 
+      // Cover page
       const cover = document.createElement("div");
       cover.className = "cover-page";
       cover.innerHTML = `
@@ -330,6 +332,7 @@
       `;
       root.appendChild(cover);
 
+      // Content section
       const content = document.createElement("div");
       content.className = "content-section";
 
@@ -438,7 +441,7 @@
             orientation: "portrait"
           },
           pagebreak: {
-            mode: ["css", "legacy", "avoid-all"]
+            mode: ["css", "legacy"]
           }
         };
 
