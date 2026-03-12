@@ -3,41 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Download Center - Premium Answer PDF</title>
+  <title>Admin Download Center - Clean 2 Column PDF</title>
 
   <style>
     body{
       font-family: Arial, sans-serif;
-      padding:20px;
-      background:#f8f8f8;
       margin:0;
+      padding:20px;
+      background:#f4f4f4;
       color:#111;
     }
 
     h2{
-      margin-bottom:20px;
-      color:#111;
+      margin:0 0 20px 0;
+      font-size:22px;
     }
 
     .control-bar{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      align-items:center;
       margin-bottom:20px;
     }
 
     select, button{
       padding:10px 14px;
       font-size:16px;
-      border-radius:6px;
       border:1px solid #ccc;
+      border-radius:6px;
       box-sizing:border-box;
     }
 
     button{
       background:#2E8B57;
-      color:white;
+      color:#fff;
       border:none;
       cursor:pointer;
     }
@@ -46,266 +45,182 @@
       background:#246b45;
     }
 
-    .preview-box{
-      width:794px;
-      max-width:100%;
-      margin:20px auto 0 auto;
+    .note-box{
+      max-width:900px;
+      margin:0 auto 20px auto;
       background:#fff;
-      padding:20px;
       border-radius:10px;
-      box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      box-sizing:border-box;
-    }
-
-    .preview-note{
-      font-size:15px;
-      color:#333;
+      padding:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      font-size:14px;
       line-height:1.6;
     }
 
+    /* ===== PDF ROOT ===== */
     .pdf-root{
       width:794px;
-      margin:auto;
+      margin:0 auto;
       background:#fff;
-      position:relative;
       color:#111;
     }
 
-    .cover-page{
-      width:100%;
-      min-height:1040px;
+    /* ===== PAGE ===== */
+    .pdf-page{
+      width:794px;
+      height:1123px;
       box-sizing:border-box;
-      padding:80px 60px;
-      text-align:center;
       position:relative;
-      page-break-after:always;
-      background:#fff;
-    }
-
-    .cover-watermark{
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%) rotate(-25deg);
-      font-size:84px;
-      color:rgba(0,0,0,0.05);
-      font-weight:700;
-      white-space:nowrap;
-      pointer-events:none;
-      user-select:none;
-    }
-
-    .cover-logo{
-      width:110px;
-      height:110px;
-      object-fit:contain;
-      margin-bottom:18px;
-    }
-
-    .cover-title{
-      font-size:30px;
-      font-weight:700;
-      color:#1f6f46;
-      margin-bottom:10px;
-      line-height:1.4;
-    }
-
-    .cover-subtitle{
-      font-size:20px;
-      color:#222;
-      margin-bottom:20px;
-    }
-
-    .cover-meta{
-      font-size:17px;
-      line-height:1.9;
-      color:#111;
-    }
-
-    .cover-line{
-      width:180px;
-      height:4px;
-      background:#2E8B57;
-      margin:28px auto;
-      border-radius:8px;
-    }
-
-    .cover-footer{
-      margin-top:40px;
-      font-size:16px;
-      color:#333;
-    }
-
-    .content-page{
-      position:relative;
-      min-height:1040px;
-      box-sizing:border-box;
-      padding:70px 35px 65px 35px;
       background:#fff;
       page-break-after:always;
       overflow:hidden;
+      padding:40px 36px 40px 36px; /* চারদিকে margin */
     }
 
-    .page-watermark{
+    .watermark{
       position:absolute;
       top:50%;
       left:50%;
       transform:translate(-50%,-50%) rotate(-25deg);
-      font-size:96px;
+      font-size:78px;
       color:rgba(0,0,0,0.04);
       font-weight:700;
       white-space:nowrap;
       pointer-events:none;
       user-select:none;
+      z-index:0;
     }
 
     .page-header{
       text-align:center;
-      margin-bottom:18px;
       position:relative;
       z-index:2;
+      margin-bottom:16px;
     }
 
     .page-header img{
-      width:58px;
-      height:58px;
+      width:52px;
+      height:52px;
       object-fit:contain;
       margin-bottom:6px;
     }
 
     .page-header h1{
       margin:0;
-      font-size:21px;
+      font-size:24px;
       color:#1f6f46;
-      line-height:1.4;
+      line-height:1.3;
     }
 
     .page-header h3{
       margin:6px 0 0 0;
       font-size:15px;
+      color:#222;
       font-weight:600;
-      color:#111;
     }
 
-    .page-subline{
+    .page-meta{
+      margin-top:4px;
       font-size:13px;
-      color:#333;
-      margin-top:5px;
+      color:#444;
     }
 
-    .two-col{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
+    /* ===== TWO COLUMN GRID ===== */
+    .question-grid{
       position:relative;
       z-index:2;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap:18px;   /* মাঝ বরাবর gutter */
+      row-gap:12px;
+      align-items:start;
     }
 
-    .col{
-      width:50%;
-    }
-
-    .qitem{
+    .qbox{
+      border:1px solid #dadada;
+      border-radius:8px;
+      background:#fffefb;
+      padding:12px;
+      box-sizing:border-box;
       break-inside:avoid;
       page-break-inside:avoid;
-      border:1px solid #dcdcdc;
-      border-radius:8px;
-      padding:12px 12px 10px 12px;
-      margin-bottom:12px;
-      background:#fffefb;
     }
 
     .qtitle{
       font-size:14px;
       font-weight:700;
-      line-height:1.55;
-      color:#111;
+      line-height:1.5;
       margin-bottom:8px;
     }
 
     .option{
       font-size:13px;
-      line-height:1.5;
-      margin:0 0 4px 16px;
-      color:#111;
+      line-height:1.45;
+      margin:0 0 4px 14px;
     }
 
     .correct-option{
-      color:#0d7a36;
+      color:#168347;
       font-weight:700;
     }
 
     .answer-line{
-      margin-top:7px;
+      margin-top:8px;
+      background:#edf8f0;
+      border-left:4px solid #2E8B57;
+      padding:6px 8px;
+      border-radius:4px;
       font-size:13px;
       font-weight:700;
-      color:#0d7a36;
-      background:#edf8f0;
-      padding:6px 8px;
-      border-radius:5px;
-      border-left:4px solid #2E8B57;
+      color:#168347;
     }
 
     .explanation{
       margin-top:8px;
-      font-size:12.5px;
-      line-height:1.6;
-      color:#111;
-      background:#f6f6f6;
-      padding:8px 10px;
+      background:#f1f1f1;
       border-left:4px solid #2E8B57;
+      padding:7px 8px;
       border-radius:4px;
+      font-size:12.5px;
+      line-height:1.55;
     }
 
-    @media (max-width: 900px){
-      .control-bar{
-        flex-direction:column;
-        align-items:stretch;
-      }
+    .page-footer{
+      position:absolute;
+      left:36px;
+      right:36px;
+      bottom:18px;
+      text-align:center;
+      font-size:10px;
+      color:#555;
+      z-index:2;
+    }
 
-      select, button{
-        width:100%;
-      }
-
-      .preview-box,
+    @media (max-width: 860px){
       .pdf-root{
         width:100%;
       }
 
-      .two-col{
-        flex-direction:column;
-      }
-
-      .col{
+      .pdf-page{
         width:100%;
-      }
-
-      .content-page{
-        padding:50px 18px 50px 18px;
-      }
-
-      .cover-page{
-        padding:50px 20px;
+        height:auto;
+        min-height:1123px;
       }
     }
   </style>
 </head>
 <body>
 
-  <h2>Admin Download Center - Premium Answer PDF</h2>
+  <h2>Admin Download Center - Clean 2 Column PDF</h2>
 
   <div class="control-bar">
     <select id="examSelect">
       <option value="">-- Select Exam --</option>
     </select>
-
     <button id="downloadBtn">Download PDF</button>
   </div>
 
-  <div class="preview-box">
-    <div class="preview-note">
-      এই PDF-তে থাকবে: Logo, Cover Page, 2-Column Layout, Answer Highlight, Explanation, Watermark, Page Number
-    </div>
+  <div class="note-box">
+    এই PDF version-এ থাকবে: দুই কলাম, চারদিকে margin, মাঝখানে gap, clean layout, বড় watermark, logo শুধু header-এ, এবং footer-এ clean page number।
   </div>
 
   <script src="exam-status.js"></script>
@@ -316,9 +231,9 @@
     const downloadBtn = document.getElementById("downloadBtn");
     const BASE_PATH = "/krisishikkha";
 
+    // শুধু visible + live exam
     for (const examId in EXAM_STATUS) {
       const exam = EXAM_STATUS[examId];
-
       if (exam.visible && exam.status === "live") {
         const option = document.createElement("option");
         option.value = examId;
@@ -335,29 +250,9 @@
         .replace(/"/g, "&quot;");
     }
 
-    function chunkArray(arr, size) {
-      const result = [];
-      for (let i = 0; i < arr.length; i += size) {
-        result.push(arr.slice(i, i + size));
-      }
-      return result;
-    }
-
     function clearOldQuestionScripts() {
       const oldScripts = document.querySelectorAll('script[data-question-loader="true"]');
       oldScripts.forEach(s => s.remove());
-    }
-
-    function getQuestionsArray() {
-      if (typeof QUESTIONS !== "undefined" && Array.isArray(QUESTIONS)) {
-        return QUESTIONS;
-      }
-
-      if (typeof window.QUESTIONS !== "undefined" && Array.isArray(window.QUESTIONS)) {
-        return window.QUESTIONS;
-      }
-
-      return null;
     }
 
     function loadQuestionsJS(path) {
@@ -368,31 +263,44 @@
         script.src = path + "?t=" + Date.now();
         script.dataset.questionLoader = "true";
 
-        script.onload = () => {
-          console.log("Loaded questions from:", script.src);
-          resolve();
-        };
-
-        script.onerror = () => {
-          console.error("Failed to load questions from:", script.src);
-          reject(new Error("questions.js load failed"));
-        };
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error("questions.js load failed"));
 
         document.body.appendChild(script);
       });
     }
 
-    function buildQuestionPages(questions, examTitle) {
-      const pages = [];
-      const perPage = 12;
-      const pageChunks = chunkArray(questions, perPage);
+    function getQuestionsArray() {
+      if (typeof QUESTIONS !== "undefined" && Array.isArray(QUESTIONS)) {
+        return QUESTIONS;
+      }
+      if (typeof window.QUESTIONS !== "undefined" && Array.isArray(window.QUESTIONS)) {
+        return window.QUESTIONS;
+      }
+      return null;
+    }
 
-      pageChunks.forEach((pageQuestions, pageIndex) => {
+    function chunkArray(arr, size) {
+      const result = [];
+      for (let i = 0; i < arr.length; i += size) {
+        result.push(arr.slice(i, i + size));
+      }
+      return result;
+    }
+
+    // প্রতি page-এ 6 question = 2 column × 3 row
+    function buildPdfDocument(selectedExam, questions) {
+      const examTitle = EXAM_STATUS[selectedExam].title;
+      const pages = chunkArray(questions, 6);
+      const root = document.createElement("div");
+      root.className = "pdf-root";
+
+      pages.forEach((pageQuestions, pageIndex) => {
         const page = document.createElement("div");
-        page.className = "content-page";
+        page.className = "pdf-page";
 
         const watermark = document.createElement("div");
-        watermark.className = "page-watermark";
+        watermark.className = "watermark";
         watermark.textContent = "krisishikkha.com";
         page.appendChild(watermark);
 
@@ -402,33 +310,21 @@
           <img src="${BASE_PATH}/assets/icons/icon-192.png" alt="Logo">
           <h1>${escapeHtml(examTitle)}</h1>
           <h3>Answer Sheet with Detailed Explanation</h3>
-          <div class="page-subline">
-            মোট প্রশ্ন: ${questions.length} | পৃষ্ঠা অংশ: ${pageIndex + 1}
-          </div>
+          <div class="page-meta">মোট প্রশ্ন: ${questions.length} | পৃষ্ঠা: ${pageIndex + 1}</div>
         `;
         page.appendChild(header);
 
-        const wrapper = document.createElement("div");
-        wrapper.className = "two-col";
+        const grid = document.createElement("div");
+        grid.className = "question-grid";
 
-        const leftCol = document.createElement("div");
-        leftCol.className = "col";
+        pageQuestions.forEach((q, i) => {
+          const globalIndex = pageIndex * 6 + i;
+          const qbox = document.createElement("div");
+          qbox.className = "qbox";
 
-        const rightCol = document.createElement("div");
-        rightCol.className = "col";
-
-        pageQuestions.forEach((q, localIndex) => {
-          const globalIndex = pageIndex * perPage + localIndex;
-          const qEl = document.createElement("div");
-          qEl.className = "qitem";
-
-          const optionsHtml = (q.options || []).map((opt, j) => {
-            const isCorrect = j === q.answer;
-            return `
-              <div class="option ${isCorrect ? "correct-option" : ""}">
-                ${String.fromCharCode(65 + j)}. ${escapeHtml(opt)}
-              </div>
-            `;
+          const optionsHtml = (q.options || []).map((opt, idx) => {
+            const correct = idx === q.answer ? "correct-option" : "";
+            return `<div class="option ${correct}">${String.fromCharCode(65 + idx)}. ${escapeHtml(opt)}</div>`;
           }).join("");
 
           const correctText =
@@ -436,58 +332,25 @@
               ? q.options[q.answer]
               : "";
 
-          qEl.innerHTML = `
+          qbox.innerHTML = `
             <div class="qtitle">${globalIndex + 1}. ${escapeHtml(q.question)}</div>
             ${optionsHtml}
             <div class="answer-line">✔ সঠিক উত্তর: ${escapeHtml(correctText)}</div>
             <div class="explanation"><strong>ব্যাখ্যা:</strong> ${escapeHtml(q.explanation || "")}</div>
           `;
 
-          if (localIndex % 2 === 0) {
-            leftCol.appendChild(qEl);
-          } else {
-            rightCol.appendChild(qEl);
-          }
+          grid.appendChild(qbox);
         });
 
-        wrapper.appendChild(leftCol);
-        wrapper.appendChild(rightCol);
-        page.appendChild(wrapper);
+        page.appendChild(grid);
 
-        pages.push(page);
+        const footer = document.createElement("div");
+        footer.className = "page-footer";
+        footer.textContent = `krisishikkha.com | Page ${pageIndex + 1} of ${pages.length}`;
+        page.appendChild(footer);
+
+        root.appendChild(page);
       });
-
-      return pages;
-    }
-
-    function buildPdfDocument(selectedExam, questions) {
-      const examTitle = EXAM_STATUS[selectedExam].title;
-
-      const root = document.createElement("div");
-      root.className = "pdf-root";
-
-      const cover = document.createElement("div");
-      cover.className = "cover-page";
-      cover.innerHTML = `
-        <div class="cover-watermark">krisishikkha.com</div>
-        <img src="${BASE_PATH}/assets/icons/icon-192.png" alt="Logo" class="cover-logo">
-        <div class="cover-title">${escapeHtml(examTitle)}</div>
-        <div class="cover-subtitle">Answer Sheet with Detailed Solution</div>
-        <div class="cover-line"></div>
-        <div class="cover-meta">
-          <div><strong>ওয়েবসাইট:</strong> krisishikkha.com</div>
-          <div><strong>তারিখ:</strong> ${new Date().toLocaleDateString("bn-BD")}</div>
-          <div><strong>মোট প্রশ্ন:</strong> ${questions.length}</div>
-          <div><strong>ফরম্যাট:</strong> Premium Two-Column PDF</div>
-        </div>
-        <div class="cover-footer">
-          কৃষিশিক্ষা - স্মার্ট প্রস্তুতির নির্ভরযোগ্য ঠিকানা
-        </div>
-      `;
-      root.appendChild(cover);
-
-      const pages = buildQuestionPages(questions, examTitle);
-      pages.forEach(page => root.appendChild(page));
 
       return root;
     }
@@ -501,15 +364,13 @@
       }
 
       const questionPath = `${BASE_PATH}/exam-corner/${selectedExam}/questions.js`;
-      console.log("Trying path:", questionPath);
 
       try {
         await loadQuestionsJS(questionPath);
-
         const questions = getQuestionsArray();
 
         if (!questions || questions.length === 0) {
-          alert("প্রশ্ন ফাইল লোড হয়েছে, কিন্তু QUESTIONS পাওয়া যায়নি।");
+          alert("প্রশ্ন পাওয়া যায়নি।");
           return;
         }
 
@@ -522,9 +383,7 @@
           html2canvas: {
             scale: 2,
             useCORS: true,
-            backgroundColor: "#ffffff",
-            scrollX: 0,
-            scrollY: 0
+            backgroundColor: "#ffffff"
           },
           jsPDF: {
             unit: "pt",
@@ -536,33 +395,7 @@
           }
         };
 
-        html2pdf().set(opt).from(pdfDoc).toPdf().get("pdf").then(function(pdf) {
-          const totalPages = pdf.internal.getNumberOfPages();
-          const pageWidth = pdf.internal.pageSize.getWidth();
-          const pageHeight = pdf.internal.pageSize.getHeight();
-
-          for (let i = 1; i <= totalPages; i++) {
-            pdf.setPage(i);
-            pdf.setFontSize(10);
-            pdf.setTextColor(60, 60, 60);
-
-            if (i > 1) {
-              pdf.text(
-                EXAM_STATUS[selectedExam].title,
-                pageWidth / 2,
-                18,
-                { align: "center" }
-              );
-            }
-
-            pdf.text(
-              `krisishikkha.com | ${new Date().toLocaleDateString("bn-BD")} | পৃষ্ঠা ${i} / ${totalPages}`,
-              pageWidth / 2,
-              pageHeight - 14,
-              { align: "center" }
-            );
-          }
-        }).save();
+        html2pdf().set(opt).from(pdfDoc).save();
 
       } catch (err) {
         console.error(err);
@@ -570,6 +403,5 @@
       }
     });
   </script>
-
 </body>
 </html>
