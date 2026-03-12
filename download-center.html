@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Download Center - Clean 2 Column PDF</title>
+  <title>Admin Download Center - Final Answer PDF</title>
 
   <style>
     body{
@@ -16,7 +16,7 @@
 
     h2{
       margin:0 0 20px 0;
-      font-size:22px;
+      font-size:24px;
     }
 
     .control-bar{
@@ -27,8 +27,8 @@
     }
 
     select, button{
-      padding:10px 14px;
-      font-size:16px;
+      padding:12px 14px;
+      font-size:17px;
       border:1px solid #ccc;
       border-radius:6px;
       box-sizing:border-box;
@@ -52,11 +52,10 @@
       border-radius:10px;
       padding:16px;
       box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      font-size:14px;
+      font-size:15px;
       line-height:1.6;
     }
 
-    /* ===== PDF ROOT ===== */
     .pdf-root{
       width:794px;
       margin:0 auto;
@@ -64,7 +63,74 @@
       color:#111;
     }
 
-    /* ===== PAGE ===== */
+    /* ===== COVER PAGE ===== */
+    .cover-page{
+      width:794px;
+      height:1123px;
+      box-sizing:border-box;
+      position:relative;
+      background:#fff;
+      page-break-after:always;
+      overflow:hidden;
+      padding:80px 55px;
+      text-align:center;
+    }
+
+    .cover-watermark{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%) rotate(-25deg);
+      font-size:90px;
+      color:rgba(0,0,0,0.04);
+      font-weight:700;
+      white-space:nowrap;
+      pointer-events:none;
+      user-select:none;
+    }
+
+    .cover-logo{
+      width:115px;
+      height:115px;
+      object-fit:contain;
+      margin-top:80px;
+      margin-bottom:20px;
+    }
+
+    .cover-title{
+      font-size:34px;
+      font-weight:700;
+      color:#1f6f46;
+      line-height:1.4;
+      margin-bottom:10px;
+    }
+
+    .cover-subtitle{
+      font-size:22px;
+      font-weight:600;
+      margin-bottom:22px;
+    }
+
+    .cover-line{
+      width:180px;
+      height:4px;
+      background:#1f6f46;
+      margin:20px auto 25px auto;
+      border-radius:10px;
+    }
+
+    .cover-meta{
+      font-size:19px;
+      line-height:2;
+    }
+
+    .cover-footer{
+      margin-top:40px;
+      font-size:17px;
+      color:#444;
+    }
+
+    /* ===== CONTENT PAGE ===== */
     .pdf-page{
       width:794px;
       height:1123px;
@@ -73,7 +139,7 @@
       background:#fff;
       page-break-after:always;
       overflow:hidden;
-      padding:40px 36px 40px 36px; /* চারদিকে margin */
+      padding:28px 30px 34px 30px; /* চারদিকে margin */
     }
 
     .watermark{
@@ -81,8 +147,8 @@
       top:50%;
       left:50%;
       transform:translate(-50%,-50%) rotate(-25deg);
-      font-size:78px;
-      color:rgba(0,0,0,0.04);
+      font-size:84px;
+      color:rgba(0,0,0,0.035);
       font-weight:700;
       white-space:nowrap;
       pointer-events:none;
@@ -90,54 +156,60 @@
       z-index:0;
     }
 
-    .page-header{
+    .page-top{
       text-align:center;
+      font-size:18px;
+      font-weight:700;
+      color:#1f6f46;
+      margin-bottom:12px;
       position:relative;
       z-index:2;
-      margin-bottom:16px;
     }
 
-    .page-header img{
-      width:52px;
-      height:52px;
-      object-fit:contain;
-      margin-bottom:6px;
+    .page-sub{
+      text-align:center;
+      font-size:14px;
+      margin-bottom:14px;
+      color:#333;
+      position:relative;
+      z-index:2;
     }
 
-    .page-header h1{
-      margin:0;
-      font-size:24px;
-      color:#1f6f46;
-      line-height:1.3;
-    }
-
-    .page-header h3{
-      margin:6px 0 0 0;
-      font-size:15px;
-      color:#222;
-      font-weight:600;
-    }
-
-    .page-meta{
-      margin-top:4px;
-      font-size:13px;
-      color:#444;
-    }
-
-    /* ===== TWO COLUMN GRID ===== */
+    /* ===== TWO COLUMN WITH BLACK DIVIDER ===== */
     .question-grid{
       position:relative;
       z-index:2;
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap:18px;   /* মাঝ বরাবর gutter */
-      row-gap:12px;
+      grid-template-columns: 1fr 6px 1fr; /* মাঝখানে deep black divider */
+      column-gap:0;
+      row-gap:10px;
       align-items:start;
     }
 
+    .divider{
+      background:#111;
+      border-radius:4px;
+      grid-row:1 / span 20;
+      min-height:100%;
+    }
+
+    .col{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .left-col{
+      padding-right:8px;
+    }
+
+    .right-col{
+      padding-left:8px;
+    }
+
     .qbox{
-      border:1px solid #dadada;
-      border-radius:8px;
+      border:1px solid #d6d6d6;
+      border-radius:7px;
       background:#fffefb;
       padding:12px;
       box-sizing:border-box;
@@ -146,16 +218,16 @@
     }
 
     .qtitle{
-      font-size:14px;
+      font-size:16px;
       font-weight:700;
-      line-height:1.5;
+      line-height:1.55;
       margin-bottom:8px;
     }
 
     .option{
-      font-size:13px;
-      line-height:1.45;
-      margin:0 0 4px 14px;
+      font-size:15px;
+      line-height:1.5;
+      margin:0 0 5px 16px;
     }
 
     .correct-option{
@@ -167,9 +239,9 @@
       margin-top:8px;
       background:#edf8f0;
       border-left:4px solid #2E8B57;
-      padding:6px 8px;
+      padding:7px 8px;
       border-radius:4px;
-      font-size:13px;
+      font-size:14px;
       font-weight:700;
       color:#168347;
     }
@@ -178,19 +250,19 @@
       margin-top:8px;
       background:#f1f1f1;
       border-left:4px solid #2E8B57;
-      padding:7px 8px;
+      padding:8px 8px;
       border-radius:4px;
-      font-size:12.5px;
+      font-size:14px;
       line-height:1.55;
     }
 
     .page-footer{
       position:absolute;
-      left:36px;
-      right:36px;
-      bottom:18px;
+      left:30px;
+      right:30px;
+      bottom:12px;
       text-align:center;
-      font-size:10px;
+      font-size:11px;
       color:#555;
       z-index:2;
     }
@@ -200,7 +272,8 @@
         width:100%;
       }
 
-      .pdf-page{
+      .pdf-page,
+      .cover-page{
         width:100%;
         height:auto;
         min-height:1123px;
@@ -210,7 +283,7 @@
 </head>
 <body>
 
-  <h2>Admin Download Center - Clean 2 Column PDF</h2>
+  <h2>Admin Download Center - Final Answer PDF</h2>
 
   <div class="control-bar">
     <select id="examSelect">
@@ -220,7 +293,7 @@
   </div>
 
   <div class="note-box">
-    এই PDF version-এ থাকবে: দুই কলাম, চারদিকে margin, মাঝখানে gap, clean layout, বড় watermark, logo শুধু header-এ, এবং footer-এ clean page number।
+    এই version-এ cover page শুধু প্রথমে থাকবে। বাকি page-এ icon/logo repeat হবে না। দুই কলামের মাঝে deep black divider থাকবে, font বড় হবে, আর ফাঁকা জায়গা কম থাকবে।
   </div>
 
   <script src="exam-status.js"></script>
@@ -231,7 +304,6 @@
     const downloadBtn = document.getElementById("downloadBtn");
     const BASE_PATH = "/krisishikkha";
 
-    // শুধু visible + live exam
     for (const examId in EXAM_STATUS) {
       const exam = EXAM_STATUS[examId];
       if (exam.visible && exam.status === "live") {
@@ -288,14 +360,33 @@
       return result;
     }
 
-    // প্রতি page-এ 6 question = 2 column × 3 row
-    function buildPdfDocument(selectedExam, questions) {
+    function buildCoverPage(selectedExam, questions) {
       const examTitle = EXAM_STATUS[selectedExam].title;
-      const pages = chunkArray(questions, 6);
-      const root = document.createElement("div");
-      root.className = "pdf-root";
+      const cover = document.createElement("div");
+      cover.className = "cover-page";
+      cover.innerHTML = `
+        <div class="cover-watermark">krisishikkha.com</div>
+        <img src="${BASE_PATH}/assets/icons/icon-192.png" alt="Logo" class="cover-logo">
+        <div class="cover-title">${escapeHtml(examTitle)}</div>
+        <div class="cover-subtitle">Answer Sheet with Detailed Explanation</div>
+        <div class="cover-line"></div>
+        <div class="cover-meta">
+          <div><strong>ওয়েবসাইট:</strong> krisishikkha.com</div>
+          <div><strong>তারিখ:</strong> ${new Date().toLocaleDateString("bn-BD")}</div>
+          <div><strong>মোট প্রশ্ন:</strong> ${questions.length}</div>
+        </div>
+        <div class="cover-footer">কৃষিশিক্ষা - স্মার্ট প্রস্তুতির নির্ভরযোগ্য ঠিকানা</div>
+      `;
+      return cover;
+    }
 
-      pages.forEach((pageQuestions, pageIndex) => {
+    // প্রতি content page-এ 8 question = left 4 + right 4
+    function buildContentPages(selectedExam, questions) {
+      const examTitle = EXAM_STATUS[selectedExam].title;
+      const pages = [];
+      const pageChunks = chunkArray(questions, 8);
+
+      pageChunks.forEach((pageQuestions, pageIndex) => {
         const page = document.createElement("div");
         page.className = "pdf-page";
 
@@ -304,21 +395,30 @@
         watermark.textContent = "krisishikkha.com";
         page.appendChild(watermark);
 
-        const header = document.createElement("div");
-        header.className = "page-header";
-        header.innerHTML = `
-          <img src="${BASE_PATH}/assets/icons/icon-192.png" alt="Logo">
-          <h1>${escapeHtml(examTitle)}</h1>
-          <h3>Answer Sheet with Detailed Explanation</h3>
-          <div class="page-meta">মোট প্রশ্ন: ${questions.length} | পৃষ্ঠা: ${pageIndex + 1}</div>
-        `;
-        page.appendChild(header);
+        const top = document.createElement("div");
+        top.className = "page-top";
+        top.textContent = examTitle;
+        page.appendChild(top);
+
+        const sub = document.createElement("div");
+        sub.className = "page-sub";
+        sub.textContent = `মোট প্রশ্ন: ${questions.length} | পৃষ্ঠা: ${pageIndex + 1}`;
+        page.appendChild(sub);
 
         const grid = document.createElement("div");
         grid.className = "question-grid";
 
+        const leftCol = document.createElement("div");
+        leftCol.className = "col left-col";
+
+        const divider = document.createElement("div");
+        divider.className = "divider";
+
+        const rightCol = document.createElement("div");
+        rightCol.className = "col right-col";
+
         pageQuestions.forEach((q, i) => {
-          const globalIndex = pageIndex * 6 + i;
+          const globalIndex = pageIndex * 8 + i;
           const qbox = document.createElement("div");
           qbox.className = "qbox";
 
@@ -339,18 +439,37 @@
             <div class="explanation"><strong>ব্যাখ্যা:</strong> ${escapeHtml(q.explanation || "")}</div>
           `;
 
-          grid.appendChild(qbox);
+          if (i < 4) {
+            leftCol.appendChild(qbox);
+          } else {
+            rightCol.appendChild(qbox);
+          }
         });
 
+        grid.appendChild(leftCol);
+        grid.appendChild(divider);
+        grid.appendChild(rightCol);
         page.appendChild(grid);
 
         const footer = document.createElement("div");
         footer.className = "page-footer";
-        footer.textContent = `krisishikkha.com | Page ${pageIndex + 1} of ${pages.length}`;
+        footer.textContent = `krisishikkha.com | Page ${pageIndex + 1} of ${pageChunks.length}`;
         page.appendChild(footer);
 
-        root.appendChild(page);
+        pages.push(page);
       });
+
+      return pages;
+    }
+
+    function buildPdfDocument(selectedExam, questions) {
+      const root = document.createElement("div");
+      root.className = "pdf-root";
+
+      root.appendChild(buildCoverPage(selectedExam, questions));
+
+      const contentPages = buildContentPages(selectedExam, questions);
+      contentPages.forEach(page => root.appendChild(page));
 
       return root;
     }
