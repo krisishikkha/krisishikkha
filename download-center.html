@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Download Center - Final Clean PDF</title>
+  <title>Admin Download Center - Final Answer PDF</title>
 
   <style>
     body{
@@ -122,7 +122,7 @@
     .content-section{
       position:relative;
       background:#fff;
-      padding:28px 30px 34px 30px;
+      padding:20px 24px 28px 24px;
       box-sizing:border-box;
     }
 
@@ -145,7 +145,7 @@
       font-size:20px;
       font-weight:700;
       color:#1f6f46;
-      margin-bottom:6px;
+      margin-bottom:4px;
       position:relative;
       z-index:2;
     }
@@ -154,7 +154,7 @@
       text-align:center;
       font-size:15px;
       color:#333;
-      margin-bottom:16px;
+      margin-bottom:12px;
       position:relative;
       z-index:2;
     }
@@ -178,7 +178,7 @@
     .col{
       display:flex;
       flex-direction:column;
-      gap:10px;
+      gap:8px;
     }
 
     .left-col{
@@ -193,7 +193,7 @@
       border:1px solid #d6d6d6;
       border-radius:7px;
       background:#fffefb;
-      padding:12px;
+      padding:10px;
       box-sizing:border-box;
       break-inside:avoid;
       page-break-inside:avoid;
@@ -201,16 +201,16 @@
     }
 
     .qtitle{
-      font-size:16px;
+      font-size:15px;
       font-weight:700;
-      line-height:1.55;
-      margin-bottom:8px;
+      line-height:1.45;
+      margin-bottom:6px;
     }
 
     .option{
-      font-size:15px;
-      line-height:1.5;
-      margin:0 0 5px 16px;
+      font-size:14px;
+      line-height:1.45;
+      margin:0 0 4px 16px;
     }
 
     .correct-option{
@@ -218,32 +218,21 @@
       font-weight:700;
     }
 
-    .answer-line{
-      margin-top:8px;
-      background:#edf8f0;
+    .explanation{
+      margin-top:7px;
+      background:#f1f1f1;
       border-left:4px solid #2E8B57;
       padding:7px 8px;
       border-radius:4px;
-      font-size:14px;
-      font-weight:700;
-      color:#168347;
-    }
-
-    .explanation{
-      margin-top:8px;
-      background:#f1f1f1;
-      border-left:4px solid #2E8B57;
-      padding:8px 8px;
-      border-radius:4px;
-      font-size:14px;
-      line-height:1.55;
+      font-size:13px;
+      line-height:1.5;
     }
 
     .footer-note{
       text-align:center;
       font-size:11px;
       color:#555;
-      margin-top:18px;
+      margin-top:16px;
       position:relative;
       z-index:2;
     }
@@ -251,7 +240,7 @@
 </head>
 <body>
 
-  <h2>Admin Download Center - Final Clean PDF</h2>
+  <h2>Admin Download Center - Final Answer PDF</h2>
 
   <div class="control-bar">
     <select id="examSelect">
@@ -309,12 +298,9 @@
       return null;
     }
 
-    function buildPdfDocument(selectedExam, questions) {
+    function buildCoverPage(selectedExam, questions) {
       const examTitle = EXAM_STATUS[selectedExam].title;
-      const root = document.createElement("div");
-      root.className = "pdf-root";
 
-      // Cover page
       const cover = document.createElement("div");
       cover.className = "cover-page";
       cover.innerHTML = `
@@ -330,9 +316,12 @@
         </div>
         <div class="cover-footer">কৃষিশিক্ষা - স্মার্ট প্রস্তুতির নির্ভরযোগ্য ঠিকানা</div>
       `;
-      root.appendChild(cover);
+      return cover;
+    }
 
-      // Content section
+    function buildContentSection(selectedExam, questions) {
+      const examTitle = EXAM_STATUS[selectedExam].title;
+
       const content = document.createElement("div");
       content.className = "content-section";
 
@@ -372,15 +361,9 @@
           return `<div class="option ${correct}">${String.fromCharCode(65 + idx)}. ${escapeHtml(opt)}</div>`;
         }).join("");
 
-        const correctText =
-          q.options && q.options[q.answer] !== undefined
-            ? q.options[q.answer]
-            : "";
-
         qbox.innerHTML = `
           <div class="qtitle">${index + 1}. ${escapeHtml(q.question)}</div>
           ${optionsHtml}
-          <div class="answer-line">✔ সঠিক উত্তর: ${escapeHtml(correctText)}</div>
           <div class="explanation"><strong>ব্যাখ্যা:</strong> ${escapeHtml(q.explanation || "")}</div>
         `;
 
@@ -401,7 +384,16 @@
       footer.textContent = "krisishikkha.com";
       content.appendChild(footer);
 
-      root.appendChild(content);
+      return content;
+    }
+
+    function buildPdfDocument(selectedExam, questions) {
+      const root = document.createElement("div");
+      root.className = "pdf-root";
+
+      root.appendChild(buildCoverPage(selectedExam, questions));
+      root.appendChild(buildContentSection(selectedExam, questions));
+
       return root;
     }
 
