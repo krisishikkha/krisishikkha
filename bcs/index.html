@@ -6,50 +6,98 @@
   <title>BCS | Krisishikkha</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
   <div class="bcs-container">
+
     <div class="bcs-header">
       <p class="breadcrumb">
         <a href="../index.html">Home</a> / <span>BCS</span>
       </p>
+
       <h1>BCS Preparation</h1>
+
       <p class="subtitle">
         Question Bank, topic-wise notes, and article resources for your BCS preparation journey.
       </p>
     </div>
 
+    <!-- Login Button -->
     <div class="top-actions">
       <a href="login.html" class="login-btn">Login</a>
     </div>
 
+    <!-- Login Status -->
+    <p id="homeLoginStatus" class="login-status-text">
+      Not logged in
+    </p>
+
+    <!-- Main Cards -->
     <div class="main-grid">
+
       <a href="question-bank/index.html" class="main-card question-bank-card">
         <span class="card-icon">📄</span>
         <span class="card-title">Question Bank</span>
-        <span class="card-text">Previous BCS question papers and PDF resources.</span>
+        <span class="card-text">
+          Previous BCS question papers and PDF resources.
+        </span>
       </a>
 
       <a href="notes/index.html" class="main-card notes-card">
         <span class="card-icon">📚</span>
         <span class="card-title">Notes</span>
-        <span class="card-text">Topic-wise PDF notes arranged for quick and easy preparation.</span>
+        <span class="card-text">
+          Topic-wise PDF notes arranged for quick and easy preparation.
+        </span>
       </a>
 
       <a href="articles/index.html" class="main-card articles-card">
         <span class="card-icon">📝</span>
         <span class="card-title">Important Topics</span>
-        <span class="card-text">Topic-based article resources including premium study materials.</span>
+        <span class="card-text">
+          Topic-based article resources including premium study materials.
+        </span>
       </a>
+
     </div>
 
+    <!-- Info Box -->
     <div class="info-box">
       <h3>Access Information</h3>
       <p>
         Some resources are free, while premium notes, question banks, and articles require valid login access.
       </p>
     </div>
+
   </div>
+
+
+  <!-- Login System Scripts -->
+  <script src="data/users.js"></script>
+  <script src="auth.js"></script>
+
+  <script>
+    const homeLoginStatus = document.getElementById("homeLoginStatus");
+
+    if (homeLoginStatus) {
+
+      if (typeof isLoggedIn === "function" && isLoggedIn()) {
+
+        const session = getSession();
+
+        homeLoginStatus.textContent =
+          "Logged in as " + session.username;
+
+      } else {
+
+        homeLoginStatus.textContent =
+          "Not logged in";
+
+      }
+
+    }
+  </script>
 
 </body>
 </html>
