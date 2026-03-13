@@ -4,6 +4,18 @@ function buildWhatsAppLink() {
   return `https://wa.me/${number}?text=${text}`;
 }
 
+function getLoginPath() {
+  const currentPath = window.location.pathname;
+  const bcsIndex = currentPath.indexOf("/bcs/");
+
+  if (bcsIndex !== -1) {
+    const basePath = currentPath.substring(0, bcsIndex + 5); // includes /bcs/
+    return basePath + "login.html";
+  }
+
+  return "login.html";
+}
+
 function removePremiumPopup() {
   const existing = document.getElementById("premiumPopupOverlay");
   if (existing) existing.remove();
@@ -22,7 +34,7 @@ function showPremiumPopup(title, message, showLoginButton = true) {
       <p>${message}</p>
 
       <div class="premium-popup-actions">
-        ${showLoginButton ? `<a href="/bcs/login.html" class="popup-btn popup-login-btn">Login</a>` : ""}
+        ${showLoginButton ? `<button class="popup-btn popup-login-btn" id="premiumLoginBtn" type="button">Login</button>` : ""}
         <a href="${buildWhatsAppLink()}" target="_blank" class="popup-btn popup-whatsapp-btn">Contact on WhatsApp</a>
         <button class="popup-btn popup-close-btn" id="premiumPopupCloseBtn" type="button">Close</button>
       </div>
@@ -32,7 +44,16 @@ function showPremiumPopup(title, message, showLoginButton = true) {
   document.body.appendChild(overlay);
 
   const closeBtn = document.getElementById("premiumPopupCloseBtn");
-  closeBtn.addEventListener("click", removePremiumPopup);
+  if (closeBtn) {
+    closeBtn.addEventListener("click", removePremiumPopup);
+  }
+
+  const loginBtn = document.getElementById("premiumLoginBtn");
+  if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+      window.location.href = getLoginPath();
+    });
+  }
 
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
@@ -42,8 +63,6 @@ function showPremiumPopup(title, message, showLoginButton = true) {
 }
 
 function handlePremiumClick(event) {
-  const item = event.currentTarget;
-
   const accessState =
     typeof getAccessState === "function"
       ? getAccessState()
