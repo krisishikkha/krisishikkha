@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BCS PDF Viewer</title>
+  <link rel="stylesheet" href="viewer.css" />
+  <script src="../../vendor/pdfjs/pdf.min.js"></script>
+</head>
+<body>
 
+  <div class="viewer-header">
+    <button id="backBtn" class="header-btn">← Back</button>
+    <div class="viewer-title-wrap">
+      <h1 id="docTitle">PDF Viewer</h1>
+      <p id="docMeta">Protected reading mode</p>
+    </div>
+  </div>
+
+  <div class="viewer-toolbar">
+    <div class="toolbar-item">Read Progress: <span id="progressPercent">0%</span></div>
+    <div class="toolbar-item">Pages: <span id="pageCount">0</span></div>
+  </div>
+
+  <div id="loadingBox" class="loading-box">Loading PDF...</div>
+
+  <div id="pdfContainer" class="pdf-container"></div>
+
+  <div class="watermark watermark-1">krisishikkha.com</div>
+  <div class="watermark watermark-2">krisishikkha.com</div>
+
+  <script src="../config.js"></script>
+  <script src="../data/users.js"></script>
+  <script src="../auth.js"></script>
+  <script src="../access.js"></script>
+  <script src="controls.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>
