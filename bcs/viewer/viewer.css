@@ -1,1 +1,164 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background: #eef1f4;
+  color: #222;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
+body {
+  padding-top: 120px;
+}
+
+.viewer-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #0d47a1;
+  color: #fff;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 9999;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.16);
+}
+
+.viewer-title-wrap {
+  min-width: 0;
+}
+
+.viewer-title-wrap h1 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.viewer-title-wrap p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.header-btn {
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.viewer-toolbar {
+  position: fixed;
+  top: 74px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  z-index: 9998;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.toolbar-item {
+  color: #333;
+}
+
+.loading-box {
+  max-width: 900px;
+  margin: 18px auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+.pdf-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 10px 40px;
+}
+
+.pdf-page-wrap {
+  position: relative;
+  margin: 18px auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.pdf-page-canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.page-label {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+  font-weight: bold;
+}
+
+.watermark {
+  position: fixed;
+  pointer-events: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0,0,0,0.08);
+  transform: rotate(-28deg);
+  z-index: 9997;
+}
+
+.watermark-1 {
+  top: 32%;
+  left: 8%;
+}
+
+.watermark-2 {
+  top: 65%;
+  right: 8%;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-top: 128px;
+  }
+
+  .viewer-header {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .viewer-title-wrap h1 {
+    font-size: 17px;
+  }
+
+  .viewer-toolbar {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .watermark {
+    font-size: 18px;
+  }
+}
