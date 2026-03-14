@@ -7,12 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Right click block
   document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
   });
 
-  // Copy / Print / Save shortcuts block
   document.addEventListener("keydown", (e) => {
     const key = e.key.toLowerCase();
 
@@ -25,12 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Drag block
   document.addEventListener("dragstart", (e) => {
     e.preventDefault();
   });
 
-  // Text selection block
   document.addEventListener("selectstart", (e) => {
     e.preventDefault();
   });
