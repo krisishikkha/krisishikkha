@@ -15,90 +15,25 @@
         <a href="../index.html">Articles</a> /
         <span>Topic 01</span>
       </p>
+
       <h1>Topic 01 Articles</h1>
       <p class="subtitle">
         Article resources for this topic.
       </p>
     </div>
 
-    <div class="section-list">
-
-      <a href="article-01.html" class="list-card">
-        <div class="list-card-left">
-          <span class="list-icon">📘</span>
-          <div class="list-content">
-            <span class="list-title">Article 01</span>
-            <span class="list-subtitle">Free article for this topic.</span>
-          </div>
-        </div>
-        <span class="badge free-badge">Free</span>
-      </a>
-
-      <a href="article-02.html" class="list-card">
-        <div class="list-card-left">
-          <span class="list-icon">📘</span>
-          <div class="list-content">
-            <span class="list-title">Article 02</span>
-            <span class="list-subtitle">Free article for this topic.</span>
-          </div>
-        </div>
-        <span class="badge free-badge">Free</span>
-      </a>
-
-      <a href="article-03.html" class="list-card">
-        <div class="list-card-left">
-          <span class="list-icon">📘</span>
-          <div class="list-content">
-            <span class="list-title">Article 03</span>
-            <span class="list-subtitle">Free article for this topic.</span>
-          </div>
-        </div>
-        <span class="badge free-badge">Free</span>
-      </a>
-
-      <a href="premium-01.html"
-         class="list-card premium-item"
-         data-type="article"
-         data-title="Topic 01 Premium Article">
-        <div class="list-card-left">
-          <span class="list-icon">🔒</span>
-          <div class="list-content">
-            <span class="list-title">Premium Article 01</span>
-            <span class="list-subtitle">Premium article for this topic.</span>
-          </div>
-        </div>
-        <span class="badge premium-badge">Premium</span>
-      </a>
-
-    </div>
+    <div id="autoList" class="section-list" data-mode="articles" data-json="articles.json"></div>
 
     <div class="back-wrap">
       <a href="../index.html" class="back-btn">← Back to Articles</a>
     </div>
   </div>
 
+  <script src="../../assets/js/auto-list.js"></script>
   <script src="../../config.js"></script>
   <script src="../../data/users.js"></script>
   <script src="../../auth.js"></script>
   <script src="../../access.js"></script>
   <script src="../../assets/js/premium.js"></script>
-
-  <script>
-    document.addEventListener("contextmenu", function(e) {
-      e.preventDefault();
-    });
-
-    document.addEventListener("keydown", function(e) {
-      const key = e.key.toLowerCase();
-      if ((e.ctrlKey || e.metaKey) && (key === "c" || key === "p" || key === "s")) {
-        e.preventDefault();
-      }
-    });
-
-    document.addEventListener("selectstart", function(e) {
-      e.preventDefault();
-    });
-  </script>
-
 </body>
 </html>
