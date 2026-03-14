@@ -26,6 +26,11 @@
       <a href="login.html" class="login-btn">Login</a>
     </div>
 
+    <!-- Login Status -->
+    <p id="homeLoginStatus" class="login-status-text">
+      Not logged in
+    </p>
+
     <div class="section-grid">
 
       <a href="question-bank/index.html" class="section-card question-card">
@@ -63,6 +68,32 @@
     </div>
 
   </div>
+
+  <!-- Login System Scripts -->
+  <script src="data/users.js"></script>
+  <script src="auth.js"></script>
+
+  <script>
+    const homeLoginStatus = document.getElementById("homeLoginStatus");
+
+    if (homeLoginStatus) {
+
+      if (typeof isLoggedIn === "function" && isLoggedIn()) {
+
+        const session = getSession();
+
+        homeLoginStatus.textContent =
+          "Logged in as " + session.username;
+
+      } else {
+
+        homeLoginStatus.textContent =
+          "Not logged in";
+
+      }
+
+    }
+  </script>
 
 </body>
 </html>
