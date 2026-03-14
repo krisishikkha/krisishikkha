@@ -9,7 +9,7 @@ function getLoginPath() {
   const bcsIndex = currentPath.indexOf("/bcs/");
 
   if (bcsIndex !== -1) {
-    const basePath = currentPath.substring(0, bcsIndex + 5); // includes /bcs/
+    const basePath = currentPath.substring(0, bcsIndex + 5);
     return basePath + "login.html";
   }
 
@@ -62,7 +62,7 @@ function showPremiumPopup(title, message, showLoginButton = true) {
   });
 }
 
-function handlePremiumClick(event) {
+function handlePremiumAccess(event, premiumItem) {
   const accessState =
     typeof getAccessState === "function"
       ? getAccessState()
@@ -99,10 +99,10 @@ function handlePremiumClick(event) {
   );
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const premiumItems = document.querySelectorAll(".premium-item");
+// IMPORTANT: event delegation for dynamically created premium cards
+document.addEventListener("click", function (event) {
+  const premiumItem = event.target.closest(".premium-item");
+  if (!premiumItem) return;
 
-  premiumItems.forEach((item) => {
-    item.addEventListener("click", handlePremiumClick);
-  });
+  handlePremiumAccess(event, premiumItem);
 });
