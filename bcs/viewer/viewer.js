@@ -10,13 +10,23 @@ const pdfContainer = document.getElementById("pdfContainer");
 const progressText = document.getElementById("progressPercent");
 const pageCountText = document.getElementById("pageCount");
 
-if (titleParam) {
-  docTitle.textContent = decodeURIComponent(titleParam);
-}
-
 if (!pdfParam) {
   loadingBox.textContent = "PDF path not found.";
   throw new Error("Missing pdf parameter");
+}
+
+// Auto title from file name if title param is missing
+function makeTitleFromFileName(path) {
+  const fileName = path.split("/").pop().replace(".pdf", "");
+  return fileName
+    .replace(/[-_]+/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+if (titleParam) {
+  docTitle.textContent = decodeURIComponent(titleParam);
+} else {
+  docTitle.textContent = makeTitleFromFileName(pdfParam);
 }
 
 if (accessType === "premium") {
@@ -29,7 +39,7 @@ if (accessType === "premium") {
   }
 }
 
-// GitHub Pages path
+// GitHub Pages repo path
 const pdfPath = "/krisishikkha/bcs/" + pdfParam;
 
 // pdf.js worker
@@ -40,9 +50,8 @@ const progressKey = "bcs-pdf-progress-" + pdfPath;
 let totalPages = 0;
 let viewedPercent = 0;
 
-// Faster mobile rendering
 function getRenderScale() {
-  return window.innerWidth < 768 ? 1.1 : 1.3;
+  return window.innerWidth < 768 ? 1.08 : 1.22;
 }
 
 async function renderPage(pdf, pageNum, scale) {
@@ -77,19 +86,17 @@ async function renderPDF() {
   try {
     loadingBox.textContent = "Loading PDF...";
 
-    const loadingTask = pdfjsLib.getDocument(pdfPath);
-    const pdf = await loadingTask.promise;
-
+    const pdf = await pdfjsLib.getDocument(pdfPath).promise;
     totalPages = pdf.numPages;
     pageCountText.textContent = totalPages;
 
     const scale = getRenderScale();
 
-    // Render first page immediately for faster feel
+    // First page fast render
     await renderPage(pdf, 1, scale);
     loadingBox.style.display = "none";
 
-    // Render remaining pages progressively
+    // Remaining pages one by one
     for (let pageNum = 2; pageNum <= totalPages; pageNum++) {
       await renderPage(pdf, pageNum, scale);
     }
@@ -101,7 +108,7 @@ async function renderPDF() {
   } catch (error) {
     console.error("PDF load error:", error);
     loadingBox.style.display = "block";
-    loadingBox.textContent = "Failed to load PDF. Check file name and path.";
+    loadingBox.textContent = "Failed to load PDF. Check file path.";
     docMeta.textContent = pdfPath;
     pageCountText.textContent = "0";
   }
@@ -109,6 +116,7 @@ async function renderPDF() {
 
 function updateScrollProgress() {
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
   if (docHeight <= 0) {
     progressText.textContent = "0%";
     return;
