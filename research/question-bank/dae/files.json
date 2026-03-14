@@ -1,1 +1,5 @@
-
+[
+  { "file": "dae-set-01.pdf", "premium": false },
+  { "file": "dae-set-02.pdf", "premium": false },
+  { "file": "dae-set-03.pdf", "premium": true }
+]
