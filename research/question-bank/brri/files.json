@@ -1,1 +1,18 @@
-
+[
+  {
+    "file": "brri-set-01.pdf",
+    "premium": false
+  },
+  {
+    "file": "brri-set-02.pdf",
+    "premium": false
+  },
+  {
+    "file": "brri-set-03.pdf",
+    "premium": true
+  },
+  {
+    "file": "brri-set-04.pdf",
+    "premium": true
+  }
+]
