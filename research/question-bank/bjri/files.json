@@ -1,1 +1,5 @@
-
+[
+  { "file": "bjri-set-01.pdf", "premium": false },
+  { "file": "bjri-set-02.pdf", "premium": false },
+  { "file": "bjri-set-03.pdf", "premium": true }
+]
