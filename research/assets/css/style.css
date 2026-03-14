@@ -16,7 +16,7 @@ a{
 }
 
 .research-header{
-  margin-bottom:28px;
+  margin-bottom:24px;
 }
 
 .breadcrumb{
@@ -61,8 +61,8 @@ a{
 .section-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  margin-top:20px;
+  gap:14px;
+  margin-top:18px;
 }
 
 .section-card{
@@ -70,26 +70,26 @@ a{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  min-height:150px;
-  border-radius:22px;
-  padding:22px 18px;
+  min-height:95px;
+  border-radius:18px;
+  padding:16px 12px;
   color:#fff;
   text-align:center;
-  box-shadow:0 10px 24px rgba(0,0,0,0.12);
+  box-shadow:0 8px 18px rgba(0,0,0,0.10);
   transition:0.25s ease;
 }
 
 .section-card:hover{
-  transform:translateY(-4px);
+  transform:translateY(-3px);
 }
 
 .section-icon{
-  font-size:34px;
-  margin-bottom:12px;
+  font-size:26px;
+  margin-bottom:8px;
 }
 
 .section-title{
-  font-size:20px;
+  font-size:18px;
   font-weight:bold;
   line-height:1.4;
 }
@@ -115,7 +115,7 @@ a{
 }
 
 .info-box{
-  margin-top:30px;
+  margin-top:26px;
   background:#ffffff;
   border-left:5px solid #6a1b9a;
   padding:18px 16px;
@@ -245,12 +245,36 @@ a{
 }
 
 @media (max-width:700px){
+  .research-container{
+    padding:20px 14px 40px;
+  }
+
   .research-header h1{
     font-size:28px;
   }
 
+  .subtitle{
+    font-size:16px;
+  }
+
+  .section-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .section-card{
+    min-height:88px;
+    border-radius:16px;
+    padding:14px 10px;
+  }
+
+  .section-icon{
+    font-size:24px;
+    margin-bottom:6px;
+  }
+
   .section-title{
-    font-size:18px;
+    font-size:17px;
   }
 
   .list-card{
@@ -267,4 +291,4 @@ a{
     text-align:center;
     box-sizing:border-box;
   }
-  }
+}
