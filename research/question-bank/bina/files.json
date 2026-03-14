@@ -1,1 +1,5 @@
-
+[
+  { "file": "bina-set-01.pdf", "premium": false },
+  { "file": "bina-set-02.pdf", "premium": false },
+  { "file": "bina-set-03.pdf", "premium": true }
+]
