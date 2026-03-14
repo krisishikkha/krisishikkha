@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BCS Dashboard | Krisishikkha</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+
+.dashboard-section{
+margin-top:40px;
+}
+
+.dashboard-title{
+font-size:22px;
+font-weight:bold;
+margin-bottom:16px;
+}
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.dashboard-card{
+background:white;
+border-radius:12px;
+padding:20px;
+text-decoration:none;
+color:#333;
+box-shadow:0 6px 16px rgba(0,0,0,.12);
+transition:.25s;
+display:block;
+}
+
+.dashboard-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 22px rgba(0,0,0,.2);
+}
+
+.dashboard-icon{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.dashboard-card-title{
+font-size:18px;
+font-weight:bold;
+margin-bottom:6px;
+}
+
+.dashboard-card-text{
+font-size:14px;
+color:#555;
+}
+
+.continue-box{
+background:#fff;
+padding:18px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+.continue-text{
+font-size:14px;
+color:#666;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bcs-container">
+
+<div class="bcs-header">
+
+<p class="breadcrumb">
+<a href="../index.html">Home</a> /
+<span>BCS Dashboard</span>
+</p>
+
+<h1>BCS Study Dashboard</h1>
+
+<p class="subtitle">
+Quick access to your BCS preparation resources.
+</p>
+
+</div>
+
+
+<!-- Continue Reading -->
+
+<div class="dashboard-section">
+
+<div class="dashboard-title">
+Continue Reading
+</div>
+
+<div class="continue-box">
+
+<p class="continue-text">
+Your recent PDF reading progress will appear here automatically.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- Main Study Sections -->
+
+<div class="dashboard-section">
+
+<div class="dashboard-title">
+Study Sections
+</div>
+
+<div class="dashboard-grid">
+
+<a href="question-bank/index.html" class="dashboard-card">
+
+<div class="dashboard-icon">📄</div>
+
+<div class="dashboard-card-title">
+Question Bank
+</div>
+
+<div class="dashboard-card-text">
+Previous BCS question papers and solved PDFs.
+</div>
+
+</a>
+
+
+<a href="notes/index.html" class="dashboard-card">
+
+<div class="dashboard-icon">📚</div>
+
+<div class="dashboard-card-title">
+Notes
+</div>
+
+<div class="dashboard-card-text">
+Topic-wise BCS preparation notes.
+</div>
+
+</a>
+
+
+<a href="articles/index.html" class="dashboard-card">
+
+<div class="dashboard-icon">📝</div>
+
+<div class="dashboard-card-title">
+Important Topics
+</div>
+
+<div class="dashboard-card-text">
+Detailed article resources for BCS preparation.
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- Back Button -->
+
+<div class="back-wrap">
+
+<a href="index.html" class="back-btn">
+← Back to BCS
+</a>
+
+</div>
+
+
+</div>
+
+
+<script src="config.js"></script>
+<script src="data/users.js"></script>
+<script src="auth.js"></script>
+<script src="access.js"></script>
+
+</body>
+</html>
