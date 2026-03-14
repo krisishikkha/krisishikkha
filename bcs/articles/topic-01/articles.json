@@ -1,14 +1,14 @@
 [
   {
-    "file": "article-01.html",
+    "file": "demo-article-01.html",
     "premium": false
   },
   {
-    "file": "article-02.html",
+    "file": "demo-article-02.html",
     "premium": false
   },
   {
-    "file": "premium-01.html",
+    "file": "demo-premium-01.html",
     "premium": true
   }
 ]
