@@ -1,6 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const pdfParam = params.get("pdf");
 const titleParam = params.get("title");
+const accessType = params.get("access");
 
 const docTitle = document.getElementById("docTitle");
 const docMeta = document.getElementById("docMeta");
@@ -14,12 +15,10 @@ if (titleParam) {
 }
 
 if (!pdfParam) {
-  loadingBox.textContent = "PDF not specified.";
-  throw new Error("PDF path missing");
+  loadingBox.textContent = "PDF path not found.";
+  throw new Error("Missing pdf parameter");
 }
 
-// Optional premium gate for viewer query use
-const accessType = params.get("access");
 if (accessType === "premium") {
   if (typeof getAccessState === "function") {
     const state = getAccessState();
@@ -30,7 +29,7 @@ if (accessType === "premium") {
   }
 }
 
-// GitHub Pages repo-relative path
+// GitHub Pages path
 const pdfPath = "/krisishikkha/bcs/" + pdfParam;
 
 // pdf.js worker
@@ -39,48 +38,60 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "/krisishikkha/vendor/pdfjs/pdf.worker.
 const progressKey = "bcs-pdf-progress-" + pdfPath;
 
 let totalPages = 0;
-let renderedPages = 0;
 let viewedPercent = 0;
+
+// Faster mobile rendering
+function getRenderScale() {
+  return window.innerWidth < 768 ? 1.1 : 1.3;
+}
+
+async function renderPage(pdf, pageNum, scale) {
+  const page = await pdf.getPage(pageNum);
+  const viewport = page.getViewport({ scale });
+
+  const wrap = document.createElement("div");
+  wrap.className = "pdf-page-wrap";
+
+  const canvas = document.createElement("canvas");
+  canvas.className = "pdf-page-canvas";
+  const ctx = canvas.getContext("2d", { alpha: false });
+
+  canvas.width = viewport.width;
+  canvas.height = viewport.height;
+
+  const label = document.createElement("div");
+  label.className = "page-label";
+  label.textContent = `Page ${pageNum}`;
+
+  wrap.appendChild(canvas);
+  wrap.appendChild(label);
+  pdfContainer.appendChild(wrap);
+
+  await page.render({
+    canvasContext: ctx,
+    viewport: viewport
+  }).promise;
+}
 
 async function renderPDF() {
   try {
-    const pdf = await pdfjsLib.getDocument(pdfPath).promise;
+    loadingBox.textContent = "Loading PDF...";
+
+    const loadingTask = pdfjsLib.getDocument(pdfPath);
+    const pdf = await loadingTask.promise;
+
     totalPages = pdf.numPages;
     pageCountText.textContent = totalPages;
 
-    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-      const page = await pdf.getPage(pageNum);
+    const scale = getRenderScale();
 
-      const viewport = page.getViewport({ scale: 1.35 });
+    // Render first page immediately for faster feel
+    await renderPage(pdf, 1, scale);
+    loadingBox.style.display = "none";
 
-      const wrap = document.createElement("div");
-      wrap.className = "pdf-page-wrap";
-
-      const canvas = document.createElement("canvas");
-      canvas.className = "pdf-page-canvas";
-      const ctx = canvas.getContext("2d", { alpha: false });
-
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-
-      const label = document.createElement("div");
-      label.className = "page-label";
-      label.textContent = `Page ${pageNum}`;
-
-      wrap.appendChild(canvas);
-      wrap.appendChild(label);
-      pdfContainer.appendChild(wrap);
-
-      await page.render({
-        canvasContext: ctx,
-        viewport: viewport
-      }).promise;
-
-      renderedPages++;
-
-      if (renderedPages === totalPages) {
-        loadingBox.style.display = "none";
-      }
+    // Render remaining pages progressively
+    for (let pageNum = 2; pageNum <= totalPages; pageNum++) {
+      await renderPage(pdf, pageNum, scale);
     }
 
     const saved = localStorage.getItem(progressKey);
@@ -88,21 +99,22 @@ async function renderPDF() {
       progressText.textContent = saved + "%";
     }
   } catch (error) {
-    loadingBox.textContent = "Failed to load PDF.";
-    docMeta.textContent = "Please check the file path.";
-    console.error(error);
+    console.error("PDF load error:", error);
+    loadingBox.style.display = "block";
+    loadingBox.textContent = "Failed to load PDF. Check file name and path.";
+    docMeta.textContent = pdfPath;
+    pageCountText.textContent = "0";
   }
 }
 
 function updateScrollProgress() {
-  const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-
   if (docHeight <= 0) {
     progressText.textContent = "0%";
     return;
   }
 
+  const scrollTop = window.scrollY;
   viewedPercent = Math.min(100, Math.round((scrollTop / docHeight) * 100));
   progressText.textContent = viewedPercent + "%";
   localStorage.setItem(progressKey, viewedPercent);
