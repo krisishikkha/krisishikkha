@@ -1,1 +1,18 @@
-
+[
+  {
+    "file": "bari-set-01.pdf",
+    "premium": false
+  },
+  {
+    "file": "bari-set-02.pdf",
+    "premium": false
+  },
+  {
+    "file": "bari-set-03.pdf",
+    "premium": true
+  },
+  {
+    "file": "bari-set-04.pdf",
+    "premium": true
+  }
+]
