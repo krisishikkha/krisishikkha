@@ -1,0 +1,20 @@
+[
+  {
+    "file": "article-01.html",
+    "premium": true,
+    "title": "Advanced Viva Strategy",
+    "subtitle": "Premium strategy notes for viva success."
+  },
+  {
+    "file": "article-02.html",
+    "premium": true,
+    "title": "Institute Specific Viva",
+    "subtitle": "Expected viva questions by institute."
+  },
+  {
+    "file": "article-03.html",
+    "premium": true,
+    "title": "Final Premium Viva Sheet",
+    "subtitle": "High-priority viva support content."
+  }
+]
