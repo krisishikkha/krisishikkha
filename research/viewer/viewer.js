@@ -38,10 +38,8 @@ if (accessType === "premium") {
   }
 }
 
-// Research section root path
 const pdfPath = "/krisishikkha/research/" + pdfParam;
 
-// pdf.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = "/krisishikkha/vendor/pdfjs/pdf.worker.min.js";
 
 const progressKey = "research-pdf-progress-" + pdfPath;
