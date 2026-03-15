@@ -1,1 +1,14 @@
-
+[
+  {
+    "file": "crop-production-notes.pdf",
+    "premium": false
+  },
+  {
+    "file": "horticulture-basics.pdf",
+    "premium": false
+  },
+  {
+    "file": "advanced-horticulture.pdf",
+    "premium": true
+  }
+]
