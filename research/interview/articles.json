@@ -1,14 +1,20 @@
 [
   {
-    "file": "viva-questions.html",
-    "premium": false
+    "file": "viva-questions/index.html",
+    "premium": false,
+    "title": "Viva Questions",
+    "subtitle": "Common viva and board question sets."
   },
   {
-    "file": "research-officer-viva.html",
-    "premium": false
+    "file": "research-officer-viva/index.html",
+    "premium": false,
+    "title": "Research Officer Viva",
+    "subtitle": "Interview resources for Research Officer and similar posts."
   },
   {
-    "file": "premium-viva.html",
-    "premium": true
+    "file": "premium-viva/index.html",
+    "premium": true,
+    "title": "Premium Viva",
+    "subtitle": "Advanced viva support materials for premium users."
   }
 ]
