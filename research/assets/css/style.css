@@ -452,3 +452,17 @@ a{
   background:#eef2f6;
   color:#333;
 }
+.article-content{
+  line-height:1.8;
+  font-size:16px;
+  color:#333;
+}
+
+.article-content h2{
+  margin-top:0;
+  color:#6a1b9a;
+}
+
+.article-content ul{
+  padding-left:20px;
+}
