@@ -1,1 +1,18 @@
-
+[
+  {
+    "file": "bari-syllabus.pdf",
+    "premium": false
+  },
+  {
+    "file": "brri-syllabus.pdf",
+    "premium": false
+  },
+  {
+    "file": "bjri-syllabus.pdf",
+    "premium": false
+  },
+  {
+    "file": "dae-syllabus.pdf",
+    "premium": true
+  }
+]
