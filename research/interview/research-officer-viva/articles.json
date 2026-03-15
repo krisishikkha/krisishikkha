@@ -1,0 +1,20 @@
+[
+  {
+    "file": "article-01.html",
+    "premium": false,
+    "title": "Research Officer Viva Basics",
+    "subtitle": "Core viva preparation for research posts."
+  },
+  {
+    "file": "article-02.html",
+    "premium": false,
+    "title": "Technical Interview Questions",
+    "subtitle": "Technical questions for research-related jobs."
+  },
+  {
+    "file": "article-03.html",
+    "premium": false,
+    "title": "Field and Practical Viva",
+    "subtitle": "Practical and field-based viva topics."
+  }
+]
