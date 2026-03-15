@@ -8,7 +8,7 @@ const EXAM_STATUS = {
 
   "exam-2": {
     title: "HSC 1st Paper 1st Chapter ",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam248"]
   },
