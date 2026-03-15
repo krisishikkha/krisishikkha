@@ -4,5 +4,5 @@ const RESEARCH_CONFIG = {
   lockedTitle: "Premium Content Locked",
   lockedText: "This content is available for premium Research Institute users only.",
   expiredText: "Your access is expired or inactive. Please contact support.",
-  loginText: "Please log in first to access this premium content."
+  loginText: "This is a premium resource. Please contact us on WhatsApp to get login access and unlock the content."
 };
