@@ -1,1 +1,14 @@
-
+[
+  {
+    "file": "irrigation-management.pdf",
+    "premium": false
+  },
+  {
+    "file": "entomology-short-notes.pdf",
+    "premium": false
+  },
+  {
+    "file": "advanced-pest-management.pdf",
+    "premium": true
+  }
+]
