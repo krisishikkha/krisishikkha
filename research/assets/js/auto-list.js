@@ -48,26 +48,32 @@ document.addEventListener("DOMContentLoaded", async () => {
     const idx = path.indexOf(marker);
 
     if (idx === -1) return "";
+
     const afterResearch = path.substring(idx + marker.length);
     return afterResearch.replace(/index\.html$/, "");
   }
 
-  function buildPdfHref(file, isPremium) {
-    const sectionPath = getCurrentSectionPath();
-    const accessPart = isPremium ? "&access=premium" : "";
-    return `../../viewer/index.html?pdf=${sectionPath}${encodeURIComponent(file).replace(/%2F/g, "/")}${accessPart}`;
+  function normalizeFileName(file) {
+    return encodeURIComponent(file).replace(/%2F/g, "/");
   }
 
-  function buildQuestionBankHref(file, isPremium) {
+  // notes and question-bank pages are 2 levels deep from research root
+  // example:
+  // research/notes/topic-01/index.html
+  // research/question-bank/bari/index.html
+  function buildDeepViewerHref(file, isPremium) {
     const sectionPath = getCurrentSectionPath();
     const accessPart = isPremium ? "&access=premium" : "";
-    return `../../viewer/index.html?pdf=${sectionPath}${encodeURIComponent(file).replace(/%2F/g, "/")}${accessPart}`;
+    return `../../viewer/index.html?pdf=${sectionPath}${normalizeFileName(file)}${accessPart}`;
   }
 
-  function buildSyllabusHref(file, isPremium) {
+  // syllabus page is 1 level deep from research root
+  // example:
+  // research/syllabus/index.html
+  function buildShallowViewerHref(file, isPremium) {
     const sectionPath = getCurrentSectionPath();
     const accessPart = isPremium ? "&access=premium" : "";
-    return `../viewer/index.html?pdf=${sectionPath}${encodeURIComponent(file).replace(/%2F/g, "/")}${accessPart}`;
+    return `../viewer/index.html?pdf=${sectionPath}${normalizeFileName(file)}${accessPart}`;
   }
 
   function buildArticlesHref(file) {
@@ -84,15 +90,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     a.className = isPremium ? "list-card premium-item" : "list-card";
 
     if (mode === "notes") {
-      a.href = buildPdfHref(file, isPremium);
+      a.href = buildDeepViewerHref(file, isPremium);
       a.dataset.type = "pdf";
       a.dataset.title = title;
     } else if (mode === "question-bank") {
-      a.href = buildQuestionBankHref(file, isPremium);
+      a.href = buildDeepViewerHref(file, isPremium);
       a.dataset.type = "pdf";
       a.dataset.title = title;
     } else if (mode === "syllabus") {
-      a.href = buildSyllabusHref(file, isPremium);
+      a.href = buildShallowViewerHref(file, isPremium);
       a.dataset.type = "pdf";
       a.dataset.title = title;
     } else if (mode === "articles") {
@@ -119,6 +125,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch(jsonFile, { cache: "no-store" });
+
     if (!response.ok) {
       throw new Error("JSON file not found");
     }
@@ -139,6 +146,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (!item.file) return;
       container.appendChild(createCard(item));
     });
+
   } catch (error) {
     console.error(error);
     container.innerHTML = `
