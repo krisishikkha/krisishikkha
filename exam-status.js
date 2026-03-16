@@ -16,7 +16,7 @@ const EXAM_STATUS = {
   "exam-3": {
     title: "HSC 1st Paper 2nd Chapter",
     visible: true,  // ✅ নতুন
-    status: "locked",
+    status: "live",
     codes: ["exam31"]
   },
   "exam-4": {
