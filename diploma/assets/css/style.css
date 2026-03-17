@@ -353,3 +353,20 @@ a{
     font-size:12px;
   }
   }
+.semester-grid{
+  grid-template-columns:repeat(auto-fit,minmax(170px,220px));
+  justify-content:center;
+}
+
+.semester-card{
+  min-height:70px;
+  padding:16px 12px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#2e7d32,#66bb6a);
+  box-shadow:0 8px 18px rgba(0,0,0,0.10);
+}
+
+.semester-card .section-title{
+  font-size:17px;
+  color:#fff;
+}
