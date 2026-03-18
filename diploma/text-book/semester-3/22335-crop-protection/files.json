@@ -1,0 +1,26 @@
+[
+  {"file":"unit-1-part-1-introduction-to-crop-protection.pdf","title":"Unit 1 Part 1 — Introduction to Crop Protection","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-crop-protection.pdf","title":"Unit 1 Part 2 — Introduction to Crop Protection","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-crop-protection.pdf","title":"Unit 1 Part 3 — Introduction to Crop Protection","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-crop-protection.pdf","title":"Unit 1 Part 4 — Introduction to Crop Protection","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-plant-diseases.pdf","title":"Unit 2 Part 1 — Plant Diseases","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-plant-diseases.pdf","title":"Unit 2 Part 2 — Plant Diseases","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-plant-diseases.pdf","title":"Unit 2 Part 3 — Plant Diseases","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-plant-diseases.pdf","title":"Unit 2 Part 4 — Plant Diseases","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-insect-pests.pdf","title":"Unit 3 Part 1 — Insect Pests","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-insect-pests.pdf","title":"Unit 3 Part 2 — Insect Pests","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-insect-pests.pdf","title":"Unit 3 Part 3 — Insect Pests","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-insect-pests.pdf","title":"Unit 3 Part 4 — Insect Pests","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-weed-science.pdf","title":"Unit 4 Part 1 — Weed Science","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-weed-science.pdf","title":"Unit 4 Part 2 — Weed Science","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-weed-science.pdf","title":"Unit 4 Part 3 — Weed Science","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-weed-science.pdf","title":"Unit 4 Part 4 — Weed Science","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-integrated-pest-management.pdf","title":"Unit 5 Part 1 — Integrated Pest Management","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-integrated-pest-management.pdf","title":"Unit 5 Part 2 — Integrated Pest Management","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-integrated-pest-management.pdf","title":"Unit 5 Part 3 — Integrated Pest Management","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-integrated-pest-management.pdf","title":"Unit 5 Part 4 — Integrated Pest Management","premium":false,"hidden":true}
+]
