@@ -1,0 +1,31 @@
+[
+  {"file":"unit-1-part-1-heat-and-temperature.pdf","title":"Unit 1 Part 1 — Heat and Temperature","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-heat-and-temperature.pdf","title":"Unit 1 Part 2 — Heat and Temperature","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-heat-and-temperature.pdf","title":"Unit 1 Part 3 — Heat and Temperature","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-heat-and-temperature.pdf","title":"Unit 1 Part 4 — Heat and Temperature","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-thermodynamics.pdf","title":"Unit 2 Part 1 — Thermodynamics","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-thermodynamics.pdf","title":"Unit 2 Part 2 — Thermodynamics","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-thermodynamics.pdf","title":"Unit 2 Part 3 — Thermodynamics","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-thermodynamics.pdf","title":"Unit 2 Part 4 — Thermodynamics","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-optics.pdf","title":"Unit 3 Part 1 — Optics","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-optics.pdf","title":"Unit 3 Part 2 — Optics","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-optics.pdf","title":"Unit 3 Part 3 — Optics","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-optics.pdf","title":"Unit 3 Part 4 — Optics","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-electricity.pdf","title":"Unit 4 Part 1 — Electricity","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-electricity.pdf","title":"Unit 4 Part 2 — Electricity","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-electricity.pdf","title":"Unit 4 Part 3 — Electricity","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-electricity.pdf","title":"Unit 4 Part 4 — Electricity","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-magnetism.pdf","title":"Unit 5 Part 1 — Magnetism","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-magnetism.pdf","title":"Unit 5 Part 2 — Magnetism","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-magnetism.pdf","title":"Unit 5 Part 3 — Magnetism","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-magnetism.pdf","title":"Unit 5 Part 4 — Magnetism","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-modern-physics.pdf","title":"Unit 6 Part 1 — Modern Physics","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-modern-physics.pdf","title":"Unit 6 Part 2 — Modern Physics","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-modern-physics.pdf","title":"Unit 6 Part 3 — Modern Physics","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-modern-physics.pdf","title":"Unit 6 Part 4 — Modern Physics","premium":false,"hidden":true}
+]
