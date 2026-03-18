@@ -1,0 +1,31 @@
+[
+  {"file":"unit-1-part-1-introduction-to-soil-science.pdf","title":"Unit 1 Part 1 — Introduction to Soil Science","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-soil-science.pdf","title":"Unit 1 Part 2 — Introduction to Soil Science","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-soil-science.pdf","title":"Unit 1 Part 3 — Introduction to Soil Science","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-soil-science.pdf","title":"Unit 1 Part 4 — Introduction to Soil Science","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-soil-formation.pdf","title":"Unit 2 Part 1 — Soil Formation","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-soil-formation.pdf","title":"Unit 2 Part 2 — Soil Formation","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-soil-formation.pdf","title":"Unit 2 Part 3 — Soil Formation","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-soil-formation.pdf","title":"Unit 2 Part 4 — Soil Formation","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-soil-physical-properties.pdf","title":"Unit 3 Part 1 — Soil Physical Properties","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-soil-physical-properties.pdf","title":"Unit 3 Part 2 — Soil Physical Properties","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-soil-physical-properties.pdf","title":"Unit 3 Part 3 — Soil Physical Properties","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-soil-physical-properties.pdf","title":"Unit 3 Part 4 — Soil Physical Properties","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-soil-chemical-properties.pdf","title":"Unit 4 Part 1 — Soil Chemical Properties","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-soil-chemical-properties.pdf","title":"Unit 4 Part 2 — Soil Chemical Properties","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-soil-chemical-properties.pdf","title":"Unit 4 Part 3 — Soil Chemical Properties","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-soil-chemical-properties.pdf","title":"Unit 4 Part 4 — Soil Chemical Properties","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-soil-fertility.pdf","title":"Unit 5 Part 1 — Soil Fertility","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-soil-fertility.pdf","title":"Unit 5 Part 2 — Soil Fertility","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-soil-fertility.pdf","title":"Unit 5 Part 3 — Soil Fertility","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-soil-fertility.pdf","title":"Unit 5 Part 4 — Soil Fertility","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-soil-conservation-and-management.pdf","title":"Unit 6 Part 1 — Soil Conservation and Management","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-soil-conservation-and-management.pdf","title":"Unit 6 Part 2 — Soil Conservation and Management","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-soil-conservation-and-management.pdf","title":"Unit 6 Part 3 — Soil Conservation and Management","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-soil-conservation-and-management.pdf","title":"Unit 6 Part 4 — Soil Conservation and Management","premium":false,"hidden":true}
+]
