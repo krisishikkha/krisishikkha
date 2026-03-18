@@ -1,0 +1,251 @@
+[
+  {
+    "file": "unit-1-part-1-atomic-structure.pdf",
+    "title": "Unit 1 Part 1 — Atomic Structure",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-1-part-2-atomic-structure.pdf",
+    "title": "Unit 1 Part 2 — Atomic Structure",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-1-part-3-atomic-structure.pdf",
+    "title": "Unit 1 Part 3 — Atomic Structure",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-1-part-4-atomic-structure.pdf",
+    "title": "Unit 1 Part 4 — Atomic Structure",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-2-part-1-symbol-valency-and-formula.pdf",
+    "title": "Unit 2 Part 1 — Symbol, Valency and Formula",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-2-part-2-symbol-valency-and-formula.pdf",
+    "title": "Unit 2 Part 2 — Symbol, Valency and Formula",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-2-part-3-symbol-valency-and-formula.pdf",
+    "title": "Unit 2 Part 3 — Symbol, Valency and Formula",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-2-part-4-symbol-valency-and-formula.pdf",
+    "title": "Unit 2 Part 4 — Symbol, Valency and Formula",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-3-part-1-gas.pdf",
+    "title": "Unit 3 Part 1 — Gas",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-3-part-2-gas.pdf",
+    "title": "Unit 3 Part 2 — Gas",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-3-part-3-gas.pdf",
+    "title": "Unit 3 Part 3 — Gas",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-3-part-4-gas.pdf",
+    "title": "Unit 3 Part 4 — Gas",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-4-part-1-chemical-bond.pdf",
+    "title": "Unit 4 Part 1 — Chemical Bond",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-4-part-2-chemical-bond.pdf",
+    "title": "Unit 4 Part 2 — Chemical Bond",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-4-part-3-chemical-bond.pdf",
+    "title": "Unit 4 Part 3 — Chemical Bond",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-4-part-4-chemical-bond.pdf",
+    "title": "Unit 4 Part 4 — Chemical Bond",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-5-part-1-acid-base-and-salt.pdf",
+    "title": "Unit 5 Part 1 — Acid, Base and Salt",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-5-part-2-acid-base-and-salt.pdf",
+    "title": "Unit 5 Part 2 — Acid, Base and Salt",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-5-part-3-acid-base-and-salt.pdf",
+    "title": "Unit 5 Part 3 — Acid, Base and Salt",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-5-part-4-acid-base-and-salt.pdf",
+    "title": "Unit 5 Part 4 — Acid, Base and Salt",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-6-part-1-ionic-equilibrium.pdf",
+    "title": "Unit 6 Part 1 — Ionic Equilibrium",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-6-part-2-ionic-equilibrium.pdf",
+    "title": "Unit 6 Part 2 — Ionic Equilibrium",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-6-part-3-ionic-equilibrium.pdf",
+    "title": "Unit 6 Part 3 — Ionic Equilibrium",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-6-part-4-ionic-equilibrium.pdf",
+    "title": "Unit 6 Part 4 — Ionic Equilibrium",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-7-part-1-chemical-reaction.pdf",
+    "title": "Unit 7 Part 1 — Chemical Reaction",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-7-part-2-chemical-reaction.pdf",
+    "title": "Unit 7 Part 2 — Chemical Reaction",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-7-part-3-chemical-reaction.pdf",
+    "title": "Unit 7 Part 3 — Chemical Reaction",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-7-part-4-chemical-reaction.pdf",
+    "title": "Unit 7 Part 4 — Chemical Reaction",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-8-part-1-oxidation-and-reduction.pdf",
+    "title": "Unit 8 Part 1 — Oxidation and Reduction",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-8-part-2-oxidation-and-reduction.pdf",
+    "title": "Unit 8 Part 2 — Oxidation and Reduction",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-8-part-3-oxidation-and-reduction.pdf",
+    "title": "Unit 8 Part 3 — Oxidation and Reduction",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-8-part-4-oxidation-and-reduction.pdf",
+    "title": "Unit 8 Part 4 — Oxidation and Reduction",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-9-part-1-water.pdf",
+    "title": "Unit 9 Part 1 — Water",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-9-part-2-water.pdf",
+    "title": "Unit 9 Part 2 — Water",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-9-part-3-water.pdf",
+    "title": "Unit 9 Part 3 — Water",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-9-part-4-water.pdf",
+    "title": "Unit 9 Part 4 — Water",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-10-part-1-electro-chemistry.pdf",
+    "title": "Unit 10 Part 1 — Electro-Chemistry",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-10-part-2-electro-chemistry.pdf",
+    "title": "Unit 10 Part 2 — Electro-Chemistry",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-10-part-3-electro-chemistry.pdf",
+    "title": "Unit 10 Part 3 — Electro-Chemistry",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-10-part-4-electro-chemistry.pdf",
+    "title": "Unit 10 Part 4 — Electro-Chemistry",
+    "premium": false,
+    "hidden": true
+  }
+]
