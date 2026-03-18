@@ -1,0 +1,26 @@
+[
+  {"file":"unit-1-part-1-introduction-to-irrigation.pdf","title":"Unit 1 Part 1 — Introduction to Irrigation","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-irrigation.pdf","title":"Unit 1 Part 2 — Introduction to Irrigation","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-irrigation.pdf","title":"Unit 1 Part 3 — Introduction to Irrigation","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-irrigation.pdf","title":"Unit 1 Part 4 — Introduction to Irrigation","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-water-resources.pdf","title":"Unit 2 Part 1 — Water Resources","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-water-resources.pdf","title":"Unit 2 Part 2 — Water Resources","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-water-resources.pdf","title":"Unit 2 Part 3 — Water Resources","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-water-resources.pdf","title":"Unit 2 Part 4 — Water Resources","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-irrigation-methods.pdf","title":"Unit 3 Part 1 — Irrigation Methods","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-irrigation-methods.pdf","title":"Unit 3 Part 2 — Irrigation Methods","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-irrigation-methods.pdf","title":"Unit 3 Part 3 — Irrigation Methods","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-irrigation-methods.pdf","title":"Unit 3 Part 4 — Irrigation Methods","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-water-management.pdf","title":"Unit 4 Part 1 — Water Management","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-water-management.pdf","title":"Unit 4 Part 2 — Water Management","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-water-management.pdf","title":"Unit 4 Part 3 — Water Management","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-water-management.pdf","title":"Unit 4 Part 4 — Water Management","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-drainage-systems.pdf","title":"Unit 5 Part 1 — Drainage Systems","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-drainage-systems.pdf","title":"Unit 5 Part 2 — Drainage Systems","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-drainage-systems.pdf","title":"Unit 5 Part 3 — Drainage Systems","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-drainage-systems.pdf","title":"Unit 5 Part 4 — Drainage Systems","premium":false,"hidden":true}
+]
