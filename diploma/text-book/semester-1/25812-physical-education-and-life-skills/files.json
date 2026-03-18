@@ -1,0 +1,126 @@
+[
+  {
+    "file": "unit-1-part-1-physical-education.pdf",
+    "title": "Unit 1 Part 1 — Physical Education",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-1-part-2-physical-education.pdf",
+    "title": "Unit 1 Part 2 — Physical Education",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-1-part-3-physical-education.pdf",
+    "title": "Unit 1 Part 3 — Physical Education",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-1-part-4-physical-education.pdf",
+    "title": "Unit 1 Part 4 — Physical Education",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-2-part-1-physical-fitness.pdf",
+    "title": "Unit 2 Part 1 — Physical Fitness",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-2-part-2-physical-fitness.pdf",
+    "title": "Unit 2 Part 2 — Physical Fitness",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-2-part-3-physical-fitness.pdf",
+    "title": "Unit 2 Part 3 — Physical Fitness",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-2-part-4-physical-fitness.pdf",
+    "title": "Unit 2 Part 4 — Physical Fitness",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-3-part-1-first-aid.pdf",
+    "title": "Unit 3 Part 1 — First Aid",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-3-part-2-first-aid.pdf",
+    "title": "Unit 3 Part 2 — First Aid",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-3-part-3-first-aid.pdf",
+    "title": "Unit 3 Part 3 — First Aid",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-3-part-4-first-aid.pdf",
+    "title": "Unit 3 Part 4 — First Aid",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-4-part-1-life-skills.pdf",
+    "title": "Unit 4 Part 1 — Life Skills",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-4-part-2-life-skills.pdf",
+    "title": "Unit 4 Part 2 — Life Skills",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-4-part-3-life-skills.pdf",
+    "title": "Unit 4 Part 3 — Life Skills",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-4-part-4-life-skills.pdf",
+    "title": "Unit 4 Part 4 — Life Skills",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-5-part-1-recreation-and-leisure.pdf",
+    "title": "Unit 5 Part 1 — Recreation and Leisure",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-5-part-2-recreation-and-leisure.pdf",
+    "title": "Unit 5 Part 2 — Recreation and Leisure",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-5-part-3-recreation-and-leisure.pdf",
+    "title": "Unit 5 Part 3 — Recreation and Leisure",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-5-part-4-recreation-and-leisure.pdf",
+    "title": "Unit 5 Part 4 — Recreation and Leisure",
+    "premium": false,
+    "hidden": true
+  }
+    ]
