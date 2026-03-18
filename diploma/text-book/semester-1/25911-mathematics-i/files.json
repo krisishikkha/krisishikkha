@@ -1,0 +1,376 @@
+[
+  {
+    "file": "unit-1-part-1-algebra-determinants.pdf",
+    "title": "Unit 1 Part 1 — Algebra (Determinants)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-1-part-2-algebra-determinants.pdf",
+    "title": "Unit 1 Part 2 — Algebra (Determinants)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-1-part-3-algebra-determinants.pdf",
+    "title": "Unit 1 Part 3 — Algebra (Determinants)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-1-part-4-algebra-determinants.pdf",
+    "title": "Unit 1 Part 4 — Algebra (Determinants)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-2-part-1-algebra-matrix.pdf",
+    "title": "Unit 2 Part 1 — Algebra (Matrix)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-2-part-2-algebra-matrix.pdf",
+    "title": "Unit 2 Part 2 — Algebra (Matrix)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-2-part-3-algebra-matrix.pdf",
+    "title": "Unit 2 Part 3 — Algebra (Matrix)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-2-part-4-algebra-matrix.pdf",
+    "title": "Unit 2 Part 4 — Algebra (Matrix)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-3-part-1-algebra-polynomial-and-polynomial-equations.pdf",
+    "title": "Unit 3 Part 1 — Algebra (Polynomial and Polynomial Equations)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-3-part-2-algebra-polynomial-and-polynomial-equations.pdf",
+    "title": "Unit 3 Part 2 — Algebra (Polynomial and Polynomial Equations)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-3-part-3-algebra-polynomial-and-polynomial-equations.pdf",
+    "title": "Unit 3 Part 3 — Algebra (Polynomial and Polynomial Equations)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-3-part-4-algebra-polynomial-and-polynomial-equations.pdf",
+    "title": "Unit 3 Part 4 — Algebra (Polynomial and Polynomial Equations)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-4-part-1-algebra-complex-numbers.pdf",
+    "title": "Unit 4 Part 1 — Algebra (Complex numbers)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-4-part-2-algebra-complex-numbers.pdf",
+    "title": "Unit 4 Part 2 — Algebra (Complex numbers)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-4-part-3-algebra-complex-numbers.pdf",
+    "title": "Unit 4 Part 3 — Algebra (Complex numbers)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-4-part-4-algebra-complex-numbers.pdf",
+    "title": "Unit 4 Part 4 — Algebra (Complex numbers)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-5-part-1-algebra-permutation.pdf",
+    "title": "Unit 5 Part 1 — Algebra (Permutation)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-5-part-2-algebra-permutation.pdf",
+    "title": "Unit 5 Part 2 — Algebra (Permutation)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-5-part-3-algebra-permutation.pdf",
+    "title": "Unit 5 Part 3 — Algebra (Permutation)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-5-part-4-algebra-permutation.pdf",
+    "title": "Unit 5 Part 4 — Algebra (Permutation)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-6-part-1-algebra-combination.pdf",
+    "title": "Unit 6 Part 1 — Algebra (Combination)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-6-part-2-algebra-combination.pdf",
+    "title": "Unit 6 Part 2 — Algebra (Combination)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-6-part-3-algebra-combination.pdf",
+    "title": "Unit 6 Part 3 — Algebra (Combination)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-6-part-4-algebra-combination.pdf",
+    "title": "Unit 6 Part 4 — Algebra (Combination)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-7-part-1-trigonometry-associated-angles.pdf",
+    "title": "Unit 7 Part 1 — Trigonometry (Associated Angles)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-7-part-2-trigonometry-associated-angles.pdf",
+    "title": "Unit 7 Part 2 — Trigonometry (Associated Angles)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-7-part-3-trigonometry-associated-angles.pdf",
+    "title": "Unit 7 Part 3 — Trigonometry (Associated Angles)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-7-part-4-trigonometry-associated-angles.pdf",
+    "title": "Unit 7 Part 4 — Trigonometry (Associated Angles)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-8-part-1-trigonometrical-ratios.pdf",
+    "title": "Unit 8 Part 1 — Trigonometry (Trigonometrical Ratios)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-8-part-2-trigonometrical-ratios.pdf",
+    "title": "Unit 8 Part 2 — Trigonometry (Trigonometrical Ratios)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-8-part-3-trigonometrical-ratios.pdf",
+    "title": "Unit 8 Part 3 — Trigonometry (Trigonometrical Ratios)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-8-part-4-trigonometrical-ratios.pdf",
+    "title": "Unit 8 Part 4 — Trigonometry (Trigonometrical Ratios)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-9-part-1-transformation-of-formulae.pdf",
+    "title": "Unit 9 Part 1 — Trigonometry (Transformation of formulae)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-9-part-2-transformation-of-formulae.pdf",
+    "title": "Unit 9 Part 2 — Trigonometry (Transformation of formulae)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-9-part-3-transformation-of-formulae.pdf",
+    "title": "Unit 9 Part 3 — Trigonometry (Transformation of formulae)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-9-part-4-transformation-of-formulae.pdf",
+    "title": "Unit 9 Part 4 — Trigonometry (Transformation of formulae)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-10-part-1-multiple-angles.pdf",
+    "title": "Unit 10 Part 1 — Trigonometry (Multiple Angles)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-10-part-2-multiple-angles.pdf",
+    "title": "Unit 10 Part 2 — Trigonometry (Multiple Angles)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-10-part-3-multiple-angles.pdf",
+    "title": "Unit 10 Part 3 — Trigonometry (Multiple Angles)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-10-part-4-multiple-angles.pdf",
+    "title": "Unit 10 Part 4 — Trigonometry (Multiple Angles)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-11-part-1-inverse-circular-function.pdf",
+    "title": "Unit 11 Part 1 — Trigonometry (Inverse circular function)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-11-part-2-inverse-circular-function.pdf",
+    "title": "Unit 11 Part 2 — Trigonometry (Inverse circular function)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-11-part-3-inverse-circular-function.pdf",
+    "title": "Unit 11 Part 3 — Trigonometry (Inverse circular function)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-11-part-4-inverse-circular-function.pdf",
+    "title": "Unit 11 Part 4 — Trigonometry (Inverse circular function)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-12-part-1-trigonometrical-properties-of-triangles.pdf",
+    "title": "Unit 12 Part 1 — Trigonometry (Trigonometrical Properties of triangles)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-12-part-2-trigonometrical-properties-of-triangles.pdf",
+    "title": "Unit 12 Part 2 — Trigonometry (Trigonometrical Properties of triangles)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-12-part-3-trigonometrical-properties-of-triangles.pdf",
+    "title": "Unit 12 Part 3 — Trigonometry (Trigonometrical Properties of triangles)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-12-part-4-trigonometrical-properties-of-triangles.pdf",
+    "title": "Unit 12 Part 4 — Trigonometry (Trigonometrical Properties of triangles)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-13-part-1-co-ordinates-to-find-lengths-and-area.pdf",
+    "title": "Unit 13 Part 1 — Co-ordinate Geometry (Co-ordinates to find lengths and area)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-13-part-2-co-ordinates-to-find-lengths-and-area.pdf",
+    "title": "Unit 13 Part 2 — Co-ordinate Geometry (Co-ordinates to find lengths and area)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-13-part-3-co-ordinates-to-find-lengths-and-area.pdf",
+    "title": "Unit 13 Part 3 — Co-ordinate Geometry (Co-ordinates to find lengths and area)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-13-part-4-co-ordinates-to-find-lengths-and-area.pdf",
+    "title": "Unit 13 Part 4 — Co-ordinate Geometry (Co-ordinates to find lengths and area)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-14-part-1-equation-of-straight-lines.pdf",
+    "title": "Unit 14 Part 1 — Geometry (Equation of straight lines)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-14-part-2-equation-of-straight-lines.pdf",
+    "title": "Unit 14 Part 2 — Geometry (Equation of straight lines)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-14-part-3-equation-of-straight-lines.pdf",
+    "title": "Unit 14 Part 3 — Geometry (Equation of straight lines)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-14-part-4-equation-of-straight-lines.pdf",
+    "title": "Unit 14 Part 4 — Geometry (Equation of straight lines)",
+    "premium": false,
+    "hidden": true
+  },
+
+  {
+    "file": "unit-15-part-1-circle.pdf",
+    "title": "Unit 15 Part 1 — Co-ordinate Geometry (Circle)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-15-part-2-circle.pdf",
+    "title": "Unit 15 Part 2 — Co-ordinate Geometry (Circle)",
+    "premium": false,
+    "hidden": false
+  },
+  {
+    "file": "unit-15-part-3-circle.pdf",
+    "title": "Unit 15 Part 3 — Co-ordinate Geometry (Circle)",
+    "premium": false,
+    "hidden": true
+  },
+  {
+    "file": "unit-15-part-4-circle.pdf",
+    "title": "Unit 15 Part 4 — Co-ordinate Geometry (Circle)",
+    "premium": false,
+    "hidden": true
+  }
+    ]
