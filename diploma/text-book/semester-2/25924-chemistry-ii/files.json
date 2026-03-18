@@ -1,0 +1,31 @@
+[
+  {"file":"unit-1-part-1-organic-chemistry.pdf","title":"Unit 1 Part 1 — Organic Chemistry","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-organic-chemistry.pdf","title":"Unit 1 Part 2 — Organic Chemistry","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-organic-chemistry.pdf","title":"Unit 1 Part 3 — Organic Chemistry","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-organic-chemistry.pdf","title":"Unit 1 Part 4 — Organic Chemistry","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-hydrocarbons.pdf","title":"Unit 2 Part 1 — Hydrocarbons","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-hydrocarbons.pdf","title":"Unit 2 Part 2 — Hydrocarbons","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-hydrocarbons.pdf","title":"Unit 2 Part 3 — Hydrocarbons","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-hydrocarbons.pdf","title":"Unit 2 Part 4 — Hydrocarbons","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-alcohols-and-phenols.pdf","title":"Unit 3 Part 1 — Alcohols and Phenols","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-alcohols-and-phenols.pdf","title":"Unit 3 Part 2 — Alcohols and Phenols","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-alcohols-and-phenols.pdf","title":"Unit 3 Part 3 — Alcohols and Phenols","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-alcohols-and-phenols.pdf","title":"Unit 3 Part 4 — Alcohols and Phenols","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-aldehydes-and-ketones.pdf","title":"Unit 4 Part 1 — Aldehydes and Ketones","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-aldehydes-and-ketones.pdf","title":"Unit 4 Part 2 — Aldehydes and Ketones","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-aldehydes-and-ketones.pdf","title":"Unit 4 Part 3 — Aldehydes and Ketones","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-aldehydes-and-ketones.pdf","title":"Unit 4 Part 4 — Aldehydes and Ketones","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-carboxylic-acids.pdf","title":"Unit 5 Part 1 — Carboxylic Acids","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-carboxylic-acids.pdf","title":"Unit 5 Part 2 — Carboxylic Acids","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-carboxylic-acids.pdf","title":"Unit 5 Part 3 — Carboxylic Acids","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-carboxylic-acids.pdf","title":"Unit 5 Part 4 — Carboxylic Acids","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-polymers.pdf","title":"Unit 6 Part 1 — Polymers","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-polymers.pdf","title":"Unit 6 Part 2 — Polymers","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-polymers.pdf","title":"Unit 6 Part 3 — Polymers","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-polymers.pdf","title":"Unit 6 Part 4 — Polymers","premium":false,"hidden":true}
+]
