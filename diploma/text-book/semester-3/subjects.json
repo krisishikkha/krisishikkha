@@ -1,1 +1,32 @@
-
+[
+  {
+    "file": "22331-crop-production-ii/index.html",
+    "title": "22331 Crop Production-II",
+    "hidden": false
+  },
+  {
+    "file": "22332-soil-science/index.html",
+    "title": "22332 Soil Science",
+    "hidden": false
+  },
+  {
+    "file": "22333-plant-breeding-and-genetics/index.html",
+    "title": "22333 Plant Breeding and Genetics",
+    "hidden": false
+  },
+  {
+    "file": "22334-agricultural-extension/index.html",
+    "title": "22334 Agricultural Extension",
+    "hidden": false
+  },
+  {
+    "file": "22335-crop-protection/index.html",
+    "title": "22335 Crop Protection",
+    "hidden": false
+  },
+  {
+    "file": "22336-irrigation-and-water-management/index.html",
+    "title": "22336 Irrigation and Water Management",
+    "hidden": false
+  }
+]
