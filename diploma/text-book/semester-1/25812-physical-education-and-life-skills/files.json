@@ -1,126 +1,51 @@
 [
-  {
-    "file": "unit-1-part-1-physical-education.pdf",
-    "title": "Unit 1 Part 1 — Physical Education",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-1-part-2-physical-education.pdf",
-    "title": "Unit 1 Part 2 — Physical Education",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-1-part-3-physical-education.pdf",
-    "title": "Unit 1 Part 3 — Physical Education",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-1-part-4-physical-education.pdf",
-    "title": "Unit 1 Part 4 — Physical Education",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-1-part-1-perform-assembly.pdf","title":"Unit 1 Part 1 — Perform Assembly","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-perform-assembly.pdf","title":"Unit 1 Part 2 — Perform Assembly","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-perform-assembly.pdf","title":"Unit 1 Part 3 — Perform Assembly","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-perform-assembly.pdf","title":"Unit 1 Part 4 — Perform Assembly","premium":false,"hidden":true},
 
-  {
-    "file": "unit-2-part-1-physical-fitness.pdf",
-    "title": "Unit 2 Part 1 — Physical Fitness",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-2-part-2-physical-fitness.pdf",
-    "title": "Unit 2 Part 2 — Physical Fitness",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-2-part-3-physical-fitness.pdf",
-    "title": "Unit 2 Part 3 — Physical Fitness",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-2-part-4-physical-fitness.pdf",
-    "title": "Unit 2 Part 4 — Physical Fitness",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-2-part-1-perform-warm-up-with-pictorial.pdf","title":"Unit 2 Part 1 — Perform Warm-up with Pictorial","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-perform-warm-up-with-pictorial.pdf","title":"Unit 2 Part 2 — Perform Warm-up with Pictorial","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-perform-warm-up-with-pictorial.pdf","title":"Unit 2 Part 3 — Perform Warm-up with Pictorial","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-perform-warm-up-with-pictorial.pdf","title":"Unit 2 Part 4 — Perform Warm-up with Pictorial","premium":false,"hidden":true},
 
-  {
-    "file": "unit-3-part-1-first-aid.pdf",
-    "title": "Unit 3 Part 1 — First Aid",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-3-part-2-first-aid.pdf",
-    "title": "Unit 3 Part 2 — First Aid",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-3-part-3-first-aid.pdf",
-    "title": "Unit 3 Part 3 — First Aid",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-3-part-4-first-aid.pdf",
-    "title": "Unit 3 Part 4 — First Aid",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-3-part-1-perform-yoga.pdf","title":"Unit 3 Part 1 — Perform Yoga","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-perform-yoga.pdf","title":"Unit 3 Part 2 — Perform Yoga","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-perform-yoga.pdf","title":"Unit 3 Part 3 — Perform Yoga","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-perform-yoga.pdf","title":"Unit 3 Part 4 — Perform Yoga","premium":false,"hidden":true},
 
-  {
-    "file": "unit-4-part-1-life-skills.pdf",
-    "title": "Unit 4 Part 1 — Life Skills",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-4-part-2-life-skills.pdf",
-    "title": "Unit 4 Part 2 — Life Skills",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-4-part-3-life-skills.pdf",
-    "title": "Unit 4 Part 3 — Life Skills",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-4-part-4-life-skills.pdf",
-    "title": "Unit 4 Part 4 — Life Skills",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-4-part-1-develop-muscle.pdf","title":"Unit 4 Part 1 — Develop Muscle","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-develop-muscle.pdf","title":"Unit 4 Part 2 — Develop Muscle","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-develop-muscle.pdf","title":"Unit 4 Part 3 — Develop Muscle","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-develop-muscle.pdf","title":"Unit 4 Part 4 — Develop Muscle","premium":false,"hidden":true},
 
-  {
-    "file": "unit-5-part-1-recreation-and-leisure.pdf",
-    "title": "Unit 5 Part 1 — Recreation and Leisure",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-5-part-2-recreation-and-leisure.pdf",
-    "title": "Unit 5 Part 2 — Recreation and Leisure",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-5-part-3-recreation-and-leisure.pdf",
-    "title": "Unit 5 Part 3 — Recreation and Leisure",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-5-part-4-recreation-and-leisure.pdf",
-    "title": "Unit 5 Part 4 — Recreation and Leisure",
-    "premium": false,
-    "hidden": true
-  }
-    ]
+  {"file":"unit-5-part-1-perform-games-and-sports.pdf","title":"Unit 5 Part 1 — Perform Games and Sports","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-perform-games-and-sports.pdf","title":"Unit 5 Part 2 — Perform Games and Sports","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-perform-games-and-sports.pdf","title":"Unit 5 Part 3 — Perform Games and Sports","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-perform-games-and-sports.pdf","title":"Unit 5 Part 4 — Perform Games and Sports","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-practice-sports-science.pdf","title":"Unit 6 Part 1 — Practice Sports Science","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-practice-sports-science.pdf","title":"Unit 6 Part 2 — Practice Sports Science","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-practice-sports-science.pdf","title":"Unit 6 Part 3 — Practice Sports Science","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-practice-sports-science.pdf","title":"Unit 6 Part 4 — Practice Sports Science","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-celebrate-liberation-war-and-national-days-of-bangladesh.pdf","title":"Unit 7 Part 1 — Celebrate Liberation War and National Days of Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-celebrate-liberation-war-and-national-days-of-bangladesh.pdf","title":"Unit 7 Part 2 — Celebrate Liberation War and National Days of Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-celebrate-liberation-war-and-national-days-of-bangladesh.pdf","title":"Unit 7 Part 3 — Celebrate Liberation War and National Days of Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-celebrate-liberation-war-and-national-days-of-bangladesh.pdf","title":"Unit 7 Part 4 — Celebrate Liberation War and National Days of Bangladesh","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-apply-first-aid.pdf","title":"Unit 8 Part 1 — Apply First Aid","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-apply-first-aid.pdf","title":"Unit 8 Part 2 — Apply First Aid","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-apply-first-aid.pdf","title":"Unit 8 Part 3 — Apply First Aid","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-apply-first-aid.pdf","title":"Unit 8 Part 4 — Apply First Aid","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-maintain-human-relation-and-perform-social-work.pdf","title":"Unit 9 Part 1 — Maintain Human Relation and Perform Social Work","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-maintain-human-relation-and-perform-social-work.pdf","title":"Unit 9 Part 2 — Maintain Human Relation and Perform Social Work","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-maintain-human-relation-and-perform-social-work.pdf","title":"Unit 9 Part 3 — Maintain Human Relation and Perform Social Work","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-maintain-human-relation-and-perform-social-work.pdf","title":"Unit 9 Part 4 — Maintain Human Relation and Perform Social Work","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-control-stress-management-and-practice-interview-technique.pdf","title":"Unit 10 Part 1 — Control Stress Management and Practice Interview Technique","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-control-stress-management-and-practice-interview-technique.pdf","title":"Unit 10 Part 2 — Control Stress Management and Practice Interview Technique","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-control-stress-management-and-practice-interview-technique.pdf","title":"Unit 10 Part 3 — Control Stress Management and Practice Interview Technique","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-control-stress-management-and-practice-interview-technique.pdf","title":"Unit 10 Part 4 — Control Stress Management and Practice Interview Technique","premium":false,"hidden":true}
+]
