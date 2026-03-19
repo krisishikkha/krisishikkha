@@ -1,251 +1,51 @@
 [
-  {
-    "file": "unit-1-part-1-agriculture-in-bangladesh.pdf",
-    "title": "Unit 1 Part 1 — Agriculture in Bangladesh",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-1-part-2-agriculture-in-bangladesh.pdf",
-    "title": "Unit 1 Part 2 — Agriculture in Bangladesh",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-1-part-3-agriculture-in-bangladesh.pdf",
-    "title": "Unit 1 Part 3 — Agriculture in Bangladesh",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-1-part-4-agriculture-in-bangladesh.pdf",
-    "title": "Unit 1 Part 4 — Agriculture in Bangladesh",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-1-part-1-agriculture-in-bangladesh.pdf","title":"Unit 1 Part 1 — Agriculture in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-agriculture-in-bangladesh.pdf","title":"Unit 1 Part 2 — Agriculture in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-agriculture-in-bangladesh.pdf","title":"Unit 1 Part 3 — Agriculture in Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-agriculture-in-bangladesh.pdf","title":"Unit 1 Part 4 — Agriculture in Bangladesh","premium":false,"hidden":true},
 
-  {
-    "file": "unit-2-part-1-crops-livestock-fisheries.pdf",
-    "title": "Unit 2 Part 1 — Crops, Livestock, Fisheries and Forests",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-2-part-2-crops-livestock-fisheries.pdf",
-    "title": "Unit 2 Part 2 — Crops, Livestock, Fisheries and Forests",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-2-part-3-crops-livestock-fisheries.pdf",
-    "title": "Unit 2 Part 3 — Crops, Livestock, Fisheries and Forests",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-2-part-4-crops-livestock-fisheries.pdf",
-    "title": "Unit 2 Part 4 — Crops, Livestock, Fisheries and Forests",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-2-part-1-crops-livestock-fisheries-and-forests-in-bangladesh.pdf","title":"Unit 2 Part 1 — Crops, Livestock, Fisheries and Forests in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-crops-livestock-fisheries-and-forests-in-bangladesh.pdf","title":"Unit 2 Part 2 — Crops, Livestock, Fisheries and Forests in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-crops-livestock-fisheries-and-forests-in-bangladesh.pdf","title":"Unit 2 Part 3 — Crops, Livestock, Fisheries and Forests in Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-crops-livestock-fisheries-and-forests-in-bangladesh.pdf","title":"Unit 2 Part 4 — Crops, Livestock, Fisheries and Forests in Bangladesh","premium":false,"hidden":true},
 
-  {
-    "file": "unit-3-part-1-food-production.pdf",
-    "title": "Unit 3 Part 1 — Food Production Situation",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-3-part-2-food-production.pdf",
-    "title": "Unit 3 Part 2 — Food Production Situation",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-3-part-3-food-production.pdf",
-    "title": "Unit 3 Part 3 — Food Production Situation",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-3-part-4-food-production.pdf",
-    "title": "Unit 3 Part 4 — Food Production Situation",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-3-part-1-food-production-situation-in-bangladesh.pdf","title":"Unit 3 Part 1 — Food production situation in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-food-production-situation-in-bangladesh.pdf","title":"Unit 3 Part 2 — Food production situation in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-food-production-situation-in-bangladesh.pdf","title":"Unit 3 Part 3 — Food production situation in Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-food-production-situation-in-bangladesh.pdf","title":"Unit 3 Part 4 — Food production situation in Bangladesh","premium":false,"hidden":true},
 
-  {
-    "file": "unit-4-part-1-multiple-crop-research.pdf",
-    "title": "Unit 4 Part 1 — Multiple Crop Research Institutes",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-4-part-2-multiple-crop-research.pdf",
-    "title": "Unit 4 Part 2 — Multiple Crop Research Institutes",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-4-part-3-multiple-crop-research.pdf",
-    "title": "Unit 4 Part 3 — Multiple Crop Research Institutes",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-4-part-4-multiple-crop-research.pdf",
-    "title": "Unit 4 Part 4 — Multiple Crop Research Institutes",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-4-part-1-multiple-crops-agricultural-research-institutes.pdf","title":"Unit 4 Part 1 — Multiple crops agricultural research institutes","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-multiple-crops-agricultural-research-institutes.pdf","title":"Unit 4 Part 2 — Multiple crops agricultural research institutes","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-multiple-crops-agricultural-research-institutes.pdf","title":"Unit 4 Part 3 — Multiple crops agricultural research institutes","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-multiple-crops-agricultural-research-institutes.pdf","title":"Unit 4 Part 4 — Multiple crops agricultural research institutes","premium":false,"hidden":true},
 
-  {
-    "file": "unit-5-part-1-mono-crop-research.pdf",
-    "title": "Unit 5 Part 1 — Mono Crop Research Institutes",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-5-part-2-mono-crop-research.pdf",
-    "title": "Unit 5 Part 2 — Mono Crop Research Institutes",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-5-part-3-mono-crop-research.pdf",
-    "title": "Unit 5 Part 3 — Mono Crop Research Institutes",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-5-part-4-mono-crop-research.pdf",
-    "title": "Unit 5 Part 4 — Mono Crop Research Institutes",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-5-part-1-mono-crop-agricultural-research-institutes.pdf","title":"Unit 5 Part 1 — Mono crop agricultural research institutes","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-mono-crop-agricultural-research-institutes.pdf","title":"Unit 5 Part 2 — Mono crop agricultural research institutes","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-mono-crop-agricultural-research-institutes.pdf","title":"Unit 5 Part 3 — Mono crop agricultural research institutes","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-mono-crop-agricultural-research-institutes.pdf","title":"Unit 5 Part 4 — Mono crop agricultural research institutes","premium":false,"hidden":true},
 
-  {
-    "file": "unit-6-part-1-agricultural-universities.pdf",
-    "title": "Unit 6 Part 1 — Agricultural Universities of Bangladesh",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-6-part-2-agricultural-universities.pdf",
-    "title": "Unit 6 Part 2 — Agricultural Universities of Bangladesh",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-6-part-3-agricultural-universities.pdf",
-    "title": "Unit 6 Part 3 — Agricultural Universities of Bangladesh",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-6-part-4-agricultural-universities.pdf",
-    "title": "Unit 6 Part 4 — Agricultural Universities of Bangladesh",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-6-part-1-agricultural-universities-of-bangladesh.pdf","title":"Unit 6 Part 1 — Agricultural Universities of Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-agricultural-universities-of-bangladesh.pdf","title":"Unit 6 Part 2 — Agricultural Universities of Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-agricultural-universities-of-bangladesh.pdf","title":"Unit 6 Part 3 — Agricultural Universities of Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-agricultural-universities-of-bangladesh.pdf","title":"Unit 6 Part 4 — Agricultural Universities of Bangladesh","premium":false,"hidden":true},
 
-  {
-    "file": "unit-7-part-1-agricultural-institutes.pdf",
-    "title": "Unit 7 Part 1 — Agricultural Institutes of Bangladesh",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-7-part-2-agricultural-institutes.pdf",
-    "title": "Unit 7 Part 2 — Agricultural Institutes of Bangladesh",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-7-part-3-agricultural-institutes.pdf",
-    "title": "Unit 7 Part 3 — Agricultural Institutes of Bangladesh",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-7-part-4-agricultural-institutes.pdf",
-    "title": "Unit 7 Part 4 — Agricultural Institutes of Bangladesh",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-7-part-1-agricultural-institutes-of-bangladesh.pdf","title":"Unit 7 Part 1 — Agricultural Institutes of Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-agricultural-institutes-of-bangladesh.pdf","title":"Unit 7 Part 2 — Agricultural Institutes of Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-agricultural-institutes-of-bangladesh.pdf","title":"Unit 7 Part 3 — Agricultural Institutes of Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-agricultural-institutes-of-bangladesh.pdf","title":"Unit 7 Part 4 — Agricultural Institutes of Bangladesh","premium":false,"hidden":true},
 
-  {
-    "file": "unit-8-part-1-extension-institution.pdf",
-    "title": "Unit 8 Part 1 — Agricultural Extension Institution",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-8-part-2-extension-institution.pdf",
-    "title": "Unit 8 Part 2 — Agricultural Extension Institution",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-8-part-3-extension-institution.pdf",
-    "title": "Unit 8 Part 3 — Agricultural Extension Institution",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-8-part-4-extension-institution.pdf",
-    "title": "Unit 8 Part 4 — Agricultural Extension Institution",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-8-part-1-agricultural-extension-institution.pdf","title":"Unit 8 Part 1 — Agricultural extension Institution","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-agricultural-extension-institution.pdf","title":"Unit 8 Part 2 — Agricultural extension Institution","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-agricultural-extension-institution.pdf","title":"Unit 8 Part 3 — Agricultural extension Institution","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-agricultural-extension-institution.pdf","title":"Unit 8 Part 4 — Agricultural extension Institution","premium":false,"hidden":true},
 
-  {
-    "file": "unit-9-part-1-commodity-suppliers.pdf",
-    "title": "Unit 9 Part 1 — Agricultural Commodity Supplier Organizations",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-9-part-2-commodity-suppliers.pdf",
-    "title": "Unit 9 Part 2 — Agricultural Commodity Supplier Organizations",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-9-part-3-commodity-suppliers.pdf",
-    "title": "Unit 9 Part 3 — Agricultural Commodity Supplier Organizations",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-9-part-4-commodity-suppliers.pdf",
-    "title": "Unit 9 Part 4 — Agricultural Commodity Supplier Organizations",
-    "premium": false,
-    "hidden": true
-  },
+  {"file":"unit-9-part-1-agricultural-commodity-supplier-organizations.pdf","title":"Unit 9 Part 1 — Agricultural commodity Supplier organizations.","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-agricultural-commodity-supplier-organizations.pdf","title":"Unit 9 Part 2 — Agricultural commodity Supplier organizations.","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-agricultural-commodity-supplier-organizations.pdf","title":"Unit 9 Part 3 — Agricultural commodity Supplier organizations.","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-agricultural-commodity-supplier-organizations.pdf","title":"Unit 9 Part 4 — Agricultural commodity Supplier organizations.","premium":false,"hidden":true},
 
-  {
-    "file": "unit-10-part-1-adverse-conditions.pdf",
-    "title": "Unit 10 Part 1 — Agricultural Practices in Adverse Conditions",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-10-part-2-adverse-conditions.pdf",
-    "title": "Unit 10 Part 2 — Agricultural Practices in Adverse Conditions",
-    "premium": false,
-    "hidden": false
-  },
-  {
-    "file": "unit-10-part-3-adverse-conditions.pdf",
-    "title": "Unit 10 Part 3 — Agricultural Practices in Adverse Conditions",
-    "premium": false,
-    "hidden": true
-  },
-  {
-    "file": "unit-10-part-4-adverse-conditions.pdf",
-    "title": "Unit 10 Part 4 — Agricultural Practices in Adverse Conditions",
-    "premium": false,
-    "hidden": true
-  }
-    ]
+  {"file":"unit-10-part-1-agricultural-practices-in-adverse-conditions-in-bangladesh.pdf","title":"Unit 10 Part 1 — Agricultural practices in adverse conditions in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-agricultural-practices-in-adverse-conditions-in-bangladesh.pdf","title":"Unit 10 Part 2 — Agricultural practices in adverse conditions in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-agricultural-practices-in-adverse-conditions-in-bangladesh.pdf","title":"Unit 10 Part 3 — Agricultural practices in adverse conditions in Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-agricultural-practices-in-adverse-conditions-in-bangladesh.pdf","title":"Unit 10 Part 4 — Agricultural practices in adverse conditions in Bangladesh","premium":false,"hidden":true}
+]
