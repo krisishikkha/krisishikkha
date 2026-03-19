@@ -1,0 +1,41 @@
+[
+  {"file":"unit-1-part-1-introduction-to-farm-management.pdf","title":"Unit 1 Part 1 — Introduction to Farm Management","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-farm-management.pdf","title":"Unit 1 Part 2 — Introduction to Farm Management","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-farm-management.pdf","title":"Unit 1 Part 3 — Introduction to Farm Management","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-farm-management.pdf","title":"Unit 1 Part 4 — Introduction to Farm Management","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-farm-planning.pdf","title":"Unit 2 Part 1 — Farm Planning","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-farm-planning.pdf","title":"Unit 2 Part 2 — Farm Planning","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-farm-planning.pdf","title":"Unit 2 Part 3 — Farm Planning","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-farm-planning.pdf","title":"Unit 2 Part 4 — Farm Planning","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-farm-budgeting.pdf","title":"Unit 3 Part 1 — Farm Budgeting","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-farm-budgeting.pdf","title":"Unit 3 Part 2 — Farm Budgeting","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-farm-budgeting.pdf","title":"Unit 3 Part 3 — Farm Budgeting","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-farm-budgeting.pdf","title":"Unit 3 Part 4 — Farm Budgeting","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-farm-records.pdf","title":"Unit 4 Part 1 — Farm Records","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-farm-records.pdf","title":"Unit 4 Part 2 — Farm Records","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-farm-records.pdf","title":"Unit 4 Part 3 — Farm Records","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-farm-records.pdf","title":"Unit 4 Part 4 — Farm Records","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-farm-efficiency.pdf","title":"Unit 5 Part 1 — Farm Efficiency","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-farm-efficiency.pdf","title":"Unit 5 Part 2 — Farm Efficiency","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-farm-efficiency.pdf","title":"Unit 5 Part 3 — Farm Efficiency","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-farm-efficiency.pdf","title":"Unit 5 Part 4 — Farm Efficiency","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-risk-and-uncertainty.pdf","title":"Unit 6 Part 1 — Risk and Uncertainty","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-risk-and-uncertainty.pdf","title":"Unit 6 Part 2 — Risk and Uncertainty","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-risk-and-uncertainty.pdf","title":"Unit 6 Part 3 — Risk and Uncertainty","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-risk-and-uncertainty.pdf","title":"Unit 6 Part 4 — Risk and Uncertainty","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-resource-management.pdf","title":"Unit 7 Part 1 — Resource Management","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-resource-management.pdf","title":"Unit 7 Part 2 — Resource Management","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-resource-management.pdf","title":"Unit 7 Part 3 — Resource Management","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-resource-management.pdf","title":"Unit 7 Part 4 — Resource Management","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-decision-making.pdf","title":"Unit 8 Part 1 — Decision Making","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-decision-making.pdf","title":"Unit 8 Part 2 — Decision Making","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-decision-making.pdf","title":"Unit 8 Part 3 — Decision Making","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-decision-making.pdf","title":"Unit 8 Part 4 — Decision Making","premium":false,"hidden":true}
+]
