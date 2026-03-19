@@ -1,31 +1,51 @@
 [
-  {"file":"unit-1-part-1-organic-chemistry.pdf","title":"Unit 1 Part 1 — Organic Chemistry","premium":false,"hidden":false},
-  {"file":"unit-1-part-2-organic-chemistry.pdf","title":"Unit 1 Part 2 — Organic Chemistry","premium":false,"hidden":false},
-  {"file":"unit-1-part-3-organic-chemistry.pdf","title":"Unit 1 Part 3 — Organic Chemistry","premium":false,"hidden":true},
-  {"file":"unit-1-part-4-organic-chemistry.pdf","title":"Unit 1 Part 4 — Organic Chemistry","premium":false,"hidden":true},
+  {"file":"unit-1-part-1-basic-concept-of-organic-chemistry.pdf","title":"Unit 1 Part 1 — BASIC CONCEPT OF ORGANIC CHEMISTRY","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-basic-concept-of-organic-chemistry.pdf","title":"Unit 1 Part 2 — BASIC CONCEPT OF ORGANIC CHEMISTRY","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-basic-concept-of-organic-chemistry.pdf","title":"Unit 1 Part 3 — BASIC CONCEPT OF ORGANIC CHEMISTRY","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-basic-concept-of-organic-chemistry.pdf","title":"Unit 1 Part 4 — BASIC CONCEPT OF ORGANIC CHEMISTRY","premium":false,"hidden":true},
 
-  {"file":"unit-2-part-1-hydrocarbons.pdf","title":"Unit 2 Part 1 — Hydrocarbons","premium":false,"hidden":false},
-  {"file":"unit-2-part-2-hydrocarbons.pdf","title":"Unit 2 Part 2 — Hydrocarbons","premium":false,"hidden":false},
-  {"file":"unit-2-part-3-hydrocarbons.pdf","title":"Unit 2 Part 3 — Hydrocarbons","premium":false,"hidden":true},
-  {"file":"unit-2-part-4-hydrocarbons.pdf","title":"Unit 2 Part 4 — Hydrocarbons","premium":false,"hidden":true},
+  {"file":"unit-2-part-1-aliphatic-hydrocarbon.pdf","title":"Unit 2 Part 1 — ALIPHATIC HYDROCARBON","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-aliphatic-hydrocarbon.pdf","title":"Unit 2 Part 2 — ALIPHATIC HYDROCARBON","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-aliphatic-hydrocarbon.pdf","title":"Unit 2 Part 3 — ALIPHATIC HYDROCARBON","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-aliphatic-hydrocarbon.pdf","title":"Unit 2 Part 4 — ALIPHATIC HYDROCARBON","premium":false,"hidden":true},
 
-  {"file":"unit-3-part-1-alcohols-and-phenols.pdf","title":"Unit 3 Part 1 — Alcohols and Phenols","premium":false,"hidden":false},
-  {"file":"unit-3-part-2-alcohols-and-phenols.pdf","title":"Unit 3 Part 2 — Alcohols and Phenols","premium":false,"hidden":false},
-  {"file":"unit-3-part-3-alcohols-and-phenols.pdf","title":"Unit 3 Part 3 — Alcohols and Phenols","premium":false,"hidden":true},
-  {"file":"unit-3-part-4-alcohols-and-phenols.pdf","title":"Unit 3 Part 4 — Alcohols and Phenols","premium":false,"hidden":true},
+  {"file":"unit-3-part-1-alcohol.pdf","title":"Unit 3 Part 1 — ALCOHOL","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-alcohol.pdf","title":"Unit 3 Part 2 — ALCOHOL","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-alcohol.pdf","title":"Unit 3 Part 3 — ALCOHOL","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-alcohol.pdf","title":"Unit 3 Part 4 — ALCOHOL","premium":false,"hidden":true},
 
-  {"file":"unit-4-part-1-aldehydes-and-ketones.pdf","title":"Unit 4 Part 1 — Aldehydes and Ketones","premium":false,"hidden":false},
-  {"file":"unit-4-part-2-aldehydes-and-ketones.pdf","title":"Unit 4 Part 2 — Aldehydes and Ketones","premium":false,"hidden":false},
-  {"file":"unit-4-part-3-aldehydes-and-ketones.pdf","title":"Unit 4 Part 3 — Aldehydes and Ketones","premium":false,"hidden":true},
-  {"file":"unit-4-part-4-aldehydes-and-ketones.pdf","title":"Unit 4 Part 4 — Aldehydes and Ketones","premium":false,"hidden":true},
+  {"file":"unit-4-part-1-organic-acid.pdf","title":"Unit 4 Part 1 — ORGANIC ACID","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-organic-acid.pdf","title":"Unit 4 Part 2 — ORGANIC ACID","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-organic-acid.pdf","title":"Unit 4 Part 3 — ORGANIC ACID","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-organic-acid.pdf","title":"Unit 4 Part 4 — ORGANIC ACID","premium":false,"hidden":true},
 
-  {"file":"unit-5-part-1-carboxylic-acids.pdf","title":"Unit 5 Part 1 — Carboxylic Acids","premium":false,"hidden":false},
-  {"file":"unit-5-part-2-carboxylic-acids.pdf","title":"Unit 5 Part 2 — Carboxylic Acids","premium":false,"hidden":false},
-  {"file":"unit-5-part-3-carboxylic-acids.pdf","title":"Unit 5 Part 3 — Carboxylic Acids","premium":false,"hidden":true},
-  {"file":"unit-5-part-4-carboxylic-acids.pdf","title":"Unit 5 Part 4 — Carboxylic Acids","premium":false,"hidden":true},
+  {"file":"unit-5-part-1-aromatic-compound.pdf","title":"Unit 5 Part 1 — AROMATIC COMPOUND","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-aromatic-compound.pdf","title":"Unit 5 Part 2 — AROMATIC COMPOUND","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-aromatic-compound.pdf","title":"Unit 5 Part 3 — AROMATIC COMPOUND","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-aromatic-compound.pdf","title":"Unit 5 Part 4 — AROMATIC COMPOUND","premium":false,"hidden":true},
 
-  {"file":"unit-6-part-1-polymers.pdf","title":"Unit 6 Part 1 — Polymers","premium":false,"hidden":false},
-  {"file":"unit-6-part-2-polymers.pdf","title":"Unit 6 Part 2 — Polymers","premium":false,"hidden":false},
-  {"file":"unit-6-part-3-polymers.pdf","title":"Unit 6 Part 3 — Polymers","premium":false,"hidden":true},
-  {"file":"unit-6-part-4-polymers.pdf","title":"Unit 6 Part 4 — Polymers","premium":false,"hidden":true}
-]
+  {"file":"unit-6-part-1-derivatives-of-benzene.pdf","title":"Unit 6 Part 1 — DERIVATIVES OF BENZENE","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-derivatives-of-benzene.pdf","title":"Unit 6 Part 2 — DERIVATIVES OF BENZENE","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-derivatives-of-benzene.pdf","title":"Unit 6 Part 3 — DERIVATIVES OF BENZENE","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-derivatives-of-benzene.pdf","title":"Unit 6 Part 4 — DERIVATIVES OF BENZENE","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-biomolecule-and-carbohydrate.pdf","title":"Unit 7 Part 1 — BIOMOLECULE AND CARBOHYDRATE","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-biomolecule-and-carbohydrate.pdf","title":"Unit 7 Part 2 — BIOMOLECULE AND CARBOHYDRATE","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-biomolecule-and-carbohydrate.pdf","title":"Unit 7 Part 3 — BIOMOLECULE AND CARBOHYDRATE","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-biomolecule-and-carbohydrate.pdf","title":"Unit 7 Part 4 — BIOMOLECULE AND CARBOHYDRATE","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-aldehyde-and-ketone.pdf","title":"Unit 8 Part 1 — ALDEHYDE AND KETONE","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-aldehyde-and-ketone.pdf","title":"Unit 8 Part 2 — ALDEHYDE AND KETONE","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-aldehyde-and-ketone.pdf","title":"Unit 8 Part 3 — ALDEHYDE AND KETONE","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-aldehyde-and-ketone.pdf","title":"Unit 8 Part 4 — ALDEHYDE AND KETONE","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-polymer-chemistry.pdf","title":"Unit 9 Part 1 — POLYMERCHEMISTRY","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-polymer-chemistry.pdf","title":"Unit 9 Part 2 — POLYMERCHEMISTRY","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-polymer-chemistry.pdf","title":"Unit 9 Part 3 — POLYMERCHEMISTRY","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-polymer-chemistry.pdf","title":"Unit 9 Part 4 — POLYMERCHEMISTRY","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-environmental-chemistry.pdf","title":"Unit 10 Part 1 — ENVIRONMENTAL CHEMISTRY","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-environmental-chemistry.pdf","title":"Unit 10 Part 2 — ENVIRONMENTAL CHEMISTRY","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-environmental-chemistry.pdf","title":"Unit 10 Part 3 — ENVIRONMENTAL CHEMISTRY","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-environmental-chemistry.pdf","title":"Unit 10 Part 4 — ENVIRONMENTAL CHEMISTRY","premium":false,"hidden":true}
+    ]
