@@ -2,79 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4th Semester | Text Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4th Semester</title>
   <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
 
-  <div class="research-container">
+<div class="research-container">
 
-    <div class="research-header">
-      <p class="breadcrumb">
-        <a href="../../index.html">Diploma Agriculture</a> /
-        <a href="../index.html">Text Book</a> /
-        <span>4th Semester</span>
-      </p>
+  <div class="research-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">Diploma Agriculture</a> /
+      <a href="../index.html">Text Book</a> /
+      <span>4th Semester</span>
+    </p>
 
-      <h1>4th Semester</h1>
-
-      <p class="subtitle">
-        Select a subject to open its PDF list.
-      </p>
-    </div>
-
-    <div id="subjectList" class="section-list"></div>
-
-    <div class="back-wrap">
-      <a href="../index.html" class="back-btn">← Back to Text Book</a>
-    </div>
-
+    <h1>4th Semester</h1>
+    <p class="subtitle">Select a subject to view materials</p>
   </div>
 
-  <script>
-    async function loadSubjects() {
-      const container = document.getElementById("subjectList");
+  <div id="autoList" class="section-grid" data-mode="subjects" data-json="subjects.json"></div>
 
-      try {
-        const response = await fetch("subjects.json", { cache: "no-store" });
-        const items = await response.json();
+  <div class="back-wrap">
+    <a href="../index.html" class="back-btn">← Back to Text Book</a>
+  </div>
 
-        container.innerHTML = "";
+</div>
 
-        const visibleItems = items.filter(item => item.hidden !== true);
-
-        if (!visibleItems.length) {
-          container.innerHTML = '<p class="empty-note">No subject found.</p>';
-          return;
-        }
-
-        visibleItems.forEach(item => {
-          const a = document.createElement("a");
-          a.href = item.file;
-          a.className = "list-card";
-
-          a.innerHTML = `
-            <div class="list-card-left">
-              <span class="list-icon">📘</span>
-              <div class="list-content">
-                <span class="list-title">${item.title}</span>
-                <span class="list-subtitle">${item.subtitle || "4th Semester subject"}</span>
-              </div>
-            </div>
-          `;
-
-          container.appendChild(a);
-        });
-
-      } catch (error) {
-        console.error(error);
-        container.innerHTML = '<p class="empty-note">Failed to load subjects.</p>';
-      }
-    }
-
-    loadSubjects();
-  </script>
+<script src="../../assets/js/auto-list.js"></script>
 
 </body>
 </html>
