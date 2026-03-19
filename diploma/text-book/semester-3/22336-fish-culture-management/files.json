@@ -1,0 +1,51 @@
+[
+  {"file":"unit-1-part-1-basic-concepts-of-fisheries.pdf","title":"Unit 1 Part 1 — Basic Concepts of Fisheries","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-basic-concepts-of-fisheries.pdf","title":"Unit 1 Part 2 — Basic Concepts of Fisheries","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-basic-concepts-of-fisheries.pdf","title":"Unit 1 Part 3 — Basic Concepts of Fisheries","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-basic-concepts-of-fisheries.pdf","title":"Unit 1 Part 4 — Basic Concepts of Fisheries","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-ponds-for-fish-culture.pdf","title":"Unit 2 Part 1 — Ponds for Fish Culture","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-ponds-for-fish-culture.pdf","title":"Unit 2 Part 2 — Ponds for Fish Culture","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-ponds-for-fish-culture.pdf","title":"Unit 2 Part 3 — Ponds for Fish Culture","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-ponds-for-fish-culture.pdf","title":"Unit 2 Part 4 — Ponds for Fish Culture","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-fish-culture.pdf","title":"Unit 3 Part 1 — Fish Culture","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-fish-culture.pdf","title":"Unit 3 Part 2 — Fish Culture","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-fish-culture.pdf","title":"Unit 3 Part 3 — Fish Culture","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-fish-culture.pdf","title":"Unit 3 Part 4 — Fish Culture","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-special-management-in-fish-culture.pdf","title":"Unit 4 Part 1 — Special Management in Fish Culture","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-special-management-in-fish-culture.pdf","title":"Unit 4 Part 2 — Special Management in Fish Culture","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-special-management-in-fish-culture.pdf","title":"Unit 4 Part 3 — Special Management in Fish Culture","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-special-management-in-fish-culture.pdf","title":"Unit 4 Part 4 — Special Management in Fish Culture","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-integrated-fish-culture.pdf","title":"Unit 5 Part 1 — Integrated Fish Culture","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-integrated-fish-culture.pdf","title":"Unit 5 Part 2 — Integrated Fish Culture","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-integrated-fish-culture.pdf","title":"Unit 5 Part 3 — Integrated Fish Culture","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-integrated-fish-culture.pdf","title":"Unit 5 Part 4 — Integrated Fish Culture","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-fish-breeding.pdf","title":"Unit 6 Part 1 — Fish Breeding","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-fish-breeding.pdf","title":"Unit 6 Part 2 — Fish Breeding","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-fish-breeding.pdf","title":"Unit 6 Part 3 — Fish Breeding","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-fish-breeding.pdf","title":"Unit 6 Part 4 — Fish Breeding","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-packaging-and-transportation-of-fish-fry.pdf","title":"Unit 7 Part 1 — Packaging and Transportation of Fish Fry","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-packaging-and-transportation-of-fish-fry.pdf","title":"Unit 7 Part 2 — Packaging and Transportation of Fish Fry","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-packaging-and-transportation-of-fish-fry.pdf","title":"Unit 7 Part 3 — Packaging and Transportation of Fish Fry","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-packaging-and-transportation-of-fish-fry.pdf","title":"Unit 7 Part 4 — Packaging and Transportation of Fish Fry","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-fish-diseases-and-control.pdf","title":"Unit 8 Part 1 — Fish Diseases and Control","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-fish-diseases-and-control.pdf","title":"Unit 8 Part 2 — Fish Diseases and Control","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-fish-diseases-and-control.pdf","title":"Unit 8 Part 3 — Fish Diseases and Control","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-fish-diseases-and-control.pdf","title":"Unit 8 Part 4 — Fish Diseases and Control","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-declination-of-fish-production-in-open-water-bodies-and-mitigation.pdf","title":"Unit 9 Part 1 — Declination of Fish Production in Open Water bodies and Mitigation","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-declination-of-fish-production-in-open-water-bodies-and-mitigation.pdf","title":"Unit 9 Part 2 — Declination of Fish Production in Open Water bodies and Mitigation","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-declination-of-fish-production-in-open-water-bodies-and-mitigation.pdf","title":"Unit 9 Part 3 — Declination of Fish Production in Open Water bodies and Mitigation","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-declination-of-fish-production-in-open-water-bodies-and-mitigation.pdf","title":"Unit 9 Part 4 — Declination of Fish Production in Open Water bodies and Mitigation","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-fish-acts.pdf","title":"Unit 10 Part 1 — Fish Acts","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-fish-acts.pdf","title":"Unit 10 Part 2 — Fish Acts","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-fish-acts.pdf","title":"Unit 10 Part 3 — Fish Acts","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-fish-acts.pdf","title":"Unit 10 Part 4 — Fish Acts","premium":false,"hidden":true}
+]
