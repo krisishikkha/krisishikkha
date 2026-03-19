@@ -1,0 +1,51 @@
+[
+  {"file":"unit-1-part-1-mensuration.pdf","title":"Unit 1 Part 1 — Mensuration","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-mensuration.pdf","title":"Unit 1 Part 2 — Mensuration","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-mensuration.pdf","title":"Unit 1 Part 3 — Mensuration","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-mensuration.pdf","title":"Unit 1 Part 4 — Mensuration","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-statistics-population-and-sample.pdf","title":"Unit 2 Part 1 — Statistics, Population and Sample","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-statistics-population-and-sample.pdf","title":"Unit 2 Part 2 — Statistics, Population and Sample","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-statistics-population-and-sample.pdf","title":"Unit 2 Part 3 — Statistics, Population and Sample","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-statistics-population-and-sample.pdf","title":"Unit 2 Part 4 — Statistics, Population and Sample","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-scales-of-measurement.pdf","title":"Unit 3 Part 1 — Scales of Measurement","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-scales-of-measurement.pdf","title":"Unit 3 Part 2 — Scales of Measurement","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-scales-of-measurement.pdf","title":"Unit 3 Part 3 — Scales of Measurement","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-scales-of-measurement.pdf","title":"Unit 3 Part 4 — Scales of Measurement","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-frequency-distribution-and-graphical-representation.pdf","title":"Unit 4 Part 1 — Frequency Distribution and Graphical Representation","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-frequency-distribution-and-graphical-representation.pdf","title":"Unit 4 Part 2 — Frequency Distribution and Graphical Representation","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-frequency-distribution-and-graphical-representation.pdf","title":"Unit 4 Part 3 — Frequency Distribution and Graphical Representation","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-frequency-distribution-and-graphical-representation.pdf","title":"Unit 4 Part 4 — Frequency Distribution and Graphical Representation","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-central-tendency.pdf","title":"Unit 5 Part 1 — Central Tendency","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-central-tendency.pdf","title":"Unit 5 Part 2 — Central Tendency","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-central-tendency.pdf","title":"Unit 5 Part 3 — Central Tendency","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-central-tendency.pdf","title":"Unit 5 Part 4 — Central Tendency","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-dispersion.pdf","title":"Unit 6 Part 1 — Dispersion","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-dispersion.pdf","title":"Unit 6 Part 2 — Dispersion","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-dispersion.pdf","title":"Unit 6 Part 3 — Dispersion","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-dispersion.pdf","title":"Unit 6 Part 4 — Dispersion","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-correlation-analysis.pdf","title":"Unit 7 Part 1 — Correlation Analysis","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-correlation-analysis.pdf","title":"Unit 7 Part 2 — Correlation Analysis","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-correlation-analysis.pdf","title":"Unit 7 Part 3 — Correlation Analysis","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-correlation-analysis.pdf","title":"Unit 7 Part 4 — Correlation Analysis","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-regression-analysis.pdf","title":"Unit 8 Part 1 — Regression Analysis","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-regression-analysis.pdf","title":"Unit 8 Part 2 — Regression Analysis","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-regression-analysis.pdf","title":"Unit 8 Part 3 — Regression Analysis","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-regression-analysis.pdf","title":"Unit 8 Part 4 — Regression Analysis","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-design-of-experiment.pdf","title":"Unit 9 Part 1 — Design of Experiment","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-design-of-experiment.pdf","title":"Unit 9 Part 2 — Design of Experiment","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-design-of-experiment.pdf","title":"Unit 9 Part 3 — Design of Experiment","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-design-of-experiment.pdf","title":"Unit 9 Part 4 — Design of Experiment","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-official-statistics-in-bangladesh.pdf","title":"Unit 10 Part 1 — Official Statistics in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-official-statistics-in-bangladesh.pdf","title":"Unit 10 Part 2 — Official Statistics in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-official-statistics-in-bangladesh.pdf","title":"Unit 10 Part 3 — Official Statistics in Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-official-statistics-in-bangladesh.pdf","title":"Unit 10 Part 4 — Official Statistics in Bangladesh","premium":false,"hidden":true}
+]
