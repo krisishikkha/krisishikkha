@@ -1,10 +1,37 @@
 [
-  {"file":"22321-crop-production-i/index.html","title":"22321 Crop Production-I","hidden":false},
-  {"file":"22322-agricultural-engineering/index.html","title":"22322 Agricultural Engineering","hidden":false},
-  {"file":"25721-bangla-ii/index.html","title":"25721 Bangla-II","hidden":false},
-  {"file":"25722-english-ii/index.html","title":"25722 English-II","hidden":false},
-  {"file":"25921-mathematics-ii/index.html","title":"25921 Mathematics-II","hidden":false},
-  {"file":"25922-physics-ii/index.html","title":"25922 Physics-II","hidden":false},
-  {"file":"25924-chemistry-ii/index.html","title":"25924 Chemistry-II","hidden":false},
-  {"file":"25925-biology-ii/index.html","title":"25925 Biology-II","hidden":false}
+  {
+    "file": "22321-production-technology-of-agronomic-crops-i/index.html",
+    "title": "22321 Production Technology of Agronomic Crops-I",
+    "hidden": false
+  },
+  {
+    "file": "25721-bangla-ii/index.html",
+    "title": "25721 Bangla-II",
+    "hidden": false
+  },
+  {
+    "file": "25722-english-ii/index.html",
+    "title": "25722 English-II",
+    "hidden": false
+  },
+  {
+    "file": "25922-physics-ii/index.html",
+    "title": "25922 Physics-II",
+    "hidden": false
+  },
+  {
+    "file": "25924-chemistry-ii/index.html",
+    "title": "25924 Chemistry-II",
+    "hidden": false
+  },
+  {
+    "file": "25925-biology-ii/index.html",
+    "title": "25925 Biology-II",
+    "hidden": false
+  },
+  {
+    "file": "28511-computer-office-application/index.html",
+    "title": "28511 Computer Office Application",
+    "hidden": false
+  }
 ]
