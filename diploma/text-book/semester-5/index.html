@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5th Semester | Text Book</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
 
+  <div class="research-container">
+
+    <div class="research-header">
+      <p class="breadcrumb">
+        <a href="../../index.html">Diploma Agriculture</a> /
+        <a href="../index.html">Text Book</a> /
+        <span>5th Semester</span>
+      </p>
+
+      <h1>5th Semester</h1>
+
+      <p class="subtitle">
+        Select a subject to open its PDF list.
+      </p>
+    </div>
+
+    <div id="subjectList" class="section-list"></div>
+
+    <div class="back-wrap">
+      <a href="../index.html" class="back-btn">← Back to Text Book</a>
+    </div>
+
+  </div>
+
+  <script>
+    async function loadSubjects() {
+      const container = document.getElementById("subjectList");
+
+      try {
+        const response = await fetch("subjects.json", { cache: "no-store" });
+        const items = await response.json();
+
+        container.innerHTML = "";
+
+        const visibleItems = items.filter(item => item.hidden !== true);
+
+        if (!visibleItems.length) {
+          container.innerHTML = '<p class="empty-note">No subject found.</p>';
+          return;
+        }
+
+        visibleItems.forEach(item => {
+          const a = document.createElement("a");
+          a.href = item.file;
+          a.className = "list-card";
+
+          a.innerHTML = `
+            <div class="list-card-left">
+              <span class="list-icon">📘</span>
+              <div class="list-content">
+                <span class="list-title">${item.title}</span>
+                <span class="list-subtitle">${item.subtitle || "5th Semester subject"}</span>
+              </div>
+            </div>
+          `;
+
+          container.appendChild(a);
+        });
+
+      } catch (error) {
+        console.error(error);
+        container.innerHTML = '<p class="empty-note">Failed to load subjects.</p>';
+      }
+    }
+
+    loadSubjects();
+  </script>
+
+</body>
+</html>
