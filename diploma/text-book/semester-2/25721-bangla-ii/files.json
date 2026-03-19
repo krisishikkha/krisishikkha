@@ -1,26 +1,51 @@
 [
-  {"file":"unit-1-part-1-kobita.pdf","title":"Unit 1 Part 1 — কবিতা","premium":false,"hidden":false},
-  {"file":"unit-1-part-2-kobita.pdf","title":"Unit 1 Part 2 — কবিতা","premium":false,"hidden":false},
-  {"file":"unit-1-part-3-kobita.pdf","title":"Unit 1 Part 3 — কবিতা","premium":false,"hidden":true},
-  {"file":"unit-1-part-4-kobita.pdf","title":"Unit 1 Part 4 — কবিতা","premium":false,"hidden":true},
+  {"file":"unit-1-part-1-bangla-byakoron-o-byakoron-pather-gurutto.pdf","title":"Unit 1 Part 1 — বাংলা ব্যাকরণ ও ব্যাকরণ পাঠের গুরুত্ব","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-bangla-byakoron-o-byakoron-pather-gurutto.pdf","title":"Unit 1 Part 2 — বাংলা ব্যাকরণ ও ব্যাকরণ পাঠের গুরুত্ব","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-bangla-byakoron-o-byakoron-pather-gurutto.pdf","title":"Unit 1 Part 3 — বাংলা ব্যাকরণ ও ব্যাকরণ পাঠের গুরুত্ব","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-bangla-byakoron-o-byakoron-pather-gurutto.pdf","title":"Unit 1 Part 4 — বাংলা ব্যাকরণ ও ব্যাকরণ পাঠের গুরুত্ব","premium":false,"hidden":true},
 
-  {"file":"unit-2-part-1-golpo.pdf","title":"Unit 2 Part 1 — গল্প","premium":false,"hidden":false},
-  {"file":"unit-2-part-2-golpo.pdf","title":"Unit 2 Part 2 — গল্প","premium":false,"hidden":false},
-  {"file":"unit-2-part-3-golpo.pdf","title":"Unit 2 Part 3 — গল্প","premium":false,"hidden":true},
-  {"file":"unit-2-part-4-golpo.pdf","title":"Unit 2 Part 4 — গল্প","premium":false,"hidden":true},
+  {"file":"unit-2-part-1-bangla-bhasha.pdf","title":"Unit 2 Part 1 — বাংলা ভাষা","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-bangla-bhasha.pdf","title":"Unit 2 Part 2 — বাংলা ভাষা","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-bangla-bhasha.pdf","title":"Unit 2 Part 3 — বাংলা ভাষা","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-bangla-bhasha.pdf","title":"Unit 2 Part 4 — বাংলা ভাষা","premium":false,"hidden":true},
 
-  {"file":"unit-3-part-1-probondho.pdf","title":"Unit 3 Part 1 — প্রবন্ধ","premium":false,"hidden":false},
-  {"file":"unit-3-part-2-probondho.pdf","title":"Unit 3 Part 2 — প্রবন্ধ","premium":false,"hidden":false},
-  {"file":"unit-3-part-3-probondho.pdf","title":"Unit 3 Part 3 — প্রবন্ধ","premium":false,"hidden":true},
-  {"file":"unit-3-part-4-probondho.pdf","title":"Unit 3 Part 4 — প্রবন্ধ","premium":false,"hidden":true},
+  {"file":"unit-3-part-1-bangla-dhonitotto.pdf","title":"Unit 3 Part 1 — বাংলা ধ্বনিতত্ত্ব","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-bangla-dhonitotto.pdf","title":"Unit 3 Part 2 — বাংলা ধ্বনিতত্ত্ব","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-bangla-dhonitotto.pdf","title":"Unit 3 Part 3 — বাংলা ধ্বনিতত্ত্ব","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-bangla-dhonitotto.pdf","title":"Unit 3 Part 4 — বাংলা ধ্বনিতত্ত্ব","premium":false,"hidden":true},
 
-  {"file":"unit-4-part-1-natok.pdf","title":"Unit 4 Part 1 — নাটক","premium":false,"hidden":false},
-  {"file":"unit-4-part-2-natok.pdf","title":"Unit 4 Part 2 — নাটক","premium":false,"hidden":false},
-  {"file":"unit-4-part-3-natok.pdf","title":"Unit 4 Part 3 — নাটক","premium":false,"hidden":true},
-  {"file":"unit-4-part-4-natok.pdf","title":"Unit 4 Part 4 — নাটক","premium":false,"hidden":true},
+  {"file":"unit-4-part-1-ruptotto.pdf","title":"Unit 4 Part 1 — রূপতত্ত্ব","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-ruptotto.pdf","title":"Unit 4 Part 2 — রূপতত্ত্ব","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-ruptotto.pdf","title":"Unit 4 Part 3 — রূপতত্ত্ব","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-ruptotto.pdf","title":"Unit 4 Part 4 — রূপতত্ত্ব","premium":false,"hidden":true},
 
-  {"file":"unit-5-part-1-uponnash.pdf","title":"Unit 5 Part 1 — উপন্যাস","premium":false,"hidden":false},
-  {"file":"unit-5-part-2-uponnash.pdf","title":"Unit 5 Part 2 — উপন্যাস","premium":false,"hidden":false},
-  {"file":"unit-5-part-3-uponnash.pdf","title":"Unit 5 Part 3 — উপন্যাস","premium":false,"hidden":true},
-  {"file":"unit-5-part-4-uponnash.pdf","title":"Unit 5 Part 4 — উপন্যাস","premium":false,"hidden":true}
+  {"file":"unit-5-part-1-bakkototto.pdf","title":"Unit 5 Part 1 — বাক্যতত্ত্ব","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-bakkototto.pdf","title":"Unit 5 Part 2 — বাক্যতত্ত্ব","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-bakkototto.pdf","title":"Unit 5 Part 3 — বাক্যতত্ত্ব","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-bakkototto.pdf","title":"Unit 5 Part 4 — বাক্যতত্ত্ব","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-bakko-shonkochon-bagdhara-somas.pdf","title":"Unit 6 Part 1 — বাক্য সংকোচন, বাগধারা, সমাস …","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-bakko-shonkochon-bagdhara-somas.pdf","title":"Unit 6 Part 2 — বাক্য সংকোচন, বাগধারা, সমাস …","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-bakko-shonkochon-bagdhara-somas.pdf","title":"Unit 6 Part 3 — বাক্য সংকোচন, বাগধারা, সমাস …","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-bakko-shonkochon-bagdhara-somas.pdf","title":"Unit 6 Part 4 — বাক্য সংকোচন, বাগধারা, সমাস …","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-birochon-bhabshomprosaron-saransho-saromormo.pdf","title":"Unit 7 Part 1 — বিরচন (ভাবসম্প্রসারণ, সারাংশ/সারমর্ম)","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-birochon-bhabshomprosaron-saransho-saromormo.pdf","title":"Unit 7 Part 2 — বিরচন (ভাবসম্প্রসারণ, সারাংশ/সারমর্ম)","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-birochon-bhabshomprosaron-saransho-saromormo.pdf","title":"Unit 7 Part 3 — বিরচন (ভাবসম্প্রসারণ, সারাংশ/সারমর্ম)","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-birochon-bhabshomprosaron-saransho-saromormo.pdf","title":"Unit 7 Part 4 — বিরচন (ভাবসম্প্রসারণ, সারাংশ/সারমর্ম)","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-protibedon.pdf","title":"Unit 8 Part 1 — প্রতিবেদন","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-protibedon.pdf","title":"Unit 8 Part 2 — প্রতিবেদন","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-protibedon.pdf","title":"Unit 8 Part 3 — প্রতিবেদন","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-protibedon.pdf","title":"Unit 8 Part 4 — প্রতিবেদন","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-potro-likhon.pdf","title":"Unit 9 Part 1 — পত্র লিখন","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-potro-likhon.pdf","title":"Unit 9 Part 2 — পত্র লিখন","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-potro-likhon.pdf","title":"Unit 9 Part 3 — পত্র লিখন","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-potro-likhon.pdf","title":"Unit 9 Part 4 — পত্র লিখন","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-probondho-rochona.pdf","title":"Unit 10 Part 1 — প্রবন্ধ রচনা","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-probondho-rochona.pdf","title":"Unit 10 Part 2 — প্রবন্ধ রচনা","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-probondho-rochona.pdf","title":"Unit 10 Part 3 — প্রবন্ধ রচনা","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-probondho-rochona.pdf","title":"Unit 10 Part 4 — প্রবন্ধ রচনা","premium":false,"hidden":true}
 ]
