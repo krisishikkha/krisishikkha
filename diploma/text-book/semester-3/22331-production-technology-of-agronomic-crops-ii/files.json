@@ -1,0 +1,61 @@
+[
+  {"file":"unit-1-part-1-growing-stages-of-crops.pdf","title":"Unit 1 Part 1 — Growing stages of crops","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-growing-stages-of-crops.pdf","title":"Unit 1 Part 2 — Growing stages of crops","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-growing-stages-of-crops.pdf","title":"Unit 1 Part 3 — Growing stages of crops","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-growing-stages-of-crops.pdf","title":"Unit 1 Part 4 — Growing stages of crops","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-modern-rice-production-technique.pdf","title":"Unit 2 Part 1 — Modern rice production technique","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-modern-rice-production-technique.pdf","title":"Unit 2 Part 2 — Modern rice production technique","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-modern-rice-production-technique.pdf","title":"Unit 2 Part 3 — Modern rice production technique","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-modern-rice-production-technique.pdf","title":"Unit 2 Part 4 — Modern rice production technique","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-jute-cultivation.pdf","title":"Unit 3 Part 1 — Jute cultivation","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-jute-cultivation.pdf","title":"Unit 3 Part 2 — Jute cultivation","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-jute-cultivation.pdf","title":"Unit 3 Part 3 — Jute cultivation","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-jute-cultivation.pdf","title":"Unit 3 Part 4 — Jute cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-cotton-cultivation.pdf","title":"Unit 4 Part 1 — Cotton cultivation","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-cotton-cultivation.pdf","title":"Unit 4 Part 2 — Cotton cultivation","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-cotton-cultivation.pdf","title":"Unit 4 Part 3 — Cotton cultivation","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-cotton-cultivation.pdf","title":"Unit 4 Part 4 — Cotton cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-mesta-and-kenaf-cultivation.pdf","title":"Unit 5 Part 1 — Mesta and Kenaf cultivation","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-mesta-and-kenaf-cultivation.pdf","title":"Unit 5 Part 2 — Mesta and Kenaf cultivation","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-mesta-and-kenaf-cultivation.pdf","title":"Unit 5 Part 3 — Mesta and Kenaf cultivation","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-mesta-and-kenaf-cultivation.pdf","title":"Unit 5 Part 4 — Mesta and Kenaf cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-tea-cultivation.pdf","title":"Unit 6 Part 1 — Tea cultivation","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-tea-cultivation.pdf","title":"Unit 6 Part 2 — Tea cultivation","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-tea-cultivation.pdf","title":"Unit 6 Part 3 — Tea cultivation","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-tea-cultivation.pdf","title":"Unit 6 Part 4 — Tea cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-coffee-cultivation.pdf","title":"Unit 7 Part 1 — Coffee cultivation","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-coffee-cultivation.pdf","title":"Unit 7 Part 2 — Coffee cultivation","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-coffee-cultivation.pdf","title":"Unit 7 Part 3 — Coffee cultivation","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-coffee-cultivation.pdf","title":"Unit 7 Part 4 — Coffee cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-cultivation-of-tobacco.pdf","title":"Unit 8 Part 1 — Cultivation of tobacco","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-cultivation-of-tobacco.pdf","title":"Unit 8 Part 2 — Cultivation of tobacco","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-cultivation-of-tobacco.pdf","title":"Unit 8 Part 3 — Cultivation of tobacco","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-cultivation-of-tobacco.pdf","title":"Unit 8 Part 4 — Cultivation of tobacco","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-betel-leaf-cultivation.pdf","title":"Unit 9 Part 1 — Betel leaf cultivation","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-betel-leaf-cultivation.pdf","title":"Unit 9 Part 2 — Betel leaf cultivation","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-betel-leaf-cultivation.pdf","title":"Unit 9 Part 3 — Betel leaf cultivation","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-betel-leaf-cultivation.pdf","title":"Unit 9 Part 4 — Betel leaf cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-prospective-grain-crop-of-bangladesh.pdf","title":"Unit 10 Part 1 — Prospective grain crop of Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-prospective-grain-crop-of-bangladesh.pdf","title":"Unit 10 Part 2 — Prospective grain crop of Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-prospective-grain-crop-of-bangladesh.pdf","title":"Unit 10 Part 3 — Prospective grain crop of Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-prospective-grain-crop-of-bangladesh.pdf","title":"Unit 10 Part 4 — Prospective grain crop of Bangladesh","premium":false,"hidden":true},
+
+  {"file":"unit-11-part-1-fodder-crops.pdf","title":"Unit 11 Part 1 — Fodder crops","premium":false,"hidden":false},
+  {"file":"unit-11-part-2-fodder-crops.pdf","title":"Unit 11 Part 2 — Fodder crops","premium":false,"hidden":false},
+  {"file":"unit-11-part-3-fodder-crops.pdf","title":"Unit 11 Part 3 — Fodder crops","premium":false,"hidden":true},
+  {"file":"unit-11-part-4-fodder-crops.pdf","title":"Unit 11 Part 4 — Fodder crops","premium":false,"hidden":true},
+
+  {"file":"unit-12-part-1-green-manuring.pdf","title":"Unit 12 Part 1 — Green manuring","premium":false,"hidden":false},
+  {"file":"unit-12-part-2-green-manuring.pdf","title":"Unit 12 Part 2 — Green manuring","premium":false,"hidden":false},
+  {"file":"unit-12-part-3-green-manuring.pdf","title":"Unit 12 Part 3 — Green manuring","premium":false,"hidden":true},
+  {"file":"unit-12-part-4-green-manuring.pdf","title":"Unit 12 Part 4 — Green manuring","premium":false,"hidden":true}
+]
