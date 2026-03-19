@@ -1,0 +1,76 @@
+[
+  {"file":"unit-1-part-1-introduction-to-fruit.pdf","title":"Unit 1 Part 1 — Introduction to Fruit","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-fruit.pdf","title":"Unit 1 Part 2 — Introduction to Fruit","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-fruit.pdf","title":"Unit 1 Part 3 — Introduction to Fruit","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-fruit.pdf","title":"Unit 1 Part 4 — Introduction to Fruit","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-fruit-cultivation-in-bangladesh.pdf","title":"Unit 2 Part 1 — Fruit Cultivation in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-fruit-cultivation-in-bangladesh.pdf","title":"Unit 2 Part 2 — Fruit Cultivation in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-fruit-cultivation-in-bangladesh.pdf","title":"Unit 2 Part 3 — Fruit Cultivation in Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-fruit-cultivation-in-bangladesh.pdf","title":"Unit 2 Part 4 — Fruit Cultivation in Bangladesh","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-geographical-distribution-of-fruit-crops.pdf","title":"Unit 3 Part 1 — Geographical Distribution of Fruit Crops","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-geographical-distribution-of-fruit-crops.pdf","title":"Unit 3 Part 2 — Geographical Distribution of Fruit Crops","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-geographical-distribution-of-fruit-crops.pdf","title":"Unit 3 Part 3 — Geographical Distribution of Fruit Crops","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-geographical-distribution-of-fruit-crops.pdf","title":"Unit 3 Part 4 — Geographical Distribution of Fruit Crops","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-fruit-planting-orchard.pdf","title":"Unit 4 Part 1 — Fruit Planting/Orchard","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-fruit-planting-orchard.pdf","title":"Unit 4 Part 2 — Fruit Planting/Orchard","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-fruit-planting-orchard.pdf","title":"Unit 4 Part 3 — Fruit Planting/Orchard","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-fruit-planting-orchard.pdf","title":"Unit 4 Part 4 — Fruit Planting/Orchard","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-fertilization-irrigation-and-intercultural-operation.pdf","title":"Unit 5 Part 1 — Fertilization, Irrigation and Intercultural Operation","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-fertilization-irrigation-and-intercultural-operation.pdf","title":"Unit 5 Part 2 — Fertilization, Irrigation and Intercultural Operation","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-fertilization-irrigation-and-intercultural-operation.pdf","title":"Unit 5 Part 3 — Fertilization, Irrigation and Intercultural Operation","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-fertilization-irrigation-and-intercultural-operation.pdf","title":"Unit 5 Part 4 — Fertilization, Irrigation and Intercultural Operation","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-propagation-of-fruit-crops.pdf","title":"Unit 6 Part 1 — Propagation of Fruit Crops","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-propagation-of-fruit-crops.pdf","title":"Unit 6 Part 2 — Propagation of Fruit Crops","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-propagation-of-fruit-crops.pdf","title":"Unit 6 Part 3 — Propagation of Fruit Crops","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-propagation-of-fruit-crops.pdf","title":"Unit 6 Part 4 — Propagation of Fruit Crops","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-production-technology-of-mango-litchi-and-jackfruit.pdf","title":"Unit 7 Part 1 — Production Technology of Mango, Litchi and Jackfruit","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-production-technology-of-mango-litchi-and-jackfruit.pdf","title":"Unit 7 Part 2 — Production Technology of Mango, Litchi and Jackfruit","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-production-technology-of-mango-litchi-and-jackfruit.pdf","title":"Unit 7 Part 3 — Production Technology of Mango, Litchi and Jackfruit","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-production-technology-of-mango-litchi-and-jackfruit.pdf","title":"Unit 7 Part 4 — Production Technology of Mango, Litchi and Jackfruit","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-production-technology-of-coconut-banana-and-pineapple.pdf","title":"Unit 8 Part 1 — Production Technology of Coconut, Banana and Pineapple","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-production-technology-of-coconut-banana-and-pineapple.pdf","title":"Unit 8 Part 2 — Production Technology of Coconut, Banana and Pineapple","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-production-technology-of-coconut-banana-and-pineapple.pdf","title":"Unit 8 Part 3 — Production Technology of Coconut, Banana and Pineapple","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-production-technology-of-coconut-banana-and-pineapple.pdf","title":"Unit 8 Part 4 — Production Technology of Coconut, Banana and Pineapple","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-production-technology-of-guava-hog-palm-and-jujube.pdf","title":"Unit 9 Part 1 — Production Technology of Guava, Hog Palm and Jujube","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-production-technology-of-guava-hog-palm-and-jujube.pdf","title":"Unit 9 Part 2 — Production Technology of Guava, Hog Palm and Jujube","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-production-technology-of-guava-hog-palm-and-jujube.pdf","title":"Unit 9 Part 3 — Production Technology of Guava, Hog Palm and Jujube","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-production-technology-of-guava-hog-palm-and-jujube.pdf","title":"Unit 9 Part 4 — Production Technology of Guava, Hog Palm and Jujube","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-production-technology-of-papaya-watermelon-and-sapota.pdf","title":"Unit 10 Part 1 — Production Technology of Papaya, Watermelon and Sapota","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-production-technology-of-papaya-watermelon-and-sapota.pdf","title":"Unit 10 Part 2 — Production Technology of Papaya, Watermelon and Sapota","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-production-technology-of-papaya-watermelon-and-sapota.pdf","title":"Unit 10 Part 3 — Production Technology of Papaya, Watermelon and Sapota","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-production-technology-of-papaya-watermelon-and-sapota.pdf","title":"Unit 10 Part 4 — Production Technology of Papaya, Watermelon and Sapota","premium":false,"hidden":true},
+
+  {"file":"unit-11-part-1-citrus-fruit-cultivation.pdf","title":"Unit 11 Part 1 — Citrus Fruit Cultivation","premium":false,"hidden":false},
+  {"file":"unit-11-part-2-citrus-fruit-cultivation.pdf","title":"Unit 11 Part 2 — Citrus Fruit Cultivation","premium":false,"hidden":false},
+  {"file":"unit-11-part-3-citrus-fruit-cultivation.pdf","title":"Unit 11 Part 3 — Citrus Fruit Cultivation","premium":false,"hidden":true},
+  {"file":"unit-11-part-4-citrus-fruit-cultivation.pdf","title":"Unit 11 Part 4 — Citrus Fruit Cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-12-part-1-prospectus-fruit-cultivation.pdf","title":"Unit 12 Part 1 — Prospectus Fruit Cultivation","premium":false,"hidden":false},
+  {"file":"unit-12-part-2-prospectus-fruit-cultivation.pdf","title":"Unit 12 Part 2 — Prospectus Fruit Cultivation","premium":false,"hidden":false},
+  {"file":"unit-12-part-3-prospectus-fruit-cultivation.pdf","title":"Unit 12 Part 3 — Prospectus Fruit Cultivation","premium":false,"hidden":true},
+  {"file":"unit-12-part-4-prospectus-fruit-cultivation.pdf","title":"Unit 12 Part 4 — Prospectus Fruit Cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-13-part-1-minor-fruit-cultivation.pdf","title":"Unit 13 Part 1 — Minor Fruit Cultivation","premium":false,"hidden":false},
+  {"file":"unit-13-part-2-minor-fruit-cultivation.pdf","title":"Unit 13 Part 2 — Minor Fruit Cultivation","premium":false,"hidden":false},
+  {"file":"unit-13-part-3-minor-fruit-cultivation.pdf","title":"Unit 13 Part 3 — Minor Fruit Cultivation","premium":false,"hidden":true},
+  {"file":"unit-13-part-4-minor-fruit-cultivation.pdf","title":"Unit 13 Part 4 — Minor Fruit Cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-14-part-1-use-of-plant-growth-regulator.pdf","title":"Unit 14 Part 1 — Use of Plant Growth Regulator","premium":false,"hidden":false},
+  {"file":"unit-14-part-2-use-of-plant-growth-regulator.pdf","title":"Unit 14 Part 2 — Use of Plant Growth Regulator","premium":false,"hidden":false},
+  {"file":"unit-14-part-3-use-of-plant-growth-regulator.pdf","title":"Unit 14 Part 3 — Use of Plant Growth Regulator","premium":false,"hidden":true},
+  {"file":"unit-14-part-4-use-of-plant-growth-regulator.pdf","title":"Unit 14 Part 4 — Use of Plant Growth Regulator","premium":false,"hidden":true},
+
+  {"file":"unit-15-part-1-postharvest-management-of-fruit.pdf","title":"Unit 15 Part 1 — Postharvest Management of Fruit","premium":false,"hidden":false},
+  {"file":"unit-15-part-2-postharvest-management-of-fruit.pdf","title":"Unit 15 Part 2 — Postharvest Management of Fruit","premium":false,"hidden":false},
+  {"file":"unit-15-part-3-postharvest-management-of-fruit.pdf","title":"Unit 15 Part 3 — Postharvest Management of Fruit","premium":false,"hidden":true},
+  {"file":"unit-15-part-4-postharvest-management-of-fruit.pdf","title":"Unit 15 Part 4 — Postharvest Management of Fruit","premium":false,"hidden":true}
+    ]
