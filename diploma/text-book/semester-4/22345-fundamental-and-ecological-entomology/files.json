@@ -1,0 +1,51 @@
+[
+  {"file":"unit-1-part-1-concept-of-entomology.pdf","title":"Unit 1 Part 1 — Concept of Entomology","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-concept-of-entomology.pdf","title":"Unit 1 Part 2 — Concept of Entomology","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-concept-of-entomology.pdf","title":"Unit 1 Part 3 — Concept of Entomology","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-concept-of-entomology.pdf","title":"Unit 1 Part 4 — Concept of Entomology","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-external-morphology-of-insects-and-mites.pdf","title":"Unit 2 Part 1 — External Morphology of Insects and Mites","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-external-morphology-of-insects-and-mites.pdf","title":"Unit 2 Part 2 — External Morphology of Insects and Mites","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-external-morphology-of-insects-and-mites.pdf","title":"Unit 2 Part 3 — External Morphology of Insects and Mites","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-external-morphology-of-insects-and-mites.pdf","title":"Unit 2 Part 4 — External Morphology of Insects and Mites","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-head-appendages-of-insect.pdf","title":"Unit 3 Part 1 — Head Appendages of Insect","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-head-appendages-of-insect.pdf","title":"Unit 3 Part 2 — Head Appendages of Insect","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-head-appendages-of-insect.pdf","title":"Unit 3 Part 3 — Head Appendages of Insect","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-head-appendages-of-insect.pdf","title":"Unit 3 Part 4 — Head Appendages of Insect","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-thoracic-and-abdominal-appendages-of-insect.pdf","title":"Unit 4 Part 1 — Thoracic and Abdominal Appendages of Insect","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-thoracic-and-abdominal-appendages-of-insect.pdf","title":"Unit 4 Part 2 — Thoracic and Abdominal Appendages of Insect","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-thoracic-and-abdominal-appendages-of-insect.pdf","title":"Unit 4 Part 3 — Thoracic and Abdominal Appendages of Insect","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-thoracic-and-abdominal-appendages-of-insect.pdf","title":"Unit 4 Part 4 — Thoracic and Abdominal Appendages of Insect","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-moulting-metamorphosis-and-reproduction-of-insect.pdf","title":"Unit 5 Part 1 — Moulting, Metamorphosis and Reproduction of Insect","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-moulting-metamorphosis-and-reproduction-of-insect.pdf","title":"Unit 5 Part 2 — Moulting, Metamorphosis and Reproduction of Insect","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-moulting-metamorphosis-and-reproduction-of-insect.pdf","title":"Unit 5 Part 3 — Moulting, Metamorphosis and Reproduction of Insect","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-moulting-metamorphosis-and-reproduction-of-insect.pdf","title":"Unit 5 Part 4 — Moulting, Metamorphosis and Reproduction of Insect","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-endocrine-glands-and-hormones-of-insect.pdf","title":"Unit 6 Part 1 — Endocrine Glands and Hormones of Insect","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-endocrine-glands-and-hormones-of-insect.pdf","title":"Unit 6 Part 2 — Endocrine Glands and Hormones of Insect","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-endocrine-glands-and-hormones-of-insect.pdf","title":"Unit 6 Part 3 — Endocrine Glands and Hormones of Insect","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-endocrine-glands-and-hormones-of-insect.pdf","title":"Unit 6 Part 4 — Endocrine Glands and Hormones of Insect","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-classification-of-insects.pdf","title":"Unit 7 Part 1 — Classification of Insects","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-classification-of-insects.pdf","title":"Unit 7 Part 2 — Classification of Insects","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-classification-of-insects.pdf","title":"Unit 7 Part 3 — Classification of Insects","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-classification-of-insects.pdf","title":"Unit 7 Part 4 — Classification of Insects","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-insect-ecology.pdf","title":"Unit 8 Part 1 — Insect Ecology","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-insect-ecology.pdf","title":"Unit 8 Part 2 — Insect Ecology","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-insect-ecology.pdf","title":"Unit 8 Part 3 — Insect Ecology","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-insect-ecology.pdf","title":"Unit 8 Part 4 — Insect Ecology","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-growth-form-and-polymorphism.pdf","title":"Unit 9 Part 1 — Growth Form and Polymorphism","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-growth-form-and-polymorphism.pdf","title":"Unit 9 Part 2 — Growth Form and Polymorphism","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-growth-form-and-polymorphism.pdf","title":"Unit 9 Part 3 — Growth Form and Polymorphism","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-growth-form-and-polymorphism.pdf","title":"Unit 9 Part 4 — Growth Form and Polymorphism","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-surveillance-and-forecasting.pdf","title":"Unit 10 Part 1 — Surveillance and Forecasting","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-surveillance-and-forecasting.pdf","title":"Unit 10 Part 2 — Surveillance and Forecasting","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-surveillance-and-forecasting.pdf","title":"Unit 10 Part 3 — Surveillance and Forecasting","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-surveillance-and-forecasting.pdf","title":"Unit 10 Part 4 — Surveillance and Forecasting","premium":false,"hidden":true}
+    ]
