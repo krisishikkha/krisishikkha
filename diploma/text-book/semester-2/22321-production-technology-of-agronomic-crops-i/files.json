@@ -1,0 +1,66 @@
+[
+  {"file":"unit-1-part-1-agronomy.pdf","title":"Unit 1 Part 1 — Agronomy","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-agronomy.pdf","title":"Unit 1 Part 2 — Agronomy","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-agronomy.pdf","title":"Unit 1 Part 3 — Agronomy","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-agronomy.pdf","title":"Unit 1 Part 4 — Agronomy","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-cropping-season.pdf","title":"Unit 2 Part 1 — Cropping Season","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-cropping-season.pdf","title":"Unit 2 Part 2 — Cropping Season","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-cropping-season.pdf","title":"Unit 2 Part 3 — Cropping Season","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-cropping-season.pdf","title":"Unit 2 Part 4 — Cropping Season","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-basic-procedure-of-crop-cultivation.pdf","title":"Unit 3 Part 1 — Basic Procedure of Crop Cultivation","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-basic-procedure-of-crop-cultivation.pdf","title":"Unit 3 Part 2 — Basic Procedure of Crop Cultivation","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-basic-procedure-of-crop-cultivation.pdf","title":"Unit 3 Part 3 — Basic Procedure of Crop Cultivation","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-basic-procedure-of-crop-cultivation.pdf","title":"Unit 3 Part 4 — Basic Procedure of Crop Cultivation","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-intercultural-operation.pdf","title":"Unit 4 Part 1 — Intercultural operation","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-intercultural-operation.pdf","title":"Unit 4 Part 2 — Intercultural operation","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-intercultural-operation.pdf","title":"Unit 4 Part 3 — Intercultural operation","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-intercultural-operation.pdf","title":"Unit 4 Part 4 — Intercultural operation","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-specialized-cropping-method.pdf","title":"Unit 5 Part 1 — Specialized Cropping Method","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-specialized-cropping-method.pdf","title":"Unit 5 Part 2 — Specialized Cropping Method","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-specialized-cropping-method.pdf","title":"Unit 5 Part 3 — Specialized Cropping Method","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-specialized-cropping-method.pdf","title":"Unit 5 Part 4 — Specialized Cropping Method","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-production-technology-of-rice.pdf","title":"Unit 6 Part 1 — Production Technology of Rice","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-production-technology-of-rice.pdf","title":"Unit 6 Part 2 — Production Technology of Rice","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-production-technology-of-rice.pdf","title":"Unit 6 Part 3 — Production Technology of Rice","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-production-technology-of-rice.pdf","title":"Unit 6 Part 4 — Production Technology of Rice","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-production-technology-of-maize.pdf","title":"Unit 7 Part 1 — Production Technology of Maize","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-production-technology-of-maize.pdf","title":"Unit 7 Part 2 — Production Technology of Maize","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-production-technology-of-maize.pdf","title":"Unit 7 Part 3 — Production Technology of Maize","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-production-technology-of-maize.pdf","title":"Unit 7 Part 4 — Production Technology of Maize","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-production-technology-of-wheat.pdf","title":"Unit 8 Part 1 — Production Technology of Wheat","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-production-technology-of-wheat.pdf","title":"Unit 8 Part 2 — Production Technology of Wheat","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-production-technology-of-wheat.pdf","title":"Unit 8 Part 3 — Production Technology of Wheat","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-production-technology-of-wheat.pdf","title":"Unit 8 Part 4 — Production Technology of Wheat","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-conventional-pulse-crop-production-technology.pdf","title":"Unit 9 Part 1 — Conventional Pulse Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-conventional-pulse-crop-production-technology.pdf","title":"Unit 9 Part 2 — Conventional Pulse Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-conventional-pulse-crop-production-technology.pdf","title":"Unit 9 Part 3 — Conventional Pulse Crop Production Technology","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-conventional-pulse-crop-production-technology.pdf","title":"Unit 9 Part 4 — Conventional Pulse Crop Production Technology","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-non-conventional-pulse-crop-production-technology.pdf","title":"Unit 10 Part 1 — Non-Conventional Pulse Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-non-conventional-pulse-crop-production-technology.pdf","title":"Unit 10 Part 2 — Non-Conventional Pulse Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-non-conventional-pulse-crop-production-technology.pdf","title":"Unit 10 Part 3 — Non-Conventional Pulse Crop Production Technology","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-non-conventional-pulse-crop-production-technology.pdf","title":"Unit 10 Part 4 — Non-Conventional Pulse Crop Production Technology","premium":false,"hidden":true},
+
+  {"file":"unit-11-part-1-conventional-oil-crop-production-technology.pdf","title":"Unit 11 Part 1 — Conventional Oil Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-11-part-2-conventional-oil-crop-production-technology.pdf","title":"Unit 11 Part 2 — Conventional Oil Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-11-part-3-conventional-oil-crop-production-technology.pdf","title":"Unit 11 Part 3 — Conventional Oil Crop Production Technology","premium":false,"hidden":true},
+  {"file":"unit-11-part-4-conventional-oil-crop-production-technology.pdf","title":"Unit 11 Part 4 — Conventional Oil Crop Production Technology","premium":false,"hidden":true},
+
+  {"file":"unit-12-part-1-non-conventional-oil-crop-production-technology.pdf","title":"Unit 12 Part 1 — Non- Conventional Oil Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-12-part-2-non-conventional-oil-crop-production-technology.pdf","title":"Unit 12 Part 2 — Non- Conventional Oil Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-12-part-3-non-conventional-oil-crop-production-technology.pdf","title":"Unit 12 Part 3 — Non- Conventional Oil Crop Production Technology","premium":false,"hidden":true},
+  {"file":"unit-12-part-4-non-conventional-oil-crop-production-technology.pdf","title":"Unit 12 Part 4 — Non- Conventional Oil Crop Production Technology","premium":false,"hidden":true},
+
+  {"file":"unit-13-part-1-sugar-crop-production-technology.pdf","title":"Unit 13 Part 1 — Sugar Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-13-part-2-sugar-crop-production-technology.pdf","title":"Unit 13 Part 2 — Sugar Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-13-part-3-sugar-crop-production-technology.pdf","title":"Unit 13 Part 3 — Sugar Crop Production Technology","premium":false,"hidden":true},
+  {"file":"unit-13-part-4-sugar-crop-production-technology.pdf","title":"Unit 13 Part 4 — Sugar Crop Production Technology","premium":false,"hidden":true}
+]
