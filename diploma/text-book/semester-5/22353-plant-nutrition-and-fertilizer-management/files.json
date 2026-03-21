@@ -1,0 +1,76 @@
+[
+  {"file":"unit-1-part-1-plant-nutrition-and-essential-plant-nutrient.pdf","title":"Unit 1 Part 1 — Plant Nutrition and Essential Plant Nutrient","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-plant-nutrition-and-essential-plant-nutrient.pdf","title":"Unit 1 Part 2 — Plant Nutrition and Essential Plant Nutrient","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-plant-nutrition-and-essential-plant-nutrient.pdf","title":"Unit 1 Part 3 — Plant Nutrition and Essential Plant Nutrient","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-plant-nutrition-and-essential-plant-nutrient.pdf","title":"Unit 1 Part 4 — Plant Nutrition and Essential Plant Nutrient","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-soil-solution.pdf","title":"Unit 2 Part 1 — Soil Solution","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-soil-solution.pdf","title":"Unit 2 Part 2 — Soil Solution","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-soil-solution.pdf","title":"Unit 2 Part 3 — Soil Solution","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-soil-solution.pdf","title":"Unit 2 Part 4 — Soil Solution","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-plant-nutrient-absorption-mechanism.pdf","title":"Unit 3 Part 1 — Plant Nutrient Absorption Mechanism","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-plant-nutrient-absorption-mechanism.pdf","title":"Unit 3 Part 2 — Plant Nutrient Absorption Mechanism","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-plant-nutrient-absorption-mechanism.pdf","title":"Unit 3 Part 3 — Plant Nutrient Absorption Mechanism","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-plant-nutrient-absorption-mechanism.pdf","title":"Unit 3 Part 4 — Plant Nutrient Absorption Mechanism","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-carbon-hydrogen-and-oxygen-in-plant-nutrition.pdf","title":"Unit 4 Part 1 — Carbon, Hydrogen and Oxygen in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-carbon-hydrogen-and-oxygen-in-plant-nutrition.pdf","title":"Unit 4 Part 2 — Carbon, Hydrogen and Oxygen in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-carbon-hydrogen-and-oxygen-in-plant-nutrition.pdf","title":"Unit 4 Part 3 — Carbon, Hydrogen and Oxygen in Plant Nutrition","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-carbon-hydrogen-and-oxygen-in-plant-nutrition.pdf","title":"Unit 4 Part 4 — Carbon, Hydrogen and Oxygen in Plant Nutrition","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-nitrogen-phosphorus-and-potassium.pdf","title":"Unit 5 Part 1 — Nitrogen, Phosphorus and Potassium in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-nitrogen-phosphorus-and-potassium.pdf","title":"Unit 5 Part 2 — Nitrogen, Phosphorus and Potassium in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-nitrogen-phosphorus-and-potassium.pdf","title":"Unit 5 Part 3 — Nitrogen, Phosphorus and Potassium in Plant Nutrition","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-nitrogen-phosphorus-and-potassium.pdf","title":"Unit 5 Part 4 — Nitrogen, Phosphorus and Potassium in Plant Nutrition","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-calcium-magnesium-and-sulphur.pdf","title":"Unit 6 Part 1 — Calcium, Magnesium and Sulphur in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-calcium-magnesium-and-sulphur.pdf","title":"Unit 6 Part 2 — Calcium, Magnesium and Sulphur in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-calcium-magnesium-and-sulphur.pdf","title":"Unit 6 Part 3 — Calcium, Magnesium and Sulphur in Plant Nutrition","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-calcium-magnesium-and-sulphur.pdf","title":"Unit 6 Part 4 — Calcium, Magnesium and Sulphur in Plant Nutrition","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-iron-manganese-and-zinc.pdf","title":"Unit 7 Part 1 — Iron, Manganese and Zinc in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-iron-manganese-and-zinc.pdf","title":"Unit 7 Part 2 — Iron, Manganese and Zinc in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-iron-manganese-and-zinc.pdf","title":"Unit 7 Part 3 — Iron, Manganese and Zinc in Plant Nutrition","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-iron-manganese-and-zinc.pdf","title":"Unit 7 Part 4 — Iron, Manganese and Zinc in Plant Nutrition","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-boron-and-beneficial-elements.pdf","title":"Unit 8 Part 1 — Boron and Beneficial Elements in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-boron-and-beneficial-elements.pdf","title":"Unit 8 Part 2 — Boron and Beneficial Elements in Plant Nutrition","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-boron-and-beneficial-elements.pdf","title":"Unit 8 Part 3 — Boron and Beneficial Elements in Plant Nutrition","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-boron-and-beneficial-elements.pdf","title":"Unit 8 Part 4 — Boron and Beneficial Elements in Plant Nutrition","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-fertilizer.pdf","title":"Unit 9 Part 1 — Fertilizer","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-fertilizer.pdf","title":"Unit 9 Part 2 — Fertilizer","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-fertilizer.pdf","title":"Unit 9 Part 3 — Fertilizer","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-fertilizer.pdf","title":"Unit 9 Part 4 — Fertilizer","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-mixed-slow-releasing-and-nano-fertilizer.pdf","title":"Unit 10 Part 1 — Mixed, Slow Releasing and Nano-fertilizer","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-mixed-slow-releasing-and-nano-fertilizer.pdf","title":"Unit 10 Part 2 — Mixed, Slow Releasing and Nano-fertilizer","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-mixed-slow-releasing-and-nano-fertilizer.pdf","title":"Unit 10 Part 3 — Mixed, Slow Releasing and Nano-fertilizer","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-mixed-slow-releasing-and-nano-fertilizer.pdf","title":"Unit 10 Part 4 — Mixed, Slow Releasing and Nano-fertilizer","premium":false,"hidden":true},
+
+  {"file":"unit-11-part-1-chemical-fertilizer-in-soil-and-water.pdf","title":"Unit 11 Part 1 — Chemical Fertilizer in Soil & Water, Fertilizer Adulteration and Fertilizer Act","premium":false,"hidden":false},
+  {"file":"unit-11-part-2-chemical-fertilizer-in-soil-and-water.pdf","title":"Unit 11 Part 2 — Chemical Fertilizer in Soil & Water, Fertilizer Adulteration and Fertilizer Act","premium":false,"hidden":false},
+  {"file":"unit-11-part-3-chemical-fertilizer-in-soil-and-water.pdf","title":"Unit 11 Part 3 — Chemical Fertilizer in Soil & Water, Fertilizer Adulteration and Fertilizer Act","premium":false,"hidden":true},
+  {"file":"unit-11-part-4-chemical-fertilizer-in-soil-and-water.pdf","title":"Unit 11 Part 4 — Chemical Fertilizer in Soil & Water, Fertilizer Adulteration and Fertilizer Act","premium":false,"hidden":true},
+
+  {"file":"unit-12-part-1-manure.pdf","title":"Unit 12 Part 1 — Manure","premium":false,"hidden":false},
+  {"file":"unit-12-part-2-manure.pdf","title":"Unit 12 Part 2 — Manure","premium":false,"hidden":false},
+  {"file":"unit-12-part-3-manure.pdf","title":"Unit 12 Part 3 — Manure","premium":false,"hidden":true},
+  {"file":"unit-12-part-4-manure.pdf","title":"Unit 12 Part 4 — Manure","premium":false,"hidden":true},
+
+  {"file":"unit-13-part-1-bio-fertilizer.pdf","title":"Unit 13 Part 1 — Bio-fertilizer","premium":false,"hidden":false},
+  {"file":"unit-13-part-2-bio-fertilizer.pdf","title":"Unit 13 Part 2 — Bio-fertilizer","premium":false,"hidden":false},
+  {"file":"unit-13-part-3-bio-fertilizer.pdf","title":"Unit 13 Part 3 — Bio-fertilizer","premium":false,"hidden":true},
+  {"file":"unit-13-part-4-bio-fertilizer.pdf","title":"Unit 13 Part 4 — Bio-fertilizer","premium":false,"hidden":true},
+
+  {"file":"unit-14-part-1-balanced-fertilizer-application.pdf","title":"Unit 14 Part 1 — Balanced Fertilizer Application in Different Cropping Pattern","premium":false,"hidden":false},
+  {"file":"unit-14-part-2-balanced-fertilizer-application.pdf","title":"Unit 14 Part 2 — Balanced Fertilizer Application in Different Cropping Pattern","premium":false,"hidden":false},
+  {"file":"unit-14-part-3-balanced-fertilizer-application.pdf","title":"Unit 14 Part 3 — Balanced Fertilizer Application in Different Cropping Pattern","premium":false,"hidden":true},
+  {"file":"unit-14-part-4-balanced-fertilizer-application.pdf","title":"Unit 14 Part 4 — Balanced Fertilizer Application in Different Cropping Pattern","premium":false,"hidden":true},
+
+  {"file":"unit-15-part-1-safe-food-production.pdf","title":"Unit 15 Part 1 — Plant Nutrition and Safe Food Production","premium":false,"hidden":false},
+  {"file":"unit-15-part-2-safe-food-production.pdf","title":"Unit 15 Part 2 — Plant Nutrition and Safe Food Production","premium":false,"hidden":false},
+  {"file":"unit-15-part-3-safe-food-production.pdf","title":"Unit 15 Part 3 — Plant Nutrition and Safe Food Production","premium":false,"hidden":true},
+  {"file":"unit-15-part-4-safe-food-production.pdf","title":"Unit 15 Part 4 — Plant Nutrition and Safe Food Production","premium":false,"hidden":true}
+]
