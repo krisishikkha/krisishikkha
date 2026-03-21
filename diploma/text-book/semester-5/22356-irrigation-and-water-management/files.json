@@ -1,0 +1,51 @@
+[
+  {"file":"unit-1-part-1-irrigation.pdf","title":"Unit 1 Part 1 — Irrigation","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-irrigation.pdf","title":"Unit 1 Part 2 — Irrigation","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-irrigation.pdf","title":"Unit 1 Part 3 — Irrigation","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-irrigation.pdf","title":"Unit 1 Part 4 — Irrigation","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-soil-water-plant-relationship.pdf","title":"Unit 2 Part 1 — Soil-Water-Plant Relationship","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-soil-water-plant-relationship.pdf","title":"Unit 2 Part 2 — Soil-Water-Plant Relationship","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-soil-water-plant-relationship.pdf","title":"Unit 2 Part 3 — Soil-Water-Plant Relationship","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-soil-water-plant-relationship.pdf","title":"Unit 2 Part 4 — Soil-Water-Plant Relationship","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-irrigation-water-management.pdf","title":"Unit 3 Part 1 — Irrigation Water Management","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-irrigation-water-management.pdf","title":"Unit 3 Part 2 — Irrigation Water Management","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-irrigation-water-management.pdf","title":"Unit 3 Part 3 — Irrigation Water Management","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-irrigation-water-management.pdf","title":"Unit 3 Part 4 — Irrigation Water Management","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-distribution-and-efficiency-of-irrigation-water.pdf","title":"Unit 4 Part 1 — Distribution and Efficiency of Irrigation Water","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-distribution-and-efficiency-of-irrigation-water.pdf","title":"Unit 4 Part 2 — Distribution and Efficiency of Irrigation Water","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-distribution-and-efficiency-of-irrigation-water.pdf","title":"Unit 4 Part 3 — Distribution and Efficiency of Irrigation Water","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-distribution-and-efficiency-of-irrigation-water.pdf","title":"Unit 4 Part 4 — Distribution and Efficiency of Irrigation Water","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-irrigation-canal-design.pdf","title":"Unit 5 Part 1 — Irrigation Canal Design","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-irrigation-canal-design.pdf","title":"Unit 5 Part 2 — Irrigation Canal Design","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-irrigation-canal-design.pdf","title":"Unit 5 Part 3 — Irrigation Canal Design","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-irrigation-canal-design.pdf","title":"Unit 5 Part 4 — Irrigation Canal Design","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-irrigation-channel.pdf","title":"Unit 6 Part 1 — Irrigation Channel","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-irrigation-channel.pdf","title":"Unit 6 Part 2 — Irrigation Channel","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-irrigation-channel.pdf","title":"Unit 6 Part 3 — Irrigation Channel","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-irrigation-channel.pdf","title":"Unit 6 Part 4 — Irrigation Channel","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-irrigation-water-quality.pdf","title":"Unit 7 Part 1 — Irrigation Water Quality","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-irrigation-water-quality.pdf","title":"Unit 7 Part 2 — Irrigation Water Quality","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-irrigation-water-quality.pdf","title":"Unit 7 Part 3 — Irrigation Water Quality","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-irrigation-water-quality.pdf","title":"Unit 7 Part 4 — Irrigation Water Quality","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-land-reclamation.pdf","title":"Unit 8 Part 1 — Land Reclamation in Irrigated Agriculture","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-land-reclamation.pdf","title":"Unit 8 Part 2 — Land Reclamation in Irrigated Agriculture","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-land-reclamation.pdf","title":"Unit 8 Part 3 — Land Reclamation in Irrigated Agriculture","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-land-reclamation.pdf","title":"Unit 8 Part 4 — Land Reclamation in Irrigated Agriculture","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-drainage-system-and-management.pdf","title":"Unit 9 Part 1 — Drainage System and Management","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-drainage-system-and-management.pdf","title":"Unit 9 Part 2 — Drainage System and Management","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-drainage-system-and-management.pdf","title":"Unit 9 Part 3 — Drainage System and Management","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-drainage-system-and-management.pdf","title":"Unit 9 Part 4 — Drainage System and Management","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-irrigation-pump.pdf","title":"Unit 10 Part 1 — Irrigation Pump","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-irrigation-pump.pdf","title":"Unit 10 Part 2 — Irrigation Pump","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-irrigation-pump.pdf","title":"Unit 10 Part 3 — Irrigation Pump","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-irrigation-pump.pdf","title":"Unit 10 Part 4 — Irrigation Pump","premium":false,"hidden":true}
+]
