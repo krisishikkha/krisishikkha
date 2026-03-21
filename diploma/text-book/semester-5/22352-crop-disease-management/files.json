@@ -1,0 +1,76 @@
+[
+  {"file":"unit-1-part-1-introduction-to-crop-disease.pdf","title":"Unit 1 Part 1 — Introduction to Crop Disease","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-crop-disease.pdf","title":"Unit 1 Part 2 — Introduction to Crop Disease","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-crop-disease.pdf","title":"Unit 1 Part 3 — Introduction to Crop Disease","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-crop-disease.pdf","title":"Unit 1 Part 4 — Introduction to Crop Disease","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-classification-of-crop-diseases-and-morphological-study.pdf","title":"Unit 2 Part 1 — Classification of Crop Diseases and Morphological Study of Common Plant Pathogen","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-classification-of-crop-diseases-and-morphological-study.pdf","title":"Unit 2 Part 2 — Classification of Crop Diseases and Morphological Study of Common Plant Pathogen","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-classification-of-crop-diseases-and-morphological-study.pdf","title":"Unit 2 Part 3 — Classification of Crop Diseases and Morphological Study of Common Plant Pathogen","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-classification-of-crop-diseases-and-morphological-study.pdf","title":"Unit 2 Part 4 — Classification of Crop Diseases and Morphological Study of Common Plant Pathogen","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-diseases-of-cereal-crops.pdf","title":"Unit 3 Part 1 — Diseases of Cereal Crops","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-diseases-of-cereal-crops.pdf","title":"Unit 3 Part 2 — Diseases of Cereal Crops","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-diseases-of-cereal-crops.pdf","title":"Unit 3 Part 3 — Diseases of Cereal Crops","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-diseases-of-cereal-crops.pdf","title":"Unit 3 Part 4 — Diseases of Cereal Crops","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-diseases-of-tuber-and-root-crops.pdf","title":"Unit 4 Part 1 — Diseases of Tuber & Root Crops","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-diseases-of-tuber-and-root-crops.pdf","title":"Unit 4 Part 2 — Diseases of Tuber & Root Crops","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-diseases-of-tuber-and-root-crops.pdf","title":"Unit 4 Part 3 — Diseases of Tuber & Root Crops","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-diseases-of-tuber-and-root-crops.pdf","title":"Unit 4 Part 4 — Diseases of Tuber & Root Crops","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-diseases-of-vegetables.pdf","title":"Unit 5 Part 1 — Diseases of Vegetables","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-diseases-of-vegetables.pdf","title":"Unit 5 Part 2 — Diseases of Vegetables","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-diseases-of-vegetables.pdf","title":"Unit 5 Part 3 — Diseases of Vegetables","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-diseases-of-vegetables.pdf","title":"Unit 5 Part 4 — Diseases of Vegetables","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-diseases-of-pulse-crops.pdf","title":"Unit 6 Part 1 — Diseases of Pulse Crops","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-diseases-of-pulse-crops.pdf","title":"Unit 6 Part 2 — Diseases of Pulse Crops","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-diseases-of-pulse-crops.pdf","title":"Unit 6 Part 3 — Diseases of Pulse Crops","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-diseases-of-pulse-crops.pdf","title":"Unit 6 Part 4 — Diseases of Pulse Crops","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-diseases-of-oil-seed-crops.pdf","title":"Unit 7 Part 1 — Diseases of Oil Seed Crops","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-diseases-of-oil-seed-crops.pdf","title":"Unit 7 Part 2 — Diseases of Oil Seed Crops","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-diseases-of-oil-seed-crops.pdf","title":"Unit 7 Part 3 — Diseases of Oil Seed Crops","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-diseases-of-oil-seed-crops.pdf","title":"Unit 7 Part 4 — Diseases of Oil Seed Crops","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-diseases-of-fruits.pdf","title":"Unit 8 Part 1 — Diseases of Fruits","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-diseases-of-fruits.pdf","title":"Unit 8 Part 2 — Diseases of Fruits","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-diseases-of-fruits.pdf","title":"Unit 8 Part 3 — Diseases of Fruits","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-diseases-of-fruits.pdf","title":"Unit 8 Part 4 — Diseases of Fruits","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-diseases-of-spices-crop.pdf","title":"Unit 9 Part 1 — Diseases of Spices Crop","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-diseases-of-spices-crop.pdf","title":"Unit 9 Part 2 — Diseases of Spices Crop","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-diseases-of-spices-crop.pdf","title":"Unit 9 Part 3 — Diseases of Spices Crop","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-diseases-of-spices-crop.pdf","title":"Unit 9 Part 4 — Diseases of Spices Crop","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-diseases-of-flowers.pdf","title":"Unit 10 Part 1 — Diseases of Flowers","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-diseases-of-flowers.pdf","title":"Unit 10 Part 2 — Diseases of Flowers","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-diseases-of-flowers.pdf","title":"Unit 10 Part 3 — Diseases of Flowers","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-diseases-of-flowers.pdf","title":"Unit 10 Part 4 — Diseases of Flowers","premium":false,"hidden":true},
+
+  {"file":"unit-11-part-1-diseases-of-narcotics-and-beverage-crops.pdf","title":"Unit 11 Part 1 — Diseases of Narcotics and Beverage Crops","premium":false,"hidden":false},
+  {"file":"unit-11-part-2-diseases-of-narcotics-and-beverage-crops.pdf","title":"Unit 11 Part 2 — Diseases of Narcotics and Beverage Crops","premium":false,"hidden":false},
+  {"file":"unit-11-part-3-diseases-of-narcotics-and-beverage-crops.pdf","title":"Unit 11 Part 3 — Diseases of Narcotics and Beverage Crops","premium":false,"hidden":true},
+  {"file":"unit-11-part-4-diseases-of-narcotics-and-beverage-crops.pdf","title":"Unit 11 Part 4 — Diseases of Narcotics and Beverage Crops","premium":false,"hidden":true},
+
+  {"file":"unit-12-part-1-diseases-of-fiber-and-sugar-crops.pdf","title":"Unit 12 Part 1 — Diseases of Fiber & Sugar Crops","premium":false,"hidden":false},
+  {"file":"unit-12-part-2-diseases-of-fiber-and-sugar-crops.pdf","title":"Unit 12 Part 2 — Diseases of Fiber & Sugar Crops","premium":false,"hidden":false},
+  {"file":"unit-12-part-3-diseases-of-fiber-and-sugar-crops.pdf","title":"Unit 12 Part 3 — Diseases of Fiber & Sugar Crops","premium":false,"hidden":true},
+  {"file":"unit-12-part-4-diseases-of-fiber-and-sugar-crops.pdf","title":"Unit 12 Part 4 — Diseases of Fiber & Sugar Crops","premium":false,"hidden":true},
+
+  {"file":"unit-13-part-1-plant-infection-development-and-assessment.pdf","title":"Unit 13 Part 1 — Plant Infection, Development and Assessment of Diseases","premium":false,"hidden":false},
+  {"file":"unit-13-part-2-plant-infection-development-and-assessment.pdf","title":"Unit 13 Part 2 — Plant Infection, Development and Assessment of Diseases","premium":false,"hidden":false},
+  {"file":"unit-13-part-3-plant-infection-development-and-assessment.pdf","title":"Unit 13 Part 3 — Plant Infection, Development and Assessment of Diseases","premium":false,"hidden":true},
+  {"file":"unit-13-part-4-plant-infection-development-and-assessment.pdf","title":"Unit 13 Part 4 — Plant Infection, Development and Assessment of Diseases","premium":false,"hidden":true},
+
+  {"file":"unit-14-part-1-principles-of-crop-disease-management.pdf","title":"Unit 14 Part 1 — Principles of Crop Disease Management","premium":false,"hidden":false},
+  {"file":"unit-14-part-2-principles-of-crop-disease-management.pdf","title":"Unit 14 Part 2 — Principles of Crop Disease Management","premium":false,"hidden":false},
+  {"file":"unit-14-part-3-principles-of-crop-disease-management.pdf","title":"Unit 14 Part 3 — Principles of Crop Disease Management","premium":false,"hidden":true},
+  {"file":"unit-14-part-4-principles-of-crop-disease-management.pdf","title":"Unit 14 Part 4 — Principles of Crop Disease Management","premium":false,"hidden":true},
+
+  {"file":"unit-15-part-1-biological-and-chemical-protection.pdf","title":"Unit 15 Part 1 — Biological & Chemical Protection for Crop Disease Management","premium":false,"hidden":false},
+  {"file":"unit-15-part-2-biological-and-chemical-protection.pdf","title":"Unit 15 Part 2 — Biological & Chemical Protection for Crop Disease Management","premium":false,"hidden":false},
+  {"file":"unit-15-part-3-biological-and-chemical-protection.pdf","title":"Unit 15 Part 3 — Biological & Chemical Protection for Crop Disease Management","premium":false,"hidden":true},
+  {"file":"unit-15-part-4-biological-and-chemical-protection.pdf","title":"Unit 15 Part 4 — Biological & Chemical Protection for Crop Disease Management","premium":false,"hidden":true}
+    ]
