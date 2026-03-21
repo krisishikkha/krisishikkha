@@ -1,32 +1,38 @@
 [
   {
-    "file": "22351-crop-production-iii/index.html",
-    "title": "22351 Crop Production-III",
+    "file": "22351-agroforestry-and-biodiversity/index.html",
+    "title": "22351 Agroforestry & Biodiversity",
+    "subtitle": "5th Semester subject",
     "hidden": false
   },
   {
-    "file": "22352-plant-pathology/index.html",
-    "title": "22352 Plant Pathology",
+    "file": "22352-crop-disease-management/index.html",
+    "title": "22352 Crop Disease Management",
+    "subtitle": "5th Semester subject",
     "hidden": false
   },
   {
-    "file": "22353-agricultural-marketing/index.html",
-    "title": "22353 Agricultural Marketing",
+    "file": "22353-plant-nutrition-and-fertilizer-management/index.html",
+    "title": "22353 Plant Nutrition and Fertilizer Management",
+    "subtitle": "5th Semester subject",
     "hidden": false
   },
   {
-    "file": "22354-farm-management/index.html",
-    "title": "22354 Farm Management",
+    "file": "22354-cultivation-of-flowers-and-ornamental-plants/index.html",
+    "title": "22354 Cultivation of Flowers & Ornamental Plants",
+    "subtitle": "5th Semester subject",
     "hidden": false
   },
   {
-    "file": "22355-irrigation-and-water-management-ii/index.html",
-    "title": "22355 Irrigation and Water Management-II",
+    "file": "22355-agricultural-mechanization/index.html",
+    "title": "22355 Agricultural Mechanization",
+    "subtitle": "5th Semester subject",
     "hidden": false
   },
   {
-    "file": "22356-seed-technology/index.html",
-    "title": "22356 Seed Technology",
+    "file": "22356-irrigation-and-water-management/index.html",
+    "title": "22356 Irrigation and Water Management",
+    "subtitle": "5th Semester subject",
     "hidden": false
   }
 ]
