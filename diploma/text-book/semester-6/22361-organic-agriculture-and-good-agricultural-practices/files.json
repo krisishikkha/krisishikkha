@@ -1,0 +1,51 @@
+[
+  {"file":"unit-1-part-1-introduction-to-organic-agriculture.pdf","title":"Unit 1 Part 1 — Introduction to Organic Agriculture","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-organic-agriculture.pdf","title":"Unit 1 Part 2 — Introduction to Organic Agriculture","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-organic-agriculture.pdf","title":"Unit 1 Part 3 — Introduction to Organic Agriculture","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-organic-agriculture.pdf","title":"Unit 1 Part 4 — Introduction to Organic Agriculture","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-soil-input-and-management-for-organic-agriculture.pdf","title":"Unit 2 Part 1 — Soil Input and Management for Organic Agriculture","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-soil-input-and-management-for-organic-agriculture.pdf","title":"Unit 2 Part 2 — Soil Input and Management for Organic Agriculture","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-soil-input-and-management-for-organic-agriculture.pdf","title":"Unit 2 Part 3 — Soil Input and Management for Organic Agriculture","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-soil-input-and-management-for-organic-agriculture.pdf","title":"Unit 2 Part 4 — Soil Input and Management for Organic Agriculture","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-organic-crop-production-management.pdf","title":"Unit 3 Part 1 — Organic Crop Production Management","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-organic-crop-production-management.pdf","title":"Unit 3 Part 2 — Organic Crop Production Management","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-organic-crop-production-management.pdf","title":"Unit 3 Part 3 — Organic Crop Production Management","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-organic-crop-production-management.pdf","title":"Unit 3 Part 4 — Organic Crop Production Management","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-organic-crop-protection.pdf","title":"Unit 4 Part 1 — Organic Crop Protection","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-organic-crop-protection.pdf","title":"Unit 4 Part 2 — Organic Crop Protection","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-organic-crop-protection.pdf","title":"Unit 4 Part 3 — Organic Crop Protection","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-organic-crop-protection.pdf","title":"Unit 4 Part 4 — Organic Crop Protection","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-authentication-or-traceability-and-marketing-of-organic-produces.pdf","title":"Unit 5 Part 1 — Authentication or Traceability and Marketing of Organic Produces","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-authentication-or-traceability-and-marketing-of-organic-produces.pdf","title":"Unit 5 Part 2 — Authentication or Traceability and Marketing of Organic Produces","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-authentication-or-traceability-and-marketing-of-organic-produces.pdf","title":"Unit 5 Part 3 — Authentication or Traceability and Marketing of Organic Produces","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-authentication-or-traceability-and-marketing-of-organic-produces.pdf","title":"Unit 5 Part 4 — Authentication or Traceability and Marketing of Organic Produces","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-good-agricultural-practice-gap.pdf","title":"Unit 6 Part 1 — Good Agricultural Practice (GAP)","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-good-agricultural-practice-gap.pdf","title":"Unit 6 Part 2 — Good Agricultural Practice (GAP)","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-good-agricultural-practice-gap.pdf","title":"Unit 6 Part 3 — Good Agricultural Practice (GAP)","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-good-agricultural-practice-gap.pdf","title":"Unit 6 Part 4 — Good Agricultural Practice (GAP)","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-bangladesh-gap-policy-2020-and-certification-process.pdf","title":"Unit 7 Part 1 — Bangladesh GAP Policy 2020 and Certification Process","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-bangladesh-gap-policy-2020-and-certification-process.pdf","title":"Unit 7 Part 2 — Bangladesh GAP Policy 2020 and Certification Process","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-bangladesh-gap-policy-2020-and-certification-process.pdf","title":"Unit 7 Part 3 — Bangladesh GAP Policy 2020 and Certification Process","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-bangladesh-gap-policy-2020-and-certification-process.pdf","title":"Unit 7 Part 4 — Bangladesh GAP Policy 2020 and Certification Process","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-food-safety-module-fsm-of-bangladesh-gap.pdf","title":"Unit 8 Part 1 — Food Safety Module (FSM) of Bangladesh GAP","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-food-safety-module-fsm-of-bangladesh-gap.pdf","title":"Unit 8 Part 2 — Food Safety Module (FSM) of Bangladesh GAP","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-food-safety-module-fsm-of-bangladesh-gap.pdf","title":"Unit 8 Part 3 — Food Safety Module (FSM) of Bangladesh GAP","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-food-safety-module-fsm-of-bangladesh-gap.pdf","title":"Unit 8 Part 4 — Food Safety Module (FSM) of Bangladesh GAP","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-environmental-management-module-emm-and-produce-quality-module-pqm.pdf","title":"Unit 9 Part 1 — Environmental Management Module (EMM) and Produce Quality Module (PQM)","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-environmental-management-module-emm-and-produce-quality-module-pqm.pdf","title":"Unit 9 Part 2 — Environmental Management Module (EMM) and Produce Quality Module (PQM)","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-environmental-management-module-emm-and-produce-quality-module-pqm.pdf","title":"Unit 9 Part 3 — Environmental Management Module (EMM) and Produce Quality Module (PQM)","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-environmental-management-module-emm-and-produce-quality-module-pqm.pdf","title":"Unit 9 Part 4 — Environmental Management Module (EMM) and Produce Quality Module (PQM)","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-worker-health-safety-and-welfare-module-and-general-requirements-module.pdf","title":"Unit 10 Part 1 — Worker Health, Safety and Welfare Module and General Requirements Module","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-worker-health-safety-and-welfare-module-and-general-requirements-module.pdf","title":"Unit 10 Part 2 — Worker Health, Safety and Welfare Module and General Requirements Module","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-worker-health-safety-and-welfare-module-and-general-requirements-module.pdf","title":"Unit 10 Part 3 — Worker Health, Safety and Welfare Module and General Requirements Module","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-worker-health-safety-and-welfare-module-and-general-requirements-module.pdf","title":"Unit 10 Part 4 — Worker Health, Safety and Welfare Module and General Requirements Module","premium":false,"hidden":true}
+]
