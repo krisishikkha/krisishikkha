@@ -1,0 +1,76 @@
+[
+  {"file":"unit-1-part-1-introduction-to-seed-science-and-technology.pdf","title":"Unit 1 Part 1 — Introduction to Seed Science and Technology","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-seed-science-and-technology.pdf","title":"Unit 1 Part 2 — Introduction to Seed Science and Technology","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-seed-science-and-technology.pdf","title":"Unit 1 Part 3 — Introduction to Seed Science and Technology","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-seed-science-and-technology.pdf","title":"Unit 1 Part 4 — Introduction to Seed Science and Technology","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-seed-quality.pdf","title":"Unit 2 Part 1 — Seed Quality","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-seed-quality.pdf","title":"Unit 2 Part 2 — Seed Quality","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-seed-quality.pdf","title":"Unit 2 Part 3 — Seed Quality","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-seed-quality.pdf","title":"Unit 2 Part 4 — Seed Quality","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-seed-moisture-purity-germination-viability-vigour-and-dormancy.pdf","title":"Unit 3 Part 1 — Seed Moisture, Purity, Germination, Viability, Vigour and Dormancy","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-seed-moisture-purity-germination-viability-vigour-and-dormancy.pdf","title":"Unit 3 Part 2 — Seed Moisture, Purity, Germination, Viability, Vigour and Dormancy","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-seed-moisture-purity-germination-viability-vigour-and-dormancy.pdf","title":"Unit 3 Part 3 — Seed Moisture, Purity, Germination, Viability, Vigour and Dormancy","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-seed-moisture-purity-germination-viability-vigour-and-dormancy.pdf","title":"Unit 3 Part 4 — Seed Moisture, Purity, Germination, Viability, Vigour and Dormancy","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-variety-development-evaluation-and-release.pdf","title":"Unit 4 Part 1 — Variety Development, Evaluation and Release","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-variety-development-evaluation-and-release.pdf","title":"Unit 4 Part 2 — Variety Development, Evaluation and Release","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-variety-development-evaluation-and-release.pdf","title":"Unit 4 Part 3 — Variety Development, Evaluation and Release","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-variety-development-evaluation-and-release.pdf","title":"Unit 4 Part 4 — Variety Development, Evaluation and Release","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-seed-production.pdf","title":"Unit 5 Part 1 — Seed Production","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-seed-production.pdf","title":"Unit 5 Part 2 — Seed Production","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-seed-production.pdf","title":"Unit 5 Part 3 — Seed Production","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-seed-production.pdf","title":"Unit 5 Part 4 — Seed Production","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-hybrid-gmo-and-custom-seed.pdf","title":"Unit 6 Part 1 — Hybrid, GMO and Custom Seed","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-hybrid-gmo-and-custom-seed.pdf","title":"Unit 6 Part 2 — Hybrid, GMO and Custom Seed","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-hybrid-gmo-and-custom-seed.pdf","title":"Unit 6 Part 3 — Hybrid, GMO and Custom Seed","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-hybrid-gmo-and-custom-seed.pdf","title":"Unit 6 Part 4 — Hybrid, GMO and Custom Seed","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-seed-processing-and-testing.pdf","title":"Unit 7 Part 1 — Seed Processing and Testing","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-seed-processing-and-testing.pdf","title":"Unit 7 Part 2 — Seed Processing and Testing","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-seed-processing-and-testing.pdf","title":"Unit 7 Part 3 — Seed Processing and Testing","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-seed-processing-and-testing.pdf","title":"Unit 7 Part 4 — Seed Processing and Testing","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-seed-enhancement-technology.pdf","title":"Unit 8 Part 1 — Seed Enhancement Technology","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-seed-enhancement-technology.pdf","title":"Unit 8 Part 2 — Seed Enhancement Technology","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-seed-enhancement-technology.pdf","title":"Unit 8 Part 3 — Seed Enhancement Technology","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-seed-enhancement-technology.pdf","title":"Unit 8 Part 4 — Seed Enhancement Technology","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-seed-storage.pdf","title":"Unit 9 Part 1 — Seed Storage","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-seed-storage.pdf","title":"Unit 9 Part 2 — Seed Storage","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-seed-storage.pdf","title":"Unit 9 Part 3 — Seed Storage","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-seed-storage.pdf","title":"Unit 9 Part 4 — Seed Storage","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-seed-treatment-and-packaging.pdf","title":"Unit 10 Part 1 — Seed Treatment and Packaging","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-seed-treatment-and-packaging.pdf","title":"Unit 10 Part 2 — Seed Treatment and Packaging","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-seed-treatment-and-packaging.pdf","title":"Unit 10 Part 3 — Seed Treatment and Packaging","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-seed-treatment-and-packaging.pdf","title":"Unit 10 Part 4 — Seed Treatment and Packaging","premium":false,"hidden":true},
+
+  {"file":"unit-11-part-1-seed-quality-control.pdf","title":"Unit 11 Part 1 — Seed Quality Control","premium":false,"hidden":false},
+  {"file":"unit-11-part-2-seed-quality-control.pdf","title":"Unit 11 Part 2 — Seed Quality Control","premium":false,"hidden":false},
+  {"file":"unit-11-part-3-seed-quality-control.pdf","title":"Unit 11 Part 3 — Seed Quality Control","premium":false,"hidden":true},
+  {"file":"unit-11-part-4-seed-quality-control.pdf","title":"Unit 11 Part 4 — Seed Quality Control","premium":false,"hidden":true},
+
+  {"file":"unit-12-part-1-seed-acts-and-rules.pdf","title":"Unit 12 Part 1 — Seed Acts and Rules","premium":false,"hidden":false},
+  {"file":"unit-12-part-2-seed-acts-and-rules.pdf","title":"Unit 12 Part 2 — Seed Acts and Rules","premium":false,"hidden":false},
+  {"file":"unit-12-part-3-seed-acts-and-rules.pdf","title":"Unit 12 Part 3 — Seed Acts and Rules","premium":false,"hidden":true},
+  {"file":"unit-12-part-4-seed-acts-and-rules.pdf","title":"Unit 12 Part 4 — Seed Acts and Rules","premium":false,"hidden":true},
+
+  {"file":"unit-13-part-1-seed-certification.pdf","title":"Unit 13 Part 1 — Seed Certification","premium":false,"hidden":false},
+  {"file":"unit-13-part-2-seed-certification.pdf","title":"Unit 13 Part 2 — Seed Certification","premium":false,"hidden":false},
+  {"file":"unit-13-part-3-seed-certification.pdf","title":"Unit 13 Part 3 — Seed Certification","premium":false,"hidden":true},
+  {"file":"unit-13-part-4-seed-certification.pdf","title":"Unit 13 Part 4 — Seed Certification","premium":false,"hidden":true},
+
+  {"file":"unit-14-part-1-seed-business-and-entrepreneurship-development.pdf","title":"Unit 14 Part 1 — Seed Business and Entrepreneurship Development","premium":false,"hidden":false},
+  {"file":"unit-14-part-2-seed-business-and-entrepreneurship-development.pdf","title":"Unit 14 Part 2 — Seed Business and Entrepreneurship Development","premium":false,"hidden":false},
+  {"file":"unit-14-part-3-seed-business-and-entrepreneurship-development.pdf","title":"Unit 14 Part 3 — Seed Business and Entrepreneurship Development","premium":false,"hidden":true},
+  {"file":"unit-14-part-4-seed-business-and-entrepreneurship-development.pdf","title":"Unit 14 Part 4 — Seed Business and Entrepreneurship Development","premium":false,"hidden":true},
+
+  {"file":"unit-15-part-1-seed-sales-and-marketing.pdf","title":"Unit 15 Part 1 — Seed Sales and Marketing","premium":false,"hidden":false},
+  {"file":"unit-15-part-2-seed-sales-and-marketing.pdf","title":"Unit 15 Part 2 — Seed Sales and Marketing","premium":false,"hidden":false},
+  {"file":"unit-15-part-3-seed-sales-and-marketing.pdf","title":"Unit 15 Part 3 — Seed Sales and Marketing","premium":false,"hidden":true},
+  {"file":"unit-15-part-4-seed-sales-and-marketing.pdf","title":"Unit 15 Part 4 — Seed Sales and Marketing","premium":false,"hidden":true}
+]
