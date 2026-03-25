@@ -1,0 +1,51 @@
+[
+  {"file":"unit-1-part-1-introduction-to-farm.pdf","title":"Unit 1 Part 1 — Introduction to farm","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-farm.pdf","title":"Unit 1 Part 2 — Introduction to farm","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-farm.pdf","title":"Unit 1 Part 3 — Introduction to farm","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-farm.pdf","title":"Unit 1 Part 4 — Introduction to farm","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-farming-system.pdf","title":"Unit 2 Part 1 — Farming system","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-farming-system.pdf","title":"Unit 2 Part 2 — Farming system","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-farming-system.pdf","title":"Unit 2 Part 3 — Farming system","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-farming-system.pdf","title":"Unit 2 Part 4 — Farming system","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-component-of-farming-system.pdf","title":"Unit 3 Part 1 — Component of farming system","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-component-of-farming-system.pdf","title":"Unit 3 Part 2 — Component of farming system","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-component-of-farming-system.pdf","title":"Unit 3 Part 3 — Component of farming system","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-component-of-farming-system.pdf","title":"Unit 3 Part 4 — Component of farming system","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-area-of-farm-management.pdf","title":"Unit 4 Part 1 — Area of Farm Management","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-area-of-farm-management.pdf","title":"Unit 4 Part 2 — Area of Farm Management","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-area-of-farm-management.pdf","title":"Unit 4 Part 3 — Area of Farm Management","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-area-of-farm-management.pdf","title":"Unit 4 Part 4 — Area of Farm Management","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-records-keeping-of-farm-management.pdf","title":"Unit 5 Part 1 — Records keeping of farm management","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-records-keeping-of-farm-management.pdf","title":"Unit 5 Part 2 — Records keeping of farm management","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-records-keeping-of-farm-management.pdf","title":"Unit 5 Part 3 — Records keeping of farm management","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-records-keeping-of-farm-management.pdf","title":"Unit 5 Part 4 — Records keeping of farm management","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-farm-budgeting.pdf","title":"Unit 6 Part 1 — Farm budgeting","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-farm-budgeting.pdf","title":"Unit 6 Part 2 — Farm budgeting","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-farm-budgeting.pdf","title":"Unit 6 Part 3 — Farm budgeting","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-farm-budgeting.pdf","title":"Unit 6 Part 4 — Farm budgeting","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-modern-farm-management.pdf","title":"Unit 7 Part 1 — Modern farm management","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-modern-farm-management.pdf","title":"Unit 7 Part 2 — Modern farm management","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-modern-farm-management.pdf","title":"Unit 7 Part 3 — Modern farm management","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-modern-farm-management.pdf","title":"Unit 7 Part 4 — Modern farm management","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-crop-management-and-production-practices.pdf","title":"Unit 8 Part 1 — Crop Management and Production Practices","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-crop-management-and-production-practices.pdf","title":"Unit 8 Part 2 — Crop Management and Production Practices","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-crop-management-and-production-practices.pdf","title":"Unit 8 Part 3 — Crop Management and Production Practices","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-crop-management-and-production-practices.pdf","title":"Unit 8 Part 4 — Crop Management and Production Practices","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-risk-management-in-a-farm.pdf","title":"Unit 9 Part 1 — Risk Management in a farm","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-risk-management-in-a-farm.pdf","title":"Unit 9 Part 2 — Risk Management in a farm","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-risk-management-in-a-farm.pdf","title":"Unit 9 Part 3 — Risk Management in a farm","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-risk-management-in-a-farm.pdf","title":"Unit 9 Part 4 — Risk Management in a farm","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-technology-and-innovation-in-farm-management.pdf","title":"Unit 10 Part 1 — Technology and Innovation in Farm Management","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-technology-and-innovation-in-farm-management.pdf","title":"Unit 10 Part 2 — Technology and Innovation in Farm Management","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-technology-and-innovation-in-farm-management.pdf","title":"Unit 10 Part 3 — Technology and Innovation in Farm Management","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-technology-and-innovation-in-farm-management.pdf","title":"Unit 10 Part 4 — Technology and Innovation in Farm Management","premium":false,"hidden":true}
+]
