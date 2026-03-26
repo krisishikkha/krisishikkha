@@ -1,0 +1,91 @@
+[
+  {"file":"unit-1-part-1-extension-strategy-upazila-level.pdf","title":"Unit 1 Part 1 — Extension Strategy at Upazila Level","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-extension-strategy-upazila-level.pdf","title":"Unit 1 Part 2 — Extension Strategy at Upazila Level","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-extension-strategy-upazila-level.pdf","title":"Unit 1 Part 3 — Extension Strategy at Upazila Level","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-extension-strategy-upazila-level.pdf","title":"Unit 1 Part 4 — Extension Strategy at Upazila Level","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-farmer-information-need-assessment-fina.pdf","title":"Unit 2 Part 1 — Farmer Information Need Assessment (FINA)","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-farmer-information-need-assessment-fina.pdf","title":"Unit 2 Part 2 — Farmer Information Need Assessment (FINA)","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-farmer-information-need-assessment-fina.pdf","title":"Unit 2 Part 3 — Farmer Information Need Assessment (FINA)","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-farmer-information-need-assessment-fina.pdf","title":"Unit 2 Part 4 — Farmer Information Need Assessment (FINA)","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-government-and-ngo-activities.pdf","title":"Unit 3 Part 1 — Government and NGO Activities","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-government-and-ngo-activities.pdf","title":"Unit 3 Part 2 — Government and NGO Activities","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-government-and-ngo-activities.pdf","title":"Unit 3 Part 3 — Government and NGO Activities","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-government-and-ngo-activities.pdf","title":"Unit 3 Part 4 — Government and NGO Activities","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-socio-economic-condition-analysis.pdf","title":"Unit 4 Part 1 — Socio-economic Condition Analysis","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-socio-economic-condition-analysis.pdf","title":"Unit 4 Part 2 — Socio-economic Condition Analysis","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-socio-economic-condition-analysis.pdf","title":"Unit 4 Part 3 — Socio-economic Condition Analysis","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-socio-economic-condition-analysis.pdf","title":"Unit 4 Part 4 — Socio-economic Condition Analysis","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-field-crop-production-technology.pdf","title":"Unit 5 Part 1 — Field Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-field-crop-production-technology.pdf","title":"Unit 5 Part 2 — Field Crop Production Technology","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-field-crop-production-technology.pdf","title":"Unit 5 Part 3 — Field Crop Production Technology","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-field-crop-production-technology.pdf","title":"Unit 5 Part 4 — Field Crop Production Technology","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-horticultural-production-activities.pdf","title":"Unit 6 Part 1 — Horticultural Production Activities","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-horticultural-production-activities.pdf","title":"Unit 6 Part 2 — Horticultural Production Activities","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-horticultural-production-activities.pdf","title":"Unit 6 Part 3 — Horticultural Production Activities","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-horticultural-production-activities.pdf","title":"Unit 6 Part 4 — Horticultural Production Activities","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-pest-management-activities.pdf","title":"Unit 7 Part 1 — Pest Management Activities","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-pest-management-activities.pdf","title":"Unit 7 Part 2 — Pest Management Activities","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-pest-management-activities.pdf","title":"Unit 7 Part 3 — Pest Management Activities","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-pest-management-activities.pdf","title":"Unit 7 Part 4 — Pest Management Activities","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-soil-fertility-management.pdf","title":"Unit 8 Part 1 — Soil Fertility Management","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-soil-fertility-management.pdf","title":"Unit 8 Part 2 — Soil Fertility Management","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-soil-fertility-management.pdf","title":"Unit 8 Part 3 — Soil Fertility Management","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-soil-fertility-management.pdf","title":"Unit 8 Part 4 — Soil Fertility Management","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-irrigation-and-water-management.pdf","title":"Unit 9 Part 1 — Irrigation and Water Management","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-irrigation-and-water-management.pdf","title":"Unit 9 Part 2 — Irrigation and Water Management","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-irrigation-and-water-management.pdf","title":"Unit 9 Part 3 — Irrigation and Water Management","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-irrigation-and-water-management.pdf","title":"Unit 9 Part 4 — Irrigation and Water Management","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-homestead-garden-record.pdf","title":"Unit 10 Part 1 — Homestead Garden Record","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-homestead-garden-record.pdf","title":"Unit 10 Part 2 — Homestead Garden Record","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-homestead-garden-record.pdf","title":"Unit 10 Part 3 — Homestead Garden Record","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-homestead-garden-record.pdf","title":"Unit 10 Part 4 — Homestead Garden Record","premium":false,"hidden":true},
+
+  {"file":"unit-11-part-1-cropping-pattern.pdf","title":"Unit 11 Part 1 — Cropping Pattern","premium":false,"hidden":false},
+  {"file":"unit-11-part-2-cropping-pattern.pdf","title":"Unit 11 Part 2 — Cropping Pattern","premium":false,"hidden":false},
+  {"file":"unit-11-part-3-cropping-pattern.pdf","title":"Unit 11 Part 3 — Cropping Pattern","premium":false,"hidden":true},
+  {"file":"unit-11-part-4-cropping-pattern.pdf","title":"Unit 11 Part 4 — Cropping Pattern","premium":false,"hidden":true},
+
+  {"file":"unit-12-part-1-agricultural-mechanization.pdf","title":"Unit 12 Part 1 — Agricultural Mechanization","premium":false,"hidden":false},
+  {"file":"unit-12-part-2-agricultural-mechanization.pdf","title":"Unit 12 Part 2 — Agricultural Mechanization","premium":false,"hidden":false},
+  {"file":"unit-12-part-3-agricultural-mechanization.pdf","title":"Unit 12 Part 3 — Agricultural Mechanization","premium":false,"hidden":true},
+  {"file":"unit-12-part-4-agricultural-mechanization.pdf","title":"Unit 12 Part 4 — Agricultural Mechanization","premium":false,"hidden":true},
+
+  {"file":"unit-13-part-1-agricultural-credit-management.pdf","title":"Unit 13 Part 1 — Agricultural Credit Management","premium":false,"hidden":false},
+  {"file":"unit-13-part-2-agricultural-credit-management.pdf","title":"Unit 13 Part 2 — Agricultural Credit Management","premium":false,"hidden":false},
+  {"file":"unit-13-part-3-agricultural-credit-management.pdf","title":"Unit 13 Part 3 — Agricultural Credit Management","premium":false,"hidden":true},
+  {"file":"unit-13-part-4-agricultural-credit-management.pdf","title":"Unit 13 Part 4 — Agricultural Credit Management","premium":false,"hidden":true},
+
+  {"file":"unit-14-part-1-fisheries-field-activities.pdf","title":"Unit 14 Part 1 — Fisheries Field Activities","premium":false,"hidden":false},
+  {"file":"unit-14-part-2-fisheries-field-activities.pdf","title":"Unit 14 Part 2 — Fisheries Field Activities","premium":false,"hidden":false},
+  {"file":"unit-14-part-3-fisheries-field-activities.pdf","title":"Unit 14 Part 3 — Fisheries Field Activities","premium":false,"hidden":true},
+  {"file":"unit-14-part-4-fisheries-field-activities.pdf","title":"Unit 14 Part 4 — Fisheries Field Activities","premium":false,"hidden":true},
+
+  {"file":"unit-15-part-1-livestock-poultry-field-activities.pdf","title":"Unit 15 Part 1 — Livestock/Poultry Field Activities","premium":false,"hidden":false},
+  {"file":"unit-15-part-2-livestock-poultry-field-activities.pdf","title":"Unit 15 Part 2 — Livestock/Poultry Field Activities","premium":false,"hidden":false},
+  {"file":"unit-15-part-3-livestock-poultry-field-activities.pdf","title":"Unit 15 Part 3 — Livestock/Poultry Field Activities","premium":false,"hidden":true},
+  {"file":"unit-15-part-4-livestock-poultry-field-activities.pdf","title":"Unit 15 Part 4 — Livestock/Poultry Field Activities","premium":false,"hidden":true},
+
+  {"file":"unit-16-part-1-agricultural-education-institute-visit.pdf","title":"Unit 16 Part 1 — Agricultural Educational Institute Visit","premium":false,"hidden":false},
+  {"file":"unit-16-part-2-agricultural-education-institute-visit.pdf","title":"Unit 16 Part 2 — Agricultural Educational Institute Visit","premium":false,"hidden":false},
+  {"file":"unit-16-part-3-agricultural-education-institute-visit.pdf","title":"Unit 16 Part 3 — Agricultural Educational Institute Visit","premium":false,"hidden":true},
+  {"file":"unit-16-part-4-agricultural-education-institute-visit.pdf","title":"Unit 16 Part 4 — Agricultural Educational Institute Visit","premium":false,"hidden":true},
+
+  {"file":"unit-17-part-1-field-report-preparation.pdf","title":"Unit 17 Part 1 — Field Report Preparation","premium":false,"hidden":false},
+  {"file":"unit-17-part-2-field-report-preparation.pdf","title":"Unit 17 Part 2 — Field Report Preparation","premium":false,"hidden":false},
+  {"file":"unit-17-part-3-field-report-preparation.pdf","title":"Unit 17 Part 3 — Field Report Preparation","premium":false,"hidden":true},
+  {"file":"unit-17-part-4-field-report-preparation.pdf","title":"Unit 17 Part 4 — Field Report Preparation","premium":false,"hidden":true},
+
+  {"file":"unit-18-part-1-graduation-project.pdf","title":"Unit 18 Part 1 — Graduation Project (Institution Part)","premium":false,"hidden":false},
+  {"file":"unit-18-part-2-graduation-project.pdf","title":"Unit 18 Part 2 — Graduation Project (Institution Part)","premium":false,"hidden":false},
+  {"file":"unit-18-part-3-graduation-project.pdf","title":"Unit 18 Part 3 — Graduation Project (Institution Part)","premium":false,"hidden":true},
+  {"file":"unit-18-part-4-graduation-project.pdf","title":"Unit 18 Part 4 — Graduation Project (Institution Part)","premium":false,"hidden":true}
+    ]
