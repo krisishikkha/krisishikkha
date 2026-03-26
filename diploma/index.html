@@ -7,57 +7,77 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-
-  <div class="research-container">
-
-    <div class="research-header">
+  <div class="agriculture-container">
+    <div class="agriculture-header">
       <p class="breadcrumb">
         <a href="../index.html">Home</a> / <span>Diploma Agriculture</span>
       </p>
-
-      <h1>Diploma Agriculture</h1>
-
+      <h1>Diploma Agriculture Preparation</h1>
       <p class="subtitle">
-        Text books, question banks, notes, articles, viva resources, and preparation materials for Diploma Agriculture students.
+        Text books, question banks, notes, articles, viva resources, and preparation materials for Diploma Agriculture
       </p>
     </div>
 
-    <div class="section-grid">
+    <!-- Login Button -->
+    <div class="top-actions">
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
 
+    <!-- Login Status -->
+    <p id="homeLoginStatus" class="login-status-text">
+      Not logged in
+    </p>
+
+    <div class="section-grid">
       <a href="text-book/index.html" class="section-card textbook-card">
         <span class="section-icon">📘</span>
         <span class="section-title">Text Book</span>
       </a>
 
       <a href="question-bank/index.html" class="section-card question-card">
-        <span class="section-icon">📄</span>
+        <span class="section-icon">📙</span>
         <span class="section-title">Question Bank</span>
       </a>
 
       <a href="saao/index.html" class="section-card saao-card">
-        <span class="section-icon">🎯</span>
+        <span class="section-icon">🧑‍🌾</span>
         <span class="section-title">SAAO</span>
       </a>
 
       <a href="scientific-assistant/index.html" class="section-card scientific-card">
-        <span class="section-icon">🔬</span>
+        <span class="section-icon">🧑‍🔬</span>
         <span class="section-title">Scientific Assistant</span>
       </a>
-
     </div>
 
     <div class="info-box">
       <h3>Study Support</h3>
       <p>
-        This section is designed to organize Diploma Agriculture learning materials in a simple and structured way, so students can easily find text books, question banks, and exam preparation resources.
+        This section is designed to organize Diploma Agriculture learning materials in a simple and structured way.
       </p>
     </div>
 
     <div class="back-wrap">
       <a href="../index.html" class="back-btn">← Back to Home</a>
     </div>
-
   </div>
 
+  <!-- Login System Scripts -->
+  <script src="data/users.js"></script>
+  <script src="auth.js"></script>
+
+  <script>
+    const homeLoginStatus = document.getElementById("homeLoginStatus");
+
+    if (homeLoginStatus) {
+      if (typeof isLoggedIn === "function" && isLoggedIn()) {
+        const session = getSession();
+        homeLoginStatus.textContent =
+          "Logged in as " + session.username + " (Access valid until " + session.expires + ")";
+      } else {
+        homeLoginStatus.textContent = "Not logged in";
+      }
+    }
+  </script>
 </body>
 </html>
