@@ -370,3 +370,33 @@ a{
   font-size:17px;
   color:#fff;
 }
+/* Login Button */
+.login-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #6c63ff, #9575cd);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #4b45d6, #7e57c2);
+  transform: translateY(-2px);
+}
+
+/* Login Status */
+.login-status-text {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  background: #fff3e0;
+  color: #ef6c00;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
