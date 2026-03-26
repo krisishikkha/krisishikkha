@@ -369,8 +369,7 @@ a{
 .semester-card .section-title{
   font-size:17px;
   color:#fff;
-}
-/* Login Form Box */
+}/* Login Form Box */
 .login-box {
   background: #fff;
   border-radius: 16px;
@@ -465,4 +464,4 @@ a{
   background: #e8f5e9;
   color: #2e7d32;
   border-left: 4px solid #2e7d32;
-  }
+}
