@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Diploma in Agriculture</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <div class="agriculture-container">
+        <div class="agriculture-header">
+            <p class="breadcrumb">
+                <a href="index.html">Diploma in Agriculture</a> / <span>Login</span>
+            </p>
+            <h1>Agriculture Login</h1>
+            <p class="subtitle">
+                Enter your user ID and password to access premium Diploma in Agriculture resources.
+            </p>
+        </div>
+
+        <div class="page-box login-box">
+            <form id="loginForm" class="login-form">
+                <label for="username" class="form-label">User ID</label>
+                <input type="text" id="username" class="form-input" placeholder="Enter your user ID" />
+
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-input" placeholder="Enter your password" />
+
+                <button type="submit" class="login-submit-btn">Login</button>
+            </form>
+
+            <div id="loginMessage" class="message-box"></div>
+
+            <div class="login-status-wrap">
+                <p id="loginStatus" class="login-status-text">Not logged in</p>
+                <button id="logoutBtn" class="logout-btn" type="button">Logout</button>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>Access Note</h3>
+            <p>
+                After login, your premium notes, question banks, articles, syllabus, and interview materials will become available.
+            </p>
+        </div>
+
+        <div class="back-wrap">
+            <a href="index.html" class="back-btn">-- Back to Diploma in Agriculture</a>
+        </div>
+    </div>
+
+    <script src="data/users.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
