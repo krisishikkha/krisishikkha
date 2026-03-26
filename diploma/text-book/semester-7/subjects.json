@@ -1,1 +1,44 @@
-
+[
+  {
+    "file": "./22371-farm-management/index.html",
+    "title": "22371 — Farm Management",
+    "subtitle": "Farm planning, budgeting, and management practices",
+    "hidden": false
+  },
+  {
+    "file": "./22372-agro-environment-and-disaster-management/index.html",
+    "title": "22372 — Agro Environment and Disaster Management",
+    "subtitle": "Environment, climate change and disaster strategies",
+    "hidden": false
+  },
+  {
+    "file": "./22373-food-and-nutrition-management/index.html",
+    "title": "22373 — Food and Nutrition Management",
+    "subtitle": "Food, nutrition and dietary health concepts",
+    "hidden": false
+  },
+  {
+    "file": "./22374-self-employment-and-entrepreneurship-development/index.html",
+    "title": "22374 — Self Employment and Entrepreneurship Development",
+    "subtitle": "Business, entrepreneurship and financial planning",
+    "hidden": false
+  },
+  {
+    "file": "./22375-postharvest-technology/index.html",
+    "title": "22375 — Postharvest Technology",
+    "subtitle": "Harvesting, storage and processing technologies",
+    "hidden": false
+  },
+  {
+    "file": "./22376-cultivation-of-spice-crops/index.html",
+    "title": "22376 — Cultivation of Spice Crops",
+    "subtitle": "Production and management of spice crops",
+    "hidden": false
+  },
+  {
+    "file": "./22377-co-operative-and-agricultural-marketing/index.html",
+    "title": "22377 — Co-operative and Agricultural Marketing",
+    "subtitle": "Cooperative system and agricultural marketing",
+    "hidden": false
+  }
+]
