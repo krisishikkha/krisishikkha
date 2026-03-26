@@ -1,0 +1,61 @@
+[
+  {"file":"unit-1-part-1-introduction-to-cooperative.pdf","title":"Unit 1 Part 1 — Introduction to Cooperative","premium":false,"hidden":false},
+  {"file":"unit-1-part-2-introduction-to-cooperative.pdf","title":"Unit 1 Part 2 — Introduction to Cooperative","premium":false,"hidden":false},
+  {"file":"unit-1-part-3-introduction-to-cooperative.pdf","title":"Unit 1 Part 3 — Introduction to Cooperative","premium":false,"hidden":true},
+  {"file":"unit-1-part-4-introduction-to-cooperative.pdf","title":"Unit 1 Part 4 — Introduction to Cooperative","premium":false,"hidden":true},
+
+  {"file":"unit-2-part-1-cooperative-society-registration-members-duties-and-management.pdf","title":"Unit 2 Part 1 — Cooperative Society Registration, Member’s Duties and Management","premium":false,"hidden":false},
+  {"file":"unit-2-part-2-cooperative-society-registration-members-duties-and-management.pdf","title":"Unit 2 Part 2 — Cooperative Society Registration, Member’s Duties and Management","premium":false,"hidden":false},
+  {"file":"unit-2-part-3-cooperative-society-registration-members-duties-and-management.pdf","title":"Unit 2 Part 3 — Cooperative Society Registration, Member’s Duties and Management","premium":false,"hidden":true},
+  {"file":"unit-2-part-4-cooperative-society-registration-members-duties-and-management.pdf","title":"Unit 2 Part 4 — Cooperative Society Registration, Member’s Duties and Management","premium":false,"hidden":true},
+
+  {"file":"unit-3-part-1-cooperative-credit-auditing-dispute-settlement-and-abolition.pdf","title":"Unit 3 Part 1 — Cooperative Credit, Auditing, Dispute Settlement and Abolition","premium":false,"hidden":false},
+  {"file":"unit-3-part-2-cooperative-credit-auditing-dispute-settlement-and-abolition.pdf","title":"Unit 3 Part 2 — Cooperative Credit, Auditing, Dispute Settlement and Abolition","premium":false,"hidden":false},
+  {"file":"unit-3-part-3-cooperative-credit-auditing-dispute-settlement-and-abolition.pdf","title":"Unit 3 Part 3 — Cooperative Credit, Auditing, Dispute Settlement and Abolition","premium":false,"hidden":true},
+  {"file":"unit-3-part-4-cooperative-credit-auditing-dispute-settlement-and-abolition.pdf","title":"Unit 3 Part 4 — Cooperative Credit, Auditing, Dispute Settlement and Abolition","premium":false,"hidden":true},
+
+  {"file":"unit-4-part-1-introduction-to-agricultural-marketing.pdf","title":"Unit 4 Part 1 — Introduction to Agricultural Marketing","premium":false,"hidden":false},
+  {"file":"unit-4-part-2-introduction-to-agricultural-marketing.pdf","title":"Unit 4 Part 2 — Introduction to Agricultural Marketing","premium":false,"hidden":false},
+  {"file":"unit-4-part-3-introduction-to-agricultural-marketing.pdf","title":"Unit 4 Part 3 — Introduction to Agricultural Marketing","premium":false,"hidden":true},
+  {"file":"unit-4-part-4-introduction-to-agricultural-marketing.pdf","title":"Unit 4 Part 4 — Introduction to Agricultural Marketing","premium":false,"hidden":true},
+
+  {"file":"unit-5-part-1-supply-chain-and-value-chain.pdf","title":"Unit 5 Part 1 — Supply Chain and Value Chain","premium":false,"hidden":false},
+  {"file":"unit-5-part-2-supply-chain-and-value-chain.pdf","title":"Unit 5 Part 2 — Supply Chain and Value Chain","premium":false,"hidden":false},
+  {"file":"unit-5-part-3-supply-chain-and-value-chain.pdf","title":"Unit 5 Part 3 — Supply Chain and Value Chain","premium":false,"hidden":true},
+  {"file":"unit-5-part-4-supply-chain-and-value-chain.pdf","title":"Unit 5 Part 4 — Supply Chain and Value Chain","premium":false,"hidden":true},
+
+  {"file":"unit-6-part-1-agricultural-marketing-law-rules-and-policy-bangladesh.pdf","title":"Unit 6 Part 1 — Agricultural Marketing Law, Rules and Policy in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-6-part-2-agricultural-marketing-law-rules-and-policy-bangladesh.pdf","title":"Unit 6 Part 2 — Agricultural Marketing Law, Rules and Policy in Bangladesh","premium":false,"hidden":false},
+  {"file":"unit-6-part-3-agricultural-marketing-law-rules-and-policy-bangladesh.pdf","title":"Unit 6 Part 3 — Agricultural Marketing Law, Rules and Policy in Bangladesh","premium":false,"hidden":true},
+  {"file":"unit-6-part-4-agricultural-marketing-law-rules-and-policy-bangladesh.pdf","title":"Unit 6 Part 4 — Agricultural Marketing Law, Rules and Policy in Bangladesh","premium":false,"hidden":true},
+
+  {"file":"unit-7-part-1-marketing-functions-grading-sorting-standardization-transportation-storage.pdf","title":"Unit 7 Part 1 — Marketing Functions (Grading, Sorting, Standardization, Transportation, Storage)","premium":false,"hidden":false},
+  {"file":"unit-7-part-2-marketing-functions-grading-sorting-standardization-transportation-storage.pdf","title":"Unit 7 Part 2 — Marketing Functions (Grading, Sorting, Standardization, Transportation, Storage)","premium":false,"hidden":false},
+  {"file":"unit-7-part-3-marketing-functions-grading-sorting-standardization-transportation-storage.pdf","title":"Unit 7 Part 3 — Marketing Functions (Grading, Sorting, Standardization, Transportation, Storage)","premium":false,"hidden":true},
+  {"file":"unit-7-part-4-marketing-functions-grading-sorting-standardization-transportation-storage.pdf","title":"Unit 7 Part 4 — Marketing Functions (Grading, Sorting, Standardization, Transportation, Storage)","premium":false,"hidden":true},
+
+  {"file":"unit-8-part-1-buying-selling-and-marketing-margin.pdf","title":"Unit 8 Part 1 — Buying and Selling and Marketing Margin","premium":false,"hidden":false},
+  {"file":"unit-8-part-2-buying-selling-and-marketing-margin.pdf","title":"Unit 8 Part 2 — Buying and Selling and Marketing Margin","premium":false,"hidden":false},
+  {"file":"unit-8-part-3-buying-selling-and-marketing-margin.pdf","title":"Unit 8 Part 3 — Buying and Selling and Marketing Margin","premium":false,"hidden":true},
+  {"file":"unit-8-part-4-buying-selling-and-marketing-margin.pdf","title":"Unit 8 Part 4 — Buying and Selling and Marketing Margin","premium":false,"hidden":true},
+
+  {"file":"unit-9-part-1-consumer-behavior-in-agriculture-market.pdf","title":"Unit 9 Part 1 — Consumer Behavior in Agriculture Market","premium":false,"hidden":false},
+  {"file":"unit-9-part-2-consumer-behavior-in-agriculture-market.pdf","title":"Unit 9 Part 2 — Consumer Behavior in Agriculture Market","premium":false,"hidden":false},
+  {"file":"unit-9-part-3-consumer-behavior-in-agriculture-market.pdf","title":"Unit 9 Part 3 — Consumer Behavior in Agriculture Market","premium":false,"hidden":true},
+  {"file":"unit-9-part-4-consumer-behavior-in-agriculture-market.pdf","title":"Unit 9 Part 4 — Consumer Behavior in Agriculture Market","premium":false,"hidden":true},
+
+  {"file":"unit-10-part-1-product-packaging-labeling-branding-and-traceability.pdf","title":"Unit 10 Part 1 — Packaging, Labeling, Branding and Traceability","premium":false,"hidden":false},
+  {"file":"unit-10-part-2-product-packaging-labeling-branding-and-traceability.pdf","title":"Unit 10 Part 2 — Packaging, Labeling, Branding and Traceability","premium":false,"hidden":false},
+  {"file":"unit-10-part-3-product-packaging-labeling-branding-and-traceability.pdf","title":"Unit 10 Part 3 — Packaging, Labeling, Branding and Traceability","premium":false,"hidden":true},
+  {"file":"unit-10-part-4-product-packaging-labeling-branding-and-traceability.pdf","title":"Unit 10 Part 4 — Packaging, Labeling, Branding and Traceability","premium":false,"hidden":true},
+
+  {"file":"unit-11-part-1-e-agri-business.pdf","title":"Unit 11 Part 1 — E-Agri-Business","premium":false,"hidden":false},
+  {"file":"unit-11-part-2-e-agri-business.pdf","title":"Unit 11 Part 2 — E-Agri-Business","premium":false,"hidden":false},
+  {"file":"unit-11-part-3-e-agri-business.pdf","title":"Unit 11 Part 3 — E-Agri-Business","premium":false,"hidden":true},
+  {"file":"unit-11-part-4-e-agri-business.pdf","title":"Unit 11 Part 4 — E-Agri-Business","premium":false,"hidden":true},
+
+  {"file":"unit-12-part-1-agricultural-entrepreneurs.pdf","title":"Unit 12 Part 1 — Agricultural Entrepreneurs","premium":false,"hidden":false},
+  {"file":"unit-12-part-2-agricultural-entrepreneurs.pdf","title":"Unit 12 Part 2 — Agricultural Entrepreneurs","premium":false,"hidden":false},
+  {"file":"unit-12-part-3-agricultural-entrepreneurs.pdf","title":"Unit 12 Part 3 — Agricultural Entrepreneurs","premium":false,"hidden":true},
+  {"file":"unit-12-part-4-agricultural-entrepreneurs.pdf","title":"Unit 12 Part 4 — Agricultural Entrepreneurs","premium":false,"hidden":true}
+]
