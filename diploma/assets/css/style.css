@@ -396,21 +396,62 @@ a{
   box-shadow: 0 0 6px rgba(239,108,0,0.3);
 }
 
+/* Login Box */
+.login-box {
+  background: #f9f9ff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Login Header */
+.agriculture-header h1 {
+  color: #6a1b9a; /* বেগুনি */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #6a1b9a;
+  outline: none;
+  box-shadow: 0 0px 6px rgba(106,27,154,0.3);
+}
+
 /* Login Button */
 .login-submit-btn {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #6c63ff, #9575cd);
+  background: linear-gradient(135deg, #6a1b9a, #9575cd);
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s ease;
+  margin-bottom: 15px;
 }
 
 .login-submit-btn:hover {
-  background: linear-gradient(135deg, #4b45d6, #7e57c2);
+  background: linear-gradient(135deg, #4a148c, #7e57c2);
   transform: translateY(-2px);
 }
 
@@ -464,4 +505,13 @@ a{
   background: #e8f5e9;
   color: #2e7d32;
   border-left: 4px solid #2e7d32;
+}
+
+/* Info Box */
+.info-box {
+  background: #eef2ff;
+  border-left: 4px solid #6a1b9a;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 6px;
 }
