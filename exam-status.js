@@ -45,15 +45,15 @@ const EXAM_STATUS = {
     },
     "exam-8": {
     title: "HSC 2nd Paper 1st Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam2"]
     },
     "exam-9": {
     title: "HSC 2nd Paper 2nd Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
-    codes: ["exam2code"]
+    codes: ["exam222"]
     },
     "exam-10": {
     title: "HSC 2nd Paper 3rd Chapter",
