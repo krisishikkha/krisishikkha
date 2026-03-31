@@ -1,13 +1,13 @@
 const EXAM_STATUS = {
   "exam-1": {
-    title: "ডেমো পরীক্ষা ",
+    title: "ডেমো পরীক্ষা🔴 ",
     visible: true,   // ✅ নতুন
     status: "live",
     codes: ["krisi"]
   },
 
   "exam-2": {
-    title: "HSC 1st Paper 1st Chapter ",
+    title: "HSC 1st Paper 1st Chapter🔴",
     visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam248"]
@@ -44,13 +44,13 @@ const EXAM_STATUS = {
     codes: ["exam24"]
     },
     "exam-8": {
-    title: "HSC 2nd Paper 1st Chapter",
-    visible: false,  // ✅ নতুন
+    title: "HSC 2nd Paper 1st Chapter🔴",
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam2"]
     },
     "exam-9": {
-    title: "HSC 2nd Paper 2nd Chapter",
+    title: "HSC 2nd Paper 2nd Chapter🔴",
     visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam222"]
