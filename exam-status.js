@@ -27,15 +27,15 @@ const EXAM_STATUS = {
       },
   "exam-5": {
     title: "HSC 1st Paper 4rth Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam62"]
     },
     "exam-6": {
-    title: "HSC 1st Paper 5th Chapter",
-    visible: false,  // ✅ নতুন
+    title: "HSC 1st Paper 5th Chapter🔴",
+    visible: true,  // ✅ নতুন
     status: "live",
-    codes: ["exam268"]
+    codes: ["exam2668"]
     },
     "exam-7": {
     title: "HSC 1st Paper 6th Chapter",
@@ -45,7 +45,7 @@ const EXAM_STATUS = {
     },
     "exam-8": {
     title: "HSC 2nd Paper 1st Chapter🔴",
-    visible: true,  // ✅ নতুন
+    visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam2"]
     },
