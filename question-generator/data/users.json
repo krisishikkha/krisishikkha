@@ -1,7 +1,7 @@
 {
   "users": [
     {"id": "admin", "username": "admin", "password": "admin@krishi2025", "name": "এডমিন", "phone": "01516013089", "status": "active", "expiryDate": "2030-12-31"},
-    {"id": "demo", "username": "demo", "password": "demo123", "name": "ডেমো ইউজার", "phone": "01700000000", "status": "active", "expiryDate": "2025-12-31"}
+    {"id": "demo", "username": "demo", "password": "demo123", "name": "ডেমো ইউজার", "phone": "01700000000", "status": "active", "expiryDate": "2027-12-31"}
   ],
   "totalUsers": 2,
   "whatsapp": "01516013089"
