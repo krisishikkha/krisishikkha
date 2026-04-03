@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রশ্নপত্র জেনারেটর | কৃষিশিক্ষা</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a href="../index.html" class="back-btn">← হোম</a>
+                <div class="logo">
+                    <h1>🌾 প্রশ্নপত্র জেনারেটর</h1>
+                    <p>নিজের মতো করে প্রশ্নপত্র তৈরি করুন</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="loginBtn" class="login-btn">🔐 লগইন</button>
+                <div id="userInfo" class="user-info" style="display: none;">
+                    <span id="userName">ইউজার</span>
+                    <button id="logoutBtn" class="logout-btn">লগআউট</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Login Notice -->
+        <div id="loginNotice" class="notice-box">
+            ⚠️ <strong>PDF ডাউনলোড করতে লগইন করুন।</strong> প্রশ্ন দেখা ও সিলেক্ট করা ফ্রি!
+            <a href="https://wa.me/8801516013089" target="_blank" class="whatsapp-link">📱 WhatsApp এ যোগাযোগ</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            
+            <!-- Left Panel: Question Selection -->
+            <div class="left-panel">
+                
+                <!-- Subject Selection -->
+                <div class="card">
+                    <h2>📚 বিষয় নির্বাচন</h2>
+                    
+                    <div class="form-group">
+                        <label>বিষয় সিলেক্ট করুন:</label>
+                        <select id="subjectSelect">
+                            <option value="">-- বিষয় নির্বাচন করুন --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>অধ্যায় সিলেক্ট করুন:</label>
+                        <div id="chapterList" class="chapter-list">
+                            <p class="placeholder">প্রথমে বিষয় নির্বাচন করুন</p>
+                        </div>
+                    </div>
+                    
+                    <button id="loadQuestionsBtn" class="btn btn-primary" disabled>
+                        📥 প্রশ্ন লোড করুন
+                    </button>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="card">
+                    <h2>⚡ দ্রুত অ্যাকশন</h2>
+                    <div class="quick-actions">
+                        <button onclick="selectRandom(10)" class="btn btn-small">র‍্যান্ডম ১০টি</button>
+                        <button onclick="selectRandom(20)" class="btn btn-small">র‍্যান্ডম ২০টি</button>
+                        <button onclick="selectRandom(30)" class="btn btn-small">র‍্যান্ডম ৩০টি</button>
+                        <button onclick="selectAll()" class="btn btn-small">সব নির্বাচন</button>
+                        <button onclick="deselectAll()" class="btn btn-small btn-outline">সব বাদ</button>
+                    </div>
+                </div>
+
+                <!-- Questions List -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📝 প্রশ্নসমূহ</h2>
+                        <span id="selectedCount" class="badge">নির্বাচিত: ০</span>
+                    </div>
+                    <div id="questionsList" class="questions-list">
+                        <p class="placeholder">বিষয় ও অধ্যায় সিলেক্ট করে "প্রশ্ন লোড করুন" বাটনে ক্লিক করুন</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Paper Settings -->
+            <div class="right-panel">
+                
+                <!-- Paper Settings -->
+                <div class="card">
+                    <h2>⚙️ প্রশ্নপত্র সেটিংস</h2>
+                    
+                    <div class="form-group">
+                        <label>প্রতিষ্ঠানের নাম:</label>
+                        <input type="text" id="institutionName" placeholder="যেমন: কৃষি প্রশিক্ষণ ইনস্টিটিউট">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>পরীক্ষার নাম:</label>
+                        <input type="text" id="examName" placeholder="যেমন: নির্বাচনী পরীক্ষা - ২০২৫">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>বিষয়ের নাম:</label>
+                        <input type="text" id="subjectNameInput" placeholder="অটো সিলেক্ট হবে">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>সময়:</label>
+                            <input type="text" id="examTime" placeholder="৩০ মিনিট">
+                        </div>
+                        <div class="form-group">
+                            <label>পূর্ণমান:</label>
+                            <input type="text" id="fullMarks" placeholder="৩০">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>প্রতি প্রশ্নের নম্বর:</label>
+                        <input type="text" id="marksPerQuestion" placeholder="১">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>বিশেষ নির্দেশনা:</label>
+                        <textarea id="instructions" rows="3" placeholder="প্রতিটি প্রশ্নের মান সমান।"></textarea>
+                    </div>
+                </div>
+
+                <!-- Options -->
+                <div class="card">
+                    <h2>🔧 অতিরিক্ত অপশন</h2>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="shuffleQuestions"> প্রশ্ন শাফল করুন</label>
+                        <label><input type="checkbox" id="shuffleOptions"> অপশন শাফল করুন</label>
+                        <label><input type="checkbox" id="showQuestionNumber" checked> প্রশ্ন নম্বর দেখান</label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="card">
+                    <h2>📄 প্রশ্নপত্র তৈরি</h2>
+                    <div class="action-buttons">
+                        <button onclick="previewPaper()" class="btn btn-preview">
+                            👁️ প্রিভিউ দেখুন
+                        </button>
+                        <button onclick="downloadPDF()" class="btn btn-download download-btn">
+                            📥 PDF ডাউনলোড
+                        </button>
+                        <button onclick="downloadAnswerKey()" class="btn btn-answer download-btn">
+                            ✅ উত্তরপত্র ডাউনলোড
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content modal-small">
+                <div class="modal-header">
+                    <h3>🔐 লগইন করুন</h3>
+                    <button class="close-btn" onclick="hideLoginModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label>ইউজারনেম:</label>
+                            <input type="text" id="loginUsername" placeholder="আপনার ইউজারনেম" required>
+                        </div>
+                        <div class="form-group">
+                            <label>পাসওয়ার্ড:</label>
+                            <input type="password" id="loginPassword" placeholder="আপনার পাসওয়ার্ড" required>
+                        </div>
+                        <p id="loginError" class="error-msg"></p>
+                        <button type="submit" class="btn btn-primary btn-full">লগইন করুন</button>
+                    </form>
+                    <div class="login-footer">
+                        <p>অ্যাকাউন্ট নেই? 
+                            <a href="https://wa.me/8801516013089" target="_blank">WhatsApp এ যোগাযোগ করুন</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preview Modal -->
+        <div id="previewModal" class="modal">
+            <div class="modal-content modal-large">
+                <div class="modal-header">
+                    <h3>📄 প্রশ্নপত্র প্রিভিউ</h3>
+                    <button class="close-btn" onclick="hidePreviewModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="previewContent"></div>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="downloadPDF()" class="btn btn-download download-btn">📥 PDF ডাউনলোড</button>
+                    <button onclick="hidePreviewModal()" class="btn btn-outline">বন্ধ করুন</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Alert Modal -->
+        <div id="premiumModal" class="modal">
+            <div class="modal-content modal-small">
+                <div class="modal-header modal-header-premium">
+                    <h3>🔒 প্রিমিয়াম কন্টেন্ট</h3>
+                    <button class="close-btn" onclick="hidePremiumModal()">&times;</button>
+                </div>
+                <div class="modal-body center">
+                    <div class="premium-icon">👑</div>
+                    <h4>এই প্রশ্নগুলো প্রিমিয়াম!</h4>
+                    <p>প্রিমিয়াম প্রশ্ন ব্যবহার করতে লগইন করুন।</p>
+                    <a href="https://wa.me/8801516013089" target="_blank" class="btn btn-whatsapp">
+                        📱 WhatsApp এ যোগাযোগ করুন
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden PDF Content -->
+        <div id="pdfContent" style="display: none;"></div>
+
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+                      </html>
