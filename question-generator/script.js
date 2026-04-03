@@ -374,8 +374,8 @@ function generatePaperHTML(showAnswers = false) {
     const institutionName = document.getElementById('institutionName').value || 'প্রতিষ্ঠানের নাম';
     const examName = document.getElementById('examName').value || 'পরীক্ষার নাম';
     const subjectName = document.getElementById('subjectNameInput').value || 'বিষয়ের নাম';
-    const examTime = document.getElementById('examTime').value || 'সময়: __';
-    const fullMarks = document.getElementById('fullMarks').value || 'পূর্ণমান: __';
+    const examTime = document.getElementById('examTime').value || '__';
+    const fullMarks = document.getElementById('fullMarks').value || '__';
     const instructions = document.getElementById('instructions').value;
     const shuffleQ = document.getElementById('shuffleQuestions').checked;
     const shuffleOpt = document.getElementById('shuffleOptions').checked;
@@ -415,11 +415,14 @@ function generatePaperHTML(showAnswers = false) {
     if (instructions) {
         html += `
             <div class="paper-instructions">
-                <h4>বিশেষ নির্দেশনা:</h4>
+                <h4>নির্দেশনা:</h4>
                 <p>${instructions}</p>
             </div>
         `;
     }
+    
+    // Start 3-column container
+    html += `<div class="paper-questions-container">`;
     
     // Track which passages have been shown
     const shownPassages = new Set();
@@ -433,7 +436,7 @@ function generatePaperHTML(showAnswers = false) {
             if (passage) {
                 html += `
                     <div class="paper-passage">
-                        <div class="paper-passage-title">📖 নিচের অনুচ্ছেদটি পড় এবং প্রশ্নের উত্তর দাও:</div>
+                        <div class="paper-passage-title">📖 অনুচ্ছেদটি পড়ে প্রশ্নের উত্তর দাও:</div>
                         <p>${passage.passage}</p>
                     </div>
                 `;
@@ -443,29 +446,22 @@ function generatePaperHTML(showAnswers = false) {
         
         // Question
         html += `<div class="paper-question">`;
-        html += `<div class="paper-question-text">`;
+        html += `<span class="paper-question-text">`;
         
         if (showNumbers) {
-            html += `${questionNumber}. `;
+            html += `<strong>${questionNumber}.</strong> `;
         }
         
         html += q.question;
-        
-        // Show answer if requested
-        if (showAnswers) {
-            const answerLetter = ['ক', 'খ', 'গ', 'ঘ'][q.answer];
-            html += ` <strong style="color: green;">[উত্তর: ${answerLetter}]</strong>`;
-        }
-        
-        html += `</div>`;
+        html += `</span>`;
         
         // Statements for multiple type
         if (q.type === 'multiple' && q.statements) {
             html += `<div class="paper-question-statements">`;
             q.statements.forEach(s => {
-                html += `<p>${s}</p>`;
+                html += `${s} `;
             });
-            html += `<p><em>নিচের কোনটি সঠিক?</em></p></div>`;
+            html += `</div>`;
         }
         
         // Options
@@ -484,12 +480,11 @@ function generatePaperHTML(showAnswers = false) {
             html += `<div class="paper-options">`;
             const letters = ['ক', 'খ', 'গ', 'ঘ'];
             options.forEach((opt, idx) => {
-                const isCorrect = showAnswers && idx === correctIndex;
-                html += `
-                    <div class="paper-option" style="${isCorrect ? 'background: #c8e6c9; border-color: #2e7d32;' : ''}">
-                        ${letters[idx]}) ${opt}
-                    </div>
-                `;
+                if (showAnswers && idx === correctIndex) {
+                    html += `<span class="paper-option"><strong style="color:green;">✓${letters[idx]}) ${opt}</strong></span>`;
+                } else {
+                    html += `<span class="paper-option">${letters[idx]}) ${opt}</span>`;
+                }
             });
             html += `</div>`;
         }
@@ -498,7 +493,8 @@ function generatePaperHTML(showAnswers = false) {
         questionNumber++;
     });
     
-    html += `</div>`;
+    // Close container
+    html += `</div></div>`;
     
     return html;
 }
