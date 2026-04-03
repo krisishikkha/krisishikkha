@@ -1,0 +1,17 @@
+{
+  "subjectId": "ssc_agriculture",
+  "subjectName": "SSC Agriculture",
+  "subjectNameBn": "এসএসসি কৃষিশিক্ষা",
+  "chapters": [
+    {"id": "chapter_1", "name": "Chapter 1", "nameBn": "অধ্যায় ১", "isVisible": true},
+    {"id": "chapter_2", "name": "Chapter 2", "nameBn": "অধ্যায় ২", "isVisible": true},
+    {"id": "chapter_3", "name": "Chapter 3", "nameBn": "অধ্যায় ৩", "isVisible": true},
+    {"id": "chapter_4", "name": "Chapter 4", "nameBn": "অধ্যায় ৪", "isVisible": true},
+    {"id": "chapter_5", "name": "Chapter 5", "nameBn": "অধ্যায় ৫", "isVisible": true},
+    {"id": "chapter_6", "name": "Chapter 6", "nameBn": "অধ্যায় ৬", "isVisible": false},
+    {"id": "chapter_7", "name": "Chapter 7", "nameBn": "অধ্যায় ৭", "isVisible": false},
+    {"id": "chapter_8", "name": "Chapter 8", "nameBn": "অধ্যায় ৮", "isVisible": false},
+    {"id": "chapter_9", "name": "Chapter 9", "nameBn": "অধ্যায় ৯", "isVisible": false},
+    {"id": "chapter_10", "name": "Chapter 10", "nameBn": "অধ্যায় ১০", "isVisible": false}
+  ]
+}
