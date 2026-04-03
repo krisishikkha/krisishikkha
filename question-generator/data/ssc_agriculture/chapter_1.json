@@ -1,0 +1,23 @@
+{
+  "subjectId": "ssc_agriculture",
+  "chapterId": "chapter_1",
+  "chapterName": "অধ্যায় ১: বাংলাদেশের কৃষি",
+  "totalQuestions": 15,
+  "questions": [
+    {"id": "q001", "type": "simple", "question": "বাংলাদেশের প্রধান খাদ্যশস্য কোনটি?", "options": ["গম", "ধান", "ভুট্টা", "যব"], "answer": 1},
+    {"id": "q002", "type": "simple", "question": "বাংলাদেশের জাতীয় ফল কোনটি?", "options": ["আম", "কাঁঠাল", "লিচু", "কলা"], "answer": 1},
+    {"id": "q003", "type": "simple", "question": "নিচের কোনটি রবি ফসল?", "options": ["ধান", "পাট", "গম", "আউশ"], "answer": 2},
+    {"id": "q004", "type": "simple", "question": "পাটকে কী বলা হয়?", "options": ["সোনালি আঁশ", "রুপালি আঁশ", "সাদা সোনা", "সবুজ সোনা"], "answer": 0},
+    {"id": "q005", "type": "simple", "question": "বোরো ধান কোন মৌসুমে চাষ করা হয়?", "options": ["বর্ষা", "শীত", "গ্রীষ্ম", "বসন্ত"], "answer": 1},
+    {"id": "q006", "type": "simple", "question": "ধানের বৈজ্ঞানিক নাম কী?", "options": ["Triticum aestivum", "Oryza sativa", "Zea mays", "Hordeum vulgare"], "answer": 1},
+    {"id": "q007", "type": "simple", "question": "BRRI এর পূর্ণরূপ কী?", "options": ["Bangladesh Rice Research Institute", "Bangladesh Rural Research Institute", "Bangladesh Agricultural Research Institute", "Bengal Rice Research Institute"], "answer": 0},
+    {"id": "q008", "type": "simple", "question": "বাংলাদেশের জাতীয় ফুল কোনটি?", "options": ["গোলাপ", "শাপলা", "রজনীগন্ধা", "গাঁদা"], "answer": 1},
+    {"id": "q009", "type": "simple", "question": "সবুজ বিপ্লব কোন দশকে শুরু হয়?", "options": ["১৯৫০", "১৯৬০", "১৯৭০", "১৯৮০"], "answer": 1},
+    {"id": "q010", "type": "simple", "question": "বাংলাদেশের প্রধান অর্থকরী ফসল কোনটি?", "options": ["ধান", "পাট", "চা", "আখ"], "answer": 1},
+    {"id": "q011", "type": "multiple", "question": "বাংলাদেশের কৃষিতে সমস্যা হলো-", "statements": ["i. জমির খণ্ডায়ন", "ii. সেচের অভাব", "iii. উন্নত বীজের অভাব"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+    {"id": "q012", "type": "multiple", "question": "রবি মৌসুমের ফসল হলো-", "statements": ["i. গম", "ii. সরিষা", "iii. পাট"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0},
+    {"id": "p001", "type": "passage", "passage": "রহিম একজন কৃষক। সে তার ৫ বিঘা জমিতে বোরো মৌসুমে ধান চাষ করে। সে আধুনিক পদ্ধতিতে চাষ করায় ফলন অনেক বেশি হয়েছে। সে BRRI উদ্ভাবিত উচ্চ ফলনশীল জাত ব্যবহার করেছে।"},
+    {"id": "pq001", "type": "passage-q", "passageId": "p001", "question": "রহিম কোন মৌসুমে ধান চাষ করেছে?", "options": ["আউশ", "আমন", "বোরো", "খরিফ"], "answer": 2},
+    {"id": "pq002", "type": "passage-q", "passageId": "p001", "question": "রহিমের ফলন বেশি হওয়ার কারণ-", "statements": ["i. আধুনিক পদ্ধতি ব্যবহার", "ii. উচ্চ ফলনশীল জাত", "iii. বেশি জমি"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0}
+  ]
+    }
