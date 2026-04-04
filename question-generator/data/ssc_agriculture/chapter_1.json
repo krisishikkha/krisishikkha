@@ -2,7 +2,7 @@
   "subjectId": "ssc_agriculture",
   "chapterId": "chapter_1",
   "chapterName": "অধ্যায় ১: বাংলাদেশের কৃষি",
-  "totalQuestions": 15,
+  "totalQuestions": 50,
   "questions": [
     {"id": "q001", "type": "simple", "question": "বাংলাদেশের প্রধান খাদ্যশস্য কোনটি?", "options": ["গম", "ধান", "ভুট্টা", "যব"], "answer": 1},
     {"id": "q002", "type": "simple", "question": "বাংলাদেশের জাতীয় ফল কোনটি?", "options": ["আম", "কাঁঠাল", "লিচু", "কলা"], "answer": 1},
@@ -14,10 +14,83 @@
     {"id": "q008", "type": "simple", "question": "বাংলাদেশের জাতীয় ফুল কোনটি?", "options": ["গোলাপ", "শাপলা", "রজনীগন্ধা", "গাঁদা"], "answer": 1},
     {"id": "q009", "type": "simple", "question": "সবুজ বিপ্লব কোন দশকে শুরু হয়?", "options": ["১৯৫০", "১৯৬০", "১৯৭০", "১৯৮০"], "answer": 1},
     {"id": "q010", "type": "simple", "question": "বাংলাদেশের প্রধান অর্থকরী ফসল কোনটি?", "options": ["ধান", "পাট", "চা", "আখ"], "answer": 1},
-    {"id": "q011", "type": "multiple", "question": "বাংলাদেশের কৃষিতে সমস্যা হলো-", "statements": ["i. জমির খণ্ডায়ন", "ii. সেচের অভাব", "iii. উন্নত বীজের অভাব"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
-    {"id": "q012", "type": "multiple", "question": "রবি মৌসুমের ফসল হলো-", "statements": ["i. গম", "ii. সরিষা", "iii. পাট"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0},
-    {"id": "p001", "type": "passage", "passage": "রহিম একজন কৃষক। সে তার ৫ বিঘা জমিতে বোরো মৌসুমে ধান চাষ করে। সে আধুনিক পদ্ধতিতে চাষ করায় ফলন অনেক বেশি হয়েছে। সে BRRI উদ্ভাবিত উচ্চ ফলনশীল জাত ব্যবহার করেছে।"},
-    {"id": "pq001", "type": "passage-q", "passageId": "p001", "question": "রহিম কোন মৌসুমে ধান চাষ করেছে?", "options": ["আউশ", "আমন", "বোরো", "খরিফ"], "answer": 2},
-    {"id": "pq002", "type": "passage-q", "passageId": "p001", "question": "রহিমের ফলন বেশি হওয়ার কারণ-", "statements": ["i. আধুনিক পদ্ধতি ব্যবহার", "ii. উচ্চ ফলনশীল জাত", "iii. বেশি জমি"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0}
+
+    {"id": "q011", "type": "simple", "question": "গমের বৈজ্ঞানিক নাম কী?", "options": ["Oryza sativa", "Triticum aestivum", "Zea mays", "Solanum tuberosum"], "answer": 1},
+    {"id": "q012", "type": "simple", "question": "পাট কোন মৌসুমে জন্মে?", "options": ["রবি", "খরিফ", "শীত", "গ্রীষ্ম"], "answer": 1},
+    {"id": "q013", "type": "simple", "question": "বাংলাদেশে প্রধানত কোন মাটি বেশি পাওয়া যায়?", "options": ["লাল মাটি", "পলিমাটি", "বেলে মাটি", "দোঁআশ"], "answer": 1},
+    {"id": "q014", "type": "simple", "question": "ভুট্টার বৈজ্ঞানিক নাম কী?", "options": ["Zea mays", "Oryza sativa", "Triticum aestivum", "Brassica campestris"], "answer": 0},
+    {"id": "q015", "type": "simple", "question": "সরিষা কোন মৌসুমের ফসল?", "options": ["খরিফ", "রবি", "বর্ষা", "গ্রীষ্ম"], "answer": 1},
+
+    {"id": "q016", "type": "multiple", "question": "বাংলাদেশের কৃষির বৈশিষ্ট্য-", "statements": ["i. শ্রমনির্ভর", "ii. মৌসুমি নির্ভর", "iii. আধুনিক প্রযুক্তি নির্ভর"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+    {"id": "q017", "type": "multiple", "question": "রবি ফসল হলো-", "statements": ["i. গম", "ii. সরিষা", "iii. ধান"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0},
+    {"id": "q018", "type": "multiple", "question": "কৃষিতে সমস্যা হলো-", "statements": ["i. জমির খণ্ডায়ন", "ii. সেচের অভাব", "iii. বীজের অভাব"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+    {"id": "q019", "type": "multiple", "question": "খরিফ ফসল হলো-", "statements": ["i. পাট", "ii. আউশ ধান", "iii. গম"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0},
+    {"id": "q020", "type": "multiple", "question": "ধানের প্রকারভেদ-", "statements": ["i. আউশ", "ii. আমন", "iii. বোরো"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+
+    {"id": "q021", "type": "multiple", "question": "উন্নত কৃষির উপাদান-", "statements": ["i. সার", "ii. সেচ", "iii. উন্নত বীজ"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+    {"id": "q022", "type": "multiple", "question": "বাংলাদেশের অর্থকরী ফসল-", "statements": ["i. পাট", "ii. চা", "iii. আখ"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+
+    {"id": "p001", "type": "passage", "passage": "করিম একজন কৃষক। সে আধুনিক পদ্ধতিতে বোরো ধান চাষ করে এবং উন্নত বীজ ব্যবহার করে বেশি ফলন পায়।"},
+    {"id": "pq001", "type": "passage-q", "passageId": "p001", "question": "করিম কোন ধান চাষ করেছে?", "options": ["আউশ", "আমন", "বোরো", "খরিফ"], "answer": 2},
+    {"id": "pq002", "type": "passage-q", "passageId": "p001", "question": "ফলন বেশি হওয়ার কারণ-", "statements": ["i. আধুনিক পদ্ধতি", "ii. উন্নত বীজ", "iii. বেশি জমি"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0},
+
+    {"id": "p002", "type": "passage", "passage": "রহিম শীতকালে গম ও সরিষা চাষ করে। সে সেচ ও সার ব্যবহার করে ভালো ফলন পায়।"},
+    {"id": "pq003", "type": "passage-q", "passageId": "p002", "question": "রহিম কোন মৌসুমে চাষ করে?", "options": ["খরিফ", "রবি", "বর্ষা", "গ্রীষ্ম"], "answer": 1},
+    {"id": "pq004", "type": "passage-q", "passageId": "p002", "question": "ভালো ফলনের কারণ-", "statements": ["i. সেচ", "ii. সার", "iii. বৃষ্টি"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0},
+
+    {"id": "q023", "type": "simple", "question": "চা কোন অঞ্চলে বেশি জন্মে?", "options": ["সমতল ভূমি", "পার্বত্য অঞ্চল", "মরুভূমি", "নদী তীর"], "answer": 1},
+    {"id": "q024", "type": "simple", "question": "বাংলাদেশে সেচের প্রধান উৎস কী?", "options": ["বৃষ্টি", "নদী", "নলকূপ", "পুকুর"], "answer": 2},
+
+    {"id": "q025", "type": "simple", "question": "সবজি চাষ কোন মৌসুমে বেশি হয়?", "options": ["রবি", "খরিফ", "বর্ষা", "গ্রীষ্ম"], "answer": 0},
+
+    {"id": "q026", "type": "multiple", "question": "মাটির ধরন-", "statements": ["i. দোঁআশ", "ii. বেলে", "iii. পলি"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+
+    {"id": "q027", "type": "simple", "question": "ধান উৎপাদনে বাংলাদেশ বিশ্বে কততম?", "options": ["১ম", "২য়", "৩য়", "৪র্থ"], "answer": 2},
+
+    {"id": "q028", "type": "simple", "question": "কৃষি প্রধান দেশ কোনটি?", "options": ["বাংলাদেশ", "জাপান", "যুক্তরাষ্ট্র", "চীন"], "answer": 0},
+
+    {"id": "q029", "type": "simple", "question": "আধুনিক কৃষি বলতে কী বোঝায়?", "options": ["পুরাতন পদ্ধতি", "প্রযুক্তি ব্যবহার", "শ্রমনির্ভর", "বৃষ্টি নির্ভর"], "answer": 1},
+
+    {"id": "q030", "type": "simple", "question": "সেচের জন্য কোন যন্ত্র ব্যবহৃত হয়?", "options": ["ট্রাক্টর", "পাম্প", "লাঙ্গল", "হারভেস্টার"], "answer": 1},
+
+    {"id": "q031", "type": "simple", "question": "কোনটি খাদ্যশস্য?", "options": ["পাট", "ধান", "চা", "রাবার"], "answer": 1},
+
+    {"id": "q032", "type": "simple", "question": "কৃষি গবেষণা প্রতিষ্ঠান কোনটি?", "options": ["BRRI", "BARI", "BAU", "সবগুলো"], "answer": 3},
+
+    {"id": "q033", "type": "simple", "question": "পাটের বৈজ্ঞানিক নাম কী?", "options": ["Corchorus", "Oryza", "Zea", "Triticum"], "answer": 0},
+
+    {"id": "q034", "type": "simple", "question": "কৃষিতে যান্ত্রিকীকরণ মানে কী?", "options": ["মানুষ ব্যবহার", "যন্ত্র ব্যবহার", "পানি ব্যবহার", "বৃষ্টি নির্ভর"], "answer": 1},
+
+    {"id": "q035", "type": "simple", "question": "কৃষিতে সার কেন ব্যবহার হয়?", "options": ["রং করার জন্য", "উৎপাদন বাড়াতে", "মাটি শুকাতে", "গাছ কাটতে"], "answer": 1},
+
+    {"id": "q036", "type": "multiple", "question": "কৃষির উপাদান-", "statements": ["i. মাটি", "ii. পানি", "iii. বীজ"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+
+    {"id": "q037", "type": "multiple", "question": "কৃষি উন্নয়নের উপায়-", "statements": ["i. প্রযুক্তি", "ii. সেচ", "iii. উন্নত বীজ"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+
+    {"id": "q038", "type": "simple", "question": "বাংলাদেশের কৃষি প্রধান পেশা?", "options": ["কৃষি", "শিল্প", "ব্যবসা", "চাকরি"], "answer": 0},
+
+    {"id": "q039", "type": "simple", "question": "ধান কাটার যন্ত্র কোনটি?", "options": ["হারভেস্টার", "পাম্প", "লাঙ্গল", "স্প্রে"], "answer": 0},
+
+    {"id": "q040", "type": "simple", "question": "কৃষি অর্থনীতিতে গুরুত্বপূর্ণ কেন?", "options": ["খাদ্য দেয়", "কাজ দেয়", "রপ্তানি আয়", "সবগুলো"], "answer": 3},
+
+    {"id": "pq005", "type": "passage-q", "passageId": "p003", "question": "হাসান কী ধরনের কৃষক?", "options": ["প্রচলিত", "আধুনিক", "শৌখিন", "অভিজ্ঞ"], "answer": 1},
+
+    {"id": "pq006", "type": "passage-q", "passageId": "p003", "question": "উৎপাদন বাড়ার কারণ-", "statements": ["i. উন্নত বীজ", "ii. সার ব্যবহার", "iii. সেচ"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+
+    {"id": "pq007", "type": "passage-q", "passageId": "p003", "question": "হাসান কার পরামর্শ অনুযায়ী চাষ করে?", "options": ["বন্ধু", "কৃষি অফিস", "পরিবার", "ব্যবসায়ী"], "answer": 1},
+
+    {"id": "pq008", "type": "passage-q", "passageId": "p003", "question": "হাসানের উৎপাদন কেমন হয়েছে?", "options": ["কমেছে", "একই আছে", "বেড়েছে", "নষ্ট হয়েছে"], "answer": 2},
+
+    {"id": "pq009", "type": "passage-q", "passageId": "p003", "question": "নিচের কোনটি আধুনিক কৃষির উপাদান?", "statements": ["i. উন্নত বীজ", "ii. সেচ", "iii. কুসংস্কার"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 0},
+
+    {"id": "pq010", "type": "passage-q", "passageId": "p003", "question": "হাসান কী ব্যবহার করেছে?", "options": ["শুধু বৃষ্টি", "শুধু শ্রম", "বীজ, সার ও সেচ", "কোনো কিছু না"], "answer": 2},
+
+    {"id": "pq011", "type": "passage-q", "passageId": "p003", "question": "উন্নত কৃষির লক্ষ্য কী?", "options": ["উৎপাদন কমানো", "উৎপাদন বাড়ানো", "জমি কমানো", "খরচ বাড়ানো"], "answer": 1},
+
+    {"id": "pq012", "type": "passage-q", "passageId": "p003", "question": "হাসানের কৃষি কোন ধরনের?", "options": ["প্রাচীন", "আধুনিক", "অপ্রচলিত", "লোকজ"], "answer": 1},
+
+    {"id": "pq013", "type": "passage-q", "passageId": "p003", "question": "নিচের কোনটি উৎপাদন বৃদ্ধিতে সাহায্য করে?", "statements": ["i. সেচ", "ii. সার", "iii. উন্নত বীজ"], "options": ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"], "answer": 3},
+
+    {"id": "pq014", "type": "passage-q", "passageId": "p003", "question": "হাসান কেন সফল?", "options": ["অলসতা", "প্রযুক্তি ব্যবহার", "কুসংস্কার", "অজ্ঞতা"], "answer": 1}
   ]
-    }
+  }
