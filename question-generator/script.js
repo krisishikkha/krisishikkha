@@ -366,6 +366,7 @@ function deselectAll() {
 // ========== Generate Paper HTML ==========
 function generatePaperHTML(showAnswers = false) {
     if (selectedQuestions.length === 0) {
+        showToast('অন্তত একটি প্রশ্ন নির্বাচন করুন।', 'warning');
         return null;
     }
     
@@ -380,87 +381,217 @@ function generatePaperHTML(showAnswers = false) {
     const shuffleOpt = document.getElementById('shuffleOptions').checked;
     const showNumbers = document.getElementById('showQuestionNumber').checked;
     
-    // Get selected questions (exclude passage type from count)
-    let questions = currentQuestions.filter(q => selectedQuestions.includes(q.id) && q.type !== 'passage');
+    // Get selected questions
+    let questions = currentQuestions.filter(q => selectedQuestions.includes(q.id));
     
-    // Also include related passages
-    const passageIds = new Set();
-    questions.forEach(q => {
-        if (q.passageId) passageIds.add(q.passageId);
-    });
-    
-    const passages = currentQuestions.filter(q => q.type === 'passage' && passageIds.has(q.id));
+    // Separate passages and questions
+    const passages = currentQuestions.filter(q => q.type === 'passage');
+    const regularQuestions = questions.filter(q => q.type !== 'passage');
     
     // Shuffle if needed
     if (shuffleQ) {
-        questions = questions.sort(() => Math.random() - 0.5);
+        regularQuestions.sort(() => Math.random() - 0.5);
     }
     
-    // Build HTML with inline styles for PDF
+    // Build HTML
     let html = `
-        <div style="padding: 6px; background: white; font-family: 'Hind Siliguri', Arial, sans-serif; font-size: 11px; line-height: 1.3; color: #000;">
+    <!DOCTYPE html>
+    <html lang="bn">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
             
-            <!-- Header -->
-            <div style="text-align: center; border-bottom: 2px solid #333; padding-bottom: 8px; margin-bottom: 10px;">
-                <h1 style="font-size: 15px; margin: 0 0 2px 0;">${institutionName}</h1>
-                <h2 style="font-size: 12px; margin: 0 0 2px 0; font-weight: 500;">${examName}</h2>
-                <h3 style="font-size: 11px; margin: 0; font-weight: 400;">বিষয়: ${subjectName}</h3>
-                <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 10px;">
-                    <span>সময়: ${examTime}</span>
-                    <span>পূর্ণমান: ${fullMarks}</span>
-                </div>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Hind Siliguri', Arial, sans-serif;
+                font-size: 11px;
+                line-height: 1.4;
+                color: #000;
+                background: white;
+                padding: 10mm;
+            }
+            
+            .header {
+                text-align: center;
+                border-bottom: 2px solid #000;
+                padding-bottom: 8px;
+                margin-bottom: 12px;
+            }
+            
+            .header h1 {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            
+            .header h2 {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 3px;
+            }
+            
+            .header h3 {
+                font-size: 12px;
+                font-weight: 500;
+                margin-bottom: 6px;
+            }
+            
+            .header-info {
+                display: flex;
+                justify-content: space-between;
+                font-size: 11px;
+                margin-top: 6px;
+            }
+            
+            .instructions {
+                background: #f8f8f8;
+                padding: 6px 10px;
+                margin-bottom: 12px;
+                border-left: 3px solid #000;
+                font-size: 10px;
+            }
+            
+            .questions-container {
+                column-count: 3;
+                column-gap: 8px;
+                column-rule: 1px solid #ddd;
+            }
+            
+            .question {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 8px;
+                font-size: 10px;
+            }
+            
+            .passage {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 10px;
+                padding-bottom: 6px;
+                border-bottom: 1px solid #ccc;
+            }
+            
+            .passage-title {
+                font-weight: 600;
+                margin-bottom: 4px;
+                font-size: 10px;
+            }
+            
+            .passage-text {
+                text-align: justify;
+                line-height: 1.5;
+                margin-bottom: 8px;
+                font-size: 9.5px;
+            }
+            
+            .question-text {
+                margin-bottom: 4px;
+                font-weight: 500;
+            }
+            
+            .statements {
+                padding-left: 12px;
+                margin-bottom: 4px;
+                font-size: 9px;
+            }
+            
+            .statements p {
+                margin-bottom: 2px;
+            }
+            
+            .options {
+                padding-left: 8px;
+                font-size: 9px;
+                line-height: 1.3;
+            }
+            
+            .option {
+                display: inline-block;
+                margin-right: 8px;
+                margin-bottom: 2px;
+            }
+            
+            .correct-answer {
+                color: green;
+                font-weight: 600;
+            }
+            
+            @media print {
+                body {
+                    padding: 5mm;
+                }
+                .question, .passage {
+                    page-break-inside: avoid;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>${institutionName}</h1>
+            <h2>${examName}</h2>
+            <h3>বিষয়: ${subjectName}</h3>
+            <div class="header-info">
+                <span>সময়: ${examTime}</span>
+                <span>পূর্ণমান: ${fullMarks}</span>
             </div>
+        </div>
     `;
     
     // Instructions
     if (instructions) {
         html += `
-            <div style="background: #f5f5f5; padding: 4px 8px; border-radius: 2px; margin-bottom: 8px; border-left: 2px solid #333; font-size: 9px;">
-                <strong>নির্দেশনা:</strong> ${instructions}
-            </div>
+        <div class="instructions">
+            <strong>নির্দেশনা:</strong> ${instructions}
+        </div>
         `;
     }
     
-    // Start 3-column container
-    html += `<div style="column-count: 3; column-gap: 4px; column-rule: 1px solid #ccc;">`;
+    // Questions container
+    html += `<div class="questions-container">`;
     
-    // Track which passages have been shown
-    const shownPassages = new Set();
     let questionNumber = 1;
+    const shownPassages = new Set();
     
-    // Questions
-    questions.forEach(q => {
-        // Show passage if this is a passage-q and passage not shown yet
+    regularQuestions.forEach(q => {
+        // Show passage if needed
         if (q.type === 'passage-q' && q.passageId && !shownPassages.has(q.passageId)) {
             const passage = passages.find(p => p.id === q.passageId);
             if (passage) {
                 html += `
-                    <div style="background: #f0f0f0; border: 1px solid #999; padding: 5px; margin-bottom: 6px; font-size: 9px; break-inside: avoid; column-span: all;">
-                        <strong>📖 অনুচ্ছেদ:</strong> ${passage.passage}
-                    </div>
+                <div class="passage">
+                    <div class="passage-title">📖 অনুচ্ছেদ:</div>
+                    <div class="passage-text">${passage.passage}</div>
+                </div>
                 `;
                 shownPassages.add(q.passageId);
             }
         }
         
         // Question
-        html += `<div style="margin-bottom: 6px; break-inside: avoid; font-size: 10px;">`;
+        html += `<div class="question">`;
         
         // Question text
-        html += `<div style="margin-bottom: 2px;">`;
+        html += `<div class="question-text">`;
         if (showNumbers) {
             html += `<strong>${questionNumber}.</strong> `;
         }
-        html += q.question;
-        html += `</div>`;
+        html += `${q.question}</div>`;
         
         // Statements for multiple type
         if (q.type === 'multiple' && q.statements) {
-            html += `<div style="padding-left: 8px; font-size: 9px; margin-bottom: 2px;">`;
+            html += `<div class="statements">`;
             q.statements.forEach(s => {
-                html += `${s}<br>`;
+                html += `<p>${s}</p>`;
             });
-            html += `<em>নিচের কোনটি সঠিক?</em></div>`;
+            html += `<p><em>নিচের কোনটি সঠিক?</em></p></div>`;
         }
         
         // Options
@@ -476,14 +607,15 @@ function generatePaperHTML(showAnswers = false) {
                 correctIndex = optionsWithIndex.findIndex(o => o.isCorrect);
             }
             
-            html += `<div style="padding-left: 5px; font-size: 9px;">`;
+            html += `<div class="options">`;
             const letters = ['ক', 'খ', 'গ', 'ঘ'];
             options.forEach((opt, idx) => {
-                if (showAnswers && idx === correctIndex) {
-                    html += `<span style="color: green; font-weight: bold; margin-right: 6px;">✓${letters[idx]}) ${opt}</span>`;
-                } else {
-                    html += `<span style="margin-right: 6px;">${letters[idx]}) ${opt}</span>`;
+                const isCorrect = idx === correctIndex;
+                html += `<span class="option ${showAnswers && isCorrect ? 'correct-answer' : ''}">`;
+                if (showAnswers && isCorrect) {
+                    html += `✓`;
                 }
+                html += `${letters[idx]}) ${opt}</span>`;
             });
             html += `</div>`;
         }
@@ -492,22 +624,22 @@ function generatePaperHTML(showAnswers = false) {
         questionNumber++;
     });
     
-    // Close container
-    html += `</div></div>`;
+    html += `</div></body></html>`;
     
     return html;
 }
+
 // ========== Preview Paper ==========
 function previewPaper() {
     const html = generatePaperHTML(false);
     if (!html) return;
     
     const previewContent = document.getElementById('previewContent');
-    previewContent.innerHTML = html;
-    
-    showPreviewModal();
+    if (previewContent) {
+        previewContent.innerHTML = html;
+        showPreviewModal();
+    }
 }
-
 // ========== Show Preview Modal ==========
 function showPreviewModal() {
     const modal = document.getElementById('previewModal');
@@ -525,7 +657,6 @@ function hidePreviewModal() {
         document.body.style.overflow = '';
     }
 }
-
 // ========== Download PDF ==========
 function downloadPDF() {
     if (!isLoggedIn()) {
@@ -543,42 +674,50 @@ function downloadPDF() {
     
     const html = generatePaperHTML(false);
     if (!html) return;
+      // Create temporary iframe for better rendering
+    const iframe = document.createElement('iframe');
+    iframe.style.position = 'absolute';
+    iframe.style.left = '-9999px';
+    iframe.style.width = '210mm';
+    iframe.style.height = '297mm';
+    document.body.appendChild(iframe);
     
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
-    tempDiv.style.position = 'absolute';
-    tempDiv.style.left = '-9999px';
-    tempDiv.style.top = '0';
-    tempDiv.style.width = '180mm';
-    tempDiv.style.background = 'white';
-    document.body.appendChild(tempDiv);
-    
-    const opt = {
-        margin: [2, 2, 2, 2],
-        filename: 'প্রশ্নপত্র.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { 
-            scale: 2, 
-            useCORS: true,
-            logging: false
-        },
-        jsPDF: { 
-            unit: 'mm', 
-            format: 'a4', 
-            orientation: 'portrait' 
-        }
-    };
-    
-    html2pdf().set(opt).from(tempDiv).save().then(() => {
-        document.body.removeChild(tempDiv);
-        showToast('PDF ডাউনলোড সম্পন্ন! ✅', 'success');
-    }).catch(err => {
-        console.error('PDF Error:', err);
-        document.body.removeChild(tempDiv);
-        showToast('PDF তৈরিতে সমস্যা হয়েছে।', 'error');
-    });
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.open();
+    iframeDoc.write(html);
+    iframeDoc.close();
+   // Wait for fonts and content to load
+    setTimeout(() => {
+        const opt = {
+            margin: [10, 10, 10, 10],
+            filename: `প্রশ্নপত্র_${new Date().getTime()}.pdf`,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { 
+                scale: 2,
+                useCORS: true,
+                logging: false,
+                letterRendering: true,
+                allowTaint: true
+            },
+            jsPDF: { 
+                unit: 'mm', 
+                format: 'a4', 
+                orientation: 'portrait',
+                compress: true
+            },
+            pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+        };
+        
+html2pdf().set(opt).from(iframeDoc.body).save().then(() => {
+            document.body.removeChild(iframe);
+            showToast('PDF ডাউনলোড সম্পন্ন! ✅', 'success');
+        }).catch(err => {
+            console.error('PDF Error:', err);
+            document.body.removeChild(iframe);
+            showToast('PDF তৈরিতে সমস্যা হয়েছে। পুনরায় চেষ্টা করুন।', 'error');
+        });
+    }, 1000);
 }
-
 // ========== Download Answer Key ==========
 function downloadAnswerKey() {
     if (!isLoggedIn()) {
@@ -596,38 +735,70 @@ function downloadAnswerKey() {
     
     const html = generatePaperHTML(true);
     if (!html) return;
+   // Create temporary iframe
+    const iframe = document.createElement('iframe');
+    iframe.style.position = 'absolute';
+    iframe.style.left = '-9999px';
+    iframe.style.width = '210mm';
+    iframe.style.height = '297mm';
+    document.body.appendChild(iframe);
     
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
-    tempDiv.style.position = 'absolute';
-    tempDiv.style.left = '-9999px';
-    tempDiv.style.top = '0';
-    tempDiv.style.width = '180mm';
-    tempDiv.style.background = 'white';
-    document.body.appendChild(tempDiv);
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.open();
+    iframeDoc.write(html);
+    iframeDoc.close();
     
-    const opt = {
-        margin: [2, 2, 2, 2],
-        filename: 'উত্তরপত্র.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { 
-            scale: 2, 
-            useCORS: true,
-            logging: false
-        },
-        jsPDF: { 
-            unit: 'mm', 
-            format: 'a4', 
-            orientation: 'portrait' 
-        }
-    };
+    // Wait for fonts and content to load
+    setTimeout(() => {
+        const opt = {
+            margin: [10, 10, 10, 10],
+            filename: `উত্তরপত্র_${new Date().getTime()}.pdf`,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { 
+                scale: 2,
+                useCORS: true,
+                // Create temporary iframe
+    const iframe = document.createElement('iframe');
+    iframe.style.position = 'absolute';
+    iframe.style.left = '-9999px';
+    iframe.style.width = '210mm';
+    iframe.style.height = '297mm';
+    document.body.appendChild(iframe);
     
-    html2pdf().set(opt).from(tempDiv).save().then(() => {
-        document.body.removeChild(tempDiv);
-        showToast('উত্তরপত্র ডাউনলোড সম্পন্ন! ✅', 'success');
-    }).catch(err => {
-        console.error('PDF Error:', err);
-        document.body.removeChild(tempDiv);
-        showToast('উত্তরপত্র তৈরিতে সমস্যা হয়েছে।', 'error');
-    });
-}
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.open();
+    iframeDoc.write(html);
+    iframeDoc.close();
+    
+    // Wait for fonts and content to load
+    setTimeout(() => {
+        const opt = {
+            margin: [10, 10, 10, 10],
+            filename: `উত্তরপত্র_${new Date().getTime()}.pdf`,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { 
+                scale: 2,
+                useCORS: true,
+                logging: false,
+                letterRendering: true,
+                allowTaint: true
+            },
+            jsPDF: { 
+                unit: 'mm', 
+                format: 'a4', 
+                orientation: 'portrait',
+                compress: true
+            },
+            pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+        };
+        
+        html2pdf().set(opt).from(iframeDoc.body).save().then(() => {
+            document.body.removeChild(iframe);
+            showToast('উত্তরপত্র ডাউনলোড সম্পন্ন! ✅', 'success');
+        }).catch(err => {
+            console.error('PDF Error:', err);
+            document.body.removeChild(iframe);
+            showToast('উত্তরপত্র তৈরিতে সমস্যা হয়েছে। পুনরায় চেষ্টা করুন।', 'error');
+        });
+    }, 1000);
+           }
