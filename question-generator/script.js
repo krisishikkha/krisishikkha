@@ -474,7 +474,8 @@ function hidePreviewModal() {
     }
 }
 
-// ========== Download PDF ==========
+
+ // ========== Download PDF (Updated with jsPDF) ==========
 function downloadPDF() {
     if (!isLoggedIn()) {
         showLoginModal();
@@ -488,52 +489,58 @@ function downloadPDF() {
         return;
     }
     
-    showToast('PDF তৈরি হচ্ছে... ৫-১০ সেকেন্ড অপেক্ষা করুন', 'info');
+    showToast('PDF তৈরি হচ্ছে... অপেক্ষা করুন', 'info');
     
-    // Create temporary element
-    const tempContainer = document.createElement('div');
-    tempContainer.style.position = 'absolute';
-    tempContainer.style.left = '-99999px';
-    tempContainer.style.top = '0';
-    tempContainer.style.width = '210mm';
-    tempContainer.style.background = 'white';
-    tempContainer.innerHTML = html;
-    document.body.appendChild(tempContainer);
+    // Create temp container
+    const container = document.createElement('div');
+    container.style.position = 'absolute';
+    container.style.left = '-9999px';
+    container.style.width = '210mm';
+    container.style.background = 'white';
+    container.innerHTML = html;
+    document.body.appendChild(container);
     
-    // Wait for fonts to load
+    // Wait and generate
     setTimeout(() => {
-        const opt = {
-            margin: 2,
-            filename: 'প্রশ্নপত্র.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { 
-                scale: 2,
-                useCORS: true,
-                letterRendering: true,
-                logging: false
-            },
-            jsPDF: { 
-                unit: 'mm', 
-                format: 'a4', 
-                orientation: 'portrait'
-            },
-            pagebreak: { mode: ['avoid-all', 'css'] }
-        };
-        
-        html2pdf().set(opt).from(tempContainer).save()
-            .then(() => {
-                document.body.removeChild(tempContainer);
-                showToast('PDF ডাউনলোড সম্পন্ন! ✅', 'success');
-            })
-            .catch(err => {
-                console.error('PDF Error:', err);
-                document.body.removeChild(tempContainer);
-                showToast('PDF তৈরিতে সমস্যা হয়েছে।', 'error');
-            });
-    }, 1000);
+        html2canvas(container, {
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            windowWidth: 794,
+            windowHeight: 1123
+        }).then(canvas => {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            
+            const imgWidth = 210;
+            const pageHeight = 297;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
+            let position = 0;
+            
+            const imgData = canvas.toDataURL('image/jpeg', 0.95);
+            pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+            
+            while (heightLeft > 0) {
+                position = heightLeft - imgHeight;
+                pdf.addPage();
+                pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+            }
+            
+            pdf.save('প্রশ্নপত্র.pdf');
+            document.body.removeChild(container);
+            showToast('PDF ডাউনলোড সম্পন্ন! ✅', 'success');
+        }).catch(err => {
+            console.error('Error:', err);
+            document.body.removeChild(container);
+            showToast('PDF তৈরিতে সমস্যা হয়েছে।', 'error');
+        });
+    }, 500);
 }
 
-// ========== Download Answer Key ==========
+// ========== Download Answer Key (Updated with jsPDF) ==========
 function downloadAnswerKey() {
     if (!isLoggedIn()) {
         showLoginModal();
@@ -547,47 +554,53 @@ function downloadAnswerKey() {
         return;
     }
     
-    showToast('উত্তরপত্র তৈরি হচ্ছে... ৫-১০ সেকেন্ড অপেক্ষা করুন', 'info');
+    showToast('উত্তরপত্র তৈরি হচ্ছে... অপেক্ষা করুন', 'info');
     
-    // Create temporary element
-    const tempContainer = document.createElement('div');
-    tempContainer.style.position = 'absolute';
-    tempContainer.style.left = '-99999px';
-    tempContainer.style.top = '0';
-    tempContainer.style.width = '210mm';
-    tempContainer.style.background = 'white';
-    tempContainer.innerHTML = html;
-    document.body.appendChild(tempContainer);
+    // Create temp container
+    const container = document.createElement('div');
+    container.style.position = 'absolute';
+    container.style.left = '-9999px';
+    container.style.width = '210mm';
+    container.style.background = 'white';
+    container.innerHTML = html;
+    document.body.appendChild(container);
     
-    // Wait for fonts to load
+    // Wait and generate
     setTimeout(() => {
-        const opt = {
-            margin: 2,
-            filename: 'উত্তরপত্র.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { 
-                scale: 2,
-                useCORS: true,
-                letterRendering: true,
-                logging: false
-            },
-            jsPDF: { 
-                unit: 'mm', 
-                format: 'a4', 
-                orientation: 'portrait'
-            },
-            pagebreak: { mode: ['avoid-all', 'css'] }
-        };
-        
-        html2pdf().set(opt).from(tempContainer).save()
-            .then(() => {
-                document.body.removeChild(tempContainer);
-                showToast('উত্তরপত্র ডাউনলোড সম্পন্ন! ✅', 'success');
-            })
-            .catch(err => {
-                console.error('PDF Error:', err);
-                document.body.removeChild(tempContainer);
-                showToast('উত্তরপত্র তৈরিতে সমস্যা হয়েছে।', 'error');
-            });
-    }, 1000);
+        html2canvas(container, {
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            windowWidth: 794,
+            windowHeight: 1123
+        }).then(canvas => {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            
+            const imgWidth = 210;
+            const pageHeight = 297;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
+            let position = 0;
+            
+            const imgData = canvas.toDataURL('image/jpeg', 0.95);
+            pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+            
+            while (heightLeft > 0) {
+                position = heightLeft - imgHeight;
+                pdf.addPage();
+                pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+            }
+            
+            pdf.save('উত্তরপত্র.pdf');
+            document.body.removeChild(container);
+            showToast('উত্তরপত্র ডাউনলোড সম্পন্ন! ✅', 'success');
+        }).catch(err => {
+            console.error('Error:', err);
+            document.body.removeChild(container);
+            showToast('উত্তরপত্র তৈরিতে সমস্যা হয়েছে।', 'error');
+        });
+    }, 500);
 }
