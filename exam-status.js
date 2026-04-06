@@ -44,22 +44,22 @@ const EXAM_STATUS = {
     codes: ["exam24"]
     },
     "exam-8": {
-    title: "HSC 2nd Paper 1st Chapter🔴",
+    title: "HSC 2nd Paper 1st Chapter",
     visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam2"]
     },
     "exam-9": {
-    title: "HSC 2nd Paper 2nd Chapter🔴",
-    visible: true,  // ✅ নতুন
+    title: "HSC 2nd Paper 2nd Chapter",
+    visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam222"]
     },
     "exam-10": {
-    title: "HSC 2nd Paper 3rd Chapter",
-    visible: false,  // ✅ নতুন
+    title: "HSC 2nd Paper 3rd Chapter🔴",
+    visible: true,  // ✅ নতুন
     status: "live",
-    codes: ["exam2code"]
+    codes: ["exam333"]
     },
   "exam-11": {
     title: "HSC 2nd Paper 4rth Chapter",
