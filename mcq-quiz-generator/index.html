@@ -686,3 +686,630 @@
 
 <!-- Toast -->
 <div class="toast" id="toast"></div>
+<script>
+// ===== STATE =====
+let state = {
+    brandName: '',
+    logoImg: null,
+    question: '',
+    options: ['','','',''],
+    correctAnswer: -1,
+    explanation: '',
+    timerSeconds: 10,
+    templateIndex: 0,
+    format: 'reels',
+    recordedBlob: null
+};
+
+const TEMPLATES = [
+    {
+        bg1: '#667eea', bg2: '#764ba2',
+        questionBg: 'rgba(255,255,255,0.15)', questionColor: '#ffffff',
+        optionBg: 'rgba(255,255,255,0.12)', optionColor: '#f0e6ff',
+        optionBorder: 'rgba(255,255,255,0.25)',
+        correctBg: '#00b894', correctBorder: '#00b894',
+        timerColor: '#ffd93d', brandColor: '#f0e6ff',
+        accentColors: ['#ff6b6b','#4ecdc4','#ffd93d','#a29bfe'],
+        headerGrad1: '#a18cd1', headerGrad2: '#fbc2eb'
+    },
+    {
+        bg1: '#f093fb', bg2: '#f5576c',
+        questionBg: 'rgba(255,255,255,0.18)', questionColor: '#ffffff',
+        optionBg: 'rgba(255,255,255,0.15)', optionColor: '#fff5f5',
+        optionBorder: 'rgba(255,255,255,0.3)',
+        correctBg: '#00b894', correctBorder: '#00b894',
+        timerColor: '#ffd93d', brandColor: '#fff5f5',
+        accentColors: ['#ff9ff3','#54a0ff','#feca57','#ff6348'],
+        headerGrad1: '#ff6348', headerGrad2: '#ffd93d'
+    },
+    {
+        bg1: '#4facfe', bg2: '#00f2fe',
+        questionBg: 'rgba(0,0,0,0.2)', questionColor: '#ffffff',
+        optionBg: 'rgba(0,0,0,0.15)', optionColor: '#e8f9ff',
+        optionBorder: 'rgba(255,255,255,0.3)',
+        correctBg: '#ff6b6b', correctBorder: '#ff6b6b',
+        timerColor: '#ffd93d', brandColor: '#e8f9ff',
+        accentColors: ['#0abde3','#48dbfb','#c7ecee','#dff9fb'],
+        headerGrad1: '#0abde3', headerGrad2: '#48dbfb'
+    },
+    {
+        bg1: '#43e97b', bg2: '#38f9d7',
+        questionBg: 'rgba(0,0,0,0.25)', questionColor: '#ffffff',
+        optionBg: 'rgba(0,0,0,0.18)', optionColor: '#f0fff0',
+        optionBorder: 'rgba(255,255,255,0.3)',
+        correctBg: '#e17055', correctBorder: '#e17055',
+        timerColor: '#ffd93d', brandColor: '#f0fff0',
+        accentColors: ['#00b894','#55efc4','#badc58','#6ab04c'],
+        headerGrad1: '#00b894', headerGrad2: '#55efc4'
+    },
+    {
+        bg1: '#fa709a', bg2: '#fee140',
+        questionBg: 'rgba(0,0,0,0.2)', questionColor: '#ffffff',
+        optionBg: 'rgba(0,0,0,0.15)', optionColor: '#fffbf0',
+        optionBorder: 'rgba(255,255,255,0.3)',
+        correctBg: '#6c5ce7', correctBorder: '#6c5ce7',
+        timerColor: '#fff', brandColor: '#fffbf0',
+        accentColors: ['#fd79a8','#fdcb6e','#e17055','#fab1a0'],
+        headerGrad1: '#fd79a8', headerGrad2: '#fdcb6e'
+    },
+    {
+        bg1: '#a18cd1', bg2: '#fbc2eb',
+        questionBg: 'rgba(255,255,255,0.2)', questionColor: '#ffffff',
+        optionBg: 'rgba(255,255,255,0.18)', optionColor: '#f8f0ff',
+        optionBorder: 'rgba(255,255,255,0.35)',
+        correctBg: '#00cec9', correctBorder: '#00cec9',
+        timerColor: '#ffd93d', brandColor: '#f8f0ff',
+        accentColors: ['#a29bfe','#fd79a8','#74b9ff','#81ecec'],
+        headerGrad1: '#a29bfe', headerGrad2: '#fd79a8'
+    },
+    {
+        bg1: '#fccb90', bg2: '#d57eeb',
+        questionBg: 'rgba(0,0,0,0.2)', questionColor: '#ffffff',
+        optionBg: 'rgba(0,0,0,0.15)', optionColor: '#fff8f0',
+        optionBorder: 'rgba(255,255,255,0.3)',
+        correctBg: '#00b894', correctBorder: '#00b894',
+        timerColor: '#fff', brandColor: '#fff8f0',
+        accentColors: ['#f39c12','#e74c3c','#9b59b6','#3498db'],
+        headerGrad1: '#f39c12', headerGrad2: '#e74c3c'
+    },
+    {
+        bg1: '#e0c3fc', bg2: '#8ec5fc',
+        questionBg: 'rgba(0,0,0,0.18)', questionColor: '#ffffff',
+        optionBg: 'rgba(0,0,0,0.12)', optionColor: '#f0f8ff',
+        optionBorder: 'rgba(255,255,255,0.3)',
+        correctBg: '#e17055', correctBorder: '#e17055',
+        timerColor: '#2d3436', brandColor: '#2d3436',
+        accentColors: ['#74b9ff','#a29bfe','#dfe6e9','#b2bec3'],
+        headerGrad1: '#74b9ff', headerGrad2: '#a29bfe'
+    },
+    {
+        bg1: '#f5576c', bg2: '#ff0844',
+        questionBg: 'rgba(0,0,0,0.25)', questionColor: '#ffffff',
+        optionBg: 'rgba(0,0,0,0.2)', optionColor: '#fff0f0',
+        optionBorder: 'rgba(255,255,255,0.25)',
+        correctBg: '#ffd93d', correctBorder: '#ffd93d',
+        timerColor: '#ffd93d', brandColor: '#fff0f0',
+        accentColors: ['#ff6348','#ff4757','#ff6b81','#ff7979'],
+        headerGrad1: '#ff6348', headerGrad2: '#ff4757'
+    },
+    {
+        bg1: '#0250c5', bg2: '#d43f8d',
+        questionBg: 'rgba(255,255,255,0.1)', questionColor: '#ffffff',
+        optionBg: 'rgba(255,255,255,0.08)', optionColor: '#e8d5ff',
+        optionBorder: 'rgba(255,255,255,0.2)',
+        correctBg: '#00b894', correctBorder: '#00b894',
+        timerColor: '#ffd93d', brandColor: '#e8d5ff',
+        accentColors: ['#6c5ce7','#fd79a8','#00cec9','#ffeaa7'],
+        headerGrad1: '#6c5ce7', headerGrad2: '#fd79a8'
+    }
+];
+
+const optionLabels = ['ক','খ','গ','ঘ'];
+
+// ===== UI Functions =====
+function handleLogo(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+        const img = new Image();
+        img.onload = function() {
+            state.logoImg = img;
+            document.getElementById('logoPreview').src = ev.target.result;
+            document.getElementById('logoPreview').style.display = 'block';
+        };
+        img.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+}
+
+function setCorrect(letter, btn) {
+    state.correctAnswer = ['A','B','C','D'].indexOf(letter);
+    document.querySelectorAll('.correct-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+function updateTimerDisplay() {
+    const val = document.getElementById('timerRange').value;
+    state.timerSeconds = parseInt(val);
+    document.getElementById('timerDisplayVal').textContent = val + 's';
+}
+
+function selectTemplate(idx, el) {
+    state.templateIndex = idx;
+    document.querySelectorAll('.template-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+}
+
+function selectFormat(fmt, el) {
+    state.format = fmt;
+    document.querySelectorAll('.format-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+}
+
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3000);
+}
+    // ===== Canvas Drawing Functions =====
+function getCanvasSize() {
+    if (state.format === 'reels') return { w: 1080, h: 1920 };
+    return { w: 1920, h: 1080 };
+}
+
+function drawGradientBg(ctx, w, h, color1, color2, time) {
+    const grad = ctx.createLinearGradient(0, 0, w * Math.sin(time * 0.2) * 0.3 + w * 0.5, h);
+    grad.addColorStop(0, color1);
+    grad.addColorStop(1, color2);
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+    
+    ctx.globalAlpha = 0.05;
+    for (let i = 0; i < 5; i++) {
+        const x = w * (0.2 + 0.15 * i + 0.05 * Math.sin(time * 0.5 + i));
+        const y = h * (0.15 + 0.15 * i + 0.05 * Math.cos(time * 0.3 + i * 2));
+        const r = 60 + 40 * Math.sin(time * 0.4 + i);
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+}
+
+function drawRoundedRect(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + w - r, y);
+    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+    ctx.lineTo(x + w, y + h - r);
+    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    ctx.lineTo(x + r, y + h);
+    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+    ctx.lineTo(x, y + r);
+    ctx.quadraticCurveTo(x, y, x + r, y);
+    ctx.closePath();
+}
+
+function wrapText(ctx, text, maxWidth) {
+    const words = text.split('');
+    const lines = [];
+    let currentLine = '';
+    
+    for (let i = 0; i < text.length; i++) {
+        const testLine = currentLine + text[i];
+        const metrics = ctx.measureText(testLine);
+        if (metrics.width > maxWidth && currentLine !== '') {
+            lines.push(currentLine);
+            currentLine = text[i];
+        } else {
+            currentLine = testLine;
+        }
+    }
+    lines.push(currentLine);
+    return lines;
+    }
+    function drawFrame(ctx, w, h, template, data, phase, timerValue, animProgress) {
+    const scale = w / 1080;
+    const isReels = state.format === 'reels';
+    const padding = 50 * scale;
+    const time = animProgress;
+
+    // Background
+    drawGradientBg(ctx, w, h, template.bg1, template.bg2, time);
+
+    // Decorative elements
+    ctx.globalAlpha = 0.06;
+    for (let i = 0; i < 8; i++) {
+        const angle = (time * 0.2) + (i * Math.PI / 4);
+        const cx = w / 2 + Math.cos(angle) * w * 0.35;
+        const cy = h / 2 + Math.sin(angle) * h * 0.25;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 30 * scale + 20 * scale * Math.sin(time + i), 0, Math.PI * 2);
+        ctx.fillStyle = '#fff';
+        ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    let yPos = padding;
+
+    // ===== Brand / Logo Area =====
+    const brandHeight = 80 * scale;
+    drawRoundedRect(ctx, padding, yPos, w - padding * 2, brandHeight, 15 * scale);
+    ctx.fillStyle = 'rgba(0,0,0,0.2)';
+    ctx.fill();
+    
+    drawRoundedRect(ctx, padding, yPos, w - padding * 2, brandHeight, 15 * scale);
+    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+    ctx.lineWidth = 2 * scale;
+    ctx.stroke();
+
+    // Logo
+    let textStartX = padding + 20 * scale;
+    if (state.logoImg) {
+        const logoH = 50 * scale;
+        const logoW = (state.logoImg.width / state.logoImg.height) * logoH;
+        const logoX = padding + 15 * scale;
+        const logoY = yPos + (brandHeight - logoH) / 2;
+        ctx.drawImage(state.logoImg, logoX, logoY, logoW, logoH);
+        textStartX = logoX + logoW + 15 * scale;
+    }
+
+    // Brand Name
+    if (data.brandName) {
+        ctx.font = `bold ${28 * scale}px 'Noto Sans Bengali', sans-serif`;
+        ctx.fillStyle = template.brandColor;
+        ctx.textBaseline = 'middle';
+        ctx.fillText(data.brandName, textStartX, yPos + brandHeight / 2);
+    }
+
+    yPos += brandHeight + 30 * scale;
+
+    // ===== Question Box =====
+    const questionFontSize = isReels ? 34 * scale : 36 * scale;
+    ctx.font = `bold ${questionFontSize}px 'Noto Sans Bengali', sans-serif`;
+    const questionLines = wrapText(ctx, data.question, w - padding * 2 - 60 * scale);
+    const qLineHeight = questionFontSize * 1.5;
+    const qBoxHeight = Math.max(questionLines.length * qLineHeight + 40 * scale, 100 * scale);
+
+    drawRoundedRect(ctx, padding, yPos, w - padding * 2, qBoxHeight, 20 * scale);
+    ctx.fillStyle = template.questionBg;
+    ctx.fill();
+    drawRoundedRect(ctx, padding, yPos, w - padding * 2, qBoxHeight, 20 * scale);
+    ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+    ctx.lineWidth = 2 * scale;
+    ctx.stroke();
+
+    // Question icon
+    ctx.font = `${30 * scale}px serif`;
+    ctx.fillText('❓', padding + 18 * scale, yPos + 35 * scale);
+
+    // Question text
+    ctx.font = `bold ${questionFontSize}px 'Noto Sans Bengali', sans-serif`;
+    ctx.fillStyle = template.questionColor;
+    ctx.textBaseline = 'top';
+    questionLines.forEach((line, i) => {
+        ctx.fillText(line, padding + 30 * scale, yPos + 20 * scale + i * qLineHeight);
+    });
+
+    yPos += qBoxHeight + 30 * scale;
+
+    // ===== Timer (if in timer phase) =====
+    if (phase === 'timer' && timerValue > 0) {
+        const timerSize = isReels ? 120 * scale : 100 * scale;
+        const timerCenterX = w / 2;
+        const timerCenterY = yPos + timerSize / 2 + 10 * scale;
+
+        ctx.beginPath();
+        ctx.arc(timerCenterX, timerCenterY, timerSize / 2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0,0,0,0.3)';
+        ctx.fill();
+
+        const progress = timerValue / state.timerSeconds;
+        ctx.beginPath();
+        ctx.arc(timerCenterX, timerCenterY, timerSize / 2 - 6 * scale, -Math.PI / 2, -Math.PI / 2 + (1 - progress) * Math.PI * 2, false);
+        ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+        ctx.lineWidth = 8 * scale;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(timerCenterX, timerCenterY, timerSize / 2 - 6 * scale, -Math.PI / 2, -Math.PI / 2 + progress * Math.PI * 2, false);
+        let timerArcColor = '#00b894';
+        if (timerValue <= 3) timerArcColor = '#ff6b6b';
+        else if (timerValue <= 5) timerArcColor = '#ffd93d';
+        ctx.strokeStyle = timerArcColor;
+        ctx.lineWidth = 8 * scale;
+        ctx.lineCap = 'round';
+        ctx.stroke();
+
+        ctx.font = `900 ${timerSize * 0.5}px 'Noto Sans Bengali', sans-serif`;
+        ctx.fillStyle = template.timerColor;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        if (timerValue <= 3) {
+            const pulseScale = 1 + 0.1 * Math.sin(time * 10);
+            ctx.save();
+            ctx.translate(timerCenterX, timerCenterY);
+            ctx.scale(pulseScale, pulseScale);
+            ctx.fillText(timerValue.toString(), 0, 0);
+            ctx.restore();
+        } else {
+            ctx.fillText(timerValue.toString(), timerCenterX, timerCenterY);
+        }
+        ctx.textAlign = 'left';
+
+        ctx.font = `600 ${20 * scale}px 'Noto Sans Bengali', sans-serif`;
+        ctx.fillStyle = 'rgba(255,255,255,0.7)';
+        ctx.textAlign = 'center';
+        ctx.fillText('⏱️ সময় বাকি', timerCenterX, timerCenterY + timerSize / 2 + 25 * scale);
+        ctx.textAlign = 'left';
+
+        yPos += timerSize + 50 * scale;
+    } else if (phase === 'timer') {
+        yPos += 10 * scale;
+    }
+            // ===== Options =====
+    const optFontSize = isReels ? 28 * scale : 30 * scale;
+    const optHeight = 70 * scale;
+    const optGap = 15 * scale;
+    const optWidth = w - padding * 2;
+
+    for (let i = 0; i < 4; i++) {
+        const isCorrect = i === data.correctAnswer;
+        const showCorrect = (phase === 'answer' || phase === 'explanation') && isCorrect;
+        const optY = yPos + i * (optHeight + optGap);
+
+        // Option background
+        drawRoundedRect(ctx, padding, optY, optWidth, optHeight, 14 * scale);
+        
+        if (showCorrect) {
+            ctx.fillStyle = template.correctBg;
+            ctx.fill();
+            drawRoundedRect(ctx, padding, optY, optWidth, optHeight, 14 * scale);
+            ctx.strokeStyle = '#fff';
+            ctx.lineWidth = 3 * scale;
+            ctx.stroke();
+            
+            ctx.shadowColor = template.correctBg;
+            ctx.shadowBlur = 20 * scale;
+            drawRoundedRect(ctx, padding, optY, optWidth, optHeight, 14 * scale);
+            ctx.strokeStyle = template.correctBg;
+            ctx.lineWidth = 2 * scale;
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+        } else {
+            ctx.fillStyle = template.optionBg;
+            ctx.fill();
+            drawRoundedRect(ctx, padding, optY, optWidth, optHeight, 14 * scale);
+            ctx.strokeStyle = template.optionBorder;
+            ctx.lineWidth = 2 * scale;
+            ctx.stroke();
+        }
+
+        // Option letter circle
+        const circleR = 22 * scale;
+        const circleX = padding + 35 * scale;
+        const circleY = optY + optHeight / 2;
+        
+        ctx.beginPath();
+        ctx.arc(circleX, circleY, circleR, 0, Math.PI * 2);
+        ctx.fillStyle = template.accentColors[i];
+        ctx.fill();
+
+        ctx.font = `800 ${22 * scale}px 'Noto Sans Bengali', sans-serif`;
+        ctx.fillStyle = '#fff';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(optionLabels[i], circleX, circleY);
+        ctx.textAlign = 'left';
+
+        // Option text
+        const optTextWeight = showCorrect ? '900' : '600';
+        ctx.font = `${optTextWeight} ${optFontSize}px 'Noto Sans Bengali', sans-serif`;
+        ctx.fillStyle = showCorrect ? '#ffffff' : template.optionColor;
+        ctx.textBaseline = 'middle';
+        ctx.fillText(data.options[i], padding + 70 * scale, circleY);
+
+        // Checkmark for correct
+        if (showCorrect) {
+            ctx.font = `${30 * scale}px serif`;
+            ctx.fillText('✅', padding + optWidth - 50 * scale, circleY);
+        }
+    }
+
+    yPos += 4 * (optHeight + optGap) + 10 * scale;
+
+    // ===== Explanation (if in explanation phase) =====
+    if (phase === 'explanation' && data.explanation) {
+        const expFontSize = 24 * scale;
+        ctx.font = `600 ${expFontSize}px 'Noto Sans Bengali', sans-serif`;
+        const expLines = wrapText(ctx, data.explanation, w - padding * 2 - 40 * scale);
+        const expLineHeight = expFontSize * 1.5;
+        const expBoxHeight = expLines.length * expLineHeight + 40 * scale;
+
+        drawRoundedRect(ctx, padding, yPos, w - padding * 2, expBoxHeight, 16 * scale);
+        ctx.fillStyle = 'rgba(0,184,148,0.2)';
+        ctx.fill();
+        drawRoundedRect(ctx, padding, yPos, w - padding * 2, expBoxHeight, 16 * scale);
+        ctx.strokeStyle = 'rgba(0,184,148,0.5)';
+        ctx.lineWidth = 2 * scale;
+        ctx.stroke();
+
+        ctx.font = `700 ${20 * scale}px 'Noto Sans Bengali', sans-serif`;
+        ctx.fillStyle = '#00b894';
+        ctx.fillText('💡 ব্যাখ্যা:', padding + 20 * scale, yPos + 25 * scale);
+
+        ctx.font = `600 ${expFontSize}px 'Noto Sans Bengali', sans-serif`;
+        ctx.fillStyle = template.optionColor;
+        ctx.textBaseline = 'top';
+        expLines.forEach((line, i) => {
+            ctx.fillText(line, padding + 20 * scale, yPos + 45 * scale + i * expLineHeight);
+        });
+    }
+
+    // ===== Bottom watermark =====
+    ctx.font = `500 ${16 * scale}px 'Noto Sans Bengali', sans-serif`;
+    ctx.fillStyle = 'rgba(255,255,255,0.3)';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    ctx.fillText('MCQ Quiz Video Generator', w / 2, h - 15 * scale);
+    ctx.textAlign = 'left';
+    }
+    // ===== Video Generation =====
+async function generateVideo() {
+    // Gather data
+    state.brandName = document.getElementById('brandName').value.trim();
+    state.question = document.getElementById('question').value.trim();
+    state.options = [
+        document.getElementById('optA').value.trim(),
+        document.getElementById('optB').value.trim(),
+        document.getElementById('optC').value.trim(),
+        document.getElementById('optD').value.trim()
+    ];
+    state.explanation = document.getElementById('explanation').value.trim();
+
+    // Validate
+    if (!state.question) { showToast('⚠️ প্রশ্ন লিখুন!'); return; }
+    if (state.options.some(o => !o)) { showToast('⚠️ সব অপশন পূরণ করুন!'); return; }
+    if (state.correctAnswer === -1) { showToast('⚠️ সঠিক উত্তর নির্বাচন করুন!'); return; }
+
+    const template = TEMPLATES[state.templateIndex];
+    const {w, h} = getCanvasSize();
+    const canvas = document.getElementById('quizCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = w;
+    canvas.height = h;
+
+    // Scale canvas display
+    const maxDisplayWidth = Math.min(400, window.innerWidth - 40);
+    if (state.format === 'reels') {
+        canvas.style.width = maxDisplayWidth + 'px';
+        canvas.style.height = (maxDisplayWidth * 1920 / 1080) + 'px';
+    } else {
+        canvas.style.width = maxDisplayWidth + 'px';
+        canvas.style.height = (maxDisplayWidth * 1080 / 1920) + 'px';
+    }
+
+    document.getElementById('previewSection').classList.add('active');
+    document.getElementById('downloadBtn').style.display = 'none';
+    document.getElementById('statusText').textContent = 'ভিডিও তৈরি হচ্ছে...';
+    document.getElementById('progressBar').style.width = '0%';
+
+    // Show loading
+    document.getElementById('loadingOverlay').classList.add('active');
+
+    const data = {
+        brandName: state.brandName,
+        question: state.question,
+        options: [...state.options],
+        correctAnswer: state.correctAnswer,
+        explanation: state.explanation
+    };
+
+    // Setup recording
+    const stream = canvas.captureStream(30);
+    const mediaRecorder = new MediaRecorder(stream, {
+        mimeType: 'video/webm;codecs=vp9',
+        videoBitsPerSecond: 8000000
+    });
+    
+    const chunks = [];
+    mediaRecorder.ondataavailable = e => { if (e.data.size > 0) chunks.push(e.data); };
+    
+    mediaRecorder.onstop = () => {
+        state.recordedBlob = new Blob(chunks, { type: 'video/webm' });
+        document.getElementById('downloadBtn').style.display = 'block';
+        document.getElementById('statusText').textContent = '✅ ভিডিও তৈরি সম্পন্ন! ডাউনলোড করুন।';
+        document.getElementById('progressBar').style.width = '100%';
+        document.getElementById('loadingOverlay').classList.remove('active');
+        showToast('🎉 ভিডিও তৈরি সম্পন্ন!');
+    };
+
+    mediaRecorder.start();
+
+    // Animation timeline
+    const fps = 30;
+    const timerDuration = state.timerSeconds;
+    const questionShowDuration = 1.5;
+    const answerShowDuration = 3;
+    const explanationDuration = state.explanation ? 4 : 0;
+    
+    const totalFrames = (questionShowDuration + timerDuration + answerShowDuration + explanationDuration) * fps;
+    let frame = 0;
+
+    function renderFrame() {
+        const currentTime = frame / fps;
+        const animTime = frame * 0.05;
+        
+        let phase, timerValue;
+        
+        if (currentTime < questionShowDuration) {
+            phase = 'question';
+            timerValue = state.timerSeconds;
+        } else if (currentTime < questionShowDuration + timerDuration) {
+            phase = 'timer';
+            const elapsed = currentTime - questionShowDuration;
+            timerValue = Math.ceil(timerDuration - elapsed);
+            if (timerValue < 1) timerValue = 1;
+        } else if (currentTime < questionShowDuration + timerDuration + answerShowDuration) {
+            phase = 'answer';
+            timerValue = 0;
+        } else {
+            phase = 'explanation';
+            timerValue = 0;
+        }
+
+        // Clear
+        ctx.clearRect(0, 0, w, h);
+        
+        // Draw
+        drawFrame(ctx, w, h, template, data, phase, timerValue, animTime);
+
+        // Update progress
+        const progress = ((frame + 1) / totalFrames) * 100;
+        document.getElementById('progressBar').style.width = progress + '%';
+        document.getElementById('loadingText').textContent = `রেন্ডার হচ্ছে... ${Math.round(progress)}%`;
+
+        frame++;
+
+        if (frame <= totalFrames) {
+            requestAnimationFrame(renderFrame);
+        } else {
+            mediaRecorder.stop();
+        }
+    }
+
+    // Small delay to ensure recorder is ready
+    await new Promise(r => setTimeout(r, 200));
+    renderFrame();
+
+    // Scroll to preview
+    setTimeout(() => {
+        document.getElementById('previewSection').scrollIntoView({ behavior: 'smooth' });
+    }, 500);
+}
+
+function downloadVideo() {
+    if (!state.recordedBlob) return;
+    const url = URL.createObjectURL(state.recordedBlob);
+    const a = document.createElement('a');
+    a.href = url;
+    const formatLabel = state.format === 'reels' ? 'Reels_9x16' : 'YouTube_16x9';
+    a.download = `MCQ_Quiz_${formatLabel}_${Date.now()}.webm`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('📥 ডাউনলোড শুরু হয়েছে!');
+}
+
+// Initialize
+updateTimerDisplay();
+</script>
+
+</body>
+</html>
