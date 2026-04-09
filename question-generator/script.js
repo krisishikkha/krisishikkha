@@ -343,7 +343,6 @@ function deselectAll() {
 }
 
 // ========== Generate Paper HTML ==========
-// ========== Generate Paper HTML ==========
 function generatePaperHTML(showAnswers = false) {
     if (selectedQuestions.length === 0) {
         return null;
@@ -373,12 +372,12 @@ function generatePaperHTML(showAnswers = false) {
     }
     
     let html = `
-        <div style="padding:8px;font-family:'Hind Siliguri',Arial,sans-serif;font-size:13px;line-height:1.4;color:#000;">
+        <div style="padding:8px;font-family:'Hind Siliguri',Arial,sans-serif;font-size:14px;line-height:1.4;color:#000;">
             <div style="text-align:center;border-bottom:2px solid #000;padding-bottom:8px;margin-bottom:10px;">
-                <div style="font-size:16px;font-weight:bold;margin-bottom:3px;">${institutionName}</div>
-                <div style="font-size:14px;margin-bottom:3px;">${examName}</div>
-                <div style="font-size:13px;margin-bottom:5px;">বিষয়: ${subjectName}</div>
-                <div style="display:flex;justify-content:space-between;font-size:12px;">
+                <div style="font-size:17px;font-weight:bold;margin-bottom:3px;">${institutionName}</div>
+                <div style="font-size:15px;margin-bottom:3px;">${examName}</div>
+                <div style="font-size:14px;margin-bottom:5px;">বিষয়: ${subjectName}</div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;">
                     <span>সময়: ${examTime}</span>
                     <span>পূর্ণমান: ${fullMarks}</span>
                 </div>
@@ -386,7 +385,7 @@ function generatePaperHTML(showAnswers = false) {
     `;
     
     if (instructions) {
-        html += `<div style="background:#f5f5f5;padding:5px 8px;margin-bottom:10px;border-left:3px solid #000;font-size:10px;"><strong>নির্দেশনা:</strong> ${instructions}</div>`;
+        html += `<div style="background:#f5f5f5;padding:5px 8px;margin-bottom:10px;border-left:3px solid #000;font-size:11px;"><strong>নির্দেশনা:</strong> ${instructions}</div>`;
     }
     
     html += `<div style="column-count:3;column-gap:5px;column-rule:1px solid #ccc;">`;
@@ -398,18 +397,18 @@ function generatePaperHTML(showAnswers = false) {
         if (q.type === 'passage-q' && q.passageId && !shownPassages.has(q.passageId)) {
             const passage = passages.find(p => p.id === q.passageId);
             if (passage) {
-                html += `<div style="font-style:italic;padding:6px 0;margin-bottom:6px;font-size:13px;break-inside:avoid;background:#f9f9f9;padding:6px;border-radius:3px;"><strong>📖 অনুচ্ছেদ:</strong> ${passage.passage}</div>`;
+                html += `<div style="font-style:italic;padding:6px 0;margin-bottom:6px;font-size:14px;break-inside:avoid;background:#f9f9f9;padding:6px;border-radius:3px;"><strong>📖 অনুচ্ছেদ:</strong> ${passage.passage}</div>`;
                 shownPassages.add(q.passageId);
             }
         }
         
         html += `<div style="margin-bottom:8px;break-inside:avoid;">`;
-        html += `<div style="margin-bottom:3px;font-size:13px;font-weight:500;">`;
+        html += `<div style="margin-bottom:3px;font-size:14px;font-weight:500;">`;
         if (showNumbers) html += `<strong>${questionNumber}.</strong> `;
         html += `${q.question}</div>`;
         
         if (q.type === 'multiple' && q.statements) {
-            html += `<div style="padding-left:8px;font-size:13px;margin-bottom:3px;line-height:1.3;">`;
+            html += `<div style="padding-left:8px;font-size:14px;margin-bottom:3px;line-height:1.3;">`;
             q.statements.forEach(s => html += `${s}<br>`);
             html += `</div>`;
         }
@@ -425,7 +424,7 @@ function generatePaperHTML(showAnswers = false) {
                 correctIndex = optionsWithIndex.findIndex(o => o.isCorrect);
             }
             
-            html += `<div style="padding-left:6px;font-size:13px;line-height:1.3;">`;
+            html += `<div style="padding-left:6px;font-size:14px;line-height:1.3;">`;
             const letters = ['ক', 'খ', 'গ', 'ঘ'];
             options.forEach((opt, idx) => {
                 if (showAnswers && idx === correctIndex) {
