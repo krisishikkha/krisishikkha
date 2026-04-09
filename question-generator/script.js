@@ -476,6 +476,7 @@ function hidePreviewModal() {
 
 
  // ========== Download PDF (Updated with jsPDF) ==========
+    // ========== Download PDF (Updated with jsPDF) ==========
 function downloadPDF() {
     if (!isLoggedIn()) {
         showLoginModal();
@@ -512,21 +513,27 @@ function downloadPDF() {
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF('p', 'mm', 'a4');
             
-            const imgWidth = 210;
+            // Margin settings
+            const marginLeft = 4;    // বাম মার্জিন (mm)
+            const marginRight = 3;   // ডান মার্জিন (mm)
+            const marginTop = 4;     // উপর মার্জিন (mm)
+            const marginBottom = 4;  // নিচ মার্জিন (mm)
+            
+            const imgWidth = 210 - marginLeft - marginRight;
             const pageHeight = 297;
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
             let heightLeft = imgHeight;
-            let position = 0;
+            let position = marginTop;
             
             const imgData = canvas.toDataURL('image/jpeg', 0.95);
-            pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pageHeight;
+            pdf.addImage(imgData, 'JPEG', marginLeft, position, imgWidth, imgHeight);
+            heightLeft -= (pageHeight - marginTop - marginBottom);
             
             while (heightLeft > 0) {
-                position = heightLeft - imgHeight;
+                position = marginTop - (imgHeight - heightLeft);
                 pdf.addPage();
-                pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-                heightLeft -= pageHeight;
+                pdf.addImage(imgData, 'JPEG', marginLeft, position, imgWidth, imgHeight);
+                heightLeft -= (pageHeight - marginTop - marginBottom);
             }
             
             pdf.save('প্রশ্নপত্র.pdf');
@@ -538,8 +545,7 @@ function downloadPDF() {
             showToast('PDF তৈরিতে সমস্যা হয়েছে।', 'error');
         });
     }, 500);
-}
-
+        }
 // ========== Download Answer Key (Updated with jsPDF) ==========
 function downloadAnswerKey() {
     if (!isLoggedIn()) {
@@ -577,21 +583,27 @@ function downloadAnswerKey() {
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF('p', 'mm', 'a4');
             
-            const imgWidth = 210;
+            // Margin settings
+            const marginLeft = 4;    // বাম মার্জিন (mm)
+            const marginRight = 3;   // ডান মার্জিন (mm)
+            const marginTop = 4;     // উপর মার্জিন (mm)
+            const marginBottom = 4;  // নিচ মার্জিন (mm)
+            
+            const imgWidth = 210 - marginLeft - marginRight;
             const pageHeight = 297;
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
             let heightLeft = imgHeight;
-            let position = 0;
+            let position = marginTop;
             
             const imgData = canvas.toDataURL('image/jpeg', 0.95);
-            pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pageHeight;
+            pdf.addImage(imgData, 'JPEG', marginLeft, position, imgWidth, imgHeight);
+            heightLeft -= (pageHeight - marginTop - marginBottom);
             
             while (heightLeft > 0) {
-                position = heightLeft - imgHeight;
+                position = marginTop - (imgHeight - heightLeft);
                 pdf.addPage();
-                pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-                heightLeft -= pageHeight;
+                pdf.addImage(imgData, 'JPEG', marginLeft, position, imgWidth, imgHeight);
+                heightLeft -= (pageHeight - marginTop - marginBottom);
             }
             
             pdf.save('উত্তরপত্র.pdf');
@@ -603,4 +615,4 @@ function downloadAnswerKey() {
             showToast('উত্তরপত্র তৈরিতে সমস্যা হয়েছে।', 'error');
         });
     }, 500);
-}
+               }
