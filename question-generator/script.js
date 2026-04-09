@@ -373,12 +373,12 @@ function generatePaperHTML(showAnswers = false) {
     }
     
     let html = `
-        <div style="padding:8px;font-family:'Hind Siliguri',Arial,sans-serif;font-size:15px;line-height:1.4;color:#000;">
-            <div style="text-align:center;border-bottom:2px solid #000;padding-bottom:8px;margin-bottom:10px;">
-                <div style="font-size:18px;font-weight:bold;margin-bottom:3px;">${institutionName}</div>
-                <div style="font-size:16px;margin-bottom:3px;">${examName}</div>
-                <div style="font-size:15px;margin-bottom:5px;">বিষয়: ${subjectName}</div>
-                <div style="display:flex;justify-content:space-between;font-size:14px;">
+        <div style="padding:10px;font-family:'Hind Siliguri',Arial,sans-serif;font-size:17px;line-height:1.5;color:#000;">
+            <div style="text-align:center;border-bottom:2px solid #000;padding-bottom:10px;margin-bottom:12px;">
+                <div style="font-size:22px;font-weight:bold;margin-bottom:4px;">${institutionName}</div>
+                <div style="font-size:20px;margin-bottom:4px;">${examName}</div>
+                <div style="font-size:19px;margin-bottom:6px;">বিষয়: ${subjectName}</div>
+                <div style="display:flex;justify-content:space-between;font-size:18px;">
                     <span>সময়: ${examTime}</span>
                     <span>পূর্ণমান: ${fullMarks}</span>
                 </div>
@@ -386,7 +386,7 @@ function generatePaperHTML(showAnswers = false) {
     `;
     
     if (instructions) {
-        html += `<div style="background:#f5f5f5;padding:5px 8px;margin-bottom:10px;border-left:3px solid #000;font-size:11px;"><strong>নির্দেশনা:</strong> ${instructions}</div>`;
+        html += `<div style="background:#f5f5f5;padding:6px 10px;margin-bottom:12px;border-left:3px solid #000;font-size:12px;"><strong>নির্দেশনা:</strong> ${instructions}</div>`;
     }
     
     html += `<div style="column-count:3;column-gap:5px;column-rule:1px solid #ccc;">`;
@@ -398,18 +398,18 @@ function generatePaperHTML(showAnswers = false) {
         if (q.type === 'passage-q' && q.passageId && !shownPassages.has(q.passageId)) {
             const passage = passages.find(p => p.id === q.passageId);
             if (passage) {
-                html += `<div style="font-style:italic;padding:6px 0;margin-bottom:6px;font-size:15px;break-inside:avoid;background:#f9f9f9;padding:6px;border-radius:3px;"><strong>📖 অনুচ্ছেদ:</strong> ${passage.passage}</div>`;
+                html += `<div style="font-style:italic;padding:8px;margin-bottom:8px;font-size:17px;break-inside:avoid;background:#f9f9f9;border-radius:4px;"><strong>📖 অনুচ্ছেদ:</strong> ${passage.passage}</div>`;
                 shownPassages.add(q.passageId);
             }
         }
         
-        html += `<div style="margin-bottom:8px;break-inside:avoid;">`;
-        html += `<div style="margin-bottom:3px;font-size:15px;font-weight:500;">`;
+        html += `<div style="margin-bottom:10px;break-inside:avoid;page-break-inside:avoid;">`;
+        html += `<div style="margin-bottom:4px;font-size:17px;font-weight:500;">`;
         if (showNumbers) html += `<strong>${questionNumber}.</strong> `;
         html += `${q.question}</div>`;
         
         if (q.type === 'multiple' && q.statements) {
-            html += `<div style="padding-left:8px;font-size:15px;margin-bottom:3px;line-height:1.3;">`;
+            html += `<div style="padding-left:10px;font-size:17px;margin-bottom:4px;line-height:1.4;">`;
             q.statements.forEach(s => html += `${s}<br>`);
             html += `</div>`;
         }
@@ -425,13 +425,13 @@ function generatePaperHTML(showAnswers = false) {
                 correctIndex = optionsWithIndex.findIndex(o => o.isCorrect);
             }
             
-            html += `<div style="padding-left:6px;font-size:15px;line-height:1.3;">`;
+            html += `<div style="padding-left:8px;font-size:17px;line-height:1.4;">`;
             const letters = ['ক', 'খ', 'গ', 'ঘ'];
             options.forEach((opt, idx) => {
                 if (showAnswers && idx === correctIndex) {
-                    html += `<span style="color:green;font-weight:bold;margin-right:8px;display:inline-block;">✓${letters[idx]}) ${opt}</span>`;
+                    html += `<span style="color:green;font-weight:bold;margin-right:10px;display:inline-block;">✓${letters[idx]}) ${opt}</span>`;
                 } else {
-                    html += `<span style="margin-right:8px;display:inline-block;">${letters[idx]}) ${opt}</span>`;
+                    html += `<span style="margin-right:10px;display:inline-block;">${letters[idx]}) ${opt}</span>`;
                 }
             });
             html += `</div>`;
@@ -443,7 +443,7 @@ function generatePaperHTML(showAnswers = false) {
     
     html += `</div></div>`;
     return html;
-}
+               }
 // ========== Preview Paper ==========
 function previewPaper() {
     const html = generatePaperHTML(false);
@@ -476,7 +476,7 @@ function hidePreviewModal() {
 
 
  // ========== Download PDF (Updated with jsPDF) ==========
-    // ========== Download PDF (Updated with jsPDF) ==========
+// ========== Download PDF (Updated with jsPDF) ==========
 function downloadPDF() {
     if (!isLoggedIn()) {
         showLoginModal();
@@ -490,50 +490,62 @@ function downloadPDF() {
         return;
     }
     
-    showToast('PDF তৈরি হচ্ছে... অপেক্ষা করুন', 'info');
+    showToast('PDF তৈরি হচ্ছে... ১০-১৫ সেকেন্ড অপেক্ষা করুন', 'info');
     
     // Create temp container
     const container = document.createElement('div');
     container.style.position = 'absolute';
     container.style.left = '-9999px';
     container.style.width = '210mm';
+    container.style.minHeight = '297mm';
     container.style.background = 'white';
     container.innerHTML = html;
     document.body.appendChild(container);
     
-    // Wait and generate
+    // Wait for render
     setTimeout(() => {
         html2canvas(container, {
-            scale: 2,
+            scale: 2.5,
             useCORS: true,
             logging: false,
             windowWidth: 794,
-            windowHeight: 1123
+            windowHeight: 1123,
+            allowTaint: true
         }).then(canvas => {
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF('p', 'mm', 'a4');
             
             // Margin settings
-            const marginLeft = 4;    // বাম মার্জিন (mm)
-            const marginRight = 3;   // ডান মার্জিন (mm)
-            const marginTop = 4;     // উপর মার্জিন (mm)
-            const marginBottom = 4;  // নিচ মার্জিন (mm)
+            const marginLeft = 5;
+            const marginRight = 5;
+            const marginTop = 5;
+            const marginBottom = 5;
             
-            const imgWidth = 210 - marginLeft - marginRight;
+            const pageWidth = 210;
             const pageHeight = 297;
+            const contentWidth = pageWidth - marginLeft - marginRight;
+            const contentHeight = pageHeight - marginTop - marginBottom;
+            
+            const imgWidth = contentWidth;
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            
             let heightLeft = imgHeight;
-            let position = marginTop;
+            let yPosition = marginTop;
+            let pageCount = 0;
             
-            const imgData = canvas.toDataURL('image/jpeg', 0.95);
-            pdf.addImage(imgData, 'JPEG', marginLeft, position, imgWidth, imgHeight);
-            heightLeft -= (pageHeight - marginTop - marginBottom);
+            const imgData = canvas.toDataURL('image/jpeg', 0.98);
             
+            // First page
+            pdf.addImage(imgData, 'JPEG', marginLeft, yPosition, imgWidth, imgHeight);
+            heightLeft -= contentHeight;
+            
+            // Additional pages
             while (heightLeft > 0) {
-                position = marginTop - (imgHeight - heightLeft);
+                pageCount++;
+                yPosition = marginTop - (imgHeight - heightLeft);
                 pdf.addPage();
-                pdf.addImage(imgData, 'JPEG', marginLeft, position, imgWidth, imgHeight);
-                heightLeft -= (pageHeight - marginTop - marginBottom);
+                pdf.addImage(imgData, 'JPEG', marginLeft, yPosition, imgWidth, imgHeight);
+                heightLeft -= contentHeight;
             }
             
             pdf.save('প্রশ্নপত্র.pdf');
@@ -542,10 +554,10 @@ function downloadPDF() {
         }).catch(err => {
             console.error('Error:', err);
             document.body.removeChild(container);
-            showToast('PDF তৈরিতে সমস্যা হয়েছে।', 'error');
+            showToast('PDF তৈরিতে সমস্যা হয়েছে। আবার চেষ্টা করুন।', 'error');
         });
-    }, 500);
-        }
+    }, 1000);
+                   }
 // ========== Download Answer Key (Updated with jsPDF) ==========
 function downloadAnswerKey() {
     if (!isLoggedIn()) {
@@ -560,50 +572,62 @@ function downloadAnswerKey() {
         return;
     }
     
-    showToast('উত্তরপত্র তৈরি হচ্ছে... অপেক্ষা করুন', 'info');
+    showToast('উত্তরপত্র তৈরি হচ্ছে... ১০-১৫ সেকেন্ড অপেক্ষা করুন', 'info');
     
     // Create temp container
     const container = document.createElement('div');
     container.style.position = 'absolute';
     container.style.left = '-9999px';
     container.style.width = '210mm';
+    container.style.minHeight = '297mm';
     container.style.background = 'white';
     container.innerHTML = html;
     document.body.appendChild(container);
     
-    // Wait and generate
+    // Wait for render
     setTimeout(() => {
         html2canvas(container, {
-            scale: 2,
+            scale: 2.5,
             useCORS: true,
             logging: false,
             windowWidth: 794,
-            windowHeight: 1123
+            windowHeight: 1123,
+            allowTaint: true
         }).then(canvas => {
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF('p', 'mm', 'a4');
             
             // Margin settings
-            const marginLeft = 4;    // বাম মার্জিন (mm)
-            const marginRight = 3;   // ডান মার্জিন (mm)
-            const marginTop = 4;     // উপর মার্জিন (mm)
-            const marginBottom = 4;  // নিচ মার্জিন (mm)
+            const marginLeft = 5;
+            const marginRight = 5;
+            const marginTop = 5;
+            const marginBottom = 5;
             
-            const imgWidth = 210 - marginLeft - marginRight;
+            const pageWidth = 210;
             const pageHeight = 297;
+            const contentWidth = pageWidth - marginLeft - marginRight;
+            const contentHeight = pageHeight - marginTop - marginBottom;
+            
+            const imgWidth = contentWidth;
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            
             let heightLeft = imgHeight;
-            let position = marginTop;
+            let yPosition = marginTop;
+            let pageCount = 0;
             
-            const imgData = canvas.toDataURL('image/jpeg', 0.95);
-            pdf.addImage(imgData, 'JPEG', marginLeft, position, imgWidth, imgHeight);
-            heightLeft -= (pageHeight - marginTop - marginBottom);
+            const imgData = canvas.toDataURL('image/jpeg', 0.98);
             
+            // First page
+            pdf.addImage(imgData, 'JPEG', marginLeft, yPosition, imgWidth, imgHeight);
+            heightLeft -= contentHeight;
+            
+            // Additional pages
             while (heightLeft > 0) {
-                position = marginTop - (imgHeight - heightLeft);
+                pageCount++;
+                yPosition = marginTop - (imgHeight - heightLeft);
                 pdf.addPage();
-                pdf.addImage(imgData, 'JPEG', marginLeft, position, imgWidth, imgHeight);
-                heightLeft -= (pageHeight - marginTop - marginBottom);
+                pdf.addImage(imgData, 'JPEG', marginLeft, yPosition, imgWidth, imgHeight);
+                heightLeft -= contentHeight;
             }
             
             pdf.save('উত্তরপত্র.pdf');
@@ -612,7 +636,7 @@ function downloadAnswerKey() {
         }).catch(err => {
             console.error('Error:', err);
             document.body.removeChild(container);
-            showToast('উত্তরপত্র তৈরিতে সমস্যা হয়েছে।', 'error');
+            showToast('উত্তরপত্র তৈরিতে সমস্যা হয়েছে। আবার চেষ্টা করুন।', 'error');
         });
-    }, 500);
+    }, 1000);
                }
