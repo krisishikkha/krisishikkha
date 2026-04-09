@@ -1,0 +1,16 @@
+{
+  "premiumSystem": {
+    "enabled": false,
+    "message": "This content is available for premium customers. Please contact via WhatsApp to login.",
+    "whatsappNumber": "8801516013089"
+  },
+  "downloadRestriction": {
+    "requireLogin": true,
+    "message": "PDF ডাউনলোড করতে লগইন করুন।"
+  },
+  "features": {
+    "showPremiumBadge": true,
+    "blockPremiumSelection": true,
+    "allowPreviewWithoutLogin": true
+  }
+}
