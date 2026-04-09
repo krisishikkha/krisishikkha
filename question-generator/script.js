@@ -343,7 +343,6 @@ function deselectAll() {
 }
 
 // ========== Generate Paper HTML ==========
-// ========== Generate Paper HTML ==========
 function generatePaperHTML(showAnswers = false) {
     if (selectedQuestions.length === 0) {
         return null;
@@ -372,12 +371,13 @@ function generatePaperHTML(showAnswers = false) {
         questions = questions.sort(() => Math.random() - 0.5);
     }
     
+    // Header
     let html = `
-        <div style="padding:10px;font-family:'Hind Siliguri',Arial,sans-serif;font-size:17px;line-height:1.5;color:#000;">
-            <div style="text-align:center;border-bottom:2px solid #000;padding-bottom:10px;margin-bottom:12px;">
-                <div style="font-size:22px;font-weight:bold;margin-bottom:4px;">${institutionName}</div>
-                <div style="font-size:20px;margin-bottom:4px;">${examName}</div>
-                <div style="font-size:19px;margin-bottom:6px;">বিষয়: ${subjectName}</div>
+        <div style="padding:5mm;font-family:'Hind Siliguri',Arial,sans-serif;font-size:17px;line-height:1.45;color:#000;">
+            <div style="text-align:center;border-bottom:2.5px solid #000;padding-bottom:8px;margin-bottom:10px;">
+                <div style="font-size:22px;font-weight:bold;margin-bottom:3px;">${institutionName}</div>
+                <div style="font-size:20px;margin-bottom:3px;">${examName}</div>
+                <div style="font-size:19px;margin-bottom:5px;">বিষয়: ${subjectName}</div>
                 <div style="display:flex;justify-content:space-between;font-size:18px;">
                     <span>সময়: ${examTime}</span>
                     <span>পূর্ণমান: ${fullMarks}</span>
@@ -386,32 +386,43 @@ function generatePaperHTML(showAnswers = false) {
     `;
     
     if (instructions) {
-        html += `<div style="background:#f5f5f5;padding:6px 10px;margin-bottom:12px;border-left:3px solid #000;font-size:12px;"><strong>নির্দেশনা:</strong> ${instructions}</div>`;
+        html += `<div style="background:#f8f8f8;padding:5px 8px;margin-bottom:10px;border-left:3px solid #333;font-size:12px;"><strong>নির্দেশনা:</strong> ${instructions}</div>`;
     }
     
-    html += `<div style="column-count:3;column-gap:5px;column-rule:1px solid #ccc;">`;
-    
+    // Manual 3-column layout with proper page break
     const shownPassages = new Set();
     let questionNumber = 1;
+    const questionsPerColumn = Math.ceil(questions.length / 3);
     
-    questions.forEach(q => {
+    // Split questions into 3 columns per page
+    const column1 = [];
+    const column2 = [];
+    const column3 = [];
+    
+    questions.forEach((q, index) => {
+        const columnIndex = Math.floor(index / questionsPerColumn);
+        
+        // Generate question HTML
+        let qHtml = '';
+        
+        // Check for passage
         if (q.type === 'passage-q' && q.passageId && !shownPassages.has(q.passageId)) {
             const passage = passages.find(p => p.id === q.passageId);
             if (passage) {
-                html += `<div style="font-style:italic;padding:8px;margin-bottom:8px;font-size:17px;break-inside:avoid;background:#f9f9f9;border-radius:4px;"><strong>📖 অনুচ্ছেদ:</strong> ${passage.passage}</div>`;
+                qHtml += `<div style="font-style:italic;padding:6px;margin-bottom:6px;font-size:17px;background:#f5f5f5;border-radius:3px;"><strong>📖 অনুচ্ছেদ:</strong> ${passage.passage}</div>`;
                 shownPassages.add(q.passageId);
             }
         }
         
-        html += `<div style="margin-bottom:10px;break-inside:avoid;page-break-inside:avoid;">`;
-        html += `<div style="margin-bottom:4px;font-size:17px;font-weight:500;">`;
-        if (showNumbers) html += `<strong>${questionNumber}.</strong> `;
-        html += `${q.question}</div>`;
+        qHtml += `<div style="margin-bottom:8px;">`;
+        qHtml += `<div style="margin-bottom:3px;font-size:17px;font-weight:500;">`;
+        if (showNumbers) qHtml += `<strong>${questionNumber}.</strong> `;
+        qHtml += `${q.question}</div>`;
         
         if (q.type === 'multiple' && q.statements) {
-            html += `<div style="padding-left:10px;font-size:17px;margin-bottom:4px;line-height:1.4;">`;
-            q.statements.forEach(s => html += `${s}<br>`);
-            html += `</div>`;
+            qHtml += `<div style="padding-left:8px;font-size:17px;margin-bottom:2px;line-height:1.35;">`;
+            q.statements.forEach(s => qHtml += `${s}<br>`);
+            qHtml += `</div>`;
         }
         
         if (q.options) {
@@ -425,25 +436,48 @@ function generatePaperHTML(showAnswers = false) {
                 correctIndex = optionsWithIndex.findIndex(o => o.isCorrect);
             }
             
-            html += `<div style="padding-left:8px;font-size:17px;line-height:1.4;">`;
+            qHtml += `<div style="padding-left:6px;font-size:17px;line-height:1.35;">`;
             const letters = ['ক', 'খ', 'গ', 'ঘ'];
             options.forEach((opt, idx) => {
                 if (showAnswers && idx === correctIndex) {
-                    html += `<span style="color:green;font-weight:bold;margin-right:10px;display:inline-block;">✓${letters[idx]}) ${opt}</span>`;
+                    qHtml += `<span style="color:green;font-weight:bold;margin-right:8px;display:inline-block;">✓${letters[idx]}) ${opt}</span>`;
                 } else {
-                    html += `<span style="margin-right:10px;display:inline-block;">${letters[idx]}) ${opt}</span>`;
+                    qHtml += `<span style="margin-right:8px;display:inline-block;">${letters[idx]}) ${opt}</span>`;
                 }
             });
-            html += `</div>`;
+            qHtml += `</div>`;
         }
         
-        html += `</div>`;
+        qHtml += `</div>`;
+        
+        // Add to appropriate column
+        if (columnIndex === 0) column1.push(qHtml);
+        else if (columnIndex === 1) column2.push(qHtml);
+        else column3.push(qHtml);
+        
         questionNumber++;
     });
     
-    html += `</div></div>`;
+    // Create 3-column table layout
+    html += `
+        <table style="width:100%;border-collapse:collapse;table-layout:fixed;">
+            <tr>
+                <td style="width:33%;vertical-align:top;padding:0 3px;border-right:1px solid #ccc;">
+                    ${column1.join('')}
+                </td>
+                <td style="width:33%;vertical-align:top;padding:0 3px;border-right:1px solid #ccc;">
+                    ${column2.join('')}
+                </td>
+                <td style="width:34%;vertical-align:top;padding:0 3px;">
+                    ${column3.join('')}
+                </td>
+            </tr>
+        </table>
+    `;
+    
+    html += `</div>`;
     return html;
-               }
+}
 // ========== Preview Paper ==========
 function previewPaper() {
     const html = generatePaperHTML(false);
