@@ -21,14 +21,3 @@
 
 ### অনলাইনে ব্যবহার করুন:
 👉 **[Live Demo](https://krisishikkha.github.io/krisishikkha/mcq-quiz-generator/)**
-
-### লোকালি রান করুন:
-
-```bash
-# রিপোজিটরি ক্লোন করুন
-git clone 
-
-# ফোল্ডারে যান
-cd krisishikkha/mcq-quiz-generator
-
-# index.html ফাইলটি ব্রাউজারে ওপেন করুন
