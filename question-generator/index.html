@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রশ্নপত্র জেনারেটর | কৃষিশিক্ষা</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ==================== HEADER ==================== -->
+        <header class="header">
+            <div class="header-left">
+                <a href="../index.html" class="back-btn">← হোম</a>
+                <div class="logo">
+                    <h1>🌾 প্রশ্নপত্র জেনারেটর</h1>
+                    <p>নিজের মতো করে প্রশ্নপত্র তৈরি করুন</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="loginBtn" class="login-btn">🔐 লগইন</button>
+                <div id="userInfo" class="user-info" style="display: none;">
+                    <span id="userName">ইউজার</span>
+                    <button id="logoutBtn" class="logout-btn">লগআউট</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==================== NOTICE BOX ==================== -->
+        <div id="loginNotice" class="notice-box" style="display: none;">
+            ⚠️ <strong id="noticeMessage">PDF ডাউনলোড করতে লগইন করুন।</strong> প্রশ্ন দেখা ও সিলেক্ট করা ফ্রি!
+            <a href="https://wa.me/8801516013089" target="_blank" class="whatsapp-link" id="noticeWhatsApp">📱 WhatsApp</a>
+        </div>
+
+        <!-- ==================== CONTROL PANEL ==================== -->
+        <div class="control-panel">
+            <div class="control-item">
+                <label>📚 বিষয়</label>
+                <select id="subjectSelect">
+                    <option value="">বিষয় নির্বাচন করুন</option>
+                </select>
+            </div>
+            
+            <div class="control-item">
+                <label>📖 অধ্যায়</label>
+                <select id="chapterSelect" disabled>
+                    <option value="">সব অধ্যায়</option>
+                </select>
+            </div>
+            
+            <div class="control-item">
+                <div class="selected-counter">
+                    <span class="counter-label">নির্বাচিত</span>
+                    <span id="selectedCount" class="counter-number">০</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== QUESTION SELECTION PAGE ==================== -->
+        <div id="questionSelectionPage" class="question-selection-page">
+            <div class="questions-display-area">
+                
+                <!-- Questions Grid -->
+                <div id="questionsList" class="questions-grid">
+                    <p class="placeholder">বিষয় নির্বাচন করুন</p>
+                </div>
+                
+                <!-- Pagination -->
+                <div id="paginationContainer" class="pagination" style="display: none;">
+                    <button onclick="previousPage()" id="prevBtn" class="page-btn" disabled>◀ আগের পেজ</button>
+                    <div id="pageNumbers" class="page-numbers"></div>
+                    <button onclick="nextPage()" id="nextBtn" class="page-btn">পরের পেজ ▶</button>
+                </div>
+                
+                <!-- Review Button -->
+                <div id="reviewBtnContainer" class="review-btn-container" style="display: none;">
+                    <button onclick="goToReview()" class="btn-review-download">
+                        📝 Review to Download
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- ==================== REVIEW & CUSTOMIZATION PANEL ==================== -->
+        <div id="reviewPanel" class="review-panel" style="display: none;">
+            
+            <!-- Review Header -->
+            <div class="review-header">
+                <h2>📄 প্রশ্নপত্র কাস্টমাইজেশন</h2>
+                <button onclick="backToQuestions()" class="btn-back">← প্রশ্ন নির্বাচনে ফিরুন</button>
+            </div>
+
+            <!-- Review Content -->
+            <div class="review-content">
+                
+                <!-- Left Side - Settings -->
+                <div class="review-left">
+                    
+                    <!-- Institution & Exam Info -->
+                    <div class="review-section">
+                        <h3>প্রতিষ্ঠান ও পরীক্ষার তথ্য</h3>
+                        
+                        <div class="form-group">
+                            <label>প্রতিষ্ঠানের নাম:</label>
+                            <input type="text" id="institutionName" placeholder="কৃষি প্রশিক্ষণ ইনস্টিটিউট">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>পরীক্ষার নাম:</label>
+                            <input type="text" id="examName" placeholder="নির্বাচনী পরীক্ষা - ২০২৫">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>বিষয়ের নাম:</label>
+                            <input type="text" id="subjectNameInput" placeholder="অটো সিলেক্ট">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>বিষয় কোড:</label>
+                                <input type="text" id="subjectCode" placeholder="১০১">
+                            </div>
+                            <div class="form-group">
+                                <label>সময়:</label>
+                                <input type="text" id="examTime" placeholder="৩০ মিনিট">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>বিশেষ নির্দেশনা:</label>
+                            <textarea id="instructions" rows="2" placeholder="প্রতিটি প্রশ্নের মান সমান।"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Font Settings -->
+                    <div class="review-section">
+                        <h3>🔤 ফন্ট সেটিংস</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>হেডার ফন্ট:</label>
+                                <select id="headerFontSize">
+                                    <option value="18">18px</option>
+                                    <option value="20">20px</option>
+                                    <option value="22" selected>22px</option>
+                                    <option value="24">24px</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>প্রশ্নের ফন্ট:</label>
+                                <select id="questionFontSize">
+                                    <option value="14">14px</option>
+                                    <option value="15">15px</option>
+                                    <option value="17" selected>17px</option>
+                                    <option value="18">18px</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>অপশনের ফন্ট:</label>
+                            <select id="optionFontSize">
+                                <option value="14">14px</option>
+                                <option value="15">15px</option>
+                                <option value="17" selected>17px</option>
+                                <option value="18">18px</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Layout Settings -->
+                    <div class="review-section">
+                        <h3>📊 লেআউট সেটিংস</h3>
+                        
+                        <div class="form-group">
+                            <label>প্রতি পেজে প্রশ্ন সংখ্যা:</label>
+                            <select id="questionsPerPage">
+                                <option value="15">১৫টি</option>
+                                <option value="20" selected>২০টি</option>
+                                <option value="25">২৫টি</option>
+                                <option value="30">৩০টি</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>১ম পেজ কলাম:</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="firstPageColumns" value="1"> ১</label>
+                                <label><input type="radio" name="firstPageColumns" value="2"> ২</label>
+                                <label><input type="radio" name="firstPageColumns" value="3" checked> ৩</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>পরের পেজ কলাম:</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="otherPagesColumns" value="1"> ১</label>
+                                <label><input type="radio" name="otherPagesColumns" value="2"> ২</label>
+                                <label><input type="radio" name="otherPagesColumns" value="3" checked> ৩</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>কলাম গ্যাপ:</label>
+                            <select id="columnGap">
+                                <option value="3">৩mm</option>
+                                <option value="5" selected>৫mm</option>
+                                <option value="8">৮mm</option>
+                                <option value="10">১০mm</option>
+                                <option value="15">১৫mm</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Margin Info -->
+                    <div class="review-section">
+                        <h3>📏 মার্জিন (Fixed)</h3>
+                        <div class="margin-info">
+                            Top: 5mm | Bottom: 5mm | Left: 5mm | Right: 5mm
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Right Side - Preview & Actions -->
+                <div class="review-right">
+                    
+                    <!-- Preview Box -->
+                    <div class="preview-box">
+                        <h3>📄 প্রিভিউ</h3>
+                        <div id="livePreview" class="live-preview">
+                            <p>সেটিংস পরিবর্তন করলে এখানে প্রিভিউ দেখাবে</p>
+                        </div>
+                        <button onclick="updatePreview()" class="btn btn-preview">🔄 প্রিভিউ আপডেট</button>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button onclick="downloadPDF()" class="btn btn-download download-btn">
+                            📥 প্রশ্নপত্র ডাউনলোড
+                        </button>
+                        <button onclick="downloadAnswerKey()" class="btn btn-answer download-btn">
+                            ✅ উত্তরপত্র ডাউনলোড
+                        </button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+                  </div>
+                          <!-- ==================== LOGIN MODAL ==================== -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content modal-small">
+                <div class="modal-header">
+                    <h3>🔐 লগইন করুন</h3>
+                    <button class="close-btn" onclick="hideLoginModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label>ইউজারনেম:</label>
+                            <input type="text" id="loginUsername" placeholder="আপনার ইউজারনেম" required>
+                        </div>
+                        <div class="form-group">
+                            <label>পাসওয়ার্ড:</label>
+                            <input type="password" id="loginPassword" placeholder="আপনার পাসওয়ার্ড" required>
+                        </div>
+                        <p id="loginError" class="error-msg"></p>
+                        <button type="submit" class="btn btn-primary btn-full">লগইন করুন</button>
+                    </form>
+                    <div class="login-footer">
+                        <p>অ্যাকাউন্ট নেই? <a href="https://wa.me/8801516013089" target="_blank">WhatsApp এ যোগাযোগ করুন</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== PREMIUM MODAL ==================== -->
+        <div id="premiumModal" class="modal">
+            <div class="modal-content modal-small">
+                <div class="modal-header modal-header-premium">
+                    <h3>🔒 প্রিমিয়াম কন্টেন্ট</h3>
+                    <button class="close-btn" onclick="hidePremiumModal()">&times;</button>
+                </div>
+                <div class="modal-body center">
+                    <div class="premium-icon">👑</div>
+                    <h4>This content is available for premium customers.</h4>
+                    <p>Please contact via WhatsApp to login.</p>
+                    <a href="https://wa.me/8801516013089" target="_blank" class="btn btn-whatsapp">
+                        📱 WhatsApp এ যোগাযোগ করুন
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== HIDDEN PDF CONTENT ==================== -->
+        <div id="pdfContent" style="display: none;"></div>
+
+    </div>
+
+    <!-- ==================== TOAST CONTAINER ==================== -->
+    <div id="toastContainer"></div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
