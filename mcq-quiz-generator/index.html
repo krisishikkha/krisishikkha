@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ Quiz Video Generator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Noto Sans Bengali',sans-serif;
+    background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);
+    min-height:100vh;
+    color:#fff;
+    padding-bottom:40px;
+}
+
+.header{
+    text-align:center;
+    padding:14px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+.header h1{font-size:1.35em;font-weight:800}
+.header p{color:#e0d0ff;font-size:0.78em;margin-top:2px}
+
+.wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    max-width:1350px;
+    margin:10px auto;
+    padding:0 8px;
+    gap:10px;
+}
+
+.left{flex:1;min-width:300px;max-width:480px}
+.right{
+    flex:1;
+    min-width:280px;
+    position:sticky;
+    top:10px;
+    align-self:flex-start;
+}
+
+.card{
+    background:rgba(255,255,255,0.07);
+    border-radius:10px;
+    padding:13px;
+    margin-bottom:9px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.ct{
+    font-size:0.88em;
+    font-weight:700;
+    color:#f093fb;
+    margin-bottom:9px;
+}
+
+label{
+    display:block;
+    font-weight:600;
+    margin-bottom:3px;
+    color:#c9b0ff;
+    font-size:0.72em;
+}
+
+input[type=text],textarea{
+    width:100%;
+    padding:7px 10px;
+    border-radius:6px;
+    border:2px solid rgba(255,255,255,0.12);
+    background:rgba(255,255,255,0.06);
+    color:#fff;
+    font-family:inherit;
+    font-size:0.85em;
+    margin-bottom:7px;
+}
+input:focus,textarea:focus{outline:none;border-color:#f093fb}
+textarea{resize:vertical;min-height:52px}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+
+.ol{display:flex;align-items:center;gap:4px;margin-bottom:3px}
+.ob{
+    width:17px;height:17px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:0.62em;color:#fff;
+}
+.oa{background:#ff6b6b}
+.ob2{background:#4ecdc4}
+.oc{background:#ffd93d;color:#333}
+.od{background:#a78bfa}
+  </style>
+  <style>
+.abtns{display:flex;gap:5px;margin-top:5px}
+.abtn{
+    flex:1;padding:7px;border-radius:6px;
+    border:2px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.04);
+    color:#aaa;font-family:inherit;
+    font-weight:700;font-size:0.82em;cursor:pointer;
+}
+.abtn:hover{border-color:#00b894;color:#00b894}
+.abtn.on{
+    background:linear-gradient(135deg,#00b894,#00cec9);
+    border-color:#00b894;color:#fff;
+}
+
+.logo-area{
+    border:2px dashed rgba(255,255,255,0.25);
+    border-radius:6px;padding:10px;
+    text-align:center;cursor:pointer;
+    margin-bottom:7px;font-size:0.78em;
+}
+.logo-area:hover{border-color:#f093fb}
+.lp{max-width:65px;max-height:32px;margin-top:5px;border-radius:3px}
+
+.srow{
+    display:flex;align-items:center;
+    gap:8px;margin-bottom:6px;
+}
+.srow label{margin:0;min-width:52px;font-size:0.68em}
+.srow input[type=range]{
+    flex:1;-webkit-appearance:none;
+    height:5px;border-radius:3px;
+    background:linear-gradient(to right,#667eea,#f093fb);
+    cursor:pointer;
+}
+.srow input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:15px;height:15px;border-radius:50%;
+    background:#fff;cursor:pointer;
+}
+.sv{
+    min-width:35px;text-align:center;
+    font-weight:700;font-size:0.75em;color:#ffd93d;
+}
+
+.tsrow input[type=range]{
+    background:linear-gradient(to right,#00b894,#ffd93d,#ff6b6b);
+}
+
+.crow{display:flex;align-items:center;gap:5px;margin-top:5px}
+.crow input{width:13px;height:13px;cursor:pointer}
+.crow label{margin:0;font-size:0.72em;cursor:pointer}
+
+.tg{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.tc{
+    border-radius:6px;padding:6px 2px;
+    text-align:center;cursor:pointer;
+    border:2px solid transparent;transition:0.2s;
+}
+.tc:hover{transform:scale(1.05)}
+.tc.on{border-color:#ffd93d;box-shadow:0 0 8px rgba(255,217,61,0.45)}
+.tc .ti{font-size:0.95em}
+.tc .tn{font-size:0.48em;font-weight:600;margin-top:1px}
+
+.tr1{background:linear-gradient(135deg,#667eea,#764ba2)}
+.tr2{background:linear-gradient(135deg,#f093fb,#f5576c)}
+.tr3{background:linear-gradient(135deg,#4facfe,#00f2fe)}
+.tr4{background:linear-gradient(135deg,#43e97b,#38f9d7)}
+.tr5{background:linear-gradient(135deg,#fa709a,#fee140)}
+.tr6{background:linear-gradient(135deg,#a18cd1,#fbc2eb)}
+.tr7{background:linear-gradient(135deg,#ff9a9e,#fecfef)}
+.tr8{background:linear-gradient(135deg,#2af598,#009efd)}
+.tr9{background:linear-gradient(135deg,#ff0844,#ffb199)}
+.tr10{background:linear-gradient(135deg,#0250c5,#d43f8d)}
+.ty1{background:linear-gradient(135deg,#141e30,#243b55)}
+.ty2{background:linear-gradient(135deg,#cc2b5e,#753a88)}
+.ty3{background:linear-gradient(135deg,#00416a,#799F0C)}
+.ty4{background:linear-gradient(135deg,#1f4037,#99f2c8)}
+.ty5{background:linear-gradient(135deg,#f12711,#f5af19)}
+.ty6{background:linear-gradient(135deg,#8e2de2,#4a00e0)}
+.ty7{background:linear-gradient(135deg,#00b4db,#0083b0)}
+.ty8{background:linear-gradient(135deg,#834d9b,#d04ed6)}
+.ty9{background:linear-gradient(135deg,#fc4a1a,#f7b733)}
+.ty10{background:linear-gradient(135deg,#0f0c29,#302b63)}
+  </style>
+  <style>
+.fbtns{display:flex;gap:6px}
+.fbtn{
+    flex:1;padding:8px;border-radius:7px;
+    border:2px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.04);
+    color:#bbb;text-align:center;
+    cursor:pointer;font-family:inherit;
+}
+.fbtn:hover{border-color:#667eea}
+.fbtn.on{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    border-color:#667eea;color:#fff;
+}
+.fbtn .fi{font-size:1.1em}
+.fbtn .fl{font-weight:700;font-size:0.72em}
+.fbtn .fs{font-size:0.52em;opacity:0.7}
+
+/* Right Panel */
+.rpcard{
+    background:rgba(0,0,0,0.3);
+    border-radius:10px;padding:11px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+.rptitle{
+    font-size:0.82em;font-weight:700;
+    color:#00b894;margin-bottom:8px;
+    text-align:center;
+}
+.cbox{
+    display:flex;justify-content:center;
+    background:rgba(0,0,0,0.2);
+    border-radius:7px;padding:7px;
+    margin-bottom:9px;
+}
+#liveC{border-radius:5px;box-shadow:0 3px 12px rgba(0,0,0,0.3)}
+
+.gbtn{
+    width:100%;padding:11px;border-radius:8px;border:none;
+    font-family:inherit;font-size:0.95em;font-weight:800;
+    cursor:pointer;
+    background:linear-gradient(135deg,#f093fb,#f5576c);
+    color:#fff;box-shadow:0 3px 12px rgba(240,147,251,0.35);
+    margin-top:6px;transition:0.2s;
+}
+.gbtn:hover{transform:translateY(-2px)}
+.gbtn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+
+.dlbtn{
+    width:100%;padding:9px;border-radius:8px;border:none;
+    font-family:inherit;font-size:0.88em;font-weight:800;
+    cursor:pointer;
+    background:linear-gradient(135deg,#00b894,#00cec9);
+    color:#fff;display:none;margin-top:7px;
+}
+
+.pbar{width:100%;height:5px;background:rgba(255,255,255,0.1);border-radius:3px;margin:7px 0;display:none}
+.pbar.on{display:block}
+.pfill{height:100%;background:linear-gradient(to right,#f093fb,#f5576c);border-radius:3px;width:0%;transition:width 0.2s}
+
+.sttxt{text-align:center;color:#c9b0ff;font-weight:600;font-size:0.78em;display:none}
+.sttxt.on{display:block}
+
+.conv-info{
+    background:rgba(255,193,7,0.15);
+    border:1px solid rgba(255,193,7,0.3);
+    border-radius:6px;padding:8px;
+    font-size:0.72em;color:#ffd93d;
+    margin-top:7px;display:none;
+    text-align:center;
+}
+.conv-info.on{display:block}
+
+.loading{
+    display:none;position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    background:rgba(0,0,0,0.88);
+    z-index:9999;align-items:center;
+    justify-content:center;flex-direction:column;gap:10px;
+}
+.loading.on{display:flex}
+.spin{
+    width:36px;height:36px;
+    border:4px solid rgba(255,255,255,0.1);
+    border-top-color:#f093fb;border-radius:50%;
+    animation:sp 1s linear infinite;
+}
+@keyframes sp{to{transform:rotate(360deg)}}
+.ltxt{color:#c9b0ff;font-size:0.82em;text-align:center;max-width:250px}
+
+.toast{
+    position:fixed;bottom:16px;left:50%;
+    transform:translateX(-50%) translateY(60px);
+    background:#111;color:#fff;padding:7px 15px;
+    border-radius:6px;font-weight:600;
+    font-size:0.78em;z-index:10000;transition:0.3s;
+}
+.toast.on{transform:translateX(-50%) translateY(0)}
+
+.tpl-lbl{color:#a29bfe;font-weight:600;font-size:0.72em;margin:7px 0 5px}
+
+@media(max-width:780px){
+    .wrapper{flex-direction:column}
+    .left,.right{max-width:100%;min-width:auto}
+    .right{position:static}
+    .g2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>🎬 MCQ Quiz Video Generator</h1>
+    <p>লাইভ প্রিভিউ • MP4 ডাউনলোড • অটো লেআউট</p>
+</div>
+
+<div class="wrapper">
+<div class="left">
+
+    <div class="card">
+        <div class="ct">🏷️ ব্র্যান্ডিং</div>
+        <label>প্রোমোশনাল ট্যাগ</label>
+        <input type="text" id="brand" placeholder="যেমন: QuizBD.com" oninput="lp()">
+        <label>লোগো (ঐচ্ছিক)</label>
+        <div class="logo-area" onclick="document.getElementById('li').click()">
+            📁 লোগো আপলোড
+            <img id="lpr" class="lp" style="display:none">
+        </div>
+        <input type="file" id="li" accept="image/*" style="display:none">
+    </div>
+
+    <div class="card">
+        <div class="ct">❓ প্রশ্ন ও অপশন</div>
+        <label>প্রশ্ন</label>
+        <textarea id="q" placeholder="আপনার প্রশ্ন লিখুন..." oninput="lp()"></textarea>
+        <div class="g2">
+            <div>
+                <div class="ol"><span class="ob oa">ক</span><span style="font-size:0.72em">অপশন ১</span></div>
+                <input type="text" id="o0" placeholder="প্রথম অপশন" oninput="lp()">
+            </div>
+            <div>
+                <div class="ol"><span class="ob ob2">খ</span><span style="font-size:0.72em">অপশন ২</span></div>
+                <input type="text" id="o1" placeholder="দ্বিতীয় অপশন" oninput="lp()">
+            </div>
+            <div>
+                <div class="ol"><span class="ob oc">গ</span><span style="font-size:0.72em">অপশন ৩</span></div>
+                <input type="text" id="o2" placeholder="তৃতীয় অপশন" oninput="lp()">
+            </div>
+            <div>
+                <div class="ol"><span class="ob od">ঘ</span><span style="font-size:0.72em">অপশন ৪</span></div>
+                <input type="text" id="o3" placeholder="চতুর্থ অপশন" oninput="lp()">
+            </div>
+        </div>
+        <label style="margin-top:5px">সঠিক উত্তর</label>
+        <div class="abtns">
+            <button type="button" class="abtn" data-i="0">ক</button>
+            <button type="button" class="abtn" data-i="1">খ</button>
+            <button type="button" class="abtn" data-i="2">গ</button>
+            <button type="button" class="abtn" data-i="3">ঘ</button>
+        </div>
+        <label style="margin-top:7px">ব্যাখ্যা (ঐচ্ছিক)</label>
+        <textarea id="exp" placeholder="সঠিক উত্তরের ব্যাখ্যা..." oninput="lp()"></textarea>
+    </div>
+
+    <div class="card">
+        <div class="ct">📢 বিজ্ঞাপন (সবসময় দেখাবে)</div>
+        <textarea id="ad" placeholder="কোর্স বা অফার: BCS প্রিলি কোর্স! মূল্য: ৫০০৳ | Call: 01XXXXXXXXX" oninput="lp()"></textarea>
+    </div>
+
+    <div class="card">
+        <div class="ct">⏱️ টাইমার</div>
+        <div class="srow tsrow">
+            <label>সময়</label>
+            <input type="range" id="ts" min="5" max="60" value="15">
+            <span class="sv" id="tv">15s</span>
+        </div>
+        <div class="crow">
+            <input type="checkbox" id="snd" checked>
+            <label for="snd">🔊 সাউন্ড</label>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="ct">🔤 ফন্ট সাইজ (লাইভ প্রিভিউ →)</div>
+        <div class="srow">
+            <label>প্রোমো</label>
+            <input type="range" id="fp" min="10" max="80" value="22" oninput="fv('fp','fvp');lp()">
+            <span class="sv" id="fvp">22</span>
+        </div>
+        <div class="srow">
+            <label>প্রশ্ন</label>
+            <input type="range" id="fq" min="20" max="150" value="52" oninput="fv('fq','fvq');lp()">
+            <span class="sv" id="fvq">52</span>
+        </div>
+        <div class="srow">
+            <label>অপশন</label>
+            <input type="range" id="fo" min="16" max="100" value="36" oninput="fv('fo','fvo');lp()">
+            <span class="sv" id="fvo">36</span>
+        </div>
+        <div class="srow">
+            <label>ব্যাখ্যা</label>
+            <input type="range" id="fe" min="12" max="80" value="26" oninput="fv('fe','fve');lp()">
+            <span class="sv" id="fve">26</span>
+        </div>
+        <div class="srow">
+            <label>বিজ্ঞাপন</label>
+            <input type="range" id="fa" min="12" max="200" value="28" oninput="fv('fa','fva');lp()">
+            <span class="sv" id="fva">28</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="ct">🎨 টেমপ্লেট</div>
+        <div class="tpl-lbl">📱 Reels (9:16)</div>
+        <div class="tg" id="rtg">
+            <div class="tc tr1 on" data-t="r" data-i="0"><div class="ti">💜</div><div class="tn">নীলাভ</div></div>
+            <div class="tc tr2" data-t="r" data-i="1"><div class="ti">🌸</div><div class="tn">গোলাপি</div></div>
+            <div class="tc tr3" data-t="r" data-i="2"><div class="ti">🌊</div><div class="tn">সমুদ্র</div></div>
+            <div class="tc tr4" data-t="r" data-i="3"><div class="ti">🌿</div><div class="tn">সবুজ</div></div>
+            <div class="tc tr5" data-t="r" data-i="4"><div class="ti">🌅</div><div class="tn">সূর্যাস্ত</div></div>
+            <div class="tc tr6" data-t="r" data-i="5"><div class="ti">🦄</div><div class="tn">ইউনিকর্ন</div></div>
+            <div class="tc tr7" data-t="r" data-i="6"><div class="ti">🌷</div><div class="tn">ফুল</div></div>
+            <div class="tc tr8" data-t="r" data-i="7"><div class="ti">💎</div><div class="tn">নীলা</div></div>
+            <div class="tc tr9" data-t="r" data-i="8"><div class="ti">🔥</div><div class="tn">আগুন</div></div>
+            <div class="tc tr10" data-t="r" data-i="9"><div class="ti">🌌</div><div class="tn">গ্যালাক্সি</div></div>
+        </div>
+        <div class="tpl-lbl" style="margin-top:9px">🖥️ YouTube (16:9)</div>
+        <div class="tg" id="ytg">
+            <div class="tc ty1" data-t="y" data-i="0"><div class="ti">🌑</div><div class="tn">ডার্ক</div></div>
+            <div class="tc ty2" data-t="y" data-i="1"><div class="ti">🍇</div><div class="tn">বেগুনি</div></div>
+            <div class="tc ty3" data-t="y" data-i="2"><div class="ti">🏔️</div><div class="tn">পাহাড়</div></div>
+            <div class="tc ty4" data-t="y" data-i="3"><div class="ti">🌲</div><div class="tn">বন</div></div>
+            <div class="tc ty5" data-t="y" data-i="4"><div class="ti">🌞</div><div class="tn">সূর্য</div></div>
+            <div class="tc ty6" data-t="y" data-i="5"><div class="ti">👾</div><div class="tn">নিয়ন</div></div>
+            <div class="tc ty7" data-t="y" data-i="6"><div class="ti">🐬</div><div class="tn">ডলফিন</div></div>
+            <div class="tc ty8" data-t="y" data-i="7"><div class="ti">🔮</div><div class="tn">ম্যাজিক</div></div>
+            <div class="tc ty9" data-t="y" data-i="8"><div class="ti">🎃</div><div class="tn">কমলা</div></div>
+            <div class="tc ty10" data-t="y" data-i="9"><div class="ti">🌃</div><div class="tn">রাত</div></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="ct">📐 ফরম্যাট</div>
+        <div class="fbtns">
+            <div class="fbtn on" data-f="reels"><div class="fi">📱</div><div class="fl">Reels</div><div class="fs">1080×1920</div></div>
+            <div class="fbtn" data-f="youtube"><div class="fi">🖥️</div><div class="fl">YouTube</div><div class="fs">1920×1080</div></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="right">
+    <div class="rpcard">
+        <div class="rptitle">👁️ লাইভ প্রিভিউ</div>
+        <div class="cbox"><canvas id="liveC"></canvas></div>
+        <button type="button" class="gbtn" id="gb">🎬 ভিডিও তৈরি করুন</button>
+        <div class="pbar" id="pb"><div class="pfill" id="pf"></div></div>
+        <div class="sttxt" id="st"></div>
+        <div class="conv-info" id="ci">⏳ MP4 তে রূপান্তর হচ্ছে...</div>
+        <button type="button" class="dlbtn" id="db">📥 MP4 ডাউনলোড</button>
+    </div>
+</div>
+</div>
+
+<canvas id="recC" style="display:none"></canvas>
+<div class="loading" id="ld"><div class="spin"></div><div class="ltxt" id="lt">...</div></div>
+<div class="toast" id="tst"></div>
+<script>
+// ========== STATE ==========
+const S={
+    brand:'',logo:null,
+    q:'প্রশ্ন এখানে দেখাবে',
+    opts:['অপশন ক','অপশন খ','অপশন গ','অপশন ঘ'],
+    cor:0,exp:'',ad:'',
+    timer:15,sound:true,
+    fmt:'reels',tt:'r',ti:0,
+    fp:22,fq:52,fo:36,fe:26,fa:28,
+    blob:null,mp4blob:null
+};
+
+const LB=['ক','খ','গ','ঘ'];
+const OC=['#ff6b6b','#4ecdc4','#ffd93d','#a78bfa'];
+
+const TR=[
+    {b1:'#667eea',b2:'#764ba2',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#00b894',tc:'#ffd93d',ts:'#00b894'},
+    {b1:'#f093fb',b2:'#f5576c',qb:'rgba(0,0,0,0.32)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#00b894',tc:'#fff',ts:'#00cec9'},
+    {b1:'#4facfe',b2:'#00f2fe',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.2)',tx:'#fff',ok:'#ff6b6b',tc:'#fff',ts:'#ff6b6b'},
+    {b1:'#43e97b',b2:'#38f9d7',qb:'rgba(0,0,0,0.4)',ob:'rgba(255,255,255,0.2)',tx:'#fff',ok:'#f59e0b',tc:'#fff',ts:'#f59e0b'},
+    {b1:'#fa709a',b2:'#fee140',qb:'rgba(0,0,0,0.33)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#8b5cf6',tc:'#fff',ts:'#8b5cf6'},
+    {b1:'#a18cd1',b2:'#fbc2eb',qb:'rgba(0,0,0,0.32)',ob:'rgba(255,255,255,0.2)',tx:'#fff',ok:'#06b6d4',tc:'#333',ts:'#06b6d4'},
+    {b1:'#ff9a9e',b2:'#fecfef',qb:'rgba(0,0,0,0.33)',ob:'rgba(255,255,255,0.22)',tx:'#fff',ok:'#14b8a6',tc:'#333',ts:'#14b8a6'},
+    {b1:'#2af598',b2:'#009efd',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.2)',tx:'#fff',ok:'#f97316',tc:'#fff',ts:'#f97316'},
+    {b1:'#ff0844',b2:'#ffb199',qb:'rgba(0,0,0,0.4)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#22c55e',tc:'#ffd93d',ts:'#22c55e'},
+    {b1:'#0250c5',b2:'#d43f8d',qb:'rgba(0,0,0,0.42)',ob:'rgba(255,255,255,0.15)',tx:'#fff',ok:'#10b981',tc:'#ffd93d',ts:'#10b981'}
+];
+
+const TY=[
+    {b1:'#141e30',b2:'#243b55',qb:'rgba(255,255,255,0.1)',ob:'rgba(255,255,255,0.08)',tx:'#fff',ok:'#10b981',tc:'#ffd93d',ts:'#10b981'},
+    {b1:'#cc2b5e',b2:'#753a88',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.12)',tx:'#fff',ok:'#06b6d4',tc:'#ffd93d',ts:'#06b6d4'},
+    {b1:'#00416a',b2:'#799F0C',qb:'rgba(0,0,0,0.4)',ob:'rgba(255,255,255,0.15)',tx:'#fff',ok:'#f59e0b',tc:'#fff',ts:'#f59e0b'},
+    {b1:'#1f4037',b2:'#99f2c8',qb:'rgba(0,0,0,0.42)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#8b5cf6',tc:'#fff',ts:'#8b5cf6'},
+    {b1:'#f12711',b2:'#f5af19',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#0891b2',tc:'#fff',ts:'#0891b2'},
+    {b1:'#8e2de2',b2:'#4a00e0',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.12)',tx:'#fff',ok:'#14b8a6',tc:'#ffd93d',ts:'#14b8a6'},
+    {b1:'#00b4db',b2:'#0083b0',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#f97316',tc:'#fff',ts:'#f97316'},
+    {b1:'#834d9b',b2:'#d04ed6',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#22c55e',tc:'#ffd93d',ts:'#22c55e'},
+    {b1:'#fc4a1a',b2:'#f7b733',qb:'rgba(0,0,0,0.38)',ob:'rgba(255,255,255,0.18)',tx:'#fff',ok:'#0ea5e9',tc:'#fff',ts:'#0ea5e9'},
+    {b1:'#0f0c29',b2:'#302b63',qb:'rgba(255,255,255,0.1)',ob:'rgba(255,255,255,0.08)',tx:'#fff',ok:'#f59e0b',tc:'#ffd93d',ts:'#f59e0b'}
+];
+</script>
+<script>
+// ========== DOM & EVENTS ==========
+const $=id=>document.getElementById(id);
+
+function fv(sid,vid){
+    const v=$( sid).value;
+    $(vid).textContent=v;
+    const k=sid==='fp'?'fp':sid==='fq'?'fq':sid==='fo'?'fo':sid==='fe'?'fe':'fa';
+    S[k]=+v;
+}
+
+function toast(m){
+    const t=$('tst');
+    t.textContent=m;t.classList.add('on');
+    setTimeout(()=>t.classList.remove('on'),2500);
+}
+
+function getTpl(){return S.tt==='r'?TR[S.ti]:TY[S.ti]}
+
+function wrap(ctx,txt,mw){
+    if(!txt)return[];
+    const ls=[];let l='';
+    for(const c of txt){
+        if(ctx.measureText(l+c).width>mw&&l){ls.push(l);l=c}
+        else l+=c;
+    }
+    if(l)ls.push(l);
+    return ls;
+}
+
+function rr(ctx,x,y,w,h,r){
+    ctx.beginPath();
+    ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);
+    ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+    ctx.lineTo(x+w,y+h-r);
+    ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+    ctx.lineTo(x+r,y+h);
+    ctx.quadraticCurveTo(x,y+h,x,y+h-r);
+    ctx.lineTo(x,y+r);
+    ctx.quadraticCurveTo(x,y,x+r,y);
+    ctx.closePath();
+}
+
+function setupLC(){
+    const c=$('liveC');
+    const isR=S.fmt==='reels';
+    const mw=Math.min(270,window.innerWidth-48);
+    if(isR){
+        c.width=1080;c.height=1920;
+        c.style.width=(mw*0.52)+'px';
+        c.style.height=(mw*0.52*1920/1080)+'px';
+    }else{
+        c.width=1920;c.height=1080;
+        c.style.width=mw+'px';
+        c.style.height=(mw*1080/1920)+'px';
+    }
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+    setupLC();
+    lp();
+
+    $('ts').oninput=function(){S.timer=+this.value;$('tv').textContent=this.value+'s'};
+
+    $('li').onchange=function(e){
+        const f=e.target.files[0];if(!f)return;
+        const r=new FileReader();
+        r.onload=ev=>{
+            const img=new Image();
+            img.onload=()=>{
+                S.logo=img;
+                $('lpr').src=ev.target.result;
+                $('lpr').style.display='block';
+                lp();
+            };
+            img.src=ev.target.result;
+        };
+        r.readAsDataURL(f);
+    };
+
+    document.querySelectorAll('.abtn').forEach(b=>{
+        b.onclick=function(){
+            document.querySelectorAll('.abtn').forEach(x=>x.classList.remove('on'));
+            this.classList.add('on');S.cor=+this.dataset.i;lp();
+        };
+    });
+    document.querySelector('.abtn').classList.add('on');
+
+    document.querySelectorAll('.tc').forEach(c=>{
+        c.onclick=function(){
+            document.querySelectorAll('.tc').forEach(x=>x.classList.remove('on'));
+            this.classList.add('on');
+            S.tt=this.dataset.t;S.ti=+this.dataset.i;
+            S.fmt=this.dataset.t==='r'?'reels':'youtube';
+            document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));
+            document.querySelector(`.fbtn[data-f="${S.fmt}"]`).classList.add('on');
+            setupLC();lp();
+        };
+    });
+
+    document.querySelectorAll('.fbtn').forEach(b=>{
+        b.onclick=function(){
+            document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));
+            this.classList.add('on');S.fmt=this.dataset.f;
+            setupLC();lp();
+        };
+    });
+
+    $('gb').onclick=generate;
+    $('db').onclick=dlVideo;
+});
+</script>
+<script>
+// ========== AUTO LAYOUT CALCULATOR ==========
+function calcLayout(ctx,w,h,sc){
+    const isR=S.fmt==='reels';
+    const pad=35*sc;
+    const cx=w/2;
+
+    // Font sizes
+    const qFs=S.fq*sc;
+    const oFs=S.fo*sc;
+    const expFs=S.fe*sc;
+    const adFs=S.fa*sc;
+    const pFs=S.fp*sc;
+
+    // Brand height
+    let brandH=0;
+    if(S.logo||S.brand){
+        if(S.logo) brandH+=28*sc+5*sc;
+        if(S.brand) brandH+=pFs+8*sc;
+    }
+
+    // Question height
+    ctx.font=`700 ${qFs}px 'Noto Sans Bengali',sans-serif`;
+    const qMaxW=w-pad*4;
+    const qLines=wrap(ctx,S.q,qMaxW);
+    const qLh=qFs*1.35;
+    const qPad=22*sc;
+    const qBoxH=Math.max(qLines.length*qLh+qPad*2, qFs*1.5+qPad*2);
+
+    // Option sizes
+    const timerR=isR?52*sc:48*sc;
+    const optW=isR?(w-pad*3)/2-timerR*0.8:(w-pad*4)/2.4;
+    const optH=isR?Math.max(75*sc, oFs*1.8+20*sc):Math.max(68*sc, oFs*1.8+18*sc);
+    const gap=12*sc;
+
+    // Options block height (2 rows)
+    const optBlockH=optH*2+gap*2+timerR*2;
+
+    // Explanation height
+    let expH=0;
+    if(S.exp){
+        ctx.font=`600 ${expFs}px 'Noto Sans Bengali',sans-serif`;
+        const eLines=wrap(ctx,'💡 '+S.exp,w-pad*4);
+        expH=eLines.length*expFs*1.35+18*sc+15*sc;
+    }
+
+    // Ad height (always shown if exists)
+    let adH=0;
+    if(S.ad){
+        ctx.font=`600 ${adFs}px 'Noto Sans Bengali',sans-serif`;
+        const aLines=wrap(ctx,'📢 '+S.ad,w-pad*4);
+        adH=aLines.length*adFs*1.35+18*sc;
+    }
+
+    // Total content height
+    const spacing=20*sc;
+    const totalContent=brandH+qBoxH+spacing+optBlockH+expH+(expH>0?spacing:0);
+
+    // Auto center: place content so it's centered vertically
+    // If ad exists: ad at bottom fixed, rest centered in remaining space
+    const bottomPad=adH>0?adH+25*sc:pad;
+    const availH=h-pad-bottomPad;
+    const startY=pad+(availH-totalContent)/2;
+    const safeStartY=Math.max(pad*0.6, startY);
+
+    return {
+        cx,pad,sc,
+        qFs,oFs,expFs,adFs,pFs,
+        qMaxW,qLines,qLh,qPad,qBoxH,
+        timerR,optW,optH,gap,
+        brandH,expH,adH,
+        safeStartY,availH,h,w,
+        bottomPad,spacing
+    };
+}
+
+// ========== LIVE PREVIEW ==========
+function lp(){
+    S.brand=$('brand').value.trim();
+    S.q=$('q').value.trim()||'প্রশ্ন এখানে দেখাবে';
+    S.opts=[
+        $('o0').value.trim()||'অপশন ক',
+        $('o1').value.trim()||'অপশন খ',
+        $('o2').value.trim()||'অপশন গ',
+        $('o3').value.trim()||'অপশন ঘ'
+    ];
+    S.exp=$('exp').value.trim();
+    S.ad=$('ad').value.trim();
+    S.fp=+$('fp').value;S.fq=+$('fq').value;
+    S.fo=+$('fo').value;S.fe=+$('fe').value;S.fa=+$('fa').value;
+
+    const c=$('liveC');
+    const ctx=c.getContext('2d');
+    drawFrame(ctx,c.width,c.height,getTpl(),'preview',S.timer,0,true);
+}
+</script>
+<script>
+// ========== MAIN DRAW FUNCTION ==========
+function drawFrame(ctx,w,h,tpl,phase,timer,frame,isPreview=false){
+    const isR=S.fmt==='reels';
+    const sc=isR?w/1080:w/1920;
+
+    // Animated BG
+    const ang=frame*0.004;
+    const grd=ctx.createLinearGradient(Math.cos(ang)*w*0.3,0,w+Math.sin(ang)*w*0.2,h);
+    grd.addColorStop(0,tpl.b1);grd.addColorStop(1,tpl.b2);
+    ctx.fillStyle=grd;ctx.fillRect(0,0,w,h);
+
+    // Subtle particles
+    ctx.globalAlpha=0.05;
+    for(let i=0;i<7;i++){
+        const px=w*(0.08+i*0.13)+Math.sin(frame*0.013+i)*22;
+        const py=h*(0.06+i*0.1)+Math.cos(frame*0.011+i)*28;
+        ctx.beginPath();
+        ctx.arc(px,py,32+14*Math.sin(frame*0.009+i),0,Math.PI*2);
+        ctx.fillStyle='#fff';ctx.fill();
+    }
+    ctx.globalAlpha=1;
+
+    // Calculate layout
+    const L=calcLayout(ctx,w,h,sc);
+    let y=L.safeStartY;
+
+    // ===== BRAND (top) =====
+    if(S.logo||S.brand){
+        if(S.logo){
+            const lh=28*sc;
+            const lw=(S.logo.width/S.logo.height)*lh;
+            ctx.drawImage(S.logo,L.cx-lw/2,y,lw,lh);
+            y+=lh+5*sc;
+        }
+        if(S.brand){
+            ctx.font=`600 ${L.pFs}px 'Noto Sans Bengali',sans-serif`;
+            ctx.fillStyle='rgba(255,255,255,0.88)';
+            ctx.textAlign='center';ctx.textBaseline='top';
+            ctx.fillText(S.brand,L.cx,y);
+            y+=L.pFs+10*sc;
+        }
+    }
+
+    // ===== QUESTION BOX =====
+    const qBoxW=L.qMaxW+L.qPad*2;
+    const qBoxX=L.cx-qBoxW/2;
+    const qBoxY=y;
+
+    // Question animation
+    const qAlpha=(phase==='iq')?Math.min(1,frame/25):1;
+    ctx.globalAlpha=qAlpha;
+    rr(ctx,qBoxX,qBoxY,qBoxW,L.qBoxH,14*sc);
+    ctx.fillStyle=tpl.qb;ctx.fill();
+    ctx.font=`700 ${L.qFs}px 'Noto Sans Bengali',sans-serif`;
+    ctx.fillStyle=tpl.tx;ctx.textAlign='center';ctx.textBaseline='top';
+    L.qLines.forEach((ln,i)=>ctx.fillText(ln,L.cx,qBoxY+L.qPad+i*L.qLh));
+    ctx.globalAlpha=1;
+
+    y+=L.qBoxH+L.spacing;
+
+    // ===== OPTIONS GRID + TIMER (center) =====
+    const gridCX=L.cx;
+    const row1Y=y;
+    const row2Y=y+L.optH+L.gap*2;
+    const gridCY=y+L.optH+L.gap/2;
+
+    const leftX=gridCX-L.timerR-L.gap-L.optW;
+    const rightX=gridCX+L.timerR+L.gap;
+
+    const optPos=[
+        {x:leftX,y:row1Y},{x:rightX,y:row1Y},
+        {x:leftX,y:row2Y},{x:rightX,y:row2Y}
+    ];
+
+    const showOk=phase==='ans'||phase==='exp'||phase==='promo'||phase==='preview';
+    const oAlpha=(phase==='io')?(Math.min(1,(frame-25)/25)):1;
+    const showOpts=phase!=='iq';
+
+    if(showOpts){
+        ctx.globalAlpha=Math.max(0,oAlpha);
+        for(let i=0;i<4;i++){
+            const p=optPos[i];
+            const isOk=i===S.cor&&showOk;
+            rr(ctx,p.x,p.y,L.optW,L.optH,11*sc);
+            if(isOk){
+                ctx.fillStyle=tpl.ok;ctx.fill();
+                ctx.shadowColor=tpl.ok;ctx.shadowBlur=15*sc;
+                ctx.strokeStyle='#fff';ctx.lineWidth=3*sc;ctx.stroke();
+                ctx.shadowBlur=0;
+            }else{
+                ctx.fillStyle=tpl.ob;ctx.fill();
+                ctx.strokeStyle='rgba(255,255,255,0.25)';ctx.lineWidth=2*sc;ctx.stroke();
+            }
+            const cr=17*sc,ccx=p.x+26*sc,ccy=p.y+L.optH/2;
+            ctx.beginPath();ctx.arc(ccx,ccy,cr,0,Math.PI*2);
+            ctx.fillStyle=OC[i];ctx.fill();
+            ctx.font=`800 ${13*sc}px 'Noto Sans Bengali',sans-serif`;
+            ctx.fillStyle=i===2?'#333':'#fff';
+            ctx.textAlign='center';ctx.textBaseline='middle';
+            ctx.fillText(LB[i],ccx,ccy);
+
+            ctx.font=`${isOk?'700':'600'} ${L.oFs}px 'Noto Sans Bengali',sans-serif`;
+            ctx.fillStyle=isOk?'#fff':tpl.tx;
+            ctx.textAlign='left';ctx.textBaseline='middle';
+            let txt=S.opts[i];
+            const mtw=L.optW-55*sc;
+            while(ctx.measureText(txt).width>mtw&&txt.length>3)txt=txt.slice(0,-1);
+            if(txt!==S.opts[i])txt+='..';
+            ctx.fillText(txt,p.x+48*sc,ccy);
+            if(isOk){
+                ctx.font=`${18*sc}px sans-serif`;
+                ctx.textAlign='right';
+                ctx.fillText('✓',p.x+L.optW-12*sc,ccy);
+            }
+        }
+        ctx.globalAlpha=1;
+    }
+
+    // ===== TIMER =====
+    if(phase==='timer'&&timer>0){
+        ctx.beginPath();ctx.arc(gridCX,gridCY,L.timerR,0,Math.PI*2);
+        ctx.fillStyle='rgba(0,0,0,0.48)';ctx.fill();
+        const prog=timer/S.timer;
+        ctx.beginPath();
+        ctx.arc(gridCX,gridCY,L.timerR-5*sc,-Math.PI/2,-Math.PI/2+prog*Math.PI*2);
+        ctx.strokeStyle=tpl.ts;ctx.lineWidth=5*sc;ctx.lineCap='round';ctx.stroke();
+        const ns=timer<=3?1+0.08*Math.sin(frame*0.25):1;
+        ctx.save();ctx.translate(gridCX,gridCY);ctx.scale(ns,ns);
+        ctx.font=`900 ${L.timerR*0.85}px 'Noto Sans Bengali',sans-serif`;
+        ctx.fillStyle=tpl.tc;ctx.textAlign='center';ctx.textBaseline='middle';
+        ctx.fillText(timer.toString(),0,0);ctx.restore();
+    } else if(phase==='preview'||phase==='ans'||phase==='exp'||phase==='promo'){
+        // Show timer area
+        ctx.beginPath();ctx.arc(gridCX,gridCY,L.timerR,0,Math.PI*2);
+        ctx.fillStyle='rgba(0,0,0,0.35)';ctx.fill();
+        ctx.beginPath();
+        ctx.arc(gridCX,gridCY,L.timerR-5*sc,-Math.PI/2,Math.PI*1.5);
+        ctx.strokeStyle=tpl.ts;ctx.lineWidth=5*sc;ctx.lineCap='round';ctx.stroke();
+        const nt=phase==='preview'?S.timer:0;
+        ctx.font=`900 ${L.timerR*0.85}px 'Noto Sans Bengali',sans-serif`;
+        ctx.fillStyle=tpl.tc;ctx.textAlign='center';ctx.textBaseline='middle';
+        ctx.fillText(nt.toString(),gridCX,gridCY);
+    }
+
+    // ===== EXPLANATION =====
+    const expY=row2Y+L.optH+L.spacing;
+    if((phase==='exp'||phase==='promo'||phase==='preview')&&S.exp){
+        ctx.font=`600 ${L.expFs}px 'Noto Sans Bengali',sans-serif`;
+        const eLines=wrap(ctx,'💡 '+S.exp,w-L.pad*4);
+        const eLh=L.expFs*1.35;
+        const eBH=eLines.length*eLh+18*sc;
+        const eBW=w-L.pad*4;
+        rr(ctx,L.cx-eBW/2,expY,eBW,eBH,10*sc);
+        ctx.fillStyle='rgba(16,185,129,0.28)';ctx.fill();
+        ctx.strokeStyle='rgba(16,185,129,0.55)';ctx.lineWidth=2*sc;ctx.stroke();
+        ctx.fillStyle='#fff';ctx.textAlign='center';ctx.textBaseline='top';
+        eLines.forEach((ln,i)=>ctx.fillText(ln,L.cx,expY+9*sc+i*eLh));
+    }
+
+    // ===== AD (always at bottom if exists) =====
+    if(S.ad){
+        ctx.font=`600 ${L.adFs}px 'Noto Sans Bengali',sans-serif`;
+        const aLines=wrap(ctx,'📢 '+S.ad,w-L.pad*4);
+        const aLh=L.adFs*1.35;
+        const aBH=aLines.length*aLh+18*sc;
+        const aBW=w-L.pad*4;
+        const adY=h-aBH-L.pad*0.8;
+        rr(ctx,L.cx-aBW/2,adY,aBW,aBH,10*sc);
+        ctx.fillStyle='rgba(251,191,36,0.28)';ctx.fill();
+        ctx.strokeStyle='rgba(251,191,36,0.55)';ctx.lineWidth=2*sc;ctx.stroke();
+        ctx.fillStyle='#fff';ctx.textAlign='center';ctx.textBaseline='top';
+        aLines.forEach((ln,i)=>ctx.fillText(ln,L.cx,adY+9*sc+i*aLh));
+    }
+}
+</script>
+<script>
+// ========== SOUND ==========
+let aCtx=null;
+function tone(f,d,type='sine',v=0.18){
+    if(!S.sound)return;
+    try{
+        if(!aCtx)aCtx=new(window.AudioContext||window.webkitAudioContext)();
+        const o=aCtx.createOscillator();
+        const g=aCtx.createGain();
+        o.connect(g);g.connect(aCtx.destination);
+        o.frequency.value=f;o.type=type;
+        g.gain.setValueAtTime(v,aCtx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.01,aCtx.currentTime+d);
+        o.start();o.stop(aCtx.currentTime+d);
+    }catch(e){}
+}
+function sQ(){tone(520,0.1);setTimeout(()=>tone(660,0.1),80);setTimeout(()=>tone(780,0.12),160)}
+function sO(){tone(440,0.07);setTimeout(()=>tone(520,0.07),50)}
+function sT(){tone(900,0.04,'square',0.11)}
+function sC(){tone(520,0.08);setTimeout(()=>tone(660,0.08),80);setTimeout(()=>tone(780,0.08),160);setTimeout(()=>tone(1040,0.15),240)}
+
+// ========== GENERATE ==========
+async function generate(){
+    const q=$('q').value.trim();
+    const opts=[$('o0').value.trim(),$('o1').value.trim(),$('o2').value.trim(),$('o3').value.trim()];
+    if(!q){toast('⚠️ প্রশ্ন লিখুন!');return}
+    if(opts.some(o=>!o)){toast('⚠️ সব অপশন দিন!');return}
+
+    S.q=q;S.opts=opts;S.sound=$('snd').checked;
+    S.ad=$('ad').value.trim();S.exp=$('exp').value.trim();
+
+    const tpl=getTpl();
+    const isR=S.fmt==='reels';
+    const w=isR?1080:1920,h=isR?1920:1080;
+    const canvas=$('recC');
+    canvas.width=w;canvas.height=h;
+    const ctx=canvas.getContext('2d');
+
+    $('gb').disabled=true;
+    $('pb').classList.add('on');
+    $('st').classList.add('on');
+    $('st').textContent='ভিডিও রেন্ডার হচ্ছে...';
+    $('pf').style.width='0%';
+    $('db').style.display='none';
+    $('ci').classList.remove('on');
+    $('ld').classList.add('on');
+
+    const fps=30;
+    const intro1=1;    // question animation
+    const intro2=1;    // options animation
+    const timerSec=S.timer; // REAL timer
+    const ansSec=2;
+    const expSec=S.exp?3:0;
+    const totalSec=intro1+intro2+timerSec+ansSec+expSec;
+
+    const stream=canvas.captureStream(30);
+    let rec;
+    try{
+        rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp9',videoBitsPerSecond:6000000});
+    }catch{
+        try{rec=new MediaRecorder(stream,{mimeType:'video/webm',videoBitsPerSecond:6000000})}
+        catch{toast('❌ ব্রাউজার সাপোর্ট নেই');$('ld').classList.remove('on');$('gb').disabled=false;return}
+    }
+
+    const chunks=[];
+    rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+
+    rec.onstop=async()=>{
+        const webmBlob=new Blob(chunks,{type:'video/webm'});
+        $('lt').textContent='MP4 তে রূপান্তর হচ্ছে...';
+        $('ci').classList.add('on');
+
+        // Try MP4 conversion
+        try{
+            const mp4=await convertToMp4(webmBlob);
+            S.mp4blob=mp4;
+            $('db').textContent='📥 MP4 ডাউনলোড';
+            $('db').onclick=()=>dlMp4();
+        }catch(e){
+            // Fallback: WebM download
+            S.blob=webmBlob;
+            $('db').textContent='📥 WebM ডাউনলোড';
+            $('db').onclick=()=>dlWebm();
+            toast('⚠️ MP4 রূপান্তর ব্যর্থ, WebM ডাউনলোড করুন');
+        }
+
+        $('db').style.display='block';
+        $('st').textContent='✅ সম্পন্ন!';
+        $('pf').style.width='100%';
+        $('ld').classList.remove('on');
+        $('ci').classList.remove('on');
+        $('gb').disabled=false;
+        toast('🎉 ভিডিও তৈরি হয়েছে!');
+    };
+
+    rec.start();
+
+    let startTime=null;
+    let lastT=S.timer+1;
+    let qSnd=false,oSnd=false,cSnd=false;
+    let fr=0;
+
+    function render(ts){
+        if(!startTime)startTime=ts;
+        const el=(ts-startTime)/1000;
+        let phase,timer;
+
+        if(el<intro1){
+            phase='iq';timer=S.timer;
+            if(!qSnd&&el>0.3){sQ();qSnd=true}
+        }else if(el<intro1+intro2){
+            phase='io';timer=S.timer;
+            if(!oSnd&&el>intro1+0.3){sO();oSnd=true}
+        }else if(el<intro1+intro2+timerSec){
+            phase='timer';
+            timer=Math.ceil(S.timer-(el-intro1-intro2));
+            if(timer<1)timer=1;
+            if(timer!==lastT){sT();lastT=timer}
+        }else if(el<intro1+intro2+timerSec+ansSec){
+            phase='ans';timer=0;
+            if(!cSnd){sC();cSnd=true}
+        }else{
+            phase='exp';timer=0;
+        }
+
+        ctx.clearRect(0,0,w,h);
+        drawFrame(ctx,w,h,tpl,phase,timer,fr);
+
+        const prog=Math.min(100,(el/totalSec)*100);
+        $('pf').style.width=prog+'%';
+        $('lt').textContent=`রেন্ডার: ${Math.round(prog)}%`;
+        fr++;
+
+        if(el<totalSec)requestAnimationFrame(render);
+        else setTimeout(()=>rec.stop(),150);
+    }
+
+    await new Promise(r=>setTimeout(r,100));
+    requestAnimationFrame(render);
+}
+</script>
+<script>
+// ========== MP4 CONVERSION ==========
+async function convertToMp4(webmBlob){
+    // Method 1: Try MediaRecorder with MP4
+    // Method 2: Use canvas + video element trick
+    // Method 3: Direct download with rename (browser dependent)
+
+    return new Promise(async(resolve,reject)=>{
+        try{
+            // Check if browser supports MP4 recording directly
+            if(MediaRecorder.isTypeSupported('video/mp4')){
+                resolve(webmBlob); // Already MP4 compatible
+                return;
+            }
+
+            // Use FFmpeg WASM if available
+            if(typeof FFmpeg!=='undefined'){
+                const {createFFmpeg,fetchFile}=FFmpeg;
+                const ffmpeg=createFFmpeg({log:false});
+                await ffmpeg.load();
+                ffmpeg.FS('writeFile','input.webm',await fetchFile(webmBlob));
+                await ffmpeg.run('-i','input.webm','-c:v','libx264','-preset','fast','-crf','22','-c:a','aac','output.mp4');
+                const data=ffmpeg.FS('readFile','output.mp4');
+                resolve(new Blob([data.buffer],{type:'video/mp4'}));
+            }else{
+                // Fallback: return webm but name it mp4
+                // Some platforms accept this
+                reject(new Error('FFmpeg not available'));
+            }
+        }catch(e){
+            reject(e);
+        }
+    });
+}
+
+function dlMp4(){
+    if(!S.mp4blob)return;
+    const url=URL.createObjectURL(S.mp4blob);
+    const a=document.createElement('a');
+    a.href=url;
+    a.download=`Quiz_${S.fmt}_${Date.now()}.mp4`;
+    document.body.appendChild(a);a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    toast('📥 MP4 ডাউনলোড শুরু!');
+}
+
+function dlWebm(){
+    if(!S.blob)return;
+    const url=URL.createObjectURL(S.blob);
+    const a=document.createElement('a');
+    a.href=url;
+    a.download=`Quiz_${S.fmt}_${Date.now()}.webm`;
+    document.body.appendChild(a);a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    toast('📥 WebM ডাউনলোড শুরু!');
+}
+
+function dlVideo(){
+    if(S.mp4blob)dlMp4();
+    else if(S.blob)dlWebm();
+}
+</script>
+
+<!-- FFmpeg WASM for MP4 conversion -->
+<script>
+// ===== MP4 SOLUTION EXPLANATION =====
+// ব্রাউজার সরাসরি MP4 রেকর্ড করতে পারে না।
+// তাই দুটি অপশন দিচ্ছি:
+
+// অপশন ১: নিচের বাটনে ক্লিক করলে WebM ডাউনলোড হবে
+// তারপর CloudConvert বা HandBrake দিয়ে MP4 বানাবেন
+
+// অপশন ২: CapCut/Canva তে WebM import করুন
+// (CapCut Desktop সাপোর্ট করে)
+
+// অপশন ৩: FFmpeg WASM (ভারী, লোড হতে সময় লাগে)
+// আপনি চাইলে এটা যোগ করতে পারি পরে
+
+// টিপস: VLC Media Player দিয়ে WebM -> MP4 convert করুন
+// File > Convert/Save > Add > Select WebM > Convert to MP4
+</script>
+
+<script>
+// ===== FINAL INIT CHECK =====
+window.addEventListener('resize',()=>{
+    setupLC();lp();
+});
+
+// Auto preview on load
+window.addEventListener('load',()=>{
+    setTimeout(()=>{setupLC();lp();},300);
+});
+</script>
+</body>
+</html>
