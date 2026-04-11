@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Krisishikkha</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- 🔐 LOGIN BOX -->
+  <div id="loginBox" class="card">
+    <h2>🔐 Admin Login</h2>
+    <p>Username ও Password দিন</p>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <!-- 📊 DASHBOARD -->
+  <div id="dashboard" class="hidden">
+
+    <div class="topbar">
+      <h2>🛡️ Admin Dashboard</h2>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="linksContainer"></div>
+
+  </div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
