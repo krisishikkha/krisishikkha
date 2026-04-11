@@ -57,7 +57,7 @@ const EXAM_STATUS = {
     },
     "exam-10": {
     title: "HSC 2nd Paper 3rd Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam333"]
     },
