@@ -7,8 +7,8 @@ const LINKS = [
   {
     title: "📘 Main Links",
     items: [
-      { name: "Home", url: "../index.html" },   // 🔴 এখানে লিংক
-      { name: "NTRCA", url: "../ntrca.html" },   // 🔴 এখানে লিংক
+      { name: "Live Scoreboard", url: "..https://krisishikkha.github.io/krisishikkha/admin-auto-scoreboard.html?v=577" },   // 🔴 এখানে লিংক
+      { name: "Final Answer PDF", url: "..https://krisishikkha.github.io/krisishikkha/download-center.html" },   // 🔴 এখানে লিংক
       { name: "Exam", url: "../exam-corner.html" } // 🔴 এখানে লিংক
     ]
   },
