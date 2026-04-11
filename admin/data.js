@@ -1,6 +1,6 @@
 // 🔴 LOGIN INFO (এখানে পরিবর্তন করবেন)
-const USER = "admin";
-const PASS = "1234";
+const USER = "adminkrisi";
+const PASS = "krisiadmin";
 
 // 🔴 আপনার সব লিংক এখানে থাকবে
 const LINKS = [
