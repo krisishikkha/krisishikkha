@@ -1,17 +1,9 @@
 /**
  * EXPORT.JS
- * Handle image and document export functionality
+ * PNG এবং JPG এক্সপোর্ট
  */
 
 class ExportManager {
-    constructor() {
-        this.defaultFileName = 'note';
-        this.quality = 0.95;
-    }
-
-    /**
-     * Export preview as PNG
-     */
     async exportPNG() {
         try {
             const element = document.querySelector('#preview');
@@ -20,25 +12,23 @@ class ExportManager {
                 scale: 2,
                 logging: false,
                 useCORS: true,
+                allowTaint: true,
             });
 
             const link = document.createElement('a');
             link.href = canvas.toDataURL('image/png');
-            link.download = `${this.defaultFileName}.png`;
+            link.download = 'note-' + new Date().getTime() + '.png';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
 
-            this.showNotification('✅ PNG downloaded successfully!', 'success');
+            this.showNotification('✅ PNG সফলভাবে ডাউনলোড হয়েছে!', 'success');
         } catch (error) {
             console.error('PNG Export Error:', error);
-            this.showNotification('❌ Failed to export PNG', 'error');
+            this.showNotification('❌ PNG ডাউনলোড ব্যর্থ', 'error');
         }
     }
 
-    /**
-     * Export preview as JPG
-     */
     async exportJPG() {
         try {
             const element = document.querySelector('#preview');
@@ -47,60 +37,23 @@ class ExportManager {
                 scale: 2,
                 logging: false,
                 useCORS: true,
+                allowTaint: true,
             });
 
             const link = document.createElement('a');
-            link.href = canvas.toDataURL('image/jpeg', this.quality);
-            link.download = `${this.defaultFileName}.jpg`;
+            link.href = canvas.toDataURL('image/jpeg', 0.95);
+            link.download = 'note-' + new Date().getTime() + '.jpg';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
 
-            this.showNotification('✅ JPG downloaded successfully!', 'success');
+            this.showNotification('✅ JPG সফলভাবে ডাউনলোড হয়েছে!', 'success');
         } catch (error) {
             console.error('JPG Export Error:', error);
-            this.showNotification('❌ Failed to export JPG', 'error');
+            this.showNotification('❌ JPG ডাউনলোড ব্যর্থ', 'error');
         }
     }
 
-    /**
-     * Export preview as PDF
-     */
-    async exportPDF() {
-        try {
-            const element = document.querySelector('#preview');
-            const canvas = await html2canvas(element, {
-                backgroundColor: '#ffffff',
-                scale: 2,
-                logging: false,
-                useCORS: true,
-            });
-
-            const imgData = canvas.toDataURL('image/png');
-            const { jsPDF } = window.jspdf;
-            
-            const pdf = new jsPDF({
-                orientation: 'portrait',
-                unit: 'mm',
-                format: 'a4',
-            });
-
-            const imgWidth = 210; // A4 width in mm
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-            pdf.save(`${this.defaultFileName}.pdf`);
-
-            this.showNotification('✅ PDF downloaded successfully!', 'success');
-        } catch (error) {
-            console.error('PDF Export Error:', error);
-            this.showNotification('❌ Failed to export PDF', 'error');
-        }
-    }
-
-    /**
-     * Show notification toast
-     */
     showNotification(message, type = 'info') {
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
@@ -109,12 +62,14 @@ class ExportManager {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+            background: ${type === 'success' ? '#10b981' : '#ef4444'};
             color: white;
             padding: 15px 20px;
             border-radius: 6px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             z-index: 9999;
+            font-family: 'Noto Sans Bengali', sans-serif;
+            font-weight: 600;
             animation: slideIn 0.3s ease;
         `;
 
@@ -122,40 +77,39 @@ class ExportManager {
 
         setTimeout(() => {
             notification.style.animation = 'slideOut 0.3s ease';
-            setTimeout(() => document.body.removeChild(notification), 300);
+            setTimeout(() => {
+                if (document.body.contains(notification)) {
+                    document.body.removeChild(notification);
+                }
+            }, 300);
         }, 3000);
-    }
-
-    /**
-     * Copy preview as image to clipboard
-     */
-    async copyToClipboard() {
-        try {
-            const element = document.querySelector('#preview');
-            const canvas = await html2canvas(element, {
-                backgroundColor: '#ffffff',
-                scale: 2,
-                logging: false,
-            });
-
-            canvas.toBlob(blob => {
-                const item = new ClipboardItem({ 'image/png': blob });
-                navigator.clipboard.write([item]);
-                this.showNotification('✅ Copied to clipboard!', 'success');
-            });
-        } catch (error) {
-            console.error('Clipboard Error:', error);
-            this.showNotification('❌ Failed to copy', 'error');
-        }
-    }
-
-    /**
-     * Set custom filename
-     */
-    setFileName(name) {
-        this.defaultFileName = name || 'note';
     }
 }
 
-// Export for use in other files
 const exporter = new ExportManager();
+
+// CSS এনিমেশন
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
