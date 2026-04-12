@@ -321,7 +321,7 @@ html, body {
     letter-spacing: 1.5px;
     margin: 0 0 8px 0;
     padding: 0;
-    text-transform: uppercase;
+    text-transform: none;
     text-align: center;
 }
 
@@ -353,6 +353,7 @@ html, body {
     padding: 0;
     font-size: 14px;
     line-height: 1.1;
+    white-space: pre-wrap;
 }
 
 .preview-body p {
@@ -360,6 +361,7 @@ html, body {
     padding: 0;
     line-height: 1.1;
     word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 .preview-body ul,
@@ -378,6 +380,14 @@ html, body {
 
 .preview-body ol li {
     list-style-type: decimal;
+}
+
+/* বোল্ড টেক্সট স্টাইল */
+.preview-body strong,
+.preview-body li strong,
+.preview-body p strong {
+    font-weight: 700;
+    color: var(--text-dark);
 }
 
 /* ফুটার */
@@ -448,4 +458,4 @@ html, body {
     .btn-export {
         width: 100%;
     }
-      }
+    }
