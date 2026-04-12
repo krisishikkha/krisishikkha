@@ -17,7 +17,7 @@ const LINKS = [
       },
       {
         name: "Notes Creation",
-        url: "https://krisishikkha.github.io/krisishikkha/note-maker.html"
+        url: "https://krisishikkha.github.io/krisishikkha/note-maker"
        }
     ]
   }
