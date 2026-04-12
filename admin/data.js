@@ -14,7 +14,11 @@ const LINKS = [
       {
         name: "Result Sheet Download",
         url: "https://krisishikkha.github.io/krisishikkha/admin-auto-scoreboard.html?v=5"
-      }
+      },
+      {
+        name: "Notes Creation",
+        url: "https://krisishikkha.github.io/krisishikkha/note-maker.html"
+       }
     ]
   }
 
