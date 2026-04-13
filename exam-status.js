@@ -72,5 +72,47 @@ const EXAM_STATUS = {
     visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam2code"]
+    },
+  "exam-13": {
+    title: "SSC 1st Chapter",
+    visible: false,  // ✅ নতুন
+    status: "live",
+    codes: ["exam333"]
+    },
+  "exam-14": {
+    title: "SSC 2nd Chapter",
+    visible: false,  // ✅ নতুন
+    status: "live",
+    codes: ["exam333"]
+    },
+  "exam-15": {
+    title: "SSC 3rd Chapter",
+    visible: false,  // ✅ নতুন
+    status: "live",
+    codes: ["exam333"]
+    },
+  "exam-16": {
+    title: "SSC 4rth Chapter",
+    visible: false,  // ✅ নতুন
+    status: "live",
+    codes: ["exam333"]
+    },
+  "exam-17": {
+    title: "SSC 5th Chapter",
+    visible: false,  // ✅ নতুন
+    status: "live",
+    codes: ["exam333"]
+    },
+  "exam-18": {
+    title: "SSC 6th Chapter",
+    visible: false,  // ✅ নতুন
+    status: "live",
+    codes: ["exam333"]
+    },
+  "exam-19": {
+    title: "SSC 7th Chapter",
+    visible: false,  // ✅ নতুন
+    status: "live",
+    codes: ["exam333"]
     }
 };
