@@ -21,43 +21,43 @@ const EXAM_STATUS = {
   },
   "exam-4": {
     title: "HSC 1st Paper 3rd Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam349"]
       },
   "exam-5": {
     title: "HSC 1st Paper 4rth Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam62"]
     },
     "exam-6": {
     title: "HSC 1st Paper 5th Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam2668"]
     },
     "exam-7": {
     title: "HSC 1st Paper 6th Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam246"]
     },
     "exam-8": {
     title: "HSC 2nd Paper 1st Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam2"]
     },
     "exam-9": {
     title: "HSC 2nd Paper 2nd Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam222"]
     },
     "exam-10": {
     title: "HSC 2nd Paper 3rd Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam333"]
     },
@@ -69,7 +69,7 @@ const EXAM_STATUS = {
     },
   "exam-12": {
     title: "HSC 2nd Paper 5th Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam2222"]
     },
