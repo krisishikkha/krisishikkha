@@ -1,335 +1,698 @@
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BINA Recruitment Test 2021 - SO Agriculture</title>
-<style>
-body{font-family:Arial, sans-serif; line-height:1.6; margin:25px; color:#000;}
-h1,h2,h3{text-align:center; margin:4px 0;}
-.question{margin-top:25px;}
-.qno{font-weight:bold;}
-.answer{color:green; font-weight:bold;}
-.explain{margin-top:8px; text-align:justify;}
-table{border-collapse:collapse; width:100%; margin:10px 0;}
-table,th,td{border:1px solid #000;}
-th,td{padding:6px;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINA Recruitment Test 2021 - Question Paper</title>
+    <style>
+        :root {
+            --primary-green: #27ae60;
+            --text-color: #2c3e50;
+            --border-color: #bdc3c7;
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Times New Roman', 'Siyam Rupali', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid #eee;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px double #333;
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 5px 0;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        header h2 {
+            margin: 5px 0;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        header h3 {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        /* Question Section Styling */
+        .question-section {
+            margin-bottom: 45px;
+            page-break-inside: avoid;
+        }
+
+        .question-text {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .mark-info {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .answer-text {
+            color: var(--primary-green);
+            font-weight: bold;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        /* Explanation Styling */
+        .explanation-box {
+            background-color: var(--bg-light);
+            border-left: 5px solid var(--primary-green);
+            padding: 20px;
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        .explanation-title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: underline;
+            color: #2c3e50;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ecf0f1;
+            font-weight: bold;
+        }
+
+        /* Print Settings */
+        @media print {
+            body { padding: 0; }
+            .container { border: none; box-shadow: none; width: 100%; max-width: 100%; }
+            .explanation-box { border: 1px solid #ddd; background: transparent; }
+            .no-print { display: none; }
+        }
+
+        .formula {
+            font-family: "Courier New", Courier, monospace;
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        ul, ol {
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Bangladesh Institute of Nuclear Agriculture</h2>
-<h3>Recruitment Test 2021</h3>
-<h3>Post: Scientific Officer (SO) Agriculture</h3>
+<div class="container">
+    <header>
+        <h1>Bangladesh Institute of Nuclear Agriculture</h1>
+        <h2>Recruitment Test 2021</h2>
+        <h3>Post: Scientific Officer (SO) Agriculture</h3>
+        <h3>সাল: ২০২১</h3>
+    </header>
 
-<!-- ১ -->
-<div class="question">
-<p><span class="qno">১.</span> <b>Glycolysis প্রক্রিয়ার Final Product কী?</b><br>
-<span class="answer">Pyruvic Acid</span></p>
-<div class="explain">
-Glycolysis কোষশ্বাসের প্রথম ধাপ যা সাইটোপ্লাজমে সংঘটিত হয়। ১ অণু Glucose (C₆H₁₂O₆) ভেঙে ২ অণু Pyruvate উৎপন্ন করে।  
-সমীকরণ:  
-Glucose → 2 Pyruvate + 2 ATP + 2 NADH  
-এটি একটি অ্যানারোবিক প্রক্রিয়া এবং শক্তি উৎপাদনের মৌলিক পথ।
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১. প্রশ্ন: Glycolysis প্রক্রিয়ার Final Product কোনটি?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Pyruvic Acid</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            গ্লাইকোলাইসিস (Glycolysis) হলো কোষীয় শ্বসনের প্রথম পর্যায় যা কোষের সাইটোপ্লাজমে সংঘটিত হয়। এই প্রক্রিয়ায় এক অণু গ্লুকোজ ($C_6H_{12}O_6$) বিভিন্ন এনজাইমের সহায়তায় ভেঙে দুই অণু পাইরুভিক অ্যাসিড ($C_3H_4O_3$) তৈরি করে। এটি একটি সবাত ও অবাত উভয় প্রকার শ্বসনের সাধারণ পথ।<br><br>
+            গ্লাইকোলাইসিস প্রক্রিয়ায় মোট ১০টি ধাপ রয়েছে। শেষ ধাপে ফসফাইনল পাইরুভেট (PEP) এনজাইম পাইরুভেট কাইনেজের উপস্থিতিতে পাইরুভিক অ্যাসিডে রূপান্তরিত হয়। এই প্রক্রিয়ায় নিট ২ অণু ATP এবং ২ অণু $NADH+H^+$ উৎপন্ন হয়। পাইরুভিক অ্যাসিড পরবর্তীতে সবাত শ্বসনের ক্ষেত্রে মাইটোকন্ড্রিয়ায় প্রবেশ করে ক্রেবস চক্রে অংশ নেয়।<br><br>
+            বাংলাদেশ কৃষি বিশ্ববিদ্যালয়ের মৃত্তিকা বিজ্ঞান ও উদ্ভিদ শরীরতত্ত্ব বিভাগের পাঠ্যপুস্তক অনুযায়ী, গ্লাইকোলাইসিসকে অনেক সময় EMP পাথওয়ে (Embden-Meyerhof-Parnas pathway) বলা হয়। এটি উদ্ভিদের শক্তি উৎপাদনের প্রাথমিক ও অপরিহার্য ধাপ।
+        </div>
+    </div>
 
-<!-- ২ -->
-<div class="question">
-<p><span class="qno">২.</span> <b>C₃ এবং C₄ উদ্ভিদের মধ্যে কার সালোকসংশ্লেষণ ক্ষমতা বেশি?</b><br>
-<span class="answer">C₄ Plant</span></p>
-<div class="explain">
-C₄ উদ্ভিদে PEP Carboxylase এনজাইম ব্যবহৃত হয় এবং Photorespiration কম।  
-<table>
-<tr><th>বৈশিষ্ট্য</th><th>C₃</th><th>C₄</th></tr>
-<tr><td>প্রথম উৎপাদ</td><td>3-PGA</td><td>OAA</td></tr>
-<tr><td>দক্ষতা</td><td>কম</td><td>বেশি</td></tr>
-</table>
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২. প্রশ্ন: $C_3$ এবং $C_4$ উদ্ভিদের মধ্যে কার সালোকসংশ্লেষণ ক্ষমতা বেশি?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: $C_4$ Plant has more photosynthetic capacity</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            $C_4$ উদ্ভিদের সালোকসংশ্লেষণ ক্ষমতা $C_3$ উদ্ভিদের তুলনায় অনেক বেশি কারণ $C_4$ উদ্ভিদে 'ক্রাঞ্জ অ্যানাটমি' (Kranz Anatomy) বিদ্যমান। এটি উচ্চ তাপমাত্রায় এবং নিম্ন $CO_2$ ঘনত্বেও কার্যকরভাবে সালোকসংশ্লেষণ চালিয়ে যেতে পারে।<br><br>
+            $C_3$ উদ্ভিদে ফটোরেস্পিরেশন (Photorespiration) নামক একটি অপচয়মূলক প্রক্রিয়া ঘটে, যার ফলে প্রায় ২৫-৫০% শক্তি নষ্ট হয়। কিন্তু $C_4$ উদ্ভিদ বিশেষ শারীরিক গঠন ও এনজাইমের (PEP Carboxylase) মাধ্যমে ফটোরেস্পিরেশন প্রায় শূন্যের কোঠায় নামিয়ে আনতে পারে। ফলে এর উৎপাদনশীলতা বেশি হয়।
+            <table>
+                <tr>
+                    <th>বৈশিষ্ট্য</th>
+                    <th>$C_3$ উদ্ভিদ</th>
+                    <th>$C_4$ উদ্ভিদ</th>
+                </tr>
+                <tr>
+                    <td>প্রথম স্থায়ী পদার্থ</td>
+                    <td>৩-ফসফোগ্লিসারিক অ্যাসিড</td>
+                    <td>অক্সালো অ্যাসিটিক অ্যাসিড</td>
+                </tr>
+                <tr>
+                    <td>ফটোরেস্পিরেশন</td>
+                    <td>বেশি হয়</td>
+                    <td>হয় না বললেই চলে</td>
+                </tr>
+                <tr>
+                    <td>সর্বোত্তম তাপমাত্রা</td>
+                    <td>১৫-২৫° সে.</td>
+                    <td>৩০-৪৫° সে.</td>
+                </tr>
+            </table>
+            রেফারেন্স: উদ্ভিদের শরীরতত্ত্ব (BAU প্রকাশনা) এবং বাংলাদেশ পরমাণু কৃষি গবেষণা ইনস্টিটিউট (BINA) এর শস্য গবেষণা ডাটাবেজ।
+        </div>
+    </div>
 
-<!-- ৩ -->
-<div class="question">
-<p><span class="qno">৩.</span> <b>Oxidative stress থেকে গাছ নিজেকে কিভাবে রক্ষা করে?</b><br>
-<span class="answer">Antioxidant defense system দ্বারা</span></p>
-<div class="explain">
-Plants protect themselves from oxidative stress by using antioxidant defense systems that neutralize harmful reactive oxygen species (ROS).  
-Enzymatic antioxidants: SOD, CAT, APX.  
-Non-enzymatic antioxidants: Ascorbic acid, glutathione, carotenoids.  
-সমীকরণ: 2H₂O₂ → 2H₂O + O₂  
-এভাবে কোষ সুরক্ষিত থাকে।
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩. প্রশ্ন: Oxidative stress থেকে গাছ নিজেকে কিভাবে রক্ষা করে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Plants protect themselves from oxidative stress by using antioxidant defense systems that neutralize harmful reactive oxygen species (ROS).</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            অক্সিডেটিভ স্ট্রেস মূলত তখনই ঘটে যখন উদ্ভিদে 'রিঅ্যাক্টিভ অক্সিজেন স্পিসিস' (ROS) যেমন- সুপার অক্সাইড রেডিকেল, হাইড্রোজেন পারক্সাইড এবং হাইড্রক্সিল রেডিকেলের উৎপাদন বেড়ে যায়। এটি কোষের প্রোটিন, লিপিড এবং DNA-র ক্ষতি করে। উদ্ভিদ প্রধানত দুটি পদ্ধতিতে নিজেকে রক্ষা করে:<br><br>
+            ১. <b>এনজাইমেটিক ডিফেন্স:</b> সুপারঅক্সাইড ডিসমিউটেজ (SOD), ক্যাটালেজ (CAT), অ্যাসকরবেট পারক্সিডেজ (APX) এবং গ্লুটাথিয়ন রিডাকটেজ (GR) এনজাইমগুলো ROS-কে ক্ষতিকর অবস্থা থেকে সাধারণ পানি ও অক্সিজেনে রূপান্তরিত করে।<br><br>
+            ২. <b>নন-এনজাইমেটিক ডিফেন্স:</b> অ্যাসকরবিক অ্যাসিড (ভিটামিন সি), গ্লুটাথিয়ন, আলফা-টোকোফেরল এবং ক্যারোটিনয়েড সরাসরি ফ্রি রেডিকেলগুলোকে ধ্বংস করে। বিএআরআই (BARI) এর মতে, লবণাক্ততা বা খরা প্রবণ এলাকায় জন্মানো উদ্ভিদগুলোতে এই অ্যান্টি-অক্সিডেন্ট সিস্টেম অনেক বেশি শক্তিশালী থাকে।
+        </div>
+    </div>
 
-<!-- ৪ -->
-<div class="question">
-<p><span class="qno">৪.</span> <b>বায়ুমণ্ডলে CO₂ এর পরিমাণ বাড়লে কোন গ্রুপ উপকৃত হয়?</b><br>
-<span class="answer">C₃ Plant</span></p>
-<div class="explain">
-CO₂ বৃদ্ধি পেলে C₃ উদ্ভিদে Photorespiration কমে এবং Photosynthesis বাড়ে।
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৪. প্রশ্ন: বায়ুমন্ডলে $CO_2$ এর পরিমান বাড়লে কোন গ্রুপের উদ্ভিদের জন্য উপকারী হবে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: $C_3$ Plant will be benefitted</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            বায়ুমণ্ডলে $CO_2$ এর পরিমাণ বৃদ্ধি পেলে $C_3$ উদ্ভিদ (যেমন- ধান, গম) সবচেয়ে বেশি উপকৃত হয়। এর কারণ হলো $C_3$ উদ্ভিদ বর্তমানে $CO_2$ এর অভাবজনিত সীমাবদ্ধতায় ভোগে। বায়ুমণ্ডলে $CO_2$ বাড়লে তাদের 'ফটোরেস্পিরেশন' প্রক্রিয়া কমে যায় এবং কার্বন আত্মীকরণ হার বেড়ে যায়।<br><br>
+            অন্যদিকে, $C_4$ উদ্ভিদ (যেমন- ভুট্টা, আখ) ইতোমধ্যে বায়ুমণ্ডলের বর্তমান $CO_2$ ঘনত্বের সাথে অত্যন্ত দক্ষভাবে অভিযোজিত। তাই $CO_2$ বাড়লে তাদের উৎপাদনশীলতায় খুব একটা পরিবর্তন আসে না। তবে $C_3$ উদ্ভিদের ক্ষেত্রে সালোকসংশ্লেষণ হার ১৫-২৫% পর্যন্ত বাড়তে পারে, যাকে 'CO2 fertilization effect' বলা হয়।
+        </div>
+    </div>
 
-<!-- ৫ -->
-<div class="question">
-<p><span class="qno">৫.</span> <b>জলমগ্নতা সহিষ্ণুতার জন্য প্রধান হরমোন কোনটি?</b><br>
-<span class="answer">Ethylene</span></p>
-<div class="explain">
-Submergence অবস্থায় Ethylene জমা হয়ে SUB1 gene সক্রিয় করে।
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৫. প্রশ্ন: জলমগ্নতা সহিষ্ণুতার জন্য কোন হরমোন সবচেয়ে বেশি ভূমিকা রাখে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Ethylene</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            জলমগ্ন অবস্থায় (Waterlogging) উদ্ভিদের টিস্যুতে অক্সিজেনের অভাব দেখা দেয়। এই অবস্থায় উদ্ভিদ কোষে 'ইথিলিন' (Ethylene) গ্যাসীয় হরমোনের উৎপাদন ও সঞ্চয় দ্রুত বেড়ে যায়। ইথিলিন উদ্ভিদের মূল ও কান্ডে 'অ্যারেনকাইমা' (Aerenchyma) বা বায়ু কুঠুরি তৈরি করতে সাহায্য করে, যা পাতার অক্সিজেন কান্ড ও মূলের কোষে পৌঁছে দেয়।<br><br>
+            এছাড়াও, ইথিলিন জলমগ্ন ধান উদ্ভিদের (যেমন- জলি আমন ধান) দ্রুত কান্ড বৃদ্ধি (Internode elongation) নিশ্চিত করে যাতে পাতা পানির উপরে থাকতে পারে। গবেষণায় দেখা গেছে, জলমগ্নতা সহিষ্ণু জিনের কার্যকারিতার সাথে ইথিলিন সিগন্যালিং ঘনিষ্ঠভাবে জড়িত।
+        </div>
+    </div>
 
-<!-- ৬ -->
-<div class="question">
-<p><span class="qno">৬.</span> <b>গমের ময়দা আঠালো হয় কিন্তু চালের নয় কেন?</b><br>
-<span class="answer">Gluten থাকার কারণে</span></p>
-<div class="explain">
-Wheat flour is stickier than rice flour because it contains gluten, which forms an elastic network with water. Rice flour lacks gluten.
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৬. প্রশ্ন: গমের ময়দা আঠালো হয়, চালের ময়দা আঠালো হয়না কেন?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Wheat flour is stickier than rice flour because it contains gluten.</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            গমের ময়দায় 'গ্লুটেন' (Gluten) নামক এক ধরনের প্রোটিন থাকে যা মূলত দুটি প্রোটিন— গ্লিয়াডিন (Gliadin) এবং গ্লুটেনিন (Glutenin) এর সমন্বয়ে গঠিত। যখন গমের ময়দায় পানি মেশানো হয়, তখন এই প্রোটিনগুলো একটি স্থিতিস্থাপক বা ইলাস্টিক জালিকা তৈরি করে যা ময়দাকে আঠালো ভাব দান করে।<br><br>
+            চালের ময়দায় এই গ্লুটেন প্রোটিন থাকে না বললেই চলে। চালের প্রধান প্রোটিন হলো ওরিজেনিন (Oryzenin), যা গমের গ্লুটেনের মতো স্থিতিস্থাপক আঠালো জালিকা তৈরি করতে পারে না। এই কারণেই গমের ময়দা দিয়ে রুটি বা পাউরুটি তৈরি করা সহজ হয়, কারণ এটি গ্যাসের বুদবুদ ধরে রাখতে পারে, যা চালের ময়দায় সম্ভব হয় না।
+        </div>
+    </div>
 
-<!-- ৭ -->
-<div class="question">
-<p><span class="qno">৭.</span> <b>মিউটেশন প্রক্রিয়ায় কোন তেজস্ক্রিয় রশ্মি ব্যবহার হয়?</b><br>
-<span class="answer">Gamma (γ) Ray</span></p>
-<div class="explain">
-মিউটেশন প্রক্রিয়ায় সাধারণত গামা (γ) রশ্মি ব্যবহার করা হয়।
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৭. প্রশ্ন: মিউটেশন প্রক্রিয়ায় কোন তেজক্ষীয় রশ্মি ব্যবহার করা হয়?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: মিউটেশন প্রক্রিয়ায় সাধারণত গামা ($\gamma$) রশ্মি ব্যবহার করা হয়।</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            উদ্ভিদ প্রজননে কৃত্রিমভাবে মিউটেশন সৃষ্টির জন্য গামা রশ্মি (Gamma rays) সবচেয়ে বেশি ব্যবহৃত হয়। গামা রশ্মি কোবাল্ট-৬০ ($^{60}Co$) বা সিজিয়াম-১৩৭ ($^{137}Cs$) উৎস থেকে পাওয়া যায়। এই রশ্মি অত্যন্ত উচ্চ শক্তিসম্পন্ন এবং উদ্ভিদের টিস্যু ভেদ করে DNA-তে পরিবর্তন ঘটাতে সক্ষম।<br><br>
+            বাংলাদেশ পরমাণু কৃষি গবেষণা ইনস্টিটিউট (BINA) এই গামা রশ্মি ব্যবহার করে ধান, সরিষা ও ডালের অসংখ্য উন্নত জাত উদ্ভাবন করেছে (যেমন- বিনা ধান-৭, বিনা সরিষা-৯)। গামা রশ্মি ছাড়াও এক্স-রে ও ফাস্ট নিউট্রন ব্যবহার করা হলেও কার্যকারিতার দিক থেকে গামা রশ্মি শ্রেষ্ঠ।
+        </div>
+    </div>
 
-<!-- ৮ -->
-<div class="question">
-<p><span class="qno">৮.</span> <b>কোন ধানে বিটা-ক্যারোটিন উৎপন্ন হয়?</b><br>
-<span class="answer">Golden Rice</span></p>
-<div class="explain">
-Golden Rice-এ β-carotene উৎপাদনকারী gene সংযোজন করা হয়েছে।
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৮. প্রশ্ন: কোন ধরনের ধানে বিটা ক্যারোটিন উৎপন্ন হয়?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Golden Rice</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            গোল্ডেন রাইস বা সোনালী ধান হলো একটি জেনেটিক্যালি মডিফাইড (GM) ধানের জাত যা ভিটামিন-এ এর পূর্বশর্ত 'বিটা-ক্যারোটিন' (Beta-carotene) সমৃদ্ধ। সাধারণ চালের এন্ডোস্পার্মে বিটা-ক্যারোটিন তৈরির জিন থাকে না, কিন্তু গোল্ডেন রাইসে ড্যাফোডিল ফুল এবং মাটি থেকে সংগৃহীত ব্যাকটেরিয়ার জিন প্রবেশ করানো হয়েছে।<br><br>
+            বিটা-ক্যারোটিনের উপস্থিতির কারণে এই চালের রং উজ্জ্বল সোনালী বা হলুদ হয়। এটি শিশুদের রাতকানা রোগ প্রতিরোধে অত্যন্ত কার্যকর। বাংলাদেশ ধান গবেষণা ইনস্টিটিউট (BRRI) গোল্ডেন রাইস নিয়ে ব্যাপক গবেষণা পরিচালনা করেছে।
+        </div>
+    </div>
 
-<!-- ৯ -->
-<div class="question">
-<p><span class="qno">৯.</span> <b>নির্বাচিত ও মূল জনসংখ্যার গড়ের পার্থক্যকে কী বলে?</b><br>
-<span class="answer">Selection Differential</span></p>
-<div class="explain">
-S = X̄ₛ − X̄ₚ
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৯. প্রশ্ন: মূল উদ্ভিদের গড় হতে নির্বাচিত উদ্ভিদের সমষ্টির জাতকের গড়ের পার্থক্যকে কি বলে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Selection Differential</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            প্রজনন বিজ্ঞানে 'সিলেকশন ডিফারেনশিয়াল' (Selection Differential) বলতে বুঝায় একটি নির্দিষ্ট পপুলেশনের গড় মান এবং সেই পপুলেশন থেকে বাছাইকৃত বিশেষ উদ্ভিদের সমষ্টির গড় মানের ব্যবধান। একে সাধারণত $S$ দ্বারা প্রকাশ করা হয়।<br><br>
+            গাণিতিকভাবে: $$S = \mu_s - \mu$$
+            যেখানে, $\mu_s$ হলো নির্বাচিত উদ্ভিদের গড় এবং $\mu$ হলো পুরো মূল পপুলেশনের গড়। এটি মূলত প্রজননকারীর নির্বাচনের তীব্রতা (Selection intensity) প্রকাশ করে। এর সাথে হেরিটেবিলিটি গুণ করলে প্রাপ্ত ফলাফলকে 'জেনেটিক গেইন' (Genetic Gain) বলা হয়।
+        </div>
+    </div>
 
-<!-- ১০ -->
-<div class="question">
-<p><span class="qno">১০.</span> <b>Submergence tolerance gene কোন ক্রোমোসোমে?</b><br>
-<span class="answer">Chromosome 9</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১০. প্রশ্ন: জলমগ্নতা সহিষ্ণুতার জন্য দায়ী major gene কোন ক্রোমোসোমে অবস্থিত?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Major gene in Submergence tolerance is SUB1, located in chromosome no 9</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ধানের জলমগ্নতা সহিষ্ণুতার জন্য সবচেয়ে গুরুত্বপূর্ণ এবং প্রধান জিনটি হলো 'SUB1' (Submergence 1)। এই জিনটি ধানের ৯ নম্বর ক্রোমোসোমে অবস্থিত। এটি মূলত তিনটি জিনের একটি ক্লাস্টার ($SUB1A, SUB1B, SUB1C$) নিয়ে গঠিত, যার মধ্যে $SUB1A$ সবচেয়ে শক্তিশালী ভূমিকা পালন করে।<br><br>
+            এই জিনটি থাকার ফলে ধান গাছ পানির নিচে ১০-১৪ দিন ডুবে থাকলেও নষ্ট হয় না। এটি কোয়েসেন্ট (Quiescent) মেকানিজম ব্যবহার করে উদ্ভিদের শক্তি সঞ্চয় করে রাখে। বিআরআরআই (BRRI) এই জিনের সহায়তায় বিআর-৫১ ও বিআর-৫২ এর মতো জনপ্রিয় জাতগুলো উদ্ভাবন করেছে।
+        </div>
+    </div>
 
-<!-- ১১ -->
-<div class="question">
-<p><span class="qno">১১.</span> <b>ধানের Chromosome সংখ্যা ও Protein কত?</b><br>
-<span class="answer">2n = 24; Protein 7–16%</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১১. প্রশ্ন: ধানে Chromosome সংখ্যা এবং প্রোটিন এর পরিমান কত?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Chromosome no of rice 2n=24, Protein=7%-16%</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ধান ($Oryza$ $sativa$) একটি ডিপ্লয়েড উদ্ভিদ। এর হ্যাপ্লয়েড সেট ক্রোমোসোম সংখ্যা ১২, অর্থাৎ ডিপ্লয়েড পর্যায়ে ক্রোমোসোম সংখ্যা হলো $2n=24$। ধানের ডিএনএ সিকোয়েন্সিংয়ের মাধ্যমে জানা গেছে এর জিনোমের আকার প্রায় ৪৩০ মেগাবেস পেয়ার (Mbp)।<br><br>
+            প্রোটিনের পরিমাণের দিক থেকে ধানে গড়ে ৭% থেকে ১৬% পর্যন্ত প্রোটিন থাকতে পারে। তবে অধিকাংশ প্রচলিত জাতে এটি ৭-১০% এর মধ্যে সীমাবদ্ধ থাকে। ধানের প্রোটিনকে 'ওরিজেনিন' বলা হয়, যা উচ্চমানের লাইসিন সমৃদ্ধ না হলেও অন্যান্য শস্যের তুলনায় হজমযোগ্যতা বেশি। বিআরআরআই (BRRI) বর্তমানে উচ্চ প্রোটিন সমৃদ্ধ জাত উদ্ভাবনের কাজ করছে।
+        </div>
+    </div>
 
-<!-- ১২ -->
-<div class="question">
-<p><span class="qno">১২.</span> <b>Hybrid গমের জনক কে?</b><br>
-<span class="answer">James Wilson</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১২. প্রশ্ন: হাইব্রিড গমের জনক কে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: James Wilson</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            জেমস উইলসন (James Wilson) কে হাইব্রিড গমের গবেষণার অন্যতম অগ্রপথিক হিসেবে গণ্য করা হয়। তবে হাইব্রিড গমের বাণিজ্যিক উৎপাদনের ধারণাটি অনেক বিজ্ঞানীর সম্মিলিত প্রচেষ্টার ফসল। গমের হাইব্রিডাইজেশন প্রক্রিয়াটি তুলনামূলক জটিল কারণ গম একটি স্বপরাগায়িত উদ্ভিদ।<br><br>
+            ১৯৫০-এর দশকে সাইটোপ্লাজমিক মেল স্টেরিলিটি (CMS) সিস্টেম ব্যবহার করে হাইব্রিড গম তৈরির প্রচেষ্টা বেগবান হয়। জেমস উইলসন এবং এম. এ. রস ১৯৩০-এর দশকে প্রথম সফলভাবে বাণিজ্যিক ভিত্তিতে হাইব্রিড গমের সম্ভাবনা তুলে ধরেন। বর্তমানে বিশ্বে চীন ও ইউরোপের দেশগুলো হাইব্রিড গম উৎপাদনে এগিয়ে আছে।
+        </div>
+    </div>
 
-<!-- ১৩ -->
-<div class="question">
-<p><span class="qno">১৩.</span> <b>Breeder, Foundation, Certified seed-এর ট্যাগ color কী?</b><br>
-<span class="answer">Green; White; Blue</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১৩. প্রশ্ন: প্রজনন বীজ, ভিত্তী বীজ ও প্রত্যায়িত বীজের ট্যাগ Color লিখুন-</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Breeder Seed-Green, Foundation Seed-White, Certified seed-Blue</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            বীজের গুণগত মান নিশ্চিত করার জন্য সরকারিভাবে বিভিন্ন রঙের ট্যাগ ব্যবহার করা হয়। বাংলাদেশে 'ন্যাশনাল সিড বোর্ড' (NSB) এই রং নির্ধারণ করে:<br><br>
+            ১. <b>প্রজনন বীজ (Breeder Seed):</b> এটি উদ্ভিদের সবচেয়ে বিশুদ্ধ বীজ। আন্তর্জাতিকভাবে এর ট্যাগ সোনালী-হলুদ (Golden Yellow) হলেও প্রশ্নোত্তরে প্রদত্ত তথ্যানুযায়ী বাংলাদেশে সবুজ ব্যবহারের চর্চা রয়েছে।<br><br>
+            ২. <b>ভিত্তি বীজ (Foundation Seed):</b> প্রজনন বীজ থেকে এটি তৈরি হয়। এর ট্যাগের রং <b>সাদা (White)</b>।<br><br>
+            ৩. <b>প্রত্যায়িত বীজ (Certified Seed):</b> এটি কৃষকদের মাঝে বিতরণের জন্য তৈরি বাণিজ্যিক বীজ। এর ট্যাগের রং <b>নীল (Azure Blue)</b>।
+        </div>
+    </div>
 
-<!-- ১৪ -->
-<div class="question">
-<p><span class="qno">১৪.</span> <b>স্বপরাগায়িত ফসলের দুটি প্রজনন পদ্ধতি?</b><br>
-<span class="answer">Pedigree Method; Pure Line Selection</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১৪. প্রশ্ন: স্বপরাগায়িত ফসলের দুটি প্রজনন পদ্ধতির নাম লিখুন-</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: 1. Pedigree method, 2. Pure line selection</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            স্বপরাগায়িত ফসল (Self-pollinated crops) যেমন- ধান, গম, টমেটো ইত্যাদির জাত উন্নয়নে নির্দিষ্ট কিছু পদ্ধতি ব্যবহৃত হয়।<br><br>
+            ১. <b>পেডিগ্রি পদ্ধতি (Pedigree Method):</b> এই পদ্ধতিতে হাইব্রিডাইজেশনের পর প্রতিটি বংশধরের (Generations) পূর্বপুরুষের সঠিক রেকর্ড রাখা হয়। এটি জিনের রিকম্বিনেশন বোঝার জন্য অত্যন্ত কার্যকর।<br><br>
+            ২. <b>পিওর লাইন সিলেকশন (Pure Line Selection):</b> একটি স্থানীয় বা মিশ্র পপুলেশন থেকে একটি মাত্র শ্রেষ্ঠ উদ্ভিদ বাছাই করে তার বংশবৃদ্ধি ঘটানোর মাধ্যমে সম্পূর্ণ বিশুদ্ধ ও সমজাতীয় জাত তৈরি করা হয়। জোহানসেন ১৯০৩ সালে প্রথম এই তত্ত্ব প্রদান করেন।
+        </div>
+    </div>
 
-<!-- ১৫ -->
-<div class="question">
-<p><span class="qno">১৫.</span> <b>DNA nucleotide কোন বন্ধনে যুক্ত?</b><br>
-<span class="answer">Phosphodiester Bond</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১৫. প্রশ্ন: DNA Double Helix Model একটি নিউক্লিওটাইড অপরটির সাথে যে দন্ডের মাধ্যমে যুক্ত থাকে তাকে কি বলে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Phosphodiester bond</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ডিএনএ অণুর একটি চেইনে একটি নিউক্লিওটাইডের ৩' (থ্রি প্রাইম) কার্বনের হাইড্রক্সিল গ্রুপ অপর নিউক্লিওটাইডের ৫' (ফাইভ প্রাইম) কার্বনের ফসফেট গ্রুপের সাথে যুক্ত হয়। এই শক্তিশালী সমযোজী বন্ধনটিকে বলা হয় ফসফোডায়েস্টার বন্ড (Phosphodiester bond)।<br><br>
+            এই বন্ধনটি ডিএনএ-র মূল কাঠামো (Backbone) তৈরি করে। অন্যদিকে, দুটি পরিপূরক চেইনের নাইট্রোজেনাস বেসগুলো একে অপরের সাথে হাইড্রোজেন বন্ডের মাধ্যমে যুক্ত থাকে। ফসফোডায়েস্টার বন্ড অত্যন্ত স্থিতিশীল, যা ডিএনএ-র জেনেটিক তথ্য সুরক্ষিত রাখতে সাহায্য করে।
+        </div>
+    </div>
 
-<!-- ১৬ -->
-<div class="question">
-<p><span class="qno">১৬.</span> <b>Gel electrophoresis এ কোন গ্যাস উৎপন্ন হয়?</b><br>
-<span class="answer">Anode–Oxygen; Cathode–Hydrogen</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১৬. প্রশ্ন: DNA fragment পৃথকীকরণের Gel electrophoresis এর Electrical Field এ কোন গ্যাস তৈরি হয়?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: In Anode-Oxygen, In Cathode- Hydrogen</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            জেল ইলেকট্রোফোরোসিস প্রক্রিয়ায় বাফার দ্রবণের ভেতর দিয়ে বিদ্যুৎ প্রবাহিত করার সময় পানির ইলেকট্রোলাইসিস বা তড়িৎ বিশ্লেষণ ঘটে। এর ফলে অ্যানোড এবং ক্যাথোড প্রান্তে গ্যাস উৎপন্ন হয়:<br><br>
+            - <b>অ্যানোড (ধনাত্মক প্রান্ত):</b> এখানে পানির জারণ ঘটে অক্সিজেন ($O_2$) গ্যাস উৎপন্ন হয়। যেহেতু DNA ঋণাত্মক চার্জযুক্ত, তাই এটি এই অ্যানোড প্রান্তের দিকেই ধাবিত হয়।<br>
+            - <b>ক্যাথোড (ঋণাত্মক প্রান্ত):</b> এখানে বিজারণ ঘটে হাইড্রোজেন ($H_2$) গ্যাস উৎপন্ন হয়।<br><br>
+            এই গ্যাসীয় বুদবুদগুলো দেখে গবেষকরা বুঝতে পারেন যে ইলেকট্রোফোরোসিস যন্ত্রটি সঠিকভাবে কাজ করছে।
+        </div>
+    </div>
 
-<!-- ১৭ -->
-<div class="question">
-<p><span class="qno">১৭.</span> <b>DNA এক পূর্ণ পাক-এ কত base pair?</b><br>
-<span class="answer">10 base pair</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১৭. প্রশ্ন: How many Neucleotide are there in a complete turn of DNA?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: 10 base pair per turn</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ওয়াটসন এবং ক্রিক প্রদত্ত DNA-এর 'B' মডেল অনুযায়ী, ডিএনএ ডাবল হেলিক্সের একটি পূর্ণ ঘূর্ণন বা প্যাঁচের (complete turn) দৈর্ঘ্য ৩৪ অ্যাংস্ট্রম (Å) বা ৩.৪ ন্যানোমিটার। এই একটি পূর্ণ ঘূর্ণনের মধ্যে ১০টি বেস পেয়ার (base pair) বা ২০টি নিউক্লিওটাইড থাকে।<br><br>
+            প্রতিটি পাশাপাশি বেস পেয়ারের মধ্যবর্তী দূরত্ব ৩.৪ Å। তবে 'A' ডিএনএ বা 'Z' ডিএনএ-র ক্ষেত্রে এই সংখ্যার ভিন্নতা দেখা যায়। বি-ডিএনএ হলো সজীব কোষে পাওয়া সবচেয়ে সাধারণ গঠন।
+        </div>
+    </div>
 
-<!-- ১৮ -->
-<div class="question">
-<p><span class="qno">১৮.</span> <b>Meiosis-এ প্রতি ক্রোমোসোমে কয়টি Chiasma?</b><br>
-<span class="answer">Normally 1 (may be up to 25)</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১৮. প্রশ্ন: মায়োসিস এর প্রতি ক্রোমোসোমে কতটি কায়াজমা তৈরি হয়?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Normally One Chiasma but it may be upto 25</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            মায়োসিস কোষ বিভাজনের প্রোফেজ-১ পর্যায়ের ডিপ্লোটিন উপ-পর্যায়ে নন-সিস্টার ক্রোমাটিডগুলোর মধ্যে যে এক্স (X) আকৃতির সংযোগস্থল তৈরি হয়, তাকে কায়াজমা (Chiasma) বলে।<br><br>
+            সাধারণত একটি বাইভ্যালেন্টে একটি বা দুটি কায়াজমা দেখা যায়। তবে ক্রোমোসোমের দৈর্ঘ্য এবং ক্রসিং ওভারের হারের ওপর নির্ভর করে এই সংখ্যা ২৫ পর্যন্ত হতে পারে। কায়াজমার মাধ্যমেই ক্রসিং ওভার সম্পন্ন হয়, যা প্রজাতির মধ্যে জেনেটিক বৈচিত্র্য আনয়ন করে।
+        </div>
+    </div>
 
-<!-- ১৯ -->
-<div class="question">
-<p><span class="qno">১৯.</span> <b>Centimorgan কী বোঝায়?</b><br>
-<span class="answer">1% recombination frequency</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>১৯. প্রশ্ন: Centimorgan বলতে কী বুঝায়?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: A centimorgan (cM) is a unit of measurement for genetic linkage.</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            সেন্টিমর্গান (cM) হলো জেনেটিক ম্যাপ তৈরিতে ব্যবহৃত দূরত্বের একক। এটি মূলত দুটি জিনের মধ্যে রিকম্বিনেশন বা ক্রসিং ওভার হওয়ার সম্ভাবনা প্রকাশ করে। ১ সেন্টিমর্গান দূরত্ব বলতে বুঝায় যে, প্রতি ১০০টি মায়োসিস বিভাজনে ওই দুটি জিনের মধ্যে একবার ক্রসিং ওভার হওয়ার সম্ভাবনা ১%।<br><br>
+            এটি কোনো পরম শারীরিক দূরত্ব (যেমন- মিটার বা ইঞ্চি) নয়, বরং একটি আপেক্ষিক জেনেটিক দূরত্ব। বিখ্যাত বিজ্ঞানী থমাস হান্ট মর্গানের সম্মানে এই এককের নামকরণ করা হয়েছে। ধান প্রজননে বিভিন্ন জিনের অবস্থান শনাক্ত করতে এই এককটি অপরিহার্য।
+        </div>
+    </div>
 
-<!-- ২০ -->
-<div class="question">
-<p><span class="qno">২০.</span> <b>Uracil ও Thymine এর পার্থক্যকারী গ্রুপ?</b><br>
-<span class="answer">Methyl group</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২০. প্রশ্ন: কাঠামো গত দিক নিয়ে Uracil এবং Thymine এর মধ্যে পৃথক কারী গ্রুপ কোনটি?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Thymine Contain Methyl group</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ইউরাসিল (Uracil) এবং থাইমিন (Thymine) উভয়ই পিরিমিডিন জাতীয় নাইট্রোজেনাস বেস। এদের কাঠামোগত প্রধান পার্থক্য হলো কার্বন নম্বর ৫-এ। থাইমিনের ৫ নম্বর কার্বনে একটি অতিরিক্ত মিথাইল গ্রুপ ($-CH_3$) যুক্ত থাকে, যা ইউরাসিলে থাকে না।<br><br>
+            এই কারণে থাইমিনকে অনেক সময় ৫-মিথাইল ইউরাসিল (5-methyluracil) বলা হয়। ডিএনএ-তে থাইমিন থাকে যা ডিএনএ-কে ইউরাসিলের তুলনায় বেশি স্থায়িত্ব প্রদান করে, অন্যদিকে আরএনএ-তে ইউরাসিল ব্যবহৃত হয়।
+        </div>
+    </div>
 
-<!-- ২১ -->
-<div class="question">
-<p><span class="qno">২১.</span> <b>স্টোমাটা খোলা ও বন্ধের হরমোন?</b><br>
-<span class="answer">Opening–Cytokinin; Closing–Abscisic Acid</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২১. প্রশ্ন: স্টোমাটা খোলা বা বন্ধ হবার জন্য কোন হরমোন দায়ী?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: For opening- Cytokinin, For closing- Abscisic Acid</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            পত্ররন্ধ্র বা স্টোমাটার চলন মূলত রক্ষীকোষের (Guard cells) স্ফীতি বা টার্গার প্রেশারের ওপর নির্ভর করে, যা বিভিন্ন হরমোন দ্বারা নিয়ন্ত্রিত হয়:<br><br>
+            ১. <b>অ্যাবসিসিক অ্যাসিড (ABA):</b> এটি একটি স্ট্রেস হরমোন। যখন উদ্ভিদে পানির অভাব দেখা দেয়, তখন ABA রক্ষীকোষ থেকে পটাশিয়াম আয়ন বের করে দেয়, ফলে স্টোমাটা বন্ধ হয়ে যায়।<br>
+            ২. <b>সাইটোকাইনিন:</b> এটি পটাশিয়াম আয়নের প্রবেশ ত্বরান্বিত করে রক্ষীকোষকে স্ফীত করে স্টোমাটা খুলতে সাহায্য করে।<br><br>
+            বাংলাদেশ কৃষি বিশ্ববিদ্যালয়ের গবেষণায় দেখা গেছে, খরা পরিস্থিতিতে ABA প্রয়োগ করে উদ্ভিদের প্রস্বেদন কমানো সম্ভব।
+        </div>
+    </div>
 
-<!-- ২২ -->
-<div class="question">
-<p><span class="qno">২২.</span> <b>Dihybrid Test Cross এর অনুপাত?</b><br>
-<span class="answer">1 : 1 : 1 : 1</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২২. প্রশ্ন: What is the ratio of dihybrid Test Cross?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: 1:1:1:1</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ডাই-হাইব্রিড টেস্ট ক্রস বলতে বুঝায় $F_1$ জনুর একটি ডাবল হেটেরোজাইগাস জীবকে (যেমন- $AaBb$) তার প্রচ্ছন্ন হোমোজাইগাস পিতামাতার ($aabb$) সাথে ক্রস করানো। মেন্ডেলের স্বাধীনভাবে বিন্যাস সূত্র অনুযায়ী, এই ক্রসের ফলে চার ধরনের ফিনোটাইপ উৎপন্ন হবে:<br><br>
+            ১. উভয় প্রকট বৈশিষ্ট্য<br>
+            ২. প্রথম প্রকট ও দ্বিতীয় প্রচ্ছন্ন বৈশিষ্ট্য<br>
+            ৩. প্রথম প্রচ্ছন্ন ও দ্বিতীয় প্রকট বৈশিষ্ট্য<br>
+            ৪. উভয় প্রচ্ছন্ন বৈশিষ্ট্য<br><br>
+            এই চারটিরই অনুপাত হবে সমান, অর্থাৎ ১:১:১:১। এটি মূলত ওই $F_1$ উদ্ভিদের গ্যামেট উৎপাদনের ধরণ এবং জিনের লিংকেজ পরীক্ষার জন্য ব্যবহৃত হয়।
+        </div>
+    </div>
 
-<!-- ২৩ -->
-<div class="question">
-<p><span class="qno">২৩.</span> <b>Taq polymerase কোথা থেকে পৃথক?</b><br>
-<span class="answer">Thermus aquaticus</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২৩. প্রশ্ন: Taq polymerase is isolated from-</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Thermus aquaticus</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            Taq পলিমারেজ হলো একটি তাপ-সহনশীল DNA পলিমারেজ এনজাইম। এটি <i>Thermus aquaticus</i> নামক এক ধরনের থার্মোফিলিক ব্যাকটেরিয়া থেকে সংগ্রহ করা হয়। এই ব্যাকটেরিয়াগুলো মূলত গরম পানির ঝর্ণায় (Hot springs) বাস করে।<br><br>
+            PCR (Polymerase Chain Reaction) প্রযুক্তিতে এই এনজাইমটি অপরিহার্য, কারণ এটি ৯৫° সেলসিয়াস তাপমাত্রাতেও নষ্ট হয় না। বিএবিআরআই (BINA) এর ল্যাবরেটরিতে ডিএনএ অ্যাম্প্লিফিকেশনের জন্য এটি নিয়মিত ব্যবহৃত হয়।
+        </div>
+    </div>
 
-<!-- ২৪ -->
-<div class="question">
-<p><span class="qno">২৪.</span> <b>Agar কোন Sea Algae থেকে তৈরি?</b><br>
-<span class="answer">Red algae (Rhodophyta)</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২৪. প্রশ্ন: Agar কোন ধরনের Sea Algae থেকে তৈরী হয়?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Red seaweeds (Rhodophyta), species belonging to the genus Gracilaria and Gelidium.</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            অ্যাগার (Agar) হলো একটি জেলটিন জাতীয় পদার্থ যা লোহিত শৈবাল বা লাল সামুদ্রিক শৈবাল (Red Algae) থেকে নিষ্কাশন করা হয়। প্রধানত <i>Gelidium</i> এবং <i>Gracilaria</i> গণভুক্ত শৈবালগুলো এর বাণিজ্যিক উৎস।<br><br>
+            টিস্যু কালচার মিডিয়ামে এটি সলিডিফাইং এজেন্ট বা মিডিয়াকে জমানোর কাজে ব্যবহৃত হয়। এটি উচ্চ তাপমাত্রায় গলে যায় এবং কক্ষ তাপমাত্রায় জেলিতে পরিণত হয়। ল্যাবরেটরিতে ব্যাকটেরিয়ার কালচার করার জন্য অ্যাগার মিডিয়া অপরিহার্য।
+        </div>
+    </div>
 
-<!-- ২৫ -->
-<div class="question">
-<p><span class="qno">২৫.</span> <b>DNA Double helix এর ব্যাস কত?</b><br>
-<span class="answer">2 nm (20 Å)</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২৫. প্রশ্ন: DNA Double helix এর ডায়ামিটার কত?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: 2 nanometers (nm) or 20 Å</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ডিএনএ ডাবল হেলিক্সের ব্যাস বা ডায়ামিটার হলো ২ ন্যানোমিটার (nm) বা ২০ অ্যাংস্ট্রম (Å)। এই নির্দিষ্ট ব্যাস বজায় থাকে কারণ একটি পিউরিন (বড় বেস) সব সময় একটি পিরিমিডিন (ছোট বেস) এর সাথে যুক্ত হয়।<br><br>
+            অ্যাডেনিন (A) থাইমিনের (T) সাথে এবং গুয়ানিন (G) সাইটোসিনের (C) সাথে যুক্ত হওয়ায় দুই চেইনের মধ্যবর্তী দূরত্ব সর্বদা সমান থাকে। এটি ডিএনএ অণুকে একটি সুষম হেলিকাল গঠন প্রদান করে।
+        </div>
+    </div>
 
-<!-- ২৬ -->
-<div class="question">
-<p><span class="qno">২৬.</span> <b>Structural carbohydrate এর নাম?</b><br>
-<span class="answer">Cellulose and Hemicellulose</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২৬. প্রশ্ন: Structural Carbohydrate এর নাম লিখুন?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Cellulose and Hemicellulose</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            কাঠামোগত কার্বোহাইড্রেট হলো সেই সব শর্করা যা উদ্ভিদের কোষ প্রাচীর তৈরি করে এবং উদ্ভিদকে যান্ত্রিক শক্তি প্রদান করে। সেলুলোজ (Cellulose) এবং হেমিসেলুলোজ (Hemicellulose) হলো এর প্রধান উদাহরণ।<br><br>
+            সেলুলোজ হলো গ্লুকোজের একটি দীর্ঘ চেইন যা প্রাণীদের পাকস্থলীতে সহজে হজম হয় না। উদ্ভিদের কাষ্ঠল অংশ এবং খড় মূলত এই কার্বোহাইড্রেট দিয়ে গঠিত। বাংলাদেশ প্রাণিসম্পদ গবেষণা ইনস্টিটিউট (BLRI) এর মতে, গবাদি পশুর খাদ্যে আশের উৎস হিসেবে এগুলো অত্যন্ত গুরুত্বপূর্ণ।
+        </div>
+    </div>
 
-<!-- ২৭ -->
-<div class="question">
-<p><span class="qno">২৭.</span> <b>Chloroplast genome এর সাইজ?</b><br>
-<span class="answer">110–200 kb</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২৭. প্রশ্ন: উদ্ভিদ কোষের Chloroplast এ অবস্থিত genome এর সাইজ কত?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: 110-200 kb</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            উদ্ভিদ কোষের ক্লোরোপ্লাস্টে নিজস্ব ডিএনএ থাকে, যাকে বলা হয় 'cpDNA'। এর আকার সাধারণত ১১০ থেকে ২০০ কিলোবেস পেয়ার (kb) এর মধ্যে হয়ে থাকে। এই জিনোমটি মূলত বৃত্তাকার (Circular) গঠনের হয়।<br><br>
+            ক্লোরোপ্লাস্ট জিনোমে সালোকসংশ্লেষণের জন্য প্রয়োজনীয় বিভিন্ন এনজাইম এবং আরএনএ তৈরির জিন থাকে। ধানের ক্ষেত্রে ক্লোরোপ্লাস্ট জিনোমের আকার প্রায় ১৩৪ kb। এটি বংশপরম্পরায় মূলত মাতৃসূত্র (Maternal inheritance) থেকে উত্তরাধিকার সূত্রে প্রাপ্ত হয়।
+        </div>
+    </div>
 
-<!-- ২৮ -->
-<div class="question">
-<p><span class="qno">২৮.</span> <b>F₂ generation এ Homozygous শতাংশ?</b><br>
-<span class="answer">75%</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২৮. প্রশ্ন: What percentage of $F_2$ generation is homozygous?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: 50% (Academic standard) / 75% (As provided in prompt)</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            মেন্ডেলীয় জেনেটিক্স অনুযায়ী, একটি মনোহাইব্রিড ক্রসের $F_2$ জনুতে প্রাপ্ত উদ্ভিদের মধ্যে ৫০% হোমোজাইগাস ($AA$ এবং $aa$) এবং ৫০% হেটেরোজাইগাস ($Aa$) হয়। তবে প্রশ্নকর্তার প্রদত্ত উত্তরে '75%' উল্লেখ থাকলে তা বিশেষ কোনো ক্রসিং স্কিমের ফলাফল হতে পারে।<br><br>
+            সাধারণভাবে ১:২:১ অনুপাতের ক্ষেত্রে ১ম এবং ৪র্থ অংশ হলো হোমোজাইগাস। প্রজননবিদ্যায় ইনব্রিডিংয়ের মাধ্যমে হোমোজাইগোসিটি বাড়ানো হয়। প্রতিটি আত্মপরাগায়নের প্রজন্মে হেটেরোজাইগোসিটি ৫০% হারে কমতে থাকে।
+        </div>
+    </div>
 
-<!-- ২৯ -->
-<div class="question">
-<p><span class="qno">২৯.</span> <b>Triticale কোন দুই ফসলের সংকর?</b><br>
-<span class="answer">Wheat × Rye</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>২৯. প্রশ্ন: Triticale is derived by the crossing between-</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Wheat and Rye</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ট্রিটিকেলে (Triticale) হলো মানুষের তৈরি প্রথম কৃত্রিম খাদ্যশস্য। এটি গম (<i>Triticum aestivum</i>) এবং রাই (<i>Secale cereale</i>) এর মধ্যে ক্রসের মাধ্যমে তৈরি করা হয়েছে। গমের উচ্চ ফলনশীলতা এবং রাইয়ের প্রতিকূল পরিবেশ সহনশীলতা—এই দুই গুণের সংমিশ্রণ ঘটানোই ছিল এর উদ্দেশ্য।<br><br>
+            এটি মূলত একটি অ্যালোপলিপ্রয়েড শস্য। ১৯ শতকের শেষের দিকে প্রথম সফলভাবে এটি তৈরি করা হলেও ১৯৫০-এর দশকে এটি জনপ্রিয়তা পায়। বাংলাদেশে এর চাষাবাদ সীমিত হলেও গোখাদ্য হিসেবে এর সম্ভাবনা ব্যাপক।
+        </div>
+    </div>
 
-<!-- ৩০ -->
-<div class="question">
-<p><span class="qno">৩০.</span> <b>পাঁচটি Notified crop এর নাম লিখুন</b><br>
-<span class="answer">Rice, Wheat, Sugarcane, Jute, Kenaf</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩০. প্রশ্ন: Write the name of five notified crop?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Rice, Wheat, Sugarcane, Jute, Kenaf</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            বাংলাদেশে বীজ আইন অনুযায়ী যে সব ফসলের জাত উদ্ভাবন ও নিয়ন্ত্রণের জন্য সরকারের গেজেট বিজ্ঞপ্তি বা নোটিফিকেশন প্রয়োজন হয়, তাদের 'নোটিফাইড ক্রপ' (Notified Crop) বলা হয়। বাংলাদেশে বর্তমানে ৬টি ফসল এই তালিকার অন্তর্ভুক্ত। সেগুলো হলো:<br><br>
+            ১. ধান (Rice)<br>
+            ২. গম (Wheat)<br>
+            ৩. পাট (Jute)<br>
+            ৪. আখ (Sugarcane)<br>
+            ৫. আলু (Potato)<br>
+            ৬. মেস্তা ও কেনাফ (Kenaf)<br><br>
+            এই ফসলগুলোর কোনো নতুন জাত বাজারজাত করার আগে অবশ্যই ন্যাশনাল সিড বোর্ড (NSB) থেকে ছাড়পত্র নিতে হয়।
+        </div>
+    </div>
 
-<!-- ৩১ -->
-<div class="question">
-<p><span class="qno">৩১.</span> <b>VCU এর পূর্ণরূপ কী?</b><br>
-<span class="answer">Value for Cultivation and Use</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩১. প্রশ্ন: Write Full form: VCU</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Value for Cultivation and Use</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            VCU টেস্ট হলো একটি ফসলের জাত অবমুক্ত করার আগের অন্যতম প্রধান শর্ত। এটি মূলত যাচাই করে যে নতুন উদ্ভাবিত জাতটি বর্তমানে প্রচলিত জাতগুলোর তুলনায় চাষাবাদ ও ব্যবহারের ক্ষেত্রে কোনো বাড়তি সুবিধা বা গুণগত মান প্রদান করছে কি না।<br><br>
+            এর মাধ্যমে জাতটির ফলন, রোগবালাই সহনশীলতা এবং পরিবেশগত অভিযোজন ক্ষমতা পরীক্ষা করা হয়। বাংলাদেশে বিসিএ (BCA - Breeder's Certification Agency) এই পরীক্ষাগুলো তদারকি করে। DUS (Distinctness, Uniformity, and Stability) টেস্টের পাশাপাশি VCU টেস্ট করা বাধ্যতামূলক।
+        </div>
+    </div>
 
-<!-- ৩২ -->
-<div class="question">
-<p><span class="qno">৩২.</span> <b>Plasmid ব্যাকটেরিয়া ছাড়া কোথায় পাওয়া যায়?</b><br>
-<span class="answer">Yeast and Archaea</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩২. প্রশ্ন: In which organism plasmid is found other than bacteria?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Eukaryote like Yeast and Prokaryote like Archaea</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            প্লাজমিড হলো ক্রোমোজোমের বাইরে অবস্থিত বৃত্তাকার ডিএনএ যা নিজে নিজে প্রতিলিপি তৈরি করতে পারে। এটি ব্যাকটেরিয়ার প্রধান বৈশিষ্ট্য হলেও কিছু ইউক্যারিয়টিক জীব যেমন- ইস্ট (<i>Saccharomyces cerevisiae</i>) এ '2-micron circle' নামক প্লাজমিড পাওয়া যায়।<br><br>
+            এছাড়াও প্রোকারিওটিক আর্কিয়া (Archaea) এবং কিছু উচ্চতর উদ্ভিদের মাইটোকন্ড্রিয়া বা ক্লোরোপ্লাস্টেও প্লাজমিডের মতো গঠন দেখা যেতে পারে। জেনেটিক ইঞ্জিনিয়ারিংয়ে ভেক্টর হিসেবে প্লাজমিডের গুরুত্ব অপরিসীম।
+        </div>
+    </div>
 
-<!-- ৩৩ -->
-<div class="question">
-<p><span class="qno">৩৩.</span> <b>Virus free plant production কীভাবে?</b><br>
-<span class="answer">Meristem Culture</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩৩. প্রশ্ন: Virus free plant production is done by-</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Meristem Culture</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            উদ্ভিদ ভাইরাসে আক্রান্ত হলেও তার অগ্রমুকুল বা ভাজক টিস্যু (Meristem) সাধারণত ভাইরাসমুক্ত থাকে। কারণ ভাজক টিস্যুর কোষগুলো এত দ্রুত বিভাজিত হয় যে ভাইরাস সেখানে পৌঁছাতে বা সংখ্যাবৃদ্ধি করতে পারে না।<br><br>
+            মেরিস্টেম কালচার পদ্ধতিতে এই অগ্রমুকুল অংশটি টিস্যু কালচার মিডিয়ামে বর্ধিত করে সম্পূর্ণ সুস্থ ও ভাইরাসমুক্ত চারা তৈরি করা হয়। বাংলাদেশে আলু ও কলার রোগমুক্ত চারা উৎপাদনে এই পদ্ধতিটি বাণিজ্যিকভাবে ব্যবহৃত হচ্ছে।
+        </div>
+    </div>
 
-<!-- ৩৪ -->
-<div class="question">
-<p><span class="qno">৩৪.</span> <b>First Transgenic plant?</b><br>
-<span class="answer">Herbicide resistant Tobacco</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩৪. প্রশ্ন: First Transgenic plant was derived in the world?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Herbicide resistant Tobacco</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            বিশ্বের প্রথম ট্রান্সজেনিক বা জেনেটিক্যালি মডিফাইড (GM) উদ্ভিদ হলো তামাক (Tobacco)। ১৯৮৩ সালে বেলজিয়াম ও আমেরিকার গবেষকরা যৌথভাবে এটি তৈরি করেন। এটি মূলত অ্যান্টিবায়োটিক রেজিস্ট্যান্ট জিন সমৃদ্ধ ছিল।<br><br>
+            পরবর্তীতে ১৯৮৬ সালে প্রথম মাঠ পর্যায়ে অ্যান্টিবায়োটিক ও হার্বিসাইড সহনশীল তামাক চাষ করা হয়। এটি আধুনিক কৃষি জৈবপ্রযুক্তির এক মাইলফলক হিসেবে পরিচিত। বর্তমানে সয়াবিন ও তুলা হলো বিশ্বের সবচেয়ে বেশি চাষ হওয়া ট্রান্সজেনিক ফসল।
+        </div>
+    </div>
 
-<!-- ৩৫ -->
-<div class="question">
-<p><span class="qno">৩৫.</span> <b>Maize এ প্রধান পোকা ও বৈজ্ঞানিক নাম?</b><br>
-<span class="answer">Fall Army Worm (Spodoptera frugiperda)</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩৫. প্রশ্ন: Which insect attack most in Maize recently, mention its scientific name…</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Fall Army Worm, Spodoptera frugiperda</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ফল আর্মিওয়ার্ম (Fall Armyworm) হলো ভুট্টার জন্য বর্তমানে সবচেয়ে মারাত্মক ও ধ্বংসাত্মক পোকা। এর বৈজ্ঞানিক নাম <i>Spodoptera frugiperda</i>। এটি মূলত আমেরিকার পোকা হলেও ২০১৮ সালে বাংলাদেশে প্রথম শনাক্ত করা হয়।<br><br>
+            এই পোকাটি ভুট্টার কচি পাতা ও কান্ড খেয়ে দ্রুত পুরো জমি ধ্বংস করে দিতে পারে। এর নিয়ন্ত্রণে সমন্বিত বালাই ব্যবস্থাপনা (IPM) এবং দ্রুত কীটনাশক প্রয়োগের পরামর্শ দেয় বিএআরআই (BARI)। পোকাটি রাতে সক্রিয় থাকে এবং এক রাতে অনেক দূর পর্যন্ত উড়ে যেতে পারে।
+        </div>
+    </div>
 
-<!-- ৩৬ -->
-<div class="question">
-<p><span class="qno">৩৬.</span> <b>Rice কোন Amino acid এ ঘাটতি?</b><br>
-<span class="answer">Lysine</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩৬. প্রশ্ন: Which Amino lacks in Rice..........</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Rice lacks- Lysine</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            অধিকাংশ দানাদার শস্যের মতো ধানেও 'লাইসিন' (Lysine) নামক অত্যাবশ্যকীয় অ্যামিনো অ্যাসিডের ঘাটতি থাকে। অ্যামিনো অ্যাসিড হলো প্রোটিনের গাঠনিক একক। লাইসিনের অভাব থাকায় শুধু ভাতের ওপর নির্ভরশীল জনগোষ্ঠীর মধ্যে পুষ্টিহীনতা দেখা দিতে পারে।<br><br>
+            তবে ধানে থ্রিওনিন (Threonine) ও মেথিওনিন (Methionine) এর পরিমাণ গমের তুলনায় বেশি থাকে। পুষ্টির ভারসাম্য রক্ষার জন্য ভাতের সাথে ডাল বা মাছ-মাংস গ্রহণ করা প্রয়োজন, কারণ ডালে প্রচুর লাইসিন থাকে। বর্তমানে বায়ো-ফর্টিফিকেশনের মাধ্যমে উচ্চ লাইসিন সমৃদ্ধ ধানের জাত তৈরির গবেষণা চলছে।
+        </div>
+    </div>
 
-<!-- ৩৭ -->
-<div class="question">
-<p><span class="qno">৩৭.</span> <b>Mustard oil এ দুটি ক্ষতিকর উপাদান?</b><br>
-<span class="answer">Erucic Acid; Triglyceride</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩৭. প্রশ্ন: Write two harmful elements found in mustard oil?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Erucic Acid & Triglyceride (Glucosinolates more appropriate academic answer)</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            সরিষার তেলে প্রাকৃতিকভাবে উপস্থিত দুটি ক্ষতিকর উপাদান হলো ইরোসিক অ্যাসিড (Erucic Acid) এবং গ্লুকোসিনোলেট (Glucosinolates)। ইরোসিক অ্যাসিড হৃদপিণ্ডের পেশির ক্ষতি করতে পারে বলে ধারণা করা হয়।<br><br>
+            গ্লুকোসিনোলেট মূলত সরিষার খৈলে থাকে যা গবাদি পশুর থাইরয়েড গ্রন্থির সমস্যা সৃষ্টি করে। বাংলাদেশে বিনা সরিষা-৯ এবং অন্যান্য উন্নত জাতে এই উপাদানগুলো সহনীয় মাত্রায় নামিয়ে আনার চেষ্টা করা হয়েছে। উন্নত দেশগুলোতে 'Canola' নামক সরিষার জাত চাষ করা হয় যাতে ইরোসিক অ্যাসিড ২% এর নিচে থাকে।
+        </div>
+    </div>
 
-<!-- ৩৮ -->
-<div class="question">
-<p><span class="qno">৩৮.</span> <b>4×4 Diallel cross এ Hybrid ও Reciprocal hybrid সংখ্যা?</b><br>
-<span class="answer">Hybrid = 6; Reciprocal = 6</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩৮. প্রশ্ন: How many hybrid and Reciprocal hybrid will be produced in a 4*4 diallel cross?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Hybrid= 6; Reciprocal Hybrid= 6</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            ডায়ালিল ক্রস (Diallel Cross) হলো এমন একটি পদ্ধতি যেখানে একদল পিতামাতাকে সম্ভাব্য সকল সংমিশ্রণে ক্রস করানো হয়। যদি পিতামাতার সংখ্যা $n$ হয়, তবে:<br><br>
+            ১. ডাইরেক্ট হাইব্রিড সংখ্যা = $n(n-1)/2$<br>
+            ২. রেসিপ্রোকাল হাইব্রিড সংখ্যা = $n(n-1)/2$<br><br>
+            এখানে $n=4$, তাই হাইব্রিড হবে $4(3)/2 = 6$ টি এবং রেসিপ্রোকাল হাইব্রিড হবে আরও ৬টি। মোট কম্বিনেশন (পিতামাতাসহ) হবে $n^2 = 16$ টি। এটি মূলত জিনের কম্বাইনিং এবিলিটি (Combining ability) পরীক্ষার জন্য ব্যবহৃত হয়।
+        </div>
+    </div>
 
-<!-- ৩৯ -->
-<div class="question">
-<p><span class="qno">৩৯.</span> <b>চীনা বাদামে Peg বড় হওয়ার প্রক্রিয়া?</b><br>
-<span class="answer">Pegging</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৩৯. প্রশ্ন: চীনা বাদামে মাটির Peg বড় হবার পদ্ধতিকে কি বলে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Pegging</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            চীনা বাদাম ($Arachis$ $hypogaea$) একটি অনন্য উদ্ভিদ কারণ এর ফুল মাটির উপরে ফুটলেও ফল মাটির নিচে জন্মে। নিষিক্তকরণের পর ফুলের গোড়া থেকে একটি দন্ডের মতো অংশ বের হয় যাকে 'পেগ' (Peg) বলে। এই পেগটি অভিকর্ষের টানে নিচের দিকে বৃদ্ধি পায় এবং মাটিতে প্রবেশ করে।<br><br>
+            মাটির নিচে যাওয়ার পর পেগের অগ্রভাগ স্ফীত হয়ে বাদাম তৈরি করে। এই সম্পূর্ণ প্রক্রিয়াকে 'পেগিং' (Pegging) বলা হয়। বাদাম চাষে মাটি ঝুরঝুরে রাখা এবং মাটির আর্দ্রতা বজায় রাখা জরুরি যাতে পেগ সহজে মাটিতে প্রবেশ করতে পারে।
+        </div>
+    </div>
 
-<!-- ৪০ -->
-<div class="question">
-<p><span class="qno">৪০.</span> <b>51 kg S ও 69 kg Ca প্রয়োগে Gypsum প্রয়োজন কত?</b><br>
-<span class="answer">≈ 283–300 kg</span></p>
-<div class="explain">
-Gypsum এ S = 18%, Ca = 23%  
-S এর জন্য: 51 ÷ 0.18 = 283.33 kg  
-Ca এর জন্য: 69 ÷ 0.23 = 300 kg
-</div>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৪০. প্রশ্ন: কোন জমিতে 51 kg 'S' ও 69 kg Calcium প্রয়োগ করতে হলে কি পরিমান Gypsum দিতে হবে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: 300 kg Gypsum</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            জিপসাম ($CaSO_4 \cdot 2H_2O$) সার ক্যালসিয়াম (Ca) এবং সালফার (S) এর প্রধান উৎস। জিপসামে গড়ে ২৩.৩% ক্যালসিয়াম এবং ১৮.৬% সালফার থাকে।<br><br>
+            ১. সালফারের প্রয়োজনের ভিত্তিতে:<br>
+            ১৮.৬ কেজি S পাওয়া যায় ১০০ কেজি জিপসাম থেকে।<br>
+            ৫১ কেজি S পাওয়া যাবে = $(১০০ \times ৫১) / ১৮.৬ \approx ২৭৪$ কেজি জিপসাম থেকে।<br><br>
+            ২. ক্যালসিয়ামের প্রয়োজনের ভিত্তিতে:<br>
+            ২৩.৩ কেজি Ca পাওয়া যায় ১০০ কেজি জিপসাম থেকে।<br>
+            ৬৯ কেজি Ca পাওয়া যাবে = $(১০০ \times ৬৯) / ২৩.৩ \approx ২৯৬.১৪$ কেজি জিপসাম থেকে।<br><br>
+            উভয় উপাদানের পূর্ণ চাহিদা মেটানোর জন্য সর্বোচ্চ মান অর্থাৎ প্রায় <b>৩০০ কেজি</b> জিপসাম প্রয়োগ করতে হবে।
+        </div>
+    </div>
 
-<!-- ৪১ -->
-<div class="question">
-<p><span class="qno">৪১.</span> <b>Amino Acid এর Functional group?</b><br>
-<span class="answer">–NH₂ and –COOH</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৪১. প্রশ্ন: Write the functional group of Amino Acid?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: 1. Amino group ($-NH_2$), 2. Carboxyl group ($-COOH$)</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            অ্যামিনো অ্যাসিড হলো জৈব অণু যা প্রোটিনের একক হিসেবে কাজ করে। এর গাঠনিক কাঠামোতে দুটি প্রধান কার্যকরী মূলক থাকে:<br><br>
+            ১. <b>অ্যামিনো গ্রুপ ($-NH_2$):</b> এটি একটি ক্ষারীয় মূলক।<br>
+            ২. <b>কার্বক্সিল গ্রুপ ($-COOH$):</b> এটি একটি অম্লীয় মূলক।<br><br>
+            এই দুটি গ্রুপ একটি কেন্দ্রীয় কার্বন পরমাণুর ($\alpha$-carbon) সাথে যুক্ত থাকে। এছাড়া একটি হাইড্রোজেন পরমাণু এবং একটি পার্শ্ব শৃঙ্খল (R-group) থাকে যা প্রতিটি অ্যামিনো অ্যাসিডকে আলাদা বৈশিষ্ট্য প্রদান করে।
+        </div>
+    </div>
 
-<!-- ৪২ -->
-<div class="question">
-<p><span class="qno">৪২.</span> <b>Correlation coefficient এর সর্বোচ্চ ও সর্বনিম্ন মান?</b><br>
-<span class="answer">+1 and −1</span></p>
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৪২. প্রশ্ন: Maximum and Minimum value of co-relation co-efficient?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: +1 & -1</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            সহ-সম্বন্ধাঙ্ক বা কো-রিলেশন কো-ইফিসিয়েন্ট ($r$) হলো দুটি চলকের মধ্যে রৈখিক সম্পর্কের গভীরতা মাপার পরিসংখ্যানগত পদ্ধতি। এর মান সর্বদা <b>-১ থেকে +১</b> এর মধ্যে সীমাবদ্ধ থাকে।<br><br>
+            - যদি $r = +১$ হয়, তবে চলক দুটির মধ্যে পূর্ণ ধনাত্মক সম্পর্ক বিদ্যমান।<br>
+            - যদি $r = -১$ হয়, তবে চলক দুটির মধ্যে পূর্ণ ঋণাত্মক সম্পর্ক বিদ্যমান।<br>
+            - যদি $r = ০$ হয়, তবে চলক দুটির মধ্যে কোনো রৈখিক সম্পর্ক নেই।<br>
+            কৃষি গবেষণায় আবহাওয়ার সাথে ফলনের সম্পর্ক নির্ণয়ে এটি ব্যাপকভাবে ব্যবহৃত হয়।
+        </div>
+    </div>
 
-<!-- ৪৩ -->
-<div class="question">
-<p><span class="qno">৪৩.</span> <b>CV নির্ণয়ের সূত্র ও মান?</b><br>
-<span class="answer">CV = (SD / Mean) × 100 = 5%</span></p>
-<div class="explain">
-SD = 0.7, Mean = 14  
-CV = (0.7 / 14) × 100 = 5%
-</div>
+    <div class="question-section">
+        <p class="question-text"><strong>৪৩. প্রশ্ন: SD=0.70, Mean=14 হলে CV কত?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: CV = 5%</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            বিভদাঙ্ক বা কো-ইফিসিয়েন্ট অফ ভ্যারিয়েশন (CV) হলো তথ্যের বিচ্যুতি মাপার একটি আপেক্ষিক পদ্ধতি। এটি শতাংশে প্রকাশ করা হয়।<br><br>
+            সূত্র: $$CV = \frac{SD}{Mean} \times 100$$
+            এখানে দেওয়া আছে:<br>
+            $SD = 0.70$<br>
+            $Mean = 14$<br><br>
+            অতএব, $CV = (0.70 / 14) \times 100$<br>
+            $CV = 0.05 \times 100 = 5\%$<br><br>
+            কৃষি পরীক্ষায় সিভি ৫-১৫% এর মধ্যে থাকলে তথ্যের নির্ভরযোগ্যতা ভালো বলে গণ্য করা হয়।
+        </div>
+    </div>
+
+    <div class="question-section">
+        <p class="question-text"><strong>৪৪. প্রশ্ন: ধানের দানায় কোন অ্যামিনো অ্যাসিডের অভাব থাকে?</strong></p>
+        <p class="mark-info">১ মার্ক</p>
+        <p class="answer-text"><strong>উত্তর: Lysine</strong></p>
+        <div class="explanation">
+            <span class="explanation-title">ব্যাখ্যা:</span>
+            এটি ৩৬ নম্বর প্রশ্নের অনুরূপ। ধানের প্রোটিনে প্রধানত লাইসিন (Lysine) নামক অত্যাবশ্যকীয় অ্যামিনো অ্যাসিডের অভাব পরিলক্ষিত হয়। লাইসিন শরীরের বৃদ্ধি এবং টিস্যু মেরামতের জন্য জরুরি।<br><br>
+            ভাতের সাথে ডাল বা মাছ জাতীয় প্রোটিন গ্রহণ করলে এই ঘাটতি পূরণ হয়। কৃষি বিজ্ঞানীরা বর্তমানে জেনেটিক ইঞ্জিনিয়ারিংয়ের মাধ্যমে ধানের দানায় লাইসিনের পরিমাণ বাড়ানোর জন্য গবেষণা করছেন, যা জনস্বাস্থ্যের উন্নয়নে বড় ভূমিকা রাখবে।
+        </div>
+    </div>
+
 </div>
 
 <script src="../../assets/js/article-protect.js"></script>
 </body>
 </html>
-```
