@@ -14,16 +14,16 @@ const EXAM_STATUS = {
   },
 
   "exam-3": {
-    title: "HSC 1st Paper 2nd Chapter🔴",
-    visible: true,  // ✅ নতুন
+    title: "HSC 1st Paper 2nd Chapter",
+    visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam321"]
   },
   "exam-4": {
-    title: "HSC 1st Paper 3rd Chapter",
-    visible: false,  // ✅ নতুন
+    title: "HSC 1st Paper 3rd Chapter🔴",
+    visible: true,  // ✅ নতুন
     status: "live",
-    codes: ["exam349"]
+    codes: ["exam3490"]
       },
   "exam-5": {
     title: "HSC 1st Paper 4rth Chapter",
