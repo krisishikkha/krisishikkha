@@ -1,6 +1,6 @@
 // ==========================================
-// PDF Viewer - Advanced Version
-// Created for krisishikkha.com
+// PDF Viewer for krisishikkha.com
+// Custom Domain + GitHub Pages Compatible
 // ==========================================
 
 const elements = {
@@ -15,39 +15,82 @@ const elements = {
     installBtn: document.getElementById('installBtn')
 };
 
-// PDF.js worker setup (CDN থেকে)
-pdfjsLib.GlobalWorkerOptions.workerSrc = 
+// PDF.js Worker CDN
+pdfjsLib.GlobalWorkerOptions.workerSrc =
     'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-// Get PDF path from URL
+// URL থেকে PDF path নেওয়া
 const params = new URLSearchParams(window.location.search);
 let pdfPath = params.get("pdf");
 
-// Validation
 if (!pdfPath) {
-    showError("PDF নির্দিষ্ট করা হয়নি। URL এ ?pdf=filename.pdf যোগ করুন।");
+    showError("PDF নির্দিষ্ট করা হয়নি। URL এ ?pdf=pdf/file.pdf দিতে হবে।");
     throw new Error("PDF missing");
 }
 
-// GitHub path correction
-if (!pdfPath.startsWith('http')) {
-    pdfPath = "/krisishikkha/" + pdfPath;
+// ==========================================
+// Smart PDF Path Builder
+// ==========================================
+function buildPDFPath(path) {
+    path = path.trim();
+
+    // যদি full URL দেওয়া থাকে
+    if (path.startsWith("http://") || path.startsWith("https://")) {
+        return path;
+    }
+
+    const hostname = window.location.hostname;
+
+    // Custom domain হলে base path খালি
+    // www.krisishikkha.com বা krisishikkha.com
+    let basePath = "";
+
+    // যদি github.io দিয়ে open করা হয়, তখন repo name দরকার হবে
+    if (hostname.includes("github.io")) {
+        basePath = "/krisishikkha";
+    }
+
+    // ভুল করে যদি path এর শুরুতে krisishikkha/ থাকে, সেটা remove করব
+    // যেমন: krisishikkha/pdf/...
+    if (path.startsWith("krisishikkha/")) {
+        path = path.replace("krisishikkha/", "");
+    }
+
+    // ভুল করে যদি /krisishikkha/pdf/... থাকে, custom domain এ সেটা ঠিক করব
+    if (!hostname.includes("github.io") && path.startsWith("/krisishikkha/")) {
+        path = path.replace("/krisishikkha/", "");
+    }
+
+    // শুরুতে / থাকলে remove করি, পরে নিজে add করব
+    path = path.replace(/^\/+/, "");
+
+    return basePath + "/" + path;
 }
 
-// Progress tracking
+pdfPath = buildPDFPath(pdfPath);
+
+console.log("Final PDF Path:", pdfPath);
+
+// Progress key
 const progressKey = "pdf-progress-" + encodeURIComponent(pdfPath);
+
 let pdfDoc = null;
-let totalHeight = 0;
 let renderedPages = 0;
-let canvasHeights = [];
 
 // ==========================================
 // Error Handler
 // ==========================================
 function showError(message) {
-    elements.loadingScreen.style.display = 'none';
-    elements.errorBox.style.display = 'block';
-    elements.errorMessage.textContent = message;
+    if (elements.loadingScreen) {
+        elements.loadingScreen.style.display = 'none';
+    }
+
+    if (elements.errorBox && elements.errorMessage) {
+        elements.errorBox.style.display = 'block';
+        elements.errorMessage.textContent = message;
+    } else {
+        alert(message);
+    }
 }
 
 // ==========================================
@@ -55,193 +98,189 @@ function showError(message) {
 // ==========================================
 async function loadPDF() {
     try {
-        elements.loadingScreen.style.display = 'flex';
-        
-        const loadingTask = pdfjsLib.getDocument(pdfPath);
-        
+        if (elements.loadingScreen) {
+            elements.loadingScreen.style.display = 'flex';
+        }
+
+        const loadingTask = pdfjsLib.getDocument({
+            url: pdfPath,
+            disableAutoFetch: false,
+            disableStream: false
+        });
+
         pdfDoc = await loadingTask.promise;
-        
+
         elements.totalPages.textContent = pdfDoc.numPages;
-        
-        // Render all pages
+
         for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
             await renderPage(pageNum);
         }
-        
-        // Hide loading, show progress bar
-        elements.loadingScreen.style.display = 'none';
+
+        if (elements.loadingScreen) {
+            elements.loadingScreen.style.display = 'none';
+        }
+
         elements.progressBox.style.display = 'flex';
-        
-        // Restore previous progress
+
         restoreProgress();
-        
-        // Enable scroll tracking
+        updateProgress();
         enableScrollTracking();
-        
+
     } catch (error) {
-        console.error('PDF Load Error:', error);
-        showError(`PDF লোড করতে ব্যর্থ: ${error.message}`);
+        console.error("PDF Load Error:", error);
+        showError("PDF লোড করতে ব্যর্থ: " + error.message);
     }
 }
 
 // ==========================================
-// Render Single Page
+// Render Page
 // ==========================================
 async function renderPage(pageNum) {
-    try {
-        const page = await pdfDoc.getPage(pageNum);
-        
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        
-        // Responsive scale calculation
-        const containerWidth = Math.min(window.innerWidth - 40, 1200);
-        const viewport = page.getViewport({ scale: 1 });
-        const scale = containerWidth / viewport.width;
-        
-        const scaledViewport = page.getViewport({ scale: scale });
-        
-        canvas.width = scaledViewport.width;
-        canvas.height = scaledViewport.height;
-        
-        canvas.setAttribute('data-page', pageNum);
-        
-        elements.pdfContainer.appendChild(canvas);
-        
-        await page.render({
-            canvasContext: ctx,
-            viewport: scaledViewport
-        }).promise;
-        
-        // Store height for progress calculation
-        canvasHeights.push(canvas.offsetTop + canvas.height);
-        totalHeight = Math.max(totalHeight, canvas.offsetTop + canvas.height);
-        
-        renderedPages++;
-        
-    } catch (error) {
-        console.error(`Page ${pageNum} render error:`, error);
-    }
+    const page = await pdfDoc.getPage(pageNum);
+
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const originalViewport = page.getViewport({ scale: 1 });
+
+    // Mobile/Desktop responsive width
+    const availableWidth = Math.min(window.innerWidth - 24, 1000);
+    const scale = availableWidth / originalViewport.width;
+
+    const viewport = page.getViewport({ scale });
+
+    const outputScale = window.devicePixelRatio || 1;
+
+    canvas.width = Math.floor(viewport.width * outputScale);
+    canvas.height = Math.floor(viewport.height * outputScale);
+
+    canvas.style.width = Math.floor(viewport.width) + "px";
+    canvas.style.height = Math.floor(viewport.height) + "px";
+
+    canvas.setAttribute("data-page", pageNum);
+
+    elements.pdfContainer.appendChild(canvas);
+
+    const transform = outputScale !== 1
+        ? [outputScale, 0, 0, outputScale, 0, 0]
+        : null;
+
+    await page.render({
+        canvasContext: ctx,
+        viewport: viewport,
+        transform: transform
+    }).promise;
+
+    renderedPages++;
 }
 
 // ==========================================
-// Scroll Progress Tracking
+// Progress Tracking
 // ==========================================
 function enableScrollTracking() {
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const docHeight = document.documentElement.scrollHeight;
-        
-        // Progress percentage
-        const scrollPercent = Math.min(100, Math.round(
-            ((scrollTop + windowHeight) / docHeight) * 100
-        ));
-        
-        elements.progressPercent.textContent = scrollPercent + '%';
-        
-        // Current page detection
-        const currentPage = getCurrentPage(scrollTop + windowHeight / 2);
-        elements.currentPage.textContent = currentPage;
-        
-        // Save progress
-        localStorage.setItem(progressKey, JSON.stringify({
-            percent: scrollPercent,
-            page: currentPage,
-            scrollTop: scrollTop
-        }));
-    });
+    window.addEventListener("scroll", updateProgress, { passive: true });
 }
 
-// ==========================================
-// Get Current Page Number
-// ==========================================
-function getCurrentPage(scrollPosition) {
-    const canvases = elements.pdfContainer.querySelectorAll('canvas');
-    
-    for (let i = 0; i < canvases.length; i++) {
-        const canvas = canvases[i];
+function updateProgress() {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    let percent = Math.round(((scrollTop + windowHeight) / documentHeight) * 100);
+    percent = Math.min(100, Math.max(0, percent));
+
+    const currentPage = getCurrentPage();
+
+    elements.progressPercent.textContent = percent + "%";
+    elements.currentPage.textContent = currentPage;
+
+    localStorage.setItem(progressKey, JSON.stringify({
+        percent: percent,
+        page: currentPage,
+        scrollTop: scrollTop
+    }));
+}
+
+function getCurrentPage() {
+    const canvases = elements.pdfContainer.querySelectorAll("canvas");
+
+    let current = 1;
+    const middle = window.innerHeight / 2;
+
+    canvases.forEach((canvas, index) => {
         const rect = canvas.getBoundingClientRect();
-        
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            return i + 1;
+
+        if (rect.top <= middle && rect.bottom >= middle) {
+            current = index + 1;
         }
-    }
-    
-    return 1;
+    });
+
+    return current;
 }
 
 // ==========================================
-// Restore Previous Progress
+// Restore Progress
 // ==========================================
 function restoreProgress() {
     const saved = localStorage.getItem(progressKey);
-    
-    if (saved) {
-        try {
-            const data = JSON.parse(saved);
-            
-            elements.progressPercent.textContent = data.percent + '%';
-            elements.currentPage.textContent = data.page;
-            
-            // Scroll to last position (optional)
-            // window.scrollTo(0, data.scrollTop);
-            
-        } catch (e) {
-            console.error('Progress restore error:', e);
+
+    if (!saved) return;
+
+    try {
+        const data = JSON.parse(saved);
+
+        elements.progressPercent.textContent = data.percent + "%";
+        elements.currentPage.textContent = data.page;
+
+        // চাইলে আগের জায়গায় auto scroll করবে
+        // অসুবিধা হলে নিচের ৩ লাইন comment করে দিতে পারেন
+        if (data.scrollTop && data.scrollTop > 0) {
+            setTimeout(() => {
+                window.scrollTo(0, data.scrollTop);
+            }, 300);
         }
+
+    } catch (e) {
+        console.error("Progress restore failed:", e);
     }
 }
 
 // ==========================================
-// PWA Install Prompt
+// PWA Install Button
 // ==========================================
 let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredPrompt = e;
 });
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400 && deferredPrompt) {
-        elements.installBtn.style.display = 'block';
-    }
-});
-
-elements.installBtn.addEventListener('click', async () => {
-    if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        
-        if (outcome === 'accepted') {
-            elements.installBtn.style.display = 'none';
+if (elements.installBtn) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400 && deferredPrompt) {
+            elements.installBtn.style.display = "block";
         }
-        
+    }, { passive: true });
+
+    elements.installBtn.addEventListener("click", async () => {
+        if (!deferredPrompt) return;
+
+        deferredPrompt.prompt();
+
+        const { outcome } = await deferredPrompt.userChoice;
+
+        if (outcome === "accepted") {
+            elements.installBtn.style.display = "none";
+        }
+
         deferredPrompt = null;
-    }
-});
+    });
+}
 
 // ==========================================
-// Initialize
+// Save before unload
 // ==========================================
+window.addEventListener("beforeunload", updateProgress);
+
+// Start
 loadPDF();
-
-// Save progress before page unload
-window.addEventListener('beforeunload', () => {
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const docHeight = document.documentElement.scrollHeight;
-    
-    const scrollPercent = Math.min(100, Math.round(
-        ((scrollTop + windowHeight) / docHeight) * 100
-    ));
-    
-    const currentPage = getCurrentPage(scrollTop + windowHeight / 2);
-    
-    localStorage.setItem(progressKey, JSON.stringify({
-        percent: scrollPercent,
-        page: currentPage,
-        scrollTop: scrollTop
-    }));
-});
