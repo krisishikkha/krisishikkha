@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Important Job Topic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Important Job Topic</a> › <span id="topicName">...</span>
+        </div>
+
+        <div class="page-title" id="pageTitle">Loading...</div>
+
+        <div id="articlesList" class="article-grid">
+            <p class="loading">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Premium Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>🔒 Premium Content</h2>
+            <p>এই আর্টিকেল পড়তে WhatsApp এ যোগাযোগ করুন</p>
+            <a href="https://wa.me/8801516013089?text=আমি Premium Article পড়তে চাই" 
+               class="wa-btn" target="_blank">📱 WhatsApp করুন</a>
+            <div class="divider">অথবা</div>
+            <form onsubmit="return handleLogin(event)">
+                <input type="text" id="user" placeholder="Username" required>
+                <input type="password" id="pass" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const topic = new URLSearchParams(window.location.search).get('topic');
+        loadArticles(topic);
+    </script>
+</body>
+</html>
