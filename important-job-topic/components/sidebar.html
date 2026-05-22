@@ -1,0 +1,127 @@
+<div class="sidebar-content">
+    <h3>📚 Topics</h3>
+    <ul class="sidebar-menu">
+        <li>
+            <a href="/important-job-topic/" class="active">
+                🏠 সকল টপিক
+            </a>
+        </li>
+        <li>
+            <a href="/important-job-topic/?topic=soil-science">
+                🌱 Soil Science
+            </a>
+        </li>
+        <li>
+            <a href="/important-job-topic/?topic=plant-pathology">
+                🦠 Plant Pathology
+            </a>
+        </li>
+        <li>
+            <a href="/important-job-topic/?topic=agronomy">
+                🌾 Agronomy
+            </a>
+        </li>
+        <li>
+            <a href="/important-job-topic/?topic=genetics">
+                🧬 Genetics
+            </a>
+        </li>
+        <li>
+            <a href="/important-job-topic/?topic=entomology">
+                🐛 Entomology
+            </a>
+        </li>
+    </ul>
+    
+    <div class="sidebar-divider"></div>
+    
+    <h3>🎯 Quick Filter</h3>
+    <ul class="sidebar-menu">
+        <li>
+            <a href="javascript:void(0)" onclick="quickFilter('free')">
+                ✅ ফ্রি আর্টিকেল
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" onclick="quickFilter('premium')">
+                🔒 প্রিমিয়াম আর্টিকেল
+            </a>
+        </li>
+    </ul>
+    
+    <div class="sidebar-divider"></div>
+    
+    <div class="sidebar-widget">
+        <h4>💎 Premium Access</h4>
+        <p>সকল Premium Content এক্সেস পেতে যোগাযোগ করুন</p>
+        <a href="https://wa.me/8801XXXXXXXXX" class="whatsapp-widget-btn" target="_blank">
+            📱 WhatsApp এ যোগাযোগ
+        </a>
+    </div>
+</div>
+
+<style>
+.sidebar-content {
+    padding: 0;
+}
+
+.whatsapp-widget-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #25D366;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.whatsapp-widget-btn:hover {
+    background: #1EBE57;
+}
+
+.sidebar-widget {
+    background: linear-gradient(135deg, #FFC107, #FF6F00);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.sidebar-widget h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.sidebar-widget p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+</style>
+
+<script>
+function quickFilter(type) {
+    const typeFilter = document.getElementById('typeFilter');
+    if (typeFilter) {
+        typeFilter.value = type;
+        applyFilters();
+    }
+}
+
+// Highlight active menu item
+document.addEventListener('DOMContentLoaded', function() {
+    const currentTopic = getUrlParameter('topic');
+    if (currentTopic) {
+        const links = document.querySelectorAll('.sidebar-menu a');
+        links.forEach(link => {
+            link.classList.remove('active');
+            if (link.href.includes(`topic=${currentTopic}`)) {
+                link.classList.add('active');
+            }
+        });
+    }
+});
+  </script>
