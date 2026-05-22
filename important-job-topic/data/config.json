@@ -1,0 +1,52 @@
+{
+  "site": {
+    "name": "Krishi Shikkha",
+    "title": "Important Job Topic",
+    "description": "চাকরির পরীক্ষার জন্য গুরুত্বপূর্ণ টপিক সমূহ",
+    "url": "https://www.krisishikkha.com",
+    "basePath": "/important-job-topic/",
+    "author": "Krishi Shikkha Team",
+    "logo": "/assets/logo.png",
+    "whatsappNumber": "8801516013089",
+    "whatsappMessage": "I want premium access to Important Job Topic"
+  },
+  "topics": {
+    "soil-science": {
+      "name": "Soil Science",
+      "nameBn": "মৃত্তিকা বিজ্ঞান",
+      "icon": "🌱",
+      "description": "মাটি সংক্রান্ত গুরুত্বপূর্ণ টপিক"
+    },
+    "plant-pathology": {
+      "name": "Plant Pathology",
+      "nameBn": "উদ্ভিদ রোগতত্ত্ব",
+      "icon": "🦠",
+      "description": "উদ্ভিদের রোগ সংক্রান্ত টপিক"
+    },
+    "agronomy": {
+      "name": "Agronomy",
+      "nameBn": "শস্যবিজ্ঞান",
+      "icon": "🌾",
+      "description": "ফসল উৎপাদন সংক্রান্ত টপিক"
+    },
+    "genetics": {
+      "name": "Genetics",
+      "nameBn": "জিনতত্ত্ব",
+      "icon": "🧬",
+      "description": "বংশগতি সংক্রান্ত টপিক"
+    },
+    "entomology": {
+      "name": "Entomology",
+      "nameBn": "কীটতত্ত্ব",
+      "icon": "🐛",
+      "description": "পতঙ্গ সংক্রান্ত টপিক"
+    }
+  },
+  "features": {
+    "enablePremium": true,
+    "enableSearch": true,
+    "enableFilters": true,
+    "enableSocialShare": true,
+    "articlesPerPage": 12
+  }
+}
