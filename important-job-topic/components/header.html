@@ -1,0 +1,122 @@
+<header class="site-header">
+    <div class="header-container">
+        <div class="header-top">
+            <div class="logo">
+                <a href="/">
+                    <h1>🌾 Krishi Shikkha</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="/important-job-topic/">Important Job Topic</a></li>
+                    <li><a href="#" id="userMenuBtn">👤 Account</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+        </div>
+    </div>
+</header>
+
+<style>
+.site-header {
+    background: linear-gradient(135deg, #2E7D32, #1B5E20);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+.main-nav a:hover {
+    color: #FFC107;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+}
+</style>
+
+<script>
+function toggleMobileMenu() {
+    const nav = document.querySelector('.main-nav');
+    if (nav.style.display === 'block') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'block';
+    }
+}
+
+// User menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const userMenuBtn = document.getElementById('userMenuBtn');
+    if (userMenuBtn) {
+        userMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (isUserLoggedIn()) {
+                const confirmed = confirm('আপনি কি Logout করতে চান?');
+                if (confirmed) {
+                    logout();
+                }
+            } else {
+                showLoginModal();
+            }
+        });
+    }
+});
+</script>
