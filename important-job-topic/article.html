@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Important Job Topic</a> › 
+            <a href="#" id="topicLink">...</a> › 
+            <span id="breadTitle">...</span>
+        </div>
+
+        <article>
+            <h1 id="articleTitle">Loading...</h1>
+            <div id="articleContent" class="article-body"></div>
+        </article>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const topic = params.get('topic');
+        const file = params.get('file');
+        loadArticle(topic, file);
+    </script>
+</body>
+</html>
