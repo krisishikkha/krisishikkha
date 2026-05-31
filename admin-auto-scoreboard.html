@@ -1,530 +1,990 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live Scoreboard - NTRCA Agriculture</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Scoreboard - NTRCA Agriculture</title>
 
-<style>
-body{
-  font-family: Arial,sans-serif;
-  background:#f8f8f8;
-  padding:20px;
-  margin:0;
-}
+  <style>
+    :root {
+      --primary-color: #2E8B57;
+      --primary-dark: #246b45;
+      --success-bg: #d4edda;
+      --fail-bg: #f8d7da;
+      --border-color: #ddd;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --text-dark: #000;
+      --text-light: #555;
+    }
 
-h2{
-  margin-bottom:20px;
-  color:#000;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.control-bar{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  align-items:center;
-  margin-bottom:18px;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 20px;
+      margin: 0;
+      color: var(--text-dark);
+    }
 
-select,
-input[type="date"],
-button{
-  padding:10px 12px;
-  font-size:16px;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-button{
-  background:#2E8B57;
-  color:#fff;
-  border:none;
-  cursor:pointer;
-}
+    h2 {
+      margin-bottom: 20px;
+      color: var(--text-dark);
+      font-size: 28px;
+      text-align: center;
+    }
 
-button:hover{
-  background:#246b45;
-}
+    /* Control Bar */
+    .control-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 20px;
+      background: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
 
-.analytics-box{
-  background:#ffffff;
-  padding:16px;
-  border-radius:10px;
-  margin:16px 0;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
+    select,
+    input[type="date"],
+    button {
+      padding: 12px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
 
-.analytics-box h3{
-  margin:0 0 10px 0;
-  color:#000;
-}
+    select:focus,
+    input[type="date"]:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+    }
 
-.analytics-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:10px;
-}
+    button {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
-.analytics-item{
-  background:#f7fdf9;
-  border:1px solid #d9efe1;
-  border-radius:8px;
-  padding:12px;
-  font-size:16px;
-  font-weight:bold;
-  color:#000 !important;
-}
+    button:hover:not(:disabled) {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(46, 139, 87, 0.3);
+    }
 
-.pdf-container{
-  width:100%;
-  max-width:1000px;
-  margin:auto;
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  position:relative;
-  overflow:hidden;
-}
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
 
-/* Watermark */
-.watermark{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%) rotate(-25deg);
-  font-size:140px;
-  color:rgba(0,0,0,0.08);
-  font-weight:bold;
-  pointer-events:none;
-  user-select:none;
-  white-space:nowrap;
-  z-index:0;
-}
+    button:active:not(:disabled) {
+      transform: translateY(0);
+    }
 
-/* Header */
-.pdf-header{
-  text-align:center;
-  margin-bottom:20px;
-  position:relative;
-  z-index:1;
-}
+    /* Status Message */
+    .status-message {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      display: none;
+      animation: slideIn 0.3s ease;
+    }
 
-.header-logo{
-  width:78px;
-  height:78px;
-  object-fit:contain;
-  margin-bottom:8px;
-}
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.pdf-header h1{
-  font-size:24px;
-  margin:0;
-  color:#2E8B57;
-}
+    .status-success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
 
-.pdf-header h3{
-  font-size:17px;
-  margin:6px 0;
-  color:#000 !important;
-}
+    .status-error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
 
-.report-range{
-  font-size:15px;
-  color:#000 !important;
-  margin-top:4px;
-}
+    .status-info {
+      background: #d1ecf1;
+      color: #0c5460;
+      border: 1px solid #bee5eb;
+    }
 
-/* Table */
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:14px;
-  position:relative;
-  z-index:1;
-}
+    /* Analytics Box */
+    .analytics-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: var(--shadow);
+    }
 
-th, td{
-  border:1px solid #ddd;
-  padding:16px 12px;
-  text-align:center;
-  font-size:17px;
-  color:#000 !important;
-}
+    .analytics-box h3 {
+      margin: 0 0 16px 0;
+      color: var(--text-dark);
+      font-size: 20px;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 8px;
+    }
 
-th{
-  background:#2E8B57;
-  color:#fff !important;
-}
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
 
-.pass{
-  background:#d4edda;
-}
+    .analytics-item {
+      background: linear-gradient(135deg, #f7fdf9 0%, #e8f5e9 100%);
+      border: 2px solid #d9efe1;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-.fail{
-  background:#f8d7da;
-}
+    .analytics-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(46, 139, 87, 0.2);
+    }
 
-.pass td,
-.fail td{
-  color:#000 !important;
-}
+    .analytics-item .value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-color);
+      display: block;
+      margin-top: 8px;
+    }
 
-.top-rank{
-  font-weight:bold;
-  color:#000 !important;
-}
+    /* PDF Container */
+    .pdf-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
 
-.top-rank td{
-  color:#000 !important;
-}
+    /* Watermark */
+    .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-25deg);
+      font-size: 140px;
+      color: rgba(0, 0, 0, 0.04);
+      font-weight: 700;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      z-index: 0;
+    }
 
-.empty-message{
-  text-align:center;
-  padding:18px;
-  font-size:17px;
-  color:#000;
-}
+    /* Header */
+    .pdf-header {
+      text-align: center;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
 
-/* Optional nicer highlight for top 3 */
-.rank-1{
-  box-shadow: inset 0 0 0 9999px rgba(255, 215, 0, 0.10);
-}
-.rank-2{
-  box-shadow: inset 0 0 0 9999px rgba(192, 192, 192, 0.14);
-}
-.rank-3{
-  box-shadow: inset 0 0 0 9999px rgba(205, 127, 50, 0.10);
-}
+    .header-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
 
-@media (max-width: 768px){
-  body{
-    padding:12px;
-  }
+    .pdf-header h1 {
+      font-size: 26px;
+      margin: 0;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
 
-  .control-bar{
-    flex-direction:column;
-    align-items:stretch;
-  }
+    .pdf-header h3 {
+      font-size: 18px;
+      margin: 8px 0;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
 
-  select,
-  input[type="date"],
-  button{
-    width:100%;
-    font-size:16px;
-  }
+    .report-range {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-top: 8px;
+      font-style: italic;
+    }
 
-  .pdf-header h1{
-    font-size:20px;
-  }
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
 
-  .pdf-header h3{
-    font-size:16px;
-  }
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 14px 12px;
+      text-align: center;
+      font-size: 16px;
+      color: var(--text-dark);
+    }
 
-  th, td{
-    padding:12px 8px;
-    font-size:15px;
-  }
+    th {
+      background: var(--primary-color);
+      color: #fff !important;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
-  .watermark{
-    font-size:90px;
-  }
+    tbody tr {
+      transition: all 0.3s ease;
+    }
 
-  .header-logo{
-    width:64px;
-    height:64px;
-  }
-}
-</style>
+    tbody tr:hover {
+      background: #f5f5f5;
+      transform: scale(1.01);
+    }
+
+    .pass {
+      background: var(--success-bg);
+    }
+
+    .fail {
+      background: var(--fail-bg);
+    }
+
+    .pass td,
+    .fail td {
+      color: var(--text-dark) !important;
+    }
+
+    .top-rank {
+      font-weight: 700;
+    }
+
+    .rank-1 {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+      border-left: 4px solid gold;
+    }
+
+    .rank-2 {
+      background: linear-gradient(135deg, rgba(192, 192, 192, 0.2) 0%, rgba(192, 192, 192, 0.1) 100%);
+      border-left: 4px solid silver;
+    }
+
+    .rank-3 {
+      background: linear-gradient(135deg, rgba(205, 127, 50, 0.2) 0%, rgba(205, 127, 50, 0.1) 100%);
+      border-left: 4px solid #cd7f32;
+    }
+
+    .empty-message {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 18px;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    /* Loading Spinner */
+    .spinner {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid var(--primary-color);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+      display: none;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        padding: 12px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .control-bar {
+        flex-direction: column;
+        padding: 12px;
+      }
+
+      select,
+      input[type="date"],
+      button {
+        width: 100%;
+      }
+
+      .analytics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pdf-header h1 {
+        font-size: 20px;
+      }
+
+      .pdf-header h3 {
+        font-size: 16px;
+      }
+
+      th, td {
+        padding: 10px 6px;
+        font-size: 14px;
+      }
+
+      .watermark {
+        font-size: 80px;
+      }
+
+      .header-logo {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      
+      .control-bar,
+      .analytics-box {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<h2>Live Scoreboard - NTRCA Agriculture</h2>
+  <div class="container">
+    <h2>📊 Live Scoreboard - NTRCA Agriculture</h2>
 
-<div class="control-bar">
-  <select id="examSelect">
-    <option value="">-- Select Exam --</option>
-  </select>
+    <div id="statusMessage" class="status-message"></div>
 
-  <input type="date" id="fromDate">
-  <input type="date" id="toDate">
+    <div class="control-bar">
+      <select id="examSelect" aria-label="Select Exam">
+        <option value="">-- পরীক্ষা নির্বাচন করুন --</option>
+      </select>
 
-  <button id="filterBtn">Filter</button>
-  <button id="downloadBtn">Download PDF</button>
-</div>
+      <input type="date" id="fromDate" aria-label="From Date">
+      <input type="date" id="toDate" aria-label="To Date">
 
-<div class="analytics-box">
-  <h3>Exam Attempt Analytics</h3>
-  <div class="analytics-grid">
-    <div class="analytics-item" id="totalAttempts">Total Attempts: 0</div>
-    <div class="analytics-item" id="uniqueStudents">Unique Students: 0</div>
-    <div class="analytics-item" id="avgPercent">Average Percentage: 0%</div>
-    <div class="analytics-item" id="highestPercent">Highest Percentage: 0%</div>
+      <button id="filterBtn">🔍 Filter</button>
+      <button id="downloadBtn">📥 Download PDF</button>
+      <button id="refreshBtn">🔄 Refresh</button>
+    </div>
+
+    <div class="spinner" id="loadingSpinner"></div>
+
+    <div class="analytics-box">
+      <h3>📈 Exam Analytics</h3>
+      <div class="analytics-grid">
+        <div class="analytics-item">
+          Total Attempts
+          <span class="value" id="totalAttempts">0</span>
+        </div>
+        <div class="analytics-item">
+          Unique Students
+          <span class="value" id="uniqueStudents">0</span>
+        </div>
+        <div class="analytics-item">
+          Average Score
+          <span class="value" id="avgPercent">0%</span>
+        </div>
+        <div class="analytics-item">
+          Highest Score
+          <span class="value" id="highestPercent">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pdf-container" id="liveTableContainer">
+      <div class="watermark">krisishikkha.com</div>
+
+      <div class="pdf-header">
+        <img src="assets/icons/icon-192.png" alt="Krisishikkha Logo" class="header-logo" onerror="this.style.display='none'">
+        <h1>NTRCA Agriculture Teacher Registration-2026</h1>
+        <h3 id="examTitleHeader">Exam Title</h3>
+        <h3 id="examDateHeader"></h3>
+        <div class="report-range" id="reportRangeText">Showing all available results</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name (Rank)</th>
+            <th>Correct</th>
+            <th>Wrong</th>
+            <th>Unanswered</th>
+            <th>Percentage</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="scoreBody"></tbody>
+      </table>
+
+      <div id="emptyMessage" class="empty-message" style="display:none;">
+        📭 No results found for this filter.
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="pdf-container" id="liveTableContainer">
-  <div class="watermark">krisishikkha.com</div>
+  <script src="exam-status.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-  <div class="pdf-header">
-    <img src="assets/icons/icon-192.png" alt="Krisishikkha Logo" class="header-logo">
-    <h1>NTRCA Agriculture Teacher Registration-2026</h1>
-    <h3 id="examTitleHeader">Exam Title</h3>
-    <h3 id="examDateHeader"></h3>
-    <div class="report-range" id="reportRangeText">Showing all available results</div>
-  </div>
+  <script>
+    // ================================
+    // Configuration & Initialization
+    // ================================
+    const CONFIG = {
+      SUPABASE_URL: "https://bpkheipwdjzlyuzyqdxz.supabase.co",
+      SUPABASE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwa2hlaXB3ZGp6bHl1enlxZHh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU5MDYyOTUsImV4cCI6MjA1MTQ4MjI5NX0.xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2vCMR3hqXm7Y4",
+      TOP_LIMIT: 50,
+      PASS_PERCENTAGE: 40,
+      AUTO_REFRESH_INTERVAL: 30000 // 30 seconds
+    };
 
-  <table>
-    <thead>
-      <tr>
-        <th>Name (Rank)</th>
-        <th>Correct</th>
-        <th>Wrong</th>
-        <th>Unanswered</th>
-        <th>Percentage</th>
-        <th>Result</th>
-      </tr>
-    </thead>
-    <tbody id="scoreBody"></tbody>
-  </table>
+    // ================================
+    // State Management
+    // ================================
+    const STATE = {
+      currentExamId: "",
+      allResults: [],
+      realtimeChannel: null,
+      autoRefreshTimer: null,
+      isLoading: false
+    };
 
-  <div id="emptyMessage" class="empty-message" style="display:none;">
-    No results found for this filter.
-  </div>
-</div>
+    // ================================
+    // Supabase Client
+    // ================================
+    const supabaseClient = supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_KEY);
 
-<script src="exam-status.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    // ================================
+    // DOM Elements
+    // ================================
+    const DOM = {
+      examSelect: document.getElementById("examSelect"),
+      fromDate: document.getElementById("fromDate"),
+      toDate: document.getElementById("toDate"),
+      filterBtn: document.getElementById("filterBtn"),
+      downloadBtn: document.getElementById("downloadBtn"),
+      refreshBtn: document.getElementById("refreshBtn"),
+      statusMessage: document.getElementById("statusMessage"),
+      loadingSpinner: document.getElementById("loadingSpinner"),
+      scoreBody: document.getElementById("scoreBody"),
+      examTitleHeader: document.getElementById("examTitleHeader"),
+      examDateHeader: document.getElementById("examDateHeader"),
+      reportRangeText: document.getElementById("reportRangeText"),
+      emptyMessage: document.getElementById("emptyMessage"),
+      totalAttempts: document.getElementById("totalAttempts"),
+      uniqueStudents: document.getElementById("uniqueStudents"),
+      avgPercent: document.getElementById("avgPercent"),
+      highestPercent: document.getElementById("highestPercent"),
+      liveTableContainer: document.getElementById("liveTableContainer")
+    };
 
-<script>
-const SUPABASE_URL = "https://bpkheipwdjzlyuzyqdxz.supabase.co";
-const SUPABASE_KEY = "sb_publishable_xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2";
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    // ================================
+    // Utility Functions
+    // ================================
+    const Utils = {
+      showStatus(message, type = 'info') {
+        DOM.statusMessage.textContent = message;
+        DOM.statusMessage.className = `status-message status-${type}`;
+        DOM.statusMessage.style.display = 'block';
+        
+        setTimeout(() => {
+          DOM.statusMessage.style.display = 'none';
+        }, 5000);
+      },
 
-let currentExamId = "";
-let allResults = [];
-let realtimeChannel = null;
+      showLoading(show = true) {
+        STATE.isLoading = show;
+        DOM.loadingSpinner.style.display = show ? 'block' : 'none';
+        DOM.filterBtn.disabled = show;
+        DOM.downloadBtn.disabled = show;
+        DOM.refreshBtn.disabled = show;
+      },
 
-function populateExamDropdown() {
-  const examSelect = document.getElementById("examSelect");
-  examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
+      formatDate(date) {
+        return new Date(date).toLocaleDateString('bn-BD', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+      },
 
-  Object.keys(EXAM_STATUS).forEach(id => {
-    const exam = EXAM_STATUS[id];
-    if (exam.visible && exam.status === "live") {
-      const option = document.createElement("option");
-      option.value = id;
-      option.textContent = exam.title;
-      examSelect.appendChild(option);
-    }
-  });
-}
+      escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      },
 
-function updateReportRangeText() {
-  const fromDate = document.getElementById("fromDate").value;
-  const toDate = document.getElementById("toDate").value;
-  const reportRangeText = document.getElementById("reportRangeText");
+      calculateRank(index, currentPercent, lastScore) {
+        return currentPercent !== lastScore ? index + 1 : null;
+      },
 
-  if (fromDate && toDate) {
-    reportRangeText.innerText = `Report Range: ${fromDate} to ${toDate}`;
-  } else if (fromDate) {
-    reportRangeText.innerText = `Report From: ${fromDate}`;
-  } else if (toDate) {
-    reportRangeText.innerText = `Report Until: ${toDate}`;
-  } else {
-    reportRangeText.innerText = "Showing all available results";
-  }
-}
+      getRankLabel(rank) {
+        if (rank === 1) return "1st 🥇";
+        if (rank === 2) return "2nd 🥈";
+        if (rank === 3) return "3rd 🥉";
+        return `${rank}th`;
+      }
+    };
 
-async function fetchResults() {
-  if (!currentExamId) return;
+    // ================================
+    // Exam Management
+    // ================================
+    const ExamManager = {
+      populateDropdown() {
+        DOM.examSelect.innerHTML = '<option value="">-- পরীক্ষা নির্বাচন করুন --</option>';
+        
+        let count = 0;
+        Object.keys(EXAM_STATUS).forEach(id => {
+          const exam = EXAM_STATUS[id];
+          if (exam.visible && exam.status === "live") {
+            const option = document.createElement("option");
+            option.value = id;
+            option.textContent = exam.title;
+            DOM.examSelect.appendChild(option);
+            count++;
+          }
+        });
 
-  const fromDate = document.getElementById("fromDate").value;
-  const toDate = document.getElementById("toDate").value;
+        if (count === 0) {
+          Utils.showStatus("কোন লাইভ পরীক্ষা পাওয়া যায়নি", "error");
+        }
 
-  let query = supabaseClient
-    .from("exam_results")
-    .select("*")
-    .eq("examId", currentExamId)
-    .order("percent", { ascending: false })
-    .order("correct", { ascending: false })
-    .limit(10);
+        console.log(`✅ Loaded ${count} exams`);
+      },
 
-  if (fromDate) {
-    query = query.gte("start", fromDate + "T00:00:00");
-  }
+      getSelectedExam() {
+        return EXAM_STATUS[STATE.currentExamId];
+      }
+    };
 
-  if (toDate) {
-    query = query.lte("start", toDate + "T23:59:59");
-  }
+    // ================================
+    // Date Filter Management
+    // ================================
+    const DateFilter = {
+      updateReportRange() {
+        const fromDate = DOM.fromDate.value;
+        const toDate = DOM.toDate.value;
 
-  const { data, error } = await query;
+        if (fromDate && toDate) {
+          DOM.reportRangeText.innerText = `📅 Report Range: ${fromDate} to ${toDate}`;
+        } else if (fromDate) {
+          DOM.reportRangeText.innerText = `📅 Report From: ${fromDate}`;
+        } else if (toDate) {
+          DOM.reportRangeText.innerText = `📅 Report Until: ${toDate}`;
+        } else {
+          DOM.reportRangeText.innerText = "Showing all available results";
+        }
+      },
 
-  if (error) {
-    console.error(error);
-    alert("Result fetch failed");
-    return;
-  }
+      validate() {
+        const fromDate = DOM.fromDate.value;
+        const toDate = DOM.toDate.value;
 
-  allResults = data || [];
-  updateReportRangeText();
-  renderAnalytics();
-  renderTable();
-}
+        if (fromDate && toDate && new Date(fromDate) > new Date(toDate)) {
+          Utils.showStatus("শুরুর তারিখ শেষ তারিখের পরে হতে পারবে না!", "error");
+          return false;
+        }
 
-function renderAnalytics() {
-  const totalAttempts = allResults.length;
+        return true;
+      }
+    };
 
-  const uniqueNames = new Set(
-    allResults.map(r => (r.name || "").trim().toLowerCase()).filter(Boolean)
-  );
+    // ================================
+    // Data Fetching
+    // ================================
+    const DataFetcher = {
+      async fetchResults() {
+        if (!STATE.currentExamId) {
+          Utils.showStatus("প্রথমে একটি পরীক্ষা নির্বাচন করুন", "error");
+          return;
+        }
 
-  const uniqueStudents = uniqueNames.size;
+        if (!DateFilter.validate()) return;
 
-  const avg =
-    totalAttempts > 0
-      ? Math.round(allResults.reduce((sum, r) => sum + (Number(r.percent) || 0), 0) / totalAttempts)
-      : 0;
+        Utils.showLoading(true);
 
-  const highest =
-    totalAttempts > 0
-      ? Math.max(...allResults.map(r => Number(r.percent) || 0))
-      : 0;
+        try {
+          const fromDate = DOM.fromDate.value;
+          const toDate = DOM.toDate.value;
 
-  document.getElementById("totalAttempts").innerText = "Total Attempts: " + totalAttempts;
-  document.getElementById("uniqueStudents").innerText = "Unique Students: " + uniqueStudents;
-  document.getElementById("avgPercent").innerText = "Average Percentage: " + avg + "%";
-  document.getElementById("highestPercent").innerText = "Highest Percentage: " + highest + "%";
-}
+          let query = supabaseClient
+            .from("exam_results")
+            .select("*")
+            .eq("examId", STATE.currentExamId)
+            .order("percent", { ascending: false })
+            .order("correct", { ascending: false })
+            .limit(CONFIG.TOP_LIMIT);
 
-function renderTable() {
-  const tbody = document.getElementById("scoreBody");
-  const title = document.getElementById("examTitleHeader");
-  const date = document.getElementById("examDateHeader");
-  const emptyMessage = document.getElementById("emptyMessage");
+          if (fromDate) {
+            query = query.gte("start", `${fromDate}T00:00:00`);
+          }
 
-  const exam = EXAM_STATUS[currentExamId];
-  if (!exam) return;
+          if (toDate) {
+            query = query.lte("start", `${toDate}T23:59:59`);
+          }
 
-  title.innerText = "Exam Title: " + exam.title;
-  date.innerText = "Generated: " + new Date().toLocaleString();
-  tbody.innerHTML = "";
+          const { data, error } = await query;
 
-  if (!allResults.length) {
-    emptyMessage.style.display = "block";
-    return;
-  } else {
-    emptyMessage.style.display = "none";
-  }
+          if (error) throw error;
 
-  let lastScore = null;
-  let rank = 0;
+          STATE.allResults = data || [];
+          
+          DateFilter.updateReportRange();
+          Analytics.render();
+          TableRenderer.render();
 
-  allResults.forEach((r, i) => {
-    const currentPercent = Number(r.percent) || 0;
+          Utils.showStatus(`✅ ${STATE.allResults.length} টি ফলাফল লোড হয়েছে`, "success");
+          console.log(`✅ Fetched ${STATE.allResults.length} results`);
 
-    if (currentPercent !== lastScore) {
-      rank = i + 1;
-    }
-
-    lastScore = currentPercent;
-
-    let rankLabel = "";
-    if (rank === 1) rankLabel = "1st";
-    else if (rank === 2) rankLabel = "2nd";
-    else if (rank === 3) rankLabel = "3rd";
-    else rankLabel = rank + "th";
-
-    let medal = "";
-    if (rank === 1) medal = " 🥇";
-    else if (rank === 2) medal = " 🥈";
-    else if (rank === 3) medal = " 🥉";
-
-    const name = `${r.name} (${rankLabel})${medal}`;
-    const status = currentPercent >= 40 ? "PASS" : "FAIL";
-
-    const tr = document.createElement("tr");
-
-    if (rank <= 5) tr.classList.add("top-rank");
-    if (rank === 1) tr.classList.add("rank-1");
-    if (rank === 2) tr.classList.add("rank-2");
-    if (rank === 3) tr.classList.add("rank-3");
-
-    tr.classList.add(status === "PASS" ? "pass" : "fail");
-
-    tr.innerHTML = `
-      <td>${name}</td>
-      <td>${r.correct}</td>
-      <td>${r.wrong}</td>
-      <td>${r.unanswered}</td>
-      <td>${r.percent}%</td>
-      <td>${status}</td>
-    `;
-
-    tbody.appendChild(tr);
-  });
-}
-
-function subscribeRealtime() {
-  if (realtimeChannel) {
-    supabaseClient.removeChannel(realtimeChannel);
-  }
-
-  realtimeChannel = supabaseClient
-    .channel("exam_results_changes")
-    .on(
-      "postgres_changes",
-      { event: "*", schema: "public", table: "exam_results" },
-      payload => {
-        if (payload.new && payload.new.examId === currentExamId) {
-          fetchResults();
+        } catch (error) {
+          console.error("❌ Fetch error:", error);
+          Utils.showStatus("ফলাফল লোড করতে ব্যর্থ হয়েছে", "error");
+        } finally {
+          Utils.showLoading(false);
         }
       }
-    )
-    .subscribe();
-}
+    };
 
-document.getElementById("examSelect").addEventListener("change", function () {
-  currentExamId = this.value;
+    // ================================
+    // Analytics Rendering
+    // ================================
+    const Analytics = {
+      render() {
+        const totalAttempts = STATE.allResults.length;
 
-  if (currentExamId) {
-    fetchResults();
-    subscribeRealtime();
-  }
-});
+        const uniqueNames = new Set(
+          STATE.allResults
+            .map(r => (r.name || "").trim().toLowerCase())
+            .filter(Boolean)
+        );
 
-document.getElementById("filterBtn").addEventListener("click", function () {
-  if (!currentExamId) {
-    alert("Select exam first");
-    return;
-  }
-  fetchResults();
-});
+        const uniqueStudents = uniqueNames.size;
 
-document.getElementById("downloadBtn").addEventListener("click", () => {
-  if (!currentExamId) {
-    alert("Select exam first");
-    return;
-  }
+        const avg = totalAttempts > 0
+          ? Math.round(STATE.allResults.reduce((sum, r) => sum + (Number(r.percent) || 0), 0) / totalAttempts)
+          : 0;
 
-  const exam = EXAM_STATUS[currentExamId];
-  const element = document.getElementById("liveTableContainer");
+        const highest = totalAttempts > 0
+          ? Math.max(...STATE.allResults.map(r => Number(r.percent) || 0))
+          : 0;
 
-  html2pdf().set({
-    margin: [20, 10, 20, 10],
-    filename: exam.title + "-Scoreboard.pdf",
-    html2canvas: { scale: 2 },
-    jsPDF: { unit: "pt", format: "a4", orientation: "portrait" }
-  }).from(element).save();
-});
+        DOM.totalAttempts.innerText = totalAttempts;
+        DOM.uniqueStudents.innerText = uniqueStudents;
+        DOM.avgPercent.innerText = `${avg}%`;
+        DOM.highestPercent.innerText = `${highest}%`;
+      }
+    };
 
-window.onload = () => {
-  populateExamDropdown();
-  updateReportRangeText();
-};
-</script>
+    // ================================
+    // Table Rendering
+    // ================================
+    const TableRenderer = {
+      render() {
+        const exam = ExamManager.getSelectedExam();
+        if (!exam) return;
+
+        DOM.examTitleHeader.innerText = `📝 ${exam.title}`;
+        DOM.examDateHeader.innerText = `Generated: ${Utils.formatDate(new Date())}`;
+        DOM.scoreBody.innerHTML = "";
+
+        if (!STATE.allResults.length) {
+          DOM.emptyMessage.style.display = "block";
+          return;
+        }
+
+        DOM.emptyMessage.style.display = "none";
+
+        let lastScore = null;
+        let rank = 0;
+
+        STATE.allResults.forEach((r, index) => {
+          const currentPercent = Number(r.percent) || 0;
+
+          if (currentPercent !== lastScore) {
+            rank = index + 1;
+          }
+
+          lastScore = currentPercent;
+
+          const rankLabel = Utils.getRankLabel(rank);
+          const name = `${Utils.escapeHtml(r.name)} (${rankLabel})`;
+          const status = currentPercent >= CONFIG.PASS_PERCENTAGE ? "PASS" : "FAIL";
+
+          const tr = document.createElement("tr");
+
+          if (rank <= 5) tr.classList.add("top-rank");
+          if (rank === 1) tr.classList.add("rank-1");
+          if (rank === 2) tr.classList.add("rank-2");
+          if (rank === 3) tr.classList.add("rank-3");
+
+          tr.classList.add(status === "PASS" ? "pass" : "fail");
+
+          tr.innerHTML = `
+            <td>${name}</td>
+            <td>${r.correct}</td>
+            <td>${r.wrong}</td>
+            <td>${r.unanswered}</td>
+            <td><strong>${r.percent}%</strong></td>
+            <td><strong>${status}</strong></td>
+          `;
+
+          DOM.scoreBody.appendChild(tr);
+        });
+      }
+    };
+
+    // ================================
+    // Realtime Subscription
+    // ================================
+    const RealtimeManager = {
+      subscribe() {
+        this.unsubscribe();
+
+        if (!STATE.currentExamId) return;
+
+        STATE.realtimeChannel = supabaseClient
+          .channel("exam_results_realtime")
+          .on(
+            "postgres_changes",
+            { event: "*", schema: "public", table: "exam_results" },
+            payload => {
+              console.log("🔔 Realtime update:", payload);
+              
+              if (payload.new && payload.new.examId === STATE.currentExamId) {
+                DataFetcher.fetchResults();
+              }
+            }
+          )
+          .subscribe((status) => {
+            console.log("📡 Realtime status:", status);
+          });
+
+        console.log("✅ Realtime subscription activated");
+      },
+
+      unsubscribe() {
+        if (STATE.realtimeChannel) {
+          supabaseClient.removeChannel(STATE.realtimeChannel);
+          STATE.realtimeChannel = null;
+          console.log("❌ Realtime subscription removed");
+        }
+      }
+    };
+
+    // ================================
+    // Auto Refresh
+    // ================================
+    const AutoRefresh = {
+      start() {
+        this.stop();
+        
+        STATE.autoRefreshTimer = setInterval(() => {
+          if (STATE.currentExamId && !STATE.isLoading) {
+            console.log("🔄 Auto-refreshing...");
+            DataFetcher.fetchResults();
+          }
+        }, CONFIG.AUTO_REFRESH_INTERVAL);
+
+        console.log("✅ Auto-refresh enabled");
+      },
+
+      stop() {
+        if (STATE.autoRefreshTimer) {
+          clearInterval(STATE.autoRefreshTimer);
+          STATE.autoRefreshTimer = null;
+          console.log("❌ Auto-refresh disabled");
+        }
+      }
+    };
+
+    // ================================
+    // PDF Download
+    // ================================
+    const PDFDownloader = {
+      async download() {
+        if (!STATE.currentExamId) {
+          Utils.showStatus("প্রথমে একটি পরীক্ষা নির্বাচন করুন", "error");
+          return;
+        }
+
+        if (!STATE.allResults.length) {
+          Utils.showStatus("কোন ফলাফল নেই ডাউনলোড করার জন্য", "error");
+          return;
+        }
+
+        Utils.showLoading(true);
+        Utils.showStatus("PDF তৈরি হচ্ছে...", "info");
+
+        try {
+          const exam = ExamManager.getSelectedExam();
+          
+          const opt = {
+            margin: [15, 10, 15, 10],
+            filename: `${exam.title}-Scoreboard-${new Date().getTime()}.pdf`,
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { 
+              scale: 2,
+              useCORS: true,
+              logging: false,
+              backgroundColor: "#ffffff"
+            },
+            jsPDF: { 
+              unit: "pt", 
+              format: "a4", 
+              orientation: "portrait" 
+            },
+            pagebreak: { 
+              mode: ["css", "legacy"] 
+            }
+          };
+
+          await html2pdf().set(opt).from(DOM.liveTableContainer).save();
+          
+          Utils.showStatus("✅ PDF সফলভাবে ডাউনলোড হয়েছে!", "success");
+          console.log("✅ PDF downloaded successfully");
+
+        } catch (error) {
+          console.error("❌ PDF generation error:", error);
+          Utils.showStatus("PDF তৈরি করতে ব্যর্থ হয়েছে", "error");
+        } finally {
+          Utils.showLoading(false);
+        }
+      }
+    };
+
+    // ================================
+    // Event Handlers
+    // ================================
+    const EventHandlers = {
+      init() {
+        DOM.examSelect.addEventListener("change", this.onExamChange.bind(this));
+        DOM.filterBtn.addEventListener("click", this.onFilter.bind(this));
+        DOM.downloadBtn.addEventListener("click", this.onDownload.bind(this));
+        DOM.refreshBtn.addEventListener("click", this.onRefresh.bind(this));
+        DOM.fromDate.addEventListener("change", DateFilter.updateReportRange);
+        DOM.toDate.addEventListener("change", DateFilter.updateReportRange);
+      },
+
+      onExamChange(e) {
+        STATE.currentExamId = e.target.value;
+
+        if (STATE.currentExamId) {
+          DataFetcher.fetchResults();
+          RealtimeManager.subscribe();
+          AutoRefresh.start();
+        } else {
+          RealtimeManager.unsubscribe();
+          AutoRefresh.stop();
+        }
+      },
+
+      onFilter() {
+        DataFetcher.fetchResults();
+      },
+
+      onDownload() {
+        PDFDownloader.download();
+      },
+
+      onRefresh() {
+        if (STATE.currentExamId) {
+          Utils.showStatus("রিফ্রেশ করা হচ্ছে...", "info");
+          DataFetcher.fetchResults();
+        }
+      }
+    };
+
+    // ================================
+    // Application Initialization
+    // ================================
+    const App = {
+      init() {
+        console.log("🚀 Initializing Scoreboard Application...");
+        
+        ExamManager.populateDropdown();
+        EventHandlers.init();
+        DateFilter.updateReportRange();
+
+        // Set default date to today
+        const today = new Date().toISOString().split('T')[0];
+        DOM.toDate.value = today;
+
+        console.log("✅ Application initialized successfully");
+        Utils.showStatus("স্বাগতম! একটি পরীক্ষা নির্বাচন করুন", "info");
+      }
+    };
+
+    // ================================
+    // Start Application
+    // ================================
+    window.addEventListener('DOMContentLoaded', () => {
+      App.init();
+    });
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', () => {
+      RealtimeManager.unsubscribe();
+      AutoRefresh.stop();
+    });
+
+  </script>
 
 </body>
 </html>
