@@ -45,6 +45,36 @@
       background:#246b45;
     }
 
+    button:disabled{
+      background:#999;
+      cursor:not-allowed;
+    }
+
+    .status-message{
+      padding:12px;
+      border-radius:6px;
+      margin-bottom:15px;
+      display:none;
+    }
+
+    .status-success{
+      background:#d4edda;
+      color:#155724;
+      border:1px solid #c3e6cb;
+    }
+
+    .status-error{
+      background:#f8d7da;
+      color:#721c24;
+      border:1px solid #f5c6cb;
+    }
+
+    .status-info{
+      background:#d1ecf1;
+      color:#0c5460;
+      border:1px solid #bee5eb;
+    }
+
     .pdf-root{
       width:794px;
       margin:0 auto;
@@ -242,6 +272,8 @@
 
   <h2>Admin Download Center - Final Answer PDF</h2>
 
+  <div id="statusMessage" class="status-message"></div>
+
   <div class="control-bar">
     <select id="examSelect">
       <option value="">-- Select Exam --</option>
@@ -255,15 +287,40 @@
   <script>
     const examSelect = document.getElementById("examSelect");
     const downloadBtn = document.getElementById("downloadBtn");
-    const BASE_PATH = "/krisishikkha";
+    const statusMessage = document.getElementById("statusMessage");
 
-    for (const examId in EXAM_STATUS) {
-      const exam = EXAM_STATUS[examId];
-      if (exam.visible && exam.status === "live") {
-        const option = document.createElement("option");
-        option.value = examId;
-        option.textContent = exam.title;
-        examSelect.appendChild(option);
+    // ✅ Custom domain এর জন্য BASE_PATH খালি রাখুন
+    const BASE_PATH = window.location.hostname === "www.krisishikkha.com" || window.location.hostname === "krisishikkha.com" 
+      ? "" 
+      : "/krisishikkha";
+
+    // Status message display function
+    function showStatus(message, type = 'info') {
+      statusMessage.textContent = message;
+      statusMessage.className = `status-message status-${type}`;
+      statusMessage.style.display = 'block';
+      
+      setTimeout(() => {
+        statusMessage.style.display = 'none';
+      }, 5000);
+    }
+
+    // Populate exam dropdown
+    function populateExamDropdown() {
+      let count = 0;
+      for (const examId in EXAM_STATUS) {
+        const exam = EXAM_STATUS[examId];
+        if (exam.visible && exam.status === "live") {
+          const option = document.createElement("option");
+          option.value = examId;
+          option.textContent = exam.title;
+          examSelect.appendChild(option);
+          count++;
+        }
+      }
+      
+      if (count === 0) {
+        showStatus("কোন পরীক্ষা পাওয়া যায়নি!", "error");
       }
     }
 
@@ -278,23 +335,45 @@
     function clearOldQuestionScripts() {
       const oldScripts = document.querySelectorAll('script[data-question-loader="true"]');
       oldScripts.forEach(s => s.remove());
+      
+      // Clear global QUESTIONS variable
+      if (window.QUESTIONS) {
+        delete window.QUESTIONS;
+      }
     }
 
     function loadQuestionsJS(path) {
       return new Promise((resolve, reject) => {
         clearOldQuestionScripts();
+        
         const script = document.createElement("script");
         script.src = path + "?t=" + Date.now();
         script.dataset.questionLoader = "true";
-        script.onload = () => resolve();
-        script.onerror = () => reject(new Error("questions.js load failed"));
+        
+        script.onload = () => {
+          console.log("✅ Questions loaded from:", path);
+          resolve();
+        };
+        
+        script.onerror = () => {
+          console.error("❌ Failed to load:", path);
+          reject(new Error("questions.js load failed from: " + path));
+        };
+        
         document.body.appendChild(script);
       });
     }
 
     function getQuestionsArray() {
-      if (typeof QUESTIONS !== "undefined" && Array.isArray(QUESTIONS)) return QUESTIONS;
-      if (typeof window.QUESTIONS !== "undefined" && Array.isArray(window.QUESTIONS)) return window.QUESTIONS;
+      if (typeof QUESTIONS !== "undefined" && Array.isArray(QUESTIONS)) {
+        console.log("✅ Found QUESTIONS array, length:", QUESTIONS.length);
+        return QUESTIONS;
+      }
+      if (typeof window.QUESTIONS !== "undefined" && Array.isArray(window.QUESTIONS)) {
+        console.log("✅ Found window.QUESTIONS array, length:", window.QUESTIONS.length);
+        return window.QUESTIONS;
+      }
+      console.error("❌ QUESTIONS array not found");
       return null;
     }
 
@@ -303,14 +382,17 @@
 
       const cover = document.createElement("div");
       cover.className = "cover-page";
+      
+      const logoPath = BASE_PATH ? `${BASE_PATH}/assets/icons/icon-192.png` : "/assets/icons/icon-192.png";
+      
       cover.innerHTML = `
         <div class="cover-watermark">krisishikkha.com</div>
-        <img src="${BASE_PATH}/assets/icons/icon-192.png" alt="Logo" class="cover-logo">
+        <img src="${logoPath}" alt="Logo" class="cover-logo" onerror="this.style.display='none'">
         <div class="cover-title">${escapeHtml(examTitle)}</div>
         <div class="cover-subtitle">Answer Sheet with Detailed Explanation</div>
         <div class="cover-line"></div>
         <div class="cover-meta">
-          <div><strong>ওয়েবসাইট:</strong> krisishikkha.com</div>
+          <div><strong>ওয়েবসাইট:</strong> krisishikkha.com</div>
           <div><strong>তারিখ:</strong> ${new Date().toLocaleDateString("bn-BD")}</div>
           <div><strong>মোট প্রশ্ন:</strong> ${questions.length}</div>
         </div>
@@ -364,7 +446,7 @@
         qbox.innerHTML = `
           <div class="qtitle">${index + 1}. ${escapeHtml(q.question)}</div>
           ${optionsHtml}
-          <div class="explanation"><strong>ব্যাখ্যা:</strong> ${escapeHtml(q.explanation || "")}</div>
+          <div class="explanation"><strong>ব্যাখ্যা:</strong> ${escapeHtml(q.explanation || "ব্যাখ্যা নেই")}</div>
         `;
 
         if (index % 2 === 0) {
@@ -401,20 +483,33 @@
       const selectedExam = examSelect.value;
 
       if (!selectedExam) {
-        alert("Please select an exam first!");
+        showStatus("দয়া করে একটি পরীক্ষা নির্বাচন করুন!", "error");
         return;
       }
 
-      const questionPath = `${BASE_PATH}/exam-corner/${selectedExam}/questions.js`;
+      // Disable button during processing
+      downloadBtn.disabled = true;
+      downloadBtn.textContent = "Loading...";
+      showStatus("প্রশ্ন লোড হচ্ছে...", "info");
+
+      const questionPath = BASE_PATH 
+        ? `${BASE_PATH}/exam-corner/${selectedExam}/questions.js`
+        : `/exam-corner/${selectedExam}/questions.js`;
+
+      console.log("📂 Attempting to load from:", questionPath);
 
       try {
         await loadQuestionsJS(questionPath);
         const questions = getQuestionsArray();
 
         if (!questions || questions.length === 0) {
-          alert("প্রশ্ন পাওয়া যায়নি।");
+          showStatus("প্রশ্ন পাওয়া যায়নি। দয়া করে পরে চেষ্টা করুন।", "error");
+          downloadBtn.disabled = false;
+          downloadBtn.textContent = "Download PDF";
           return;
         }
+
+        showStatus(`${questions.length}টি প্রশ্ন পাওয়া গেছে। PDF তৈরি হচ্ছে...`, "success");
 
         const pdfDoc = buildPdfDocument(selectedExam, questions);
 
@@ -425,7 +520,8 @@
           html2canvas: {
             scale: 2,
             useCORS: true,
-            backgroundColor: "#ffffff"
+            backgroundColor: "#ffffff",
+            logging: false
           },
           jsPDF: {
             unit: "pt",
@@ -437,13 +533,24 @@
           }
         };
 
-        html2pdf().set(opt).from(pdfDoc).save();
+        await html2pdf().set(opt).from(pdfDoc).save();
+        
+        showStatus("PDF সফলভাবে ডাউনলোড হয়েছে!", "success");
+        downloadBtn.disabled = false;
+        downloadBtn.textContent = "Download PDF";
 
       } catch (err) {
-        console.error(err);
-        alert(`প্রশ্ন ফাইল লোড হয়নি!\nPath: ${questionPath}`);
+        console.error("❌ Error:", err);
+        showStatus(`প্রশ্ন ফাইল লোড হয়নি! Path: ${questionPath}`, "error");
+        downloadBtn.disabled = false;
+        downloadBtn.textContent = "Download PDF";
       }
     });
+
+    // Initialize on page load
+    populateExamDropdown();
+    console.log("🌐 Current domain:", window.location.hostname);
+    console.log("📁 BASE_PATH:", BASE_PATH || "(root)");
   </script>
 </body>
 </html>
