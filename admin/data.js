@@ -18,7 +18,11 @@ const LINKS = [
       {
         name: "Notes Creation",
         url: "https://krisishikkha.github.io/krisishikkha/note-maker"
-       }
+       },
+       {
+        name: "question solution note maker",
+        url: "https://www.krisishikkha.com/question-solution-notemaker/"
+      }
     ]
   }
 
