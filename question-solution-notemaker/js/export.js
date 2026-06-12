@@ -1,14 +1,12 @@
 /**
  * EXPORT.JS
- * EXACT A4 সাইজ এক্সপোর্ট (210mm × 297mm)
+ * PNG/JPG এক্সপোর্ট ম্যানেজার (সম্পূর্ণ কার্যকর)
  */
 
 class MultiPageExporter {
     constructor() {
-        // A4 সাইজ পিক্সেল (300 DPI - প্রিন্ট কোয়ালিটি)
-        this.A4_WIDTH_PX = 2480;   // 210mm at 300 DPI
-        this.A4_HEIGHT_PX = 3508;  // 297mm at 300 DPI
-        this.SCALE = 3;  // হাই কোয়ালিটি
+        // হাই কোয়ালিটি এক্সপোর্ট
+        this.SCALE = 3;
     }
 
     async exportPNG() {
@@ -23,6 +21,12 @@ class MultiPageExporter {
             this.showNotification(`⏳ ${pages.length}টি পেজ প্রসেস হচ্ছে...`, 'info');
 
             for (let i = 0; i < pages.length; i++) {
+                // ডিবাগ মোড সাময়িকভাবে বন্ধ করুন
+                const wasDebug = pages[i].classList.contains('debug-mode');
+                if (wasDebug) {
+                    pages[i].classList.remove('debug-mode');
+                }
+
                 const canvas = await html2canvas(pages[i], {
                     backgroundColor: '#ffffff',
                     scale: this.SCALE,
@@ -33,6 +37,11 @@ class MultiPageExporter {
                     width: pages[i].offsetWidth,
                     height: pages[i].offsetHeight
                 });
+
+                // ডিবাগ মোড ফিরিয়ে দিন
+                if (wasDebug) {
+                    pages[i].classList.add('debug-mode');
+                }
 
                 // Canvas কে Blob এ রূপান্তর
                 canvas.toBlob((blob) => {
@@ -46,6 +55,7 @@ class MultiPageExporter {
                     }
                 }, 'image/png', 1.0);
 
+                // একটু বিরতি
                 await this.sleep(400);
             }
 
@@ -67,6 +77,12 @@ class MultiPageExporter {
             this.showNotification(`⏳ ${pages.length}টি পেজ প্রসেস হচ্ছে...`, 'info');
 
             for (let i = 0; i < pages.length; i++) {
+                // ডিবাগ মোড সাময়িকভাবে বন্ধ করুন
+                const wasDebug = pages[i].classList.contains('debug-mode');
+                if (wasDebug) {
+                    pages[i].classList.remove('debug-mode');
+                }
+
                 const canvas = await html2canvas(pages[i], {
                     backgroundColor: '#ffffff',
                     scale: this.SCALE,
@@ -77,6 +93,11 @@ class MultiPageExporter {
                     width: pages[i].offsetWidth,
                     height: pages[i].offsetHeight
                 });
+
+                // ডিবাগ মোড ফিরিয়ে দিন
+                if (wasDebug) {
+                    pages[i].classList.add('debug-mode');
+                }
 
                 canvas.toBlob((blob) => {
                     const timestamp = Date.now();
@@ -89,6 +110,7 @@ class MultiPageExporter {
                     }
                 }, 'image/jpeg', 0.95);
 
+                // একটু বিরতি
                 await this.sleep(400);
             }
 
