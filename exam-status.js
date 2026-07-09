@@ -80,22 +80,22 @@ const EXAM_STATUS = {
     codes: ["exam4443"]
     },
   "exam-14": {
-    title: "SSC 2nd Chapter🔴",
-    visible: true,  // ✅ নতুন
+    title: "SSC 2nd Chapter",
+    visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam3377"]
     },
   "exam-15": {
-    title: "SSC 3rd Chapter",
-    visible: false,  // ✅ নতুন
+    title: "SSC 3rd Chapter🔴",
+    visible: true,  // ✅ নতুন
     status: "live",
-    codes: ["exam333"]
+    codes: ["exam3333"]
     },
   "exam-16": {
     title: "SSC 4rth Chapter",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
-    codes: ["exam3333"]
+    codes: ["exam333"]
     },
   "exam-17": {
     title: "SSC 5th Chapter",
