@@ -99,13 +99,13 @@ const EXAM_STATUS = {
     },
   "exam-17": {
     title: "SSC 5th Chapter🔴",
-    visible: true,  // ✅ নতুন
+    visible: false,  // ✅ নতুন
     status: "live",
     codes: ["exam3344"]
     },
   "exam-18": {
     title: "SSC 6th Chapter🔴",
-    visible: false,  // ✅ নতুন
+    visible: true,  // ✅ নতুন
     status: "live",
     codes: ["exam3355"]
     },
