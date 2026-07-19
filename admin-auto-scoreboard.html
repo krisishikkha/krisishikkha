@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Scoreboard - NTRCA Agriculture</title>
+
+  <style>
+    :root {
+      --primary-color: #2E8B57;
+      --primary-dark: #246b45;
+      --success-bg: #d4edda;
+      --fail-bg: #f8d7da;
+      --border-color: #ddd;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --text-dark: #000;
+      --text-light: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 20px;
+      margin: 0;
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: var(--text-dark);
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .control-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 20px;
+      background: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    select,
+    input[type="date"],
+    button {
+      padding: 12px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    select:focus,
+    input[type="date"]:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+    }
+
+    button {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    button:hover:not(:disabled) {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(46, 139, 87, 0.3);
+    }
+
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    button:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .status-message {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      display: none;
+      animation: slideIn 0.3s ease;
+      word-break: break-word;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .status-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+    .status-error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    .status-info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+
+    .analytics-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .analytics-box h3 {
+      margin: 0 0 16px 0;
+      color: var(--text-dark);
+      font-size: 20px;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 8px;
+    }
+
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .analytics-item {
+      background: linear-gradient(135deg, #f7fdf9 0%, #e8f5e9 100%);
+      border: 2px solid #d9efe1;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .analytics-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(46, 139, 87, 0.2);
+    }
+
+    .analytics-item .value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-color);
+      display: block;
+      margin-top: 8px;
+    }
+
+    .pdf-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-25deg);
+      font-size: 140px;
+      color: rgba(0, 0, 0, 0.04);
+      font-weight: 700;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    .pdf-header {
+      text-align: center;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    .pdf-header h1 {
+      font-size: 26px;
+      margin: 0;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .pdf-header h3 {
+      font-size: 18px;
+      margin: 8px 0;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .report-range {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 14px 12px;
+      text-align: center;
+      font-size: 16px;
+      color: var(--text-dark);
+    }
+
+    th {
+      background: var(--primary-color);
+      color: #fff !important;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    tbody tr { transition: all 0.3s ease; }
+    tbody tr:hover { background: #f5f5f5; transform: scale(1.01); }
+
+    .pass { background: var(--success-bg); }
+    .fail { background: var(--fail-bg); }
+    .pass td, .fail td { color: var(--text-dark) !important; }
+
+    .top-rank { font-weight: 700; }
+
+    .rank-1 {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+      border-left: 4px solid gold;
+    }
+    .rank-2 {
+      background: linear-gradient(135deg, rgba(192, 192, 192, 0.2) 0%, rgba(192, 192, 192, 0.1) 100%);
+      border-left: 4px solid silver;
+    }
+    .rank-3 {
+      background: linear-gradient(135deg, rgba(205, 127, 50, 0.2) 0%, rgba(205, 127, 50, 0.1) 100%);
+      border-left: 4px solid #cd7f32;
+    }
+
+    /* Prevent a table row from being sliced across two PDF pages */
+    tr { page-break-inside: avoid; break-inside: avoid; }
+
+    .empty-message {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 18px;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    .spinner {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid var(--primary-color);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+      display: none;
+    }
+
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    @media (max-width: 768px) {
+      body { padding: 12px; }
+      h2 { font-size: 22px; }
+      .control-bar { flex-direction: column; padding: 12px; }
+      select, input[type="date"], button { width: 100%; }
+      .analytics-grid { grid-template-columns: 1fr; }
+      .pdf-header h1 { font-size: 20px; }
+      .pdf-header h3 { font-size: 16px; }
+      th, td { padding: 10px 6px; font-size: 14px; }
+      .watermark { font-size: 80px; }
+      .header-logo { width: 60px; height: 60px; }
+    }
+
+    @media print {
+      body { background: white; }
+      .control-bar, .analytics-box { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>📊 Live Scoreboard - NTRCA Agriculture</h2>
+
+    <div id="statusMessage" class="status-message"></div>
+
+    <div class="control-bar">
+      <select id="examSelect" aria-label="Select Exam">
+        <option value="">-- পরীক্ষা নির্বাচন করুন --</option>
+      </select>
+
+      <input type="date" id="fromDate" aria-label="From Date">
+      <input type="date" id="toDate" aria-label="To Date">
+
+      <button id="filterBtn">🔍 Filter</button>
+      <button id="downloadBtn">📥 Download PDF</button>
+      <button id="refreshBtn">🔄 Refresh</button>
+    </div>
+
+    <div class="spinner" id="loadingSpinner"></div>
+
+    <div class="analytics-box">
+      <h3>📈 Exam Analytics</h3>
+      <div class="analytics-grid">
+        <div class="analytics-item">Total Attempts<span class="value" id="totalAttempts">0</span></div>
+        <div class="analytics-item">Unique Students<span class="value" id="uniqueStudents">0</span></div>
+        <div class="analytics-item">Average Score<span class="value" id="avgPercent">0%</span></div>
+        <div class="analytics-item">Highest Score<span class="value" id="highestPercent">0%</span></div>
+      </div>
+    </div>
+
+    <div class="pdf-container" id="liveTableContainer">
+      <div class="watermark">krisishikkha.com</div>
+
+      <div class="pdf-header">
+        <img id="headerLogo" src="assets/icons/icon-192.png" alt="Krisishikkha Logo" class="header-logo" crossorigin="anonymous">
+        <h1>NTRCA Agriculture Teacher Registration-2026</h1>
+        <h3 id="examTitleHeader">Exam Title</h3>
+        <h3 id="examDateHeader"></h3>
+        <div class="report-range" id="reportRangeText">Showing all available results</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name (Rank)</th>
+            <th>Correct</th>
+            <th>Wrong</th>
+            <th>Unanswered</th>
+            <th>Percentage</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="scoreBody"></tbody>
+      </table>
+
+      <div id="emptyMessage" class="empty-message" style="display:none;">
+        📭 No results found for this filter.
+      </div>
+    </div>
+  </div>
+
+  <script src="exam-status.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script>
+    // ================================
+    // Configuration & Initialization
+    // ================================
+    const CONFIG = {
+      SUPABASE_URL: "https://bpkheipwdjzlyuzyqdxz.supabase.co",
+      SUPABASE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwa2hlaXB3ZGp6bHl1enlxZHh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU5MDYyOTUsImV4cCI6MjA1MTQ4MjI5NX0.xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2vCMR3hqXm7Y4",
+      TOP_LIMIT: 50,
+      PASS_PERCENTAGE: 40,
+      AUTO_REFRESH_INTERVAL: 30000
+    };
+
+    const STATE = {
+      currentExamId: "",
+      allResults: [],
+      realtimeChannel: null,
+      autoRefreshTimer: null,
+      isLoading: false,
+      pdfLibraryReady: false
+    };
+
+    const supabaseClient = supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_KEY);
+
+    const DOM = {
+      examSelect: document.getElementById("examSelect"),
+      fromDate: document.getElementById("fromDate"),
+      toDate: document.getElementById("toDate"),
+      filterBtn: document.getElementById("filterBtn"),
+      downloadBtn: document.getElementById("downloadBtn"),
+      refreshBtn: document.getElementById("refreshBtn"),
+      statusMessage: document.getElementById("statusMessage"),
+      loadingSpinner: document.getElementById("loadingSpinner"),
+      scoreBody: document.getElementById("scoreBody"),
+      examTitleHeader: document.getElementById("examTitleHeader"),
+      examDateHeader: document.getElementById("examDateHeader"),
+      reportRangeText: document.getElementById("reportRangeText"),
+      emptyMessage: document.getElementById("emptyMessage"),
+      totalAttempts: document.getElementById("totalAttempts"),
+      uniqueStudents: document.getElementById("uniqueStudents"),
+      avgPercent: document.getElementById("avgPercent"),
+      highestPercent: document.getElementById("highestPercent"),
+      liveTableContainer: document.getElementById("liveTableContainer"),
+      headerLogo: document.getElementById("headerLogo")
+    };
+
+    // ================================
+    // Utility Functions
+    // ================================
+    const Utils = {
+      showStatus(message, type = 'info') {
+        DOM.statusMessage.textContent = message;
+        DOM.statusMessage.className = `status-message status-${type}`;
+        DOM.statusMessage.style.display = 'block';
+
+        clearTimeout(this._hideTimer);
+        this._hideTimer = setTimeout(() => {
+          DOM.statusMessage.style.display = 'none';
+        }, type === 'error' ? 9000 : 5000);
+      },
+
+      showLoading(show = true) {
+        STATE.isLoading = show;
+        DOM.loadingSpinner.style.display = show ? 'block' : 'none';
+        DOM.filterBtn.disabled = show;
+        DOM.downloadBtn.disabled = show || !STATE.pdfLibraryReady;
+        DOM.refreshBtn.disabled = show;
+      },
+
+      formatDate(date) {
+        return new Date(date).toLocaleDateString('bn-BD', {
+          year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+        });
+      },
+
+      escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      },
+
+      getRankLabel(rank) {
+        if (rank === 1) return "1st 🥇";
+        if (rank === 2) return "2nd 🥈";
+        if (rank === 3) return "3rd 🥉";
+        return `${rank}th`;
+      },
+
+      // Wait for every image inside a node to finish loading (or fail) before capture
+      waitForImages(node) {
+        const imgs = Array.from(node.querySelectorAll('img'));
+        return Promise.all(imgs.map(img => {
+          if (img.complete) return Promise.resolve();
+          return new Promise(resolve => {
+            img.addEventListener('load', resolve, { once: true });
+            img.addEventListener('error', resolve, { once: true });
+          });
+        }));
+      }
+    };
+
+    // ================================
+    // Exam Management
+    // ================================
+    const ExamManager = {
+      populateDropdown() {
+        DOM.examSelect.innerHTML = '<option value="">-- পরীক্ষা নির্বাচন করুন --</option>';
+
+        let count = 0;
+        if (typeof EXAM_STATUS === 'undefined') {
+          Utils.showStatus("exam-status.js লোড হয়নি — পরীক্ষার তালিকা পাওয়া যায়নি", "error");
+          return;
+        }
+
+        // NOTE: We intentionally show ALL configured exams here, not just
+        // `visible: true` ones. "visible" only controls whether an exam is
+        // publicly listed on the student-facing site — students can still
+        // reach a hidden exam directly (e.g. ?exam=exam-3) and submit
+        // results for it. If we filtered this admin dropdown by `visible`
+        // too, results for any non-visible exam would be saved in Supabase
+        // but would be impossible to select/view here. Admins need to see
+        // every exam's results regardless of its public visibility.
+        Object.keys(EXAM_STATUS).forEach(id => {
+          const exam = EXAM_STATUS[id];
+          const option = document.createElement("option");
+          option.value = id;
+          option.textContent = exam.visible
+            ? exam.title
+            : `${exam.title} (hidden)`;
+          DOM.examSelect.appendChild(option);
+          count++;
+        });
+
+        if (count === 0) {
+          Utils.showStatus("কোন পরীক্ষা কনফিগার করা নেই", "error");
+        }
+      },
+
+      getSelectedExam() {
+        return EXAM_STATUS[STATE.currentExamId];
+      }
+    };
+
+    // ================================
+    // Date Filter Management
+    // ================================
+    const DateFilter = {
+      updateReportRange() {
+        const fromDate = DOM.fromDate.value;
+        const toDate = DOM.toDate.value;
+
+        if (fromDate && toDate) {
+          DOM.reportRangeText.innerText = `📅 Report Range: ${fromDate} to ${toDate}`;
+        } else if (fromDate) {
+          DOM.reportRangeText.innerText = `📅 Report From: ${fromDate}`;
+        } else if (toDate) {
+          DOM.reportRangeText.innerText = `📅 Report Until: ${toDate}`;
+        } else {
+          DOM.reportRangeText.innerText = "Showing all available results";
+        }
+      },
+
+      validate() {
+        const fromDate = DOM.fromDate.value;
+        const toDate = DOM.toDate.value;
+
+        if (fromDate && toDate && new Date(fromDate) > new Date(toDate)) {
+          Utils.showStatus("শুরুর তারিখ শেষ তারিখের পরে হতে পারবে না!", "error");
+          return false;
+        }
+        return true;
+      }
+    };
+
+    // ================================
+    // Data Fetching
+    // ================================
+    const DataFetcher = {
+      async fetchResults() {
+        if (!STATE.currentExamId) {
+          Utils.showStatus("প্রথমে একটি পরীক্ষা নির্বাচন করুন", "error");
+          return;
+        }
+
+        if (!DateFilter.validate()) return;
+
+        Utils.showLoading(true);
+
+        try {
+          const fromDate = DOM.fromDate.value;
+          const toDate = DOM.toDate.value;
+
+          console.log("🔍 Fetching with examId:", STATE.currentExamId);
+          console.log("📅 Date range:", { fromDate, toDate });
+
+          let query = supabaseClient
+            .from("exam_results")
+            .select("*")
+            .eq("examId", STATE.currentExamId)
+            .order("percent", { ascending: false })
+            .order("correct", { ascending: false })
+            .limit(CONFIG.TOP_LIMIT);
+
+          if (fromDate) query = query.gte("start", `${fromDate}T00:00:00`);
+          if (toDate) query = query.lte("start", `${toDate}T23:59:59`);
+
+          const { data, error } = await query;
+
+          // Debug: Show exactly what came back
+          console.log("📦 Query response:", { data, error });
+          console.log("Total records returned:", data ? data.length : 0);
+
+          if (error) {
+            console.error("❌ Query error details:", error);
+            throw error;
+          }
+
+          STATE.allResults = data || [];
+
+          DateFilter.updateReportRange();
+          Analytics.render();
+          TableRenderer.render();
+
+          Utils.showStatus(`✅ ${STATE.allResults.length} টি ফলাফল লোড হয়েছে`, "success");
+
+        } catch (error) {
+          console.error("❌ Fetch error:", error);
+          console.error("Error message:", error.message);
+          console.error("Error details:", JSON.stringify(error, null, 2));
+          Utils.showStatus(`ফলাফল লোড করতে ব্যর্থ হয়েছে: ${error.message || error}`, "error");
+        } finally {
+          Utils.showLoading(false);
+        }
+      }
+    };
+
+    // ================================
+    // Analytics Rendering
+    // ================================
+    const Analytics = {
+      render() {
+        const totalAttempts = STATE.allResults.length;
+
+        const uniqueNames = new Set(
+          STATE.allResults.map(r => (r.name || "").trim().toLowerCase()).filter(Boolean)
+        );
+        const uniqueStudents = uniqueNames.size;
+
+        const avg = totalAttempts > 0
+          ? Math.round(STATE.allResults.reduce((sum, r) => sum + (Number(r.percent) || 0), 0) / totalAttempts)
+          : 0;
+
+        const highest = totalAttempts > 0
+          ? Math.max(...STATE.allResults.map(r => Number(r.percent) || 0))
+          : 0;
+
+        DOM.totalAttempts.innerText = totalAttempts;
+        DOM.uniqueStudents.innerText = uniqueStudents;
+        DOM.avgPercent.innerText = `${avg}%`;
+        DOM.highestPercent.innerText = `${highest}%`;
+      }
+    };
+
+    // ================================
+    // Table Rendering
+    // ================================
+    const TableRenderer = {
+      render() {
+        const exam = ExamManager.getSelectedExam();
+        if (!exam) return;
+
+        DOM.examTitleHeader.innerText = `📝 ${exam.title}`;
+        DOM.examDateHeader.innerText = `Generated: ${Utils.formatDate(new Date())}`;
+        DOM.scoreBody.innerHTML = "";
+
+        if (!STATE.allResults.length) {
+          DOM.emptyMessage.style.display = "block";
+          return;
+        }
+
+        DOM.emptyMessage.style.display = "none";
+
+        let lastScore = null;
+        let rank = 0;
+
+        STATE.allResults.forEach((r, index) => {
+          const currentPercent = Number(r.percent) || 0;
+
+          if (currentPercent !== lastScore) rank = index + 1;
+          lastScore = currentPercent;
+
+          const rankLabel = Utils.getRankLabel(rank);
+          const name = `${Utils.escapeHtml(r.name)} (${rankLabel})`;
+          const status = currentPercent >= CONFIG.PASS_PERCENTAGE ? "PASS" : "FAIL";
+
+          const tr = document.createElement("tr");
+
+          if (rank <= 5) tr.classList.add("top-rank");
+          if (rank === 1) tr.classList.add("rank-1");
+          if (rank === 2) tr.classList.add("rank-2");
+          if (rank === 3) tr.classList.add("rank-3");
+
+          tr.classList.add(status === "PASS" ? "pass" : "fail");
+
+          tr.innerHTML = `
+            <td>${name}</td>
+            <td>${r.correct}</td>
+            <td>${r.wrong}</td>
+            <td>${r.unanswered}</td>
+            <td><strong>${r.percent}%</strong></td>
+            <td><strong>${status}</strong></td>
+          `;
+
+          DOM.scoreBody.appendChild(tr);
+        });
+      }
+    };
+
+    // ================================
+    // Realtime Subscription
+    // ================================
+    const RealtimeManager = {
+      subscribe() {
+        this.unsubscribe();
+        if (!STATE.currentExamId) return;
+
+        STATE.realtimeChannel = supabaseClient
+          .channel("exam_results_realtime")
+          .on("postgres_changes", { event: "*", schema: "public", table: "exam_results" }, payload => {
+            if (payload.new && payload.new.examId === STATE.currentExamId) {
+              DataFetcher.fetchResults();
+            }
+          })
+          .subscribe();
+      },
+
+      unsubscribe() {
+        if (STATE.realtimeChannel) {
+          supabaseClient.removeChannel(STATE.realtimeChannel);
+          STATE.realtimeChannel = null;
+        }
+      }
+    };
+
+    // ================================
+    // Auto Refresh
+    // ================================
+    const AutoRefresh = {
+      start() {
+        this.stop();
+        STATE.autoRefreshTimer = setInterval(() => {
+          if (STATE.currentExamId && !STATE.isLoading) {
+            DataFetcher.fetchResults();
+          }
+        }, CONFIG.AUTO_REFRESH_INTERVAL);
+      },
+      stop() {
+        if (STATE.autoRefreshTimer) {
+          clearInterval(STATE.autoRefreshTimer);
+          STATE.autoRefreshTimer = null;
+        }
+      }
+    };
+
+    // ================================
+    // PDF Download  (FIXED)
+    // ================================
+    const PDFDownloader = {
+      // Try a capture at a given scale; if it throws (common on low-memory mobile
+      // devices with scale:2 on a long table), retry once at a lower scale
+      // instead of just failing silently.
+      async attempt(opt) {
+        return html2pdf().set(opt).from(DOM.liveTableContainer).save();
+      },
+
+      async download() {
+        if (!STATE.pdfLibraryReady) {
+          Utils.showStatus("PDF লাইব্রেরি লোড হয়নি — ইন্টারনেট সংযোগ চেক করে পেজ রিফ্রেশ করুন", "error");
+          return;
+        }
+
+        if (!STATE.currentExamId) {
+          Utils.showStatus("প্রথমে একটি পরীক্ষা নির্বাচন করুন", "error");
+          return;
+        }
+
+        if (!STATE.allResults.length) {
+          Utils.showStatus("কোন ফলাফল নেই ডাউনলোড করার জন্য", "error");
+          return;
+        }
+
+        Utils.showLoading(true);
+        Utils.showStatus("PDF তৈরি হচ্ছে...", "info");
+
+        try {
+          // Make sure the logo (or its hidden fallback) has resolved before
+          // html2canvas snapshots the DOM — this was a source of blank/stuck
+          // captures when the image path 404'd without onerror finishing in time.
+          await Utils.waitForImages(DOM.liveTableContainer);
+
+          const exam = ExamManager.getSelectedExam();
+          const safeTitle = (exam.title || 'Scoreboard').replace(/[\\/:*?"<>|]/g, '-');
+
+          const baseOpt = {
+            margin: [15, 10, 15, 10],
+            filename: `${safeTitle}-Scoreboard-${Date.now()}.pdf`,
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: {
+              scale: 2,
+              useCORS: true,
+              allowTaint: true,
+              logging: false,
+              backgroundColor: "#ffffff"
+            },
+            jsPDF: { unit: "pt", format: "a4", orientation: "portrait" },
+            pagebreak: { mode: ["css", "legacy"], avoid: "tr" }
+          };
+
+          try {
+            await this.attempt(baseOpt);
+          } catch (firstError) {
+            console.warn("⚠️ First PDF attempt failed, retrying at lower scale:", firstError);
+            const fallbackOpt = {
+              ...baseOpt,
+              html2canvas: { ...baseOpt.html2canvas, scale: 1 }
+            };
+            await this.attempt(fallbackOpt);
+          }
+
+          Utils.showStatus("✅ PDF সফলভাবে ডাউনলোড হয়েছে!", "success");
+
+        } catch (error) {
+          console.error("❌ PDF generation error:", error);
+          Utils.showStatus(`PDF তৈরি করতে ব্যর্থ হয়েছে: ${error.message || error}`, "error");
+        } finally {
+          Utils.showLoading(false);
+        }
+      }
+    };
+
+    // ================================
+    // Event Handlers
+    // ================================
+    const EventHandlers = {
+      init() {
+        DOM.examSelect.addEventListener("change", this.onExamChange.bind(this));
+        DOM.filterBtn.addEventListener("click", this.onFilter.bind(this));
+        DOM.downloadBtn.addEventListener("click", this.onDownload.bind(this));
+        DOM.refreshBtn.addEventListener("click", this.onRefresh.bind(this));
+        DOM.fromDate.addEventListener("change", DateFilter.updateReportRange);
+        DOM.toDate.addEventListener("change", DateFilter.updateReportRange);
+      },
+
+      onExamChange(e) {
+        STATE.currentExamId = e.target.value;
+        if (STATE.currentExamId) {
+          DataFetcher.fetchResults();
+          RealtimeManager.subscribe();
+          AutoRefresh.start();
+        } else {
+          RealtimeManager.unsubscribe();
+          AutoRefresh.stop();
+        }
+      },
+
+      onFilter() { DataFetcher.fetchResults(); },
+      onDownload() { PDFDownloader.download(); },
+      onRefresh() {
+        if (STATE.currentExamId) {
+          Utils.showStatus("রিফ্রেশ করা হচ্ছে...", "info");
+          DataFetcher.fetchResults();
+        }
+      }
+    };
+
+    // ================================
+    // Application Initialization
+    // ================================
+    const App = {
+      init() {
+        // Verify the PDF library actually loaded from the CDN. If the CDN
+        // request failed (blocked, offline, path changed) the old code would
+        // stay silent until someone clicked Download and got a vague error.
+        // Now we check immediately and disable the button with a clear reason.
+        STATE.pdfLibraryReady = typeof html2pdf === 'function';
+        if (!STATE.pdfLibraryReady) {
+          DOM.downloadBtn.disabled = true;
+          Utils.showStatus("⚠️ PDF লাইব্রেরি লোড হয়নি। পেজ রিফ্রেশ করুন বা ইন্টারনেট সংযোগ চেক করুন।", "error");
+        }
+
+        ExamManager.populateDropdown();
+        EventHandlers.init();
+        DateFilter.updateReportRange();
+
+        const today = new Date().toISOString().split('T')[0];
+        DOM.toDate.value = today;
+
+        if (STATE.pdfLibraryReady) {
+          Utils.showStatus("স্বাগতম! একটি পরীক্ষা নির্বাচন করুন", "info");
+        }
+      }
+    };
+
+    window.addEventListener('DOMContentLoaded', () => {
+      App.init();
+    });
+
+    window.addEventListener('beforeunload', () => {
+      RealtimeManager.unsubscribe();
+      AutoRefresh.stop();
+    });
+
+  </script>
+
+</body>
+</html>
