@@ -185,7 +185,7 @@ async function submitExam() {
     try {
         const supabaseClient = supabase.createClient(
             "https://bpkheipwdjzlyuzyqdxz.supabase.co",
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwa2hlaXB3ZGp6bHl1enlxZHh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU5MDYyOTUsImV4cCI6MjA1MTQ4MjI5NX0.xOzl8Ctl6AtJlR1i8g3bEw_veKboXz2vCMR3hqXm7Y4"
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwa2hlaXB3ZGp6bHl1enlxZHh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNDIxNDEsImV4cCI6MjA4ODYxODE0MX0.OGgbZffNS8q6IOnCY0Hq02D0A_MTfHPFZ8KSzBcAfZs"
         );
 
         const { data, error } = await supabaseClient.from("exam_results").insert([resultObj]).select();
@@ -257,5 +257,5 @@ function renderScoreboard(resultObj) {
 
     container.innerHTML = html;
     container.scrollIntoView({ behavior: "smooth" });
-}
-
+            }
+    
