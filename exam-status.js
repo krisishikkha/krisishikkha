@@ -1,118 +1,134 @@
 const EXAM_STATUS = {
   "exam-1": {
-    title: "ডেমো পরীক্ষা🔴 ",
-    visible: true,   // ✅ নতুন
+    title: "ডেমো পরীক্ষা code: exam1111🔴 ",
+    visible: true,
     status: "live",
-    codes: ["krisi"]
+    codes: ["exam1111"]
   },
 
   "exam-2": {
     title: "HSC 1st Paper 1st Chapter🔴",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam248"]
+    codes: ["exam1111"]
   },
 
   "exam-3": {
     title: "HSC 1st Paper 2nd Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam321"]
+    codes: ["exam1111"]
   },
+
   "exam-4": {
     title: "HSC 1st Paper 3rd Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam3490"]
-      },
+    codes: ["exam1111"]
+  },
+
   "exam-5": {
     title: "HSC 1st Paper 4rth Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam6262"]
-    },
-    "exam-6": {
+    codes: ["exam1111"]
+  },
+
+  "exam-6": {
     title: "HSC 1st Paper 5th Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam2668"]
-    },
-    "exam-7": {
+    codes: ["exam1111"]
+  },
+
+  "exam-7": {
     title: "HSC 1st Paper 6th Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam246"]
-    },
-    "exam-8": {
+    codes: ["exam1111"]
+  },
+
+  "exam-8": {
     title: "HSC 2nd Paper 1st Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam2"]
-    },
-    "exam-9": {
+    codes: ["exam1111"]
+  },
+
+  "exam-9": {
     title: "HSC 2nd Paper 2nd Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam222"]
-    },
-    "exam-10": {
+    codes: ["exam1111"]
+  },
+
+  "exam-10": {
     title: "HSC 2nd Paper 3rd Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam3333"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-11": {
     title: "HSC 2nd Paper 4rth Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam1122"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-12": {
     title: "HSC 2nd Paper 5th Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam2244"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-13": {
     title: "SSC 1st Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam4443"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-14": {
     title: "SSC 2nd Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam3377"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-15": {
     title: "SSC 3rd Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam3333"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-16": {
     title: "SSC 4rth Chapter",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam4333"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-17": {
     title: "SSC 5th Chapter🔴",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam3344"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-18": {
     title: "SSC 6th Chapter🔴",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam3355"]
-    },
+    codes: ["exam1111"]
+  },
+
   "exam-19": {
     title: "SSC 7th Chapter🔴",
-    visible: true,  // ✅ নতুন
+    visible: false,
     status: "live",
-    codes: ["exam3333"]
-    }
+    codes: ["exam1111"]
+  }
 };
