@@ -40,7 +40,7 @@ const EXAM_STATUS = {
   },
 
   "exam-2": {
-    title: "HSC 1st Paper 1st Chapter🔴",
+    title: "HSC 1st Paper 1st Chapter",
     category: "archived",
     codes: ["exam1111"]
   },
@@ -130,25 +130,25 @@ const EXAM_STATUS = {
   },
 
   "exam-17": {
-    title: "SSC 5th Chapter🔴",
+    title: "SSC 5th Chapter",
     category: "archived",
     codes: ["exam1111"]
   },
 
   "exam-18": {
-    title: "SSC 6th Chapter🔴",
+    title: "SSC 6th Chapter",
     category: "archived",
     codes: ["exam1111"]
   },
 
   "exam-19": {
-    title: "SSC 7th Chapter🔴",
+    title: "SSC 7th Chapter",
     category: "archived",
     codes: ["exam1111"]
   },
 
   "exam-20": {
-    title: "HSC 1st Paper 1st Chapter",
+    title: "HSC 1st Paper 1st Chapter🔴",
     category: "live",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
