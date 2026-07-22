@@ -157,7 +157,7 @@ const EXAM_STATUS = {
 
   "exam-21": {
     title: "HSC 1st Paper 2nd Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -165,7 +165,7 @@ const EXAM_STATUS = {
 
   "exam-22": {
     title: "HSC 1st Paper 3rd Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -173,7 +173,7 @@ const EXAM_STATUS = {
 
   "exam-23": {
     title: "HSC 1st Paper 4rth Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -181,7 +181,7 @@ const EXAM_STATUS = {
 
   "exam-24": {
     title: "HSC 1st Paper 5th Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -189,7 +189,7 @@ const EXAM_STATUS = {
 
   "exam-25": {
     title: "HSC 1st Paper 6th Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -197,7 +197,7 @@ const EXAM_STATUS = {
 
   "exam-26": {
     title: "HSC 2nd Paper 1st Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -205,7 +205,7 @@ const EXAM_STATUS = {
 
   "exam-27": {
     title: "HSC 2nd Paper 2nd Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -213,7 +213,7 @@ const EXAM_STATUS = {
 
   "exam-28": {
     title: "HSC 2nd Paper 3rd Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -221,7 +221,7 @@ const EXAM_STATUS = {
 
   "exam-29": {
     title: "HSC 2nd Paper 4rth Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -229,7 +229,7 @@ const EXAM_STATUS = {
 
   "exam-30": {
     title: "HSC 2nd Paper 5th Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -237,7 +237,7 @@ const EXAM_STATUS = {
 
   "exam-31": {
     title: "SSC 1st Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -245,7 +245,7 @@ const EXAM_STATUS = {
 
   "exam-32": {
     title: "SSC 2nd Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -253,7 +253,7 @@ const EXAM_STATUS = {
 
   "exam-33": {
     title: "SSC 3rd Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -261,7 +261,7 @@ const EXAM_STATUS = {
 
   "exam-34": {
     title: "SSC 4rth Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -269,7 +269,7 @@ const EXAM_STATUS = {
 
   "exam-35": {
     title: "SSC 5th Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -277,7 +277,7 @@ const EXAM_STATUS = {
 
   "exam-36": {
     title: "SSC 6th Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -285,7 +285,7 @@ const EXAM_STATUS = {
 
   "exam-37": {
     title: "SSC 7nth Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -293,7 +293,7 @@ const EXAM_STATUS = {
 
   "exam-38": {
     title: "None",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -301,7 +301,7 @@ const EXAM_STATUS = {
 
   "exam-39": {
     title: "None",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
@@ -309,7 +309,7 @@ const EXAM_STATUS = {
 
   "exam-40": {
     title: "None",
-    category: "live",
+    category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
     codes: ["exam2222"]
