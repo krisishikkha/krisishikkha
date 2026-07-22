@@ -6,6 +6,7 @@ let userAnswers = [];
 let timerInterval;
 let studentName = "";
 let totalTime = 25 * 60; // 25 মিনিট
+let IS_PRACTICE = false; // set true when the exam is an "archived" (practice) exam
 
 // -------------------- Login Validation --------------------
 function validateAccess() {
@@ -39,8 +40,11 @@ function getActiveExamId() {
     let examId = params.get("exam");
 
     if (!examId) {
+        // No ?exam= in the URL — fall back to the first exam that is
+        // currently live or archived (open) right now.
         for (const id in EXAM_STATUS) {
-            if (EXAM_STATUS[id].visible && EXAM_STATUS[id].status === "live") {
+            const state = getExamState(EXAM_STATUS[id]);
+            if (state === "live" || state === "archived") {
                 examId = id;
                 break;
             }
@@ -58,12 +62,29 @@ function initExam(examId) {
         return;
     }
 
-    if (EXAM_STATUS[examId].status !== "live") {
-        document.body.innerHTML = "<h2>Exam Locked</h2>";
+    const exam = EXAM_STATUS[examId];
+    const state = getExamState(exam);
+
+    // This check runs even if a student reaches the page via a direct link,
+    // so an exam outside its scheduled window (or a draft) can never be
+    // taken no matter how it's accessed — not just hidden from the list.
+    if (state === "draft") {
+        document.body.innerHTML = "<h2>Invalid Exam ID</h2>";
+        return;
+    }
+    if (state === "upcoming") {
+        document.body.innerHTML =
+            `<h2>⏳ এই পরীক্ষা এখনো শুরু হয়নি</h2><p style="text-align:center">${formatCountdown(exam.startDate)}</p>`;
+        return;
+    }
+    if (state === "ended") {
+        document.body.innerHTML = "<h2>⛔ এই পরীক্ষার সময়সীমা শেষ হয়ে গেছে</h2>";
         return;
     }
 
-    document.getElementById("examTitle").innerText = EXAM_STATUS[examId].title;
+    IS_PRACTICE = (state === "archived");
+
+    document.getElementById("examTitle").innerText = exam.title;
 
     const script = document.createElement("script");
     script.src = `./exam-corner/${examId}/questions.js`;
@@ -173,7 +194,8 @@ async function submitExam() {
         wrong,
         unanswered,
         percent,
-        start: examStartTime.toISOString() // explicit ISO string for the timestamp column
+        start: examStartTime.toISOString(), // explicit ISO string for the timestamp column
+        practice: IS_PRACTICE // true when taken from the Archive folder (untimed-window practice attempt)
     };
 
     // Save to Supabase
@@ -257,5 +279,4 @@ function renderScoreboard(resultObj) {
 
     container.innerHTML = html;
     container.scrollIntoView({ behavior: "smooth" });
-            }
-    
+}
