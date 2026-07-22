@@ -87,6 +87,63 @@
     .install-btn:hover{
       transform:translateY(-3px);
     }
+
+    /* ===== SOCIAL MEDIA ICONS ===== */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-4px) scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-btn.facebook:hover {
+      background: #1877f2;
+      border-color: #1877f2;
+    }
+
+    .social-btn.youtube:hover {
+      background: #ff0000;
+      border-color: #ff0000;
+    }
+
+    /* ===== FOOTER LINKS ===== */
+    .footer-links {
+      font-size: 15px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 8px;
+      transition: opacity 0.2s;
+    }
+
+    .footer-links a:hover {
+      opacity: 0.8;
+    }
+
+    .footer-links .divider {
+      color: rgba(255, 255, 255, 0.6);
+    }
   </style>
 </head>
 
@@ -104,14 +161,35 @@
 
     <a href="exam-corner.html" class="main-box exam">Exam Corner</a>
     <!-- 🔴 Admin Panel Card (এখানেই বসাবেন main-grid এর ভিতরে) -->
-<a href="admin/index.html" class="main-box admin">🛡️ Admin Panel</a>
-<a href="important-job-topic/index.html" class="main-box important">⏳ Important Job Topic</a>
+    <a href="admin/index.html" class="main-box admin">🛡️ Admin Panel</a>
+    <a href="important-job-topic/index.html" class="main-box important">⏳ Important Job Topic</a>
     
   </div>
 
   <footer style="margin-top:80px; text-align:center; padding:20px; background:#2e7d32; color:white;">
-    <a href="privacy-policy.html" style="color:white; margin-right:15px;">Privacy Policy</a>
-    <a href="terms.html" style="color:white;">Terms & Conditions</a>
+    
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1LsEf1LRbM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-btn facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/>
+        </svg>
+      </a>
+      
+      <a href="https://youtube.com/@krisishikkha" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-btn youtube">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span class="divider">|</span>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+
   </footer>
 </div>
 
