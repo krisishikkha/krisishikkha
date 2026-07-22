@@ -327,6 +327,12 @@
         <option value="">-- পরীক্ষা নির্বাচন করুন --</option>
       </select>
 
+      <select id="practiceFilter" aria-label="Result Type">
+        <option value="all">সব ফলাফল</option>
+        <option value="live">শুধু Live ফলাফল</option>
+        <option value="practice">শুধু Practice ফলাফল</option>
+      </select>
+
       <input type="date" id="fromDate" aria-label="From Date">
       <input type="date" id="toDate" aria-label="To Date">
 
@@ -407,6 +413,7 @@
 
     const DOM = {
       examSelect: document.getElementById("examSelect"),
+      practiceFilter: document.getElementById("practiceFilter"),
       fromDate: document.getElementById("fromDate"),
       toDate: document.getElementById("toDate"),
       filterBtn: document.getElementById("filterBtn"),
@@ -495,21 +502,21 @@
           return;
         }
 
-        // NOTE: We intentionally show ALL configured exams here, not just
-        // `visible: true` ones. "visible" only controls whether an exam is
-        // publicly listed on the student-facing site — students can still
-        // reach a hidden exam directly (e.g. ?exam=exam-3) and submit
-        // results for it. If we filtered this admin dropdown by `visible`
-        // too, results for any non-visible exam would be saved in Supabase
-        // but would be impossible to select/view here. Admins need to see
-        // every exam's results regardless of its public visibility.
+        // NOTE: We show ALL configured exams here regardless of category.
+        // A "draft" exam has no results yet, but showing it too avoids ever
+        // hiding an exam's results by accident again — admins need to see
+        // every exam that could possibly have submissions.
         Object.keys(EXAM_STATUS).forEach(id => {
           const exam = EXAM_STATUS[id];
           const option = document.createElement("option");
           option.value = id;
-          option.textContent = exam.visible
-            ? exam.title
-            : `${exam.title} (hidden)`;
+
+          let tag = "";
+          if (exam.category === "archived") tag = " (📁 আর্কাইভ)";
+          else if (exam.category === "draft") tag = " (📝 খসড়া)";
+          else if (exam.category === "live") tag = " (🔴 লাইভ)";
+
+          option.textContent = `${exam.title}${tag}`;
           DOM.examSelect.appendChild(option);
           count++;
         });
@@ -586,6 +593,10 @@
 
           if (fromDate) query = query.gte("start", `${fromDate}T00:00:00`);
           if (toDate) query = query.lte("start", `${toDate}T23:59:59`);
+
+          const practiceFilterValue = DOM.practiceFilter.value;
+          if (practiceFilterValue === "live") query = query.eq("practice", false);
+          if (practiceFilterValue === "practice") query = query.eq("practice", true);
 
           const { data, error } = await query;
 
@@ -673,7 +684,8 @@
           lastScore = currentPercent;
 
           const rankLabel = Utils.getRankLabel(rank);
-          const name = `${Utils.escapeHtml(r.name)} (${rankLabel})`;
+          const practiceTag = r.practice ? ` <span style="font-size:11px;background:#fff3cd;color:#856404;padding:2px 8px;border-radius:10px;">Practice</span>` : "";
+          const name = `${Utils.escapeHtml(r.name)} (${rankLabel})${practiceTag}`;
           const status = currentPercent >= CONFIG.PASS_PERCENTAGE ? "PASS" : "FAIL";
 
           const tr = document.createElement("tr");
