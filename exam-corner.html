@@ -2,67 +2,204 @@
 <html lang="bn">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LGK67QBZD3');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LGK67QBZD3');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam Corner | Krisishikkha</title>
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Exam Status Controller -->
-    <script src="exam-status.js?v=4.2"></script>
+    <!-- Exam Status Controller + shared scheduling helper -->
+    <script src="exam-status.js?v=5.0"></script>
+    <script src="exam-schedule.js?v=5.0"></script>
+
+    <style>
+      /* Scoped styles for the new Archive folder + Live sections.
+         Kept inline here so this page works even before you've merged
+         the additional rules into your main style.css. */
+      .section-heading {
+        max-width: 600px;
+        margin: 30px auto 10px auto;
+        padding: 0 10px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .archive-folder {
+        max-width: 600px;
+        margin: 20px auto 0 auto;
+        background: linear-gradient(135deg, #fff3cd, #ffe8a1);
+        border: 1px solid #f0d78c;
+        border-radius: 14px;
+        padding: 18px 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 0.25s ease;
+      }
+      .archive-folder:hover { transform: translateY(-3px); }
+      .archive-folder .label { font-weight: 700; font-size: 18px; }
+      .archive-folder .count {
+        background: #a97a00;
+        color: #fff;
+        border-radius: 20px;
+        padding: 3px 12px;
+        font-size: 13px;
+      }
+      .archive-list {
+        max-width: 600px;
+        margin: 0 auto;
+        display: none;
+      }
+      .archive-list.open { display: block; }
+      .badge-upcoming {
+        display: inline-block;
+        margin-top: 8px;
+        background: #e3f2fd;
+        color: #0d47a1;
+        border-radius: 20px;
+        padding: 4px 14px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .badge-ended {
+        display: inline-block;
+        margin-top: 8px;
+        background: #eee;
+        color: #777;
+        border-radius: 20px;
+        padding: 4px 14px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .empty-note {
+        max-width: 600px;
+        margin: 20px auto;
+        text-align: center;
+        color: #777;
+        font-style: italic;
+      }
+    </style>
 </head>
 <body>
 
     <h2>Exam Corner</h2>
 
-    <!-- এখানে পরে dynamic exam list আসবে -->
-    <div id="examList">
-        <!-- PHASE 2 তে এখানে exam গুলো show করবো -->
+    <!-- 📁 ARCHIVE FOLDER -->
+    <div class="archive-folder" id="archiveFolderToggle">
+        <span class="label">📁 আর্কাইভ পরীক্ষাসমূহ</span>
+        <span class="count" id="archiveCount">0</span>
     </div>
-<script>
-    const examListContainer = document.getElementById("examList");
+    <div class="archive-list" id="archiveList"></div>
 
-    for (let examId in EXAM_STATUS) {
+    <!-- 🔴 LIVE SECTION -->
+    <div class="section-heading">🔴 লাইভ পরীক্ষাসমূহ</div>
+    <div id="liveList"></div>
 
-  const exam = EXAM_STATUS[examId];
+    <script>
+        const archiveListEl = document.getElementById("archiveList");
+        const liveListEl = document.getElementById("liveList");
+        const archiveCountEl = document.getElementById("archiveCount");
+        const archiveFolderToggle = document.getElementById("archiveFolderToggle");
 
-  if (!exam.visible) continue;  // ✅ নতুন
+        archiveFolderToggle.addEventListener("click", () => {
+            archiveListEl.classList.toggle("open");
+        });
 
-  const card = document.createElement("div");
-  card.className = "exam-card";
-        const title = document.createElement("h3");
-        title.innerText = exam.title;
+        function buildExamCard(examId, exam, state) {
+            const card = document.createElement("div");
+            card.className = "exam-card";
 
-        const button = document.createElement("button");
-        button.style.padding = "8px 15px";
-        button.style.marginTop = "10px";
+            const title = document.createElement("h3");
+            title.innerText = exam.title;
+            card.appendChild(title);
 
-        if (exam.status === "live") {
-            card.classList.add("live-card");
-            button.innerText = "Start Exam";
-            button.onclick = function () {
-                window.location.href = `exam.html?exam=${examId}`;
-            };
-        } else {
-            card.classList.add("locked-card");
-            button.innerText = "Locked";
-            button.style.backgroundColor = "#ccc";
-            button.onclick = function () {
+            const button = document.createElement("button");
+            button.style.padding = "8px 15px";
+            button.style.marginTop = "10px";
 
-            };
+            if (state === "archived" || state === "live") {
+                card.classList.add("live-card");
+                button.innerText = state === "archived" ? "অনুশীলন করুন" : "Start Exam";
+                button.onclick = () => {
+                    window.location.href = `exam.html?exam=${examId}`;
+                };
+                card.appendChild(button);
+
+            } else if (state === "upcoming") {
+                card.classList.add("locked-card");
+                button.innerText = "শীঘ্রই আসছে";
+                button.disabled = true;
+                button.style.backgroundColor = "#ccc";
+                card.appendChild(button);
+
+                const badge = document.createElement("div");
+                badge.className = "badge-upcoming";
+                badge.innerText = "🕒 " + formatCountdown(exam.startDate);
+                badge.dataset.examId = examId; // used to refresh countdown text periodically
+                card.appendChild(badge);
+
+            } else if (state === "ended") {
+                card.classList.add("locked-card");
+                button.innerText = "পরীক্ষা শেষ হয়েছে";
+                button.disabled = true;
+                button.style.backgroundColor = "#ccc";
+                card.appendChild(button);
+
+                const badge = document.createElement("div");
+                badge.className = "badge-ended";
+                badge.innerText = "⛔ এই পরীক্ষার সময়সীমা শেষ";
+                card.appendChild(badge);
+            }
+
+            return card;
         }
 
-        card.appendChild(title);
-        card.appendChild(button);
-        examListContainer.appendChild(card);
-    }
-         </script>
+        function renderExamCorner() {
+            archiveListEl.innerHTML = "";
+            liveListEl.innerHTML = "";
+
+            let archiveCount = 0;
+            let liveCount = 0;
+
+            for (const examId in EXAM_STATUS) {
+                const exam = EXAM_STATUS[examId];
+                const state = getExamState(exam);
+
+                if (state === "draft") continue; // never shown
+
+                if (state === "archived") {
+                    archiveListEl.appendChild(buildExamCard(examId, exam, state));
+                    archiveCount++;
+                } else {
+                    // live / upcoming / ended all belong to the Live section
+                    liveListEl.appendChild(buildExamCard(examId, exam, state));
+                    liveCount++;
+                }
+            }
+
+            archiveCountEl.innerText = archiveCount;
+
+            if (liveCount === 0) {
+                const note = document.createElement("div");
+                note.className = "empty-note";
+                note.innerText = "এই মুহূর্তে কোনো লাইভ পরীক্ষা নেই।";
+                liveListEl.appendChild(note);
+            }
+        }
+
+        // Initial render
+        renderExamCorner();
+
+        // Re-render every 30s so upcoming → live → ended transitions happen
+        // automatically while a student has the page open, with no manual
+        // toggling and no full page reload.
+        setInterval(renderExamCorner, 30000);
+    </script>
 </body>
 </html>
