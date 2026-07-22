@@ -15,8 +15,9 @@
     gtag('config', 'G-L6K7Q8203');
   </script>
 
-  <!-- Exam Status -->
+  <!-- Exam Status + shared scheduling helper (order matters: schedule needs EXAM_STATUS) -->
   <script src="exam-status.js"></script>
+  <script src="exam-schedule.js"></script>
 </head>
 <body>
 
@@ -42,22 +43,11 @@
     <button onclick="submitExam()">পরীক্ষা জমা দিন</button>
   </div>
 
-  <!-- jsPDF (optional, কিন্তু এখন আর দরকার নেই) -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
-
-  <!-- SolaimanLipi font (optional) -->
-  <!-- <script src="SolaimanLipi.js"></script> -->
-
   <!-- Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <!-- Exam JS -->
   <script src="exam.js"></script>
-
-  <!-- Admin Section hidden -->
-  <div id="adminSection" style="display:none; margin-top:20px;">
-    <!-- ডাউনলোড বাটন আর নেই -->
-  </div>
 
 </body>
 </html>
