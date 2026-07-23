@@ -1,0 +1,9 @@
+# Krisishikkha Mobile App - Authorized Sellers
+# Updated: January 2024
+# App: Krisishikkha Android/iOS App
+
+# Google AdMob
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Replace pub-0000000000000000 with your AdMob Publisher ID
+# Place this file at: https://krisishikkha.com/app-ads.txt
