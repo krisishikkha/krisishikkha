@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="কৃষিশিক্ষা - বাংলাদেশের বিশ্বস্ত শিক্ষা প্ল্যাটফর্ম। NTRCA, BCS, কৃষি গবেষণা ইনস্টিটিউট পরীক্ষার সম্পূর্ণ প্রস্তুতি।">
+    <meta name="keywords" content="Krisishikkha, NTRCA, BCS, Agriculture Education Bangladesh, কৃষিশিক্ষা">
+    <meta name="author" content="Krisishikkha Team">
+    <meta property="og:title" content="About Krisishikkha - বাংলাদেশের বিশ্বস্ত শিক্ষা প্ল্যাটফর্ম">
+    <meta property="og:description" content="NTRCA, BCS এবং কৃষি শিক্ষার জন্য বাংলাদেশের শীর্ষ অনলাইন শিক্ষা প্ল্যাটফর্ম">
+    <meta property="og:url" content="https://krisishikkha.com/about.html">
+    <meta property="og:type" content="website">
+    <title>About Us - Krisishikkha | কৃষিশিক্ষা সম্পর্কে জানুন</title>
+    <link rel="canonical" href="https://krisishikkha.com/about.html">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SolaimanLipi', 'Noto Sans Bengali', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .header .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
+        }
+        
+        /* About Card */
+        .about-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            animation: fadeIn 1.2s ease;
+        }
+        
+        .about-card h2 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .about-card h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
+        .about-card p {
+            font-size: 1.15em;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideUp 0.6s ease;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+        }
+        
+        .stat-box .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .stat-box h3 {
+            font-size: 3em;
+            margin: 15px 0 10px;
+            font-weight: bold;
+        }
+        
+        .stat-box p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        
+        .feature-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .feature-item .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .feature-item h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+        }
+        
+        .feature-item p {
+            color: #666;
+            font-size: 1.05em;
+        }
+        
+        /* Team Section */
+        .team-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 30px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .team-info {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .team-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .team-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .team-details h3 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .team-details .role {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .team-details p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Social Links */
+        .social-links {
+            margin-top: 40px;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            color: white;
+        }
+        
+        .social-links h3 {
+            font-size: 2em;
+            margin-bottom: 25px;
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background: #f8f9fa;
+        }
+        
+        .social-btn.facebook { border-left: 5px solid #1877f2; }
+        .social-btn.youtube { border-left: 5px solid #ff0000; }
+        .social-btn.whatsapp { border-left: 5px solid #25d366; }
+        .social-btn.email { border-left: 5px solid #ea4335; }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px 0;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+        
+        .badge {
+            text-align: center;
+        }
+        
+        .badge .badge-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .badge p {
+            font-size: 1em;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 60px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 18px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+        
+        /* Footer Navigation */
+        .footer-nav {
+            background: #2c3e50;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .footer-nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-nav a:hover {
+            color: #667eea;
+        }
+        
+        .footer-nav p {
+            color: #95a5a6;
+            margin-top: 20px;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+            .header .tagline { font-size: 1em; }
+            .about-card { padding: 30px 20px; }
+            .about-card h2 { font-size: 1.8em; }
+            .stat-box h3 { font-size: 2.5em; }
+            .team-info { flex-direction: column; text-align: center; }
+            .social-buttons { flex-direction: column; }
+            .social-btn { width: 100%; justify-content: center; }
+            .cta-section h2 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>📚 কৃষিশিক্ষা সম্পর্কে</h1>
+        <p class="tagline">বাংলাদেশের বিশ্বস্ত এবং জনপ্রিয় শিক্ষা প্ল্যাটফর্ম</p>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- About Introduction -->
+        <div class="about-card">
+            <h2>🌟 আমরা কারা?</h2>
+            <p>
+                <strong>কৃষিশিক্ষা (Krisishikkha)</strong> হল বাংলাদেশের একটি অগ্রণী এবং বিশ্বস্ত অনলাইন শিক্ষা প্ল্যাটফর্ম যা ২০২৩ সাল থেকে NTRCA, BCS, গবেষণা ইনস্টিটিউট এবং ডিপ্লোমা কৃষি পরীক্ষার্থীদের জন্য উচ্চমানের এবং সম্পূর্ণ বিনামূল্যে শিক্ষা উপকরণ প্রদান করে আসছে।
+            </p>
+            <p>
+                আমাদের লক্ষ্য হল প্রতিটি শিক্ষার্থীকে তাদের স্বপ্ন পূরণের পথে সঠিক দিকনির্দেশনা এবং মানসম্পন্ন পড়াশোনার উপকরণ সরবরাহ করা। আমরা বিশ্বাস করি যে <strong>মানসম্পন্ন শিক্ষা প্রতিটি শিক্ষার্থীর মৌলিক অধিকার</strong> এবং এটি অর্থনৈতিক অবস্থানের উপর নির্ভর করবে না।
+            </p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-box" style="animation-delay: 0.1s;">
+                <div class="icon">📝</div>
+                <h3>1000+</h3>
+                <p>Study Notes & Articles</p>
+            </div>
+            <div class="stat-box" style="animation-delay: 0.2s;">
+                <div class="icon">❓</div>
+                <h3>5000+</h3>
+                <p>MCQ Questions</p>
+            </div>
+            <div class="stat-box" style="animation-delay: 0.3s;">
+                <div class="icon">📄</div>
+                <h3>200+</h3>
+                <p>PDF Resources</p>
+            </div>
+            <div class="stat-box" style="animation-delay: 0.4s;">
+                <div class="icon">👥</div>
+                <h3>50,000+</h3>
+                <p>Active Students</p>
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="about-card">
+            <h2>🎯 আমাদের লক্ষ্য ও উদ্দেশ্য</h2>
+            <p>
+                <strong>✨ আমাদের মিশন:</strong> বাংলাদেশের প্রতিটি শিক্ষার্থীকে বিনামূল্যে এবং সহজলভ্য উপায়ে উচ্চমানের শিক্ষা উপকরণ প্রদান করা। আমরা চাই প্রতিটি শিক্ষার্থী তাদের পরীক্ষায় সর্বোচ্চ সফলতা অর্জন করুক।
+            </p>
+            <p>
+                <strong>🚀 আমাদের ভিশন:</strong> ডিজিটাল শিক্ষা প্ল্যাটফর্মের মাধ্যমে বাংলাদেশের শিক্ষা ব্যবস্থায় একটি ইতিবাচক পরিবর্তন আনা এবং প্রযুক্তি-নির্ভর শিক্ষা পদ্ধতিকে সবার কাছে পৌঁছে দেওয়া।
+            </p>
+        </div>
+
+        <!-- Features -->
+        <div class="about-card">
+            <h2>✨ আমাদের সেবাসমূহ</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="icon">📘</span>
+                    <h3>NTRCA প্রস্তুতি</h3>
+                    <p>সম্পূর্ণ সিলেবাস কভার, মডেল টেস্ট, প্রশ্ন সমাধান এবং বিশেষজ্ঞ টিপস</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📗</span>
+                    <h3>BCS পরীক্ষা</h3>
+                    <p>প্রিলিমিনারি থেকে ভাইভা - প্রতিটি ধাপের জন্য সম্পূর্ণ গাইডলাইন</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🔬</span>
+                    <h3>গবেষণা ইনস্টিটিউট</h3>
+                    <p>বিভিন্ন কৃষি গবেষণা ইনস্টিটিউট পরীক্ষার প্রস্তুতি</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🌱</span>
+                    <h3>ডিপ্লোমা কৃষি</h3>
+                    <p>ডিপ্লোমা ইন এগ্রিকালচার সকল সেমিস্টারের নোট ও গাইড</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🛡️</span>
+                    <h3>নিরাপদ PDF Reading</h3>
+                    <p>কপি-প্রটেক্টেড পিডিএফ পড়ার সুবিধা এবং ডাউনলোড সেন্টার</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">⏳</span>
+                    <h3>চাকরির টপিক</h3>
+                    <p>গুরুত্বপূর্ণ চাকরি পরীক্ষার টপিক এবং কারেন্ট অ্যাফেয়ার্স</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+            <div class="badge">
+                <div class="badge-icon">✅</div>
+                <p>100% বিনামূল্যে</p>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">🔒</div>
+                <p>নিরাপদ ও সুরক্ষিত</p>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">📱</div>
+                <p>মোবাইল ফ্রেন্ডলি</p>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">🔄</div>
+                <p>নিয়মিত আপডেট</p>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">⚡</div>
+                <p>দ্রুত লোডিং</p>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h2 style="color: #667eea; font-size: 2.2em; margin-bottom: 20px;">👥 আমাদের টিম</h2>
+            <div class="team-info">
+                <div class="team-image">
+                    👨‍🎓
+                </div>
+                <div class="team-details">
+                    <h3>Krisishikkha Team</h3>
+                    <p class="role">🎓 Education Technology Experts</p>
+                    <p>
+                        আমাদের টিম অভিজ্ঞ শিক্ষক, কন্টেন্ট ক্রিয়েটর এবং টেকনোলজি এক্সপার্টদের নিয়ে গঠিত। আমরা প্রতিনিয়ত শিক্ষার্থীদের চাহিদা বুঝে নতুন নতুন কন্টেন্ট এবং ফিচার যুক্ত করছি।
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="about-card">
+            <h2>🏆 কেন কৃষিশিক্ষা বেছে নেবেন?</h2>
+            <ul style="font-size: 1.1em; line-height: 2; color: #555;">
+                <li>✅ <strong>সম্পূর্ণ বিনামূল্যে:</strong> কোনো লুকানো খরচ নেই</li>
+                <li>✅ <strong>মানসম্পন্ন কন্টেন্ট:</strong> অভিজ্ঞ শিক্ষকদের তত্ত্বাবধানে তৈরি</li>
+                <li>✅ <strong>নিয়মিত আপডেট:</strong> সর্বশেষ সিলেবাস অনুযায়ী কন্টেন্ট</li>
+                <li>✅ <strong>মোবাইল অ্যাপ:</strong> যেকোনো সময়, যেকোনো জায়গায় পড়ুন</li>
+                <li>✅ <strong>অফলাইন সুবিধা:</strong> ইন্টারনেট ছাড়াও পড়া যায়</li>
+                <li>✅ <strong>ক্যাটাগরি অনুযায়ী সাজানো:</strong> সহজে খুঁজে পাওয়া যায়</li>
+                <li>✅ <strong>MCQ প্র্যাক্টিস:</strong> পরীক্ষার মত পরিবেশে প্র্যাক্টিস</li>
+                <li>✅ <strong>24/7 অ্যাক্সেস:</strong> সবসময় উপলব্ধ</li>
+            </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <h3>🌐 আমাদের সাথে যুক্ত থাকুন</h3>
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/share/1LsEf1LRbM/" target="_blank" class="social-btn facebook">
+                    <span>📘</span> Facebook Page
+                </a>
+                <a href="https://youtube.com/@krisishikkha?si=dgU7w6p1VjUylGpy" target="_blank" class="social-btn youtube">
+                    <span>📺</span> YouTube Channel
+                </a>
+                <a href="https://wa.me/8801516013089" target="_blank" class="social-btn whatsapp">
+                    <span>💬</span> WhatsApp
+                </a>
+                <a href="mailto:krisishikkha@gmail.com" class="social-btn email">
+                    <span>📧</span> Email Us
+                </a>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>🚀 এখনই শুরু করুন!</h2>
+            <p>হাজারো শিক্ষার্থীর বিশ্বস্ত প্ল্যাটফর্ম কৃষিশিক্ষায় আজই যুক্ত হোন</p>
+            <div class="cta-buttons">
+                <a href="index.html" class="cta-btn">🏠 হোম পেজে যান</a>
+                <a href="contact.html" class="cta-btn secondary">📧 যোগাযোগ করুন</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Navigation -->
+    <footer class="footer-nav">
+        <nav>
+            <a href="index.html">🏠 হোম</a>
+            <a href="about.html">📚 About Us</a>
+            <a href="contact.html">📧 Contact</a>
+            <a href="privacy-policy.html">🔒 Privacy Policy</a>
+            <a href="terms.html">📜 Terms & Conditions</a>
+        </nav>
+        <p style="margin-top: 20px;">&copy; 2024 Krisishikkha. All Rights Reserved.</p>
+        <p style="font-size: 0.9em;">Education • Notes • Secure PDF Reading Platform</p>
+    </footer>
+
+</body>
+</html>
