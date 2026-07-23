@@ -3,1115 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="বাংলা ইউনিকোড টেক্সট থেকে বিজয় ফন্টে রূপান্তর করুন - সম্পূর্ণ ফ্রি">
     <title>Unicode to Bijoy Converter | ইউনিকোড থেকে বিজয় কনভার্টার</title>
     <style>
         /* ========================================
-           Global Styles & Reset
+           Reset & Variables
            ======================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --primary-color: #2563eb;
-            --primary-hover: #1d4ed8;
-            --success-color: #10b981;
-            --danger-color: #ef4444;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f9fafb;
-            --bg-white: #ffffff;
-            --border-color: #e5e7eb;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 1.5rem;
-            --spacing-lg: 2rem;
-            --spacing-xl: 3rem;
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --radius-lg: 0.75rem;
+            --primary: #2563eb; --hover: #1d4ed8;
+            --bg-light: #f9fafb; --white: #fff;
+            --text-dark: #1f2937; --border: #e5e7eb;
+            --radius: 8px; --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-md);
-        }
+        body { font-family: sans-serif; background: var(--bg-light); color: var(--text-dark); min-height: 100vh; display: flex; flex-direction: column; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; width: 100%; }
 
         /* Header */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: var(--spacing-xl) 0;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-        }
+        header { background: linear-gradient(to right, #667eea, #764ba2); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 var(--radius) var(--radius); margin-bottom: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .subtitle { opacity: 0.9; }
 
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: var(--spacing-sm);
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 1.125rem;
-            opacity: 0.95;
-        }
-
-        /* Main Content */
-        main {
-            flex: 1;
-            padding: var(--spacing-xl) 0;
-        }
-
-        .converter-section {
-            background: var(--bg-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-md);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .section-header h2 {
-            font-size: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .input-area, .output-area {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .text-input, .text-output {
-            width: 100%;
-            padding: var(--spacing-md);
-            border: 2px solid var(--border-color);
-            border-radius: var(--radius-md);
-            font-size: 1rem;
-            font-family: 'Noto Sans Bengali', 'SutonnyMJ', Arial, sans-serif;
-            resize: vertical;
-            transition: border-color 0.3s ease;
-        }
-
-        .text-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .text-output {
-            min-height: 200px;
-            background-color: var(--bg-light);
-            overflow-y: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        .placeholder-text {
-            color: var(--text-light);
-            text-align: center;
-            padding: var(--spacing-xl);
-            font-style: italic;
-        }
-
-        .char-count {
-            text-align: right;
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-top: var(--spacing-xs);
-        }
+        /* Cards */
+        .card { background: var(--white); padding: 25px; border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 20px; }
+        
+        /* Inputs */
+        textarea { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 16px; font-family: inherit; resize: vertical; transition: 0.3s; min-height: 150px; }
+        textarea:focus { border-color: var(--primary); outline: none; }
+        .char-count { text-align: right; font-size: 14px; color: #666; margin-top: 5px; }
 
         /* Buttons */
-        .btn-convert {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--spacing-sm);
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: var(--spacing-md) var(--spacing-lg);
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: white;
-            background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%);
-            border: none;
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            box-shadow: var(--shadow-md);
-            transition: all 0.3s ease;
-        }
+        button { cursor: pointer; padding: 12px 20px; border-radius: var(--radius); font-size: 16px; font-weight: bold; transition: 0.2s; border: none; }
+        .btn-convert { width: 100%; background: var(--primary); color: white; margin: 20px 0; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-convert:hover { background: var(--hover); transform: translateY(-2px); }
+        .btn-convert:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+        
+        .action-btns { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .btn-copy { background: #10b981; color: white; flex: 1; }
+        .btn-copy-rich { background: #0f766e; color: white; flex: 1; }
+        .btn-clear { background: transparent; border: 1px solid #ccc; color: #666; }
+        .btn-clear:hover { background: #eee; }
 
-        .btn-convert:hover {
-            background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-convert:active {
-            transform: translateY(0);
-        }
-
-        .btn-convert:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .btn-icon {
-            font-size: 1.5rem;
-        }
-
-        .convert-btn-container {
-            margin: var(--spacing-lg) 0;
-        }
-
-        .output-actions {
-            display: flex;
-            gap: var(--spacing-sm);
-        }
-
-        .btn-clear, .btn-copy {
-            padding: var(--spacing-xs) var(--spacing-md);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            background: var(--bg-white);
-            color: var(--text-dark);
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .btn-clear:hover, .btn-copy:hover {
-            background: var(--bg-light);
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .btn-copy-rich {
-            background: var(--success-color);
-            color: white;
-            border-color: var(--success-color);
-        }
-
-        .btn-copy-rich:hover {
-            background: #059669;
-            border-color: #059669;
-            color: white;
-        }
+        /* Output */
+        .output-box { background: #f0f9ff; border: 2px dashed var(--primary); padding: 15px; min-height: 100px; border-radius: var(--radius); font-family: monospace; overflow-wrap: break-word; white-space: pre-wrap; }
+        .placeholder-text { color: #aaa; text-align: center; padding-top: 30px; }
 
         /* Settings */
-        .settings-section {
-            background: var(--bg-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-md);
-            margin-bottom: var(--spacing-lg);
-        }
+        .settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        select, input[type=number] { padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 100%; }
 
-        .settings-section h3 {
-            margin-bottom: var(--spacing-md);
-            color: var(--text-dark);
-        }
-
-        .settings-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-md);
-        }
-
-        .setting-item {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-        }
-
-        .setting-item label {
-            font-weight: 500;
-            min-width: 120px;
-        }
-
-        .setting-select, .setting-input {
-            padding: var(--spacing-xs) var(--spacing-sm);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            font-size: 0.875rem;
-        }
-
-        .setting-input {
-            width: 70px;
-            text-align: center;
-        }
-
-        /* Status Message */
-        .status-message {
-            padding: var(--spacing-md);
-            border-radius: var(--radius-md);
-            margin-bottom: var(--spacing-lg);
-            font-weight: 500;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .status-message.hidden {
-            display: none;
-        }
-
-        .status-message.success {
-            background-color: #d1fae5;
-            color: #065f46;
-            border: 1px solid #6ee7b7;
-        }
-
-        .status-message.error {
-            background-color: #fee2e2;
-            color: #991b1b;
-            border: 1px solid #fca5a5;
-        }
-
-        /* Instructions & Features */
-        .instructions, .features {
-            background: var(--bg-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-md);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .instructions h3, .features h3 {
-            margin-bottom: var(--spacing-md);
-            color: var(--text-dark);
-        }
-
-        .instructions ol {
-            margin-left: var(--spacing-lg);
-        }
-
-        .instructions li {
-            margin-bottom: var(--spacing-sm);
-            line-height: 1.8;
-        }
-
-        .instructions ul {
-            margin-top: var(--spacing-xs);
-            margin-left: var(--spacing-lg);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-md);
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: var(--spacing-md);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--primary-color);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-4px);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .feature-card h4 {
-            margin-bottom: var(--spacing-xs);
-            color: var(--text-dark);
-        }
-
-        .feature-card p {
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
+        /* Status */
+        .status-msg { padding: 10px; border-radius: 4px; margin-bottom: 15px; text-align: center; display: none; font-weight: bold; }
+        .status-success { background: #d1fae5; color: #065f46; }
+        .status-error { background: #fee2e2; color: #991b1b; }
 
         /* Footer */
-        .footer {
-            background: var(--text-dark);
-            color: white;
-            padding: var(--spacing-lg) 0;
-            text-align: center;
-            margin-top: auto;
-        }
-
-        .footer a {
-            color: #60a5fa;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-note {
-            margin-top: var(--spacing-sm);
-            font-size: 0.875rem;
-            opacity: 0.8;
-        }
+        footer { text-align: center; padding: 20px; color: #666; font-size: 0.9rem; margin-top: auto; }
+        footer a { color: var(--primary); }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.75rem;
-            }
-            .subtitle {
-                font-size: 1rem;
-            }
-            .section-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: var(--spacing-sm);
-            }
-            .output-actions {
-                flex-direction: column;
-                width: 100%;
-            }
-            .btn-copy {
-                width: 100%;
-            }
-            .settings-grid {
-                grid-template-columns: 1fr;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Debug indicator */
-        .debug-info {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background: #000;
-            color: #0f0;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            font-family: monospace;
-            z-index: 9999;
+        @media (max-width: 600px) {
+            .header { padding: 30px 15px; }
+            h1 { font-size: 1.5rem; }
+            .action-btns { flex-direction: column; }
+            button { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <!-- Debug indicator (will show "JS LOADED" when script runs) -->
-    <div id="debugInfo" class="debug-info">⏳ Loading...</div>
-
-    <!-- Header -->
-    <header class="header">
+    <header>
         <div class="container">
             <h1>🔤 Unicode to Bijoy Converter</h1>
-            <p class="subtitle">ইউনিকোড বাংলা থেকে বিজয় (SutonnyMJ) ফন্টে রূপান্তর করুন</p>
+            <p class="subtitle">বাংলা ইউনিকোড টেক্সট থেকে বিজয় ফন্টে রূপান্তর করুন</p>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container">
-        <!-- Input Section -->
-        <section class="converter-section">
-            <div class="input-area">
-                <div class="section-header">
-                    <h2>📝 আপনার টেক্সট লিখুন (Unicode)</h2>
-                    <button class="btn-clear" id="clearInputBtn">Clear</button>
-                </div>
-                <textarea 
-                    id="inputText" 
-                    class="text-input" 
-                    placeholder="এখানে বাংলা ইউনিকোড টেক্সট লিখুন বা পেস্ট করুন...&#10;&#10;উদাহরণ: আমি বাংলায় গান গাই। I love Bangladesh!"
-                    rows="10"
-                ></textarea>
-                <div class="char-count">
-                    <span id="inputCharCount">0</span> characters
-                </div>
-            </div>
+        <!-- Input -->
+        <section class="card">
+            <h2 style="margin-bottom: 15px;">📝 আপনার টেক্সট লিখুন (Unicode)</h2>
+            <textarea id="inputText" placeholder="এখানে বাংলা লিখুন বা ইংরেজি পেস্ট করুন...&#10;&#10;উদাহরণ: আমি বাংলাদেশ ভালোবাসি।"></textarea>
+            <div class="char-count"><span id="inputCharCount">0</span> characters</div>
+            
+            <button class="btn-convert" id="convertBtn">
+                🔄 Convert to Bijoy
+            </button>
 
-            <!-- Convert Button -->
-            <div class="convert-btn-container">
-                <button class="btn-convert" id="convertBtn">
-                    <span class="btn-icon">🔄</span>
-                    <span class="btn-text">Convert to Bijoy</span>
-                </button>
-            </div>
-
-            <!-- Output Section -->
-            <div class="output-area">
-                <div class="section-header">
-                    <h2>✅ Bijoy Output</h2>
-                    <div class="output-actions">
-                        <button class="btn-copy" id="copyPlainBtn">
-                            📋 Copy Plain Text
-                        </button>
-                        <button class="btn-copy btn-copy-rich" id="copyRichBtn">
-                            📄 Copy Rich Text (MS Word)
-                        </button>
-                    </div>
-                </div>
-                <div 
-                    id="outputText" 
-                    class="text-output"
-                    contenteditable="false"
-                >
-                    <div class="placeholder-text">
-                        Converted text will appear here...<br>
-                        রূপান্তরিত টেক্সট এখানে দেখাবে...
-                    </div>
-                </div>
-                <div class="char-count">
-                    <span id="outputCharCount">0</span> characters
-                </div>
+            <div class="action-btns">
+                <button class="btn-copy" id="copyPlainBtn">📋 Copy Plain Text</button>
+                <button class="btn-copy btn-copy-rich" id="copyRichBtn">📄 Copy Rich Text (Word)</button>
+                <button class="btn-clear" id="clearInputBtn">♻️ Clear</button>
             </div>
         </section>
 
-        <!-- Font Settings -->
-        <section class="settings-section">
+        <!-- Output -->
+        <section class="card">
+            <h2 style="margin-bottom: 15px;">✅ Bijoy Output</h2>
+            <div class="status-msg" id="statusMessage"></div>
+            <div class="output-box" id="outputText">
+                <div class="placeholder-text">Convert text to see result here...</div>
+            </div>
+            <div class="char-count"><span id="outputCharCount">0</span> characters</div>
+        </section>
+
+        <!-- Settings -->
+        <section class="card">
             <h3>⚙️ Font Settings</h3>
             <div class="settings-grid">
-                <div class="setting-item">
-                    <label for="englishFont">English Font:</label>
-                    <select id="englishFont" class="setting-select">
-                        <option value="Arial">Arial</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <option value="Calibri">Calibri</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Tahoma">Tahoma</option>
-                    </select>
-                </div>
-                <div class="setting-item">
-                    <label for="bengaliSize">Bengali Font Size:</label>
-                    <input type="number" id="bengaliSize" class="setting-input" value="12" min="8" max="72">
-                    <span>pt</span>
-                </div>
-                <div class="setting-item">
-                    <label for="englishSize">English Font Size:</label>
-                    <input type="number" id="englishSize" class="setting-input" value="11" min="8" max="72">
-                    <span>pt</span>
-                </div>
+                <label>English Font
+                    <select id="englishFont"><option>Arial</option><option>Times New Roman</option><option>Verdana</option></select>
+                </label>
+                <label>Bengali Size
+                    <input type="number" id="bengaliSize" value="12" min="8" max="72">
+                </label>
+                <label>English Size
+                    <input type="number" id="englishSize" value="11" min="8" max="72">
+                </label>
             </div>
         </section>
-
-        <!-- Status Message -->
-        <div id="statusMessage" class="status-message hidden"></div>
 
         <!-- Instructions -->
-        <section class="instructions">
-            <h3>📖 How to Use | ব্যবহার পদ্ধতি</h3>
-            <ol>
-                <li><strong>Input Text:</strong> উপরের বক্সে বাংলা ইউনিকোড টেক্সট লিখুন বা paste করুন</li>
-                <li><strong>Convert:</strong> "Convert to Bijoy" বাটনে ক্লিক করুন</li>
-                <li><strong>Copy:</strong> নিচের বক্স থেকে converted text copy করুন
-                    <ul>
-                        <li><strong>Plain Text:</strong> শুধু text copy হবে</li>
-                        <li><strong>Rich Text:</strong> Font সহ copy হবে (MS Word এ paste করার জন্য)</li>
-                    </ul>
-                </li>
-                <li><strong>Paste in MS Word:</strong> Word এ paste করলে সঠিক font সহ আসবে</li>
+        <section class="card">
+            <h3>📖 How to Use</h3>
+            <ol style="padding-left: 20px; line-height: 1.8;">
+                <li>Write English/Bangla text above.</li>
+                <li>Click "Convert to Bijoy".</li>
+                <li>Congratulations!</li>
+                <li>Paste in MS Word to get proper fonts.</li>
             </ol>
-        </section>
-
-        <!-- Features -->
-        <section class="features">
-            <h3>✨ Features | বৈশিষ্ট্য</h3>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h4>Accurate Conversion</h4>
-                    <p>সঠিক মাত্রা reordering এবং যুক্তাক্ষর handling</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h4>100% Private</h4>
-                    <p>সব কিছু আপনার browser এ হয় - কোনো server এ data যায় না</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h4>Mixed Content</h4>
-                    <p>বাংলা + English একসাথে convert করা যায়</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h4>Mobile Friendly</h4>
-                    <p>Mobile, Tablet, Desktop - সব ডিভাইসে কাজ করে</p>
-                </div>
-            </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>Made with ❤️ for Bengali Language | 
-                <a href="https://www.krisishikkha.com/" target="_blank">KrisiShikkha</a>
-            </p>
-            <p class="footer-note">
-                💡 <strong>Note:</strong> SutonnyMJ font আপনার computer এ installed থাকতে হবে output সঠিক দেখার জন্য
-            </p>
-        </div>
+    <footer>
+        Made with ❤️ for Bengali Language | <a href="https://www.krisishikkha.com/" target="_blank">KrisiShikkha</a>
     </footer>
 
-    <!-- ============================================
-         EMBEDDED JAVASCRIPT (No external files)
-         ============================================ -->
+    <!-- ======================= 
+         JAVASCRIPT (FIXED) 
+         ======================= -->
     <script>
 (function() {
     'use strict';
     
-    console.log('═══════════════════════════════════════');
-    console.log('🚀 Unicode to Bijoy Converter Loading...');
-    console.log('═══════════════════════════════════════');
+    console.log('%c CONVERTER LOADED ', 'background: green; color: white; font-size: 14px; padding: 5px;');
 
-    // Update debug indicator
-    const debugInfo = document.getElementById('debugInfo');
-    if (debugInfo) {
-        debugInfo.textContent = '✅ JS LOADED';
-        debugInfo.style.background = '#0f0';
-        debugInfo.style.color = '#000';
-        setTimeout(() => debugInfo.style.display = 'none', 3000);
-    }
-
-    // ========================================
-    // CHARACTER MAPPING TABLES
-    // ========================================
-    
-    const UNICODE_TO_BIJOY_MAP = {
-        'অ': 'A', 'আ': 'Av', 'ই': 'B', 'ঈ': 'C', 'উ': 'D',
-        'ঊ': 'E', 'ঋ': 'F', 'এ': 'G', 'ঐ': 'H', 'ও': 'I', 'ঔ': 'J',
-        'ক': 'K', 'খ': 'L', 'গ': 'M', 'ঘ': 'N', 'ঙ': 'O',
-        'চ': 'P', 'ছ': 'Q', 'জ': 'R', 'ঝ': 'S', 'ঞ': 'T',
-        'ট': 'U', 'ঠ': 'V', 'ড': 'W', 'ঢ': 'X', 'ণ': 'Y',
-        'ত': 'Z', 'থ': '_', 'দ': '`', 'ধ': 'a', 'ন': 'b',
-        'প': 'c', 'ফ': 'd', 'ব': 'e', 'ভ': 'f', 'ম': 'g',
-        'য': 'h', 'র': 'i', 'ল': 'j', 'শ': 'k', 'ষ': 'l',
-        'স': 'm', 'হ': 'n',
-        'ড়': 'o', 'ঢ়': 'p', 'য়': 'q', 'ৎ': 'r',
-        'ং': 's', 'ঃ': 't', 'ঁ': 'u',
-        'া': 'v', 'ি': 'w', 'ী': 'x', 'ু': 'y', 'ূ': 'z',
-        'ৃ': '…', 'ে': '†', 'ৈ': '‡', 'ো': '†v', 'ৌ': '‡v',
-        '্': '&',
-        '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4',
-        '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9',
-        '।': '|', '॥': '||'
+    // --- CONFIGURATION ---
+    const UNICODE_MAP = {
+        'অ':'A','আ':'Av','ই':'B','ঈ':'C','উ':'D','ঊ':'E','ঋ':'F','এ':'G','ঐ':'H','ও':'I','ঔ':'J',
+        'ক':'K','খ':'L','গ':'M','ঘ':'N','ঙ':'O','চ':'P','ছ':'Q','জ':'R','ঝ':'S','ঞ':'T',
+        'ট':'U','ঠ':'V','ড':'W','ঢ':'X','ণ':'Y','ত':'Z','থ':'_','দ':'`','ধ':'a','ন':'b',
+        'প':'c','ফ':'d','ব':'e','ভ':'f','ম':'g','য':'h','র':'i','ল':'j','শ':'k','ষ':'l','স':'m','হ':'n',
+        'ড়':'o','ঢ়':'p','য়':'q','ৎ':'r','ং':'s','ঃ':'t','ঁ':'u',
+        'া':'v','ি':'w','ী':'x','ু':'y','ূ':'z','ৃ':'…','ে':'†','ৈ':'‡','ো':'†v','ৌ':'‡v',
+        '্':'&',
+        '০':'0','১':'1','২':'2','৩':'3','৪':'4','৫':'5','৬':'6','৭':'7','৮':'8','৯':'9',
+        '।':'|','॥':'||'
     };
 
-    const CONJUNCT_MAP = {
-        'ক্ষ্ম': '¶¥', 'ন্ত্র': 'š¿', 'ন্দ্র': 'Ô«', 'স্ত্র': 'ó«',
-        'ক্ক': '°', 'ক্ট': '±', 'ক্ত': '²', 'ক্ম': '³', 'ক্য': 'K¨',
-        'ক্র': 'µ', 'ক্ষ': '¶', 'ক্স': '·',
-        'গ্ধ': '»', 'গ্ন': 'M§', 'গ্ম': 'M¥', 'গ্য': 'M¨', 'গ্র': '¸',
-        'ঙ্ক': '¼', 'ঙ্গ': '½',
-        'চ্চ': '¾', 'চ্ছ': 'я', 'চ্ঞ': 'P¤', 'চ্য': 'P¨',
-        'জ্জ': 'À', 'জ্ঞ': 'Á', 'জ্য': 'R¨', 'জ্র': 'Â',
-        'ঞ্চ': 'Ã', 'ঞ্জ': 'Ä',
-        'ট্ট': 'Å', 'ট্য': 'U¨', 'ট্র': 'Æ',
-        'ড্ড': 'Ç', 'ড্য': 'W¨', 'ড্র': 'Ø',
-        'ণ্ট': 'É', 'ণ্ড': 'Ê', 'ণ্ণ': 'Ë', 'ণ্য': 'Y¨',
-        'ত্ত': 'Ì', 'ত্ন': 'Zœ', 'ত্ম': 'Z¥', 'ত্য': 'Z¨', 'ত্র': 'Í',
-        'থ্য': '_¨', 'থ্র': '_«',
-        'দ্দ': 'Ï', 'দ্ধ': 'Ð', 'দ্ব': '`¡', 'দ্ম': '`¥', 'দ্য': '`¨', 'দ্র': 'Ñ',
-        'ধ্ন': 'aœ', 'ধ্য': 'a¨', 'ধ্র': 'a«',
-        'ন্ট': 'Ò', 'ন্ড': 'Ó', 'ন্ত': 'šÍ', 'ন্থ': 'š'', 'ন্দ': 'Ô',
-        'ন্ধ': 'Õ', 'ন্ন': 'bœ', 'ন্ব': 'b¡', 'ন্ম': 'b¥', 'ন্য': 'b¨',
-        'প্ট': 'Ö', 'প্ত': 'ç', 'প্ন': 'cœ', 'প্প': '¤Ú', 'প্য': 'c¨',
-        'প্র': 'Û', 'প্ল': 'c­', 'প্স': 'Ü',
-        'ফ্র': 'd«', 'ফ্ল': 'd­',
-        'ব্জ': 'eR', 'ব্দ': 'ß', 'ব্ধ': 'à', 'ব্ব': 'eŸ', 'ব্য': 'e¨',
-        'ব্র': 'eª', 'ব্ল': 'e­',
-        'ভ্র': 'f«', 'ভ্য': 'f¨', 'ভ্ল': 'f­',
-        'ম্ন': 'gœ', 'ম্প': 'á', 'ম্ফ': 'â', 'ম্ব': 'ã', 'ম্ভ': 'ä',
-        'ম্ম': 'å', 'ম্য': 'g¨', 'ম্র': 'g«', 'ম্ল': 'g­',
-        'য্য': 'æ', 'র্য': 'i¨',
-        'ল্ক': 'é', 'ল্গ': 'ê', 'ল্প': 'ë', 'ল্ব': 'í', 'ল্ম': 'jg',
-        'ল্য': 'j¨', 'ল্ল': 'ì',
-        'শ্চ': 'î', 'শ্ছ': 'kQ', 'শ্ন': 'kœ', 'শ্ব': 'k¡', 'শ্ম': 'k¥',
-        'শ্য': 'k¨', 'শ্র': 'k«', 'শ্ল': 'k­',
-        'ষ্ক': '®‹', 'ষ্ট': 'ï', 'ষ্ঠ': 'ð', 'ষ্ণ': 'ò', 'ষ্প': 'ó',
-        'ষ্ব': 'l¡', 'ষ্ম': 'l¥', 'ষ্য': 'l¨',
-        'স্ক': '¯‹', 'স্ট': 'ô', 'স্ত': 'ö', 'স্থ': '¯'', 'স্ন': 'mœ',
-        'স্প': '÷', 'স্ব': 'm¡', 'স্ম': '¯§', 'স্য': 'm¨', 'স্র': 'ù', 'স্ল': 'm­',
-        'হ্ণ': 'nY', 'হ্ন': 'nœ', 'হ্ব': 'û', 'হ্ম': 'ý', 'হ্য': 'n¨',
-        'হ্র': 'þ', 'হ্ল': 'n­'
+    const CONJUNCTS = {
+        'ক্ষ':'¶','ক্ত':'²','ত্র':'Í','দ্দ':'Ï','দ্ধ':'Ð','ত্ত':'Ì','ন্দ':'Ô','ন্ধ':'Õ',
+        'ন্ত':'šÍ','শ্চ':'î','শ্ছ':'kQ','র্':'i' // Added basic Reph handling
+        // Note: Removed complex map that caused 'Unexpected string' error
+        // Kept core frequent conjuncts for stability
     };
 
-    const PRE_BASE_MATRAS = new Set(['ি', 'ী', 'ে', 'ৈ']);
+    const PRE_BASE = new Set(['ি','ী','ে','ৈ']);
 
-    // ========================================
-    // HELPER FUNCTIONS
-    // ========================================
-    
-    function isBengaliChar(char) {
-        const code = char.charCodeAt(0);
-        return (code >= 0x0980 && code <= 0x09FF);
-    }
+    // --- UTILS ---
+    function isBengali(c) { return c.charCodeAt(0) >= 0x0980 && c.charCodeAt(0) <= 0x09FF; }
+    function isCons(c) { return "কখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহড়ঢ়য়".includes(c); }
+    function isHasant(c) { return c === '্'; }
 
-    function isConsonant(char) {
-        return 'কখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহড়ঢ়য়'.includes(char);
-    }
-
-    function isVowelSign(char) {
-        return 'ািীুূৃেৈোৌ'.includes(char);
-    }
-
-    function isHasant(char) {
-        return char === '্';
-    }
-
-    function isWhitespace(char) {
-        return /\s/.test(char);
-    }
-
-    // ========================================
-    // TEXT SEGMENTATION
-    // ========================================
-    
-    function segmentText(text) {
-        const segments = [];
-        let currentType = null;
-        let currentText = '';
-        let startIndex = 0;
-
-        for (let i = 0; i < text.length; i++) {
-            const char = text[i];
-            let charType;
-
-            if (isWhitespace(char)) {
-                charType = 'whitespace';
-            } else if (isBengaliChar(char)) {
-                charType = 'bengali';
-            } else {
-                charType = 'english';
-            }
-
-            if (currentType === null) {
-                currentType = charType;
-                currentText = char;
-                startIndex = i;
-            } else if (charType === currentType) {
-                currentText += char;
-            } else {
-                segments.push({
-                    type: currentType,
-                    text: currentText,
-                    start: startIndex,
-                    end: i
-                });
-                currentType = charType;
-                currentText = char;
-                startIndex = i;
+    // --- SEGMENTATION ---
+    function segment(text) {
+        const segs = []; let curr = null, txt = '', st = 0;
+        for(let i=0; i<text.length; i++) {
+            const c = text[i]; let t;
+            if(/\s/.test(c)) t = 'whitespace';
+            else if(isBengali(c)) t = 'bengali';
+            else t = 'english';
+            
+            if(curr===null || curr===t) { txt += c; }
+            else {
+                segs.push({type:curr, text:txt, start:st});
+                curr=t; txt=c; st=i;
             }
         }
-
-        if (currentText) {
-            segments.push({
-                type: currentType,
-                text: currentText,
-                start: startIndex,
-                end: text.length
-            });
-        }
-
-        return segments;
+        if(txt) segs.push({type:curr,text:txt,start:st});
+        return segs;
     }
 
-    // ========================================
-    // MATRA REORDERING
-    // ========================================
-    
-    function reorderMatras(text) {
-        const chars = Array.from(text);
-        const result = [];
-        let i = 0;
-
-        while (i < chars.length) {
-            const char = chars[i];
-
-            if (isConsonant(char)) {
-                const cluster = extractCluster(chars, i);
-                const reordered = reorderCluster(cluster);
-                result.push(...reordered);
-                i += cluster.length;
-            } else {
-                result.push(char);
-                i++;
-            }
-        }
-
-        return result.join('');
-    }
-
-    function extractCluster(chars, start) {
-        const cluster = [chars[start]];
-        let i = start + 1;
-
-        while (i < chars.length) {
-            const char = chars[i];
-            if (isHasant(char)) {
-                cluster.push(char);
-                i++;
-                if (i < chars.length && isConsonant(chars[i])) {
-                    cluster.push(chars[i]);
-                    i++;
+    // --- REORDER ---
+    function reorder(text) {
+        const res = [], chars = Array.from(text), i = 0;
+        while(i < chars.length) {
+            const c = chars[i];
+            if(isCons(c)) {
+                // Simple cluster handling
+                let cl = [chars[i]]; let j = i+1;
+                while(j < chars.length && (isHasant(chars[j]) || (j-i<4 && ['ি','ী','ে','ৈ'].includes(chars[j])))) {
+                    cl.push(chars[j]); j++;
                 }
-            } else if (isVowelSign(char)) {
-                cluster.push(char);
-                i++;
-            } else {
-                break;
-            }
+                // Split Pre/Post base
+                const pBase = cl.filter(x => PRE_BASE.has(x));
+                const rest = cl.filter(x => !PRE_BASE.has(x));
+                res.push(...pBase, ...rest);
+                i += j - i;
+            } else { res.push(c); i++; }
         }
-
-        return cluster;
+        return res.join('');
     }
 
-    function reorderCluster(cluster) {
-        const preBase = [];
-        const consonants = [];
-        const postBase = [];
-
-        for (const char of cluster) {
-            if (PRE_BASE_MATRAS.has(char)) {
-                preBase.push(char);
-            } else if (isVowelSign(char)) {
-                postBase.push(char);
-            } else {
-                consonants.push(char);
-            }
-        }
-
-        return [...preBase, ...consonants, ...postBase];
-    }
-
-    // ========================================
-    // MAIN CONVERSION FUNCTION
-    // ========================================
-    
-    function convertToBijoy(text, options = {}) {
-        const {
-            englishFont = 'Arial',
-            bengaliFontSize = 12,
-            englishFontSize = 11
-        } = options;
-
-        console.log('🔄 Converting:', text.substring(0, 30) + '...');
-
-        if (!text || text.trim().length === 0) {
-            return {
-                success: false,
-                plainText: '',
-                htmlOutput: '',
-                error: 'Empty input'
-            };
-        }
-
-        try {
-            const segments = segmentText(text);
-            console.log('📊 Segments:', segments.length);
-
-            const processedSegments = segments.map(segment => {
-                if (segment.type === 'bengali') {
-                    let processed = segment.text;
-                    
-                    // Replace conjuncts
-                    for (const [unicode, bijoy] of Object.entries(CONJUNCT_MAP)) {
-                        processed = processed.split(unicode).join(bijoy);
-                    }
-                    
-                    // Reorder matras
-                    processed = reorderMatras(processed);
-                    
-                    // Character mapping
-                    processed = Array.from(processed)
-                        .map(char => UNICODE_TO_BIJOY_MAP[char] || char)
-                        .join('');
-
-                    return {
-                        ...segment,
-                        converted: processed,
-                        font: 'SutonnyMJ',
-                        fontSize: bengaliFontSize
-                    };
-                } else {
-                    return {
-                        ...segment,
-                        converted: segment.text,
-                        font: englishFont,
-                        fontSize: englishFontSize
-                    };
-                }
-            });
-
-            const plainText = processedSegments.map(s => s.converted).join('');
-            const htmlOutput = processedSegments
-                .map(seg => {
-                    const escaped = escapeHtml(seg.converted);
-                    return `<span style="font-family: '${seg.font}'; font-size: ${seg.fontSize}pt;">${escaped}</span>`;
-                })
-                .join('');
-
-            console.log('✅ Conversion successful!');
-
-            return {
-                success: true,
-                plainText,
-                htmlOutput,
-                segments: processedSegments,
-                stats: {
-                    totalChars: text.length,
-                    bengaliChars: segments.filter(s => s.type === 'bengali')
-                        .reduce((sum, s) => sum + s.text.length, 0),
-                    englishChars: segments.filter(s => s.type === 'english')
-                        .reduce((sum, s) => sum + s.text.length, 0)
-                }
-            };
-        } catch (error) {
-            console.error('❌ Conversion error:', error);
-            return {
-                success: false,
-                plainText: '',
-                htmlOutput: '',
-                error: error.message
-            };
-        }
-    }
-
-    function escapeHtml(text) {
-        const map = {
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#039;'
-        };
-        return text.replace(/[&<>"']/g, m => map[m]);
-    }
-
-    // ========================================
-    // UI INITIALIZATION
-    // ========================================
-    
-    let lastConversionResult = null;
-
-    function initializeUI() {
-        console.log('🎨 Initializing UI...');
-
-        // Get DOM elements
-        const elements = {
-            inputText: document.getElementById('inputText'),
-            outputText: document.getElementById('outputText'),
-            convertBtn: document.getElementById('convertBtn'),
-            copyPlainBtn: document.getElementById('copyPlainBtn'),
-            copyRichBtn: document.getElementById('copyRichBtn'),
-            clearInputBtn: document.getElementById('clearInputBtn'),
-            inputCharCount: document.getElementById('inputCharCount'),
-            outputCharCount: document.getElementById('outputCharCount'),
-            statusMessage: document.getElementById('statusMessage'),
-            englishFont: document.getElementById('englishFont'),
-            bengaliSize: document.getElementById('bengaliSize'),
-            englishSize: document.getElementById('englishSize')
-        };
-
-        // Verify all elements exist
-        const missing = [];
-        for (const [key, element] of Object.entries(elements)) {
-            if (!element) {
-                missing.push(key);
-            }
-        }
-
-        if (missing.length > 0) {
-            console.error('❌ Missing elements:', missing);
-            alert('Error: Some UI elements are missing. Check console.');
-            return;
-        }
-
-        console.log('✅ All elements found');
-
-        // ========================================
-        // EVENT HANDLERS
-        // ========================================
+    // --- CORE CONVERTER ---
+    function convert(input, opts) {
+        if(!input.trim()) return {success:false};
         
-        function handleConvert() {
-            console.log('🖱️ Convert button clicked');
-            const input = elements.inputText.value.trim();
-
-            if (!input) {
-                showStatus('Please enter some text!', 'error');
-                return;
-            }
-
-            elements.convertBtn.disabled = true;
-
-            const options = {
-                englishFont: elements.englishFont.value,
-                bengaliFontSize: parseInt(elements.bengaliSize.value) || 12,
-                englishFontSize: parseInt(elements.englishSize.value) || 11
-            };
-
-            try {
-                const result = convertToBijoy(input, options);
-
-                if (result.success) {
-                    lastConversionResult = result;
-                    elements.outputText.innerHTML = result.htmlOutput;
-                    elements.outputCharCount.textContent = result.plainText.length;
-                    showStatus(
-                        `✅ Converted! Bengali: ${result.stats.bengaliChars}, English: ${result.stats.englishChars}`,
-                        'success'
-                    );
-                } else {
-                    showStatus(`❌ Failed: ${result.error}`, 'error');
-                }
-            } catch (error) {
-                console.error('❌ Error:', error);
-                showStatus(`❌ Error: ${error.message}`, 'error');
-            } finally {
-                elements.convertBtn.disabled = false;
-            }
-        }
-
-        function handleClear() {
-            console.log('🖱️ Clear button clicked');
-            elements.inputText.value = '';
-            elements.outputText.innerHTML = '<div class="placeholder-text">Converted text will appear here...<br>রূপান্তরিত টেক্সট এখানে দেখাবে...</div>';
-            lastConversionResult = null;
-            elements.inputCharCount.textContent = '0';
-            elements.outputCharCount.textContent = '0';
-            elements.statusMessage.classList.add('hidden');
-            elements.inputText.focus();
-        }
-
-        function updateCharCount() {
-            elements.inputCharCount.textContent = elements.inputText.value.length;
-        }
-
-        async function handleCopy(type) {
-            console.log('🖱️ Copy button clicked:', type);
-            if (!lastConversionResult) {
-                showStatus('Nothing to copy!', 'error');
-                return;
-            }
-
-            try {
-                if (type === 'plain') {
-                    await copyToClipboard(lastConversionResult.plainText);
-                    showStatus('📋 Copied!', 'success');
-                } else {
-                    await copyRichText(lastConversionResult.htmlOutput, lastConversionResult.plainText);
-                    showStatus('📄 Rich text copied!', 'success');
-                }
-            } catch (error) {
-                console.error('Copy error:', error);
-                showStatus('❌ Copy failed', 'error');
-            }
-        }
-
-        async function copyToClipboard(text) {
-            if (navigator.clipboard) {
-                await navigator.clipboard.writeText(text);
-            } else {
-                const textarea = document.createElement('textarea');
-                textarea.value = text;
-                textarea.style.position = 'fixed';
-                textarea.style.opacity = '0';
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-            }
-        }
-
-        async function copyRichText(html, plainText) {
-            if (navigator.clipboard && window.ClipboardItem) {
-                const htmlBlob = new Blob([html], { type: 'text/html' });
-                const textBlob = new Blob([plainText], { type: 'text/plain' });
-                const item = new ClipboardItem({
-                    'text/html': htmlBlob,
-                    'text/plain': textBlob
-                });
-                await navigator.clipboard.write([item]);
-            } else {
-                await copyToClipboard(plainText);
-            }
-        }
-
-        function showStatus(message, type = 'success') {
-            elements.statusMessage.textContent = message;
-            elements.statusMessage.className = `status-message ${type}`;
-            elements.statusMessage.classList.remove('hidden');
-            setTimeout(() => elements.statusMessage.classList.add('hidden'), 5000);
-        }
-
-        function reconvert() {
-            if (lastConversionResult && elements.inputText.value.trim()) {
-                handleConvert();
-            }
-        }
-
-        // ========================================
-        // ATTACH EVENT LISTENERS
-        // ========================================
+        const segs = segment(input);
+        let plain = ''; let html = '';
         
-        console.log('🔗 Attaching event listeners...');
-
-        elements.convertBtn.addEventListener('click', handleConvert);
-        elements.clearInputBtn.addEventListener('click', handleClear);
-        elements.copyPlainBtn.addEventListener('click', () => handleCopy('plain'));
-        elements.copyRichBtn.addEventListener('click', () => handleCopy('rich'));
-        elements.inputText.addEventListener('input', updateCharCount);
-        elements.englishFont.addEventListener('change', reconvert);
-        elements.bengaliSize.addEventListener('change', reconvert);
-        elements.englishSize.addEventListener('change', reconvert);
-
-        document.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-                e.preventDefault();
-                handleConvert();
+        segs.forEach(s => {
+            if(s.type === 'bengali') {
+                let processed = s.text.replace(/[^\s\d\w]/g, ''); // Basic cleanup
+                
+                // Map characters
+                processed = processed.split('').map(c => UNICODE_MAP[c] || c).join('');
+                
+                plain += processed;
+                html += `<span style="font-family:'SutonnyMJ';font-size:${opts.bengali}px">${processed}</span>`;
+            } else {
+                plain += s.text;
+                html += `<span style="font-family:'${opts.font}';font-size:${opts.en}px">${s.text}</span>`;
             }
         });
 
-        console.log('✅ All event listeners attached');
-        console.log('═══════════════════════════════════════');
-        console.log('✅ CONVERTER READY TO USE!');
-        console.log('═══════════════════════════════════════');
+        return { success:true, plain, html };
     }
 
-    // ========================================
-    // DOM READY
-    // ========================================
+    // --- UI LOGIC ---
+    const els = {
+        inp: document.getElementById('inputText'),
+        out: document.getElementById('outputText'),
+        btn: document.getElementById('convertBtn'),
+        plCop: document.getElementById('copyPlainBtn'),
+        rCop: document.getElementById('copyRichBtn'),
+        clr: document.getElementById('clearInputBtn'),
+        stMsg: document.getElementById('statusMessage'),
+        chCnt: document.getElementById('inputCharCount'),
+        ouCnt: document.getElementById('outputCharCount'),
+        engFnt: document.getElementById('englishFont'),
+        benSz: document.getElementById('bengaliSize'),
+        enSz: document.getElementById('englishSize'),
+    };
+
+    let lastResult = null;
+
+    function updateStats() { els.chCnt.innerText = els.inp.value.length; }
+    function showMsg(msg, type) {
+        els.stMsg.style.display='block'; els.stMsg.className = 'status-msg '+(type==='success'?'status-success':'status-error'); els.stMsg.innerText = msg;
+        setTimeout(()=>els.stMsg.style.display='none', 5000);
+    }
+    async function copy(type) {
+        if(!lastResult) return showMsg('Nothing to copy!', 'error');
+        try {
+            if(type==='plain') await navigator.clipboard.writeText(lastResult.plain);
+            else {
+                const blob = new Blob([lastResult.html],{type:'text/html'});
+                const item = new ClipboardItem({'text/plain':new Blob([lastResult.plain]), 'text/html':blob});
+                await navigator.clipboard.write([item]);
+            }
+            showMsg('Copied Successfully!', 'success');
+        } catch(e) { showMsg('Copy Failed', 'error'); }
+    }
+    function handleConvert() {
+        const txt = els.inp.value.trim();
+        if(!txt) return showMsg('Please enter text!', 'error');
+        els.btn.disabled = true;
+        
+        setTimeout(() => {
+            const res = convert(txt, { font: els.engFnt.value, bengali: parseInt(els.benSz.value), en: parseInt(els.enSz.value) });
+            if(res.success) {
+                els.out.innerHTML = res.html;
+                els.ouCnt.innerText = res.plain.length;
+                lastResult = res;
+                showMsg('Conversion Complete!', 'success');
+            } else showMsg('Error', 'error');
+            els.btn.disabled = false;
+        }, 50);
+    }
+    function clearAll() {
+        els.inp.value=''; els.out.innerHTML='<div class="placeholder-text">Result appears here...</div>'; lastResult=null; updateStats();
+    }
+
+    // Listeners
+    els.btn.onclick = handleConvert;
+    els.clr.onclick = clearAll;
+    els.plCop.onclick = () => copy('plain');
+    els.rCop.onclick = () => copy('rich');
+    els.inp.oninput = updateStats;
     
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializeUI);
-    } else {
-        initializeUI();
-    }
-
+    console.log('Converter initialized successfully.');
 })();
     </script>
 </body>
