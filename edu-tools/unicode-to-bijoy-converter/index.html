@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="বাংলা ইউনিকোড টেক্সট থেকে বিজয় ফন্টে রূপান্তর করুন - সম্পূর্ণ ফ্রি">
+    <title>Unicode to Bijoy Converter | ইউনিকোড থেকে বিজয় কনভার্টার</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>🔤 Unicode to Bijoy Converter</h1>
+            <p class="subtitle">ইউনিকোড বাংলা থেকে বিজয় (SutonnyMJ) ফন্টে রূপান্তর করুন</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Input Section -->
+        <section class="converter-section">
+            <div class="input-area">
+                <div class="section-header">
+                    <h2>📝 আপনার টেক্সট লিখুন (Unicode)</h2>
+                    <button class="btn-clear" id="clearInputBtn">Clear</button>
+                </div>
+                <textarea 
+                    id="inputText" 
+                    class="text-input" 
+                    placeholder="এখানে বাংলা ইউনিকোড টেক্সট লিখুন বা পেস্ট করুন...&#10;&#10;উদাহরণ: আমি বাংলায় গান গাই। I love Bangladesh!"
+                    rows="10"
+                ></textarea>
+                <div class="char-count">
+                    <span id="inputCharCount">0</span> characters
+                </div>
+            </div>
+
+            <!-- Convert Button -->
+            <div class="convert-btn-container">
+                <button class="btn-convert" id="convertBtn">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Convert to Bijoy</span>
+                </button>
+            </div>
+
+            <!-- Output Section -->
+            <div class="output-area">
+                <div class="section-header">
+                    <h2>✅ Bijoy Output</h2>
+                    <div class="output-actions">
+                        <button class="btn-copy" id="copyPlainBtn">
+                            📋 Copy Plain Text
+                        </button>
+                        <button class="btn-copy btn-copy-rich" id="copyRichBtn">
+                            📄 Copy Rich Text (MS Word)
+                        </button>
+                    </div>
+                </div>
+                <div 
+                    id="outputText" 
+                    class="text-output"
+                    contenteditable="false"
+                >
+                    <div class="placeholder-text">
+                        Converted text will appear here...<br>
+                        রূপান্তরিত টেক্সট এখানে দেখাবে...
+                    </div>
+                </div>
+                <div class="char-count">
+                    <span id="outputCharCount">0</span> characters
+                </div>
+            </div>
+        </section>
+
+        <!-- Font Settings -->
+        <section class="settings-section">
+            <h3>⚙️ Font Settings</h3>
+            <div class="settings-grid">
+                <div class="setting-item">
+                    <label for="englishFont">English Font:</label>
+                    <select id="englishFont" class="setting-select">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Calibri">Calibri</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Tahoma">Tahoma</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="bengaliSize">Bengali Font Size:</label>
+                    <input type="number" id="bengaliSize" class="setting-input" value="12" min="8" max="72">
+                    <span>pt</span>
+                </div>
+                <div class="setting-item">
+                    <label for="englishSize">English Font Size:</label>
+                    <input type="number" id="englishSize" class="setting-input" value="11" min="8" max="72">
+                    <span>pt</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Message -->
+        <div id="statusMessage" class="status-message hidden"></div>
+
+        <!-- Instructions -->
+        <section class="instructions">
+            <h3>📖 How to Use | ব্যবহার পদ্ধতি</h3>
+            <ol>
+                <li><strong>Input Text:</strong> উপরের বক্সে বাংলা ইউনিকোড টেক্সট লিখুন বা paste করুন</li>
+                <li><strong>Convert:</strong> "Convert to Bijoy" বাটনে ক্লিক করুন</li>
+                <li><strong>Copy:</strong> নিচের বক্স থেকে converted text copy করুন
+                    <ul>
+                        <li><strong>Plain Text:</strong> শুধু text copy হবে</li>
+                        <li><strong>Rich Text:</strong> Font সহ copy হবে (MS Word এ paste করার জন্য)</li>
+                    </ul>
+                </li>
+                <li><strong>Paste in MS Word:</strong> Word এ paste করলে সঠিক font সহ আসবে</li>
+            </ol>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <h3>✨ Features | বৈশিষ্ট্য</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h4>Accurate Conversion</h4>
+                    <p>সঠিক মাত্রা reordering এবং যুক্তাক্ষর handling</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h4>100% Private</h4>
+                    <p>সব কিছু আপনার browser এ হয় - কোনো server এ data যায় না</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h4>Mixed Content</h4>
+                    <p>বাংলা + English একসাথে convert করা যায়</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h4>Mobile Friendly</h4>
+                    <p>Mobile, Tablet, Desktop - সব ডিভাইসে কাজ করে</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ for Bengali Language | 
+                <a href="https://www.krisishikkha.com/" target="_blank">KrisiShikkha</a>
+            </p>
+            <p class="footer-note">
+                💡 <strong>Note:</strong> SutonnyMJ font আপনার computer এ installed থাকতে হবে output সঠিক দেখার জন্য
+            </p>
+        </div>
+    </footer>
+
+    <!-- Load converter module and app logic -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
