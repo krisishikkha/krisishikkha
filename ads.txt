@@ -1,1 +1,61 @@
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# Krisishikkha - Authorized Digital Sellers
+# Updated: January 2024
+# Website: https://krisishikkha.com
+# Contact: krisishikkha@gmail.com
+
+# Google AdSense (PRIMARY)
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Google AdMob (Optional - for mobile app monetization)
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Google Ad Manager (Optional - for advanced ad management)
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Google AdX (Optional - for premium advertisers)
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# ========================================
+# IMPORTANT INSTRUCTIONS:
+# ========================================
+# 1. Replace "pub-0000000000000000" with your actual AdSense Publisher ID
+#    Find it at: https://www.google.com/adsense
+#    Format: pub-1234567890123456 (16 digits)
+#
+# 2. Keep "DIRECT" - means you directly control this inventory
+#
+# 3. Keep "f08c47fec0942fa0" - this is Google's Certification Authority ID
+#
+# 4. After getting approved, add this file to:
+#    https://krisishikkha.com/ads.txt
+#
+# 5. Verify it's accessible by visiting:
+#    https://krisishikkha.com/ads.txt in browser
+# ========================================
+
+# Additional Ad Networks (Add after AdSense approval)
+# --------------------------------------------
+# Only add networks you're actually using
+
+# Media.net (Alternative to AdSense)
+# media.net, 8CU123456, DIRECT
+
+# PropellerAds
+# propellerads.com, 123456, DIRECT, 1234abcd
+
+# Ezoic (Site Speed + Ads)
+# ezoic.com, 123456, DIRECT
+
+# Adsterra
+# adsterra.com, 123456, DIRECT
+
+# ========================================
+# ANTI-FRAUD PROTECTION
+# ========================================
+# This file helps prevent:
+# - Unauthorized ads on your site
+# - Ad fraud
+# - Domain spoofing
+# - Revenue theft
+
+# For questions, contact: krisishikkha@gmail.com
