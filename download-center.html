@@ -289,31 +289,6 @@
     const downloadBtn = document.getElementById("downloadBtn");
     const statusMessage = document.getElementById("statusMessage");
 
-    // ✅ Better BASE_PATH detection
-    function getBasePath() {
-      const hostname = window.location.hostname;
-      const pathname = window.location.pathname;
-
-      // Custom domain check
-      if (hostname.includes("krisishikkha.com")) {
-        return "";
-      }
-      
-      // If running on localhost or subdirectory, detect from pathname
-      if (pathname.includes("/krisishikkha/")) {
-        return "/krisishikkha";
-      }
-      
-      // Default to root
-      return "";
-    }
-
-    const BASE_PATH = getBasePath();
-    console.log("📁 BASE_PATH detected:", BASE_PATH || "(root)");
-    console.log("🌐 Current hostname:", window.location.hostname);
-    console.log("📍 Current pathname:", window.location.pathname);
-
-    // Status message display function
     function showStatus(message, type = 'info') {
       statusMessage.textContent = message;
       statusMessage.className = `status-message status-${type}`;
@@ -324,62 +299,32 @@
       }, 5000);
     }
 
-    // Wait for EXAM_STATUS to load
-    function waitForExamStatus(callback, timeout = 5000) {
-      const startTime = Date.now();
-      
-      const checkInterval = setInterval(() => {
-        if (typeof window.EXAM_STATUS !== "undefined" && Object.keys(window.EXAM_STATUS).length > 0) {
-          clearInterval(checkInterval);
-          callback();
-          return;
-        }
-        
-        if (Date.now() - startTime > timeout) {
-          clearInterval(checkInterval);
-          showStatus("⚠️ exam-status.js লোড হয়নি। দয়া করে পেজ রিলোড করুন।", "error");
-          console.error("❌ EXAM_STATUS not loaded after", timeout, "ms");
-        }
-      }, 100);
-    }
-
-    // Populate exam dropdown
     function populateExamDropdown() {
-      if (typeof window.EXAM_STATUS === "undefined") {
-        showStatus("❌ EXAM_STATUS সংজ্ঞায়িত নয়! exam-status.js লোড হয়েছে কি?", "error");
-        console.error("❌ EXAM_STATUS is undefined");
+      if (typeof EXAM_STATUS === "undefined") {
+        showStatus("❌ EXAM_STATUS লোড হয়নি!", "error");
         return;
       }
 
       examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
       let count = 0;
 
-      try {
-        for (const examId in window.EXAM_STATUS) {
-          const exam = window.EXAM_STATUS[examId];
-          
-          // Only show live exams
-          if (exam.visible && (exam.status === "live" || exam.status === "upcoming" || exam.status === "ended")) {
-            const option = document.createElement("option");
-            option.value = examId;
-            option.textContent = exam.title;
-            examSelect.appendChild(option);
-            count++;
-          }
-        }
+      for (const examId in EXAM_STATUS) {
+        const exam = EXAM_STATUS[examId];
         
-        console.log(`✅ Populated ${count} exams`);
-
-        if (count === 0) {
-          showStatus("⚠️ কোন পরীক্ষা পাওয়া যায়নি!", "error");
+        // শুধু live এবং archived পরীক্ষা দেখান
+        if (exam.category === "live" || exam.category === "archived") {
           const option = document.createElement("option");
-          option.textContent = "-- No exams available --";
-          option.disabled = true;
+          option.value = examId;
+          option.textContent = exam.title;
           examSelect.appendChild(option);
+          count++;
         }
-      } catch (err) {
-        console.error("❌ Error populating dropdown:", err);
-        showStatus("❌ ড্রপডাউন পূরণে ত্রুটি: " + err.message, "error");
+      }
+      
+      console.log(`✅ ${count} টি পরীক্ষা লোড হয়েছে`);
+
+      if (count === 0) {
+        showStatus("⚠️ কোন পরীক্ষা পাওয়া যায়নি!", "error");
       }
     }
 
@@ -408,13 +353,13 @@
         script.dataset.questionLoader = "true";
         
         script.onload = () => {
-          console.log("✅ Questions loaded from:", path);
+          console.log("✅ Questions লোড হয়েছে:", path);
           resolve();
         };
         
         script.onerror = () => {
-          console.error("❌ Failed to load:", path);
-          reject(new Error("questions.js not found at: " + path));
+          console.error("❌ লোড ব্যর্থ:", path);
+          reject(new Error("questions.js নেই: " + path));
         };
         
         document.body.appendChild(script);
@@ -422,25 +367,23 @@
     }
 
     function getQuestionsArray() {
-      if (typeof window.QUESTIONS !== "undefined" && Array.isArray(window.QUESTIONS)) {
-        console.log("✅ Found QUESTIONS array, length:", window.QUESTIONS.length);
-        return window.QUESTIONS;
+      if (typeof QUESTIONS !== "undefined" && Array.isArray(QUESTIONS)) {
+        console.log("✅ QUESTIONS পাওয়া গেছে:", QUESTIONS.length);
+        return QUESTIONS;
       }
-      console.error("❌ QUESTIONS array not found");
+      console.error("❌ QUESTIONS পাওয়া যায়নি");
       return null;
     }
 
     function buildCoverPage(selectedExam, questions) {
-      const examTitle = window.EXAM_STATUS[selectedExam].title;
+      const examTitle = EXAM_STATUS[selectedExam].title;
 
       const cover = document.createElement("div");
       cover.className = "cover-page";
       
-      const logoPath = BASE_PATH ? `${BASE_PATH}/assets/icons/icon-192.png` : "/assets/icons/icon-192.png";
-      
       cover.innerHTML = `
         <div class="cover-watermark">krisishikkha.com</div>
-        <img src="${logoPath}" alt="Logo" class="cover-logo" onerror="this.style.display='none'">
+        <img src="/assets/icons/icon-192.png" alt="Logo" class="cover-logo" onerror="this.style.display='none'">
         <div class="cover-title">${escapeHtml(examTitle)}</div>
         <div class="cover-subtitle">Answer Sheet with Detailed Explanation</div>
         <div class="cover-line"></div>
@@ -455,7 +398,7 @@
     }
 
     function buildContentSection(selectedExam, questions) {
-      const examTitle = window.EXAM_STATUS[selectedExam].title;
+      const examTitle = EXAM_STATUS[selectedExam].title;
 
       const content = document.createElement("div");
       content.className = "content-section";
@@ -544,70 +487,63 @@
       downloadBtn.textContent = "Loading...";
       showStatus("প্রশ্ন লোড হচ্ছে...", "info");
 
-      // Try multiple possible paths
-      const possiblePaths = [
-        `${BASE_PATH}/exam-corner/${selectedExam}/questions.js`,
-        `/exam-corner/${selectedExam}/questions.js`,
-        `./exam-corner/${selectedExam}/questions.js`,
-      ];
+      const questionPath = `/exam-corner/${selectedExam}/questions.js`;
 
-      let loaded = false;
+      console.log("📂 Path:", questionPath);
 
-      for (const questionPath of possiblePaths) {
-        try {
-          console.log("📂 Trying path:", questionPath);
-          await loadQuestionsJS(questionPath);
-          const questions = getQuestionsArray();
+      try {
+        await loadQuestionsJS(questionPath);
+        const questions = getQuestionsArray();
 
-          if (questions && questions.length > 0) {
-            showStatus(`${questions.length}টি প্রশ্ন পাওয়া গেছে। PDF তৈরি হচ্ছে...`, "success");
-
-            const pdfDoc = buildPdfDocument(selectedExam, questions);
-
-            const opt = {
-              margin: [8, 8, 8, 8],
-              filename: `${window.EXAM_STATUS[selectedExam].title}-Answer-Sheet.pdf`,
-              image: { type: "jpeg", quality: 0.98 },
-              html2canvas: {
-                scale: 2,
-                useCORS: true,
-                backgroundColor: "#ffffff",
-                logging: false
-              },
-              jsPDF: {
-                unit: "pt",
-                format: "a4",
-                orientation: "portrait"
-              },
-              pagebreak: {
-                mode: ["css", "legacy"]
-              }
-            };
-
-            await html2pdf().set(opt).from(pdfDoc).save();
-            
-            showStatus("✅ PDF সফলভাবে ডাউনলোড হয়েছে!", "success");
-            loaded = true;
-            break;
-          }
-        } catch (err) {
-          console.log("❌ Path failed:", questionPath, err.message);
-          continue;
+        if (!questions || questions.length === 0) {
+          showStatus("প্রশ্ন পাওয়া যায়নি!", "error");
+          downloadBtn.disabled = false;
+          downloadBtn.textContent = "Download PDF";
+          return;
         }
-      }
 
-      if (!loaded) {
-        showStatus("❌ প্রশ্ন ফাইল পাওয়া যায়নি। ফোল্ডার স্ট্রাকচার চেক করুন।", "error");
-      }
+        showStatus(`${questions.length}টি প্রশ্ন পাওয়া গেছে। PDF তৈরি হচ্ছে...`, "success");
 
-      downloadBtn.disabled = false;
-      downloadBtn.textContent = "Download PDF";
+        const pdfDoc = buildPdfDocument(selectedExam, questions);
+
+        const opt = {
+          margin: [8, 8, 8, 8],
+          filename: `${EXAM_STATUS[selectedExam].title}-Answer-Sheet.pdf`,
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: {
+            scale: 2,
+            useCORS: true,
+            backgroundColor: "#ffffff",
+            logging: false
+          },
+          jsPDF: {
+            unit: "pt",
+            format: "a4",
+            orientation: "portrait"
+          },
+          pagebreak: {
+            mode: ["css", "legacy"]
+          }
+        };
+
+        await html2pdf().set(opt).from(pdfDoc).save();
+        
+        showStatus("✅ PDF সফলভাবে ডাউনলোড হয়েছে!", "success");
+        downloadBtn.disabled = false;
+        downloadBtn.textContent = "Download PDF";
+
+      } catch (err) {
+        console.error("❌ Error:", err);
+        showStatus("❌ " + err.message, "error");
+        downloadBtn.disabled = false;
+        downloadBtn.textContent = "Download PDF";
+      }
     });
 
-    // Initialize: Wait for EXAM_STATUS then populate dropdown
-    waitForExamStatus(() => {
+    // প্রথমে চেক করুন EXAM_STATUS লোড হয়েছে কিনা
+    setTimeout(() => {
       populateExamDropdown();
-    });
+    }, 500);
   </script>
 </body>
 </html>
