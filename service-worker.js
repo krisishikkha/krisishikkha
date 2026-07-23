@@ -1,16 +1,15 @@
 /**
- * Krisishikkha - Service Worker
- * Version: 2.0.0
- * Updated: January 2024
- * Premium PWA Implementation
+ * Krisishikkha - Auto-Version Service Worker
+ * No manual version change needed!
+ * Updated automatically based on timestamp
  */
 
-const CACHE_VERSION = 'krisishikkha-v2.0.0';
+// ✅ Automatic Version - কোনো manual change লাগবে না!
+const CACHE_VERSION = `krisishikkha-${new Date().getTime()}`;
 const CACHE_NAME = `${CACHE_VERSION}-static`;
 const DYNAMIC_CACHE = `${CACHE_VERSION}-dynamic`;
-const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 
-// Files to cache immediately
+// Critical files to cache (এগুলো update করতে পারেন প্রয়োজন মতো)
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -20,36 +19,32 @@ const STATIC_ASSETS = [
   '/exam-corner.html',
   '/privacy-policy.html',
   '/terms.html',
-  '/manifest.json',
-  '/assets/css/style.css',
-  '/assets/js/main.js',
-  '/SolaimanLipi.js',
   '/offline.html'
 ];
 
-// Install event - cache static assets
+// Install Event
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing...', CACHE_VERSION);
+  console.log('[SW] Installing...', CACHE_VERSION);
   
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('[Service Worker] Caching static assets');
+        console.log('[SW] Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('[Service Worker] Installation complete');
-        return self.skipWaiting();
+        console.log('[SW] Installation complete');
+        return self.skipWaiting(); // Activate immediately
       })
       .catch((error) => {
-        console.error('[Service Worker] Installation failed:', error);
+        console.error('[SW] Installation failed:', error);
       })
   );
 });
 
-// Activate event - clean up old caches
+// Activate Event - Clean old caches
 self.addEventListener('activate', (event) => {
-  console.log('[Service Worker] Activating...', CACHE_VERSION);
+  console.log('[SW] Activating...', CACHE_VERSION);
   
   event.waitUntil(
     caches.keys()
@@ -57,123 +52,73 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames
             .filter((name) => {
+              // Delete all old krisishikkha caches
               return name.startsWith('krisishikkha-') && 
                      name !== CACHE_NAME && 
-                     name !== DYNAMIC_CACHE && 
-                     name !== IMAGE_CACHE;
+                     name !== DYNAMIC_CACHE;
             })
             .map((name) => {
-              console.log('[Service Worker] Deleting old cache:', name);
+              console.log('[SW] Deleting old cache:', name);
               return caches.delete(name);
             })
         );
       })
       .then(() => {
-        console.log('[Service Worker] Activation complete');
-        return self.clients.claim();
+        console.log('[SW] Activation complete');
+        return self.clients.claim(); // Take control immediately
       })
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch Event - Network First, Cache Fallback
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
   // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
+  if (request.method !== 'GET') return;
 
   // Skip cross-origin requests
-  if (url.origin !== location.origin) {
-    return;
-  }
+  if (url.origin !== location.origin) return;
 
-  // Handle different types of requests
-  if (request.destination === 'image') {
-    event.respondWith(handleImageRequest(request));
-  } else if (request.url.endsWith('.pdf')) {
-    event.respondWith(handlePDFRequest(request));
-  } else {
-    event.respondWith(handleRequest(request));
-  }
+  // Network First Strategy (সবসময় latest content পাবেন)
+  event.respondWith(
+    fetch(request)
+      .then((response) => {
+        // Clone response before caching
+        const responseClone = response.clone();
+        
+        // Cache successful responses
+        if (response && response.status === 200) {
+          caches.open(DYNAMIC_CACHE).then((cache) => {
+            cache.put(request, responseClone);
+          });
+        }
+        
+        return response;
+      })
+      .catch(() => {
+        // Network failed, try cache
+        return caches.match(request).then((cachedResponse) => {
+          if (cachedResponse) {
+            console.log('[SW] Serving from cache:', request.url);
+            return cachedResponse;
+          }
+          
+          // If navigation request, return offline page
+          if (request.mode === 'navigate') {
+            return caches.match('/offline.html');
+          }
+          
+          // Return error response
+          return new Response('Offline - Content not available', {
+            status: 503,
+            statusText: 'Service Unavailable'
+          });
+        });
+      })
+  );
 });
-
-// Handle regular requests
-async function handleRequest(request) {
-  try {
-    // Try cache first
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      console.log('[Service Worker] Serving from cache:', request.url);
-      return cachedResponse;
-    }
-
-    // Fetch from network
-    const networkResponse = await fetch(request);
-    
-    // Cache successful responses
-    if (networkResponse && networkResponse.status === 200) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    
-    return networkResponse;
-    
-  } catch (error) {
-    console.error('[Service Worker] Fetch failed:', error);
-    
-    // Return offline page for navigation requests
-    if (request.mode === 'navigate') {
-      const offlinePage = await caches.match('/offline.html');
-      if (offlinePage) return offlinePage;
-    }
-    
-    throw error;
-  }
-}
-
-// Handle image requests
-async function handleImageRequest(request) {
-  try {
-    const cachedImage = await caches.match(request);
-    if (cachedImage) {
-      return cachedImage;
-    }
-
-    const networkResponse = await fetch(request);
-    
-    if (networkResponse && networkResponse.status === 200) {
-      const cache = await caches.open(IMAGE_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    
-    return networkResponse;
-    
-  } catch (error) {
-    console.error('[Service Worker] Image fetch failed:', error);
-    // Return placeholder image
-    return new Response(
-      '<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="200" fill="#f0f0f0"/><text x="50%" y="50%" text-anchor="middle" fill="#999">Image Offline</text></svg>',
-      { headers: { 'Content-Type': 'image/svg+xml' } }
-    );
-  }
-}
-
-// Handle PDF requests
-async function handlePDFRequest(request) {
-  try {
-    // Always fetch PDFs from network (don't cache sensitive content)
-    return await fetch(request);
-  } catch (error) {
-    console.error('[Service Worker] PDF fetch failed:', error);
-    return new Response('PDF not available offline', {
-      status: 503,
-      statusText: 'Service Unavailable'
-    });
-  }
-}
 
 // Handle messages from clients
 self.addEventListener('message', (event) => {
@@ -192,57 +137,4 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Background sync for offline form submissions
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form-sync') {
-    event.waitUntil(syncContactForm());
-  }
-});
-
-async function syncContactForm() {
-  // Implement your form sync logic here
-  console.log('[Service Worker] Syncing contact form...');
-}
-
-// Push notifications
-self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New update available!',
-    icon: '/assets/images/icon-192x192.png',
-    badge: '/assets/images/badge-72x72.png',
-    vibrate: [200, 100, 200],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View Now',
-        icon: '/assets/images/checkmark.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/assets/images/xmark.png'
-      }
-    ]
-  };
-
-  event.waitUntil(
-    self.registration.showNotification('Krisishikkha', options)
-  );
-});
-
-// Notification click handler
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-  if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow('https://krisishikkha.com')
-    );
-  }
-});
-
-console.log('[Service Worker] Script loaded successfully');
+console.log('[SW] Service Worker loaded:', CACHE_VERSION);
