@@ -5,9 +5,427 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="বাংলা ইউনিকোড টেক্সট থেকে বিজয় ফন্টে রূপান্তর করুন - সম্পূর্ণ ফ্রি">
     <title>Unicode to Bijoy Converter | ইউনিকোড থেকে বিজয় কনভার্টার</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ========================================
+           Global Styles & Reset
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            opacity: 0.95;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .converter-section {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .input-area, .output-area {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .text-input, .text-output {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-family: 'Noto Sans Bengali', 'SutonnyMJ', Arial, sans-serif;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .text-output {
+            min-height: 200px;
+            background-color: var(--bg-light);
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .placeholder-text {
+            color: var(--text-light);
+            text-align: center;
+            padding: var(--spacing-xl);
+            font-style: italic;
+        }
+
+        .char-count {
+            text-align: right;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-top: var(--spacing-xs);
+        }
+
+        /* Buttons */
+        .btn-convert {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: var(--spacing-md) var(--spacing-lg);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%);
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .btn-convert:hover {
+            background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-convert:active {
+            transform: translateY(0);
+        }
+
+        .btn-convert:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .btn-icon {
+            font-size: 1.5rem;
+        }
+
+        .convert-btn-container {
+            margin: var(--spacing-lg) 0;
+        }
+
+        .output-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .btn-clear, .btn-copy {
+            padding: var(--spacing-xs) var(--spacing-md);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            background: var(--bg-white);
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-clear:hover, .btn-copy:hover {
+            background: var(--bg-light);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-copy-rich {
+            background: var(--success-color);
+            color: white;
+            border-color: var(--success-color);
+        }
+
+        .btn-copy-rich:hover {
+            background: #059669;
+            border-color: #059669;
+            color: white;
+        }
+
+        /* Settings */
+        .settings-section {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .settings-section h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-dark);
+        }
+
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .setting-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .setting-item label {
+            font-weight: 500;
+            min-width: 120px;
+        }
+
+        .setting-select, .setting-input {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+        }
+
+        .setting-input {
+            width: 70px;
+            text-align: center;
+        }
+
+        /* Status Message */
+        .status-message {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .status-message.hidden {
+            display: none;
+        }
+
+        .status-message.success {
+            background-color: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+
+        .status-message.error {
+            background-color: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        /* Instructions & Features */
+        .instructions, .features {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .instructions h3, .features h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-dark);
+        }
+
+        .instructions ol {
+            margin-left: var(--spacing-lg);
+        }
+
+        .instructions li {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.8;
+        }
+
+        .instructions ul {
+            margin-top: var(--spacing-xs);
+            margin-left: var(--spacing-lg);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .feature-card h4 {
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            margin-top: var(--spacing-sm);
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.75rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--spacing-sm);
+            }
+            .output-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn-copy {
+                width: 100%;
+            }
+            .settings-grid {
+                grid-template-columns: 1fr;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Debug indicator */
+        .debug-info {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #000;
+            color: #0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-family: monospace;
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
+    <!-- Debug indicator (will show "JS LOADED" when script runs) -->
+    <div id="debugInfo" class="debug-info">⏳ Loading...</div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -159,7 +577,542 @@
         </div>
     </footer>
 
-    <!-- ✅ CORRECT: Load converter-standalone.js (NOT app.js) -->
-    <script src="converter-standalone.js"></script>
+    <!-- ============================================
+         EMBEDDED JAVASCRIPT (No external files)
+         ============================================ -->
+    <script>
+(function() {
+    'use strict';
+    
+    console.log('═══════════════════════════════════════');
+    console.log('🚀 Unicode to Bijoy Converter Loading...');
+    console.log('═══════════════════════════════════════');
+
+    // Update debug indicator
+    const debugInfo = document.getElementById('debugInfo');
+    if (debugInfo) {
+        debugInfo.textContent = '✅ JS LOADED';
+        debugInfo.style.background = '#0f0';
+        debugInfo.style.color = '#000';
+        setTimeout(() => debugInfo.style.display = 'none', 3000);
+    }
+
+    // ========================================
+    // CHARACTER MAPPING TABLES
+    // ========================================
+    
+    const UNICODE_TO_BIJOY_MAP = {
+        'অ': 'A', 'আ': 'Av', 'ই': 'B', 'ঈ': 'C', 'উ': 'D',
+        'ঊ': 'E', 'ঋ': 'F', 'এ': 'G', 'ঐ': 'H', 'ও': 'I', 'ঔ': 'J',
+        'ক': 'K', 'খ': 'L', 'গ': 'M', 'ঘ': 'N', 'ঙ': 'O',
+        'চ': 'P', 'ছ': 'Q', 'জ': 'R', 'ঝ': 'S', 'ঞ': 'T',
+        'ট': 'U', 'ঠ': 'V', 'ড': 'W', 'ঢ': 'X', 'ণ': 'Y',
+        'ত': 'Z', 'থ': '_', 'দ': '`', 'ধ': 'a', 'ন': 'b',
+        'প': 'c', 'ফ': 'd', 'ব': 'e', 'ভ': 'f', 'ম': 'g',
+        'য': 'h', 'র': 'i', 'ল': 'j', 'শ': 'k', 'ষ': 'l',
+        'স': 'm', 'হ': 'n',
+        'ড়': 'o', 'ঢ়': 'p', 'য়': 'q', 'ৎ': 'r',
+        'ং': 's', 'ঃ': 't', 'ঁ': 'u',
+        'া': 'v', 'ি': 'w', 'ী': 'x', 'ু': 'y', 'ূ': 'z',
+        'ৃ': '…', 'ে': '†', 'ৈ': '‡', 'ো': '†v', 'ৌ': '‡v',
+        '্': '&',
+        '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4',
+        '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9',
+        '।': '|', '॥': '||'
+    };
+
+    const CONJUNCT_MAP = {
+        'ক্ষ্ম': '¶¥', 'ন্ত্র': 'š¿', 'ন্দ্র': 'Ô«', 'স্ত্র': 'ó«',
+        'ক্ক': '°', 'ক্ট': '±', 'ক্ত': '²', 'ক্ম': '³', 'ক্য': 'K¨',
+        'ক্র': 'µ', 'ক্ষ': '¶', 'ক্স': '·',
+        'গ্ধ': '»', 'গ্ন': 'M§', 'গ্ম': 'M¥', 'গ্য': 'M¨', 'গ্র': '¸',
+        'ঙ্ক': '¼', 'ঙ্গ': '½',
+        'চ্চ': '¾', 'চ্ছ': 'я', 'চ্ঞ': 'P¤', 'চ্য': 'P¨',
+        'জ্জ': 'À', 'জ্ঞ': 'Á', 'জ্য': 'R¨', 'জ্র': 'Â',
+        'ঞ্চ': 'Ã', 'ঞ্জ': 'Ä',
+        'ট্ট': 'Å', 'ট্য': 'U¨', 'ট্র': 'Æ',
+        'ড্ড': 'Ç', 'ড্য': 'W¨', 'ড্র': 'Ø',
+        'ণ্ট': 'É', 'ণ্ড': 'Ê', 'ণ্ণ': 'Ë', 'ণ্য': 'Y¨',
+        'ত্ত': 'Ì', 'ত্ন': 'Zœ', 'ত্ম': 'Z¥', 'ত্য': 'Z¨', 'ত্র': 'Í',
+        'থ্য': '_¨', 'থ্র': '_«',
+        'দ্দ': 'Ï', 'দ্ধ': 'Ð', 'দ্ব': '`¡', 'দ্ম': '`¥', 'দ্য': '`¨', 'দ্র': 'Ñ',
+        'ধ্ন': 'aœ', 'ধ্য': 'a¨', 'ধ্র': 'a«',
+        'ন্ট': 'Ò', 'ন্ড': 'Ó', 'ন্ত': 'šÍ', 'ন্থ': 'š'', 'ন্দ': 'Ô',
+        'ন্ধ': 'Õ', 'ন্ন': 'bœ', 'ন্ব': 'b¡', 'ন্ম': 'b¥', 'ন্য': 'b¨',
+        'প্ট': 'Ö', 'প্ত': 'ç', 'প্ন': 'cœ', 'প্প': '¤Ú', 'প্য': 'c¨',
+        'প্র': 'Û', 'প্ল': 'c­', 'প্স': 'Ü',
+        'ফ্র': 'd«', 'ফ্ল': 'd­',
+        'ব্জ': 'eR', 'ব্দ': 'ß', 'ব্ধ': 'à', 'ব্ব': 'eŸ', 'ব্য': 'e¨',
+        'ব্র': 'eª', 'ব্ল': 'e­',
+        'ভ্র': 'f«', 'ভ্য': 'f¨', 'ভ্ল': 'f­',
+        'ম্ন': 'gœ', 'ম্প': 'á', 'ম্ফ': 'â', 'ম্ব': 'ã', 'ম্ভ': 'ä',
+        'ম্ম': 'å', 'ম্য': 'g¨', 'ম্র': 'g«', 'ম্ল': 'g­',
+        'য্য': 'æ', 'র্য': 'i¨',
+        'ল্ক': 'é', 'ল্গ': 'ê', 'ল্প': 'ë', 'ল্ব': 'í', 'ল্ম': 'jg',
+        'ল্য': 'j¨', 'ল্ল': 'ì',
+        'শ্চ': 'î', 'শ্ছ': 'kQ', 'শ্ন': 'kœ', 'শ্ব': 'k¡', 'শ্ম': 'k¥',
+        'শ্য': 'k¨', 'শ্র': 'k«', 'শ্ল': 'k­',
+        'ষ্ক': '®‹', 'ষ্ট': 'ï', 'ষ্ঠ': 'ð', 'ষ্ণ': 'ò', 'ষ্প': 'ó',
+        'ষ্ব': 'l¡', 'ষ্ম': 'l¥', 'ষ্য': 'l¨',
+        'স্ক': '¯‹', 'স্ট': 'ô', 'স্ত': 'ö', 'স্থ': '¯'', 'স্ন': 'mœ',
+        'স্প': '÷', 'স্ব': 'm¡', 'স্ম': '¯§', 'স্য': 'm¨', 'স্র': 'ù', 'স্ল': 'm­',
+        'হ্ণ': 'nY', 'হ্ন': 'nœ', 'হ্ব': 'û', 'হ্ম': 'ý', 'হ্য': 'n¨',
+        'হ্র': 'þ', 'হ্ল': 'n­'
+    };
+
+    const PRE_BASE_MATRAS = new Set(['ি', 'ী', 'ে', 'ৈ']);
+
+    // ========================================
+    // HELPER FUNCTIONS
+    // ========================================
+    
+    function isBengaliChar(char) {
+        const code = char.charCodeAt(0);
+        return (code >= 0x0980 && code <= 0x09FF);
+    }
+
+    function isConsonant(char) {
+        return 'কখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহড়ঢ়য়'.includes(char);
+    }
+
+    function isVowelSign(char) {
+        return 'ািীুূৃেৈোৌ'.includes(char);
+    }
+
+    function isHasant(char) {
+        return char === '্';
+    }
+
+    function isWhitespace(char) {
+        return /\s/.test(char);
+    }
+
+    // ========================================
+    // TEXT SEGMENTATION
+    // ========================================
+    
+    function segmentText(text) {
+        const segments = [];
+        let currentType = null;
+        let currentText = '';
+        let startIndex = 0;
+
+        for (let i = 0; i < text.length; i++) {
+            const char = text[i];
+            let charType;
+
+            if (isWhitespace(char)) {
+                charType = 'whitespace';
+            } else if (isBengaliChar(char)) {
+                charType = 'bengali';
+            } else {
+                charType = 'english';
+            }
+
+            if (currentType === null) {
+                currentType = charType;
+                currentText = char;
+                startIndex = i;
+            } else if (charType === currentType) {
+                currentText += char;
+            } else {
+                segments.push({
+                    type: currentType,
+                    text: currentText,
+                    start: startIndex,
+                    end: i
+                });
+                currentType = charType;
+                currentText = char;
+                startIndex = i;
+            }
+        }
+
+        if (currentText) {
+            segments.push({
+                type: currentType,
+                text: currentText,
+                start: startIndex,
+                end: text.length
+            });
+        }
+
+        return segments;
+    }
+
+    // ========================================
+    // MATRA REORDERING
+    // ========================================
+    
+    function reorderMatras(text) {
+        const chars = Array.from(text);
+        const result = [];
+        let i = 0;
+
+        while (i < chars.length) {
+            const char = chars[i];
+
+            if (isConsonant(char)) {
+                const cluster = extractCluster(chars, i);
+                const reordered = reorderCluster(cluster);
+                result.push(...reordered);
+                i += cluster.length;
+            } else {
+                result.push(char);
+                i++;
+            }
+        }
+
+        return result.join('');
+    }
+
+    function extractCluster(chars, start) {
+        const cluster = [chars[start]];
+        let i = start + 1;
+
+        while (i < chars.length) {
+            const char = chars[i];
+            if (isHasant(char)) {
+                cluster.push(char);
+                i++;
+                if (i < chars.length && isConsonant(chars[i])) {
+                    cluster.push(chars[i]);
+                    i++;
+                }
+            } else if (isVowelSign(char)) {
+                cluster.push(char);
+                i++;
+            } else {
+                break;
+            }
+        }
+
+        return cluster;
+    }
+
+    function reorderCluster(cluster) {
+        const preBase = [];
+        const consonants = [];
+        const postBase = [];
+
+        for (const char of cluster) {
+            if (PRE_BASE_MATRAS.has(char)) {
+                preBase.push(char);
+            } else if (isVowelSign(char)) {
+                postBase.push(char);
+            } else {
+                consonants.push(char);
+            }
+        }
+
+        return [...preBase, ...consonants, ...postBase];
+    }
+
+    // ========================================
+    // MAIN CONVERSION FUNCTION
+    // ========================================
+    
+    function convertToBijoy(text, options = {}) {
+        const {
+            englishFont = 'Arial',
+            bengaliFontSize = 12,
+            englishFontSize = 11
+        } = options;
+
+        console.log('🔄 Converting:', text.substring(0, 30) + '...');
+
+        if (!text || text.trim().length === 0) {
+            return {
+                success: false,
+                plainText: '',
+                htmlOutput: '',
+                error: 'Empty input'
+            };
+        }
+
+        try {
+            const segments = segmentText(text);
+            console.log('📊 Segments:', segments.length);
+
+            const processedSegments = segments.map(segment => {
+                if (segment.type === 'bengali') {
+                    let processed = segment.text;
+                    
+                    // Replace conjuncts
+                    for (const [unicode, bijoy] of Object.entries(CONJUNCT_MAP)) {
+                        processed = processed.split(unicode).join(bijoy);
+                    }
+                    
+                    // Reorder matras
+                    processed = reorderMatras(processed);
+                    
+                    // Character mapping
+                    processed = Array.from(processed)
+                        .map(char => UNICODE_TO_BIJOY_MAP[char] || char)
+                        .join('');
+
+                    return {
+                        ...segment,
+                        converted: processed,
+                        font: 'SutonnyMJ',
+                        fontSize: bengaliFontSize
+                    };
+                } else {
+                    return {
+                        ...segment,
+                        converted: segment.text,
+                        font: englishFont,
+                        fontSize: englishFontSize
+                    };
+                }
+            });
+
+            const plainText = processedSegments.map(s => s.converted).join('');
+            const htmlOutput = processedSegments
+                .map(seg => {
+                    const escaped = escapeHtml(seg.converted);
+                    return `<span style="font-family: '${seg.font}'; font-size: ${seg.fontSize}pt;">${escaped}</span>`;
+                })
+                .join('');
+
+            console.log('✅ Conversion successful!');
+
+            return {
+                success: true,
+                plainText,
+                htmlOutput,
+                segments: processedSegments,
+                stats: {
+                    totalChars: text.length,
+                    bengaliChars: segments.filter(s => s.type === 'bengali')
+                        .reduce((sum, s) => sum + s.text.length, 0),
+                    englishChars: segments.filter(s => s.type === 'english')
+                        .reduce((sum, s) => sum + s.text.length, 0)
+                }
+            };
+        } catch (error) {
+            console.error('❌ Conversion error:', error);
+            return {
+                success: false,
+                plainText: '',
+                htmlOutput: '',
+                error: error.message
+            };
+        }
+    }
+
+    function escapeHtml(text) {
+        const map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        };
+        return text.replace(/[&<>"']/g, m => map[m]);
+    }
+
+    // ========================================
+    // UI INITIALIZATION
+    // ========================================
+    
+    let lastConversionResult = null;
+
+    function initializeUI() {
+        console.log('🎨 Initializing UI...');
+
+        // Get DOM elements
+        const elements = {
+            inputText: document.getElementById('inputText'),
+            outputText: document.getElementById('outputText'),
+            convertBtn: document.getElementById('convertBtn'),
+            copyPlainBtn: document.getElementById('copyPlainBtn'),
+            copyRichBtn: document.getElementById('copyRichBtn'),
+            clearInputBtn: document.getElementById('clearInputBtn'),
+            inputCharCount: document.getElementById('inputCharCount'),
+            outputCharCount: document.getElementById('outputCharCount'),
+            statusMessage: document.getElementById('statusMessage'),
+            englishFont: document.getElementById('englishFont'),
+            bengaliSize: document.getElementById('bengaliSize'),
+            englishSize: document.getElementById('englishSize')
+        };
+
+        // Verify all elements exist
+        const missing = [];
+        for (const [key, element] of Object.entries(elements)) {
+            if (!element) {
+                missing.push(key);
+            }
+        }
+
+        if (missing.length > 0) {
+            console.error('❌ Missing elements:', missing);
+            alert('Error: Some UI elements are missing. Check console.');
+            return;
+        }
+
+        console.log('✅ All elements found');
+
+        // ========================================
+        // EVENT HANDLERS
+        // ========================================
+        
+        function handleConvert() {
+            console.log('🖱️ Convert button clicked');
+            const input = elements.inputText.value.trim();
+
+            if (!input) {
+                showStatus('Please enter some text!', 'error');
+                return;
+            }
+
+            elements.convertBtn.disabled = true;
+
+            const options = {
+                englishFont: elements.englishFont.value,
+                bengaliFontSize: parseInt(elements.bengaliSize.value) || 12,
+                englishFontSize: parseInt(elements.englishSize.value) || 11
+            };
+
+            try {
+                const result = convertToBijoy(input, options);
+
+                if (result.success) {
+                    lastConversionResult = result;
+                    elements.outputText.innerHTML = result.htmlOutput;
+                    elements.outputCharCount.textContent = result.plainText.length;
+                    showStatus(
+                        `✅ Converted! Bengali: ${result.stats.bengaliChars}, English: ${result.stats.englishChars}`,
+                        'success'
+                    );
+                } else {
+                    showStatus(`❌ Failed: ${result.error}`, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Error:', error);
+                showStatus(`❌ Error: ${error.message}`, 'error');
+            } finally {
+                elements.convertBtn.disabled = false;
+            }
+        }
+
+        function handleClear() {
+            console.log('🖱️ Clear button clicked');
+            elements.inputText.value = '';
+            elements.outputText.innerHTML = '<div class="placeholder-text">Converted text will appear here...<br>রূপান্তরিত টেক্সট এখানে দেখাবে...</div>';
+            lastConversionResult = null;
+            elements.inputCharCount.textContent = '0';
+            elements.outputCharCount.textContent = '0';
+            elements.statusMessage.classList.add('hidden');
+            elements.inputText.focus();
+        }
+
+        function updateCharCount() {
+            elements.inputCharCount.textContent = elements.inputText.value.length;
+        }
+
+        async function handleCopy(type) {
+            console.log('🖱️ Copy button clicked:', type);
+            if (!lastConversionResult) {
+                showStatus('Nothing to copy!', 'error');
+                return;
+            }
+
+            try {
+                if (type === 'plain') {
+                    await copyToClipboard(lastConversionResult.plainText);
+                    showStatus('📋 Copied!', 'success');
+                } else {
+                    await copyRichText(lastConversionResult.htmlOutput, lastConversionResult.plainText);
+                    showStatus('📄 Rich text copied!', 'success');
+                }
+            } catch (error) {
+                console.error('Copy error:', error);
+                showStatus('❌ Copy failed', 'error');
+            }
+        }
+
+        async function copyToClipboard(text) {
+            if (navigator.clipboard) {
+                await navigator.clipboard.writeText(text);
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            }
+        }
+
+        async function copyRichText(html, plainText) {
+            if (navigator.clipboard && window.ClipboardItem) {
+                const htmlBlob = new Blob([html], { type: 'text/html' });
+                const textBlob = new Blob([plainText], { type: 'text/plain' });
+                const item = new ClipboardItem({
+                    'text/html': htmlBlob,
+                    'text/plain': textBlob
+                });
+                await navigator.clipboard.write([item]);
+            } else {
+                await copyToClipboard(plainText);
+            }
+        }
+
+        function showStatus(message, type = 'success') {
+            elements.statusMessage.textContent = message;
+            elements.statusMessage.className = `status-message ${type}`;
+            elements.statusMessage.classList.remove('hidden');
+            setTimeout(() => elements.statusMessage.classList.add('hidden'), 5000);
+        }
+
+        function reconvert() {
+            if (lastConversionResult && elements.inputText.value.trim()) {
+                handleConvert();
+            }
+        }
+
+        // ========================================
+        // ATTACH EVENT LISTENERS
+        // ========================================
+        
+        console.log('🔗 Attaching event listeners...');
+
+        elements.convertBtn.addEventListener('click', handleConvert);
+        elements.clearInputBtn.addEventListener('click', handleClear);
+        elements.copyPlainBtn.addEventListener('click', () => handleCopy('plain'));
+        elements.copyRichBtn.addEventListener('click', () => handleCopy('rich'));
+        elements.inputText.addEventListener('input', updateCharCount);
+        elements.englishFont.addEventListener('change', reconvert);
+        elements.bengaliSize.addEventListener('change', reconvert);
+        elements.englishSize.addEventListener('change', reconvert);
+
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                e.preventDefault();
+                handleConvert();
+            }
+        });
+
+        console.log('✅ All event listeners attached');
+        console.log('═══════════════════════════════════════');
+        console.log('✅ CONVERTER READY TO USE!');
+        console.log('═══════════════════════════════════════');
+    }
+
+    // ========================================
+    // DOM READY
+    // ========================================
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeUI);
+    } else {
+        initializeUI();
+    }
+
+})();
+    </script>
 </body>
 </html>
