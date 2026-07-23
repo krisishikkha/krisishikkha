@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="কৃষিশিক্ষার সাথে যোগাযোগ করুন। Email, WhatsApp, Facebook এবং YouTube এর মাধ্যমে আমাদের সাথে সংযুক্ত হন।">
+    <meta name="keywords" content="Contact Krisishikkha, যোগাযোগ, Support, Help">
+    <meta name="author" content="Krisishikkha">
+    <meta property="og:title" content="Contact Us - Krisishikkha">
+    <meta property="og:description" content="কৃষিশিক্ষার সাথে যোগাযোগ করুন">
+    <meta property="og:url" content="https://krisishikkha.com/contact.html">
+    <title>Contact Us - Krisishikkha | যোগাযোগ করুন</title>
+    <link rel="canonical" href="https://krisishikkha.com/contact.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SolaimanLipi', 'Noto Sans Bengali', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+        
+        /* Main Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideInLeft 0.8s ease;
+        }
+        
+        .contact-form-section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-form-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #34495e;
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Contact Info Section */
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            animation: slideInRight 0.8s ease;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+        
+        .info-card h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-method {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .contact-method:hover {
+            background: #e9ecef;
+            border-left-color: #667eea;
+            transform: translateX(5px);
+        }
+        
+        .contact-method .icon {
+            font-size: 2em;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .contact-method .details {
+            flex: 1;
+        }
+        
+        .contact-method .label {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        
+        .contact-method .value {
+            font-size: 1.1em;
+            color: #2c3e50;
+            font-weight: bold;
+            word-break: break-all;
+        }
+        
+        .contact-method a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-method a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        /* Social Media Buttons */
+        .social-media-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 35px;
+            color: white;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        }
+        
+        .social-media-card h3 {
+            color: white;
+            font-size: 1.6em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .social-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: white;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .social-btn .icon {
+            font-size: 1.5em;
+        }
+        
+        .social-btn.facebook { border-left: 5px solid #1877f2; }
+        .social-btn.youtube { border-left: 5px solid #ff0000; }
+        .social-btn.whatsapp { border-left: 5px solid #25d366; }
+        .social-btn.email { border-left: 5px solid #ea4335; }
+        
+        /* Map/Location Card */
+        .location-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .location-card .icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+        
+        .location-card h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .location-card p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 1.1em;
+            animation: slideInDown 0.5s ease;
+            box-shadow: 0 5px 20px rgba(46, 204, 113, 0.4);
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease;
+        }
+        
+        .faq-section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .faq-item h4 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        /* Back Button */
+        .back-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .social-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-section,
+            .info-card {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .header p {
+                font-size: 1em;
+            }
+            
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="header">
+            <h1>📧 যোগাযোগ করুন</h1>
+            <p>আমরা সবসময় আপনার সেবায় প্রস্তুত</p>
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="contact-grid">
+            
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2>✉️ বার্তা পাঠান</h2>
+                
+                <div class="success-message" id="successMessage">
+                    ✅ ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।
+                </div>
+
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">আপনার নাম *</label>
+                        <input type="text" id="name" name="name" required placeholder="উদাহরণ: রহিম আহমেদ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">ইমেইল ঠিকানা *</label>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">মোবাইল নম্বর</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">বিষয় নির্বাচন করুন *</label>
+                        <select id="category" name="category" required>
+                            <option value="">-- একটি বিষয় নির্বাচন করুন --</option>
+                            <option value="general">সাধারণ জিজ্ঞাসা</option>
+                            <option value="technical">টেকনিক্যাল সমস্যা</option>
+                            <option value="content">কন্টেন্ট সম্পর্কিত</option>
+                            <option value="suggestion">পরামর্শ/মতামত</option>
+                            <option value="collaboration">সহযোগিতা</option>
+                            <option value="other">অন্যান্য</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">আপনার বার্তা *</label>
+                        <textarea id="message" name="message" required placeholder="এখানে আপনার বার্তা লিখুন..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        📤 বার্তা পাঠান
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-section">
+                
+                <!-- Contact Methods -->
+                <div class="info-card">
+                    <h3>📞 যোগাযোগের মাধ্যম</h3>
+                    
+                    <div class="contact-method email">
+                        <div class="icon">📧</div>
+                        <div class="details">
+                            <div class="label">ইমেইল</div>
+                            <div class="value">
+                                <a href="mailto:krisishikkha@gmail.com">krisishikkha@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-method whatsapp">
+                        <div class="icon">📱</div>
+                        <div class="details">
+                            <div class="label">WhatsApp</div>
+                            <div class="value">
+                                <a href="https://wa.me/8801516013089" target="_blank">+880 1516-013089</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-method website">
+                        <div class="icon">🌐</div>
+                        <div class="details">
+                            <div class="label">ওয়েবসাইট</div>
+                            <div class="value">
+                                <a href="https://krisishikkha.com" target="_blank">www.krisishikkha.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-media-card">
+                    <h3>🌟 সোশ্যাল মিডিয়া</h3>
+                    <div class="social-buttons">
+                        <a href="https://www.facebook.com/share/1LsEf1LRbM/" target="_blank" class="social-btn facebook">
+                            <span class="icon">📘</span>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://youtube.com/@krisishikkha?si=dgU7w6p1VjUylGpy" target="_blank" class="social-btn youtube">
+                            <span class="icon">📺</span>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="https://wa.me/8801516013089" target="_blank" class="social-btn whatsapp">
+                            <span class="icon">💬</span>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:krisishikkha@gmail.com" class="social-btn email">
+                            <span class="icon">✉️</span>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Location/Support Hours -->
+                <div class="location-card">
+                    <div class="icon">🕐</div>
+                    <h3>সাপোর্ট সময়</h3>
+                    <p>
+                        <strong>প্রতিদিন:</strong> সকাল ৯:০০ - রাত ১০:০০<br>
+                        <strong>সপ্তাহান্তে:</strong> সকাল ১০:০০ - সন্ধ্যা ৮:০০
+                    </p>
+                    <p style="margin-top: 15px; color: #667eea;">
+                        📍 <strong>বাংলাদেশ</strong>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>❓ সাধারণ জিজ্ঞাসা (FAQ)</h2>
+            
+            <div class="faq-item">
+                <h4>🔹 কতদিনের মধ্যে উত্তর পাব?</h4>
+                <p>আমরা সাধারণত ২৪-৪৮ ঘণ্টার মধ্যে সকল বার্তার উত্তর দিয়ে থাকি।</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>🔹 সেবা কি সম্পূর্ণ বিনামূল্যে?</h4>
+                <p>হ্যাঁ, কৃষিশিক্ষার সকল সেবা সম্পূর্ণ বিনামূল্যে। কোনো লুকানো খরচ নেই।</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>🔹 নতুন কন্টেন্ট কখন যুক্ত হয়?</h4>
+                <p>আমরা নিয়মিত নতুন নোট, MCQ এবং পিডিএফ যুক্ত করি। আপডেট পেতে আমাদের সোশ্যাল মিডিয়া ফলো করুন।</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>🔹 কন্টেন্ট সাজেশন দিতে পারি?</h4>
+                <p>অবশ্যই! আপনার সাজেশন আমাদের কাছে অত্যন্ত মূল্যবান। উপরের ফর্ম পূরণ করে আমাদের জানান।</p>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="back-button">
+            <a href="index.html" class="back-btn">← হোম পেজে ফিরে যান</a>
+        </div>
+
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.add('show');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Hide success message after 7 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 7000);
+
+            // Log form data (in production, send to backend)
+            console.log('Form submitted:', data);
+            
+            // Optional: Send to backend/email service
+            /*
+            fetch('https://your-backend-api.com/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => console.log('Success:', data))
+            .catch((error) => console.error('Error:', error));
+            */
+            
+            // Optional: Send email using EmailJS or similar service
+            /*
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", data)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+            */
+        }
+
+        // Add smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
