@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
@@ -11,12 +11,44 @@
   </script>
 
   <meta charset="UTF-8">
-  <title>Krisishikkha | Education & PDF Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- SEO Meta Tags (CRITICAL for AdSense) -->
+  <meta name="description" content="কৃষিশিক্ষা - বাংলাদেশের বিশ্বস্ত শিক্ষা প্ল্যাটফর্ম। NTRCA, BCS, গবেষণা ইনস্টিটিউট এবং ডিপ্লোমা কৃষি পরীক্ষার সম্পূর্ণ বিনামূল্যে প্রস্তুতি।">
+  <meta name="keywords" content="Krisishikkha, NTRCA, BCS, কৃষি শিক্ষা, Bangladesh Education, Exam Preparation, MCQ, Study Notes, ডিপ্লোমা কৃষি">
+  <meta name="author" content="Krisishikkha Team">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Bengali">
+  
+  <!-- Open Graph Meta Tags (For Social Sharing) -->
+  <meta property="og:title" content="Krisishikkha - বাংলাদেশের বিশ্বস্ত শিক্ষা প্ল্যাটফর্ম">
+  <meta property="og:description" content="NTRCA, BCS এবং কৃষি শিক্ষার জন্য সম্পূর্ণ বিনামূল্যে নোট, MCQ এবং PDF সংগ্রহ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://krisishikkha.com">
+  <meta property="og:site_name" content="Krisishikkha">
+  <meta property="og:locale" content="bn_BD">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Krisishikkha - Educational Platform">
+  <meta name="twitter:description" content="বাংলাদেশের সেরা শিক্ষা প্ল্যাটফর্ম">
+  
+  <!-- Canonical URL (IMPORTANT for SEO) -->
+  <link rel="canonical" href="https://krisishikkha.com">
+  
+  <title>Krisishikkha | NTRCA, BCS, কৃষি শিক্ষা - বিনামূল্যে নোট ও MCQ</title>
 
-  <!-- PWA -->
+  <!-- PWA (Minimal - Icons পরে add করবেন) -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#2e7d32">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Krisishikkha">
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
 
   <style>
     body{
@@ -29,14 +61,35 @@
       margin:auto;
       padding:20px;
     }
+    
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: linear-gradient(135deg, #2e7d32, #81c784);
+      color: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+    
     h1{
-      font-size:28px;
-      margin-bottom:6px;
+      font-size:32px;
+      margin-bottom:8px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
     p{
       font-size:16px;
-      color:#444;
+      color: rgba(255,255,255,0.95);
+      margin: 5px 0;
     }
+    
+    .tagline {
+      font-size: 14px;
+      opacity: 0.9;
+      font-style: italic;
+    }
+    
     .main-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -67,6 +120,7 @@
     .research{background:linear-gradient(135deg,#6a1b9a,#ce93d8);}
     .others{background:linear-gradient(135deg,#ef6c00,#ffb74d);}
     .exam{background:linear-gradient(135deg,#c62828,#ff8a80);}
+    .admin{background:linear-gradient(135deg,#1565c0,#42a5f5);}
     .important{background:linear-gradient(135deg,#1a1a1a,#434343);}
 
     .install-btn{
@@ -88,7 +142,7 @@
       transform:translateY(-3px);
     }
 
-    /* ===== SOCIAL MEDIA ICONS ===== */
+    /* Social Media Icons */
     .social-icons {
       display: flex;
       justify-content: center;
@@ -115,7 +169,7 @@
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     }
 
-        .social-btn.whatsapp:hover {
+    .social-btn.whatsapp:hover {
       background: #25d366;
       border-color: #25d366;
     }
@@ -129,24 +183,80 @@
       border-color: #ff0000;
     }
 
-    /* ===== FOOTER LINKS ===== */
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(135deg, #2e7d32, #1b5e20);
+      color: white;
+      border-radius: 15px 15px 0 0;
+    }
+
     .footer-links {
       font-size: 15px;
+      margin-bottom: 15px;
     }
 
     .footer-links a {
       color: #fff;
-      text-decoration: underline;
-      margin: 0 8px;
+      text-decoration: none;
+      margin: 0 12px;
       transition: opacity 0.2s;
+      font-weight: 500;
     }
 
     .footer-links a:hover {
-      opacity: 0.8;
+      opacity: 0.7;
+      text-decoration: underline;
     }
 
     .footer-links .divider {
       color: rgba(255, 255, 255, 0.6);
+      margin: 0 5px;
+    }
+    
+    .copyright {
+      font-size: 13px;
+      margin-top: 15px;
+      opacity: 0.85;
+    }
+    
+    /* Stats Section */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin: 30px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 15px;
+    }
+    
+    .stat-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2e7d32;
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 13px;
+      color: #666;
+      margin-top: 5px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: 24px; }
+      .main-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+      .stats { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -154,27 +264,51 @@
 <body>
 
 <div class="container">
-  <h1>Krisishikkha</h1>
-  <p>Education • Notes • Secure PDF Reading Platform</p>
+  
+  <!-- Header Section -->
+  <div class="header">
+    <h1>📚 কৃষিশিক্ষা</h1>
+    <p>বাংলাদেশের বিশ্বস্ত শিক্ষা প্ল্যাটফর্ম</p>
+    <p class="tagline">Education • Notes • Secure PDF Reading Platform</p>
+  </div>
 
+  <!-- Stats Section (Optional - shows activity) -->
+  <div class="stats">
+    <div class="stat-item">
+      <span class="stat-number">1000+</span>
+      <span class="stat-label">Study Notes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">5000+</span>
+      <span class="stat-label">MCQ Questions</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">200+</span>
+      <span class="stat-label">PDF Resources</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">50K+</span>
+      <span class="stat-label">Active Students</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation Grid -->
   <div class="main-grid">
     <a href="ntrca.html" class="main-box ntrca">📘 NTRCA</a>
     <a href="bcs/index.html" class="main-box bcs">📗 BCS</a>
     <a href="research/index.html" class="main-box research">🔬 Research Institute</a>
     <a href="diploma/index.html" class="main-box others">🌱 Diploma Agriculture</a>
-
-    <a href="exam-corner.html" class="main-box exam">Exam Corner</a>
-    <!-- 🔴 Admin Panel Card (এখানেই বসাবেন main-grid এর ভিতরে) -->
+    <a href="exam-corner.html" class="main-box exam">📝 Exam Corner</a>
     <a href="admin/index.html" class="main-box admin">🛡️ Admin Panel</a>
     <a href="important-job-topic/index.html" class="main-box important">⏳ Important Job Topic</a>
-    
   </div>
 
-  <footer style="margin-top:80px; text-align:center; padding:20px; background:#2e7d32; color:white;">
+  <!-- Footer -->
+  <footer>
     
     <!-- Social Media Icons -->
     <div class="social-icons">
-            <a href="https://wa.me/8801516013089?text=Hello%20Krisishikkha%2C%20I%20need%20help" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-btn whatsapp">
+      <a href="https://wa.me/8801516013089?text=Hello%20Krisishikkha%2C%20I%20need%20help" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-btn whatsapp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
           <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .9.9-2.9-.2-.3a8.2 8.2 0 1 1 6.8 3.6z"/>
         </svg>
@@ -193,11 +327,20 @@
       </a>
     </div>
 
-    <!-- Footer Links -->
+    <!-- Footer Navigation Links -->
     <div class="footer-links">
-      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="about.html">📚 About Us</a>
       <span class="divider">|</span>
-      <a href="terms.html">Terms & Conditions</a>
+      <a href="contact.html">📧 Contact</a>
+      <span class="divider">|</span>
+      <a href="privacy-policy.html">🔒 Privacy Policy</a>
+      <span class="divider">|</span>
+      <a href="terms.html">📜 Terms & Conditions</a>
+    </div>
+    
+    <div class="copyright">
+      &copy; 2024 Krisishikkha. All Rights Reserved.<br>
+      Made with ❤️ for Bangladesh Students
     </div>
 
   </footer>
@@ -206,6 +349,7 @@
 <!-- Install Button -->
 <div id="installBtn" class="install-btn">📲 Install App</div>
 
+<!-- Service Worker Registration -->
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js').then(reg => {
@@ -282,6 +426,7 @@ function showUpdatePopup() {
 }
 </script>
 
+<!-- PWA Install Prompt -->
 <script>
 let deferredPrompt;
 const installBtn = document.getElementById('installBtn');
@@ -297,7 +442,36 @@ installBtn.addEventListener('click', async () => {
   deferredPrompt.prompt();
   await deferredPrompt.userChoice;
   deferredPrompt = null;
+  installBtn.style.display = "none";
 });
+
+window.addEventListener('appinstalled', () => {
+  console.log('✅ PWA installed successfully!');
+  installBtn.style.display = "none";
+});
+</script>
+
+<!-- Structured Data for SEO (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Krisishikkha",
+  "alternateName": "কৃষিশিক্ষা",
+  "url": "https://krisishikkha.com",
+  "logo": "https://krisishikkha.com/assets/images/logo.png",
+  "description": "বাংলাদেশের বিশ্বস্ত শিক্ষা প্ল্যাটফর্ম। NTRCA, BCS, গবেষণা ইনস্টিটিউট এবং ডিপ্লোমা কৃষি পরীক্ষার সম্পূর্ণ বিনামূল্যে প্রস্তুতি।",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+880-1516-013089",
+    "contactType": "Customer Service",
+    "availableLanguage": ["Bengali", "English"]
+  },
+  "sameAs": [
+    "https://www.facebook.com/share/1LsEf1LRbM/",
+    "https://youtube.com/@krisishikkha"
+  ]
+}
 </script>
 
 </body>
