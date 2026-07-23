@@ -276,7 +276,7 @@
 
   <div class="control-bar">
     <select id="examSelect">
-      <option value="">-- Select Exam --</option>
+      <option value="">-- Loading Exams --</option>
     </select>
     <button id="downloadBtn">Download PDF</button>
   </div>
@@ -289,10 +289,29 @@
     const downloadBtn = document.getElementById("downloadBtn");
     const statusMessage = document.getElementById("statusMessage");
 
-    // ✅ Custom domain এর জন্য BASE_PATH খালি রাখুন
-    const BASE_PATH = window.location.hostname === "www.krisishikkha.com" || window.location.hostname === "krisishikkha.com" 
-      ? "" 
-      : "/krisishikkha";
+    // ✅ Better BASE_PATH detection
+    function getBasePath() {
+      const hostname = window.location.hostname;
+      const pathname = window.location.pathname;
+
+      // Custom domain check
+      if (hostname.includes("krisishikkha.com")) {
+        return "";
+      }
+      
+      // If running on localhost or subdirectory, detect from pathname
+      if (pathname.includes("/krisishikkha/")) {
+        return "/krisishikkha";
+      }
+      
+      // Default to root
+      return "";
+    }
+
+    const BASE_PATH = getBasePath();
+    console.log("📁 BASE_PATH detected:", BASE_PATH || "(root)");
+    console.log("🌐 Current hostname:", window.location.hostname);
+    console.log("📍 Current pathname:", window.location.pathname);
 
     // Status message display function
     function showStatus(message, type = 'info') {
@@ -305,22 +324,62 @@
       }, 5000);
     }
 
+    // Wait for EXAM_STATUS to load
+    function waitForExamStatus(callback, timeout = 5000) {
+      const startTime = Date.now();
+      
+      const checkInterval = setInterval(() => {
+        if (typeof window.EXAM_STATUS !== "undefined" && Object.keys(window.EXAM_STATUS).length > 0) {
+          clearInterval(checkInterval);
+          callback();
+          return;
+        }
+        
+        if (Date.now() - startTime > timeout) {
+          clearInterval(checkInterval);
+          showStatus("⚠️ exam-status.js লোড হয়নি। দয়া করে পেজ রিলোড করুন।", "error");
+          console.error("❌ EXAM_STATUS not loaded after", timeout, "ms");
+        }
+      }, 100);
+    }
+
     // Populate exam dropdown
     function populateExamDropdown() {
-      let count = 0;
-      for (const examId in EXAM_STATUS) {
-        const exam = EXAM_STATUS[examId];
-        if (exam.visible && exam.status === "live") {
-          const option = document.createElement("option");
-          option.value = examId;
-          option.textContent = exam.title;
-          examSelect.appendChild(option);
-          count++;
-        }
+      if (typeof window.EXAM_STATUS === "undefined") {
+        showStatus("❌ EXAM_STATUS সংজ্ঞায়িত নয়! exam-status.js লোড হয়েছে কি?", "error");
+        console.error("❌ EXAM_STATUS is undefined");
+        return;
       }
-      
-      if (count === 0) {
-        showStatus("কোন পরীক্ষা পাওয়া যায়নি!", "error");
+
+      examSelect.innerHTML = '<option value="">-- Select Exam --</option>';
+      let count = 0;
+
+      try {
+        for (const examId in window.EXAM_STATUS) {
+          const exam = window.EXAM_STATUS[examId];
+          
+          // Only show live exams
+          if (exam.visible && (exam.status === "live" || exam.status === "upcoming" || exam.status === "ended")) {
+            const option = document.createElement("option");
+            option.value = examId;
+            option.textContent = exam.title;
+            examSelect.appendChild(option);
+            count++;
+          }
+        }
+        
+        console.log(`✅ Populated ${count} exams`);
+
+        if (count === 0) {
+          showStatus("⚠️ কোন পরীক্ষা পাওয়া যায়নি!", "error");
+          const option = document.createElement("option");
+          option.textContent = "-- No exams available --";
+          option.disabled = true;
+          examSelect.appendChild(option);
+        }
+      } catch (err) {
+        console.error("❌ Error populating dropdown:", err);
+        showStatus("❌ ড্রপডাউন পূরণে ত্রুটি: " + err.message, "error");
       }
     }
 
@@ -335,8 +394,6 @@
     function clearOldQuestionScripts() {
       const oldScripts = document.querySelectorAll('script[data-question-loader="true"]');
       oldScripts.forEach(s => s.remove());
-      
-      // Clear global QUESTIONS variable
       if (window.QUESTIONS) {
         delete window.QUESTIONS;
       }
@@ -357,7 +414,7 @@
         
         script.onerror = () => {
           console.error("❌ Failed to load:", path);
-          reject(new Error("questions.js load failed from: " + path));
+          reject(new Error("questions.js not found at: " + path));
         };
         
         document.body.appendChild(script);
@@ -365,12 +422,8 @@
     }
 
     function getQuestionsArray() {
-      if (typeof QUESTIONS !== "undefined" && Array.isArray(QUESTIONS)) {
-        console.log("✅ Found QUESTIONS array, length:", QUESTIONS.length);
-        return QUESTIONS;
-      }
       if (typeof window.QUESTIONS !== "undefined" && Array.isArray(window.QUESTIONS)) {
-        console.log("✅ Found window.QUESTIONS array, length:", window.QUESTIONS.length);
+        console.log("✅ Found QUESTIONS array, length:", window.QUESTIONS.length);
         return window.QUESTIONS;
       }
       console.error("❌ QUESTIONS array not found");
@@ -378,7 +431,7 @@
     }
 
     function buildCoverPage(selectedExam, questions) {
-      const examTitle = EXAM_STATUS[selectedExam].title;
+      const examTitle = window.EXAM_STATUS[selectedExam].title;
 
       const cover = document.createElement("div");
       cover.className = "cover-page";
@@ -402,7 +455,7 @@
     }
 
     function buildContentSection(selectedExam, questions) {
-      const examTitle = EXAM_STATUS[selectedExam].title;
+      const examTitle = window.EXAM_STATUS[selectedExam].title;
 
       const content = document.createElement("div");
       content.className = "content-section";
@@ -487,70 +540,74 @@
         return;
       }
 
-      // Disable button during processing
       downloadBtn.disabled = true;
       downloadBtn.textContent = "Loading...";
       showStatus("প্রশ্ন লোড হচ্ছে...", "info");
 
-      const questionPath = BASE_PATH 
-        ? `${BASE_PATH}/exam-corner/${selectedExam}/questions.js`
-        : `/exam-corner/${selectedExam}/questions.js`;
+      // Try multiple possible paths
+      const possiblePaths = [
+        `${BASE_PATH}/exam-corner/${selectedExam}/questions.js`,
+        `/exam-corner/${selectedExam}/questions.js`,
+        `./exam-corner/${selectedExam}/questions.js`,
+      ];
 
-      console.log("📂 Attempting to load from:", questionPath);
+      let loaded = false;
 
-      try {
-        await loadQuestionsJS(questionPath);
-        const questions = getQuestionsArray();
+      for (const questionPath of possiblePaths) {
+        try {
+          console.log("📂 Trying path:", questionPath);
+          await loadQuestionsJS(questionPath);
+          const questions = getQuestionsArray();
 
-        if (!questions || questions.length === 0) {
-          showStatus("প্রশ্ন পাওয়া যায়নি। দয়া করে পরে চেষ্টা করুন।", "error");
-          downloadBtn.disabled = false;
-          downloadBtn.textContent = "Download PDF";
-          return;
-        }
+          if (questions && questions.length > 0) {
+            showStatus(`${questions.length}টি প্রশ্ন পাওয়া গেছে। PDF তৈরি হচ্ছে...`, "success");
 
-        showStatus(`${questions.length}টি প্রশ্ন পাওয়া গেছে। PDF তৈরি হচ্ছে...`, "success");
+            const pdfDoc = buildPdfDocument(selectedExam, questions);
 
-        const pdfDoc = buildPdfDocument(selectedExam, questions);
+            const opt = {
+              margin: [8, 8, 8, 8],
+              filename: `${window.EXAM_STATUS[selectedExam].title}-Answer-Sheet.pdf`,
+              image: { type: "jpeg", quality: 0.98 },
+              html2canvas: {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: "#ffffff",
+                logging: false
+              },
+              jsPDF: {
+                unit: "pt",
+                format: "a4",
+                orientation: "portrait"
+              },
+              pagebreak: {
+                mode: ["css", "legacy"]
+              }
+            };
 
-        const opt = {
-          margin: [8, 8, 8, 8],
-          filename: `${EXAM_STATUS[selectedExam].title}-Answer-Sheet.pdf`,
-          image: { type: "jpeg", quality: 0.98 },
-          html2canvas: {
-            scale: 2,
-            useCORS: true,
-            backgroundColor: "#ffffff",
-            logging: false
-          },
-          jsPDF: {
-            unit: "pt",
-            format: "a4",
-            orientation: "portrait"
-          },
-          pagebreak: {
-            mode: ["css", "legacy"]
+            await html2pdf().set(opt).from(pdfDoc).save();
+            
+            showStatus("✅ PDF সফলভাবে ডাউনলোড হয়েছে!", "success");
+            loaded = true;
+            break;
           }
-        };
-
-        await html2pdf().set(opt).from(pdfDoc).save();
-        
-        showStatus("PDF সফলভাবে ডাউনলোড হয়েছে!", "success");
-        downloadBtn.disabled = false;
-        downloadBtn.textContent = "Download PDF";
-
-      } catch (err) {
-        console.error("❌ Error:", err);
-        showStatus(`প্রশ্ন ফাইল লোড হয়নি! Path: ${questionPath}`, "error");
-        downloadBtn.disabled = false;
-        downloadBtn.textContent = "Download PDF";
+        } catch (err) {
+          console.log("❌ Path failed:", questionPath, err.message);
+          continue;
+        }
       }
+
+      if (!loaded) {
+        showStatus("❌ প্রশ্ন ফাইল পাওয়া যায়নি। ফোল্ডার স্ট্রাকচার চেক করুন।", "error");
+      }
+
+      downloadBtn.disabled = false;
+      downloadBtn.textContent = "Download PDF";
     });
 
-    // Initialize on page load
-    populateExamDropdown();
-    console.log("🌐 Current domain:", window.location.hostname);
-    console.log("📁 BASE_PATH:", BASE_PATH || "(root)");
+    // Initialize: Wait for EXAM_STATUS then populate dropdown
+    waitForExamStatus(() => {
+      populateExamDropdown();
+    });
   </script>
 </body>
 </html>
