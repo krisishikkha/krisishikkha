@@ -1,3 +1,30 @@
+# Krisishikkha - Robots.txt
+# Updated: 2024-01-20
+
 User-agent: *
-Disallow: /viewer/
+Allow: /
+Allow: /assets/
+Allow: /bcs/
+Allow: /diploma/
+Allow: /research/
+Allow: /exam-corner/
+Allow: /important-job-topic/
+
+# Disallow admin and sensitive areas
+Disallow: /admin/
+Disallow: /vendor/
+Disallow: /*.js$
+Disallow: /*.json$
+
+# Disallow PDF direct access (protect content)
 Disallow: /pdf/
+
+# Allow Google Images
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Crawl delay
+Crawl-delay: 5
+
+# Sitemaps
+Sitemap: https://krisishikkha.com/sitemap.xml
