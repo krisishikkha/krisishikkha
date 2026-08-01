@@ -32,11 +32,11 @@ timezone a student's phone happens to be set to:
 
 const EXAM_STATUS = {
   "exam-1": {
-    title: "ডেমো পরীক্ষা🔴",
+    title: "ডেমো পরীক্ষা code:1111🔴",
     category: "live",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
-    codes: ["exam1111"]
+    codes: ["1111"]
   },
 
   "exam-2": {
@@ -152,7 +152,7 @@ const EXAM_STATUS = {
     category: "live",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
-    codes: ["exam2222"]
+    codes: ["2222"]
   },
 
   "exam-21": {
@@ -160,7 +160,7 @@ const EXAM_STATUS = {
     category: "draft",
     startDate: "2026-07-22T06:00:00+06:00",
     endDate: "2026-09-25T11:00:00+06:00",
-    codes: ["exam2222"]
+    codes: ["exam222"]
   },
 
   "exam-22": {
