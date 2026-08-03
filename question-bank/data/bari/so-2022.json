@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "title": "BARI - Scientific Officer 2022",
+    "institute": "Bangladesh Agricultural Research Institute",
+    "year": 2022,
+    "position": "Scientific Officer",
+    "totalQuestions": 20,
+    "type": "premium",
+    "examDate": "2022-10-20",
+    "duration": "3 hours",
+    "totalMarks": 100
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "BRRI dhan29 কোন মৌসুমের জাত?",
+      "options": [
+        "বোরো",
+        "আউশ",
+        "আমন",
+        "রবি"
+      ],
+      "answer": 0,
+      "explanation": "BRRI dhan29 একটি বোরো মৌসুমের উচ্চফলনশীল ধানের জাত। এটি ১৬০ দিনে পাকে এবং হেক্টরপ্রতি ৭.৫-৮.০ টন ফলন দেয়।",
+      "image": null,
+      "reference": "BRRI Variety Catalogue 2022"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Bt Cotton এ কোন জিনটি সংযোজন করা হয়েছে?",
+      "options": [
+        "Bacillus subtilis",
+        "Bacillus thuringiensis",
+        "Bacillus cereus",
+        "Bacillus anthracis"
+      ],
+      "answer": 1,
+      "explanation": "Bt Cotton হলো জিনগতভাবে পরিবর্তিত তুলা যাতে Bacillus thuringiensis ব্যাকটেরিয়ার জিন সংযোজন করা হয়েছে। এই জিন একটি প্রোটিন তৈরি করে যা পোকামাকড়ের জন্য বিষাক্ত কিন্তু মানুষের জন্য নিরাপদ।",
+      "image": null,
+      "reference": "Genetic Engineering in Agriculture"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "নাইট্রোজেন স্থিতিকরণে কোন এনজাইম কাজ করে?",
+      "options": [
+        "Urease",
+        "Nitrogenase",
+        "Nitrate reductase",
+        "Amylase"
+      ],
+      "answer": 1,
+      "explanation": "Nitrogenase এনজাইম বায়ুমণ্ডলীয় নাইট্রোজেন (N₂) কে অ্যামোনিয়া (NH₃) তে রূপান্তরিত করে। এই প্রক্রিয়া জৈবিক নাইট্রোজেন স্থিতিকরণ নামে পরিচিত।",
+      "image": null,
+      "reference": "Soil Microbiology - Sylvia et al."
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "কোন হরমোন কোষ বিভাজন নিয়ন্ত্রণ করে?",
+      "options": [
+        "Auxin",
+        "Cytokinin",
+        "Ethylene",
+        "Abscisic acid"
+      ],
+      "answer": 1,
+      "explanation": "Cytokinin হরমোন কোষ বিভাজন নিয়ন্ত্রণ করে। এটি Auxin এর সাথে মিলে কোষ বিভাজন ও অঙ্গ গঠনে গুরুত্বপূর্ণ ভূমিকা পালন করে।",
+      "image": null,
+      "reference": "Plant Hormones: Biosynthesis and Functions"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "VAM এর পূর্ণরূপ কী?",
+      "options": [
+        "Vesicular Arbuscular Mycorrhiza",
+        "Vertical Agricultural Management",
+        "Virus And Microbe",
+        "Vegetable And Mineral"
+      ],
+      "answer": 0,
+      "explanation": "VAM মানে Vesicular Arbuscular Mycorrhiza। এটি একটি উপকারী ছত্রাক যা উদ্ভিদের মূলের সাথে সহজীবী সম্পর্ক তৈরি করে এবং পুষ্টি শোষণে সাহায্য করে।",
+      "image": null,
+      "reference": "Mycorrhizal Symbiosis - Smith & Read"
+    },
+    {
+      "id": 6,
+      "type": "written",
+      "question": "প্রিসিশন এগ্রিকালচার (Precision Agriculture) কী? এর সুবিধাগুলো লিখুন।",
+      "answer": "প্রিসিশন এগ্রিকালচার (নিখুঁত কৃষি):\n\nপ্রিসিশন এগ্রিকালচার হলো আধুনিক প্রযুক্তি ব্যবহার করে কৃষিকাজে সঠিক সময়ে, সঠিক স্থানে, সঠিক পরিমাণে উপকরণ প্রয়োগ করার বিজ্ঞানসম্মত পদ্ধতি।\n\nব্যবহৃত প্রযুক্তি:\n• GPS (Global Positioning System)\n• GIS (Geographic Information System)\n• Remote Sensing\n• Drones\n• Sensors\n• Variable Rate Technology\n\nসুবিধাসমূহ:\n১. সম্পদের সর্বোত্তম ব্যবহার (সার, পানি, কীটনাশক)\n২. উৎপাদন খরচ হ্রাস\n৩. ফলন বৃদ্ধি\n৪. পরিবেশ দূষণ হ্রাস\n৫. মাটির স্বাস্থ্য উন্নতি\n৬. সিদ্ধান্ত গ্রহণে তথ্য-নির্ভরতা",
+      "explanation": "প্রিসিশন এগ্রিকালচার চতুর্থ শিল্প বিপ্লবের অংশ। এটি কৃষিকে আরও লাভজনক, টেকসই এবং পরিবেশবান্ধব করে তুলছে।",
+      "image": null,
+      "reference": "Precision Agriculture for Sustainability - ISPA"
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "বাংলাদেশে কোন ধরনের সেচ ব্যবস্থা সবচেয়ে বেশি ব্যবহৃত হয়?",
+      "options": [
+        "খাল সেচ",
+        "গভীর নলকূপ",
+        "অগভীর নলকূপ",
+        "ঝরনা সেচ"
+      ],
+      "answer": 2,
+      "explanation": "বাংলাদেশে অগভীর নলকূপ (Shallow Tube Well - STW) সবচেয়ে বেশি ব্যবহৃত সেচ ব্যবস্থা। এটি সহজ, সাশ্রয়ী এবং ছোট জমির জন্য উপযুক্ত।",
+      "image": null,
+      "reference": "Bangladesh Water Development Board"
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Vermicompost তৈরিতে কোন প্রাণী ব্যবহার করা হয়?",
+      "options": [
+        "ব্যাঙ",
+        "কেঁচো",
+        "পিঁপড়া",
+        "শামুক"
+      ],
+      "answer": 1,
+      "explanation": "Vermicompost বা কেঁচো সার তৈরিতে কেঁচো (বিশেষত Eisenia fetida প্রজাতি) ব্যবহার করা হয়। কেঁচো জৈব পদার্থ খেয়ে উচ্চমানের জৈব সার উৎপন্ন করে।",
+      "image": null,
+      "reference": "Vermiculture Technology - Edwards et al."
+    },
+    {
+      "id": 9,
+      "type": "written",
+      "question": "হাইড্রোপনিক্স (Hydroponics) কী? এর সুবিধা ও অসুবিধা আলোচনা করুন।",
+      "answer": "হাইড্রোপনিক্স:\n\nহাইড্রোপনিক্স হলো মাটি ছাড়া পানিতে খনিজ দ্রবণ ব্যবহার করে উদ্ভিদ চাষের একটি আধুনিক পদ্ধতি।\n\nসুবিধাসমূহ:\n১. মাটির প্রয়োজন নেই - যেকোনো জায়গায় চাষ সম্ভব\n২. পানির সাশ্রয় - ৯০% কম পানি প্রয়োজন\n৩. দ্রুত বৃদ্ধি ও বেশি ফলন\n৪. মাটিবাহিত রোগ ও পোকার আক্রমণ কম\n৫. সারা বছর চাষ সম্ভব\n৬. কম জায়গায় বেশি উৎপাদন\n৭. পরিষ্কার ও নিয়ন্ত্রিত পরিবেশ\n\nঅসুবিধাসমূহ:\n১. প্রাথমিক খরচ বেশি\n২. প্রযুক্তিগত জ্ঞান প্রয়োজন\n৩. বিদ্যুৎ বিভ্রাটে ক্ষতির ঝুঁকি\nৄ. নিয়মিত পর্যবেক্ষণ দরকার\n৫. সব ধরনের ফসল উপযুক্ত নয়",
+      "explanation": "হাইড্রোপনিক্স শহুরে কৃষি ও ভবিষ্যতের খাদ্য নিরাপত্তার জন্য গুরুত্বপূর্ণ প্রযুক্তি। বাংলাদেশে সীমিত জমিতে বেশি উৎপাদনের জন্য এটি কার্যকর হতে পারে।",
+      "image": null,
+      "reference": "Hydroponics: A Standard Methodology - Jones"
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "কোন উদ্ভিদ মাটিতে নাইট্রোজেন যোগ করে?",
+      "options": [
+        "ধান",
+        "গম",
+        "মসুর",
+        "ভুট্টা"
+      ],
+      "answer": 2,
+      "explanation": "মসুরসহ সকল ডাল জাতীয় উদ্ভিদ (Leguminous plants) মাটিতে নাইট্রোজেন যোগ করে। এদের মূলে Rhizobium ব্যাকটেরিয়া বাস করে যা বায়ুমণ্ডলীয় নাইট্রোজেন স্থিতিকরণ করে।",
+      "image": null,
+      "reference": "Soil Fertility and Fertilizers - Havlin et al."
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "কোন রোগটি ভাইরাসঘটিত?",
+      "options": [
+        "ধানের ব্লাস্ট",
+        "টমেটোর মোজাইক",
+        "আলুর লেট ব্লাইট",
+        "গমের মরিচা"
+      ],
+      "answer": 1,
+      "explanation": "টমেটোর মোজাইক (Tomato Mosaic Virus - ToMV) একটি ভাইরাসঘটিত রোগ। এতে পাতায় হলুদ-সবুজ দাগ দেখা যায় এবং ফলন মারাত্মকভাবে হ্রাস পায়।",
+      "image": null,
+      "reference": "Plant Pathology - Agrios (2005)"
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Genetically Modified Organism (GMO) এর উদাহরণ কোনটি?",
+      "options": [
+        "Hybrid Rice",
+        "Bt Brinjal",
+        "HYV Wheat",
+        "Traditional Paddy"
+      ],
+      "answer": 1,
+      "explanation": "Bt Brinjal (বিটি বেগুন) হলো GMO এর উদাহরণ। এতে Bacillus thuringiensis ব্যাকটেরিয়ার জিন ঢুকিয়ে পোকা প্রতিরোধী বেগুন তৈরি করা হয়েছে।",
+      "image": null,
+      "reference": "BARI Annual Report on Bt Brinjal"
+    },
+    {
+      "id": 13,
+      "type": "written",
+      "question": "জৈব কৃষি (Organic Farming) এর মূলনীতি ও গুরুত্ব ব্যাখ্যা করুন।",
+      "answer": "জৈব কৃষির মূলনীতি:\n\nজৈব কৃষি হলো রাসায়নিক সার ও কীটনাশক ব্যতীত প্রাকৃতিক পদ্ধতিতে ফসল উৎপাদন।\n\nচারটি মূলনীতি (IFOAM):\n১. স্বাস্থ্যের নীতি (Health): মাটি, উদ্ভিদ, প্রাণী ও মানুষের স্বাস্থ্য রক্ষা\n২. পরিবেশের নীতি (Ecology): প্রাকৃতিক বাস্তুতন্ত্র অনুসরণ\n৩. ন্যায়বিচারের নীতি (Fairness): সকলের জন্য সমান সুযোগ\n৪. যত্নের নীতি (Care): ভবিষ্যৎ প্রজন্মের জন্য দায়িত্ব\n\nগুরুত্ব:\n১. নিরাপদ খাদ্য উৎপাদন - রাসায়নিক মুক্ত\n২. পরিবেশ সংরক্ষণ - মাটি, পানি, বায়ু দূষণ রোধ\n৩. জীববৈচিত্র্য রক্ষা\n৪. টেকসই উৎপাদন ব্যবস্থা\n৫. উচ্চমূল্যে বিক্রয় - প্রিমিয়াম মার্কেট\n৬. মাটির উর্বরতা বৃদ্ধি",
+      "explanation": "জৈব কৃষি স্বাস্থ্য সচেতন ভোক্তাদের চাহিদা পূরণ করে এবং রপ্তানি সম্ভাবনা তৈরি করে। বাংলাদেশে জৈব কৃষির ব্যাপক সম্ভাবনা রয়েছে।",
+      "image": null,
+      "reference": "IFOAM Organics International"
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Aeroponic পদ্ধতিতে উদ্ভিদের মূল থাকে কোথায়?",
+      "options": [
+        "মাটিতে",
+        "পানিতে",
+        "বাতাসে",
+        "বালিতে"
+      ],
+      "answer": 2,
+      "explanation": "Aeroponic পদ্ধতিতে উদ্ভিদের মূল বাতাসে ঝুলন্ত অবস্থায় থাকে এবং পুষ্টি দ্রবণ স্প্রে করে প্রয়োগ করা হয়। এটি হাইড্রোপনিক্সের চেয়েও উন্নত প্রযুক্তি।",
+      "image": null,
+      "reference": "Advanced Soilless Culture Systems"
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "মাটির Cation Exchange Capacity (CEC) বেশি হলে কী বোঝায়?",
+      "options": [
+        "মাটি অম্লীয়",
+        "মাটি উর্বর",
+        "মাটি ক্ষারীয়",
+        "মাটি বালুময়"
+      ],
+      "answer": 1,
+      "explanation": "মাটির CEC বেশি হলে বোঝায় মাটি পুষ্টি ধারণ ক্ষমতা বেশি এবং উর্বর। CEC হলো মাটির ধনাত্মক আয়ন (Ca²⁺, Mg²⁺, K⁺) ধরে রাখার ক্ষমতা।",
+      "image": null,
+      "reference": "Soil Chemistry - Brady & Weil"
+    },
+    {
+      "id": 16,
+      "type": "written",
+      "question": "ক্রপ রোটেশন (Crop Rotation) কী? এর সুবিধাগুলো লিখুন।",
+      "answer": "ক্রপ রোটেশন (ফসল আবর্তন):\n\nক্রপ রোটেশন হলো একই জমিতে পর্যায়ক্রমে বিভিন্ন ধরনের ফসল চাষ করার পদ্ধতি।\n\nউদাহরণ:\n• ধান → গম → পাট → মসুর\n• ধান → সরিষা → ভুট্টা\n\nসুবিধাসমূহ:\n\n১. মাটির উর্বরতা রক্ষা:\n   • বিভিন্ন ফসল বিভিন্ন গভীরতা থেকে পুষ্টি নেয়\n   • ডাল ফসল নাইট্রোজেন যোগ করে\n\n২. রোগ ও পোকার আক্রমণ কমে:\n   • একই ফসল বারবার চাষে রোগ জমা হয় না\n\n৩. আগাছা নিয়ন্ত্রণ:\n   • বিভিন্ন ফসলে বিভিন্ন আগাছা হয়\n\n৪. অর্থনৈতিক নিরাপত্তা:\n   • এক ফসল ব্যর্থ হলে অন্যটি থাকে\n\n৫. মাটির গঠন উন্নত হয়:\n   • গভীর ও অগভীর মূলের ফসল পর্যায়ক্রমে\n\n৬. জৈব পদার্থ বৃদ্ধি",
+      "explanation": "ক্রপ রোটেশন টেকসই কৃষির একটি মৌলিক উপাদান। এটি মাটির দীর্ঘমেয়াদী স্বাস্থ্য ও উৎপাদনশীলতা বজায় রাখে।",
+      "image": null,
+      "reference": "Sustainable Agriculture - Hatfield & Walthall"
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "বাংলাদেশের কোন জেলায় সবচেয়ে বেশি আম উৎপন্ন হয়?",
+      "options": [
+        "রাজশাহী",
+        "চাঁপাইনবাবগঞ্জ",
+        "দিনাজপুর",
+        "নওগাঁ"
+      ],
+      "answer": 1,
+      "explanation": "চাঁপাইনবাবগঞ্জ বাংলাদেশে সবচেয়ে বেশি আম উৎপন্ন করে এবং এটি 'আমের রাজধানী' নামে পরিচিত। ল্যাংড়া, ফজলি, হিমসাগর এখানকার বিখ্যাত জাত।",
+      "image": null,
+      "reference": "Bangladesh Fruit Statistics"
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Green Revolution এর জনক কে?",
+      "options": [
+        "Norman Borlaug",
+        "M.S. Swaminathan",
+        "Louis Pasteur",
+        "Gregor Mendel"
+      ],
+      "answer": 0,
+      "explanation": "Norman Borlaug কে Green Revolution এর জনক বলা হয়। তিনি উচ্চফলনশীল গমের জাত উদ্ভাবন করে বিশ্বে খাদ্য উৎপাদনে বিপ্লব ঘটান এবং ১৯৭০ সালে নোবেল শান্তি পুরস্কার পান।",
+      "image": null,
+      "reference": "History of Green Revolution"
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "কোন পদ্ধতিতে কম পানি ব্যবহার করে ধান চাষ করা যায়?",
+      "options": [
+        "Flooding",
+        "AWD (Alternate Wetting and Drying)",
+        "Continuous submergence",
+        "Rainfed"
+      ],
+      "answer": 1,
+      "explanation": "AWD (Alternate Wetting and Drying) পদ্ধতিতে জমিতে পর্যায়ক্রমে পানি দেওয়া ও শুকানো হয়। এতে ৩০-৪০% পানি সাশ্রয় হয় এবং মিথেন গ্যাস নিঃসরণও কমে।",
+      "image": null,
+      "reference": "IRRI - Water Saving Technologies"
+    },
+    {
+      "id": 20,
+      "type": "written",
+      "question": "স্মার্ট এগ্রিকালচার (Smart Agriculture) এর ধারণা ও উপাদানসমূহ ব্যাখ্যা করুন।",
+      "answer": "স্মার্ট এগ্রিকালচার (Smart Agriculture):\n\nস্মার্ট এগ্রিকালচার হলো আধুনিক তথ্য ও যোগাযোগ প্রযুক্তি (ICT) এবং ইন্টারনেট অব থিংস (IoT) ব্যবহার করে কৃষিকাজ পরিচালনার বুদ্ধিমান পদ্ধতি।\n\nমূল উপাদানসমূহ:\n\n১. IoT Sensors:\n   • মাটির আর্দ্রতা, তাপমাত্রা, pH সেন্সর\n   • আবহাওয়া পূর্বাভাস সেন্সর\n\n২. Big Data & Analytics:\n   • বিপুল তথ্য বিশ্লেষণ\n   • সিদ্ধান্ত গ্রহণে সহায়তা\n\n৩. Artificial Intelligence (AI):\n   • রোগ শনাক্তকরণ\n   • ফলন পূর্বাভাস\n\n৪. Automation:\n   • স্বয়ংক্রিয় সেচ ব্যবস্থা\n   • রোবোটিক হার্ভেস্টিং\n\n৫. Mobile Apps:\n   • রিয়েল-টাইম পরামর্শ\n   • বাজার তথ্য\n\n৬. Drones:\n   • ফসল পর্যবেক্ষণ\n   • সার ও কীটনাশক স্প্রে\n\nসুবিধা:\n• উৎপাদনশীলতা বৃদ্ধি\n• খরচ হ্রাস\n• সম্পদের সর্বোত্তম ব্যবহার\n• পরিবেশ সংরক্ষণ",
+      "explanation": "স্মার্ট এগ্রিকালচার হলো কৃষি ৪.০ এর মূল ভিত্তি। এটি বাংলাদেশের মতো ক্রমবর্ধমান জনসংখ্যার দেশে খাদ্য নিরাপত্তা নিশ্চিতকরণে গুরুত্বপূর্ণ ভূমিকা রাখতে পারে।",
+      "image": null,
+      "reference": "FAO - Climate-Smart Agriculture Sourcebook"
+    }
+  ]
+    }
