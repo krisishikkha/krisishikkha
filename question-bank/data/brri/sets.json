@@ -1,0 +1,38 @@
+{
+  "instituteId": "brri",
+  "sets": [
+    {
+      "id": "so-2019",
+      "title": "Scientific Officer 2019",
+      "year": 2019,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 60,
+      "description": "BRRI Scientific Officer পরীক্ষা ২০১৯"
+    },
+    {
+      "id": "so-2023",
+      "title": "Scientific Officer 2023",
+      "year": 2023,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "premium",
+      "format": ["article", "pdf"],
+      "totalQuestions": 80,
+      "description": "BRRI Scientific Officer পরীক্ষা ২০২৩"
+    },
+    {
+      "id": "ad-2024",
+      "title": "Assistant Director 2024",
+      "year": 2024,
+      "position": "Assistant Director",
+      "visible": true,
+      "type": "premium",
+      "format": ["pdf"],
+      "totalQuestions": 100,
+      "description": "BRRI Assistant Director পরীক্ষা ২০২৪"
+    }
+  ]
+}
