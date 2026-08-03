@@ -1,0 +1,78 @@
+/* ===========================
+   ARTICLE VIEWER STYLES
+   =========================== */
+
+/* Question Card Enhancements */
+.question-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.question-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #d84315, #ff8a65);
+}
+
+/* MCQ Option States */
+.option {
+  position: relative;
+  overflow: hidden;
+}
+
+.option::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: rgba(216, 67, 21, 0.1);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.4s, height 0.4s;
+}
+
+.option:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Answer Reveal Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.answer-section.show {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Print Support */
+@media print {
+  .pagination,
+  .back-btn,
+  .toggle-answer-btn {
+    display: none !important;
+  }
+  
+  .answer-section {
+    display: block !important;
+  }
+  
+  .question-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
