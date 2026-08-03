@@ -1,0 +1,27 @@
+{
+  "instituteId": "bfri",
+  "sets": [
+    {
+      "id": "so-2021",
+      "title": "Scientific Officer 2021",
+      "year": 2021,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 50,
+      "description": "BFRI Scientific Officer পরীক্ষা ২০২১"
+    },
+    {
+      "id": "so-2023",
+      "title": "Scientific Officer 2023",
+      "year": 2023,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "premium",
+      "format": ["article"],
+      "totalQuestions": 65,
+      "description": "BFRI Scientific Officer পরীক্ষা ২০২৩"
+    }
+  ]
+}
