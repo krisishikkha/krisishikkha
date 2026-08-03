@@ -1,0 +1,92 @@
+{
+  "institutes": [
+    {
+      "id": "bari",
+      "nameEn": "BARI",
+      "nameBn": "বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Agricultural Research Institute",
+      "visible": true,
+      "icon": "🌾"
+    },
+    {
+      "id": "brri",
+      "nameEn": "BRRI",
+      "nameBn": "বাংলাদেশ ধান গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Rice Research Institute",
+      "visible": true,
+      "icon": "🌾"
+    },
+    {
+      "id": "bjri",
+      "nameEn": "BJRI",
+      "nameBn": "বাংলাদেশ পাট গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Jute Research Institute",
+      "visible": true,
+      "icon": "🪴"
+    },
+    {
+      "id": "bina",
+      "nameEn": "BINA",
+      "nameBn": "বাংলাদেশ পরমাণু কৃষি গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Institute of Nuclear Agriculture",
+      "visible": true,
+      "icon": "⚛️"
+    },
+    {
+      "id": "blri",
+      "nameEn": "BLRI",
+      "nameBn": "বাংলাদেশ প্রাণিসম্পদ গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Livestock Research Institute",
+      "visible": true,
+      "icon": "🐄"
+    },
+    {
+      "id": "bfri",
+      "nameEn": "BFRI",
+      "nameBn": "বাংলাদেশ বন গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Forestry Research Institute",
+      "visible": true,
+      "icon": "🌳"
+    },
+    {
+      "id": "bfri-fisheries",
+      "nameEn": "BFRI (Fisheries)",
+      "nameBn": "বাংলাদেশ মৎস্য গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Fisheries Research Institute",
+      "visible": true,
+      "icon": "🐟"
+    },
+    {
+      "id": "btri",
+      "nameEn": "BTRI",
+      "nameBn": "বাংলাদেশ চা গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Tea Research Institute",
+      "visible": true,
+      "icon": "🍵"
+    },
+    {
+      "id": "bsri",
+      "nameEn": "BSRI",
+      "nameBn": "বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট",
+      "fullName": "Bangladesh Sugarcane Research Institute",
+      "visible": true,
+      "icon": "🌿"
+    },
+    {
+      "id": "srdi",
+      "nameEn": "SRDI",
+      "nameBn": "মৃত্তিকা সম্পদ উন্নয়ন ইনস্টিটিউট",
+      "fullName": "Soil Resource Development Institute",
+      "visible": true,
+      "icon": "🏔️"
+    },
+    {
+      "id": "barc",
+      "nameEn": "BARC",
+      "nameBn": "বাংলাদেশ কৃষি গবেষণা কাউন্সিল",
+      "fullName": "Bangladesh Agricultural Research Council",
+      "visible": true,
+      "icon": "🏛️"
+    }
+  ]
+}
