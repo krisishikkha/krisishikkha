@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LGK67QBZD3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  
+  <title id="pageTitle">Questions | Krisishikkha</title>
+
+  <style>
+    body{
+      font-family: Georgia, serif;
+      background:#f3f3f3;
+      margin:0;
+      padding:0;
+    }
+    .container{
+      max-width:800px;
+      margin:auto;
+      padding:20px;
+      padding-bottom: 80px;
+    }
+    
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background: #2e7d32;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .back-btn:hover {
+      background: #1b5e20;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: linear-gradient(135deg, #d84315, #ff8a65);
+      color: white;
+      border-radius: 12px;
+    }
+    
+    h1{
+      font-size:22px;
+      margin:0 0 8px 0;
+    }
+    
+    .subtitle {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+    
+    /* Question Card */
+    .question-card {
+      background: white;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    
+    .question-card:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+    
+    .question-number {
+      display: inline-block;
+      background: #d84315;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    
+    .question-type {
+      display: inline-block;
+      background: #e3f2fd;
+      color: #1565c0;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 11px;
+      margin-left: 8px;
+    }
+    
+    .question-text {
+      font-size: 17px;
+      color: #222;
+      margin: 15px 0;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+    
+    /* MCQ Options */
+    .options {
+      margin: 15px 0;
+    }
+    
+    .option {
+      padding: 12px 15px;
+      margin: 8px 0;
+      background: #f9f9f9;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 15px;
+    }
+    
+    .option:hover {
+      background: #f0f0f0;
+      border-color: #d84315;
+    }
+    
+    /* Answer Section */
+    .answer-section {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e8f5e9;
+      border-left: 4px solid #2e7d32;
+      border-radius: 6px;
+      display: none;
+    }
+    
+    .answer-section.show {
+      display: block;
+      animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .answer-label {
+      font-weight: bold;
+      color: #2e7d32;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    
+    .answer-text {
+      color: #1b5e20;
+      font-size: 15px;
+      margin: 8px 0;
+    }
+    
+    .explanation {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #c8e6c9;
+      color: #33691e;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .reference {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #fff3e0;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #e65100;
+      font-style: italic;
+    }
+    
+    /* Answer Toggle Button */
+    .toggle-answer-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+      width: 100%;
+    }
+    
+    .toggle-answer-btn:hover {
+      background: #1b5e20;
+      transform: translateY(-2px);
+    }
+    
+    .toggle-answer-btn:active {
+      transform: scale(0.98);
+    }
+    
+    /* Pagination */
+    .pagination {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 15px;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      z-index: 100;
+    }
+    
+    .pagination button {
+      padding: 8px 16px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+    
+    .pagination button:hover:not(:disabled) {
+      background: #1b5e20;
+    }
+    
+    .pagination button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    
+    .page-info {
+      font-size: 14px;
+      color: #666;
+      padding: 0 15px;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 18px;
+      color: #666;
+    }
+    
+    /* Image Support */
+    .question-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 15px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Table Support */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+    
+    table th, table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    
+    table th {
+      background: #f5f5f5;
+      font-weight: bold;
+    }
+    
+    /* Note Box */
+    .note-box {
+      background: #fff3e0;
+      border-left: 4px solid #ff9800;
+      padding: 12px 15px;
+      margin: 15px 0;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    
+    @media (max-width: 600px) {
+      .container { padding: 15px; padding-bottom: 80px; }
+      h1 { font-size: 18px; }
+      .question-text { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  
+  <a href="#" onclick="history.back(); return false;" class="back-btn">← Back</a>
+  
+  <div class="header">
+    <h1 id="setTitle">Loading...</h1>
+    <p class="subtitle" id="questionCount"></p>
+  </div>
+
+  <div id="questionsContainer">
+    <div class="loading">⏳ Questions লোড হচ্ছে...</div>
+  </div>
+
+</div>
+
+<!-- Pagination -->
+<div class="pagination">
+  <button id="prevBtn" onclick="changePage(-1)">← Previous</button>
+  <span class="page-info" id="pageInfo">Page 1</span>
+  <button id="nextBtn" onclick="changePage(1)">Next →</button>
+</div>
+
+<script>
+  let allQuestions = [];
+  let currentPage = 1;
+  const questionsPerPage = 20;
+  
+  const urlParams = new URLSearchParams(window.location.search);
+  const instituteId = urlParams.get('institute');
+  const setId = urlParams.get('set');
+  
+  if (!instituteId || !setId) {
+    window.location.href = 'index.html';
+  }
+  
+  async function loadQuestions() {
+    try {
+      const response = await fetch(`data/${instituteId}/${setId}.json`);
+      const data = await response.json();
+      
+      allQuestions = data.questions;
+      
+      document.getElementById('setTitle').textContent = data.meta.title;
+      document.getElementById('questionCount').textContent = 
+        `মোট ${data.meta.totalQuestions}টি প্রশ্ন | ${questionsPerPage}টি করে দেখানো হচ্ছে`;
+      document.title = `${data.meta.title} | Krisishikkha`;
+      
+      renderQuestions();
+      
+    } catch (error) {
+      document.getElementById('questionsContainer').innerHTML = 
+        '<div class="loading" style="color:red;">❌ Error loading questions</div>';
+      console.error('Error:', error);
+    }
+  }
+  
+  function renderQuestions() {
+    const container = document.getElementById('questionsContainer');
+    container.innerHTML = '';
+    
+    const startIdx = (currentPage - 1) * questionsPerPage;
+    const endIdx = startIdx + questionsPerPage;
+    const pageQuestions = allQuestions.slice(startIdx, endIdx);
+    
+    pageQuestions.forEach((q, idx) => {
+      const questionNumber = startIdx + idx + 1;
+      const card = createQuestionCard(q, questionNumber);
+      container.appendChild(card);
+    });
+    
+    updatePagination();
+    window.scrollTo(0, 0);
+  }
+  
+  function createQuestionCard(q, number) {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    
+    let optionsHTML = '';
+    if (q.type === 'mcq' && q.options) {
+      optionsHTML = '<div class="options">';
+      q.options.forEach((opt, i) => {
+        optionsHTML += `<div class="option">${String.fromCharCode(65 + i)}. ${opt}</div>`;
+      });
+      optionsHTML += '</div>';
+    }
+    
+    let answerHTML = '';
+    if (q.type === 'mcq') {
+      answerHTML = `<div class="answer-text"><strong>সঠিক উত্তর:</strong> ${String.fromCharCode(65 + q.answer)}. ${q.options[q.answer]}</div>`;
+    } else {
+      answerHTML = `<div class="answer-text">${q.answer}</div>`;
+    }
+    
+    let imageHTML = '';
+    if (q.image) {
+      imageHTML = `<img src="${q.image}" alt="Question Image" class="question-image">`;
+    }
+    
+    let referenceHTML = '';
+    if (q.reference) {
+      referenceHTML = `<div class="reference">📚 Reference: ${q.reference}</div>`;
+    }
+    
+    card.innerHTML = `
+      <div>
+        <span class="question-number">প্রশ্ন ${number}</span>
+        <span class="question-type">${q.type === 'mcq' ? 'MCQ' : 'Written'}</span>
+      </div>
+      <div class="question-text">${q.question}</div>
+      ${imageHTML}
+      ${optionsHTML}
+      
+      <button class="toggle-answer-btn" onclick="toggleAnswer(${number})">
+        👁️ উত্তর দেখুন
+      </button>
+      
+      <div class="answer-section" id="answer-${number}">
+        <div class="answer-label">✅ সঠিক উত্তর</div>
+        ${answerHTML}
+        ${q.explanation ? `<div class="explanation"><strong>ব্যাখ্যা:</strong><br>${q.explanation}</div>` : ''}
+        ${referenceHTML}
+      </div>
+    `;
+    
+    return card;
+  }
+  
+  function toggleAnswer(number) {
+    const answerSection = document.getElementById(`answer-${number}`);
+    answerSection.classList.toggle('show');
+    
+    const btn = event.target;
+    if (answerSection.classList.contains('show')) {
+      btn.textContent = '🙈 উত্তর লুকান';
+    } else {
+      btn.textContent = '👁️ উত্তর দেখুন';
+    }
+  }
+  
+  function changePage(direction) {
+    const totalPages = Math.ceil(allQuestions.length / questionsPerPage);
+    const newPage = currentPage + direction;
+    
+    if (newPage >= 1 && newPage <= totalPages) {
+      currentPage = newPage;
+      renderQuestions();
+    }
+  }
+  
+  function updatePagination() {
+    const totalPages = Math.ceil(allQuestions.length / questionsPerPage);
+    
+    document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
+    document.getElementById('prevBtn').disabled = currentPage === 1;
+    document.getElementById('nextBtn').disabled = currentPage === totalPages;
+  }
+  
+  loadQuestions();
+</script>
+
+</body>
+  </html>
