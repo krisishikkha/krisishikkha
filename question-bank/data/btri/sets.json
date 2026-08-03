@@ -1,0 +1,27 @@
+{
+  "instituteId": "btri",
+  "sets": [
+    {
+      "id": "so-2019",
+      "title": "Scientific Officer 2019",
+      "year": 2019,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 45,
+      "description": "BTRI Scientific Officer পরীক্ষা ২০১৯"
+    },
+    {
+      "id": "so-2022",
+      "title": "Scientific Officer 2022",
+      "year": 2022,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "premium",
+      "format": ["article"],
+      "totalQuestions": 60,
+      "description": "BTRI Scientific Officer পরীক্ষা ২০২২"
+    }
+  ]
+}
