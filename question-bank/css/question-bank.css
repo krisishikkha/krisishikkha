@@ -1,0 +1,147 @@
+/* ===========================
+   QUESTION BANK - MAIN STYLES
+   =========================== */
+
+/* Global Resets */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===========================
+   HEADER SECTION
+   =========================== */
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #d84315, #ff8a65);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.header h1 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.header .subtitle {
+  font-size: 15px;
+  opacity: 0.95;
+  margin: 5px 0;
+}
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #2e7d32;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.back-btn:hover {
+  background: #1b5e20;
+  transform: translateX(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   LOADING STATE
+   =========================== */
+
+.loading {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.loading::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #d84315;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===========================
+   ERROR STATE
+   =========================== */
+
+.error-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: #c62828;
+  font-size: 16px;
+  background: #ffebee;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 22px;
+  }
+  
+  .header .subtitle {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 20px 15px;
+  }
+  
+  .header h1 {
+    font-size: 20px;
+  }
+  
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
