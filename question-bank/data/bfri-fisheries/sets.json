@@ -1,0 +1,27 @@
+{
+  "instituteId": "bfri-fisheries",
+  "sets": [
+    {
+      "id": "so-2020",
+      "title": "Scientific Officer 2020",
+      "year": 2020,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 60,
+      "description": "BFRI (Fisheries) Scientific Officer পরীক্ষা ২০২০"
+    },
+    {
+      "id": "ad-2024",
+      "title": "Assistant Director 2024",
+      "year": 2024,
+      "position": "Assistant Director",
+      "visible": true,
+      "type": "premium",
+      "format": ["article", "pdf"],
+      "totalQuestions": 85,
+      "description": "BFRI (Fisheries) Assistant Director পরীক্ষা ২০২৪"
+    }
+  ]
+}
