@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin@2024",
+      "premium": true,
+      "name": "Admin User",
+      "email": "admin@krisishikkha.com"
+    },
+    {
+      "username": "testuser",
+      "password": "test123",
+      "premium": true,
+      "name": "Test Premium User",
+      "email": "test@example.com"
+    },
+    {
+      "username": "demo",
+      "password": "demo123",
+      "premium": false,
+      "name": "Demo User",
+      "email": "demo@example.com"
+    }
+  ],
+  "note": "This is frontend-only authentication. In production, use proper backend authentication with encrypted passwords."
+}
