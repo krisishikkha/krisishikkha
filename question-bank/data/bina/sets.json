@@ -1,0 +1,27 @@
+{
+  "instituteId": "bina",
+  "sets": [
+    {
+      "id": "so-2020",
+      "title": "Scientific Officer 2020",
+      "year": 2020,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 60,
+      "description": "BINA Scientific Officer পরীক্ষা ২০২০"
+    },
+    {
+      "id": "so-2023",
+      "title": "Scientific Officer 2023",
+      "year": 2023,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "premium",
+      "format": ["article", "pdf"],
+      "totalQuestions": 75,
+      "description": "BINA Scientific Officer পরীক্ষা ২০২৩"
+    }
+  ]
+}
