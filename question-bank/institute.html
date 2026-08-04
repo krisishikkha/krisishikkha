@@ -470,6 +470,11 @@
         const card = document.createElement('div');
         card.className = 'set-card';
         
+        // Store data attributes for easy access
+        card.dataset.instituteId = instituteId;
+        card.dataset.setId = set.id;
+        card.dataset.setType = set.type;
+        
         // Make entire card clickable (except PDF button)
         card.addEventListener('click', function(e) {
           // Check if click is on PDF button or its children
@@ -477,16 +482,16 @@
             return; // Let PDF button handle its own click
           }
           
-          // Otherwise open article
-          openArticle(instituteId, set.id, set.type);
+          // Otherwise open article (works for card, article button, anywhere)
+          openArticle(this.dataset.instituteId, this.dataset.setId, this.dataset.setType);
         });
         
         // Build buttons HTML
         let buttonsHTML = '';
         
-        // Article button (always present)
+        // Article button (always present) - NO stopPropagation needed
         buttonsHTML += `
-          <button class="action-btn btn-article" onclick="event.stopPropagation();">
+          <button class="action-btn btn-article">
             <span class="btn-icon">📄</span>
             <span>Article পড়ুন</span>
           </button>
@@ -497,8 +502,7 @@
           buttonsHTML += `
             <a href="pdf/${instituteId}/${set.id}.pdf" 
                target="_blank" 
-               class="action-btn btn-pdf"
-               onclick="event.stopPropagation();">
+               class="action-btn btn-pdf">
               <span class="btn-icon">📥</span>
               <span>PDF Download</span>
             </a>
@@ -555,7 +559,7 @@
   
   // Load on page ready
   loadInstitute();
-</script>
+  </script>
 
 </body>
     </html>
