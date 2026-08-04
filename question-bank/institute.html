@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,6 +16,9 @@
   
   <title id="pageTitle">Question Sets | Krisishikkha</title>
 
+  <!-- Premium Modal CSS -->
+  <link rel="stylesheet" href="css/premium.css">
+
   <style>
     body{
       font-family: Georgia, serif;
@@ -28,6 +32,7 @@
       padding:20px;
     }
     
+    /* Back Button */
     .back-btn {
       display: inline-block;
       margin-bottom: 20px;
@@ -38,13 +43,16 @@
       border-radius: 8px;
       font-weight: bold;
       transition: 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
     
     .back-btn:hover {
       background: #1b5e20;
       transform: translateX(-3px);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
     }
     
+    /* Header */
     .header {
       text-align: center;
       margin-bottom: 30px;
@@ -58,6 +66,7 @@
     h1{
       font-size:26px;
       margin:0 0 8px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
     
     .subtitle {
@@ -140,6 +149,7 @@
     .format-badge:hover {
       background: #1565c0;
       color: white;
+      transform: translateY(-2px);
     }
     
     .format-badge.locked {
@@ -148,6 +158,7 @@
       cursor: not-allowed;
     }
     
+    /* Loading */
     .loading {
       text-align: center;
       padding: 40px;
@@ -155,8 +166,66 @@
       color: #666;
     }
     
+    .loading::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #d84315;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Error Message */
+    .error-message {
+      text-align: center;
+      padding: 40px 20px;
+      color: #c62828;
+      font-size: 16px;
+      background: #ffebee;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    footer a {
+      color: #d84315;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive */
     @media (max-width: 600px) {
-      .sets-grid { grid-template-columns: 1fr; }
+      .sets-grid { 
+        grid-template-columns: 1fr; 
+      }
+      
+      h1 {
+        font-size: 22px;
+      }
+      
+      .header {
+        padding: 20px 15px;
+      }
     }
   </style>
 </head>
@@ -173,13 +242,18 @@
   </div>
 
   <div id="setsContainer">
-    <div class="loading">⏳ Question sets লোড হচ্ছে...</div>
+    <div class="loading">Question sets লোড হচ্ছে...</div>
   </div>
+
+  <footer>
+    <p>© 2024 Krisishikkha | <a href="../about.html">About</a> | <a href="../contact.html">Contact</a></p>
+  </footer>
 
 </div>
 
-
+<!-- Premium Modal Script -->
 <script src="js/premium.js"></script>
+
 <script>
   // Get Institute ID from URL
   const urlParams = new URLSearchParams(window.location.search);
@@ -278,21 +352,27 @@
     } catch (error) {
       console.error('Error details:', error);
       document.getElementById('setsContainer').innerHTML = 
-        `<div class="loading" style="color:red;">❌ Error: ${error.message}<br><small>Check browser console for details</small></div>`;
+        `<div class="error-message">
+          ❌ Error: ${error.message}
+          <br><small>Check browser console for details</small>
+        </div>`;
     }
   }
   
   function openArticle(instituteId, setId, type) {
+    // Check premium access
     if (type === 'premium' && !checkPremiumAccess()) {
       showPremiumModal();
       return;
     }
     
+    // Open article page
     window.location.href = `article.html?institute=${instituteId}&set=${setId}`;
   }
   
   // Load on page ready
   loadInstitute();
 </script>
+
 </body>
 </html>
