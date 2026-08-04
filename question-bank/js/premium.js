@@ -1,6 +1,6 @@
 /* ===========================
-   PREMIUM ACCESS MANAGEMENT
-   Updated Version with Login Modal
+   PREMIUM ACCESS MODAL SYSTEM
+   Modern SaaS-Style Design
    =========================== */
 
 // Check if user has premium access
@@ -29,7 +29,7 @@ function getCurrentUser() {
   }
 }
 
-// Show Premium Modal with Login + WhatsApp options
+// Show Premium Modal - Modern Design
 function showPremiumModal() {
   // Remove existing modal if any
   const existingModal = document.getElementById('premiumModal');
@@ -37,63 +37,71 @@ function showPremiumModal() {
     existingModal.remove();
   }
   
-  // Create modal
+  // Disable page scrolling
+  document.body.style.overflow = 'hidden';
+  
+  // Create modal overlay
   const modal = document.createElement('div');
   modal.id = 'premiumModal';
-  modal.className = 'premium-overlay';
+  modal.className = 'premium-modal-overlay';
   
   modal.innerHTML = `
-    <div class="premium-box">
-      <button class="close-btn" onclick="closePremiumModal()">×</button>
-      
-      <div class="premium-icon">🔒</div>
-      
-      <h2>Premium Content</h2>
-      
-      <p>এই প্রশ্নগুলো শুধুমাত্র Premium Subscribers দের জন্য উপলব্ধ।</p>
-      
-      <div class="premium-features">
-        <h3>⭐ Premium এ যা পাবেন:</h3>
-        <ul>
-          <li>সকল Institute এর Question Access</li>
-          <li>বিগত বছরের সকল প্রশ্ন</li>
-          <li>বিস্তারিত Answer ও Explanation</li>
-          <li>PDF Download সুবিধা</li>
-          <li>নতুন Question এর Instant Access</li>
-        </ul>
-      </div>
-      
-      <div class="premium-actions">
-        <button class="action-btn login-btn" onclick="showLoginModal(); closePremiumModal();">
-          <span class="btn-icon">🔐</span>
-          <span class="btn-text">Login করুন</span>
-          <small>Already have premium access?</small>
-        </button>
+    <div class="premium-modal-container">
+      <div class="premium-modal-content">
         
-        <button class="action-btn whatsapp-btn" onclick="contactForPremium()">
-          <span class="btn-icon">💬</span>
-          <span class="btn-text">WhatsApp করুন</span>
-          <small>01516013089</small>
-        </button>
+        <!-- Lock Icon -->
+        <div class="premium-lock-icon">🔒</div>
+        
+        <!-- Title -->
+        <h2 class="premium-title">Premium Content</h2>
+        
+        <!-- Description -->
+        <p class="premium-description">
+          This content is available only for Premium Members.<br>
+          Please login if you already have access or contact us on WhatsApp to activate your Premium account.
+        </p>
+        
+        <!-- Buttons -->
+        <div class="premium-buttons">
+          <button class="premium-btn premium-btn-primary" onclick="goToLogin()">
+            Login
+          </button>
+          
+          <button class="premium-btn premium-btn-success" onclick="openWhatsAppContact()">
+            Contact on WhatsApp
+          </button>
+          
+          <button class="premium-btn premium-btn-secondary" onclick="closePremiumModal()">
+            Close
+          </button>
+        </div>
+        
       </div>
-      
-      <p class="note">Premium নিতে WhatsApp করুন অথবা আপনার account থাকলে Login করুন</p>
     </div>
   `;
   
   document.body.appendChild(modal);
   
-  // Show modal with animation
-  setTimeout(() => {
+  // Trigger animation
+  requestAnimationFrame(() => {
     modal.classList.add('show');
-  }, 10);
+  });
   
-  // Close on outside click
+  // Close on overlay click
   modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
+    if (e.target === modal || e.target.classList.contains('premium-modal-container')) {
       closePremiumModal();
     }
   });
+  
+  // Close on Escape key
+  const escapeHandler = function(e) {
+    if (e.key === 'Escape') {
+      closePremiumModal();
+      document.removeEventListener('keydown', escapeHandler);
+    }
+  };
+  document.addEventListener('keydown', escapeHandler);
 }
 
 // Close Premium Modal
@@ -101,219 +109,93 @@ function closePremiumModal() {
   const modal = document.getElementById('premiumModal');
   if (modal) {
     modal.classList.remove('show');
+    
     setTimeout(() => {
       modal.remove();
-    }, 300);
+      // Re-enable page scrolling
+      document.body.style.overflow = '';
+    }, 250);
   }
 }
 
-// Contact for Premium via WhatsApp
-function contactForPremium() {
+// Go to Login Page
+function goToLogin() {
+  // Close modal first
+  closePremiumModal();
+  
+  // Navigate to login page after animation
+  setTimeout(() => {
+    window.location.href = 'login.html';
+  }, 300);
+}
+
+// Open WhatsApp Contact
+function openWhatsAppContact() {
   const number = '8801516013089';
-  const message = 'I want to access premium subscription of Question Bank-SO/AD from www.krisishikkha.com';
+  const message = 'Hello! I want to activate my Premium account for Question Bank SO/AD on www.krisishikkha.com';
   const encodedMsg = encodeURIComponent(message);
   const url = `https://wa.me/${number}?text=${encodedMsg}`;
+  
   window.open(url, '_blank');
-  closePremiumModal();
-}
-
-// Show Login Modal
-function showLoginModal() {
-  // Remove existing modal if any
-  const existingModal = document.getElementById('loginModal');
-  if (existingModal) {
-    existingModal.remove();
-  }
   
-  // Create modal
-  const modal = document.createElement('div');
-  modal.id = 'loginModal';
-  modal.className = 'login-overlay';
-  
-  modal.innerHTML = `
-    <div class="login-box">
-      <button class="close-btn" onclick="closeLoginModal()">×</button>
-      
-      <h2>🔐 Premium Login</h2>
-      
-      <div id="loginError" class="login-error">
-        Invalid username or password
-      </div>
-      
-      <form id="loginForm" onsubmit="handleLogin(event)">
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input 
-            type="text" 
-            id="username" 
-            name="username" 
-            required 
-            autocomplete="username"
-            placeholder="Enter your username"
-          >
-        </div>
-        
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            required 
-            autocomplete="current-password"
-            placeholder="Enter your password"
-          >
-        </div>
-        
-        <button type="submit" class="login-submit-btn">Login</button>
-      </form>
-      
-      <p class="login-help">
-        Premium account নেই? 
-        <a href="#" onclick="showPremiumModal(); closeLoginModal(); return false;">
-          এখনই নিন
-        </a>
-      </p>
-    </div>
-  `;
-  
-  document.body.appendChild(modal);
-  
-  // Show modal with animation
-  setTimeout(() => {
-    modal.classList.add('show');
-    document.getElementById('username').focus();
-  }, 10);
-  
-  // Close on outside click
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      closeLoginModal();
-    }
-  });
-}
-
-// Close Login Modal
-function closeLoginModal() {
-  const modal = document.getElementById('loginModal');
-  if (modal) {
-    modal.classList.remove('show');
-    setTimeout(() => {
-      modal.remove();
-    }, 300);
-  }
-}
-
-// Handle Login Form Submit
-async function handleLogin(event) {
-  event.preventDefault();
-  
-  const username = document.getElementById('username').value.trim();
-  const password = document.getElementById('password').value;
-  const errorDiv = document.getElementById('loginError');
-  
-  errorDiv.classList.remove('show');
-  
-  // Show loading
-  const submitBtn = event.target.querySelector('button[type="submit"]');
-  const originalText = submitBtn.textContent;
-  submitBtn.textContent = 'Logging in...';
-  submitBtn.disabled = true;
-  
-  try {
-    // Load users from JSON
-    const response = await fetch('data/users.json');
-    const data = await response.json();
-    
-    // Find user
-    const user = data.users.find(u => 
-      u.username === username && u.password === password
-    );
-    
-    if (user) {
-      // Login successful
-      const userData = {
-        username: user.username,
-        isPremium: user.premium,
-        name: user.name,
-        loginTime: new Date().toISOString()
-      };
-      
-      localStorage.setItem('qbank_premium_user', JSON.stringify(userData));
-      
-      // Close modal
-      closeLoginModal();
-      
-      // Show success message
-      showSuccessMessage('✅ Login successful! Premium content unlocked.');
-      
-      // Reload page after 1 second
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
-      
-    } else {
-      // Login failed
-      errorDiv.textContent = '❌ Invalid username or password';
-      errorDiv.classList.add('show');
-      
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    }
-    
-  } catch (error) {
-    console.error('Login error:', error);
-    errorDiv.textContent = '❌ Login failed. Please try again.';
-    errorDiv.classList.add('show');
-    
-    submitBtn.textContent = originalText;
-    submitBtn.disabled = false;
-  }
-}
-
-// Show Success Message
-function showSuccessMessage(message) {
-  const popup = document.createElement('div');
-  popup.className = 'success-popup';
-  popup.textContent = message;
-  popup.style.cssText = `
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, #2e7d32, #66bb6a);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    z-index: 99999;
-    font-weight: bold;
-    animation: slideDown 0.3s ease;
-  `;
-  
-  document.body.appendChild(popup);
-  
-  setTimeout(() => {
-    popup.style.animation = 'slideUp 0.3s ease';
-    setTimeout(() => popup.remove(), 300);
-  }, 2000);
+  // Optionally close modal after opening WhatsApp
+  // closePremiumModal();
 }
 
 // Logout Function
 function logout() {
   if (confirm('Are you sure you want to logout?')) {
     localStorage.removeItem('qbank_premium_user');
-    showSuccessMessage('Logged out successfully');
+    
+    // Show notification
+    showNotification('✅ Logged out successfully', 'success');
+    
     setTimeout(() => {
       window.location.href = 'index.html';
     }, 1000);
   }
 }
 
-// Check if user is logged in on page load
+// Show Notification (for success messages)
+function showNotification(message, type = 'success') {
+  const notification = document.createElement('div');
+  notification.className = `notification notification-${type}`;
+  notification.textContent = message;
+  
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background: ${type === 'success' ? '#16A34A' : '#DC2626'};
+    color: white;
+    padding: 16px 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 99999;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.3s ease;
+  `;
+  
+  document.body.appendChild(notification);
+  
+  // Slide in
+  setTimeout(() => {
+    notification.style.transform = 'translateX(-50%) translateY(0)';
+  }, 10);
+  
+  // Slide out and remove
+  setTimeout(() => {
+    notification.style.transform = 'translateX(-50%) translateY(-100px)';
+    setTimeout(() => notification.remove(), 300);
+  }, 3000);
+}
+
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
   const user = getCurrentUser();
   if (user && user.isPremium) {
-    console.log('Premium user logged in:', user.username);
+    console.log('✅ Premium user logged in:', user.username);
   }
 });
