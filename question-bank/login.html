@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LGK67QBZD3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <title>Premium Login | Krisishikkha</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .login-container {
+      background: #FFFFFF;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 440px;
+      animation: slideUp 0.4s ease;
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .login-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    
+    .login-icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 4px 12px rgba(29, 78, 216, 0.3));
+    }
+    
+    .login-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1E3A8A;
+      margin-bottom: 8px;
+    }
+    
+    .login-subtitle {
+      font-size: 15px;
+      color: #666666;
+    }
+    
+    .form-group {
+      margin-bottom: 24px;
+    }
+    
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+    
+    .form-input {
+      width: 100%;
+      height: 52px;
+      padding: 0 16px;
+      border: 2px solid #E5E7EB;
+      border-radius: 12px;
+      font-size: 16px;
+      transition: all 200ms ease;
+      font-family: Georgia, serif;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: #1D4ED8;
+      box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.1);
+    }
+    
+    .error-message {
+      background: #FEE2E2;
+      border-left: 4px solid #DC2626;
+      color: #991B1B;
+      padding: 14px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: none;
+    }
+    
+    .error-message.show {
+      display: block;
+      animation: shake 0.4s;
+    }
+    
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-8px); }
+      75% { transform: translateX(8px); }
+    }
+    
+    .login-btn {
+      width: 100%;
+      height: 54px;
+      background: #1D4ED8;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 200ms ease;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+      margin-top: 8px;
+    }
+    
+    .login-btn:hover {
+      background: #1E40AF;
+      box-shadow: 0 6px 20px rgba(29, 78, 216, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    .login-btn:active {
+      transform: translateY(0);
+    }
+    
+    .login-btn:disabled {
+      background: #9CA3AF;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .login-footer {
+      margin-top: 32px;
+      text-align: center;
+    }
+    
+    .footer-text {
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 16px;
+    }
+    
+    .footer-link {
+      color: #1D4ED8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #666666;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    
+    .back-link:hover {
+      color: #333333;
+    }
+    
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 36px 28px;
+      }
+      
+      .login-title {
+        font-size: 28px;
+      }
+      
+      .login-icon {
+        font-size: 56px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="login-container">
+  <div class="login-header">
+    <div class="login-icon">🔐</div>
+    <h1 class="login-title">Premium Login</h1>
+    <p class="login-subtitle">Access your premium content</p>
+  </div>
+  
+  <div id="errorMessage" class="error-message">
+    Invalid username or password
+  </div>
+  
+  <form id="loginForm">
+    <div class="form-group">
+      <label for="username" class="form-label">Username</label>
+      <input 
+        type="text" 
+        id="username" 
+        name="username" 
+        class="form-input"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      >
+    </div>
+    
+    <div class="form-group">
+      <label for="password" class="form-label">Password</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        class="form-input"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      >
+    </div>
+    
+    <button type="submit" class="login-btn" id="loginBtn">
+      Login
+    </button>
+  </form>
+  
+  <div class="login-footer">
+    <p class="footer-text">
+      Don't have a premium account?
+      <a href="#" onclick="openWhatsApp(); return false;" class="footer-link">
+        Contact us on WhatsApp
+      </a>
+    </p>
+    
+    <a href="index.html" class="back-link">
+      ← Back to Home
+    </a>
+  </div>
+</div>
+
+<script>
+  const loginForm = document.getElementById('loginForm');
+  const errorMessage = document.getElementById('errorMessage');
+  const loginBtn = document.getElementById('loginBtn');
+  
+  loginForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+    
+    // Hide error
+    errorMessage.classList.remove('show');
+    
+    // Show loading
+    loginBtn.textContent = 'Logging in...';
+    loginBtn.disabled = true;
+    
+    try {
+      // Fetch users
+      const response = await fetch('data/users.json');
+      const data = await response.json();
+      
+      // Find user
+      const user = data.users.find(u => 
+        u.username === username && u.password === password
+      );
+      
+      if (user) {
+        // Check if premium
+        if (!user.premium) {
+          errorMessage.textContent = '❌ Your account does not have premium access. Please contact us on WhatsApp.';
+          errorMessage.classList.add('show');
+          loginBtn.textContent = 'Login';
+          loginBtn.disabled = false;
+          return;
+        }
+        
+        // Save to localStorage
+        const userData = {
+          username: user.username,
+          isPremium: user.premium,
+          name: user.name,
+          loginTime: new Date().toISOString()
+        };
+        
+        localStorage.setItem('qbank_premium_user', JSON.stringify(userData));
+        
+        // Success
+        loginBtn.textContent = '✅ Login Successful!';
+        loginBtn.style.background = '#16A34A';
+        
+        // Redirect
+        setTimeout(() => {
+          const returnUrl = new URLSearchParams(window.location.search).get('return');
+          window.location.href = returnUrl || 'index.html';
+        }, 800);
+        
+      } else {
+        // Invalid credentials
+        errorMessage.textContent = '❌ Invalid username or password';
+        errorMessage.classList.add('show');
+        loginBtn.textContent = 'Login';
+        loginBtn.disabled = false;
+      }
+      
+    } catch (error) {
+      console.error('Login error:', error);
+      errorMessage.textContent = '❌ An error occurred. Please try again.';
+      errorMessage.classList.add('show');
+      loginBtn.textContent = 'Login';
+      loginBtn.disabled = false;
+    }
+  });
+  
+  function openWhatsApp() {
+    const number = '8801516013089';
+    const message = 'Hello! I want to activate my Premium account for Question Bank SO/AD on www.krisishikkha.com';
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
