@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGK67QBZD3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,6 +16,9 @@
   
   <title id="pageTitle">Questions | Krisishikkha</title>
 
+  <!-- Premium Modal CSS -->
+  <link rel="stylesheet" href="css/premium.css">
+
   <style>
     body{
       font-family: Georgia, serif;
@@ -26,9 +30,10 @@
       max-width:800px;
       margin:auto;
       padding:20px;
-      padding-bottom: 80px;
+      padding-bottom: 100px;
     }
     
+    /* Back Button */
     .back-btn {
       display: inline-block;
       margin-bottom: 20px;
@@ -43,8 +48,10 @@
     
     .back-btn:hover {
       background: #1b5e20;
+      transform: translateX(-3px);
     }
     
+    /* Header */
     .header {
       text-align: center;
       margin-bottom: 30px;
@@ -52,11 +59,13 @@
       background: linear-gradient(135deg, #d84315, #ff8a65);
       color: white;
       border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     }
     
     h1{
       font-size:22px;
       margin:0 0 8px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
     
     .subtitle {
@@ -72,6 +81,7 @@
       border-radius: 12px;
       box-shadow: 0 6px 14px rgba(0,0,0,0.08);
       transition: 0.3s;
+      border-left: 4px solid #d84315;
     }
     
     .question-card:hover {
@@ -126,6 +136,7 @@
     .option:hover {
       background: #f0f0f0;
       border-color: #d84315;
+      transform: translateX(5px);
     }
     
     /* Answer Section */
@@ -159,6 +170,7 @@
       color: #1b5e20;
       font-size: 15px;
       margin: 8px 0;
+      line-height: 1.6;
     }
     
     .explanation {
@@ -168,6 +180,7 @@
       color: #33691e;
       font-size: 14px;
       line-height: 1.5;
+      white-space: pre-line;
     }
     
     .reference {
@@ -198,6 +211,7 @@
     .toggle-answer-btn:hover {
       background: #1b5e20;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     
     .toggle-answer-btn:active {
@@ -229,28 +243,61 @@
       cursor: pointer;
       font-weight: bold;
       transition: 0.2s;
+      font-size: 14px;
     }
     
     .pagination button:hover:not(:disabled) {
       background: #1b5e20;
+      transform: translateY(-2px);
     }
     
     .pagination button:disabled {
       background: #ccc;
       cursor: not-allowed;
+      transform: none;
     }
     
     .page-info {
       font-size: 14px;
       color: #666;
       padding: 0 15px;
+      font-weight: 600;
     }
     
+    /* Loading */
     .loading {
       text-align: center;
       padding: 60px 20px;
       font-size: 18px;
       color: #666;
+    }
+    
+    .loading::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #d84315;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 15px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Error Message */
+    .error-message {
+      text-align: center;
+      padding: 40px 20px;
+      color: #c62828;
+      font-size: 16px;
+      background: #ffebee;
+      border-radius: 10px;
+      margin: 20px 0;
     }
     
     /* Image Support */
@@ -291,13 +338,41 @@
       font-size: 14px;
     }
     
+    /* Responsive */
     @media (max-width: 600px) {
-      .container { padding: 15px; padding-bottom: 80px; }
-      h1 { font-size: 18px; }
-      .question-text { font-size: 16px; }
+      .container { 
+        padding: 15px; 
+        padding-bottom: 100px; 
+      }
+      
+      h1 { 
+        font-size: 18px; 
+      }
+      
+      .question-text { 
+        font-size: 16px; 
+      }
+      
+      .question-card {
+        padding: 20px 15px;
+      }
+      
+      .pagination {
+        padding: 12px 10px;
+        gap: 8px;
+      }
+      
+      .pagination button {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+      
+      .page-info {
+        font-size: 13px;
+        padding: 0 10px;
+      }
     }
   </style>
-  <link rel="stylesheet" href="css/premium.css">
 </head>
 
 <body>
@@ -312,7 +387,7 @@
   </div>
 
   <div id="questionsContainer">
-    <div class="loading">⏳ Questions লোড হচ্ছে...</div>
+    <div class="loading">Questions লোড হচ্ছে...</div>
   </div>
 
 </div>
@@ -323,23 +398,51 @@
   <span class="page-info" id="pageInfo">Page 1</span>
   <button id="nextBtn" onclick="changePage(1)">Next →</button>
 </div>
+
+<!-- Premium Modal Script -->
 <script src="js/premium.js"></script>
+
 <script>
   let allQuestions = [];
   let currentPage = 1;
   const questionsPerPage = 20;
+  let currentSetType = 'free'; // Will be set from loaded data
   
   const urlParams = new URLSearchParams(window.location.search);
   const instituteId = urlParams.get('institute');
   const setId = urlParams.get('set');
   
   if (!instituteId || !setId) {
+    alert('Invalid URL parameters');
     window.location.href = 'index.html';
   }
   
   async function loadQuestions() {
     try {
+      // First, check if this is a premium set by loading sets.json
+      const setsResponse = await fetch(`data/${instituteId}/sets.json`);
+      const setsData = await setsResponse.json();
+      const currentSet = setsData.sets.find(s => s.id === setId);
+      
+      if (currentSet) {
+        currentSetType = currentSet.type;
+        
+        // Check premium access before loading questions
+        if (currentSetType === 'premium' && !checkPremiumAccess()) {
+          showPremiumModal();
+          document.getElementById('questionsContainer').innerHTML = 
+            '<div class="error-message">🔒 Premium Content - Please login to access</div>';
+          return;
+        }
+      }
+      
+      // Load questions
       const response = await fetch(`data/${instituteId}/${setId}.json`);
+      
+      if (!response.ok) {
+        throw new Error(`Failed to load questions - Status: ${response.status}`);
+      }
+      
       const data = await response.json();
       
       allQuestions = data.questions;
@@ -352,9 +455,12 @@
       renderQuestions();
       
     } catch (error) {
+      console.error('Error loading questions:', error);
       document.getElementById('questionsContainer').innerHTML = 
-        '<div class="loading" style="color:red;">❌ Error loading questions</div>';
-      console.error('Error:', error);
+        `<div class="error-message">
+          ❌ Error: ${error.message}
+          <br><small>Check browser console for details</small>
+        </div>`;
     }
   }
   
@@ -365,6 +471,11 @@
     const startIdx = (currentPage - 1) * questionsPerPage;
     const endIdx = startIdx + questionsPerPage;
     const pageQuestions = allQuestions.slice(startIdx, endIdx);
+    
+    if (pageQuestions.length === 0) {
+      container.innerHTML = '<div class="loading">কোনো প্রশ্ন পাওয়া যায়নি</div>';
+      return;
+    }
     
     pageQuestions.forEach((q, idx) => {
       const questionNumber = startIdx + idx + 1;
@@ -432,13 +543,17 @@
   
   function toggleAnswer(number) {
     const answerSection = document.getElementById(`answer-${number}`);
-    answerSection.classList.toggle('show');
+    const buttons = document.querySelectorAll('.toggle-answer-btn');
+    const currentButton = buttons[number - ((currentPage - 1) * questionsPerPage) - 1];
     
-    const btn = event.target;
     if (answerSection.classList.contains('show')) {
-      btn.textContent = '🙈 উত্তর লুকান';
+      answerSection.classList.remove('show');
+      currentButton.textContent = '👁️ উত্তর দেখুন';
+      currentButton.style.background = '#2e7d32';
     } else {
-      btn.textContent = '👁️ উত্তর দেখুন';
+      answerSection.classList.add('show');
+      currentButton.textContent = '🙈 উত্তর লুকান';
+      currentButton.style.background = '#1565c0';
     }
   }
   
@@ -460,8 +575,9 @@
     document.getElementById('nextBtn').disabled = currentPage === totalPages;
   }
   
+  // Load questions on page ready
   loadQuestions();
 </script>
 
 </body>
-  </html>
+</html>
