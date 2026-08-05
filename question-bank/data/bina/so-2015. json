@@ -1,0 +1,813 @@
+{
+  "meta": {
+    "title": "BINA SO Exam 2015",
+    "institute": "BINA",
+    "year": 2015,
+    "position": "SO",
+    "totalQuestions": 50,
+    "type": "mcq",
+    "examDate": "2015",
+    "duration": "1 hours",
+    "totalMarks": 50
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "The weed Chenopodium album grows well in the field of",
+      "options": [
+        "Millets",
+        "Aus rice",
+        "Jute",
+        "Wheat",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Chenopodium album, commonly known as lamb's quarters, is a prominent winter (Rabi) season weed in Bangladesh. It aggressively competes with and grows well alongside wheat, which is also a Rabi crop.\n\nচেনোপোডিয়াম অ্যালবাম বা বথুয়া শাক হলো বাংলাদেশের একটি অন্যতম প্রধান রবি মৌসুমের আগাছা। এটি গমের জমিতে খুব ভালোভাবে জন্মায় এবং গমের সাথে তীব্র প্রতিযোগিতা করে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Papain is a",
+      "options": [
+        "Cysteine Protease Enzyme",
+        "Aspartate Protease Enzyme",
+        "Threonine Protease Enzyme",
+        "Serine Protease Enzyme",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Papain is a powerful cysteine protease enzyme naturally extracted from the raw fruit of the papaya plant (Carica papaya). It is extensively used in the food industry as a meat tenderizer and in medicine as a digestive aid.\n\nপেপেইন (Papain) হলো একটি শক্তিশালী সিস্টিন প্রোটিয়েজ এনজাইম যা কাঁচা পেঁপে থেকে প্রাকৃতিকভাবে নিষ্কাশন করা হয়। এটি খাদ্য শিল্পে মাংস নরম করার কাজে এবং চিকিৎসায় হজমে সহায়ক হিসেবে ব্যবহৃত হয়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Parthenocarpy occurs in which one of the following--",
+      "options": [
+        "Banana",
+        "Jackfruit",
+        "Peach",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Parthenocarpy is the botanical process where fruit develops naturally or artificially without the fertilization of ovules, resulting in seedless fruits. The cultivated banana is a prime example of a plant that produces fruit via natural vegetative parthenocarpy.\n\nনিষেক ছাড়াই প্রাকৃতিকভাবে বা কৃত্রিমভাবে বীজহীন ফল উৎপন্ন হওয়ার প্রক্রিয়াকে পার্থেনোকার্পি বলা হয়। বাণিজ্যিকভাবে চাষকৃত কলা প্রাকৃতিকভাবেই পার্থেনোকার্পি প্রক্রিয়ায় ফল উৎপাদন করে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "How much tomatoes are required for one kg tomato seeds?",
+      "options": [
+        "50-60 kg",
+        "160-210 kg",
+        "220-250 kg",
+        "300-350 kg",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "To extract approximately 1 kg of high-quality, dry tomato seeds, about 160-210 kg of fresh, mature tomatoes are required. This ratio can slightly vary depending on the specific tomato variety and seed size.\n\n১ কেজি উন্নত মানের শুষ্ক টমেটোর বীজ সংগ্রহ করার জন্য প্রায় ১৬০-২১০ কেজি তাজা ও পরিপক্ব টমেটোর প্রয়োজন হয়। টমেটোর জাত এবং বীজের আকারের উপর ভিত্তি করে এই পরিমাণ কিছুটা পরিবর্তিত হতে পারে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "How much percentage of soluble salts are present in alkaline soil?",
+      "options": [
+        "0.01-0.02%",
+        "0.1-0.2%",
+        "2-3%",
+        "3-4%",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Alkaline soils, technically referred to as sodic soils, are characterized by a high exchangeable sodium percentage (ESP > 15) and a high pH (greater than 8.5). Despite this, their actual soluble salt concentration is characteristically very low, generally falling in the range of 0.01-0.02%.\n\nক্ষারীয় মাটিতে (Alkaline soils) বিনিময়যোগ্য সোডিয়ামের পরিমাণ বেশি (ESP > ১৫) এবং পিএইচ মাত্রা উচ্চ (৮.৫ এর বেশি) থাকে। তা সত্ত্বেও, এ ধরনের মাটিতে দ্রবণীয় লবণের পরিমাণ সাধারণত খুবই কম থাকে, যা প্রায় ০.০১-০.০২% এর মধ্যে সীমাবদ্ধ।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Seed treatment with vitavax is the main controlling method of",
+      "options": [
+        "Loose smut",
+        "Normal smut",
+        "Cover smut",
+        "Both A and B",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Vitavax (active ingredient: Carboxin) is a highly effective systemic fungicide used extensively as a seed treatment. It is the primary chemical control method for internally seed-borne diseases like loose smut (Ustilago nuda) and can also control other smut variations in cereal crops.\n\nভিটাভ্যাক্স (সক্রিয় উপাদান: কার্বক্সিন) হলো একটি অত্যন্ত কার্যকরী সিস্টেমিক ছত্রাকনাশক যা বীজ শোধনে ব্যাপকভাবে ব্যবহৃত হয়। এটি দানাশস্যের বীজ-বাহিত রোগ যেমন লুজ স্মার্ট বা আলগা কাণ্ডরোগ দমনে প্রধান রাসায়নিক পদ্ধতি হিসেবে কাজ করে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Whiptail is a disorder of cauliflower due to deficiency of-",
+      "options": [
+        "Molybdenum",
+        "Boron",
+        "Nitrogen",
+        "Zinc",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Whiptail is a well-known physiological disorder in cauliflower directly caused by a deficiency of Molybdenum. In affected plants, the leaf blades fail to develop properly, leaving only the bare midribs, which closely resemble a whip.\n\n'হুইপটেইল' ফুলকপির একটি পরিচিত শারীরবৃত্তীয় ব্যাধি যা মূলত মলিবডেনাম (Molybdenum)-এর অভাবজনিত কারণে ঘটে। এই রোগে আক্রান্ত গাছের পাতাগুলো সঠিকভাবে বিকশিত হতে পারে না, পাতার মাঝখানের শিরার অংশটি চাবুকের মতো আকার ধারণ করে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Weeding in dry condition with the help of niri or khurpi results in",
+      "options": [
+        "Natural mulching",
+        "Earthing up",
+        "Artificial mulching",
+        "Gap filling",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Weeding dry soil using hand tools like a nirani or khurpi pulverizes the topsoil into a fine dust layer. This creates a 'dust mulch' or artificial soil mulch that breaks the capillary continuity of the soil, significantly reducing the loss of subsoil moisture through evaporation.\n\nশুষ্ক মাটিতে নিড়ানি বা খুরপির সাহায্যে আগাছা পরিষ্কার করার সময় মাটির উপরিভাগ চূর্ণবিচূর্ণ হয়ে সূক্ষ্ম ধুলার স্তরে পরিণত হয়। এটি মাটির 'ডাস্ট মাল্চ' বা কৃত্রিম মালচিং হিসেবে কাজ করে, যা মাটির কৈশিক নালীগুলোকে ভেঙে দেয় এবং বাষ্পীভবনের মাধ্যমে মাটির নিচের আর্দ্রতা হ্রাস পাওয়া রোধ করে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "The groups of organisms which convert light into food are called----",
+      "options": [
+        "Autotrophs",
+        "Decomposers",
+        "Heterotrophs",
+        "Omnivorous",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Autotrophs, specifically photoautotrophs like green plants, algae, and cyanobacteria, possess the unique biological ability to capture solar light energy and convert it into chemical energy (food/glucose) through the process of photosynthesis.\n\nঅটোট্রফ (Autotrophs), বিশেষ করে সালোকসংশ্লেষী উদ্ভিদ, শৈবাল এবং সায়ানোব্যাকটেরিয়ার মতো জীবগুলো সূর্যালোক শোষণ করে এবং সালোকসংশ্লেষণ প্রক্রিয়ার মাধ্যমে সেই আলোক শক্তিকে রাসায়নিক শক্তিতে (খাদ্য/গ্লুকোজ) রূপান্তরিত করার অনন্য জৈবিক ক্ষমতাসম্পন্ন।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "What is phytophthora?",
+      "options": [
+        "Virus",
+        "Nematode",
+        "Fungi",
+        "Bacteria",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Phytophthora is a genus of highly destructive plant pathogens. Although modern taxonomy classifies them as Oomycetes (water molds) rather than true fungi, they are historically and practically grouped with fungi in agricultural pathology due to their similar filamentous growth and disease mechanisms, such as causing the infamous late blight of potato.\n\nফাইটোফথোরা (Phytophthora) হলো উদ্ভিদ রোগ সৃষ্টিকারী অত্যন্ত ধ্বংসাত্মক প্যাথোজেনের একটি গণ। আধুনিক শ্রেণিবিন্যাসে এগুলোকে ওওমাইসিটিস (জলজ ছত্রাক) বলা হলেও, কৃষি রোগতত্ত্বে এদের সূত্রাকার বৃদ্ধি এবং রোগ ছড়ানোর ধরনের কারণে ঐতিহাসিকভাবে এদেরকে ছত্রাক বা ফাঞ্জাই হিসেবেই ধরা হয়। আলুর মড়ক বা লেইট ব্লাইট রোগ এর একটি প্রকৃষ্ট উদাহরণ।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Glycolysis occurs only in the---",
+      "options": [
+        "Presence of oxygen",
+        "Absence of oxygen",
+        "Presence of oxygen & absence of oxygen",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Glycolysis is the fundamental first step of cellular respiration that takes place in the cytoplasm of a cell. It is an anaerobic process, meaning it does not strictly require oxygen, allowing it to function normally in both aerobic (presence of oxygen) and anaerobic (absence of oxygen) environments.\n\nগ্লাইকোলাইসিস হলো কোষীয় শসনের প্রথম ধাপ যা কোষের সাইটোপ্লাজমে ঘটে। এটি একটি অবায়বীয় বা অ্যানারোবিক প্রক্রিয়া, যার মানে হলো এটি সম্পন্ন হওয়ার জন্য সরাসরি অক্সিজেনের প্রয়োজন হয় না। তাই এটি অক্সিজেনযুক্ত (সবাত) এবং অক্সিজেনবিহীন (অবাত) উভয় পরিবেশেই স্বাভাবিকভাবে সম্পন্ন হতে পারে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Among the followings which one is of Anacardiaceae family?",
+      "options": [
+        "Litchi",
+        "Mango",
+        "Jackfruit",
+        "Banana",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Mango (Mangifera indica) belongs to the Anacardiaceae family, commonly known as the cashew family. This economically important botanical family also includes other notable crops like cashew and pistachio.\n\nআম (Mangifera indica) অ্যানাকার্ডিয়াসি (Anacardiaceae) পরিবারের অন্তর্গত, যা সাধারণত কাজু পরিবার নামেও পরিচিত। অর্থনৈতিকভাবে গুরুত্বপূর্ণ এই বোটানিক্যাল পরিবারে কাজুবাদাম এবং পেস্তাবাদামের মতো অন্যান্য উল্লেখযোগ্য ফসলও রয়েছে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Which of the following elements play an important role in nitrogen metabolism?",
+      "options": [
+        "Magnesium",
+        "Manganese",
+        "Iron",
+        "Molybdenum",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Molybdenum is an essential micronutrient that serves as a crucial structural component for the enzyme nitrate reductase. This enzyme is responsible for reducing absorbed soil nitrates into nitrites, making molybdenum indispensable for proper nitrogen metabolism and biological nitrogen fixation in plants.\n\nমলিবডেনাম একটি অত্যন্ত গুরুত্বপূর্ণ মাইক্রোনিউট্রিয়েন্ট বা গৌণ পুষ্টি উপাদান যা নাইট্রেট রিডাক্টেজ নামক এনজাইমের একটি অত্যাবশ্যকীয় গাঠনিক উপাদান। এই এনজাইমটি মাটি থেকে শোষিত নাইট্রেটকে নাইট্রাইটে পরিণত করতে সাহায্য করে। তাই উদ্ভিদের সঠিক নাইট্রোজেন বিপাক এবং জৈবিক নাইট্রোজেন সংবন্ধনে মলিবডেনাম অপরিহার্য।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Inarching method is used for culture of which fruits crops-",
+      "options": [
+        "Mango and Guava",
+        "Mango and Grapes",
+        "Guava and Litchi",
+        "Phalsa and Guava",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Inarching, also known as approach grafting, is a traditional vegetative propagation technique. It is highly successful and widely utilized for propagating fruit trees like mango, guava, and sapota because the scion remains attached to its own root system until a solid union with the rootstock is fully formed.\n\nইনার্চিং (Inarching) বা অ্যাপ্রোচ গ্রাফটিং হলো অঙ্গজ প্রজননের একটি প্রচলিত পদ্ধতি। আম, পেয়ারা এবং সফেদার মতো ফলের গাছ বংশবিস্তারের ক্ষেত্রে এটি অত্যন্ত সফল এবং ব্যাপকভাবে ব্যবহৃত হয়। কারণ এই পদ্ধতিতে রুটস্টকের সাথে জোড়া পুরোপুরি শক্ত না হওয়া পর্যন্ত সায়নকে (কাঙ্ক্ষিত মাতৃগাছের ডাল) মূল গাছের সাথেই সংযুক্ত রাখা হয়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Which of the following is the least likely reason for using tillage in seedbed preparation?",
+      "options": [
+        "Control of diseases and pests",
+        "Improvement of the physical condition of the soil",
+        "Elimination of weeds",
+        "Change of the soil texture",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Soil texture represents the innate proportional distribution of sand, silt, and clay particles in a soil mass. It is a permanent physical property that absolutely cannot be altered by tillage. Tillage operations only modify soil structure, control weeds, and manage crop residues.\n\nমাটির বুনট বা সয়েল টেক্সচার (Soil texture) হলো মাটিতে থাকা বালি, পলি এবং কাদা কণার আনুপাতিক হার। এটি মাটির একটি স্থায়ী ভৌত বৈশিষ্ট্য যা কর্ষণ বা টিলেজ (Tillage) প্রক্রিয়ার মাধ্যমে কোনোভাবেই পরিবর্তন করা সম্ভব নয়। কর্ষণের মাধ্যমে কেবল মাটির গঠন বা স্ট্রাকচারের পরিবর্তন, আগাছা দমন এবং ফসলের অবশিষ্টাংশ ব্যবস্থাপনা করা যায়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Of the following which has the greatest permeability?",
+      "options": [
+        "Sand",
+        "Loam",
+        "Clay",
+        "Humus",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Permeability is the measure of how easily fluids (like water and air) can flow through a porous medium. Sand has the largest particle size among soil separates, creating large, interconnected macropores that allow rapid water drainage, giving it the highest permeability.\n\nভেদ্যতা বা পারমিয়াবিলিটি (Permeability) হলো এমন একটি পরিমাপ যা নির্দেশ করে কোনো সচ্ছিদ্র মাধ্যমের ভেতর দিয়ে তরল (যেমন পানি) বা গ্যাস কত সহজে প্রবাহিত হতে পারে। মাটির কণাগুলোর মধ্যে বালুকণার আকার সবচেয়ে বড় হওয়ায় এদের মাঝে বড় আকারের আন্তঃকণা ফাঁকা স্থান (ম্যাক্রোপোর) থাকে। ফলে বালির ভেতর দিয়ে খুব দ্রুত পানি নিষ্কাশিত হতে পারে এবং এর ভেদ্যতা সবচেয়ে বেশি হয়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Which one of the following has a negative effects on the soil due to conventional farming practices?",
+      "options": [
+        "Soil compaction",
+        "Reduction of soil organic matter",
+        "Soil erosion",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Intensive conventional farming heavily relies on repetitive mechanical tillage, heavy machinery, and synthetic chemicals. Over time, this systematically degrades soil health by accelerating soil erosion, destroying natural soil structure (compaction), and rapidly depleting the soil's organic matter content.\n\nনিবিড় প্রচলিত কৃষিব্যবস্থায় বারবার যান্ত্রিক কর্ষণ, ভারী যন্ত্রপাতি এবং রাসায়নিক পদার্থের ব্যাপক ব্যবহার করা হয়। সময়ের সাথে সাথে এটি মাটির ক্ষয় ত্বরান্বিত করে, মাটির স্বাভাবিক গঠন নষ্ট করে (কম্প্যাকশন বা মাটি শক্ত হয়ে যাওয়া) এবং মাটির জৈব পদার্থের পরিমাণ দ্রুত হ্রাস করার মাধ্যমে মাটির স্বাস্থ্যের মারাত্মক অবনতি ঘটায়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Spined solder bugs are predator of",
+      "options": [
+        "Larvae of beetles",
+        "Gypsy moth",
+        "Bees",
+        "Both A and B",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "The spined soldier bug (Podisus maculiventris) is a highly beneficial generalist predatory insect. It actively hunts and consumes a wide variety of destructive agricultural pests, most notably the larvae of beetles (e.g., Colorado potato beetle) and caterpillars (e.g., Gypsy moth larvae).\n\nস্পাইন্ড সোলজার বাগ (Podisus maculiventris) হলো অত্যন্ত উপকারী একটি শিকারি পোকা। এরা সক্রিয়ভাবে বিভিন্ন ধরনের ক্ষতিকর কৃষি পেস্ট বা কীটপতঙ্গ শিকার করে খায়, যার মধ্যে বিটলের লার্ভা (যেমন- কলোরাডো পটেটো বিটল) এবং শুঁয়োপোকা (যেমন- জিপসি মথের লার্ভা) সবচেয়ে উল্লেখযোগ্য।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "For which purpose brick gravel test---",
+      "options": [
+        "Vigor test of seed",
+        "Germination test of seed",
+        "Purity test of seed",
+        "Viability test of seed",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "The brick gravel test, originally known as the Hiltner test, is a classic agronomic procedure designed exclusively to evaluate seed vigor. By forcing seedlings to emerge through a heavy layer of crushed brick, it simulates adverse field conditions and tests their physical strength and resilience.\n\nব্রিক গ্রাভেল টেস্ট বা ইটের টুকরার পরীক্ষা (যা মূলত হিল্টনার টেস্ট নামে পরিচিত) হলো বীজের তেজ বা সতেজতা (Seed vigor) মূল্যায়নের জন্য বিশেষভাবে নকশাকৃত একটি প্রচলিত কৃষি পদ্ধতি। চূর্ণ ইটের ভারী স্তরের ভেতর দিয়ে চারা গজানোর পরিস্থিতি তৈরি করে এটি মূলত মাঠে প্রতিকূল পরিবেশ অনুকরণ করে এবং চারার শারীরিক শক্তি ও সহনশীলতা পরীক্ষা করে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "The percentage of nitrogen in potassium nitrate",
+      "options": [
+        "26%",
+        "46%",
+        "20%",
+        "17%",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "Pure potassium nitrate (KNO₃) contains approximately 13.8% elemental nitrogen by molecular weight. Commercial agricultural grade potassium nitrate fertilizer typically provides around 13% N and 44-46% K₂O. Because 13% is absent from the given options, 'None of these' is scientifically accurate.\n\nবিশুদ্ধ পটাশিয়াম নাইট্রেটে (KNO₃) আণবিক ওজনের দিক থেকে প্রায় ১৩.৮% নাইট্রোজেন থাকে। বাণিজ্যিক কৃষিতে ব্যবহৃত পটাশিয়াম নাইট্রেট সারে সাধারণত ১৩% নাইট্রোজেন এবং ৪৪-৪৬% পটাশ (K₂O) থাকে। যেহেতু প্রদত্ত বিকল্পগুলোতে ১৩% উল্লেখ নেই, তাই 'None of these' (এগুলোর কোনটিই নয়) বৈজ্ঞানিকভাবে সঠিক উত্তর।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Evergreen type of forest is found---",
+      "options": [
+        "Mediterranean region",
+        "Tropical climate region",
+        "Monsoon climate region",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "While several climate zones host evergreen species, the true 'Evergreen Forests' (Tropical Rainforests) are distinctly globally categorized under the Tropical climate region. These forests experience high year-round rainfall and temperature, preventing any mass seasonal shedding of leaves.\n\nযদিও বিভিন্ন জলবায়ু অঞ্চলে চিরহরিৎ প্রজাতির গাছ দেখা যায়, তবে প্রকৃত 'চিরহরিৎ বন' বা 'ট্রপিক্যাল রেইনফরেস্ট' মূলত ক্রান্তীয় জলবায়ু বা ট্রপিক্যাল ক্লাইমেট অঞ্চলে অবস্থিত। এই বনভূমিতে সারাবছর প্রচুর বৃষ্টিপাত ও উচ্চ তাপমাত্রা থাকে, যার ফলে গাছের পাতা একসাথে ঝরে যায় না এবং বন সবসময় সবুজ থাকে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Which manure contained higher amount of potassium?",
+      "options": [
+        "Cowdung",
+        "Compost",
+        "Ash",
+        "Farm Yard Manure",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Among organic sources and traditional manures, wood ash possesses the highest concentration of potassium (often between 5% and 7% by weight). This is substantially richer in potash compared to standard cow dung, compost, and Farm Yard Manure (FYM).\n\nজৈব উৎস এবং গতানুগতিক সারগুলোর মধ্যে কাঠের ছাইয়ে (Wood ash) পটাশিয়ামের ঘনত্ব সবচেয়ে বেশি থাকে (সাধারণত ওজনের ৫% থেকে ৭% পর্যন্ত)। এটি গোবর সার (Cowdung), কম্পোস্ট এবং ফার্ম ইয়ার্ড ম্যানিউরের (FYM) তুলনায় পটাশের অনেক বেশি সমৃদ্ধ উৎস।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "A.D.P. to A.T.P. change is called-",
+      "options": [
+        "Photosynthesis",
+        "Phosphorylation",
+        "Transpiration",
+        "Oxidation",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The biochemical addition of a phosphate group (PO₄³⁻) to an organic molecule is called phosphorylation. The specific conversion of ADP (Adenosine Diphosphate) into the energy-rich ATP (Adenosine Triphosphate) occurs through this exact metabolic mechanism.\n\nকোনো জৈব অণুর সাথে ফসফেট গ্রুপ (PO₄³⁻) যুক্ত হওয়ার জৈব রাসায়নিক প্রক্রিয়াকে ফসফোরাইলেশন (Phosphorylation) বলা হয়। এডিপি (অ্যাডিনোসিন ডাইফসফেট) এর সাথে একটি ফসফেট যুক্ত হয়ে শক্তি-সমৃদ্ধ এটিপি (অ্যাডিনোসিন ট্রাইফসফেট) অণুতে পরিণত হওয়ার প্রক্রিয়াটি মূলত এই ফসফোরাইলেশন প্রক্রিয়ার মাধ্যমেই ঘটে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "At which stage are more nutrients necessarily required in cereal crops?",
+      "options": [
+        "Growth stage of plants",
+        "Formation of leaves",
+        "Particle initiation",
+        "Maturity of crops",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Cereal crops undergo their most rapid metabolic activity and maximum dry matter accumulation during their active vegetative growth stages (including tillering and jointing). Consequently, their demand and uptake rate for essential soil nutrients peak dramatically during this phase.\n\nদানাজাতীয় ফসলের সক্রিয় অঙ্গজ বৃদ্ধি পর্যায়ে (কুশি উৎপাদন এবং কাণ্ড লম্বা হওয়ার সময়) এদের বিপাকীয় ক্রিয়াকলাপ সবচেয়ে দ্রুত হয় এবং সর্বোচ্চ পরিমাণ শুষ্ক পদার্থ জমা হয়। ফলস্বরূপ, এই পর্যায়ে মাটির অত্যাবশ্যকীয় পুষ্টি উপাদানগুলোর চাহিদা ও শোষণের হার সবচেয়ে বেশি বৃদ্ধি পায়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Maximum photosynthesis takes place in-",
+      "options": [
+        "Blue light",
+        "Red light",
+        "Violet light",
+        "Green light",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "While chlorophyll heavily absorbs both red and blue light, the highest rate of actual photosynthetic yield (oxygen production and carbon fixation) occurs in the red spectrum (around 650-680 nm). This is effectively demonstrated by the classic action spectrum of photosynthesis.\n\nক্লোরোফিল লাল এবং নীল উভয় আলোকেই প্রচুর পরিমাণে শোষণ করলেও, প্রকৃত সালোকসংশ্লেষণের (অক্সিজেন উৎপাদন এবং কার্বন ফিক্সেশন) সর্বোচ্চ হার দৃশ্যমান বর্ণালির লাল আলোর অংশে (প্রায় ৬৫০-৬৮০ ন্যানোমিটার) ঘটে। সালোকসংশ্লেষণের ক্লাসিক অ্যাকশন স্পেকট্রামের সাহায্যে এটি খুব ভালোভাবে প্রমাণিত হয়েছে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Which of the following is the fewer atomic numbers?",
+      "options": [
+        "Carbon",
+        "Hydrogen",
+        "Nitrogen",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The atomic number indicates the number of protons located in the nucleus of an atom. Hydrogen is the lightest and simplest element in the periodic table, possessing only one proton, hence it has the lowest atomic number of 1.\n\nপারমাণবিক সংখ্যা (Atomic number) হলো কোনো পরমাণুর নিউক্লিয়াসে প্রোটনের সংখ্যা। পর্যায় সারণীতে হাইড্রোজেন হলো সবচেয়ে হালকা এবং সরল মৌল, যার মাত্র একটি প্রোটন রয়েছে, তাই এর পারমাণবিক সংখ্যা সবচেয়ে কম (১)।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Bending of plants towards light is called---",
+      "options": [
+        "Phototropism",
+        "Vernalization",
+        "Photorespiration",
+        "Photosynthesis",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Phototropism is the directional growth response of a plant toward a light stimulus. This mechanism is primarily driven by the hormone auxin, which accumulates on the shaded, darker side of the stem, causing rapid cell elongation and making the plant bend toward the light.\n\nআলোর উদ্দীপনার দিকে উদ্ভিদের দিকমুখী বৃদ্ধির প্রতিক্রিয়াকে ফটোট্রপিজম (Phototropism) বলা হয়। এই প্রক্রিয়াটি মূলত অক্সিন নামক হরমোন দ্বারা নিয়ন্ত্রিত হয়, যা কান্ডের অপেক্ষাকৃত অন্ধকার অংশে জমা হয়ে কোষগুলোকে দ্রুত লম্বা হতে সাহায্য করে, ফলে উদ্ভিদ আলোর দিকে বেঁকে যায়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Germination is inhibited by ---",
+      "options": [
+        "Red light",
+        "UV light",
+        "Blue light",
+        "I.R light",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "High-energy Ultraviolet (UV) light is harmful to delicate plant tissues. It can penetrate thin seed coats, causing severe oxidative stress and DNA damage to the embryo, thereby strongly inhibiting the natural physiological process of seed germination.\n\nঅতিবেগুনী রশ্মি (UV light) উদ্ভিদের টিস্যুর জন্য অত্যন্ত ক্ষতিকর। এটি বীজের পাতলা আবরণ ভেদ করে ভ্রূণের ডিএনএ (DNA) মারাত্মকভাবে ক্ষতিগ্রস্ত করতে পারে, যার ফলে বীজের অঙ্কুরোদ্গম প্রক্রিয়া বা জার্মিনেশন বাধাগ্রস্ত হয়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "The most efficient use of potassium is achieved by",
+      "options": [
+        "Broadcasting",
+        "Top dressing",
+        "Basal doses",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Unlike nitrogen, potassium is relatively immobile within the soil profile. Applying it as a basal dose—incorporating it directly into the root zone before or at the time of sowing—ensures that emerging roots can readily access it, resulting in maximum nutrient efficiency.\n\nনাইট্রোজেনের বিপরীতে পটাশিয়াম মাটিতে তুলনামূলকভাবে কম চলাচল করতে পারে (immobile)। তাই বেসাল ডোজ (Basal dose) হিসেবে—অর্থাৎ বীজ বপনের আগে বা বপনের সময় সরাসরি শিকড়ের কাছাকাছি বা মাটির নিচে প্রয়োগ করলে সদ্য গজানো শিকড় সহজেই এটি গ্রহণ করতে পারে। এতে পটাশিয়াম সারের সর্বোচ্চ কার্যকারিতা নিশ্চিত হয়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "Line breeding is a type of",
+      "options": [
+        "Inbreeding",
+        "Out breeding",
+        "Natural breeding",
+        "Cross breeding",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Line breeding is essentially a specialized and milder form of inbreeding. It involves mating individuals that are somewhat distantly related, tracing their lineage back to one outstanding common ancestor (like a great-grandparent), aiming to preserve desirable traits while minimizing severe inbreeding depression.\n\nলাইন ব্রিডিং মূলত ইনব্রিডিং (Inbreeding)-এরই একটি বিশেষ এবং কিছুটা মৃদু রূপ। এই পদ্ধতিতে কিছুটা দূরবর্তী সম্পর্কযুক্ত প্রাণীদের মধ্যে প্রজনন ঘটানো হয়, যাদের বংশলতিকায় একজন অসাধারণ সাধারণ পূর্বপুরুষ (যেমন প্রপিতামহ) থাকে। তীব্র ইনব্রিডিং-এর ক্ষতিকর প্রভাব (ইনব্রিডিং ডিপ্রেশন) এড়িয়ে কাঙ্ক্ষিত বৈশিষ্ট্যগুলো ধরে রাখাই এই পদ্ধতির মূল লক্ষ্য।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "IMPERMEABLE",
+      "options": [
+        "Porous",
+        "Sticky",
+        "Sandy",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "The word 'Impermeable' technically describes a material or surface that does not allow liquids or gases to pass through it. Its direct antonym is 'Porous', which refers to having minute spaces or holes that allow fluids or air to flow freely.\n\n'Impermeable' শব্দটির অর্থ হলো অভেদ্য, অর্থাৎ এমন বস্তু বা পৃষ্ঠ যার ভেতর দিয়ে তরল বা গ্যাস প্রবেশ করতে পারে না। এর সরাসরি বিপরীত শব্দ হলো 'Porous', যার অর্থ ছিদ্রযুক্ত বা সচ্ছিদ্র, যা সহজে তরল বা বাতাস চলাচলের অনুমতি দেয়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "CONTAMINATE",
+      "options": [
+        "Distill",
+        "Embellish",
+        "Ameliorate",
+        "Purify",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "To 'Contaminate' means to pollute, taint, or make something impure by adding a dangerous, toxic, or unwanted substance. Its exact antonym is 'Purify', which means to cleanse and completely remove unwanted elements or impurities.\n\n'Contaminate' অর্থ হলো কোনো কিছুর সাথে ক্ষতিকর, বিষাক্ত বা অবাঞ্ছিত পদার্থ মিশিয়ে তাকে দূষিত বা অপবিত্র করা। এর সঠিক বিপরীত শব্দ হলো 'Purify', যার অর্থ বিশুদ্ধ করা এবং সমস্ত ক্ষতিকর বা অবাঞ্ছিত উপাদান সম্পূর্ণ দূর করে ফেলা।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "FERMENT",
+      "options": [
+        "Solidity",
+        "Tranquility",
+        "Purity",
+        "Transparency",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Used in a figurative or socio-political sense, the noun 'Ferment' denotes a state of great unrest, intense agitation, and turbulence. Its direct antonym is 'Tranquility', which signifies a deep state of peace, calm, and utter lack of disturbance.\n\nরূপক বা সামাজিক-রাজনৈতিক অর্থে 'Ferment' (বিশেষ্য) বলতে চরম অশান্তি, তীব্র উত্তেজনা এবং বিশৃঙ্খলার অবস্থাকে বোঝায়। এর সরাসরি বিপরীত শব্দ হলো 'Tranquility', যা গভীর শান্তি, স্থিরতা এবং সম্পূর্ণ ঝামেলাবিহীন একটি শান্ত অবস্থাকে নির্দেশ করে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "INGEST",
+      "options": [
+        "Throw around",
+        "Expel",
+        "Take away",
+        "Uncover",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The biological term 'Ingest' refers to taking food, liquid, or other substances into the body by swallowing or absorbing them. The proper antonym is 'Expel', which signifies physically forcing a substance out of or away from the body.\n\nজীববিজ্ঞানের পরিভাষায় 'Ingest' অর্থ হলো খাদ্য, তরল বা অন্যান্য পদার্থ গিলে ফেলা বা শোষণের মাধ্যমে শরীরের ভেতরে গ্রহণ করা। এর সঠিক বিপরীত শব্দ হলো 'Expel', যার অর্থ শরীর থেকে কোনো পদার্থ বলপ্রয়োগ করে বা স্বাভাবিকভাবে বের করে দেওয়া বা নির্গত করা।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "HARMONY",
+      "options": [
+        "Insecurity",
+        "Irritation",
+        "Dishonesty",
+        "Statement",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "The word 'Harmony' describes a state of peaceful agreement, structural balance, and pleasing arrangement. Its precise antonyms are discord, conflict, or dissonance. Because none of the given options represent these meanings, 'None of these' is the correct answer.\n\n'Harmony' শব্দটির অর্থ হলো সম্প্রীতি, শান্তিপূর্ণ ঐকমত্য, কাঠামোগত ভারসাম্য এবং চমৎকার সমন্বয়। এর সঠিক বিপরীত শব্দগুলো হতে পারে মতভেদ (discord), দ্বন্দ্ব (conflict) বা অসঙ্গতি (dissonance)। যেহেতু প্রদত্ত অপশনগুলোর কোনোটিই এই অর্থ প্রকাশ করে না, তাই 'None of these' (এগুলোর কোনটিই নয়) সঠিক উত্তর।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "Do not depend them for everything.",
+      "options": [
+        "on",
+        "by",
+        "in",
+        "with",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "In English grammar, the verb 'depend' inherently requires the preposition 'on' or 'upon' to connect to its grammatical object. Thus, the grammatically correct and complete sentence is: 'Do not depend on them for everything.'\n\nইংরেজি ব্যাকরণে, 'depend' (নির্ভর করা) ক্রিয়াটির পরে সরাসরি 'on' বা 'upon' প্রিপজিশন বসে। তাই ব্যাকরণগতভাবে সঠিক এবং সম্পূর্ণ বাক্যটি হলো: \"Do not depend on them for everything\" (সবকিছুর জন্য তাদের উপর নির্ভর করবেন না)।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "This situation calls a high degree of courage",
+      "options": [
+        "in",
+        "for",
+        "fort",
+        "both",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The idiomatic phrasal verb 'call for' translates to demand, necessitate, or require. In this specific context, the sentence states that the situation demands courage, making 'for' the only appropriate preposition.\n\nইংরেজি ইডিয়মে 'call for' ফ্রেজাল ভার্বটির অর্থ হলো কোনো কিছুর দাবি করা বা প্রয়োজন হওয়া (demand or require)। এই বাক্যের প্রেক্ষাপটে বোঝানো হয়েছে যে পরিস্থিতিটিতে সাহসের প্রয়োজন। তাই সঠিক প্রিপজিশন হিসেবে 'for' বসবে।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "The prime minister insisted the resignation.",
+      "options": [
+        "in",
+        "on",
+        "by",
+        "up",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The verb 'insist' is strictly followed by the preposition 'on' (or occasionally 'upon') when making a resolute demand or firmly maintaining a point. The correct phrase is: 'The prime minister insisted on the resignation.'\n\nযখন কেউ কোনো কিছু দৃঢ়ভাবে দাবি করে বা নিজের মতে অটল থাকে, তখন 'insist' (জেদ করা বা জোর দেওয়া) ভার্বটির পরে সর্বদা 'on' (বা ক্ষেত্রবিশেষে 'upon') প্রিপজিশন বসে। সঠিক বাক্যটি হলো: \"The prime minister insisted on the resignation\" (প্রধানমন্ত্রী পদত্যাগের ব্যাপারে জোর দিয়েছিলেন)।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "She was admitted the New Jersey Bar.",
+      "options": [
+        "of",
+        "to",
+        "into",
+        "by",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "In standard formal English, when a person is accepted into an exclusive institution, profession, or organization (like a hospital, school, or the Bar), the correct prepositional phrase used is 'admitted to'.\n\nপ্রমিত আনুষ্ঠানিক ইংরেজিতে, যখন কোনো ব্যক্তিকে হাসপাতাল, স্কুল, বার (Bar - আইনজীবী সমিতি) ইত্যাদি কোনো প্রতিষ্ঠানে ভর্তি বা অন্তর্ভুক্ত করা হয়, তখন 'admitted to' প্রিপজিশনাল ফ্রেজটি ব্যবহৃত হয়।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "If I were a millionaire, I help you ---",
+      "options": [
+        "will",
+        "am",
+        "had",
+        "would",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "This sentence utilizes a standard 'Type 2' conditional structure, which conveys a hypothetical or completely unreal situation in the present. The required grammatical formula is 'If + Subject + past tense (were), Subject + would + base verb'. Therefore, 'would' is correct.\n\nবাক্যটি একটি সাধারণ 'Type 2' কন্ডিশনাল (শর্তমূলক) বাক্যের উদাহরণ, যা বর্তমানে একটি কাল্পনিক বা অবাস্তব পরিস্থিতি প্রকাশ করে। এর ব্যাকরণগত গঠন হলো 'If + Subject + past tense (were), Subject + would + base verb'। তাই শূন্যস্থানে 'would' বসবে। (আমি যদি কোটিপতি হতাম, তবে আমি তোমাকে সাহায্য করতাম)।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 41,
+      "type": "mcq",
+      "question": "How many team participated ODI Cricket World Cup 2015?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "The 11th edition of the ICC Cricket World Cup, which was jointly hosted by Australia and New Zealand in early 2015, saw the participation of exactly 14 national teams competing for the championship.\n\n২০১৫ সালের শুরুর দিকে অস্ট্রেলিয়া এবং নিউজিল্যান্ডের যৌথ আয়োজনে অনুষ্ঠিত আইসিসি ক্রিকেট বিশ্বকাপের ১১তম আসরে সর্বমোট ১৪টি জাতীয় দল চ্যাম্পিয়নশিপের জন্য অংশগ্রহণ করেছিল।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 42,
+      "type": "mcq",
+      "question": "Which one of the following is the former name of Mymensingh?",
+      "options": [
+        "Nasirabad",
+        "Bakrabad",
+        "Zalalabad",
+        "Chondrodip",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "Historically, during the Mughal era and the early days of the British colonial administration, the city and surrounding district of present-day Mymensingh was officially known by its earlier name, Nasirabad.\n\nঐতিহাসিকভাবে, মোগল আমলে এবং ব্রিটিশ ঔপনিবেশিক শাসনামলের প্রথম দিকে, বর্তমান ময়মনসিংহ শহর এবং এর আশেপাশের জেলাটি আনুষ্ঠানিকভাবে এর আগের নাম 'নাসিরাবাদ' (Nasirabad) হিসেবে পরিচিত ছিল।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 43,
+      "type": "mcq",
+      "question": "Which of the highest water Fall is in the world?",
+      "options": [
+        "Tugela Falls",
+        "Creck Falls",
+        "Niagra Falls",
+        "Angel Falls",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Angel Falls, located deep within the Canaima National Park in Venezuela, holds the official record as the highest uninterrupted waterfall on Earth, boasting a staggering height of 979 meters (3,212 feet).\n\nভেনেজুয়েলার কানাইমা ন্যাশনাল পার্কের গভীর জঙ্গলে অবস্থিত 'অ্যাঞ্জেল ফলস' (Angel Falls) হলো পৃথিবীর সর্বোচ্চ একটানা বা বাধাহীন জলপ্রপাত। এর উচ্চতা বিস্ময়করভাবে ৯৭৯ মিটার (৩,২১২ ফুট)।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 44,
+      "type": "mcq",
+      "question": "How many districts are there in Chattagong Hill Tracts?",
+      "options": [
+        "2",
+        "3",
+        "13",
+        "18",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The Chattagong Hill Tracts (CHT) is a unique, hilly, and culturally distinct geographical region located in southeastern Bangladesh. It is officially divided into exactly three administrative districts: Rangamati, Khagrachari, and Bandarban.\n\nপার্বত্য চট্টগ্রাম (Chattogram Hill Tracts - CHT) হলো বাংলাদেশের দক্ষিণ-পূর্বাঞ্চলে অবস্থিত একটি পাহাড়ি এবং সাংস্কৃতিকভাবে স্বতন্ত্র ভৌগোলিক অঞ্চল। এটি আনুষ্ঠানিকভাবে ঠিক তিনটি প্রশাসনিক জেলায় বিভক্ত: রাঙ্গামাটি, খাগড়াছড়ি এবং বান্দরবান।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "Which one of the following countries hosted the Arab Leage Summit-2015?",
+      "options": [
+        "Libya",
+        "Cairo",
+        "Egypt",
+        "Qatar",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "The 26th annual regular session of the Arab League Summit took place in March 2015. It was officially hosted by the country of Egypt, with proceedings held in the resort city of Sharm el-Sheikh.\n\n২০১৫ সালের মার্চ মাসে আরব লিগের ২৬তম বার্ষিক নিয়মিত সম্মেলন অনুষ্ঠিত হয়। এই সম্মেলনের আনুষ্ঠানিক আয়োজক দেশ ছিল মিশর (Egypt) এবং এর কার্যক্রম মিশরের সুপরিচিত রিসোর্ট শহর শার্ম আল-শেখে অনুষ্ঠিত হয়েছিল।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "Industrial Revolution had originated in----",
+      "options": [
+        "USA",
+        "France",
+        "Germany",
+        "UK",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "The profound global transition to new manufacturing processes, famously known as the Industrial Revolution, originally began in the United Kingdom (Great Britain) during the mid-to-late 18th century before systematically spreading to Europe and America.\n\nনতুন উৎপাদন পদ্ধতিতে বিশ্বব্যাপী যে বিশাল পরিবর্তন আসে, যা শিল্প বিপ্লব (Industrial Revolution) নামে বিখ্যাত, তা মূলত অষ্টাদশ শতাব্দীর মাঝামাঝি থেকে শেষের দিকে ইউরোপ এবং আমেরিকায় ছড়িয়ে পড়ার আগে যুক্তরাজ্যে (গ্রেট ব্রিটেন) প্রথম শুরু হয়েছিল।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 47,
+      "type": "mcq",
+      "question": "Recently, who has won the presidential election of Nigeria?",
+      "options": [
+        "Muhammadu Buhari",
+        "Goodluck Jonathan",
+        "Umaru Musa",
+        "Shehu Shagari",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "In the historic 2015 Nigerian general election, opposition candidate Muhammadu Buhari successfully defeated the incumbent President Goodluck Jonathan. This marked the very first time an incumbent president lost an election in Nigeria's history.\n\n২০১৫ সালের ঐতিহাসিক নাইজেরিয়ান সাধারণ নির্বাচনে বিরোধী দলীয় প্রার্থী মোহাম্মাদু বুহারি (Muhammadu Buhari) সফলভাবে ক্ষমতাসীন রাষ্ট্রপতি গুডলাক জোনাথনকে পরাজিত করেন। নাইজেরিয়ার ইতিহাসে এটিই ছিল প্রথম কোনো ক্ষমতাসীন রাষ্ট্রপতির নির্বাচনে হেরে যাওয়ার ঘটনা।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 48,
+      "type": "mcq",
+      "question": "Recently, which country has won \"Women in Parliament\" award?",
+      "options": [
+        "Bangladesh",
+        "Malaysia",
+        "India",
+        "Indonesia",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "In 2015, Bangladesh was internationally recognized and awarded the prestigious 'Women in Parliaments (WIP) Global Forum Award'. The award specifically celebrated the country's outstanding success and progress in closing the gender gap within its political sphere.\n\n২০১৫ সালে বাংলাদেশ আন্তর্জাতিকভাবে মর্যাদাপূর্ণ 'উইমেন ইন পার্লামেন্টস (WIP) গ্লোবাল ফোরাম অ্যাওয়ার্ড' লাভ করে। এই পুরস্কারটি বিশেষ করে রাজনৈতিক ক্ষেত্রে জেন্ডার গ্যাপ বা নারী-পুরুষের বৈষম্য দূর করার ক্ষেত্রে বাংলাদেশের অসামান্য সাফল্য এবং অগ্রগতি উদযাপনের জন্য দেওয়া হয়েছিল।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 49,
+      "type": "mcq",
+      "question": "Which is the tallest statue?",
+      "options": [
+        "Awaji Kannon",
+        "Great Buddha",
+        "Spring Temple Buddha",
+        "Can be",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "At the time this exam was conducted in 2015, the Spring Temple Buddha located in Lushan County, Henan, China, held the world record as the tallest statue in the world. (Note: In 2018, it was surpassed by the Statue of Unity in India).\n\n২০১৫ সালে যখন এই পরীক্ষাটি নেওয়া হয়, তখন চীনের হেনান প্রদেশের লুশান কাউন্টিতে অবস্থিত 'স্প্রিং টেম্পল বুদ্ধ' (Spring Temple Buddha) বিশ্বের সর্বোচ্চ ভাস্কর্যের রেকর্ড ধরে রেখেছিল। (উল্লেখ্য, ২০১৮ সালে ভারতের 'স্ট্যাচু অব ইউনিটি' এটিকে ছাড়িয়ে বিশ্বের সর্বোচ্চ ভাস্কর্যের স্বীকৃতি পায়)।",
+      "image": null,
+      "reference": ""
+    },
+    {
+      "id": 50,
+      "type": "mcq",
+      "question": "Which is the tallest living tree in the world?",
+      "options": [
+        "Alpine Ash",
+        "Coast Redwood",
+        "Bull Pine",
+        "Mountain Ash",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The Coast Redwood (Sequoia sempervirens), native to California, is biologically the tallest living tree species on Earth. Specifically, a single specimen named 'Hyperion' officially holds the world record. The Mountain Ash is the tallest flowering plant, but not the tallest overall tree.\n\nক্যালিফোর্নিয়ার স্থানীয় উদ্ভিদ কোস্ট রেডউড (Sequoia sempervirens) হলো জৈবিকভাবে পৃথিবীর সবচেয়ে লম্বা জীবিত গাছের প্রজাতি। নির্দিষ্টভাবে বলতে গেলে, 'হাইপেরিয়ন' (Hyperion) নামক এই প্রজাতির একটি গাছ আনুষ্ঠানিকভাবে বিশ্বের সর্বোচ্চ জীবিত গাছের রেকর্ড ধরে রেখেছে। মাউন্টেন অ্যাশ হলো সবচেয়ে লম্বা ফুল গাছ, তবে তা সামগ্রিকভাবে সর্বোচ্চ গাছ নয়।",
+      "image": null,
+      "reference": ""
+    }
+  ]
+}
