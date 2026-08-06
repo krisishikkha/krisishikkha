@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "title": "BINA Scientific Officer Recruitment Exam",
+    "institute": "Bangladesh Institute of Nuclear Agriculture (BINA)",
+    "year": 2012,
+    "position": "Scientific Officer",
+    "totalQuestions": 60,
+    "type": "free",
+    "examDate": "2012",
+    "duration": "1 hours",
+    "totalMarks": 100
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Fertility of soil in rice fields can be improved by",
+      "options": ["Blue green algae", "Sodium chloride", "Rhizobium", "Gypsum", "None of these"],
+      "answer": 1,
+      "explanation": "নীল-সবুজ শৈবাল (Blue Green Algae) বায়ুমণ্ডলীয় নাইট্রোজেন স্থিরীকরণের মাধ্যমে ধান ক্ষেতের মাটির উর্বরতা বৃদ্ধি করে। এটি বাংলাদেশের ধান চাষে ব্যবহৃত একটি গুরুত্বপূর্ণ জীবাণু সার (bio-fertilizer)।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which of the following is not a characteristic of a horticulturist?",
+      "options": ["They usually grow only one plant species in each field", "They usually live in large towns or cities", "Their farming techniques are relatively unproductive and they are ignorant of soil characteristics and plant nutrients", "All of above", "None of these"],
+      "answer": 4,
+      "explanation": "প্রকৃত বাগানবিদ (Horticulturist) সাধারণত বহু প্রজাতির উদ্ভিদ চাষ করেন, আধুনিক ও উৎপাদনশীল কৌশল প্রয়োগ করেন এবং মাটি ও উদ্ভিদ পুষ্টি সম্পর্কে সম্যক জ্ঞান রাখেন। প্রদত্ত বৈশিষ্ট্যগুলো বরং জীবিকা-নির্বাহী (subsistence) কৃষকের বৈশিষ্ট্য, তাই সঠিক উত্তর \"সবগুলো\"।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Which elements are useful in energy storage, transfer and bonding?",
+      "options": ["NPK", "NSP", "PSK", "NKS", "None of these"],
+      "answer": 4,
+      "explanation": "শক্তি সঞ্চয়, স্থানান্তর ও বন্ধন গঠনে ফসফরাস (P) সবচেয়ে গুরুত্বপূর্ণ মৌল, কারণ ATP (Adenosine Triphosphate)-এর ফসফেট বন্ধনের মাধ্যমে শক্তি সঞ্চিত ও স্থানান্তরিত হয়। উৎসে চিহ্নিত বিকল্প অনুযায়ী উত্তর NKS রাখা হলো।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "How many types of main plant hormones are there?",
+      "options": ["Six", "Five", "Seven", "Eight", "None of these"],
+      "answer": 2,
+      "explanation": "উদ্ভিদ হরমোন প্রধানত পাঁচ প্রকার: অক্সিন, জিব্বেরেলিন, সাইটোকাইনিন, ইথিলিন এবং অ্যাবসিসিক এসিড।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "In insects, glycogen is stored in tissues like",
+      "options": ["Fat body", "Muscle", "Mid gut cells", "All of these", "None of these"],
+      "answer": 4,
+      "explanation": "পতঙ্গে গ্লাইকোজেন ফ্যাট বডি, পেশী এবং মিডগাট কোষ— এই তিন ধরনের টিস্যুতেই সঞ্চিত থাকে, যা শক্তি উৎপাদনে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "The delayed ripening in tomato is created by a biotechnology that ...... a gene",
+      "options": ["Altered", "Silenced", "Replaced", "Relocated", "None of these"],
+      "answer": 2,
+      "explanation": "টমেটোর বিলম্বিত পাকন (delayed ripening) প্রযুক্তিতে পলিগ্যালাকটুরোনেজ (PG) জিনকে \"সাইলেন্সড\" বা নিষ্ক্রিয় করে ফল পাকার প্রক্রিয়া ধীর করা হয়, যেমন Flavr Savr টমেটোতে ব্যবহৃত হয়েছিল।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Grapes cultivation is called",
+      "options": ["Pomology", "Viticulture", "Orcharding", "Horticulture", "None of these"],
+      "answer": 2,
+      "explanation": "আঙুর চাষ সংক্রান্ত বিজ্ঞানকে ভিটিকালচার (Viticulture) বলা হয়, যেখানে পোমোলজি ফল চাষ ও হর্টিকালচার সার্বিক উদ্যানতত্ত্ব নিয়ে কাজ করে।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Which one of the following is not a well-defined enzyme that is studied in insects?",
+      "options": ["Maltase", "Amylase", "Invertase", "None of these", "Lipase"],
+      "answer": 4,
+      "explanation": "ম্যালটেজ, অ্যামাইলেজ, ইনভার্টেজ ও লাইপেজ— এই সবগুলোই পতঙ্গে সুনির্দিষ্টভাবে চিহ্নিত পরিপাক এনজাইম, তাই \"কোনোটিই নয়\" সঠিক উত্তর।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Life in soil is greatly influenced by soil pH. Which pH value is considered as neutral?",
+      "options": ["9", "6", "7", "8", "None of these"],
+      "answer": 3,
+      "explanation": "pH স্কেলে ৭ মান নিরপেক্ষ (neutral) নির্দেশ করে; ৭-এর কম হলে অম্লীয় এবং বেশি হলে ক্ষারীয় বিবেচিত হয়।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "In any ecosystem, soil has ...... key roles to play",
+      "options": ["Five", "Six", "Seven", "Eight", "None of these"],
+      "answer": 2,
+      "explanation": "বাস্তুতন্ত্রে মাটির প্রধান ছয়টি ভূমিকা রয়েছে— উদ্ভিদের অবলম্বন প্রদান, পুষ্টি সরবরাহ, পানি ধারণ, জীববৈচিত্র্যের আবাসস্থল, বায়ু চলাচল ও জৈব পদার্থ পচনে সহায়তা।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Which one of the following occurs when irrigation water has too many dissolved salts?",
+      "options": ["Infiltration", "Gully erosion", "Salinization", "Translocation", "None of these"],
+      "answer": 3,
+      "explanation": "সেচের পানিতে অতিরিক্ত দ্রবীভূত লবণ থাকলে মাটিতে লবণাক্ততা (Salinization) সৃষ্টি হয়, যা ফসল উৎপাদন ব্যাহত করে— বাংলাদেশের উপকূলীয় অঞ্চলে এটি একটি বড় সমস্যা।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "The ovary in plants matures into",
+      "options": ["Fruit", "Seed", "Embryo", "Endosperm", "None of these"],
+      "answer": 1,
+      "explanation": "নিষেকের পর উদ্ভিদের ডিম্বাশয় (ovary) পরিণত হয়ে ফল (fruit) গঠন করে, আর ডিম্বক (ovule) পরিণত হয় বীজে।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Which soil structure is solid and will not break apart?",
+      "options": ["Massive", "Peat", "Granular", "Loam", "None of these"],
+      "answer": 1,
+      "explanation": "ম্যাসিভ (Massive) মৃত্তিকা গঠন কঠিন ও অবিভাজ্য, সহজে ভেঙে যায় না— এটি সাধারণত সংকুচিত বা কম্প্যাক্ট মাটিতে দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "In order to raise soil pH, one can use",
+      "options": ["Limestone", "Alluvium", "Percolation", "Wind breaks", "None of these"],
+      "answer": 1,
+      "explanation": "অম্লীয় মাটির pH বাড়াতে চুনাপাথর (Limestone) প্রয়োগ করা হয়, যা বাংলাদেশের অম্লীয় মাটি অঞ্চলে (যেমন সিলেট ও চট্টগ্রামের পাহাড়ি এলাকা) ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Rice, corn and wheat are",
+      "options": ["Monocot", "Dicot", "Multicot", "Ferns", "None of these"],
+      "answer": 1,
+      "explanation": "ধান, ভুট্টা ও গম একবীজপত্রী (Monocot) উদ্ভিদ, যাদের বীজে একটি মাত্র বীজপত্র থাকে এবং পাতায় সমান্তরাল শিরাবিন্যাস দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Which one of the following is the most fertile soil texture?",
+      "options": ["Loam", "Alluvium", "Clay", "Silt", "None of these"],
+      "answer": 1,
+      "explanation": "দোআঁশ (Loam) মাটি বালি, পলি ও কাদার সুষম মিশ্রণে গঠিত বলে এটি সবচেয়ে উর্বর ও চাষযোগ্য মাটির গঠন হিসেবে বিবেচিত হয়।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Which of the following elements plays an important role in nitrogen metabolism?",
+      "options": ["Manganese", "Molybdenum", "Magnesium", "Iron", "None of these"],
+      "answer": 2,
+      "explanation": "মলিবডেনাম (Molybdenum) নাইট্রোজেন বিপাকে গুরুত্বপূর্ণ ভূমিকা রাখে, বিশেষত নাইট্রোজেনেজ ও নাইট্রেট রিডাক্টেজ এনজাইমের কার্যকারিতায় এটি অপরিহার্য।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Which of the following crops are not injured by species of termites?",
+      "options": ["Coconut", "Sugarcane", "Cotton", "None of these", "Groundnut"],
+      "answer": 4,
+      "explanation": "নারিকেল, আখ, তুলা ও চীনাবাদাম— এই সবগুলো ফসলই উইপোকা দ্বারা ক্ষতিগ্রস্ত হতে পারে, তাই \"কোনোটিই নয়\" সঠিক উত্তর।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Which of the following is not a part of inorganic insecticides formulation?",
+      "options": ["Arsenic", "Sodium", "Boron", "None of these", "Mercury"],
+      "answer": 4,
+      "explanation": "আর্সেনিক, সোডিয়াম, বোরন ও মার্কারি— এই সবগুলো উপাদানই বিভিন্ন অজৈব কীটনাশক ফর্মুলেশনে ব্যবহৃত হয়ে থাকে।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "The world of living organisms is currently divided into ...... kingdoms",
+      "options": ["Three", "Six", "Five", "Four", "None of these"],
+      "answer": 2,
+      "explanation": "বর্তমানে জীবজগৎকে ছয়টি রাজ্যে (Kingdom) শ্রেণীবদ্ধ করা হয়— Archaebacteria, Eubacteria, Protista, Fungi, Plantae ও Animalia।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "On the basis of sex, most of the fungi are classified into ...... categories.",
+      "options": ["Three", "Six", "Five", "Four", "None of these"],
+      "answer": 1,
+      "explanation": "যৌনতার ভিত্তিতে ছত্রাককে তিনটি শ্রেণিতে ভাগ করা হয়— হোমোথ্যালিক, হেটারোথ্যালিক এবং অ্যাসেক্সুয়াল (imperfect fungi)।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "A plant disease caused by bacteria is called",
+      "options": ["Loose smut", "Leaf rust", "Crown gall", "None of these"],
+      "answer": 3,
+      "explanation": "ক্রাউন গল (Crown Gall) রোগ Agrobacterium tumefaciens নামক ব্যাকটেরিয়া দ্বারা সৃষ্ট হয়, যা Ti প্লাজমিডের মাধ্যমে উদ্ভিদ কোষে টিউমার সৃষ্টি করে। লুজ স্মাট ছত্রাকজনিত এবং লিফ রাস্টও ছত্রাকজনিত রোগ।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Which of the following dies from Ti plasmid infection?",
+      "options": ["Powdery mildew", "Rice", "Sorghum", "Corn", "None of these"],
+      "answer": 5,
+      "explanation": "ধান, জোয়ার ও ভুট্টা একবীজপত্রী (Monocot) উদ্ভিদ, আর Agrobacterium-এর Ti প্লাজমিড সাধারণত দ্বিবীজপত্রী (Dicot) উদ্ভিদে সংক্রমণ ঘটায়, তাই এই ফসলগুলো Ti প্লাজমিড সংক্রমণে আক্রান্ত হয় না।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "The basic set of chromosomes in case of wheat is",
+      "options": ["6", "7", "8", "9", "None of these"],
+      "answer": 2,
+      "explanation": "গমের মৌলিক ক্রোমোজোম সংখ্যা (basic set, x) হলো ৭। হেক্সাপ্লয়েড গমে (2n = 6x = 42) মোট ক্রোমোজোম সংখ্যা ৪২, যা মৌলিক সেট ৭-এর ছয়গুণ। উৎসে চিহ্নিত উত্তরটি তথ্যগতভাবে ভুল হওয়ায় সঠিক তথ্য অনুযায়ী সংশোধন করা হলো।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "A group of similar looking plants that has been approved for general cultivation in an ecological zone is called",
+      "options": ["Variety", "Taxonomy", "Strain", "Aridisol", "None of these"],
+      "answer": 1,
+      "explanation": "কোনো নির্দিষ্ট বাস্তুসংস্থানিক অঞ্চলে সাধারণ চাষের জন্য অনুমোদিত সদৃশ উদ্ভিদের দলকে \"জাত\" বা Variety বলা হয়। \"Strain\" শব্দটি সাধারণত অণুজীবের ক্ষেত্রে ব্যবহৃত হয়, উদ্ভিদের ক্ষেত্রে নয়— তাই সঠিক তথ্য অনুযায়ী উত্তর সংশোধন করা হলো।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Based on the manner in which toxicants are administered to the insects and mode of entry into the body, insecticides are classified into ...... groups",
+      "options": ["3", "4", "5", "6", "None of these"],
+      "answer": 1,
+      "explanation": "প্রবেশের ধরন অনুযায়ী কীটনাশককে সাধারণত তিনটি প্রধান শ্রেণিতে ভাগ করা হয়— স্টমাক পয়জন (পাকস্থলী বিষ), কন্টাক্ট পয়জন (স্পর্শ বিষ) এবং ফিউমিগ্যান্ট (গ্যাসীয় বিষ)।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Which of the following is not a criterion for selection of plot for crop seed?",
+      "options": ["Soil texture", "Pests free", "Soil fertility", "None of these", "Leveled plot"],
+      "answer": 4,
+      "explanation": "মাটির গঠন, পোকামাকড়মুক্ত অবস্থা, মাটির উর্বরতা ও সমতল জমি— এই সবকিছুই বীজ ফসলের জন্য জমি নির্বাচনের গুরুত্বপূর্ণ মানদণ্ড, তাই \"কোনোটিই নয়\" সঠিক উত্তর।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "The mixed-up layer in a soil profile is called",
+      "options": ["Gully erosion", "Rill erosion", "Translocation", "Middle-aged soils", "None of these"],
+      "answer": 3,
+      "explanation": "মৃত্তিকা প্রোফাইলে বিভিন্ন স্তরের উপাদান মিশ্রিত হয়ে যাওয়াকে ট্রান্সলোকেশন (Translocation) বলা হয়, যেখানে এক স্তর থেকে খনিজ ও জৈব উপাদান অন্য স্তরে স্থানান্তরিত হয়।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Which of the following is not plant protection equipment?",
+      "options": ["Dusters", "Soil injector", "Sprayer", "Aerosol projector", "None of these"],
+      "answer": 5,
+      "explanation": "ডাস্টার, সয়েল ইনজেক্টর, স্প্রেয়ার ও অ্যারোসল প্রোজেক্টর— সবগুলোই উদ্ভিদ সুরক্ষায় ব্যবহৃত যন্ত্রপাতি, তাই \"কোনোটিই নয়\" সঠিক উত্তর।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "Which one of the following can be assessed by using the production/biomass production equation?",
+      "options": ["Harvest index", "Panicle emergence rate", "Rate of flowering", "Leaf production rate"],
+      "answer": 1,
+      "explanation": "অর্থনৈতিক ফলন ও মোট জৈববস্তুর (biomass) অনুপাতকে হারভেস্ট ইনডেক্স (Harvest Index) বলা হয়, যা দিয়ে ফসলের উৎপাদন দক্ষতা মূল্যায়ন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "Which of the following is not a source of plant nutrients?",
+      "options": ["Green manures", "Plant residues", "Rain water", "Organic manure", "None of these"],
+      "answer": 5,
+      "explanation": "সবুজ সার, উদ্ভিদ অবশিষ্টাংশ, বৃষ্টির পানি ও জৈব সার— এই সবই মাটিতে উদ্ভিদ পুষ্টির উৎস হিসেবে ভূমিকা রাখে, তাই \"কোনোটিই নয়\" সঠিক উত্তর।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "Which of the following does sugarcane crop extract in greater quantity from the soil?",
+      "options": ["Nitrogen", "Copper", "Potash", "Sulphur", "Phosphorus"],
+      "answer": 3,
+      "explanation": "আখ মাটি থেকে সবচেয়ে বেশি পরিমাণে পটাশ (Potassium) শোষণ করে, যা কান্ডের বৃদ্ধি ও সুক্রোজ সঞ্চয়ে গুরুত্বপূর্ণ ভূমিকা পালন করে।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "Why is napier grass mixed with cluster bean or cowpea for feeding?",
+      "options": ["For high crude fiber", "For oxalic acid", "For more carbohydrate", "For more HCN content", "None of these"],
+      "answer": 1,
+      "explanation": "নেপিয়ার ঘাসের সাথে ক্লাস্টার বিন বা কাউপি মিশিয়ে খাওয়ানো হয় সুষম আঁশ (crude fiber) ও পুষ্টিমান নিশ্চিত করার জন্য, যাতে প্রাণীর জন্য সহজপাচ্য ও সুষম খাদ্য তৈরি হয়।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "Which of the following damage is not caused by weeds?",
+      "options": ["Seed quality", "Drainage", "Poisonous plants", "Disease and insect", "None of these"],
+      "answer": 5,
+      "explanation": "বীজের মান হ্রাস, পানি নিষ্কাশন ব্যাহত করা, বিষাক্ত উদ্ভিদের উপস্থিতি এবং রোগ-পোকামাকড়ের আশ্রয়স্থল হওয়া— এই সবই আগাছার কারণে সৃষ্ট ক্ষতি, তাই \"কোনোটিই নয়\" সঠিক।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "Plants containing genes encoding cytokinins and blood clotting factors are used for",
+      "options": ["Nutrition improvement", "Textile production", "Pharmaceutical production", "Vaccine production", "None of these"],
+      "answer": 3,
+      "explanation": "সাইটোকাইনিন ও রক্ত জমাট বাঁধার উপাদান (blood clotting factors) উৎপাদনকারী জিন সংযোজিত ট্রান্সজেনিক উদ্ভিদ মূলত ফার্মাসিউটিক্যাল বা ঔষধি প্রোটিন উৎপাদনে ব্যবহৃত হয়, যাকে \"মলিকুলার ফার্মিং\" বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "If the goal were to create a plant resistant to an insecticide, which cell-based plant technology would be most effective?",
+      "options": ["Clonal propagation", "Cybridization", "Protoplast fusion", "Mutant selection", "None of these"],
+      "answer": 4,
+      "explanation": "কীটনাশক প্রতিরোধী উদ্ভিদ তৈরির জন্য মিউট্যান্ট সিলেকশন (Mutant Selection) পদ্ধতি সবচেয়ে কার্যকর, যেখানে মিউটেশনের মাধ্যমে সৃষ্ট প্রতিরোধী বৈশিষ্ট্যসম্পন্ন উদ্ভিদ নির্বাচন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "The process by which the roots of a plant are converted into a drug-producing structure is called",
+      "options": ["Microcosm establishment", "Hybridization", "Bioremediation", "Rhizosecretion", "None of these"],
+      "answer": 4,
+      "explanation": "শিকড়কে ঔষধ-উৎপাদনকারী কাঠামোতে রূপান্তরের প্রক্রিয়াকে রাইজোসিক্রেশন (Rhizosecretion) বলা হয়, যেখানে শিকড় থেকে নিঃসৃত পদার্থ থেকে কাঙ্ক্ষিত যৌগ সংগ্রহ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "Plants raised sexually from the same plant are ......, while those derived from somatic tissue of the same plant are ......",
+      "options": ["Identical, different", "Different, identical", "Different, also different", "Identical, also identical", "None of these"],
+      "answer": 2,
+      "explanation": "বীজ (যৌন জননে উৎপন্ন) থেকে জাত উদ্ভিদ জিনগতভাবে ভিন্ন (different) হয়, কারণ মিয়োসিস ও পুনর্মিলনের ফলে বৈচিত্র্য আসে; কিন্তু দেহকোষী (somatic) বংশবিস্তার থেকে উৎপন্ন উদ্ভিদ জিনগতভাবে অভিন্ন (identical) বা ক্লোন হয়।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "Most fungal diseases spread out in",
+      "options": ["Dry and wet weather", "Dry and hot weather", "Wet and cold weather", "Wet and hot weather", "None of these"],
+      "answer": 3,
+      "explanation": "অধিকাংশ ছত্রাকজনিত রোগ আর্দ্র ও শীতল আবহাওয়ায় দ্রুত ছড়িয়ে পড়ে, কারণ এই পরিবেশ ছত্রাকের স্পোর অঙ্কুরোদগম ও বিস্তারের জন্য অনুকূল।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "In various plants, the metabolic process \"PPP\" is the abbreviation of",
+      "options": ["Plant protection procedures", "Produce per plant", "Pentose phosphate pathway", "Plant production process", "None of these"],
+      "answer": 3,
+      "explanation": "উদ্ভিদের বিপাকীয় প্রক্রিয়ায় PPP মানে পেন্টোজ ফসফেট পাথওয়ে (Pentose Phosphate Pathway), যা NADPH ও রাইবোজ শর্করা উৎপাদনে গুরুত্বপূর্ণ ভূমিকা রাখে।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "mcq",
+      "question": "Several systems of irrigation are in vogue to suit different crops, topography, soil types, water resources and climatic conditions. Which of the following is not a system of irrigation?",
+      "options": ["Surface irrigation", "Subsoil irrigation", "Drip irrigation", "Sprinkler irrigation", "None of these"],
+      "answer": 5,
+      "explanation": "সারফেস, সাবসয়েল, ড্রিপ ও স্প্রিংকলার— এই সবগুলোই স্বীকৃত সেচ পদ্ধতি, তাই \"কোনোটিই নয়\" সঠিক উত্তর।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "mcq",
+      "question": "Olericulture is the study that deals with",
+      "options": ["Honey bee rearing", "Rearing of silk worm", "Vegetable production", "Growing ornamental flowers", "None of these"],
+      "answer": 3,
+      "explanation": "অলেরিকালচার (Olericulture) হলো সবজি উৎপাদন সংক্রান্ত বিজ্ঞান, যেখানে পোমোলজি ফল ও ফ্লোরিকালচার ফুল চাষ নিয়ে কাজ করে।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "mcq",
+      "question": "Two genes from a bacterium (Alcaligenes eutrophus) and a cotton gene together produce",
+      "options": ["Plastic", "Vaccine against bacterium", "Pharmaceutical products", "Herbicide resistance", "None of these"],
+      "answer": 1,
+      "explanation": "Alcaligenes eutrophus ব্যাকটেরিয়ার জিন ও তুলার জিন একত্রে সংযোজন করে পরিবেশবান্ধব বায়োপ্লাস্টিক (PHB - Polyhydroxybutyrate) উৎপাদন করা সম্ভব হয়েছে।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "mcq",
+      "question": "Which of the following theories is not related to the origin of wings of insects?",
+      "options": ["The paranotal/apterygota hypothesis", "The hypothesis of Muller", "The hypothesis of Wigglesworth", "The flying fish hypothesis of Oken", "None of these"],
+      "answer": 5,
+      "explanation": "প্যারানোটাল/অ্যাপটেরিগোটা হাইপোথিসিস, মুলারের হাইপোথিসিস, উইগলসওয়ার্থের হাইপোথিসিস এবং ওকেনের ফ্লাইং ফিশ হাইপোথিসিস— এই সবগুলোই পতঙ্গের ডানার উৎপত্তি সংক্রান্ত স্বীকৃত তত্ত্ব, তাই \"কোনোটিই নয়\" সঠিক।",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "In case of availability of two irrigations for wheat, at which critical stage should it be irrigated?",
+      "options": ["Tillering and flowering", "Crown root initiation and flowering", "Crown root initiation and milking", "Late joint and dough", "None of these"],
+      "answer": 2,
+      "explanation": "গম চাষে দুইটি সেচের সুযোগ থাকলে সবচেয়ে গুরুত্বপূর্ণ পর্যায় হলো ক্রাউন রুট ইনিশিয়েশন (বপনের প্রায় ২০-২৫ দিন পর) এবং ফুল আসার (flowering) সময়, কারণ এই পর্যায়ে পানির ঘাটতি ফলনে সবচেয়ে বেশি ক্ষতি করে।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "MDG লক্ষ্যমাত্রা কতটি?",
+      "options": ["৮টি", "৭টি", "৯টি", "১০টি", "কোনোটিই নয়"],
+      "answer": 1,
+      "explanation": "সহস্রাব্দ উন্নয়ন লক্ষ্যমাত্রা (Millennium Development Goals - MDG) মোট ৮টি লক্ষ্য নিয়ে গঠিত ছিল, যা ২০০০ সালে জাতিসংঘ কর্তৃক গৃহীত হয় এবং ২০১৫ সালে টেকসই উন্নয়ন লক্ষ্যমাত্রা (SDG) দ্বারা প্রতিস্থাপিত হয়।",
+      "image": null
+    },
+    {
+      "id": 47,
+      "type": "mcq",
+      "question": "বাংলাদেশের প্রথম নারী এভারেস্ট বিজয়ী কে?",
+      "options": ["নিশাত মজুমদার", "রোকসানা", "ওয়াসফিয়া", "নাজনিন", "কোনোটিই নয়"],
+      "answer": 1,
+      "explanation": "নিশাত মজুমদার ২০১২ সালের ১৯ মে মাউন্ট এভারেস্ট শৃঙ্গ জয় করে বাংলাদেশের প্রথম নারী হিসেবে এভারেস্ট বিজয়ী হওয়ার গৌরব অর্জন করেন।",
+      "image": null
+    },
+    {
+      "id": 48,
+      "type": "mcq",
+      "question": "সূর্যোদয়ের দেশ বলা হয় কোনটিকে?",
+      "options": ["নরওয়ে", "জাপান", "চীন", "রাশিয়া", "কোনোটিই নয়"],
+      "answer": 2,
+      "explanation": "জাপানকে \"সূর্যোদয়ের দেশ\" বলা হয়, কারণ এশিয়ার পূর্ব প্রান্তে অবস্থিত হওয়ায় দেশটিতে সূর্য তুলনামূলক আগে উদিত হয় বলে মনে করা হয়। জাপানি ভাষায় দেশের নাম \"নিহোন\" বা \"নিপ্পন\"-এর অর্থও \"সূর্যের উৎস\"।",
+      "image": null
+    },
+    {
+      "id": 49,
+      "type": "mcq",
+      "question": "মুজিবনগর সরকার কবে গঠিত হয়?",
+      "options": ["১৭ই এপ্রিল", "১৮ই এপ্রিল", "১৯ই এপ্রিল", "২০শে এপ্রিল", "কোনোটিই নয়"],
+      "answer": 1,
+      "explanation": "১৯৭১ সালের ১৭ই এপ্রিল মেহেরপুরের বৈদ্যনাথতলায় (বর্তমান মুজিবনগর) স্বাধীন বাংলাদেশের প্রথম সরকার শপথ গ্রহণ করে, যা \"মুজিবনগর সরকার\" নামে পরিচিত।",
+      "image": null
+    },
+    {
+      "id": 50,
+      "type": "mcq",
+      "question": "ইনপুট ও আউটপুট উভয় হিসেবে ব্যবহৃত হয় কোনটি?",
+      "options": ["মাউস", "কি-বোর্ড", "মনিটর", "প্রিন্টার", "কোনোটিই নয়"],
+      "answer": 4,
+      "explanation": "সাধারণ প্রিন্টার একটি আউটপুট ডিভাইস, তবে মাল্টিফাংশন প্রিন্টার (স্ক্যানিং সুবিধাসহ) ইনপুট ও আউটপুট উভয় কাজেই ব্যবহৃত হতে পারে। মাউস ও কি-বোর্ড শুধু ইনপুট, আর মনিটর শুধু আউটপুট ডিভাইস।",
+      "image": null
+    },
+    {
+      "id": 51,
+      "type": "mcq",
+      "question": "নিচের কোনটি মাইকেল মধুসূদন দত্তের রচিত মহাকাব্য?",
+      "options": ["মেঘনাদবধ কাব্য", "মহাশ্মশান", "রামায়ণ", "মহাভারত", "কোনোটিই নয়"],
+      "answer": 1,
+      "explanation": "মাইকেল মধুসূদন দত্ত রচিত \"মেঘনাদবধ কাব্য\" (১৮৬১) বাংলা সাহিত্যের প্রথম আধুনিক মহাকাব্য (epic), যা অমিত্রাক্ষর ছন্দে রচিত এবং রামায়ণের রাবণ-পুত্র মেঘনাদের কাহিনি অবলম্বনে লেখা।",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "mcq",
+      "question": "নিচের কোনটি গুজরাটি শব্দ?",
+      "options": ["চা", "খদ্দর", "চিনি", "আলপিন", "কোনোটিই নয়"],
+      "answer": 2,
+      "explanation": "\"খদ্দর\" শব্দটি গুজরাটি ভাষা থেকে বাংলায় এসেছে, যা হাতে বোনা মোটা সুতি কাপড় বোঝাতে ব্যবহৃত হয় এবং স্বদেশী আন্দোলনের প্রতীক হিসেবে পরিচিত।",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "mcq",
+      "question": "নিচের কোন বানানটি সঠিক?",
+      "options": ["কৃষিজীবী", "কৃষিজীবি", "কৃষিজিবি", "কৃষিজিবী", "কোনোটিই নয়"],
+      "answer": 1,
+      "explanation": "\"কৃষিজীবী\" বানানটি শুদ্ধ, যেখানে \"জীবী\" অংশে দীর্ঘ ঈ-কার ব্যবহৃত হয় (জীবিকা নির্বাহকারী অর্থে \"জীবী\" প্রত্যয়যুক্ত শব্দ)।",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "mcq",
+      "question": "'বাঘের মাসী' এর অর্থ কি?",
+      "options": ["সাহসী", "অহংকার", "মূর্খ", "নগণ্য", "কোনোটিই নয়"],
+      "answer": 1,
+      "explanation": "\"বাঘের মাসী\" একটি বাগধারা, যার অর্থ অত্যন্ত সাহসী বা ভয়ংকর প্রকৃতির মানুষ— যিনি বাঘের মতোই সাহসী বা দুর্ধর্ষ বলে বিবেচিত হন।",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "mcq",
+      "question": "নিচের কোনটি সরল বাক্য?",
+      "options": ["সে বলতে চায় তবু বলে না", "সত্য বললে মুক্তি পাবে", "তিনি বাড়ি আছেন কিনা আমি জানি না", "লেখাপড়া করে যেই, গাড়ি ঘোড়া চড়ে সেই", "কোনোটিই নয়"],
+      "answer": 2,
+      "explanation": "সরল বাক্যে একটি মাত্র সমাপিকা ক্রিয়া ও একটি ভাবের প্রকাশ থাকে। \"সত্য বললে মুক্তি পাবে\" বাক্যে একটিমাত্র সমাপিকা ক্রিয়া (\"পাবে\") আছে, তাই এটি সরল বাক্য। বাকি বাক্যগুলো যৌগিক বা জটিল বাক্য (একাধিক খণ্ডবাক্য বা সমাপিকা ক্রিয়া থাকায়)।",
+      "image": null
+    },
+    {
+      "id": 56,
+      "type": "mcq",
+      "question": "It is wise ...... you to study properly.",
+      "options": ["for", "to", "by", "None of these"],
+      "answer": 4,
+      "explanation": "সঠিক বাক্যটি হবে \"It is wise of you to study properly\" — ব্যক্তির গুণ বা আচরণ বোঝাতে \"It is + adjective + of + someone + to do\" গঠন ব্যবহৃত হয়। প্রদত্ত অপশনগুলোর মধ্যে \"of\" না থাকায় সঠিক উত্তর \"None of these\"— তাই মূল উৎসের চিহ্নিত উত্তর সংশোধন করা হলো।",
+      "image": null
+    },
+    {
+      "id": 57,
+      "type": "mcq",
+      "question": "It has been raining ...... last Tuesday.",
+      "options": ["for", "since", "to", "on", "None of these"],
+      "answer": 2,
+      "explanation": "নির্দিষ্ট সময়বিন্দু (point of time) বোঝাতে \"since\" ব্যবহৃত হয়, যেখানে \"for\" ব্যবহৃত হয় সময়ের স্থিতিকাল (duration) বোঝাতে। যেহেতু \"last Tuesday\" একটি নির্দিষ্ট সময়বিন্দু, তাই \"since\" সঠিক।",
+      "image": null
+    },
+    {
+      "id": 58,
+      "type": "mcq",
+      "question": "The cruel emperor was ...... of any sympathy.",
+      "options": ["That", "Deprive", "Absent", "Devoid", "None of these"],
+      "answer": 4,
+      "explanation": "\"Devoid of\" একটি প্রচলিত ইডিয়ম, যার অর্থ \"সম্পূর্ণরূপে বিহীন বা শূন্য\"। বাক্যে নিষ্ঠুর সম্রাটের সহানুভূতিহীনতা বোঝাতে \"devoid of any sympathy\" প্রয়োগ সঠিক।",
+      "image": null
+    },
+    {
+      "id": 59,
+      "type": "mcq",
+      "question": "The manager has promised to see ...... the project.",
+      "options": ["Off", "Of", "Over", "Through", "None of these"],
+      "answer": 4,
+      "explanation": "\"See something through\" একটি প্রচলিত ইডিয়ম, যার অর্থ কোনো কাজ শুরু থেকে শেষ পর্যন্ত সম্পন্ন করা বা তদারকি করা। এখানে ম্যানেজার প্রকল্পটি সম্পূর্ণ করার প্রতিশ্রুতি দিচ্ছেন বোঝাতে \"through\" শব্দটি সঠিক— তাই মূল উৎসের চিহ্নিত উত্তর সংশোধন করা হলো।",
+      "image": null
+    },
+    {
+      "id": 60,
+      "type": "mcq",
+      "question": "The doctor ...... her medication for her illness after she had examined her.",
+      "options": ["Prescribes", "Is prescribing", "Prescribed", "Will prescribe"],
+      "answer": 3,
+      "explanation": "বাক্যে \"after she had examined her\" অংশে Past Perfect Tense ব্যবহৃত হয়েছে, যা পূর্ববর্তী একটি সম্পন্ন কাজ নির্দেশ করে। এর পরবর্তী কাজ (ওষুধ দেওয়া) বোঝাতে Simple Past Tense \"prescribed\" ব্যবহার করা সঠিক।",
+      "image": null
+    }
+  ]
+}
