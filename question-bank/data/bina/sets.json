@@ -35,6 +35,17 @@
       "description": "BINA Scientific Officer পরীক্ষা ২০১৪"
     },
     {
+      "id": "so-2012",
+      "title": "Scientific Officer 2012",
+      "year": 2012,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 60,
+      "description": "BINA Scientific Officer পরীক্ষা ২০১২"
+    },
+    {
       "id": "so-2018",
       "title": "Scientific Officer 2018",
       "year": 2018,
