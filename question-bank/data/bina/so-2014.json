@@ -761,5 +761,159 @@
       "explanation": "প্রশ্নে উল্লিখিত কোনো ডিভাইসই ইনপুট ও আউটপুট উভয় হিসেবে কাজ করে না। মাউস এবং কিবোর্ড শুধু ইনপুট ডিভাইস, মনিটর এবং প্রিন্টার শুধু আউটপুট ডিভাইস। তবে টাচস্ক্রিন, হেডসেট, মডেম, নেটওয়ার্ক কার্ড ইত্যাদি ইনপুট ও আউটপুট উভয় হিসেবে কাজ করতে পারে। তাই সঠিক উত্তর 'কোনটিই নয়'।",
       "image": null
     }
+  ],
+  {
+  "questions": [
+    {
+      "id": 51,
+      "type": "mcq",
+      "question": "নিচের কোনটি মাইকেল মধুসুদন দত্তের রচিত মহাকাব্য?",
+      "options": [
+        "মেঘনাদ বধ",
+        "মহাশ্মশান",
+        "রামায়ণ",
+        "মহাভারত",
+        "কোনটিই নয়"
+      ],
+      "answer": 0,
+      "explanation": "মেঘনাদবধ কাব্য মাইকেল মধুসূদন দত্তের রচিত বাংলা সাহিত্যের প্রথম সার্থক মহাকাব্য। এটি ১৮৬১ সালে প্রকাশিত হয়। এই মহাকাব্যে রামায়ণের কাহিনীকে ভিন্ন দৃষ্টিকোণ থেকে উপস্থাপন করা হয়েছে যেখানে রাবণপুত্র মেঘনাদ (ইন্দ্রজিৎ) নায়ক। এটি অমিত্রাক্ষরছন্দে রচিত এবং নয়টি সর্গে বিভক্ত। মহাশ্মশান কবি কায়কোবাদের রচনা, রামায়ণ ও মহাভারত প্রাচীন ভারতীয় মহাকাব্য।",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "mcq",
+      "question": "নিচের কোনটি গুজরাটি শব্দ?",
+      "options": [
+        "চা",
+        "খদ্দর",
+        "চিনি",
+        "আলপিন",
+        "কোনটিই নয়"
+      ],
+      "answer": 1,
+      "explanation": "খদ্দর একটি গুজরাটি শব্দ যার অর্থ হস্তচালিত তাঁতে বোনা মোটা কাপড়। মহাত্মা গান্ধীর স্বদেশী আন্দোলনে খদ্দর বিশেষ গুরুত্ব পায়। চা শব্দটি চীনা ভাষা থেকে এসেছে। চিনি শব্দটি সংস্কৃত 'শর্করা' থেকে উদ্ভূত। আলপিন ইংরেজি শব্দ।",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "mcq",
+      "question": "নিচের কোন বানানটি সঠিক?",
+      "options": [
+        "কৃষিজীবী",
+        "কৃষিজীবি",
+        "কৃষিজিবি",
+        "কৃষিজিবী",
+        "কোনটিই নয়"
+      ],
+      "answer": 0,
+      "explanation": "কৃষিজীবী শব্দের সঠিক বানান। এটি 'কৃষি' এবং 'জীবী' দুটি শব্দের সমাস। বাংলা বানান রীতি অনুযায়ী 'জীবী' শব্দে ঈ-কার ব্যবহৃত হয়। কৃষিজীবী অর্থ যে ব্যক্তি কৃষিকাজের মাধ্যমে জীবিকা নির্বাহ করে। বাংলা একাডেমি প্রমিত বাংলা বানানের নিয়ম অনুসারে এটিই সঠিক বানান।",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "mcq",
+      "question": "'বাঘের মাসী' এর অর্থ কি?",
+      "options": [
+        "সাহসী",
+        "অহংকার",
+        "মূর্খ",
+        "নগণ্য",
+        "কোনটিই নয়"
+      ],
+      "answer": 0,
+      "explanation": "'বাঘের মাসী' বাগধারাটির অর্থ সাহসী বা নির্ভীক ব্যক্তি। এই বাগধারাটি ব্যঙ্গার্থেও ব্যবহৃত হয় যখন কেউ অযথা সাহস দেখায় বা বাহাদুরি করে। বাঘ যেহেতু সাহসী ও শক্তিশালী প্রাণী, তার মাসী অর্থাৎ তার চেয়েও বেশি সাহসী বোঝাতে এই বাগধারা ব্যবহৃত হয়। বাংলা সাহিত্যে এই ধরনের বাগধারা প্রচুর ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "mcq",
+      "question": "নিচের কোনটি সরল বাক্য?",
+      "options": [
+        "সে বলতে চায় তবু বলে না",
+        "সত্য বললে মুক্তি পাবে",
+        "তিনি বাড়ি আছেন কিনা আমি জানি না",
+        "লেখা পড়া করে যেই, গাড়ি ঘোড়া চড়ে সেই",
+        "কোনটিই নয়"
+      ],
+      "answer": 1,
+      "explanation": "'সত্য বললে মুক্তি পাবে' একটি সরল বাক্য। সরল বাক্যে একটি মাত্র সমাপিকা ক্রিয়া (finite verb) থাকে এবং একটি উদ্দেশ্য ও একটি বিধেয় থাকে। প্রথম বাক্যটি যৌগিক বাক্য (দুটি স্বাধীন বাক্য 'তবু' দ্বারা যুক্ত)। তৃতীয় বাক্যটি জটিল বাক্য (একটি প্রধান ও একটি আश্রিত উপবাক্য)। চতুর্থ বাক্যটিও জটিল বাক্য (সম্বন্ধবাচক সর্বনাম 'যেই' দ্বারা যুক্ত)।",
+      "image": null
+    },
+    {
+      "id": 56,
+      "type": "mcq",
+      "question": "It is wise ...... you to study properly.",
+      "options": [
+        "for",
+        "of",
+        "by",
+        "to",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The correct answer is 'of'. The structure 'It is + adjective + of + person + to + verb' is used when the adjective describes a quality of the person. 'Wise' describes the person, so we use 'of'. Complete sentence: 'It is wise of you to study properly.' We use 'of' with adjectives like wise, kind, nice, foolish, clever, stupid, etc.\n\nসঠিক উত্তর 'of'। 'It is + adjective + of + person + to + verb' গঠন ব্যবহৃত হয় যখন বিশেষণটি ব্যক্তির গুণ বর্ণনা করে। 'Wise' ব্যক্তিকে বর্ণনা করে, তাই আমরা 'of' ব্যবহার করি। সম্পূর্ণ বাক্য: 'It is wise of you to study properly।' Wise, kind, nice, foolish, clever, stupid ইত্যাদি বিশেষণের সাথে 'of' ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 57,
+      "type": "mcq",
+      "question": "It has been raining ...... last Tuesday.",
+      "options": [
+        "for",
+        "since",
+        "to",
+        "on",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The correct answer is 'since'. 'Since' is used with a specific point in time (last Tuesday, 2010, yesterday, etc.) to indicate when an action started. 'For' is used with a period of time (two hours, three days, etc.). Complete sentence: 'It has been raining since last Tuesday.' Present Perfect Continuous tense is used with 'since' to show an action that started in the past and continues to the present.\n\nসঠিক উত্তর 'since'। নির্দিষ্ট সময়ের সাথে (last Tuesday, 2010, yesterday ইত্যাদি) 'since' ব্যবহৃত হয় যা নির্দেশ করে কখন একটি কাজ শুরু হয়েছিল। সময়কাল (two hours, three days ইত্যাদি) এর সাথে 'for' ব্যবহৃত হয়। সম্পূর্ণ বাক্য: 'It has been raining since last Tuesday।' Present Perfect Continuous tense 'since' এর সাথে ব্যবহৃত হয় এমন কাজ দেখাতে যা অতীতে শুরু হয়ে বর্তমান পর্যন্ত চলছে।",
+      "image": null
+    },
+    {
+      "id": 58,
+      "type": "mcq",
+      "question": "The cruel emperor was ...... of any sympathy.",
+      "options": [
+        "that",
+        "deprive",
+        "absent",
+        "devoid",
+        "unheard",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "The correct answer is 'devoid'. 'Devoid of' means completely lacking or free from something. Complete sentence: 'The cruel emperor was devoid of any sympathy.' This phrase indicates the emperor had no sympathy at all. 'Devoid' is always followed by 'of' and describes a total absence of a quality or characteristic.\n\nসঠিক উত্তর 'devoid'। 'Devoid of' অর্থ সম্পূর্ণভাবে কোনো কিছু থেকে বঞ্চিত বা মুক্ত। সম্পূর্ণ বাক্য: 'The cruel emperor was devoid of any sympathy।' এই বাক্যাংশ নির্দেশ করে যে সম্রাটের কোনো সহানুভূতি ছিল না। 'Devoid' সবসময় 'of' দ্বারা অনুসৃত হয় এবং কোনো গুণ বা বৈশিষ্ট্যের সম্পূর্ণ অনুপস্থিতি বর্ণনা করে।",
+      "image": null
+    },
+    {
+      "id": 59,
+      "type": "mcq",
+      "question": "The manager has promised to see the project ......",
+      "options": [
+        "off",
+        "of",
+        "over",
+        "through",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "The correct answer is 'through'. 'See something through' means to complete or finish something, especially something difficult. Complete sentence: 'The manager has promised to see the project through.' This phrasal verb indicates commitment to completing the project until the end. 'See through' in this context means to persevere and complete.\n\nসঠিক উত্তর 'through'। 'See something through' অর্থ কোনো কিছু সম্পন্ন করা বা শেষ করা, বিশেষত কঠিন কিছু। সম্পূর্ণ বাক্য: 'The manager has promised to see the project through।' এই phrasal verb প্রকল্পটি শেষ পর্যন্ত সম্পন্ন করার প্রতিশ্রুতি নির্দেশ করে। এই প্রসঙ্গে 'see through' মানে অধ্যবসায় করা এবং সম্পন্ন করা।",
+      "image": null
+    },
+    {
+      "id": 60,
+      "type": "mcq",
+      "question": "The doctor ...... her medication for her illness after she had examined her.",
+      "options": [
+        "prescribes",
+        "is prescribing",
+        "prescribed",
+        "will prescribe",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "The correct answer is 'prescribed'. Simple Past tense is used because both actions (examining and prescribing) happened in the past. The Past Perfect 'had examined' shows the examination happened first, then the prescribing (Simple Past) happened after that. Complete sentence: 'The doctor prescribed her medication for her illness after she had examined her.'\n\nসঠিক উত্তর 'prescribed'। Simple Past tense ব্যবহৃত হয়েছে কারণ উভয় কাজ (পরীক্ষা এবং ওষুধ দেওয়া) অতীতে ঘটেছে। Past Perfect 'had examined' দেখায় যে পরীক্ষা প্রথমে হয়েছিল, তারপর ওষুধ দেওয়া (Simple Past) সেই পরে ঘটেছে। সম্পূর্ণ বাক্য: 'The doctor prescribed her medication for her illness after she had examined her।'",
+      "image": null
+    }
   ]
 }
