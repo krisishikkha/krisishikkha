@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "title": "BJRI Scientific Officer (SO) Recruitment Exam",
+    "institute": "Bangladesh Jute Research Institute (BJRI)",
+    "year": 2011,
+    "position": "Scientific Officer (SO)",
+    "totalQuestions": 60,
+    "type": "free",
+    "examDate": "2011",
+    "duration": "1 hours",
+    "totalMarks": 60
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Retting is best done at which temperature?",
+      "options": ["34°C", "25°C", "20°C", "None of these"],
+      "answer": 0,
+      "explanation": "Retting is the microbial process that separates jute fibre from the woody stalk. It proceeds fastest when water temperature is around 34°C, because this range favors rapid multiplication of the pectin-degrading bacteria involved.\n\nরেটিং হলো এমন একটি জৈবিক প্রক্রিয়া যার মাধ্যমে পাটের আঁশ কাঠের অংশ থেকে আলাদা হয়। পানির তাপমাত্রা প্রায় ৩৪° সেলসিয়াস থাকলে পেকটিন-বিয়োজনকারী ব্যাকটেরিয়া দ্রুত বংশবৃদ্ধি করে, ফলে রেটিং প্রক্রিয়া দ্রুত সম্পন্ন হয়। বাংলাদেশে সাধারণত জুন-আগস্ট মাসে পাট পচানো হয়, যখন পানির তাপমাত্রা এই পরিসরের কাছাকাছি থাকে।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which of the following crops requires, on average, very excessive water in tropical areas?",
+      "options": ["Rice", "Sugarcane", "Jute", "Tobacco", "None of these"],
+      "answer": 0,
+      "explanation": "Rice is a semi-aquatic crop and needs standing water in the field for most of its growth period, especially at tillering and flowering stages, making it the most water-demanding among these crops.\n\nধান একটি অর্ধ-জলজ ফসল, যার জীবনচক্রের অধিকাংশ সময় জমিতে দাঁড়ানো পানি প্রয়োজন হয়, বিশেষ করে কুশি ও ফুল আসার পর্যায়ে। এই কারণে তালিকার অন্যান্য ফসলের তুলনায় ধানে সবচেয়ে বেশি পানি লাগে। বাংলাদেশে বোরো ধানে সেচের প্রয়োজন সবচেয়ে বেশি।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "For leaf shedding, jute plants are left in the field for...",
+      "options": ["3-4 days", "5-8 days", "8-10 days", "10-14 days", "None of these"],
+      "answer": 1,
+      "explanation": "After harvesting, jute plants are defoliated by leaving them stacked in the field for about 5-8 days. This allows leaves to fall off naturally before bundling and retting, reducing organic load in the retting water.\n\nপাট কাটার পর গাছগুলো জমিতে প্রায় ৫-৮ দিন স্তূপ করে রাখা হয়, যাতে পাতা স্বাভাবিকভাবে ঝরে পড়ে। এতে জাগ দেওয়ার আগে পাতা পরিষ্কার হয়ে যায় এবং পচানো পানিতে জৈব বর্জ্যের চাপ কমে, ফলে আঁশের গুণগত মান ভালো থাকে।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "The process of covering the soil surface with any material such as organic wastes is called...",
+      "options": ["Mulching", "Reciprocation", "Dibbling", "Densification", "None of these"],
+      "answer": 0,
+      "explanation": "Mulching is covering the soil surface with organic or inorganic material to conserve moisture, suppress weeds, and regulate soil temperature.\n\nমালচিং হলো জৈব বা অজৈব উপাদান দিয়ে মাটির উপরিভাগ ঢেকে দেওয়ার পদ্ধতি। এর ফলে মাটির আর্দ্রতা সংরক্ষিত থাকে, আগাছার বৃদ্ধি কমে এবং মাটির তাপমাত্রা নিয়ন্ত্রিত থাকে। বাংলাদেশে খড়, কচুরিপানা ও পলিথিন মালচ ব্যাপকভাবে ব্যবহৃত হয়, বিশেষত সবজি ও শাক চাষে।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Which of the following plants will not thrive in standing water?",
+      "options": ["Capsularis jute", "Olitorius jute", "Tea", "Sugarcane", "None of these"],
+      "answer": 2,
+      "explanation": "Tea is grown on well-drained hilly/upland soil and cannot tolerate waterlogging, unlike jute varieties and sugarcane, which can withstand periods of standing water.\n\nচা গাছ উঁচু ও নিষ্কাশনযুক্ত জমিতে জন্মে এবং জলাবদ্ধতা সহ্য করতে পারে না। অন্যদিকে পাট (কর্পাসুলারিস ও অলিটোরিয়াস) এবং আখ কিছুদিন দাঁড়ানো পানি সহ্য করতে সক্ষম। তাই তালিকার মধ্যে চা-ই একমাত্র গাছ যা দাঁড়ানো পানিতে টিকতে পারে না।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "___ is a microbial process affected by various aerobic and anaerobic bacteria in which the bark gets loosened and separated from the woody stalk.",
+      "options": ["Retting", "Grading", "Getting", "Processing", "None of these"],
+      "answer": 0,
+      "explanation": "Retting is the microbial decomposition process, carried out by aerobic and anaerobic bacteria, that loosens the fibrous bark from the woody core of jute stalks.\n\nরেটিং হলো এমন একটি জৈবিক প্রক্রিয়া, যেখানে বায়বীয় ও অবায়বীয় ব্যাকটেরিয়ার কার্যকলাপে পাটের কাণ্ডের ছাল কাঠের অংশ থেকে আলগা হয়ে আলাদা হয়ে যায়। এটি পাট আঁশ উৎপাদনের সবচেয়ে গুরুত্বপূর্ণ ধাপ।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Plants do not absorb which of the following from the soil?",
+      "options": ["Phosphorus", "Manganese", "Molybdenum", "Carbon", "None of these"],
+      "answer": 3,
+      "explanation": "Carbon is not absorbed from the soil; plants obtain carbon mainly from atmospheric CO2 through photosynthesis, whereas the other elements listed are soil-derived mineral nutrients.\n\nকার্বন মাটি থেকে শোষিত হয় না; উদ্ভিদ সালোকসংশ্লেষণের মাধ্যমে বায়ুমণ্ডলের কার্বন-ডাই-অক্সাইড থেকে কার্বন সংগ্রহ করে। ফসফরাস, ম্যাঙ্গানিজ ও মলিবডেনাম মাটি থেকে শোষিত খনিজ পুষ্টি উপাদান, তাই এদের সাথে কার্বনের উৎস আলাদা।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "What is the ambient composition of atmospheric gases required for most crop seeds' germination?",
+      "options": ["10% O2, 31% CO2 & 7% N", "12% O2, 0.3% CO2 & 7.8% N", "20% O2, 0.03% CO2 & 78.2% N", "None of these"],
+      "answer": 2,
+      "explanation": "Normal atmospheric air, which is about 20-21% oxygen, roughly 0.03-0.04% carbon dioxide, and about 78% nitrogen, provides the ideal gas balance for seed germination, since seeds mainly need adequate oxygen for respiration.\n\nবীজের অঙ্কুরোদগমের জন্য স্বাভাবিক বায়ুমণ্ডলীয় গ্যাসের অনুপাত প্রয়োজন হয়, যেখানে প্রায় ২০% অক্সিজেন, ০.০৩% কার্বন-ডাই-অক্সাইড এবং প্রায় ৭৮% নাইট্রোজেন থাকে। বীজের শ্বসনক্রিয়ার জন্য পর্যাপ্ত অক্সিজেন অপরিহার্য, তাই স্বাভাবিক বাতাসের এই অনুপাতই সবচেয়ে উপযোগী।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "All the TSP & MP fertilizers are to be applied...",
+      "options": ["Before final ploughing", "During final ploughing", "After first ploughing", "During first irrigation", "None of these"],
+      "answer": 1,
+      "explanation": "TSP (Triple Super Phosphate) and MP (Muriate of Potash) are relatively immobile in soil, so they are best mixed into the soil during the final ploughing/land preparation to ensure availability near the root zone.\n\nটিএসপি ও এমপি সার মাটিতে সহজে সরে যায় না, তাই শেষ চাষের সময় এগুলো মাটিতে ভালোভাবে মিশিয়ে দেওয়া হয়, যাতে গাছের শিকড়ের কাছাকাছি সহজলভ্য থাকে। এতে সারের অপচয় কম হয় এবং ফলন বৃদ্ধি পায়।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Which of the following is the most profitable technology for a three-crop based crop rotation?",
+      "options": ["Jute-Lentil & Mustard", "Jute-T.Aman-Wheat", "Jute-Radish-Wheat & Lentil", "All of these", "None of these"],
+      "answer": 1,
+      "explanation": "The Jute-T.Aman-Wheat rotation is a well-established, high-yielding cropping pattern in Bangladesh that efficiently utilizes the growing seasons and maintains soil fertility across the year.\n\nবাংলাদেশে পাট-রোপা আমন-গম শস্য বিন্যাস একটি প্রমাণিত লাভজনক পদ্ধতি, যা বছরের তিনটি ঋতুকে কার্যকরভাবে ব্যবহার করে এবং মাটির উর্বরতা বজায় রাখে। এই বিন্যাসে জমির ব্যবহার সর্বোচ্চ হয় এবং কৃষকের আয় বৃদ্ধি পায়।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Which of the insects' infestation can be controlled through flood irrigation?",
+      "options": ["Borers", "Jute Apion", "Mole cricket", "Red mites", "None of these"],
+      "answer": 2,
+      "explanation": "Mole crickets live and burrow in soil; flooding the field submerges their burrows and forces them out or drowns them, offering an effective non-chemical control method.\n\nমোল ক্রিকেট মাটির নিচে গর্ত করে বসবাস করে। জমিতে বন্যা সেচ দিলে তাদের গর্ত পানিতে ডুবে যায় এবং পোকা বাধ্য হয়ে বেরিয়ে আসে বা মারা যায়। এটি একটি কার্যকর অ-রাসায়নিক দমন পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "By placing a rope soaked in kerosene over the plants, the infestation of which of the following insects is minimized?",
+      "options": ["Jute semilooper", "Mole cricket", "Jute apion", "White and red mites", "None of these"],
+      "answer": 0,
+      "explanation": "Dragging a kerosene-soaked rope over the jute canopy dislodges jute semilooper larvae from leaves, and the kerosene odor also repels adult moths, reducing infestation.\n\nকেরোসিন-ভেজা দড়ি পাট গাছের উপর দিয়ে টেনে দিলে সেমিলুপার পোকার লার্ভা পাতা থেকে খসে পড়ে এবং কেরোসিনের গন্ধ পূর্ণবয়স্ক মথকে দূরে রাখে। এভাবে পাট সেমিলুপার পোকার আক্রমণ কমানো যায়।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "What is the average yield of jute fiber that can be attained per decimal of land?",
+      "options": ["100-120 kg", "60-80 kg", "50-70 kg", "80-90 kg", "None of these"],
+      "answer": 0,
+      "explanation": "Under good management with recommended varieties, jute fields in Bangladesh commonly yield about 100-120 kg of dry fiber per decimal.\n\nসঠিক ব্যবস্থাপনা ও উন্নত জাতের ব্যবহার হলে বাংলাদেশে প্রতি শতাংশ জমিতে সাধারণত ১০০-১২০ কেজি শুকনো পাট আঁশ উৎপাদন হয়। এই ফলন নির্ভর করে জমির উর্বরতা, সার প্রয়োগ ও পরিচর্যার উপর।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "In order to raise soil pH, one can use...",
+      "options": ["Limestone", "Alluvium", "TSP", "Urea", "None of these"],
+      "answer": 0,
+      "explanation": "Limestone is alkaline and neutralizes soil acidity, thereby raising soil pH; this is the standard practice for reclaiming acidic soils common in parts of Bangladesh's hilly and haor areas.\n\nচুনাপাথর ক্ষারীয় প্রকৃতির, যা মাটির অম্লত্ব প্রশমিত করে এবং মাটির pH বাড়ায়। বাংলাদেশের পাহাড়ি ও হাওর অঞ্চলের অম্লীয় মাটি সংশোধনে চুন প্রয়োগ একটি প্রচলিত ও কার্যকর পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Rice, corn and wheat are...",
+      "options": ["Monocot", "Dicot", "Multicot", "Ferns", "None of these"],
+      "answer": 0,
+      "explanation": "Rice, corn, and wheat all belong to the grass family (Poaceae) and are monocotyledonous plants, having a single seed leaf, parallel leaf venation, and fibrous root systems.\n\nধান, ভুট্টা ও গম—তিনটিই ঘাস পরিবারের (Poaceae) সদস্য এবং একবীজপত্রী উদ্ভিদ। এদের একটি করে বীজপত্র থাকে, পাতার শিরা সমান্তরাল হয় এবং মূল হয় গুচ্ছমূল ধরনের।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Which one of the following is the most fertile soil texture?",
+      "options": ["Loam", "Alluvium", "Clay", "Silt", "None of these"],
+      "answer": 0,
+      "explanation": "Loam soil has a balanced mix of sand, silt, and clay, giving it good drainage, water retention, and nutrient-holding capacity, which makes it the most fertile and workable soil texture for crops.\n\nদোআঁশ মাটিতে বালি, পলি ও কাদার সুষম মিশ্রণ থাকে, ফলে এতে পানি নিষ্কাশন ভালো হয়, আর্দ্রতা ও পুষ্টি ধরে রাখার ক্ষমতাও থাকে বেশি। এই কারণে দোআঁশ মাটিকে সবচেয়ে উর্বর ও চাষযোগ্য মাটির গঠন বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Which of the following elements plays an important role in nitrogen metabolism?",
+      "options": ["Manganese", "Magnesium", "Molybdenum", "Iron", "None of these"],
+      "answer": 2,
+      "explanation": "Molybdenum is a key micronutrient required by the enzyme nitrate reductase and by nitrogen-fixing bacteria, making it essential for nitrogen metabolism in plants.\n\nমলিবডেনাম নাইট্রেট রিডাকটেজ এনজাইম এবং নাইট্রোজেন-সংবন্ধনকারী ব্যাকটেরিয়ার জন্য অত্যন্ত প্রয়োজনীয় একটি অণুপুষ্টি উপাদান। এটি উদ্ভিদের নাইট্রোজেন বিপাক প্রক্রিয়ায় গুরুত্বপূর্ণ ভূমিকা রাখে।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Which of the following crops are not injured by species of termites?",
+      "options": ["Coconut", "Sugarcane", "Cotton", "Groundnut", "None of these"],
+      "answer": 4,
+      "explanation": "Termites are polyphagous and can damage all of the listed crops (coconut, sugarcane, cotton, and groundnut) under favorable conditions, so none of them is fully immune.\n\nউইপোকা বহুভোজী পতঙ্গ এবং অনুকূল পরিবেশে নারিকেল, আখ, তুলা ও চীনাবাদাম—সবগুলো ফসলেরই ক্ষতি করতে সক্ষম। তাই তালিকার কোনো ফসলই উইপোকার আক্রমণ থেকে সম্পূর্ণ মুক্ত নয়।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Which of the following is not a part of inorganic insecticide formulation?",
+      "options": ["Arsenic", "Boron", "Sodium", "Mercury", "None of these"],
+      "answer": 4,
+      "explanation": "Historically, inorganic insecticides have been formulated using arsenic, boron, sodium, and mercury compounds, so all the listed elements have been used in such formulations.\n\nঐতিহাসিকভাবে আর্সেনিক, বোরন, সোডিয়াম ও পারদ (মার্কারি) যৌগ ব্যবহার করে অজৈব কীটনাশক তৈরি করা হয়েছে। ফলে তালিকার সবগুলো উপাদানই কোনো না কোনোভাবে অজৈব কীটনাশক তৈরিতে ব্যবহৃত হয়েছে।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "How can the infestation of jute hairy caterpillar be controlled?",
+      "options": ["The leaves with larvae can be collected & destroyed", "By sowing sufficient seeds", "The weeds should be cleaned", "Spreading of ash", "None of these"],
+      "answer": 0,
+      "explanation": "Jute hairy caterpillar larvae feed and cluster on leaves; manually collecting infested leaves and destroying them is a simple, effective, and eco-friendly mechanical control method.\n\nপাট লোমশ শুঁয়াপোকা পাতায় দলবদ্ধ হয়ে খাদ্য গ্রহণ করে। আক্রান্ত পাতা হাতে সংগ্রহ করে ধ্বংস করা একটি সহজ, কার্যকর এবং পরিবেশবান্ধব যান্ত্রিক দমন পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "How many steps are there in seed technology?",
+      "options": ["Three", "Five", "Four", "Six", "None of these"],
+      "answer": 2,
+      "explanation": "Seed technology is generally divided into four broad steps: variety development/selection, seed production, seed processing (drying, cleaning, grading), and seed storage/distribution.\n\nবীজ প্রযুক্তিকে সাধারণত চারটি ধাপে ভাগ করা হয়: জাত উদ্ভাবন/নির্বাচন, বীজ উৎপাদন, বীজ প্রক্রিয়াকরণ (শুকানো, পরিষ্কারকরণ, গ্রেডিং) এবং বীজ সংরক্ষণ ও বিতরণ। এই চার ধাপ মিলেই মানসম্পন্ন বীজ কৃষকের হাতে পৌঁছায়।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "A plant disease caused by bacteria is called...",
+      "options": ["Loose smut", "Crown gall", "Leaf rust", "Powdery mildew", "None of these"],
+      "answer": 1,
+      "explanation": "Crown gall is caused by the bacterium Agrobacterium tumefaciens, which induces abnormal tumor-like growths at the crown or roots of infected plants; the other diseases listed are fungal.\n\nক্রাউন গল রোগ Agrobacterium tumefaciens নামক ব্যাকটেরিয়া দ্বারা সৃষ্ট হয়, যা আক্রান্ত গাছের গোড়া বা শিকড়ে টিউমারের মতো অস্বাভাবিক ফোলা সৃষ্টি করে। তালিকার অন্য রোগগুলো (লুজ স্মাট, লিফ রাস্ট, পাউডারি মিলডিউ) ছত্রাকজনিত।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "What is the scientific name of jute stem rot?",
+      "options": ["Colletotrichum corchori", "Macrophomina phaseolina", "Rhizoctonia solani", "All of these", "None of these"],
+      "answer": 1,
+      "explanation": "Jute stem rot (also called charcoal rot) is caused by the fungus Macrophomina phaseolina, which attacks the stem base and causes black lesions leading to lodging.\n\nপাটের কাণ্ড পচা রোগ (চারকোল রট নামেও পরিচিত) Macrophomina phaseolina নামক ছত্রাক দ্বারা সৃষ্ট হয়। এটি কাণ্ডের গোড়ায় কালো দাগ সৃষ্টি করে, যার ফলে গাছ হেলে পড়ে বা মারা যায়।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "What is the chromosome number of jute?",
+      "options": ["14", "8", "17", "10", "None of these"],
+      "answer": 0,
+      "explanation": "Both cultivated jute species, Corchorus capsularis and Corchorus olitorius, have a diploid chromosome number of 2n=14.\n\nপাটের দুটি চাষযোগ্য প্রজাতি, Corchorus capsularis ও Corchorus olitorius, উভয়েরই দ্বিগুণিত ক্রোমোজোম সংখ্যা 2n=১৪। এই তথ্যটি পাট প্রজনন ও জাত উন্নয়ন গবেষণায় গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "A group of similar looking plants that has been approved for general cultivation in an ecological zone is called...",
+      "options": ["Variety", "Strain", "Taxonomy", "Aridisol", "None of these"],
+      "answer": 0,
+      "explanation": "A 'variety' is defined in seed technology as a group of plants within a species that are similar in characteristics and have been officially recognized/approved for general cultivation.\n\nবীজ প্রযুক্তিতে 'জাত' (ভ্যারাইটি) বলতে বোঝায় এমন একদল উদ্ভিদ, যাদের বৈশিষ্ট্য একই রকম এবং যা সরকারিভাবে সাধারণ চাষাবাদের জন্য অনুমোদিত। 'স্ট্রেইন' শব্দটি সাধারণত জীবাণু বা অননুমোদিত উপ-জনগোষ্ঠীর ক্ষেত্রে ব্যবহৃত হয়, তাই সঠিক উত্তর 'জাত (Variety)'।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Which of the following is a predator or beneficial insect?",
+      "options": ["Damsel fly", "Lady bird beetle", "Spider", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "Damsel flies, lady bird beetles, and spiders are all natural predators that feed on crop pests, making them beneficial for biological pest control.\n\nডেমসেল ফ্লাই, লেডি বার্ড বিটল এবং মাকড়সা—সবগুলোই প্রাকৃতিক শিকারি পতঙ্গ, যারা ক্ষতিকর পোকা খেয়ে ফসলের ক্ষতি কমায়। এরা জৈবিক পোকা দমনে সহায়ক এবং কৃষকের বন্ধু হিসেবে পরিচিত।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Which of the following is used as green manure?",
+      "options": ["Rice", "Wheat", "Jute", "Banana", "None of these"],
+      "answer": 4,
+      "explanation": "None of the listed crops (rice, wheat, jute, banana) is a standard green manure crop; typical green manure crops in Bangladesh are dhaincha (Sesbania), sunhemp, and cowpea, which are grown and ploughed under to enrich soil.\n\nতালিকার কোনো ফসলই (ধান, গম, পাট, কলা) প্রচলিত সবুজ সার ফসল নয়। বাংলাদেশে সাধারণত ঢৈঞ্চা, শণ ও ফেলন জাতীয় ফসল সবুজ সার হিসেবে চাষ করে মাটিতে চাপা দেওয়া হয়, যা মাটির উর্বরতা বৃদ্ধি করে।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Which of the following is not mixed with urea?",
+      "options": ["Cowdung", "Compost", "Lime", "Gypsum", "None of these"],
+      "answer": 2,
+      "explanation": "Lime is alkaline and, when mixed with urea, causes ammonia volatilization, leading to significant nitrogen loss; hence lime should not be mixed or applied together with urea.\n\nচুন ক্ষারীয় প্রকৃতির এবং ইউরিয়ার সাথে মিশ্রিত করলে অ্যামোনিয়া গ্যাস হয়ে উবে যায়, ফলে নাইট্রোজেনের অপচয় হয়। তাই চুন কখনো ইউরিয়ার সাথে মিশিয়ে বা একসাথে প্রয়োগ করা উচিত নয়।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Where are the deficiency symptoms of rice blast observed?",
+      "options": ["Leaf", "Seed", "Stem", "Leaf, neck & panicle", "None of these"],
+      "answer": 3,
+      "explanation": "Rice blast, caused by Magnaporthe oryzae, produces symptoms on the leaf (leaf blast), the neck of the panicle (neck blast), and the panicle itself, making it a disease affecting multiple plant parts.\n\nধানের ব্লাস্ট রোগ (Magnaporthe oryzae দ্বারা সৃষ্ট) পাতা, শীষের গলা (নেক ব্লাস্ট) এবং শীষ—এই তিন জায়গাতেই লক্ষণ প্রকাশ করে। এটি বাংলাদেশে ধান চাষে অন্যতম ক্ষতিকর রোগ হিসেবে পরিচিত।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "What is the ratio of water and salt used for a seed test?",
+      "options": ["10:3", "10:1", "10:2", "10:4", "None of these"],
+      "answer": 1,
+      "explanation": "In the salt-water test for checking seed viability/purity, a standard 10:1 water-to-salt ratio is used to create a saline solution in which healthy, viable seeds sink while light or hollow seeds float.\n\nবীজের গুণগত মান পরীক্ষায় লবণ-পানি পরীক্ষায় সাধারণত ১০:১ অনুপাতে পানি ও লবণ মিশিয়ে দ্রবণ তৈরি করা হয়। এই দ্রবণে সুস্থ ও ভারী বীজ ডুবে যায়, আর হালকা বা ফাঁপা বীজ ভেসে ওঠে, যা বীজ বাছাইয়ে সহায়ক।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "Which of the following is not a source of plant nutrients?",
+      "options": ["Green manures", "Plant residues", "Organic manure", "Rain water", "None of these"],
+      "answer": 4,
+      "explanation": "Green manures, plant residues, organic manure, and even rainwater (which carries trace dissolved nitrogen and minerals) all contribute nutrients to soil, so none of them can be excluded as a nutrient source.\n\nসবুজ সার, ফসলের অবশিষ্টাংশ, জৈব সার, এমনকি বৃষ্টির পানিও (যাতে সামান্য দ্রবীভূত নাইট্রোজেন ও খনিজ থাকে) মাটিতে পুষ্টি সরবরাহ করে। তাই তালিকার কোনোটিকেই পুষ্টির উৎস হিসেবে বাদ দেওয়া যায় না।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "Which of the following requires more irrigation?",
+      "options": ["T.Aman", "Jute", "Boro Dhan", "Sugarcane", "None of these"],
+      "answer": 2,
+      "explanation": "Boro rice is grown in the dry winter/summer season entirely dependent on irrigation, requiring the highest total water input among these crops in Bangladesh.\n\nবোরো ধান শুষ্ক শীত ও গ্রীষ্ম মৌসুমে চাষ করা হয় এবং সম্পূর্ণভাবে সেচের উপর নির্ভরশীল। তাই বাংলাদেশের প্রেক্ষাপটে তালিকার অন্যান্য ফসলের তুলনায় বোরো ধানে সবচেয়ে বেশি সেচের প্রয়োজন হয়।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "How many times is rouging done?",
+      "options": ["2-3 times", "1 time", "4 times", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "Rouging (removal of off-type, diseased, or weed plants from a seed field) is typically done 2-3 times during the crop growth period to maintain seed purity.\n\nরোগিং (বীজ প্লট থেকে অফ-টাইপ, রোগাক্রান্ত বা আগাছা জাতীয় গাছ অপসারণ) ফসলের বৃদ্ধিকালে সাধারণত ২-৩ বার করা হয়, যাতে বীজের বিশুদ্ধতা বজায় থাকে।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "What is the meaning of the Latin word 'Pome'?",
+      "options": ["Fruit", "Flower", "Spice", "Vegetables", "None of these"],
+      "answer": 0,
+      "explanation": "'Pome' refers to a type of fleshy fruit (such as apple or pear) in which the fleshy part develops from the floral tube surrounding the ovary; the term itself broadly denotes a fruit.\n\n'পোম' শব্দটি একধরনের রসালো ফলকে বোঝায় (যেমন আপেল বা নাশপাতি), যেখানে ফলের মাংসল অংশ ডিম্বাশয়কে ঘিরে থাকা পুষ্পনলী থেকে তৈরি হয়। মূলত এই শব্দটি সাধারণভাবে 'ফল' বোঝাতেই ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "Which of the following is a mixed fertilizer?",
+      "options": ["Urea", "TSP", "Calcium", "MOP", "None of these"],
+      "answer": 4,
+      "explanation": "Urea, TSP, and MOP are all single-nutrient (straight) fertilizers supplying only nitrogen, phosphorus, or potassium respectively; none of the listed options is a mixed/compound fertilizer, which must contain two or more nutrients combined.\n\nইউরিয়া, টিএসপি ও এমপি প্রতিটিই একক পুষ্টি উপাদানযুক্ত (স্ট্রেইট) সার, যা যথাক্রমে শুধু নাইট্রোজেন, ফসফরাস বা পটাশিয়াম সরবরাহ করে। মিশ্র সার বলতে বোঝায় দুই বা ততোধিক পুষ্টি উপাদান একত্রে থাকা সার, তাই তালিকার কোনোটিই মিশ্র সার নয়।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "If the goal were to create a plant resistant to an insecticide, which cell-based plant technology would be most effective?",
+      "options": ["Clonal propagation", "Protoplast fusion", "Cybridization", "Mutant selection", "None of these"],
+      "answer": 3,
+      "explanation": "Mutant selection involves inducing mutations (chemically or physically) and then selecting cell lines or plants that show the desired resistance trait, making it the most direct cell-based approach for developing insecticide-resistant plants.\n\nমিউট্যান্ট সিলেকশন পদ্ধতিতে রাসায়নিক বা ভৌত উপায়ে মিউটেশন ঘটিয়ে পরে পছন্দসই প্রতিরোধী বৈশিষ্ট্যসম্পন্ন কোষ বা উদ্ভিদ নির্বাচন করা হয়। এই কারণে কীটনাশক-প্রতিরোধী উদ্ভিদ তৈরিতে এটি সবচেয়ে সরাসরি ও কার্যকর কোষভিত্তিক পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "The process by which the roots of a plant are converted into drug-producing structures is called...",
+      "options": ["Microcosm establishment", "Hybridization", "Bioremediation", "Rhizosecretion", "None of these"],
+      "answer": 3,
+      "explanation": "Rhizosecretion is the technique where genetically modified roots are induced to secrete valuable compounds (such as pharmaceutical proteins) directly into the growth medium, effectively converting roots into drug-producing structures.\n\nরাইজোসিক্রেশন এমন একটি কৌশল, যেখানে জিনগতভাবে পরিবর্তিত শিকড়কে মূল্যবান যৌগ (যেমন ঔষধি প্রোটিন) সরাসরি বৃদ্ধি মাধ্যমে নিঃসরণ করতে উদ্বুদ্ধ করা হয়। এভাবে শিকড়কে কার্যত ওষুধ উৎপাদনকারী কাঠামোতে রূপান্তরিত করা যায়।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "Plants derived sexually from the same plant are ___, while those derived from somatic tissue of the same plant are ___.",
+      "options": ["Identical, different", "Different, identical", "Different, also different", "Identical, also identical", "None of these"],
+      "answer": 1,
+      "explanation": "Sexually produced offspring result from genetic recombination and are therefore genetically different from the parent, while somatic (vegetative) propagation copies the parent's genome exactly, producing genetically identical clones.\n\nযৌন প্রজননের মাধ্যমে উৎপন্ন সন্তান জিনগত পুনর্বিন্যাসের কারণে মূল গাছ থেকে ভিন্ন হয়, কিন্তু কায়িক (ভেজিটেটিভ) বংশবিস্তারে মূল গাছের জিনোম হুবহু কপি হয়, ফলে উৎপন্ন গাছ জিনগতভাবে অভিন্ন (ক্লোন) হয়।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "Most fungal diseases spread out in...",
+      "options": ["Dry and wet weather", "Wet and cold weather", "Dry and hot weather", "Wet and hot weather", "None of these"],
+      "answer": 1,
+      "explanation": "Most fungal pathogens require high humidity or free moisture combined with cool temperatures for spore germination and infection, so wet and cold weather favors rapid disease spread.\n\nবেশিরভাগ ছত্রাকজনিত রোগ ছড়াতে বেশি আর্দ্রতা বা পানির উপস্থিতি এবং তুলনামূলক ঠান্ডা তাপমাত্রা প্রয়োজন হয়, যা স্পোর অঙ্কুরোদগম ও সংক্রমণে সহায়ক। তাই ভেজা ও ঠান্ডা আবহাওয়ায় ছত্রাকজনিত রোগ দ্রুত ছড়ায়।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "In plant metabolism, the abbreviation 'PPP' stands for...",
+      "options": ["Plant protection procedures", "Produce per plant", "Pentose phosphate pathway", "Plant production process", "None of these"],
+      "answer": 2,
+      "explanation": "PPP stands for the Pentose Phosphate Pathway, a metabolic route parallel to glycolysis that generates NADPH and pentose sugars used in nucleotide and amino acid biosynthesis.\n\nPPP মানে পেন্টোজ ফসফেট পাথওয়ে, যা গ্লাইকোলাইসিসের পাশাপাশি চলা একটি বিপাকীয় পথ। এই পথে NADPH এবং পেন্টোজ শর্করা উৎপন্ন হয়, যা নিউক্লিওটাইড ও অ্যামিনো অ্যাসিড সংশ্লেষণে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "mcq",
+      "question": "Which of the following is not a system of irrigation?",
+      "options": ["Surface irrigation", "Subsoil irrigation", "Drip irrigation", "Sprinkler irrigation", "None of these"],
+      "answer": 4,
+      "explanation": "Surface, subsoil (sub-surface), drip, and sprinkler irrigation are all recognized irrigation systems used depending on crop, soil, and water availability, so none of the listed options is excluded.\n\nসারফেস, সাবসয়েল, ড্রিপ ও স্প্রিংকলার—এই চারটিই স্বীকৃত সেচ পদ্ধতি, যা ফসল, মাটি ও পানির প্রাপ্যতা অনুযায়ী ব্যবহৃত হয়। তাই তালিকার কোনোটিকেই সেচ পদ্ধতি থেকে বাদ দেওয়া যায় না।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "mcq",
+      "question": "Olericulture is the branch of study that deals with...",
+      "options": ["Honey bee rearing", "Rearing of silk worm", "Vegetable production", "Growing ornamental flowers", "None of these"],
+      "answer": 2,
+      "explanation": "Olericulture is the branch of horticulture specifically concerned with the production, cultivation, and marketing of vegetables.\n\nওলেরিকালচার হলো উদ্যানতত্ত্বের একটি শাখা, যা মূলত সবজি উৎপাদন, চাষাবাদ ও বিপণন নিয়ে কাজ করে। এটি ফুল চাষ (ফ্লোরিকালচার) বা ফল চাষ (পোমোলজি) থেকে আলাদা একটি বিষয়।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "mcq",
+      "question": "Two genes from a bacterium (Alcaligenes eutrophus) combined with a cotton gene produce...",
+      "options": ["Plastic", "Pharmaceutical products", "Vaccine against bacterium", "Herbicide resistance", "None of these"],
+      "answer": 0,
+      "explanation": "Genes from Alcaligenes eutrophus that encode enzymes for producing biodegradable polymer (PHB, a form of bioplastic) have been transferred into cotton plants to make them accumulate biodegradable plastic in their fibers.\n\nAlcaligenes eutrophus ব্যাকটেরিয়ার জিন, যা জৈব-বিয়োজনযোগ্য পলিমার (PHB, এক ধরনের বায়োপ্লাস্টিক) তৈরি করে, তুলা গাছে স্থানান্তর করে তুলার আঁশে জৈব-বিয়োজনযোগ্য প্লাস্টিক জমা করানো হয়েছে। এটি জিন প্রকৌশলের একটি উল্লেখযোগ্য প্রয়োগ।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "mcq",
+      "question": "Which of the following theories is not related to the origin of wings of insects?",
+      "options": ["The hypothesis of Apterygota", "The hypothesis of Muller", "The hypothesis of Wigglesworth", "The flying fish hypothesis of Oken", "None of these"],
+      "answer": 4,
+      "explanation": "All the listed hypotheses (paranotal/Apterygota-related theory, Muller's theory, Wigglesworth's theory, and Oken's flying-fish theory) are historically proposed explanations for insect wing origin, so none of them is unrelated.\n\nতালিকার প্রতিটি তত্ত্বই (অ্যাপ্টেরিগোটা সংক্রান্ত তত্ত্ব, মুলারের তত্ত্ব, উইগলসওয়ার্থের তত্ত্ব এবং ওকেনের উড়ন্ত মাছ তত্ত্ব) পতঙ্গের ডানার উৎপত্তি ব্যাখ্যা করার জন্য ঐতিহাসিকভাবে প্রস্তাবিত হয়েছে। তাই তালিকার কোনোটিই এই বিষয়ের সাথে সম্পর্কহীন নয়।",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "In case of availability of two irrigations for wheat, at which critical stage should it be irrigated?",
+      "options": ["Tillering and flowering", "Crown root initiation and flowering", "Crown root initiation and milking", "Late joint and dough", "None of these"],
+      "answer": 1,
+      "explanation": "For wheat, the two most critical growth stages for irrigation are crown root initiation (about 20-25 days after sowing) and flowering, since water stress at these stages most severely reduces yield.\n\nগমের ক্ষেত্রে সেচের জন্য সবচেয়ে গুরুত্বপূর্ণ দুটি পর্যায় হলো ক্রাউন রুট ইনিশিয়েশন (বপনের প্রায় ২০-২৫ দিন পর) এবং ফুল আসার সময়। এই দুই পর্যায়ে পানির অভাব হলে ফলন সবচেয়ে বেশি ক্ষতিগ্রস্ত হয়।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "Which is not a singular number?",
+      "options": ["Agenda", "Datum", "Each", "Every", "None of these"],
+      "answer": 0,
+      "explanation": "'Agenda' is technically the plural form of the Latin word 'agendum,' though it is commonly used as a singular noun in English; among the options, it is the one whose singular status is grammatically questionable, unlike 'datum,' 'each,' and 'every,' which are clearly singular.\n\n'Agenda' শব্দটি মূলত ল্যাটিন শব্দ 'agendum'-এর বহুবচন রূপ, যদিও ইংরেজিতে এটি সাধারণত একবচন হিসেবে ব্যবহৃত হয়। তালিকার মধ্যে এটিই ব্যাকরণগতভাবে একবচন হওয়া নিয়ে প্রশ্নবিদ্ধ, যেখানে 'datum', 'each' ও 'every' স্পষ্টভাবে একবচন।",
+      "image": null
+    },
+    {
+      "id": 47,
+      "type": "mcq",
+      "question": "I don't know how you can ___ so much noise?",
+      "options": ["Put away", "Put up with", "Put back", "Put off", "None of these"],
+      "answer": 1,
+      "explanation": "'Put up with' means to tolerate or endure something unpleasant, which fits the context of tolerating noise.\n\n'Put up with' মানে হলো কোনো অপ্রীতিকর বিষয় সহ্য করা বা মেনে নেওয়া, যা এই বাক্যে শব্দ সহ্য করার প্রসঙ্গে সঠিকভাবে খাপ খায়। তাই সঠিক উত্তর 'put up with'।",
+      "image": null
+    },
+    {
+      "id": 48,
+      "type": "mcq",
+      "question": "The opposite word of 'terminate' is...",
+      "options": ["Depart", "Begin", "Change", "Prevent", "All of these"],
+      "answer": 1,
+      "explanation": "'Terminate' means to end or conclude something, so its direct antonym is 'begin,' which means to start something.\n\n'Terminate' শব্দের অর্থ কোনো কিছু শেষ করা বা সমাপ্ত করা। এর সরাসরি বিপরীত শব্দ হলো 'begin', যার অর্থ কোনো কিছু শুরু করা।",
+      "image": null
+    },
+    {
+      "id": 49,
+      "type": "mcq",
+      "question": "Agriculture in Bangladesh is heavily influenced by the monsoon and ___ primarily of rice cultivation.",
+      "options": ["Consisting", "Will consist", "Consists", "Has consisted", "None of these"],
+      "answer": 2,
+      "explanation": "The sentence needs a present tense verb agreeing with the singular subject 'Agriculture,' so 'consists' is grammatically correct.\n\nএই বাক্যে একবচন কর্তা 'Agriculture'-এর সাথে বর্তমান কালের ক্রিয়াপদ প্রয়োজন, তাই ব্যাকরণগতভাবে সঠিক শব্দ হলো 'consists'।",
+      "image": null
+    },
+    {
+      "id": 50,
+      "type": "mcq",
+      "question": "The traditional method of rice cultivation leads ___ a yield ___ about 700 kg/acre of Aman paddy.",
+      "options": ["To, for", "To, of", "On, of", "For, of", "None of these"],
+      "answer": 1,
+      "explanation": "The correct prepositions are 'leads to' (a result) and 'a yield of' (specifying the quantity), making 'to, of' the grammatically correct pair.\n\nএখানে সঠিক প্রিপোজিশন জোড়া হলো 'leads to' (কোনো ফলাফলের দিকে নিয়ে যাওয়া) এবং 'a yield of' (পরিমাণ নির্দেশ করা), তাই সঠিক উত্তর 'to, of'।",
+      "image": null
+    },
+    {
+      "id": 51,
+      "type": "mcq",
+      "question": "'হাতের পাঁচ' মানে কি?",
+      "options": ["শেষ সম্বল", "নিকটজন", "পরমাত্মীয়", "অধিক সম্পদ", "কোনটিই নয়"],
+      "answer": 0,
+      "explanation": "'হাতের পাঁচ' একটি প্রচলিত বাগধারা, যার অর্থ শেষ সম্বল বা সবশেষে ভরসাযোগ্য অবলম্বন—যা বিপদের সময় কাজে লাগানো হয়।\n\nThis is a common Bangla idiom meaning 'the last resort' or 'the final asset kept in reserve for emergencies.' Idioms like this are frequently tested in Bangla language sections of competitive exams.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "mcq",
+      "question": "জসীম উদ্দীনের গ্রন্থ কোনটি?",
+      "options": ["শেষের কবিতা", "সোজন বাদিয়ার ঘাট", "সোনার তরী", "দোলন চাঁপা", "ব্যথার দান"],
+      "answer": 1,
+      "explanation": "'সোজন বাদিয়ার ঘাট' পল্লিকবি জসীম উদ্দীনের রচিত একটি বিখ্যাত কাব্যগ্রন্থ। অন্য গ্রন্থগুলো ভিন্ন লেখকের রচনা— 'শেষের কবিতা' ও 'সোনার তরী' রবীন্দ্রনাথ ঠাকুরের এবং 'দোলন চাঁপা' ও 'ব্যথার দান' কাজী নজরুল ইসলামের রচনা।\n\n'Sojan Badiyar Ghat' is a well-known verse-novel by the folk poet Jasimuddin, distinguishing it from Tagore's and Nazrul's works listed among the options.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "mcq",
+      "question": "সরল বাক্যে রূপান্তর কর: 'যে সত্য কথা বলে, তাকে সকলে বিশ্বাস করে'।",
+      "options": ["যিনি সত্যবাদী হন, তাকে সকলে বিশ্বাস করে", "যিনি সত্যবাদী, তাকে সকলে বিশ্বাস করে", "যখন মানুষ সত্যবাদী হয়, তখন তাকে সকলে বিশ্বাস করে", "সত্যবাদীকে সকলে বিশ্বাস করে", "সবগুলোই"],
+      "answer": 3,
+      "explanation": "যৌগিক/জটিল বাক্যকে সরল বাক্যে রূপান্তর করার সময় অপ্রধান খণ্ডবাক্যকে একটি শব্দ বা বাক্যাংশে সংক্ষিপ্ত করতে হয়। এখানে 'যে সত্য কথা বলে' অংশটিকে 'সত্যবাদী' শব্দে রূপান্তর করে বাক্যটি সরল করা হয়েছে: 'সত্যবাদীকে সকলে বিশ্বাস করে'।\n\nWhen converting a complex sentence into a simple one, the subordinate clause is condensed into a single word or phrase, giving the correct simple sentence form here.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "mcq",
+      "question": "আগুন এর প্রতিশব্দ নয় কোনটি?",
+      "options": ["অনল", "বহ্নি", "কর", "হুতাশন", "শিখা", "কোনটিই নয়"],
+      "answer": 2,
+      "explanation": "'অনল', 'বহ্নি', 'হুতাশন' ও 'শিখা'—এই চারটি শব্দই আগুনের প্রতিশব্দ। কিন্তু 'কর' শব্দের অর্থ হাত বা রাজস্ব/ট্যাক্স, আগুনের সাথে এর কোনো সম্পর্ক নেই। তাই সঠিক উত্তর 'কর'।\n\n'Onal', 'bahni', 'hutashan', and 'shikha' are all Bangla synonyms for fire, while 'kor' means 'hand' or 'tax/revenue' and has no connection to fire, making it the correct answer.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "mcq",
+      "question": "কোনটি শুদ্ধ বানান?",
+      "options": ["আলস্যতা", "আলস্য", "অলস্য", "আলসতা", "আলশ্য"],
+      "answer": 1,
+      "explanation": "'আলস্য' শব্দটি শুদ্ধ বানান, যার অর্থ কুঁড়েমি বা অলসতা। অন্য রূপগুলো ('আলস্যতা', 'অলস্য', 'আলসতা', 'আলশ্য') ভুল বানান, যেগুলো সাধারণত ভুলবশত লেখা হয়।\n\n'আলস্য' is the correct spelling of the word meaning 'laziness'; the other forms listed are common misspellings frequently tested in Bangla spelling questions.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "type": "mcq",
+      "question": "Where is Wall Street located?",
+      "options": ["London", "New York", "Sydney", "Washington", "None of these"],
+      "answer": 1,
+      "explanation": "Wall Street is located in Lower Manhattan, New York City, and is home to major stock exchanges like the New York Stock Exchange (NYSE), making it a global symbol of the financial industry.\n\nওয়াল স্ট্রিট যুক্তরাষ্ট্রের নিউ ইয়র্ক শহরের লোয়ার ম্যানহাটনে অবস্থিত, যেখানে নিউ ইয়র্ক স্টক এক্সচেঞ্জ (NYSE)-সহ বিশ্বের অন্যতম গুরুত্বপূর্ণ আর্থিক প্রতিষ্ঠান অবস্থিত। এটি বিশ্ব অর্থনীতির একটি প্রতীকী কেন্দ্র হিসেবে পরিচিত।",
+      "image": null
+    },
+    {
+      "id": 57,
+      "type": "mcq",
+      "question": "What is a key chamber of the British Parliament?",
+      "options": ["Congress", "Diet", "House of Commons", "None of these"],
+      "answer": 2,
+      "explanation": "The British Parliament is bicameral, consisting of the House of Commons and the House of Lords; among the given options, House of Commons is the correct chamber associated with British Parliament, unlike 'Congress' (USA) or 'Diet' (Japan).\n\nব্রিটিশ পার্লামেন্ট দ্বিকক্ষবিশিষ্ট, যা হাউস অব কমন্স ও হাউস অব লর্ডস নিয়ে গঠিত। প্রদত্ত অপশনগুলোর মধ্যে 'হাউস অব কমন্স' সঠিক উত্তর, যেখানে 'কংগ্রেস' যুক্তরাষ্ট্রের এবং 'ডায়েট' জাপানের আইনসভাকে বোঝায়।",
+      "image": null
+    },
+    {
+      "id": 58,
+      "type": "mcq",
+      "question": "ADB stands for?",
+      "options": ["Asian Development Bank", "Annual Development Budget", "Actual Development Budget", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "ADB stands for the Asian Development Bank, a regional development bank established to promote economic growth and development in Asia and the Pacific.\n\nADB মানে এশীয় উন্নয়ন ব্যাংক (Asian Development Bank), যা এশিয়া ও প্রশান্ত মহাসাগরীয় অঞ্চলের অর্থনৈতিক প্রবৃদ্ধি ও উন্নয়ন ত্বরান্বিত করতে প্রতিষ্ঠিত একটি আঞ্চলিক উন্নয়ন ব্যাংক।",
+      "image": null
+    },
+    {
+      "id": 59,
+      "type": "mcq",
+      "question": "The word LAN is related to...",
+      "options": ["Air traffic control", "Fertilizer factory", "Bridge design", "Computer network", "None of these"],
+      "answer": 3,
+      "explanation": "LAN stands for Local Area Network, a computer networking term referring to a network confined to a small geographic area like an office or building.\n\nLAN মানে লোকাল এরিয়া নেটওয়ার্ক, যা একটি কম্পিউটার নেটওয়ার্কিং সংক্রান্ত শব্দ, যা অফিস বা ভবনের মতো ছোট ভৌগোলিক এলাকার মধ্যে সীমাবদ্ধ নেটওয়ার্ককে বোঝায়।",
+      "image": null
+    },
+    {
+      "id": 60,
+      "type": "mcq",
+      "question": "Deficiency of ___ causes Goiter (গলগণ্ড).",
+      "options": ["Vitamin C", "Iodine", "Vitamin A", "Vitamin D", "None of these"],
+      "answer": 1,
+      "explanation": "Goiter is caused by iodine deficiency, which impairs thyroid hormone production and leads to enlargement of the thyroid gland.\n\nআয়োডিনের অভাবে গলগণ্ড রোগ হয়, কারণ আয়োডিনের ঘাটতিতে থাইরয়েড হরমোন উৎপাদন ব্যাহত হয় এবং থাইরয়েড গ্রন্থি ফুলে যায়। বাংলাদেশে আয়োডিনযুক্ত লবণ ব্যবহারের মাধ্যমে এই সমস্যা প্রতিরোধ করা হয়।",
+      "image": null
+    }
+  ]
+}
