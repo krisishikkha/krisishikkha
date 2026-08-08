@@ -22,6 +22,17 @@
       "format": ["article"],
       "totalQuestions": 60,
       "description": "BJRI Scientific Officer পরীক্ষা ২০১১"
+    },
+    {
+      "id": "so-2016",
+      "title": "Scientific Officer 2016",
+      "year": 2016,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 55,
+      "description": "BJRI Scientific Officer পরীক্ষা ২০১৬"
     }
   ]
 }
