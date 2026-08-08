@@ -1,0 +1,510 @@
+{
+  "meta": {
+    "title": "Bangladesh Jute Research Institute (BJRI) Scientific Officer Recruitment Exam",
+    "institute": "BJRI",
+    "year": 2016,
+    "position": "Scientific Officer (SO)",
+    "totalQuestions": 55,
+    "type": "free",
+    "examDate": "2016",
+    "duration": "1 hours",
+    "totalMarks": 60
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Which of the following is most resistant to decompose?",
+      "options": ["Cellulose", "Hemicellulose", "Lignin", "None of these"],
+      "answer": 2,
+      "explanation": "Lignin is highly resistant to microbial decomposition due to its complex phenolic polymer structure, unlike cellulose and hemicellulose which decompose faster.\n\nলিগনিন একটি জটিল ফেনোলিক পলিমার, যা মাটির অণুজীব দ্বারা সহজে পচে না। সেলুলোজ ও হেমিসেলুলোজের তুলনায় লিগনিন পচনে সবচেয়ে বেশি প্রতিরোধী, তাই জৈব পদার্থ বিয়োজনে এটি দীর্ঘ সময় নেয়।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Minor crop of Bangladesh -",
+      "options": ["Rice", "Potato", "Wheat", "Sugar beet", "None of these"],
+      "answer": 3,
+      "explanation": "Sugar beet is not a traditional or major crop of Bangladesh; rice, wheat, and potato are staple/major crops, whereas sugar beet cultivation is minimal.\n\nবাংলাদেশে ধান, আলু ও গম প্রধান ফসল হিসেবে ব্যাপকভাবে চাষ হয়, কিন্তু সুগার বিট এখানে একটি অপ্রচলিত/গৌণ ফসল, যার চাষ খুবই সীমিত পরিসরে হয়ে থাকে।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "If the storage life of seeds are increased for 4 years, then moisture content must keep in -",
+      "options": ["11-13%", "8-10%", "10-12%", "7-9%", "None of these"],
+      "answer": 1,
+      "explanation": "For long-term seed storage (around 4 years), moisture content should be maintained between 8-10% to prevent fungal growth and maintain seed viability.\n\nবীজের সংরক্ষণকাল ৪ বছর পর্যন্ত বাড়াতে হলে বীজের আর্দ্রতা ৮-১০% এর মধ্যে রাখা প্রয়োজন। এর বেশি আর্দ্রতা থাকলে ছত্রাক আক্রমণ ও অঙ্কুরোদগম ক্ষমতা কমে যাওয়ার আশঙ্কা থাকে।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "The pH of tea cultivation is -",
+      "options": ["3-5", "4-5", "6-7", "6.5-7.5", "None of these"],
+      "answer": 1,
+      "explanation": "Tea plants thrive best in acidic soil with a pH range of 4-5; this acidity supports optimal nutrient uptake for tea bushes.\n\nচা চাষের জন্য উপযুক্ত মাটির pH হলো ৪-৫, অর্থাৎ অম্লীয় মাটি। এই pH পরিসরে চা গাছ পুষ্টি উপাদান সবচেয়ে ভালোভাবে গ্রহণ করতে পারে। বাংলাদেশে সিলেট ও চট্টগ্রামের পাহাড়ি অঞ্চলে এই ধরনের অম্লীয় মাটি পাওয়া যায়, যা চা চাষের উপযোগী।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Oolong means -",
+      "options": ["Mango", "Tea", "Coffee", "Rice", "None of these"],
+      "answer": 1,
+      "explanation": "Oolong is a traditional Chinese tea, partially fermented between green and black tea in processing.\n\nOolong একটি ঐতিহ্যবাহী চীনা চা, যা সবুজ চা ও কালো চায়ের মাঝামাঝি আংশিক গাঁজন প্রক্রিয়ায় তৈরি করা হয়। এটি চায়ের একটি বিশেষ প্রকারভেদ।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Which of the following is the wood sugar?",
+      "options": ["Glucose", "Mannose", "Arabinose", "Xylose", "None of these"],
+      "answer": 3,
+      "explanation": "Xylose, derived from xylan in hemicellulose (wood), is commonly known as \"wood sugar.\"\n\nজাইলোজ কাঠের হেমিসেলুলোজ (জাইলান) থেকে পাওয়া যায় বলে একে \"উড সুগার\" বা কাঠ চিনি বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Cell division occurs due to presence of -",
+      "options": ["Auxin", "Gibberellin", "Cytokinin", "Ethylene", "None of these"],
+      "answer": 2,
+      "explanation": "Cytokinin is the plant hormone primarily responsible for promoting cell division (cytokinesis).\n\nসাইটোকাইনিন হরমোন উদ্ভিদ কোষ বিভাজন (সাইটোকাইনেসিস) ঘটাতে মুখ্য ভূমিকা পালন করে। এটি কোষ বিভাজন উদ্দীপিত করে এবং অক্সিনের সাথে মিলে টিস্যু বৃদ্ধি নিয়ন্ত্রণ করে।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Cell division is hampered due to lack of -",
+      "options": ["Spindle fiber", "Centriole", "Chromatin", "Nucleolus", "None of these"],
+      "answer": 0,
+      "explanation": "Cell division is hampered when spindle fibers fail to form, since they are essential for the separation of chromosomes during mitosis/meiosis.\n\nকোষ বিভাজনের সময় স্পিন্ডল ফাইবার ক্রোমোজোম পৃথকীকরণে গুরুত্বপূর্ণ ভূমিকা পালন করে। স্পিন্ডল ফাইবারের অভাবে ক্রোমোজোম সঠিকভাবে বিভক্ত হতে পারে না, ফলে কোষ বিভাজন ব্যাহত হয়।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Transgene objective is to introduce -",
+      "options": ["Foreign gene", "Gene deletion", "Gene silencing", "Gene duplication", "None of these"],
+      "answer": 0,
+      "explanation": "The objective of a transgene is to introduce a foreign (exogenous) gene into a host organism's genome to express a desired trait.\n\nট্রান্সজিনের উদ্দেশ্য হলো একটি বহিরাগত (foreign) জিনকে হোস্ট জীবের জিনোমে প্রবেশ করানো, যাতে কাঙ্ক্ষিত বৈশিষ্ট্য প্রকাশ পায়। এটি জেনেটিক ইঞ্জিনিয়ারিং বা বায়োটেকনোলজির একটি গুরুত্বপূর্ণ কৌশল।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Which one of the gene-based techniques is used for gene transfer in dicot plants?",
+      "options": ["Ti plasmid", "Gene gun", "Electroporation", "Microinjection", "None of these"],
+      "answer": 0,
+      "explanation": "Ti plasmid (Tumor inducing plasmid) from Agrobacterium tumefaciens is widely used for gene transfer in dicot plants due to its natural infection mechanism.\n\nTi প্লাজমিড (Agrobacterium tumefaciens থেকে প্রাপ্ত) ডাইকট উদ্ভিদে জিন স্থানান্তরের জন্য সবচেয়ে বহুল ব্যবহৃত পদ্ধতি, কারণ Agrobacterium প্রাকৃতিকভাবে উদ্ভিদ কোষে জিন প্রবেশ করাতে পারে।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Chromatin is a -",
+      "options": ["Protein", "Nucleic acid", "Both a & b", "All of these", "None of these"],
+      "answer": 2,
+      "explanation": "Chromatin consists of DNA (nucleic acid) wrapped around histone proteins, so it is composed of both protein and nucleic acid.\n\nক্রোমাটিন হলো DNA (নিউক্লিক এসিড) এবং হিস্টোন প্রোটিনের সমন্বয়ে গঠিত একটি জটিল কাঠামো, যা নিউক্লিয়াসে জিনগত তথ্য সংরক্ষণ করে। তাই এটি প্রোটিন ও নিউক্লিক এসিড উভয়ের সমন্বয়ে গঠিত।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Which one is coconut's insect?",
+      "options": ["Rhinoceros beetle", "Red palm weevil", "Black bug", "Coconut mite", "None of these"],
+      "answer": 0,
+      "explanation": "Rhinoceros beetle (Oryctes rhinoceros) is a major destructive pest of coconut palms, boring into the crown and damaging young leaves.\n\nরাইনোসেরাস বিটল (Oryctes rhinoceros) নারিকেল গাছের একটি প্রধান ক্ষতিকর পোকা, যা গাছের মুকুট ছিদ্র করে কচি পাতার ক্ষতি করে।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "What is rouging?",
+      "options": ["Removal of off type plant", "Removal of diseased plant only", "Adding fertilizer", "Weed control method", "None of these"],
+      "answer": 0,
+      "explanation": "Rouging is the process of identifying and removing off-type, diseased, or undesirable plants from a seed production field to maintain genetic purity.\n\nরোগিং হলো বীজ উৎপাদন ক্ষেত্র থেকে অফ-টাইপ (মূল জাত থেকে ভিন্ন) বা অবাঞ্ছিত গাছ চিহ্নিত করে অপসারণ করার পদ্ধতি, যা বীজের জেনেটিক বিশুদ্ধতা বজায় রাখতে সাহায্য করে।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Which one of the following type of plants does not belong to cross pollination?",
+      "options": ["Anemophilous", "Hygrophilous", "Zoophilous", "Entomophilous", "None of these"],
+      "answer": 4,
+      "explanation": "Anemophilous (wind), Hygrophilous (water), Zoophilous (animal), and Entomophilous (insect) are all mechanisms of cross-pollination; hence none of them are excluded.\n\nঅ্যানিমোফিলাস (বায়ু দ্বারা), হাইগ্রোফিলাস (পানি দ্বারা), জুফিলাস (প্রাণী দ্বারা) এবং এন্টোমোফিলাস (পতঙ্গ দ্বারা) - এই সবগুলোই পরপরাগায়নের বিভিন্ন পদ্ধতি। তাই এদের মধ্যে কোনোটিই পরপরাগায়ন থেকে বাদ পড়ে না, উত্তর \"None of these\"।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Proliferation of root nodule is induced by the bacterium -",
+      "options": ["Anabena", "Azomonas", "Rhizobium", "Azospirillum", "None of these"],
+      "answer": 2,
+      "explanation": "Rhizobium bacteria form symbiotic root nodules with leguminous plants, fixing atmospheric nitrogen.\n\nRhizobium ব্যাকটেরিয়া লেগুম জাতীয় (ডাল জাতীয়) উদ্ভিদের সাথে সিমবায়োটিক সম্পর্ক স্থাপন করে শিকড়ে নডিউল সৃষ্টি করে এবং বায়ুমণ্ডলীয় নাইট্রোজেন আবদ্ধ করে।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "In sloppy area which type of irrigation is done?",
+      "options": ["Sprinkler irrigation", "Drip irrigation", "Furrow irrigation", "Surface irrigation", "None of these"],
+      "answer": 0,
+      "explanation": "Sprinkler irrigation is well suited for sloped/undulating land as it distributes water evenly without causing soil erosion.\n\nঢালু বা অসমতল জমিতে স্প্রিংকলার সেচ পদ্ধতি উপযোগী, কারণ এটি সমানভাবে পানি বিতরণ করে এবং মাটি ক্ষয় রোধ করে।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Phosphorous present in highest amount in which of the following?",
+      "options": ["Fish meal", "Bone meal", "Blood meal", "All of these", "None of these"],
+      "answer": 1,
+      "explanation": "Bone meal contains the highest phosphorus content among the given organic fertilizers due to its calcium phosphate composition.\n\nহাড়ের গুঁড়ায় (Bone meal) ক্যালসিয়াম ফসফেট থাকার কারণে এতে সবচেয়ে বেশি ফসফরাস থাকে, যা মাছের গুঁড়া বা রক্তের গুঁড়ার তুলনায় বেশি।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Stem rot of jute is caused by -",
+      "options": ["Macrophomina phaseolina", "Fusarium oxysporum", "Rhizoctonia solani", "Colletotrichum corchori", "None of these"],
+      "answer": 0,
+      "explanation": "Macrophomina phaseolina is the fungal pathogen responsible for stem rot disease in jute, a major concern in Bangladesh's jute cultivation.\n\nMacrophomina phaseolina একটি ছত্রাক যা পাটের কান্ড পচা রোগ সৃষ্টি করে। বাংলাদেশের পাট চাষে এটি একটি গুরুত্বপূর্ণ রোগ, যা ফলন হ্রাসের কারণ হতে পারে।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "In various plants, the metabolic process \"PPP\" is the abbreviation of -",
+      "options": ["Plant protection procedures", "Produce per plant", "Pentose phosphate pathway", "Plant production process", "None of these"],
+      "answer": 2,
+      "explanation": "PPP stands for Pentose Phosphate Pathway, a metabolic pathway parallel to glycolysis generating NADPH and pentoses.\n\nPPP এর পূর্ণরূপ হলো Pentose Phosphate Pathway, যা গ্লাইকোলাইসিসের সমান্তরাল একটি বিপাকীয় পথ, যেখানে NADPH ও পেন্টোজ শর্করা উৎপন্ন হয়, যা উদ্ভিদের বিভিন্ন জৈব সংশ্লেষণে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "If the goal is to create a resistant variety against an insecticide, which of the following cell-based methods is best?",
+      "options": ["Mutant selection", "Hybridization", "Grafting", "Cloning", "None of these"],
+      "answer": 0,
+      "explanation": "Mutant selection (via mutation breeding) is an effective cell-based/tissue culture method to develop resistant varieties by inducing and selecting favorable mutations.\n\nমিউট্যান্ট সিলেকশন পদ্ধতিতে কৃত্রিমভাবে মিউটেশন ঘটিয়ে পছন্দসই বৈশিষ্ট্য (যেমন কীটনাশক প্রতিরোধী) সম্পন্ন উদ্ভিদ নির্বাচন করা হয়, যা প্রতিরোধী জাত উদ্ভাবনে একটি কার্যকর সেল-বেসড পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Which vitamin is highest in Jackfruit?",
+      "options": ["B1", "B2", "B3", "Both a & b", "None of these"],
+      "answer": 3,
+      "explanation": "Jackfruit is notably rich in both Vitamin B1 (Thiamine) and Vitamin B2 (Riboflavin) among its nutrient profile.\n\nকাঁঠালে ভিটামিন B1 (থায়ামিন) ও ভিটামিন B2 (রাইবোফ্লাভিন) উভয়ই উল্লেখযোগ্য পরিমাণে থাকে, যা এটিকে পুষ্টিকর ফল হিসেবে পরিচিত করেছে।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Which of the following elements plays an important role in nitrogen metabolism?",
+      "options": ["Molybdenum", "Manganese", "Magnesium", "Calcium", "None of these"],
+      "answer": 0,
+      "explanation": "Molybdenum is essential for the activity of nitrate reductase and nitrogenase enzymes, critical in nitrogen metabolism and fixation.\n\nমলিবডেনাম নাইট্রেট রিডাক্টেজ ও নাইট্রোজিনেজ এনজাইমের কার্যকারিতার জন্য অপরিহার্য, যা নাইট্রোজেন বিপাক ও নাইট্রোজেন আবদ্ধকরণ প্রক্রিয়ায় গুরুত্বপূর্ণ ভূমিকা পালন করে।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Dapog seed bed method was first introduced from -",
+      "options": ["India", "China", "Philippines", "Indonesia", "None of these"],
+      "answer": 1,
+      "explanation": "The Dapog method of rice nursery raising was first introduced/developed in China before being adopted in other rice-growing countries including the Philippines and Bangladesh.\n\nডাপগ পদ্ধতি প্রথম চীনে প্রবর্তিত হয়, পরবর্তীতে এটি ফিলিপাইনসহ অন্যান্য ধান চাষি দেশে (বাংলাদেশসহ) জনপ্রিয় হয়ে ওঠে।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "At first which country developed genome sequencing?",
+      "options": ["China", "Japan", "India", "Taiwan", "None of these"],
+      "answer": 1,
+      "explanation": "Japan pioneered genome sequencing initiatives, notably leading efforts such as the rice genome sequencing project.\n\nজাপান জিনোম সিকোয়েন্সিং প্রযুক্তি উন্নয়নে অগ্রণী ভূমিকা পালন করেছিল, বিশেষত ধানের জিনোম সিকোয়েন্সিং প্রকল্পে জাপান নেতৃত্ব দেয়।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Which organization maintains the plant quarantine section?",
+      "options": ["BADC", "DAE", "BARI", "Hortex Foundation", "None of these"],
+      "answer": 1,
+      "explanation": "In Bangladesh, the Department of Agricultural Extension (DAE) maintains the Plant Quarantine Wing responsible for regulating import/export of plant materials to prevent pest and disease spread.\n\nবাংলাদেশে কৃষি সম্প্রসারণ অধিদপ্তর (DAE) উদ্ভিদ সংগনিরোধ (Plant Quarantine) শাখা পরিচালনা করে, যা উদ্ভিদজাত পণ্য আমদানি-রপ্তানির মাধ্যমে রোগ ও পোকামাকড় ছড়ানো প্রতিরোধ করে।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Parthenocarpy occurs in -",
+      "options": ["Peach", "Jackfruit", "Mango", "Banana", "None of these"],
+      "answer": 3,
+      "explanation": "Banana is a classic example of parthenocarpic fruit, developing seedless fruit without fertilization.\n\nকলা পার্থেনোকার্পি (নিষেক ছাড়াই ফল উৎপাদন) এর একটি ক্লাসিক উদাহরণ, যার ফলে বীজবিহীন ফল উৎপন্ন হয়।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Inarching method is used for culture of which fruits?",
+      "options": ["Mango & Guava", "Guava & Litchi", "Mango & Grapes", "Phalsa & Guava", "None of these"],
+      "answer": 0,
+      "explanation": "Inarching (approach grafting) is commonly used for propagating mango and guava, especially for difficult-to-root varieties.\n\nইনআর্চিং (অ্যাপ্রোচ গ্রাফটিং) পদ্ধতি আম ও পেয়ারা চাষে বহুল ব্যবহৃত, বিশেষত যেসব জাতে সরাসরি কলম বাঁধা কঠিন সেসব ক্ষেত্রে এই পদ্ধতি কার্যকর।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "How much tomatoes are required for one kg of tomato seeds?",
+      "options": ["50-300 kg", "160-210 kg", "300-350 kg", "200-250 kg", "None of these"],
+      "answer": 1,
+      "explanation": "Approximately 160-210 kg of ripe tomatoes are required to extract 1 kg of tomato seeds through fermentation and seed extraction process.\n\n১ কেজি টমেটো বীজ পেতে প্রায় ১৬০-২১০ কেজি পাকা টমেটোর প্রয়োজন হয়, যা গাঁজন ও বীজ নিষ্কাশন প্রক্রিয়ার মাধ্যমে সংগ্রহ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "At what stage are more nutrients essentially required in cereal crops?",
+      "options": ["Vegetative growth stage", "Formation of leaves", "Panicle initiation", "Maturity of crops", "None of these"],
+      "answer": 2,
+      "explanation": "Panicle initiation stage is the most critical growth stage in cereal crops (e.g., rice) requiring maximum nutrient uptake, especially nitrogen, for optimal grain formation.\n\nশীষ উদগমের (Panicle initiation) পর্যায়ে ধান জাতীয় শস্যে সর্বাধিক পুষ্টি উপাদান, বিশেষত নাইট্রোজেনের প্রয়োজন হয়, কারণ এই পর্যায়ে দানা গঠনের প্রস্তুতি শুরু হয়। কৃষিবিজ্ঞান অনুযায়ী সঠিক উত্তর প্যানিকেল ইনিশিয়েশন পর্যায়।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "ADP to ATP change is called -",
+      "options": ["Photosynthesis", "Phosphorylation", "Transpiration", "Oxidation", "None of these"],
+      "answer": 1,
+      "explanation": "The conversion of ADP to ATP by adding a phosphate group is called phosphorylation, occurring during cellular respiration and photosynthesis.\n\nADP থেকে ATP-তে রূপান্তর প্রক্রিয়াকে ফসফোরাইলেশন বলা হয়, যেখানে একটি ফসফেট গ্রুপ যুক্ত হয়। এটি শ্বসন ও সালোকসংশ্লেষণ উভয় প্রক্রিয়ায় ঘটে থাকে।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "How much percentage of soluble salts is present in Alkali soils?",
+      "options": ["1-2%", "1.5-2.5%", "0.1-0.2%", "2-3%", "None of these"],
+      "answer": 2,
+      "explanation": "Alkali soils typically have low soluble salt content (about 0.1-0.2%) but high exchangeable sodium percentage, distinguishing them from saline soils.\n\nক্ষারীয় (Alkali) মাটিতে দ্রবণীয় লবণের পরিমাণ সাধারণত কম থাকে (প্রায় ০.১-০.২%), কিন্তু বিনিময়যোগ্য সোডিয়ামের পরিমাণ বেশি থাকে, যা একে লবণাক্ত মাটি থেকে পৃথক করে।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "Which of the following elements plays an important role in nitrogen metabolism?",
+      "options": ["Magnesium", "Molybdenum", "Iron", "Manganese", "None of these"],
+      "answer": 1,
+      "explanation": "Molybdenum is a critical micronutrient for nitrate reductase and nitrogenase enzyme function in nitrogen metabolism.\n\nমলিবডেনাম নাইট্রোজেন বিপাকের জন্য গুরুত্বপূর্ণ একটি অণুপুষ্টি উপাদান, যা নাইট্রেট রিডাক্টেজ ও নাইট্রোজিনেজ এনজাইমের কার্যকারিতার জন্য প্রয়োজনীয়।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "Line breeding is a type of -",
+      "options": ["Inbreeding", "Cross breeding", "Natural breeding", "Outbreeding", "None of these"],
+      "answer": 0,
+      "explanation": "Line breeding is a form of inbreeding where related individuals within a line are mated to maintain desirable traits and genetic uniformity.\n\nলাইন ব্রিডিং হলো ইনব্রিডিং এর একটি প্রকারভেদ, যেখানে একই বংশধারার সম্পর্কিত জীবের মধ্যে প্রজনন ঘটিয়ে কাঙ্ক্ষিত বৈশিষ্ট্য ও জেনেটিক অভিন্নতা বজায় রাখা হয়।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "Maximum photosynthesis takes place in -",
+      "options": ["Blue light", "Red light", "Green light", "Violet light", "None of these"],
+      "answer": 1,
+      "explanation": "Red light is most efficiently absorbed by chlorophyll for photosynthesis, giving maximum photosynthetic rate, though blue light also contributes significantly.\n\nলাল আলো (Red light) ক্লোরোফিল দ্বারা সবচেয়ে কার্যকরভাবে শোষিত হয়ে সর্বোচ্চ সালোকসংশ্লেষণ ঘটায়। যদিও নীল আলোও গুরুত্বপূর্ণ ভূমিকা রাখে, লাল আলোতে সালোকসংশ্লেষণের হার সর্বাধিক।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "Chenopodium album is related to the following crops -",
+      "options": ["Wheat", "Maize", "Rice", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "Chenopodium album (Bathua/Fat hen) is a common weed predominantly found in wheat fields, especially during the rabi season.\n\nChenopodium album (বথুয়া শাক) সাধারণত গমের ক্ষেতে দেখা যায়, বিশেষত রবি মৌসুমে এটি একটি সাধারণ আগাছা হিসেবে পরিচিত।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "Germination is inhibited by -",
+      "options": ["Red light", "UV light", "IR light", "Blue light", "None of these"],
+      "answer": 1,
+      "explanation": "UV light can inhibit seed germination by damaging DNA and cellular structures, and by influencing phytochrome-mediated processes negatively.\n\nঅতিবেগুনি রশ্মি (UV light) বীজের DNA ও কোষীয় কাঠামোর ক্ষতি করে এবং ফাইটোক্রোম-নিয়ন্ত্রিত প্রক্রিয়াকে বাধাগ্রস্ত করে অঙ্কুরোদগম প্রতিরোধ করে।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "Bending of plants towards light is called -",
+      "options": ["Phototropism", "Photorespiration", "Vernalization", "Photosynthesis", "None of these"],
+      "answer": 0,
+      "explanation": "Phototropism is the directional growth response of a plant towards a light source, mediated by auxin redistribution.\n\nফটোট্রপিজম হলো আলোর দিকে উদ্ভিদের দিকনির্দেশক বৃদ্ধি, যা অক্সিন হরমোনের অসম বণ্টনের মাধ্যমে নিয়ন্ত্রিত হয়।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "The group of organisms that convert light to food is called -",
+      "options": ["Autotrophs", "Heterotrophs", "Decomposers", "Omnivores", "None of these"],
+      "answer": 0,
+      "explanation": "Autotrophs, such as green plants, synthesize their own food using light energy through photosynthesis.\n\nঅটোট্রফ জীব (যেমন সবুজ উদ্ভিদ) সালোকসংশ্লেষণের মাধ্যমে আলোক শক্তি ব্যবহার করে নিজেদের খাদ্য নিজেরাই তৈরি করে।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "Which of the following is the least likely reason for using tillage in seedbed preparation?",
+      "options": ["Control of diseases and pests", "Improvement of the physical condition of the soil", "Elimination of weed", "Change of the soil texture", "None of these"],
+      "answer": 3,
+      "explanation": "Tillage cannot permanently change the basic soil texture (proportion of sand, silt, clay), unlike its effects on structure, weeds, and pest control.\n\nটিলেজ (চাষ) মাটির মৌলিক গঠন (বালি, পলি, কাদার অনুপাত) স্থায়ীভাবে পরিবর্তন করতে পারে না, যদিও এটি মাটির গঠন উন্নত করা, আগাছা দমন ও রোগ-পোকা নিয়ন্ত্রণে সহায়ক।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "If the permeability of the subsoil is rapid, the subsoil texture is most likely classified as -",
+      "options": ["Silty", "Medium", "Coarse", "Fine", "None of these"],
+      "answer": 2,
+      "explanation": "Coarse-textured (sandy) subsoil has larger pore spaces allowing rapid water permeability compared to fine or silty soils.\n\nমোটা গঠনের (বালুময়) সাবসয়েলে বড় ছিদ্রপথ থাকার কারণে পানি দ্রুত প্রবেশ করতে পারে, যা সূক্ষ্ম বা পলি মাটির তুলনায় বেশি ভেদ্যতা প্রদর্শন করে।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "mcq",
+      "question": "Which one of the following is a negative effect on the soil due to conventional mechanized farming practices?",
+      "options": ["Soil compaction", "Reduction of organic matter", "Soil erosion", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "Conventional mechanized farming can cause soil compaction, reduce organic matter content, and increase soil erosion — all being negative effects.\n\nপ্রচলিত যান্ত্রিক কৃষি পদ্ধতি মাটির সংকোচন (compaction), জৈব পদার্থ হ্রাস এবং মাটি ক্ষয় - এই তিনটি নেতিবাচক প্রভাবই সৃষ্টি করতে পারে।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "mcq",
+      "question": "Which one of the following nutrients do plants usually get directly from soil?",
+      "options": ["Carbon", "Nitrogen", "Sulfur", "Oxygen", "None of these"],
+      "answer": 2,
+      "explanation": "Sulfur is directly absorbed by plant roots from the soil as sulfate, unlike carbon and oxygen which are mainly obtained from air/water.\n\nসালফার মাটি থেকে সালফেট আয়ন হিসেবে সরাসরি উদ্ভিদের শিকড় দ্বারা শোষিত হয়, যেখানে কার্বন ও অক্সিজেন মূলত বায়ু ও পানি থেকে সংগৃহীত হয়।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "mcq",
+      "question": "The most efficient use of Potassium is achieved by -",
+      "options": ["Broadcasting at the sowing time", "Top dressing after one month of sowing", "Basal placement at the sowing time", "Foliar spray", "None of these"],
+      "answer": 2,
+      "explanation": "Basal placement of potassium at sowing time ensures efficient root uptake as potassium is relatively immobile in soil.\n\nবপনের সময় পটাশ মূল অঞ্চলে ভিত্তি (বেসাল) প্রয়োগ করলে তা সবচেয়ে কার্যকরভাবে শোষিত হয়, কারণ পটাশিয়াম মাটিতে তুলনামূলকভাবে কম গতিশীল।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "mcq",
+      "question": "Whip tail is a disease of cauliflower due to deficiency of -",
+      "options": ["Zinc", "Potassium", "Molybdenum", "Boron", "None of these"],
+      "answer": 2,
+      "explanation": "Whiptail disease in cauliflower is caused by molybdenum deficiency, leading to distorted, narrow leaf blades.\n\nফুলকপির হুইপটেইল রোগ মলিবডেনামের অভাবে হয়ে থাকে, যার ফলে পাতা সরু ও বিকৃত হয়ে যায়।",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "The percentage of potassium in DAP is -",
+      "options": ["20%", "46%", "17-18%", "48%", "None of these"],
+      "answer": 4,
+      "explanation": "DAP (Diammonium Phosphate) contains Nitrogen (18%) and Phosphorus (46%) but no potassium; hence the correct answer is \"None of these.\"\n\nDAP (ডাই-অ্যামোনিয়াম ফসফেট) সারে নাইট্রোজেন (১৮%) ও ফসফরাস (৪৬%) থাকে, কিন্তু কোনো পটাশিয়াম থাকে না। তাই সঠিক উত্তর \"None of these\"।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "Water is not available to the plant at which atmospheric level?",
+      "options": ["Above 15 atm", "1/3 atm", "Below 3 atm", "None of these"],
+      "answer": 0,
+      "explanation": "Water becomes unavailable to plants when soil moisture tension exceeds 15 atmospheres (the permanent wilting point).\n\nমাটির আর্দ্রতা টান ১৫ atm এর বেশি হলে তা উদ্ভিদের জন্য অগ্রহণযোগ্য হয়ে যায়, এই বিন্দুকে স্থায়ী নেতিয়ে পড়া বিন্দু (Permanent Wilting Point) বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 47,
+      "type": "mcq",
+      "question": "Seed treatment with vitavax is done to remove which of the following diseases?",
+      "options": ["Loose smut", "Cover smut", "Nematode", "Both a & b", "None of these"],
+      "answer": 3,
+      "explanation": "Vitavax (Carboxin) seed treatment is effective against both loose smut and covered smut diseases in cereal crops like wheat.\n\nভাইটাভ্যাক্স (কার্বক্সিন) দ্বারা বীজ শোধন করলে গমের লুজ স্মাট (Loose smut) ও কভার স্মাট (Covered smut) উভয় রোগই প্রতিরোধ করা যায়।",
+      "image": null
+    },
+    {
+      "id": 48,
+      "type": "mcq",
+      "question": "Spined soldier bug insect is the predator of -",
+      "options": ["Larvae of beetle", "Gypsy moth", "Bees", "Both a & b", "None of these"],
+      "answer": 3,
+      "explanation": "Spined soldier bug is a predatory insect that feeds on beetle larvae and gypsy moth caterpillars, serving as a beneficial biological control agent.\n\nস্পাইনড সোলজার বাগ একটি উপকারী শিকারি পোকা যা বিটল লার্ভা ও জিপসি মথের শুককীট খেয়ে জৈবিক পোকা দমনে সহায়তা করে।",
+      "image": null
+    },
+    {
+      "id": 49,
+      "type": "mcq",
+      "question": "Phytophthora is one kind of -",
+      "options": ["Virus", "Bacteria", "Oomycetes", "Fungi", "None of these"],
+      "answer": 2,
+      "explanation": "Phytophthora belongs to Oomycetes (water molds), which are fungus-like organisms but taxonomically distinct from true fungi.\n\nPhytophthora Oomycetes (পানি ছত্রাক) শ্রেণীর অন্তর্ভুক্ত, যা দেখতে ছত্রাকের মতো হলেও শ্রেণীবিন্যাসগতভাবে প্রকৃত ছত্রাক থেকে ভিন্ন।",
+      "image": null
+    },
+    {
+      "id": 50,
+      "type": "mcq",
+      "question": "Weeding in dry condition with the help of niri or khurpi results in -",
+      "options": ["Natural mulching", "Artificial mulching", "Earthing up", "Gap filling", "None of these"],
+      "answer": 0,
+      "explanation": "Weeding in dry soil with hand tools like niri/khurpi creates a loose soil layer on top that acts as natural mulch, reducing moisture loss.\n\nশুকনো অবস্থায় নিড়ানি বা খুরপি দিয়ে আগাছা পরিষ্কার করলে মাটির উপরিভাগে একটি ঝুরঝুরে স্তর তৈরি হয়, যা প্রাকৃতিক মালচিং হিসেবে কাজ করে এবং আর্দ্রতা সংরক্ষণে সাহায্য করে।",
+      "image": null
+    },
+    {
+      "id": 51,
+      "type": "mcq",
+      "question": "Which manure contains a higher amount of potassium?",
+      "options": ["Cowdung", "Ash", "Farm Yard Manure", "Compost", "None of these"],
+      "answer": 1,
+      "explanation": "Wood ash contains a relatively high amount of potassium compared to other organic manures like cowdung, FYM, or compost.\n\nকাঠের ছাই (Ash) অন্যান্য জৈব সারের (গোবর, খামার সার, কম্পোস্ট) তুলনায় অপেক্ষাকৃত বেশি পরিমাণে পটাশিয়াম ধারণ করে।",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "mcq",
+      "question": "Evergreen type of forest is found -",
+      "options": ["Mediterranean region", "Tropical climate region", "Monsoon climate region", "Equatorial region", "None of these"],
+      "answer": 3,
+      "explanation": "Evergreen forests are predominantly found in equatorial regions due to consistent year-round rainfall and warm temperatures.\n\nনিরক্ষীয় অঞ্চলে সারাবছর সমান বৃষ্টিপাত ও উষ্ণ তাপমাত্রার কারণে চিরসবুজ বন দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "mcq",
+      "question": "For which purpose is the brick gravel test used?",
+      "options": ["Germination test of seed", "Vigor test of seed", "Purity test of seed", "Viability test of seed", "None of these"],
+      "answer": 1,
+      "explanation": "The brick gravel test is a seed vigor test method used to assess seedling emergence capability under adverse soil-like conditions.\n\nব্রিক গ্রাভেল টেস্ট হলো একটি বীজের সজীবতা (Vigor) পরীক্ষার পদ্ধতি, যা প্রতিকূল মাটির মতো পরিবেশে চারা গজানোর সক্ষমতা যাচাই করে।",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "mcq",
+      "question": "Papain is a -",
+      "options": ["Cysteine protease enzyme", "Aspartate protease enzyme", "Threonine protease enzyme", "Serine protease enzyme", "None of these"],
+      "answer": 0,
+      "explanation": "Papain, extracted from papaya latex, is a cysteine protease enzyme widely used in meat tenderizing and food processing.\n\nপেঁপের কষ থেকে নিষ্কাশিত পাপাইন একটি সিস্টেইন প্রোটিয়েজ এনজাইম, যা মাংস নরম করা ও খাদ্য প্রক্রিয়াজাতকরণে ব্যাপকভাবে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "mcq",
+      "question": "Layering is useful for propagation of -",
+      "options": ["Rose", "Garlic", "Lemon", "Sugarcane", "None of these"],
+      "answer": 0,
+      "explanation": "Layering is a common vegetative propagation method for rose, where a stem is bent to touch soil to induce rooting while still attached to the parent plant.\n\nলেয়ারিং পদ্ধতি গোলাপ চাষে বহুল ব্যবহৃত একটি অঙ্গজ বংশবিস্তার পদ্ধতি, যেখানে মূল গাছের সাথে সংযুক্ত অবস্থায় একটি ডাল বাঁকিয়ে মাটির সংস্পর্শে রেখে শিকড় গজানো হয়।",
+      "image": null
+    }
+  ]
+}
