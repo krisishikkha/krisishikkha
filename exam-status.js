@@ -167,7 +167,7 @@ const EXAM_STATUS = {
     title: "HSC 1st Paper 3rd Chapter🔴",
     category: "live",
     startDate: "2026-08-11T06:00:00+06:00",
-    endDate: "2026-08-12T11:00:00+06:00",
+    endDate: "2026-08-13T11:00:00+06:00",
     codes: ["exam3322"]
   },
 
