@@ -46,15 +46,15 @@
       "description": "BJRI Scientific Officer পরীক্ষা ২০২১"
     },
     {
-      "id": "so-2021",
-      "title": "Scientific Officer 2021",
-      "year": 2021,
+      "id": "so-2019",
+      "title": "Scientific Officer 2019",
+      "year": 2019,
       "position": "Scientific Officer",
       "visible": true,
       "type": "free",
       "format": ["article"],
-      "totalQuestions": 34,
-      "description": "BJRI Scientific Officer পরীক্ষা ২০২১"
+      "totalQuestions": 19,
+      "description": "BJRI Scientific Officer পরীক্ষা ২০১৯"
     }
   ]
 }
