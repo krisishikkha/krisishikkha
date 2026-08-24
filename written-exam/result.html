@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exam Result - Krishi Shikkha">
+    <title>Exam Result - কৃষি শিক্ষা</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/written-exam.css">
+    
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="result-container">
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading your result...</p>
+        </div>
+
+        <!-- Result Display -->
+        <div id="result-content" class="result-content" style="display: none;">
+            <!-- Result Header -->
+            <div class="result-header">
+                <div class="result-icon" id="result-icon">
+                    🎉
+                </div>
+                <h1 class="result-title">Exam Completed!</h1>
+                <p class="result-subtitle">পরীক্ষা সম্পন্ন হয়েছে</p>
+            </div>
+
+            <!-- Student Info Card -->
+            <div class="result-card student-info-card">
+                <h2 class="card-title">Student Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Name:</span>
+                        <span class="info-value" id="student-name"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Exam:</span>
+                        <span class="info-value" id="exam-name"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Date:</span>
+                        <span class="info-value" id="exam-date"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Score Card -->
+            <div class="result-card score-card">
+                <h2 class="card-title">Your Score</h2>
+                
+                <!-- Score Circle -->
+                <div class="score-circle-container">
+                    <div class="score-circle">
+                        <div class="score-percentage" id="percentage"></div>
+                        <div class="score-text">Score</div>
+                    </div>
+                </div>
+
+                <!-- Marks -->
+                <div class="marks-display">
+                    <div class="marks-item">
+                        <span class="marks-value" id="obtained-marks">0</span>
+                        <span class="marks-separator">/</span>
+                        <span class="marks-total" id="total-marks">0</span>
+                    </div>
+                    <div class="marks-label">Marks Obtained</div>
+                </div>
+            </div>
+
+            <!-- Statistics Card -->
+            <div class="result-card stats-card">
+                <h2 class="card-title">Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item stat-total">
+                        <div class="stat-icon">📋</div>
+                        <div class="stat-value" id="total-questions">0</div>
+                        <div class="stat-label">Total Questions</div>
+                    </div>
+                    <div class="stat-item stat-answered">
+                        <div class="stat-icon">✍️</div>
+                        <div class="stat-value" id="answered">0</div>
+                        <div class="stat-label">Answered</div>
+                    </div>
+                    <div class="stat-item stat-correct">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-value" id="correct">0</div>
+                        <div class="stat-label">Correct</div>
+                    </div>
+                    <div class="stat-item stat-wrong">
+                        <div class="stat-icon">❌</div>
+                        <div class="stat-value" id="wrong">0</div>
+                        <div class="stat-label">Wrong</div>
+                    </div>
+                    <div class="stat-item stat-skipped">
+                        <div class="stat-icon">⏭️</div>
+                        <div class="stat-value" id="skipped">0</div>
+                        <div class="stat-label">Not Answered</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Message -->
+            <div class="result-card performance-card" id="performance-card">
+                <div class="performance-message" id="performance-message"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="result-actions">
+                <button onclick="viewReview()" class="btn btn-primary btn-large">
+                    📝 View Answer Review
+                </button>
+                <button onclick="goHome()" class="btn btn-secondary btn-large">
+                    🏠 Back to Home
+                </button>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error-container" style="display: none;">
+            <div class="error-icon">⚠️</div>
+            <h2>Error Loading Result</h2>
+            <p id="error-message"></p>
+            <button onclick="goHome()" class="btn btn-primary">
+                Go to Home
+            </button>
+        </div>
+    </div>
+
+    <!-- Config -->
+    <script src="./js/config.js"></script>
+
+    <script>
+        let supabase;
+        let submissionData = null;
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Initialize Supabase
+            supabase = window.supabase.createClient(
+                SUPABASE_CONFIG.url,
+                SUPABASE_CONFIG.anonKey
+            );
+
+            // Load result
+            await loadResult();
+        });
+
+        async function loadResult() {
+            try {
+                const submissionId = localStorage.getItem('submission_id');
+                
+                if (!submissionId) {
+                    throw new Error('No submission found');
+                }
+
+                // Fetch submission from Supabase
+                const { data, error } = await supabase
+                    .from(WRITTEN_EXAM_TABLE)
+                    .select('*')
+                    .eq('id', submissionId)
+                    .single();
+
+                if (error) throw error;
+                if (!data) throw new Error('Submission not found');
+
+                submissionData = data;
+
+                // Display result
+                displayResult(data);
+
+                // Hide loading, show result
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('result-content').style.display = 'block';
+
+            } catch (error) {
+                console.error('Error loading result:', error);
+                showError(error.message);
+            }
+        }
+
+        function displayResult(data) {
+            // Student info
+            document.getElementById('student-name').textContent = data.student_name;
+            document.getElementById('exam-name').textContent = data.exam_name;
+            document.getElementById('exam-date').textContent = 
+                new Date(data.submitted_at).toLocaleString('en-GB', {
+                    day: '2-digit',
+                    month: 'short',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+
+            // Score
+            document.getElementById('percentage').textContent = data.percentage + '%';
+            document.getElementById('obtained-marks').textContent = data.obtained_marks;
+            document.getElementById('total-marks').textContent = data.total_marks;
+
+            // Statistics
+            document.getElementById('total-questions').textContent = data.total_questions;
+            document.getElementById('answered').textContent = data.answered;
+            document.getElementById('correct').textContent = data.correct;
+            document.getElementById('wrong').textContent = data.wrong;
+            document.getElementById('skipped').textContent = data.skipped;
+
+            // Performance message
+            setPerformanceMessage(data.percentage);
+
+            // Result icon
+            setResultIcon(data.percentage);
+        }
+
+        function setPerformanceMessage(percentage) {
+            const messageEl = document.getElementById('performance-message');
+            let message = '';
+            let emoji = '';
+
+            if (percentage >= 90) {
+                emoji = '🌟';
+                message = 'Outstanding! Excellent performance!';
+            } else if (percentage >= 80) {
+                emoji = '🎉';
+                message = 'Very Good! Great job!';
+            } else if (percentage >= 70) {
+                emoji = '👍';
+                message = 'Good performance! Keep it up!';
+            } else if (percentage >= 60) {
+                emoji = '😊';
+                message = 'Satisfactory! You can do better!';
+            } else if (percentage >= 50) {
+                emoji = '📚';
+                message = 'Average! Need more practice!';
+            } else {
+                emoji = '💪';
+                message = 'Keep trying! Practice makes perfect!';
+            }
+
+            messageEl.innerHTML = `<span class="performance-emoji">${emoji}</span> ${message}`;
+        }
+
+        function setResultIcon(percentage) {
+            const iconEl = document.getElementById('result-icon');
+            if (percentage >= 80) {
+                iconEl.textContent = '🏆';
+            } else if (percentage >= 60) {
+                iconEl.textContent = '🎉';
+            } else {
+                iconEl.textContent = '📝';
+            }
+        }
+
+        function showError(message) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').style.display = 'flex';
+            document.getElementById('error-message').textContent = message;
+        }
+
+        function viewReview() {
+            // Store submission ID for review page
+            window.location.href = './review.html';
+        }
+
+        function goHome() {
+            localStorage.removeItem('submission_id');
+            window.location.href = './index.html';
+        }
+    </script>
+</body>
+  </html>
