@@ -3,355 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam - কৃষি শিক্ষা</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <link rel="stylesheet" href="./css/written-exam.css">
+    <title>Exam - Written Exam System</title>
+    <link rel="stylesheet" href="css/written-exam.css">
 </head>
-<body>
-    <!-- Entry Screen -->
-    <div id="entry-screen" class="entry-screen">
-        <div class="entry-container">
-            <div class="entry-card">
-                <div class="entry-header">
-                    <h1 id="exam-title">Loading...</h1>
-                    <p id="exam-subtitle"></p>
+<body class="exam-page">
+    <!-- Student Entry Modal -->
+    <div id="studentEntryModal" class="modal">
+        <div class="modal-content">
+            <h2>Student Information</h2>
+            <form id="studentEntryForm">
+                <div class="form-group">
+                    <label for="studentName">Your Name / আপনার নাম:</label>
+                    <input type="text" id="studentName" required placeholder="Enter your full name">
                 </div>
-                <div class="entry-body">
-                    <div class="instructions-box">
-                        <h3>📋 Instructions</h3>
-                        <ul id="instructions-list"></ul>
-                    </div>
-                    <form id="entry-form">
-                        <div class="form-group">
-                            <label>Your Name *</label>
-                            <input type="text" id="student-name" class="form-control" required minlength="3">
-                        </div>
-                        <div class="form-group">
-                            <label>Access Code *</label>
-                            <input type="text" id="access-code" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" required>
-                                <span>I agree to the instructions</span>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block btn-large">Enter Exam</button>
-                    </form>
-                    <div class="entry-footer">
-                        <button onclick="location.href='./index.html'" class="btn btn-secondary">← Back</button>
+                <div class="form-group">
+                    <label for="accessCode">Access Code / এক্সেস কোড:</label>
+                    <input type="text" id="accessCode" required placeholder="Enter exam access code">
+                </div>
+                <button type="submit" class="btn btn-primary">Start Exam / পরীক্ষা শুরু করুন</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Exam Interface -->
+    <div id="examInterface" style="display: none;">
+        <!-- Header -->
+        <header class="exam-header">
+            <div class="exam-info">
+                <h3 id="examTitle">Exam Title</h3>
+                <span id="studentNameDisplay"></span>
+            </div>
+            <div class="timer-container">
+                <div id="timer" class="timer">60:00</div>
+                <div class="auto-save-indicator" id="autoSaveStatus">Auto-saved</div>
+            </div>
+        </header>
+
+        <!-- Question Display -->
+        <div class="exam-body">
+            <div class="question-container">
+                <div class="question-header">
+                    <span class="question-number" id="questionNumber">Question 1 of 40</span>
+                    <span class="question-marks" id="questionMarks">Marks: 1</span>
+                </div>
+                
+                <div class="question-text" id="questionText">
+                    <!-- Question will be loaded here -->
+                </div>
+
+                <div class="answer-input-container">
+                    <div class="answer-input-wrapper">
+                        <input 
+                            type="text" 
+                            id="answerInput" 
+                            class="answer-input" 
+                            placeholder="Type your answer here / এখানে উত্তর লিখুন"
+                            disabled
+                        >
+                        <button class="btn-icon btn-edit" id="editBtn" title="Edit Answer">
+                            ✏️
+                        </button>
+                        <button class="btn-icon btn-tick" id="tickBtn" style="display: none;" title="Save Answer">
+                            ✅
+                        </button>
                     </div>
                 </div>
+
+                <div class="answer-status" id="answerStatus">
+                    <!-- Status will be shown here -->
+                </div>
+            </div>
+
+            <!-- Question Navigator -->
+            <div class="question-navigator">
+                <h4>Question Navigator</h4>
+                <div id="questionGrid" class="question-grid">
+                    <!-- Question numbers will be loaded here -->
+                </div>
+                <div class="navigator-legend">
+                    <div><span class="legend-box answered"></span> Answered</div>
+                    <div><span class="legend-box current"></span> Current</div>
+                    <div><span class="legend-box unanswered"></span> Not Answered</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="exam-footer">
+            <button class="btn btn-secondary" id="prevBtn">⬅️ Previous</button>
+            <button class="btn btn-primary" id="nextBtn">Next ➡️</button>
+            <button class="btn btn-success" id="submitBtn">Submit Exam</button>
+        </div>
+    </div>
+
+    <!-- Submit Confirmation Modal -->
+    <div id="submitModal" class="modal">
+        <div class="modal-content">
+            <h2>⚠️ Submit Exam?</h2>
+            <div id="submitSummary"></div>
+            <p>Are you sure you want to submit? You cannot change answers after submission.</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="cancelSubmit">Cancel</button>
+                <button class="btn btn-success" id="confirmSubmit">Yes, Submit</button>
             </div>
         </div>
     </div>
 
-    <!-- Exam Screen -->
-    <div id="exam-screen" style="display:none;">
-        <header class="exam-header">
-            <div class="exam-header-left">
-                <h2 id="exam-header-title"></h2>
-                <span id="student-badge" class="student-name-badge"></span>
-            </div>
-            <div class="exam-header-right">
-                <div class="timer" id="timer">
-                    <span class="timer-icon">⏱️</span>
-                    <span id="timer-text">00:00</span>
-                </div>
-            </div>
-        </header>
-
-        <main class="exam-content">
-            <div class="exam-container">
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progress-fill"></div>
-                    </div>
-                    <div class="progress-text">
-                        <span id="answered-count">0</span> / <span id="total-questions">0</span> Answered
-                    </div>
-                </div>
-
-                <div class="question-container">
-                    <div class="question-number">Question <span id="q-num">1</span></div>
-                    <div class="question-text" id="q-text"></div>
-                    <div class="answer-input-container">
-                        <label class="answer-label">Your Answer:</label>
-                        <input type="text" id="answer-input" class="answer-input" autocomplete="off">
-                    </div>
-                </div>
-
-                <div class="exam-navigation">
-                    <button id="prev-btn" class="btn btn-secondary" onclick="prevQ()" disabled>← Previous</button>
-                    <button id="clear-btn" class="btn btn-outline" onclick="clearAns()">Clear</button>
-                    <button id="next-btn" class="btn btn-primary" onclick="nextQ()">Next →</button>
-                </div>
-
-                <div class="submit-container">
-                    <button class="btn btn-success btn-large" onclick="confirmSubmit()">Submit Exam</button>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <div id="loading-overlay" class="loading-overlay" style="display:none;">
-        <div class="spinner"></div>
-        <p>Submitting...</p>
-    </div>
-
-    <!-- Load scripts -->
-    <script src="./js/config.js"></script>
-    <script src="./js/answer-checker.js"></script>
-    <script src="./data/exams.js"></script>
-
-    <script>
-        let supabase, examData, currentQ = 0, answers = {}, studentName = '', timeRemaining = 0, timerInt;
-        let selectedExamId = '';
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            supabase = window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
-            
-            selectedExamId = localStorage.getItem('selected_exam_id');
-            if (!selectedExamId) {
-                alert('No exam selected');
-                location.href = './index.html';
-                return;
-            }
-
-            // Find exam metadata
-            const examMeta = EXAMS_LIST.find(e => e.id === selectedExamId);
-            if (!examMeta) {
-                alert('Exam not found');
-                location.href = './index.html';
-                return;
-            }
-
-            // Dynamically load exam data file from data/ folder
-            const script = document.createElement('script');
-            script.src = `./data/${examMeta.dataFile}`;
-            script.onload = () => {
-                console.log('Exam data loaded');
-                initializeExam();
-            };
-            script.onerror = () => {
-                alert('Failed to load exam data');
-                location.href = './index.html';
-            };
-            document.head.appendChild(script);
-        });
-
-        function initializeExam() {
-            // Get exam data based on ID
-            const examDataMap = {
-                'bina-so-exam-1': EXAM_BINA_SO_1,
-                'bina-so-exam-2': EXAM_BINA_SO_2,
-                'bari-so-exam-3': EXAM_BARI_SO_3,
-                'bsri-exam-4': EXAM_BSRI_4
-            };
-
-            examData = examDataMap[selectedExamId];
-
-            if (!examData) {
-                alert('Exam data not found');
-                location.href = './index.html';
-                return;
-            }
-
-            document.getElementById('exam-title').textContent = examData.examInfo.title;
-            document.getElementById('exam-subtitle').textContent = examData.examInfo.subtitle;
-            
-            const list = document.getElementById('instructions-list');
-            list.innerHTML = '';
-            examData.examInfo.instructions.forEach(i => {
-                const li = document.createElement('li');
-                li.textContent = i;
-                list.appendChild(li);
-            });
-            
-            document.getElementById('entry-form').onsubmit = async (e) => {
-                e.preventDefault();
-                await handleEntry();
-            };
-        }
-
-        async function handleEntry() {
-            const name = document.getElementById('student-name').value.trim();
-            const code = document.getElementById('access-code').value.trim();
-            
-            if (code !== examData.examInfo.accessCode) {
-                alert('❌ Invalid access code');
-                return;
-            }
-            
-            const {data} = await supabase
-                .from(WRITTEN_EXAM_TABLE)
-                .select('id')
-                .eq('student_name', name)
-                .eq('exam_id', examData.examInfo.id)
-                .limit(1);
-            
-            if (data && data.length > 0) {
-                alert('⚠️ You have already submitted this exam');
-                return;
-            }
-            
-            studentName = name;
-            startExam();
-        }
-
-        function startExam() {
-            document.getElementById('entry-screen').style.display = 'none';
-            document.getElementById('exam-screen').style.display = 'block';
-            document.getElementById('exam-header-title').textContent = examData.examInfo.title;
-            document.getElementById('student-badge').textContent = studentName;
-            document.getElementById('total-questions').textContent = examData.questions.length;
-            
-            examData.questions.forEach(q => answers[q.id] = '');
-            timeRemaining = examData.examInfo.durationMinutes * 60;
-            startTimer();
-            loadQ(0);
-        }
-
-        function startTimer() {
-            updateTimer();
-            timerInt = setInterval(() => {
-                timeRemaining--;
-                updateTimer();
-                
-                const timerEl = document.getElementById('timer');
-                if (timeRemaining <= 60) {
-                    timerEl.classList.add('timer-critical');
-                } else if (timeRemaining <= 300) {
-                    timerEl.classList.add('timer-warning');
-                }
-                
-                if (timeRemaining <= 0) {
-                    clearInterval(timerInt);
-                    alert('⏰ Time is up!');
-                    submitExam();
-                }
-            }, 1000);
-        }
-
-        function updateTimer() {
-            const m = Math.floor(timeRemaining / 60);
-            const s = timeRemaining % 60;
-            document.getElementById('timer-text').textContent = 
-                `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-        }
-
-        function loadQ(i) {
-            saveAns();
-            currentQ = i;
-            const q = examData.questions[i];
-            document.getElementById('q-num').textContent = i + 1;
-            document.getElementById('q-text').textContent = q.question;
-            document.getElementById('answer-input').value = answers[q.id] || '';
-            document.getElementById('answer-input').focus();
-            document.getElementById('prev-btn').disabled = i === 0;
-            updateProgress();
-        }
-
-        function saveAns() {
-            const q = examData.questions[currentQ];
-            answers[q.id] = document.getElementById('answer-input').value.trim();
-        }
-
-        function prevQ() { if (currentQ > 0) loadQ(currentQ - 1); }
-        function nextQ() { if (currentQ < examData.questions.length - 1) loadQ(currentQ + 1); }
-        function clearAns() { 
-            document.getElementById('answer-input').value = ''; 
-            document.getElementById('answer-input').focus();
-        }
-
-        function updateProgress() {
-            const answered = Object.values(answers).filter(a => a !== '').length;
-            document.getElementById('answered-count').textContent = answered;
-            const percent = (answered / examData.questions.length * 100);
-            document.getElementById('progress-fill').style.width = percent + '%';
-        }
-
-        function confirmSubmit() {
-            saveAns();
-            const answered = Object.values(answers).filter(a => a !== '').length;
-            const unanswered = examData.questions.length - answered;
-            
-            if (!confirm(`Answered: ${answered}\nNot answered: ${unanswered}\n\nSubmit?`)) {
-                return;
-            }
-            
-            submitExam();
-        }
-
-        async function submitExam() {
-            saveAns();
-            clearInterval(timerInt);
-            document.getElementById('loading-overlay').style.display = 'flex';
-            
-            let correct = 0, wrong = 0, skipped = 0, marks = 0;
-            const detailedAns = [];
-            
-            examData.questions.forEach(q => {
-                const stdAns = answers[q.id] || '';
-                const isCorrect = checkAnswer(stdAns, q.acceptedAnswers);
-                
-                if (stdAns === '') {
-                    skipped++;
-                } else if (isCorrect) {
-                    correct++;
-                    marks += q.marks;
-                } else {
-                    wrong++;
-                    marks -= examData.examInfo.negativeMark;
-                }
-                
-                detailedAns.push({
-                    questionId: q.id,
-                    question: q.question,
-                    studentAnswer: stdAns,
-                    correctAnswers: q.acceptedAnswers,
-                    isCorrect,
-                    marks: q.marks,
-                    obtained: stdAns === '' ? 0 : (isCorrect ? q.marks : -examData.examInfo.negativeMark),
-                    status: stdAns === '' ? 'skipped' : (isCorrect ? 'correct' : 'wrong')
-                });
-            });
-            
-            const percentage = ((marks / examData.examInfo.totalMarks) * 100).toFixed(2);
-            
-            try {
-                const {data, error} = await supabase.from(WRITTEN_EXAM_TABLE).insert([{
-                    exam_id: examData.examInfo.id,
-                    exam_name: examData.examInfo.title,
-                    student_name: studentName,
-                    total_questions: examData.questions.length,
-                    answered: correct + wrong,
-                    correct,
-                    wrong,
-                    skipped,
-                    total_marks: examData.examInfo.totalMarks,
-                    obtained_marks: parseFloat(marks.toFixed(2)),
-                    percentage: parseFloat(percentage),
-                    answers: detailedAns
-                }]).select();
-                
-                if (error) throw error;
-                
-                localStorage.setItem('submission_id', data[0].id);
-                window.location.href = './result.html';
-            } catch (err) {
-                console.error(err);
-                alert('Failed to submit. Try again.');
-                document.getElementById('loading-overlay').style.display = 'none';
-            }
-        }
-
-        window.addEventListener('beforeunload', (e) => {
-            if (examData && timeRemaining > 0) {
-                e.preventDefault();
-                e.returnValue = '';
-            }
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/answer-checker.js"></script>
+    <script src="js/exam.js"></script>
 </body>
 </html>
