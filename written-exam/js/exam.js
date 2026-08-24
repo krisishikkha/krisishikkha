@@ -110,7 +110,7 @@ class ExamController {
     async checkPreviousAttempt() {
         try {
             const { data, error } = await supabase
-                .from('written_exam_submission')
+                .from('written_exam_submissions')
                 .select('id')
                 .eq('exam_id', this.examId)
                 .eq('student_name', this.studentName)
@@ -490,7 +490,7 @@ class ExamController {
     async saveToSupabase(results) {
         try {
             const { data, error } = await supabase
-                .from('written_exam_submission')
+                .from('written_exam_submissions')
                 .insert([{
                     exam_id: this.examId,
                     exam_name: this.examData.name,
