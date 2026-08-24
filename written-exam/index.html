@@ -29,11 +29,6 @@
                 <p>Loading exams...</p>
             </div>
 
-            <div id="error" class="error-message" style="display: none;">
-                <p id="error-text"></p>
-                <button onclick="location.reload()" class="btn btn-primary">Retry</button>
-            </div>
-
             <div id="exam-grid" class="exam-grid" style="display: none;"></div>
         </div>
     </main>
@@ -44,14 +39,17 @@
         </div>
     </footer>
 
-    <script src="./js/exam-data.js"></script>
+    <!-- Load files in order -->
+    <script src="./js/config.js"></script>
+    <script src="./data/exams.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const loading = document.getElementById('loading');
                 const examGrid = document.getElementById('exam-grid');
                 
-                const activeExams = EXAMS_DATA.exams.filter(e => e.isActive);
+                const activeExams = EXAMS_LIST.filter(e => e.isActive);
                 
                 activeExams.forEach(exam => {
                     const card = document.createElement('div');
