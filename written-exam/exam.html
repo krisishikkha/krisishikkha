@@ -7,40 +7,52 @@
     <link rel="stylesheet" href="css/written-exam.css">
 </head>
 <body class="exam-page">
-    <!-- Student Entry Modal -->
-    <div id="studentEntryModal" class="modal">
+    
+    <!-- ========== STUDENT ENTRY MODAL ========== -->
+    <div id="studentEntryModal" class="modal active">
         <div class="modal-content">
-            <h2>Student Information</h2>
+            <h2>📝 Student Information</h2>
+            <p style="text-align: center; color: #6B7280; margin-bottom: 20px;">
+                ছাত্র/ছাত্রীর তথ্য দিন
+            </p>
             <form id="studentEntryForm">
                 <div class="form-group">
                     <label for="studentName">Your Name / আপনার নাম:</label>
-                    <input type="text" id="studentName" required placeholder="Enter your full name">
+                    <input type="text" id="studentName" required placeholder="Enter your full name" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="accessCode">Access Code / এক্সেস কোড:</label>
-                    <input type="text" id="accessCode" required placeholder="Enter exam access code">
+                    <input type="text" id="accessCode" required placeholder="Enter exam access code" autocomplete="off">
                 </div>
-                <button type="submit" class="btn btn-primary">Start Exam / পরীক্ষা শুরু করুন</button>
+                <button type="submit" class="btn btn-primary">
+                    Start Exam / পরীক্ষা শুরু করুন
+                </button>
+                <a href="index.html" class="btn btn-secondary" style="margin-top: 10px; display: block; text-align: center;">
+                    ⬅️ Back to Exam List
+                </a>
             </form>
         </div>
     </div>
 
-    <!-- Exam Interface -->
+    <!-- ========== EXAM INTERFACE ========== -->
     <div id="examInterface" style="display: none;">
+        
         <!-- Header -->
         <header class="exam-header">
             <div class="exam-info">
                 <h3 id="examTitle">Exam Title</h3>
-                <span id="studentNameDisplay"></span>
+                <span id="studentNameDisplay">Student Name</span>
             </div>
             <div class="timer-container">
                 <div id="timer" class="timer">60:00</div>
-                <div class="auto-save-indicator" id="autoSaveStatus">Auto-saved</div>
+                <div class="auto-save-indicator" id="autoSaveStatus">Ready</div>
             </div>
         </header>
 
-        <!-- Question Display -->
+        <!-- Main Exam Body -->
         <div class="exam-body">
+            
+            <!-- Question Container -->
             <div class="question-container">
                 <div class="question-header">
                     <span class="question-number" id="questionNumber">Question 1 of 40</span>
@@ -48,7 +60,7 @@
                 </div>
                 
                 <div class="question-text" id="questionText">
-                    <!-- Question will be loaded here -->
+                    <p>Loading question...</p>
                 </div>
 
                 <div class="answer-input-container">
@@ -69,16 +81,14 @@
                     </div>
                 </div>
 
-                <div class="answer-status" id="answerStatus">
-                    <!-- Status will be shown here -->
-                </div>
+                <div class="answer-status" id="answerStatus"></div>
             </div>
 
             <!-- Question Navigator -->
             <div class="question-navigator">
                 <h4>Question Navigator</h4>
                 <div id="questionGrid" class="question-grid">
-                    <!-- Question numbers will be loaded here -->
+                    <!-- Question buttons will be generated here -->
                 </div>
                 <div class="navigator-legend">
                     <div><span class="legend-box answered"></span> Answered</div>
@@ -86,33 +96,88 @@
                     <div><span class="legend-box unanswered"></span> Not Answered</div>
                 </div>
             </div>
+            
         </div>
 
-        <!-- Navigation Buttons -->
+        <!-- Navigation Footer -->
         <div class="exam-footer">
             <button class="btn btn-secondary" id="prevBtn">⬅️ Previous</button>
             <button class="btn btn-primary" id="nextBtn">Next ➡️</button>
-            <button class="btn btn-success" id="submitBtn">Submit Exam</button>
+            <button class="btn btn-success" id="submitBtn">✅ Submit Exam</button>
         </div>
+        
     </div>
 
-    <!-- Submit Confirmation Modal -->
+    <!-- ========== SUBMIT CONFIRMATION MODAL ========== -->
     <div id="submitModal" class="modal">
         <div class="modal-content">
             <h2>⚠️ Submit Exam?</h2>
-            <div id="submitSummary"></div>
-            <p>Are you sure you want to submit? You cannot change answers after submission.</p>
+            <div id="submitSummary" style="margin: 20px 0;"></div>
+            <p style="text-align: center; color: #EF4444;">
+                Are you sure? You cannot change answers after submission!<br>
+                নিশ্চিত? জমা দেওয়ার পর উত্তর পরিবর্তন করতে পারবেন না!
+            </p>
             <div class="modal-actions">
-                <button class="btn btn-secondary" id="cancelSubmit">Cancel</button>
-                <button class="btn btn-success" id="confirmSubmit">Yes, Submit</button>
+                <button class="btn btn-secondary" id="cancelSubmit">❌ Cancel</button>
+                <button class="btn btn-success" id="confirmSubmit">✅ Yes, Submit</button>
             </div>
         </div>
     </div>
 
+    <!-- ========== SCRIPTS ========== -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/config.js"></script>
+    <script src="data/exams.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/answer-checker.js"></script>
-    <script src="js/exam.js"></script>
+    
+    <!-- Dynamic Exam Data Loader -->
+    <script>
+        // Load specific exam data file dynamically
+        (function() {
+            const examId = sessionStorage.getItem('selectedExamId');
+            
+            if (!examId) {
+                alert('No exam selected! Redirecting...');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Find exam metadata
+            const examMeta = EXAM_REGISTRY.exams.find(e => e.id === examId);
+            
+            if (!examMeta) {
+                alert('Exam not found in registry!');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Check if exam is active
+            if (examMeta.status !== 'active') {
+                alert('This exam is not currently active!');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Load the exam's question file dynamically
+            const script = document.createElement('script');
+            script.src = 'data/' + examMeta.dataFile;
+            
+            script.onload = function() {
+                console.log('✅ Question file loaded:', examMeta.dataFile);
+                // Now load the main exam controller
+                const examScript = document.createElement('script');
+                examScript.src = 'js/exam.js';
+                document.body.appendChild(examScript);
+            };
+            
+            script.onerror = function() {
+                alert('Error loading exam questions! File: ' + examMeta.dataFile);
+                window.location.href = 'index.html';
+            };
+            
+            document.body.appendChild(script);
+        })();
+    </script>
 </body>
 </html>
