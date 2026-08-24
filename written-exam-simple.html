@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Written Exam - কৃষি শিক্ষা</title>
+    
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .header h1 { font-size: 2rem; margin-bottom: 10px; }
+        .header p { font-size: 1.2rem; opacity: 0.9; }
+        
+        .loading {
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .error {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: #dc2626;
+        }
+        .error h2 { margin-bottom: 15px; }
+        .error button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .exam-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 640px) {
+            .exam-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            .exam-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        .exam-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .exam-card:hover {
+            transform: translateY(-5px);
+        }
+        .exam-card-header {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            padding: 20px;
+        }
+        .exam-card-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .exam-card-header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .exam-card-body {
+            padding: 20px;
+        }
+        .exam-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        .info-item span:first-child {
+            font-size: 1.3rem;
+            margin-right: 10px;
+        }
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #1e40af;
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Written Exam</h1>
+            <p>লিখিত পরীক্ষা</p>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading exams...</p>
+        </div>
+
+        <div id="error" class="error" style="display: none;">
+            <h2>⚠️ Error</h2>
+            <p id="error-text"></p>
+            <button onclick="location.reload()">Retry</button>
+        </div>
+
+        <div id="exam-grid" class="exam-grid" style="display: none;">
+            <!-- Exams will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Supabase Configuration
+        const SUPABASE_URL = 'https://bpkheipwdjzlyuzyqdxz.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwa2hlaXB3ZGp6bHl1enlxZHh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNDIxNDEsImV4cCI6MjA4ODYxODE0MX0.OGgbZffNS8q6IOnCY0Hq02D0A_MTfHPFZ8KSzBcAfZs';
+
+        // Exam Data (Hardcoded for testing)
+        const EXAMS_DATA = {
+            "exams": [
+                {
+                    "id": "bina-so-exam-1",
+                    "title": "BINA SO Exam – 1",
+                    "description": "Bangladesh Institute of Nuclear Agriculture - Scientific Officer Exam",
+                    "totalQuestions": 50,
+                    "totalMarks": 50,
+                    "duration": 30,
+                    "accessCode": "BINA2026",
+                    "isActive": true,
+                    "dataFile": "bina-so-exam-1.json"
+                },
+                {
+                    "id": "bina-so-exam-2",
+                    "title": "BINA SO Exam – 2",
+                    "description": "Bangladesh Institute of Nuclear Agriculture - Scientific Officer Exam 2",
+                    "totalQuestions": 50,
+                    "totalMarks": 50,
+                    "duration": 30,
+                    "accessCode": "BINA2027",
+                    "isActive": true,
+                    "dataFile": "bina-so-exam-2.json"
+                },
+                {
+                    "id": "bari-so-exam-3",
+                    "title": "BARI SO Exam – 3",
+                    "description": "Bangladesh Agricultural Research Institute - Scientific Officer",
+                    "totalQuestions": 60,
+                    "totalMarks": 60,
+                    "duration": 45,
+                    "accessCode": "BARI2026",
+                    "isActive": true,
+                    "dataFile": "bari-so-exam-3.json"
+                },
+                {
+                    "id": "bsri-exam-4",
+                    "title": "BSRI Exam – 4",
+                    "description": "Bangladesh Sugarcane Research Institute",
+                    "totalQuestions": 40,
+                    "totalMarks": 40,
+                    "duration": 25,
+                    "accessCode": "BSRI2026",
+                    "isActive": true,
+                    "dataFile": "bsri-exam-4.json"
+                }
+            ]
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded');
+            loadExams();
+        });
+
+        function loadExams() {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const examGrid = document.getElementById('exam-grid');
+
+            try {
+                console.log('Loading exams from hardcoded data...');
+                
+                // Simulate slight delay
+                setTimeout(() => {
+                    const activeExams = EXAMS_DATA.exams.filter(exam => exam.isActive);
+                    
+                    console.log('Active exams:', activeExams.length);
+
+                    if (activeExams.length === 0) {
+                        throw new Error('No active exams available');
+                    }
+
+                    displayExams(activeExams);
+
+                    loading.style.display = 'none';
+                    examGrid.style.display = 'grid';
+                }, 500);
+
+            } catch (err) {
+                console.error('Error:', err);
+                loading.style.display = 'none';
+                error.style.display = 'block';
+                document.getElementById('error-text').textContent = err.message;
+            }
+        }
+
+        function displayExams(exams) {
+            const examGrid = document.getElementById('exam-grid');
+            examGrid.innerHTML = '';
+
+            exams.forEach(exam => {
+                const card = document.createElement('div');
+                card.className = 'exam-card';
+                
+                card.innerHTML = `
+                    <div class="exam-card-header">
+                        <h3>${exam.title}</h3>
+                        <p>${exam.description}</p>
+                    </div>
+                    
+                    <div class="exam-card-body">
+                        <div class="exam-info">
+                            <div class="info-item">
+                                <span>📋</span>
+                                <span>${exam.totalQuestions} Questions</span>
+                            </div>
+                            <div class="info-item">
+                                <span>✏️</span>
+                                <span>${exam.totalMarks} Marks</span>
+                            </div>
+                            <div class="info-item">
+                                <span>⏱️</span>
+                                <span>${exam.duration} Minutes</span>
+                            </div>
+                        </div>
+                        <button class="btn" onclick="startExam('${exam.id}', '${exam.dataFile}')">
+                            Start Exam
+                        </button>
+                    </div>
+                `;
+
+                examGrid.appendChild(card);
+            });
+        }
+
+        function startExam(examId, dataFile) {
+            alert('Exam ID: ' + examId + '\n\nNext step: Creating full exam page...\n\nThis is a test version. The complete exam system will load the actual exam questions.');
+            
+            // Store in localStorage for next page
+            localStorage.setItem('selected_exam_id', examId);
+            localStorage.setItem('selected_exam_file', dataFile);
+            
+            // In full version, redirect to exam.html
+            // window.location.href = './exam.html';
+        }
+    </script>
+</body>
+</html>
