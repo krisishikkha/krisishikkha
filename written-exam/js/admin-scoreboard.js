@@ -76,7 +76,7 @@ class AdminScoreboardController {
     async loadScoreboard() {
         try {
             const { data, error } = await supabase
-                .from('written_exam_submission')
+                .from('written_exam_submissions')
                 .select('*')
                 .order('percentage', { ascending: false });
 
