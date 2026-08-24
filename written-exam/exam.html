@@ -34,17 +34,17 @@
             </div>
             <div class="timer-container">
                 <div id="timer" class="timer">60:00</div>
-                <div id="autoSaveStatus" class="auto-save-indicator"></div>
+                <div id="autoSaveStatus"></div>
             </div>
         </header>
 
         <div class="exam-body">
             <div class="question-container">
                 <div class="question-header">
-                    <span id="questionNumber" class="question-number"></span>
-                    <span id="questionMarks" class="question-marks"></span>
+                    <span id="questionNumber"></span>
+                    <span id="questionMarks"></span>
                 </div>
-                <div id="questionText" class="question-text"></div>
+                <div id="questionText"></div>
                 <div class="answer-input-container">
                     <div class="answer-input-wrapper">
                         <input type="text" id="answerInput" class="answer-input" disabled>
@@ -52,7 +52,7 @@
                         <button id="tickBtn" class="btn-icon btn-tick" style="display:none;">✅</button>
                     </div>
                 </div>
-                <div id="answerStatus" class="answer-status"></div>
+                <div id="answerStatus"></div>
             </div>
 
             <div class="question-navigator">
@@ -77,7 +77,7 @@
         <div class="modal-content">
             <h2>Submit Exam?</h2>
             <div id="submitSummary"></div>
-            <p>আপনি কি নিশ্চিত?</p>
+            <p style="text-align:center;color:#EF4444;">আপনি কি নিশ্চিত?</p>
             <div class="modal-actions">
                 <button id="cancelSubmit" class="btn btn-secondary">Cancel</button>
                 <button id="confirmSubmit" class="btn btn-success">Submit</button>
@@ -85,35 +85,80 @@
         </div>
     </div>
 
+    <!-- Load dependencies first -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/config.js"></script>
     <script src="data/exams.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/answer-checker.js"></script>
+    
+    <!-- Dynamic loader script -->
     <script>
-        // Auto-load exam data
-        (function() {
-            const examId = sessionStorage.getItem('selectedExamId');
-            if (!examId) { window.location.href = 'index.html'; return; }
+        console.log('=== EXAM PAGE INIT ===');
+        
+        const examId = sessionStorage.getItem('selectedExamId');
+        console.log('Selected Exam ID:', examId);
+        
+        if (!examId) {
+            alert('No exam selected!');
+            window.location.href = 'index.html';
+            throw new Error('No exam selected');
+        }
+        
+        const examMeta = EXAM_REGISTRY.exams.find(e => e.id === examId);
+        console.log('Exam Meta:', examMeta);
+        
+        if (!examMeta) {
+            alert('Exam not found!');
+            window.location.href = 'index.html';
+            throw new Error('Exam not found');
+        }
+        
+        if (examMeta.status !== 'active') {
+            alert('This exam is not active!');
+            window.location.href = 'index.html';
+            throw new Error('Exam not active');
+        }
+        
+        // Load question file
+        const questionScript = document.createElement('script');
+        questionScript.src = `data/${examId}.js`;
+        
+        questionScript.onload = function() {
+            console.log('✅ Question file loaded');
             
-            const meta = EXAM_REGISTRY.exams.find(e => e.id === examId);
-            if (!meta || meta.status !== 'active') { 
-                alert('Exam not available!'); 
-                window.location.href = 'index.html'; 
-                return; 
+            // Verify question data exists
+            const varName = 'EXAM_DATA_' + examId.toUpperCase().replace(/-/g, '_');
+            if (typeof window[varName] === 'undefined') {
+                alert('Question data not found! Variable: ' + varName);
+                window.location.href = 'index.html';
+                return;
             }
             
-            // Load question file: data/exam-id.js
-            const s = document.createElement('script');
-            s.src = `data/${examId}.js`;
-            s.onload = () => {
-                const es = document.createElement('script');
-                es.src = 'js/exam.js';
-                document.body.appendChild(es);
+            console.log('✅ Question data verified:', varName);
+            
+            // Now load exam.js
+            const examScript = document.createElement('script');
+            examScript.src = 'js/exam.js';
+            
+            examScript.onload = function() {
+                console.log('✅ exam.js loaded');
+                // exam.js will auto-initialize
             };
-            s.onerror = () => { alert('Question file not found!'); window.location.href = 'index.html'; };
-            document.body.appendChild(s);
-        })();
+            
+            examScript.onerror = function() {
+                alert('Error loading exam.js');
+            };
+            
+            document.body.appendChild(examScript);
+        };
+        
+        questionScript.onerror = function() {
+            alert('Question file not found: data/' + examId + '.js');
+            window.location.href = 'index.html';
+        };
+        
+        document.body.appendChild(questionScript);
     </script>
 </body>
 </html>
