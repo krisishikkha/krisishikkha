@@ -7,8 +7,8 @@ const EXAMS_LIST = [
         id: "bina-so-exam-1",
         title: "BINA SO Exam – 1",
         description: "Bangladesh Institute of Nuclear Agriculture - Scientific Officer Exam",
-        totalQuestions: 50,
-        totalMarks: 50,
+        totalQuestions: 10,
+        totalMarks: 10,
         duration: 30,
         isActive: true,
         dataFile: "bina-so-exam-1.js"
