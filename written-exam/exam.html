@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take Written Exam - Krishi Shikkha">
+    <title>Exam - কৃষি শিক্ষা</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/written-exam.css">
+    
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Entry Form (Step 1) -->
+    <div id="entry-screen" class="entry-screen">
+        <div class="entry-container">
+            <div class="entry-card">
+                <div class="entry-header">
+                    <h1 class="entry-title" id="exam-title">Written Exam</h1>
+                    <p class="entry-subtitle" id="exam-subtitle"></p>
+                </div>
+
+                <div class="entry-body">
+                    <!-- Instructions -->
+                    <div class="instructions-box">
+                        <h3>📋 Instructions / নির্দেশনা</h3>
+                        <ul id="instructions-list">
+                            <!-- Will be populated dynamically -->
+                        </ul>
+                    </div>
+
+                    <!-- Entry Form -->
+                    <form id="entry-form" class="entry-form">
+                        <div class="form-group">
+                            <label for="student-name">Your Name / আপনার নাম *</label>
+                            <input 
+                                type="text" 
+                                id="student-name" 
+                                class="form-control" 
+                                placeholder="Enter your full name"
+                                required
+                                minlength="3"
+                                maxlength="50"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="access-code">Access Code / এক্সেস কোড *</label>
+                            <input 
+                                type="text" 
+                                id="access-code" 
+                                class="form-control" 
+                                placeholder="Enter access code"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agree-terms" required>
+                                <span>I have read and understood the instructions</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-large">
+                            Enter Exam Hall
+                        </button>
+                    </form>
+
+                    <div class="entry-footer">
+                        <button onclick="goBack()" class="btn btn-secondary">
+                            ← Back to Exam List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exam Screen (Step 2) -->
+    <div id="exam-screen" class="exam-screen" style="display: none;">
+        <!-- Exam Header -->
+        <header class="exam-header">
+            <div class="exam-header-left">
+                <h2 class="exam-header-title" id="exam-header-title"></h2>
+                <span class="student-name-badge" id="student-name-badge"></span>
+            </div>
+            <div class="exam-header-right">
+                <div class="timer" id="timer">
+                    <span class="timer-icon">⏱️</span>
+                    <span class="timer-text" id="timer-text">00:00</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Question Navigator -->
+        <div class="question-navigator" id="question-navigator">
+            <div class="navigator-header">
+                <span>Questions</span>
+                <button class="navigator-toggle" onclick="toggleNavigator()">
+                    <span id="navigator-toggle-icon">▼</span>
+                </button>
+            </div>
+            <div class="navigator-grid" id="navigator-grid">
+                <!-- Question buttons will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Main Exam Content -->
+        <main class="exam-content">
+            <div class="exam-container">
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="answered-count">0</span> / <span id="total-questions">0</span> Answered
+                    </div>
+                </div>
+
+                <!-- Question Display -->
+                <div class="question-container" id="question-container">
+                    <div class="question-number">
+                        Question <span id="current-question-number">1</span>
+                    </div>
+                    
+                    <div class="question-text" id="question-text">
+                        <!-- Question will be displayed here -->
+                    </div>
+
+                    <div class="answer-input-container">
+                        <label for="answer-input" class="answer-label">
+                            Your Answer / আপনার উত্তর:
+                        </label>
+                        <input 
+                            type="text" 
+                            id="answer-input" 
+                            class="answer-input" 
+                            placeholder="Type your answer here..."
+                            autocomplete="off"
+                        >
+                        <div class="answer-hint">
+                            Press Tab or click Next to move to next question
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="exam-navigation">
+                    <button 
+                        id="prev-btn" 
+                        class="btn btn-secondary" 
+                        onclick="previousQuestion()"
+                        disabled
+                    >
+                        ← Previous
+                    </button>
+
+                    <button 
+                        id="clear-btn" 
+                        class="btn btn-outline" 
+                        onclick="clearAnswer()"
+                    >
+                        Clear Answer
+                    </button>
+
+                    <button 
+                        id="next-btn" 
+                        class="btn btn-primary" 
+                        onclick="nextQuestion()"
+                    >
+                        Next →
+                    </button>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="submit-container">
+                    <button 
+                        id="submit-btn" 
+                        class="btn btn-success btn-large" 
+                        onclick="showSubmitConfirmation()"
+                    >
+                        Submit Exam
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Submit Confirmation Modal -->
+    <div id="submit-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>⚠️ Confirm Submission</h3>
+            </div>
+            <div class="modal-body">
+                <div class="submission-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Total Questions:</span>
+                        <span class="summary-value" id="modal-total">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Answered:</span>
+                        <span class="summary-value summary-answered" id="modal-answered">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Not Answered:</span>
+                        <span class="summary-value summary-skipped" id="modal-skipped">0</span>
+                    </div>
+                </div>
+                <p class="warning-text">
+                    ⚠️ Once you submit, you cannot change your answers. Are you sure?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeSubmitModal()">
+                    Cancel
+                </button>
+                <button class="btn btn-success" onclick="submitExam()">
+                    Yes, Submit Exam
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Submitting your exam...</p>
+    </div>
+
+    <!-- Config -->
+    <script src="./js/config.js"></script>
+    
+    <!-- Answer Checker -->
+    <script src="./js/answer-checker.js"></script>
+    <!-- Main Exam Logic -->
+    <script>
+        // ============================================
+        // Global Variables
+        // ============================================
+        
+        let supabase;
+        let examData = null;
+        let currentQuestionIndex = 0;
+        let studentAnswers = {};
+        let studentName = '';
+        let examStartTime = null;
+        let timerInterval = null;
+        let timeRemaining = 0; // in seconds
+        let autoSaveInterval = null;
+
+        // ============================================
+        // Initialize
+        // ============================================
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Initialize Supabase
+            supabase = window.supabase.createClient(
+                SUPABASE_CONFIG.url,
+                SUPABASE_CONFIG.anonKey
+            );
+
+            // Load exam data
+            await loadExamData();
+
+            // Setup entry form
+            setupEntryForm();
+
+            // Prevent accidental page leave
+            setupBeforeUnload();
+        });
+
+        // ============================================
+        // Load Exam Data
+        // ============================================
+        
+        async function loadExamData() {
+            try {
+                const examId = localStorage.getItem('selected_exam_id');
+                const examFile = localStorage.getItem('selected_exam_file');
+
+                if (!examId || !examFile) {
+                    alert('No exam selected. Redirecting to exam list.');
+                    window.location.href = './index.html';
+                    return;
+                }
+
+                const response = await fetch(DATA_PATH + examFile);
+                if (!response.ok) throw new Error('Failed to load exam');
+
+                examData = await response.json();
+
+                // Display exam info on entry screen
+                document.getElementById('exam-title').textContent = examData.examInfo.title;
+                document.getElementById('exam-subtitle').textContent = examData.examInfo.subtitle;
+
+                // Display instructions
+                const instructionsList = document.getElementById('instructions-list');
+                instructionsList.innerHTML = '';
+                examData.examInfo.instructions.forEach(instruction => {
+                    const li = document.createElement('li');
+                    li.textContent = instruction;
+                    instructionsList.appendChild(li);
+                });
+
+            } catch (error) {
+                console.error('Error loading exam:', error);
+                alert('Failed to load exam. Please try again.');
+                window.location.href = './index.html';
+            }
+        }
+
+        // ============================================
+        // Entry Form Setup
+        // ============================================
+        
+        function setupEntryForm() {
+            const form = document.getElementById('entry-form');
+            
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('student-name').value.trim();
+                const accessCode = document.getElementById('access-code').value.trim();
+
+                // Validate name
+                if (name.length < SECURITY_CONFIG.minNameLength) {
+                    alert(`Name must be at least ${SECURITY_CONFIG.minNameLength} characters`);
+                    return;
+                }
+
+                // Validate access code
+                if (accessCode !== examData.examInfo.accessCode) {
+                    alert('❌ Invalid access code. Please check and try again.');
+                    document.getElementById('access-code').value = '';
+                    document.getElementById('access-code').focus();
+                    return;
+                }
+
+                // Check attempt limit
+                const hasAttempted = await checkAttemptLimit(name, examData.examInfo.id);
+                if (hasAttempted) {
+                    alert('⚠️ You have already submitted this exam. Multiple attempts are not allowed.');
+                    return;
+                }
+
+                // Start exam
+                studentName = name;
+                startExam();
+            });
+        }
+
+        // ============================================
+        // Check Attempt Limit
+        // ============================================
+        
+        async function checkAttemptLimit(name, examId) {
+            try {
+                const { data, error } = await supabase
+                    .from(WRITTEN_EXAM_TABLE)
+                    .select('id')
+                    .eq('student_name', name)
+                    .eq('exam_id', examId)
+                    .limit(1);
+
+                if (error) throw error;
+
+                return data && data.length > 0;
+
+            } catch (error) {
+                console.error('Error checking attempt limit:', error);
+                return false;
+            }
+        }
+
+        // ============================================
+        // Start Exam
+        // ============================================
+        
+        function startExam() {
+            // Hide entry screen, show exam screen
+            document.getElementById('entry-screen').style.display = 'none';
+            document.getElementById('exam-screen').style.display = 'block';
+
+            // Set exam header
+            document.getElementById('exam-header-title').textContent = examData.examInfo.title;
+            document.getElementById('student-name-badge').textContent = studentName;
+
+            // Initialize exam
+            initializeExam();
+
+            // Start timer
+            startTimer();
+
+            // Setup auto-save
+            setupAutoSave();
+
+            // Load first question
+            loadQuestion(0);
+
+            // Create question navigator
+            createQuestionNavigator();
+        }
+
+        // ============================================
+        // Initialize Exam
+        // ============================================
+        
+        function initializeExam() {
+            examStartTime = Date.now();
+            timeRemaining = examData.examInfo.durationMinutes * 60; // Convert to seconds
+            
+            // Initialize answers object
+            examData.questions.forEach(q => {
+                studentAnswers[q.id] = '';
+            });
+
+            // Set total questions
+            document.getElementById('total-questions').textContent = examData.questions.length;
+            
+            // Save to localStorage
+            saveToLocalStorage();
+        }
+
+        // ============================================
+        // Timer
+        // ============================================
+        
+        function startTimer() {
+            updateTimerDisplay();
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                saveToLocalStorage();
+
+                // Warning at 5 minutes
+                if (timeRemaining === EXAM_CONFIG.warningTime) {
+                    alert('⚠️ Only 5 minutes remaining!');
+                }
+
+                // Critical warning at 1 minute
+                if (timeRemaining === EXAM_CONFIG.criticalTime) {
+                    alert('🚨 Only 1 minute remaining!');
+                }
+
+                // Auto-submit when time ends
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert('⏰ Time is up! Your exam will be submitted automatically.');
+                    submitExam();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            const timerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            document.getElementById('timer-text').textContent = timerText;
+
+            // Change color based on remaining time
+            const timerElement = document.getElementById('timer');
+            if (timeRemaining <= EXAM_CONFIG.criticalTime) {
+                timerElement.classList.add('timer-critical');
+            } else if (timeRemaining <= EXAM_CONFIG.warningTime) {
+                timerElement.classList.add('timer-warning');
+            }
+        }
+
+        // ============================================
+        // Auto Save
+        // ============================================
+        
+        function setupAutoSave() {
+            autoSaveInterval = setInterval(() => {
+                saveToLocalStorage();
+            }, EXAM_CONFIG.autoSaveInterval);
+        }
+
+        function saveToLocalStorage() {
+            localStorage.setItem(STORAGE_KEYS.answers, JSON.stringify(studentAnswers));
+            localStorage.setItem(STORAGE_KEYS.startTime, examStartTime);
+            localStorage.setItem(STORAGE_KEYS.timeRemaining, timeRemaining);
+            localStorage.setItem(STORAGE_KEYS.studentName, studentName);
+            localStorage.setItem(STORAGE_KEYS.examId, examData.examInfo.id);
+        }
+
+        // ============================================
+        // Question Navigator
+        // ============================================
+        
+        function createQuestionNavigator() {
+            const navigatorGrid = document.getElementById('navigator-grid');
+            navigatorGrid.innerHTML = '';
+
+            examData.questions.forEach((question, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'navigator-btn';
+                btn.textContent = index + 1;
+                btn.onclick = () => loadQuestion(index);
+                btn.id = `nav-btn-${index}`;
+                navigatorGrid.appendChild(btn);
+            });
+
+            updateNavigator();
+        }
+
+        function updateNavigator() {
+            examData.questions.forEach((question, index) => {
+                const btn = document.getElementById(`nav-btn-${index}`);
+                if (!btn) return;
+
+                // Remove all status classes
+                btn.classList.remove('answered', 'current');
+
+                // Add current class
+                if (index === currentQuestionIndex) {
+                    btn.classList.add('current');
+                }
+
+                // Add answered class
+                if (studentAnswers[question.id] && studentAnswers[question.id].trim() !== '') {
+                    btn.classList.add('answered');
+                }
+            });
+
+            // Update progress
+            updateProgress();
+        }
+
+        function toggleNavigator() {
+            const grid = document.getElementById('navigator-grid');
+            const icon = document.getElementById('navigator-toggle-icon');
+            
+            if (grid.style.display === 'none') {
+                grid.style.display = 'grid';
+                icon.textContent = '▼';
+            } else {
+                grid.style.display = 'none';
+                icon.textContent = '▶';
+            }
+        }
+
+        // ============================================
+        // Load Question
+        // ============================================
+        
+        function loadQuestion(index) {
+            // Save current answer first
+            saveCurrentAnswer();
+
+            currentQuestionIndex = index;
+            const question = examData.questions[index];
+
+            // Display question
+            document.getElementById('current-question-number').textContent = index + 1;
+            document.getElementById('question-text').textContent = question.question;
+
+            // Load saved answer if exists
+            const savedAnswer = studentAnswers[question.id] || '';
+            document.getElementById('answer-input').value = savedAnswer;
+
+            // Focus on input
+            document.getElementById('answer-input').focus();
+
+            // Update navigation buttons
+            updateNavigationButtons();
+
+            // Update navigator
+            updateNavigator();
+        }
+
+        // ============================================
+        // Save Current Answer
+        // ============================================
+        
+        function saveCurrentAnswer() {
+            const currentQuestion = examData.questions[currentQuestionIndex];
+            const answerInput = document.getElementById('answer-input');
+            studentAnswers[currentQuestion.id] = answerInput.value.trim();
+        }
+
+        // ============================================
+        // Navigation
+        // ============================================
+        
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                loadQuestion(currentQuestionIndex - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < examData.questions.length - 1) {
+                loadQuestion(currentQuestionIndex + 1);
+            }
+        }
+
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            if (currentQuestionIndex === examData.questions.length - 1) {
+                nextBtn.textContent = 'Review';
+            } else {
+                nextBtn.textContent = 'Next →';
+            }
+        }
+
+        function clearAnswer() {
+            document.getElementById('answer-input').value = '';
+            document.getElementById('answer-input').focus();
+        }
+
+        // ============================================
+        // Progress Update
+        // ============================================
+        
+        function updateProgress() {
+            const answeredCount = Object.values(studentAnswers).filter(ans => ans.trim() !== '').length;
+            const totalQuestions = examData.questions.length;
+            const percentage = (answeredCount / totalQuestions) * 100;
+
+            document.getElementById('answered-count').textContent = answeredCount;
+            document.getElementById('progress-fill').style.width = percentage + '%';
+        }
+
+        // ============================================
+        // Submit Confirmation
+        // ============================================
+        
+        function showSubmitConfirmation() {
+            saveCurrentAnswer();
+
+            const answeredCount = Object.values(studentAnswers).filter(ans => ans.trim() !== '').length;
+            const totalQuestions = examData.questions.length;
+            const skippedCount = totalQuestions - answeredCount;
+
+            document.getElementById('modal-total').textContent = totalQuestions;
+            document.getElementById('modal-answered').textContent = answeredCount;
+            document.getElementById('modal-skipped').textContent = skippedCount;
+
+            document.getElementById('submit-modal').style.display = 'flex';
+        }
+
+        function closeSubmitModal() {
+            document.getElementById('submit-modal').style.display = 'none';
+        }
+
+        // ============================================
+        // Submit Exam
+        // ============================================
+        
+        async function submitExam() {
+            // Close modal
+            closeSubmitModal();
+
+            // Show loading
+            document.getElementById('loading-overlay').style.display = 'flex';
+
+            // Stop timer and auto-save
+            clearInterval(timerInterval);
+            clearInterval(autoSaveInterval);
+
+            // Calculate results
+            const results = calculateResults();
+
+            // Save to Supabase
+            try {
+                const { data, error } = await supabase
+                    .from(WRITTEN_EXAM_TABLE)
+                    .insert([{
+                        exam_id: examData.examInfo.id,
+                        exam_name: examData.examInfo.title,
+                        student_name: studentName,
+                        total_questions: examData.questions.length,
+                        answered: results.answered,
+                        correct: results.correct,
+                        wrong: results.wrong,
+                        skipped: results.skipped,
+                        total_marks: examData.examInfo.totalMarks,
+                        obtained_marks: results.obtainedMarks,
+                        percentage: results.percentage,
+                        answers: results.detailedAnswers
+                    }])
+                    .select();
+
+                if (error) throw error;
+
+                // Clear localStorage
+                clearExamStorage();
+
+                // Redirect to result page
+                localStorage.setItem('submission_id', data[0].id);
+                window.location.href = './result.html';
+
+            } catch (error) {
+                console.error('Error submitting exam:', error);
+                document.getElementById('loading-overlay').style.display = 'none';
+                alert('Failed to submit exam. Please check your internet connection and try again.');
+            }
+        }
+
+        // ============================================
+        // Calculate Results
+        // ============================================
+        
+        function calculateResults() {
+            let correct = 0;
+            let wrong = 0;
+            let skipped = 0;
+            let obtainedMarks = 0;
+            const detailedAnswers = [];
+
+            examData.questions.forEach(question => {
+                const studentAnswer = studentAnswers[question.id] || '';
+                const isCorrect = checkAnswer(studentAnswer, question.acceptedAnswers);
+
+                const answerDetail = {
+                    questionId: question.id,
+                    question: question.question,
+                    studentAnswer: studentAnswer,
+                    correctAnswers: question.acceptedAnswers,
+                    isCorrect: isCorrect,
+                    marks: question.marks,
+                    obtained: 0
+                };
+
+                if (studentAnswer.trim() === '') {
+                    skipped++;
+                    answerDetail.status = 'skipped';
+                } else if (isCorrect) {
+                    correct++;
+                    obtainedMarks += question.marks;
+                    answerDetail.obtained = question.marks;
+                    answerDetail.status = 'correct';
+                } else {
+                    wrong++;
+                    obtainedMarks -= examData.examInfo.negativeMark;
+                    answerDetail.obtained = -examData.examInfo.negativeMark;
+                    answerDetail.status = 'wrong';
+                }
+
+                detailedAnswers.push(answerDetail);
+            });
+
+            const percentage = ((obtainedMarks / examData.examInfo.totalMarks) * 100).toFixed(2);
+
+            return {
+                answered: correct + wrong,
+                correct,
+                wrong,
+                skipped,
+                obtainedMarks: parseFloat(obtainedMarks.toFixed(2)),
+                percentage: parseFloat(percentage),
+                detailedAnswers
+            };
+        }
+
+        // ============================================
+        // Utility Functions
+        // ============================================
+        
+                
+        function goBack() {
+            if (confirm('Are you sure you want to go back? Your progress will be lost.')) {
+                window.location.href = './index.html';
+            }
+        }
+
+        function setupBeforeUnload() {
+            window.addEventListener('beforeunload', (e) => {
+                if (examStartTime && EXAM_CONFIG.confirmBeforeLeave) {
+                    e.preventDefault();
+                    e.returnValue = '';
+                }
+            });
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('exam-screen').style.display !== 'none') {
+                // Arrow keys for navigation
+                if (e.key === 'ArrowLeft' && !e.target.classList.contains('answer-input')) {
+                    previousQuestion();
+                } else if (e.key === 'ArrowRight' && !e.target.classList.contains('answer-input')) {
+                    nextQuestion();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
