@@ -2,9 +2,9 @@ const EXAM_DATA_BINA_SO_1 = {
     id: 'bina-so-exam-1',
     name: 'BINA SO Exam - Set 1',
     duration: 60,
-    totalQuestions: 40,
+    totalQuestions: 4,
     marksPerQuestion: 1,
-    negativeMarks: 0.25,
+    negativeMarks: 0,
     
     questions: [
         {
