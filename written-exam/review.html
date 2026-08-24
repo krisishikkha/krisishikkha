@@ -3,248 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Answer Review - Krishi Shikkha">
-    <title>Answer Review - কৃষি শিক্ষা</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/written-exam.css">
-    
-    <!-- Supabase Client -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <title>Review Answers</title>
+    <link rel="stylesheet" href="css/written-exam.css">
 </head>
 <body>
-    <div class="review-container">
-        <!-- Header -->
-        <header class="review-header">
-            <div class="container">
-                <h1 class="review-title">Answer Review</h1>
-                <p class="review-subtitle">উত্তর পর্যালোচনা</p>
-            </div>
+    <div class="container">
+        <header class="page-header">
+            <h1>📝 Answer Review</h1>
+            <h2 id="examName"></h2>
         </header>
 
-        <!-- Loading State -->
-        <div id="loading" class="loading">
-            <div class="spinner"></div>
-            <p>Loading review...</p>
+        <div class="review-container" id="reviewContainer">
+            <!-- Questions will be loaded here -->
         </div>
 
-        <!-- Review Content -->
-        <main id="review-content" class="review-content" style="display: none;">
-            <div class="container">
-                <!-- Summary Card -->
-                <div class="review-summary-card">
-                    <div class="summary-header">
-                        <h2 id="exam-name"></h2>
-                        <p id="student-name"></p>
-                    </div>
-                    <div class="summary-stats">
-                        <div class="summary-stat">
-                            <span class="stat-value correct-color" id="correct-count">0</span>
-                            <span class="stat-label">Correct</span>
-                        </div>
-                        <div class="summary-stat">
-                            <span class="stat-value wrong-color" id="wrong-count">0</span>
-                            <span class="stat-label">Wrong</span>
-                        </div>
-                        <div class="summary-stat">
-                            <span class="stat-value skipped-color" id="skipped-count">0</span>
-                            <span class="stat-label">Skipped</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Filter Buttons -->
-                <div class="review-filters">
-                    <button class="filter-btn active" onclick="filterAnswers('all')" data-filter="all">
-                        All Questions
-                    </button>
-                    <button class="filter-btn" onclick="filterAnswers('correct')" data-filter="correct">
-                        ✅ Correct
-                    </button>
-                    <button class="filter-btn" onclick="filterAnswers('wrong')" data-filter="wrong">
-                        ❌ Wrong
-                    </button>
-                    <button class="filter-btn" onclick="filterAnswers('skipped')" data-filter="skipped">
-                        ⏭️ Skipped
-                    </button>
-                </div>
-
-                <!-- Questions Review -->
-                <div id="questions-container" class="questions-review-container">
-                    <!-- Questions will be dynamically inserted -->
-                </div>
-
-                <!-- Back Button -->
-                <div class="review-actions">
-                    <button onclick="goToResult()" class="btn btn-secondary">
-                        ← Back to Result
-                    </button>
-                    <button onclick="goHome()" class="btn btn-primary">
-                        🏠 Home
-                    </button>
-                </div>
-            </div>
-        </main>
+        <div class="review-actions">
+            <a href="result.html" class="btn btn-secondary">⬅️ Back to Result</a>
+            <a href="index.html" class="btn btn-primary">🏠 Home</a>
+        </div>
     </div>
 
-    <!-- Config -->
-    <script src="./js/config.js"></script>
-
-    <script>
-        let supabase;
-        let submissionData = null;
-        let currentFilter = 'all';
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            // Initialize Supabase
-            supabase = window.supabase.createClient(
-                SUPABASE_CONFIG.url,
-                SUPABASE_CONFIG.anonKey
-            );
-
-            // Load review
-            await loadReview();
-        });
-
-        async function loadReview() {
-            try {
-                const submissionId = localStorage.getItem('submission_id');
-                
-                if (!submissionId) {
-                    throw new Error('No submission found');
-                }
-
-                // Fetch submission
-                const { data, error } = await supabase
-                    .from(WRITTEN_EXAM_TABLE)
-                    .select('*')
-                    .eq('id', submissionId)
-                    .single();
-
-                if (error) throw error;
-                if (!data) throw new Error('Submission not found');
-
-                submissionData = data;
-
-                // Display review
-                displayReview(data);
-
-                // Hide loading, show content
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('review-content').style.display = 'block';
-
-            } catch (error) {
-                console.error('Error loading review:', error);
-                alert('Failed to load review. Redirecting to home.');
-                window.location.href = './index.html';
-            }
-        }
-
-        function displayReview(data) {
-            // Summary
-            document.getElementById('exam-name').textContent = data.exam_name;
-            document.getElementById('student-name').textContent = 'Student: ' + data.student_name;
-            document.getElementById('correct-count').textContent = data.correct;
-            document.getElementById('wrong-count').textContent = data.wrong;
-            document.getElementById('skipped-count').textContent = data.skipped;
-
-            // Questions
-            displayQuestions(data.answers);
-        }
-
-        function displayQuestions(answers) {
-            const container = document.getElementById('questions-container');
-            container.innerHTML = '';
-
-            answers.forEach((answer, index) => {
-                if (currentFilter !== 'all' && answer.status !== currentFilter) {
-                    return;
-                }
-
-                const questionCard = createQuestionCard(answer, index + 1);
-                container.appendChild(questionCard);
-            });
-        }
-
-        function createQuestionCard(answer, number) {
-            const card = document.createElement('div');
-            card.className = `question-review-card ${answer.status}`;
-
-            const statusIcon = {
-                'correct': '✅',
-                'wrong': '❌',
-                'skipped': '⏭️'
-            }[answer.status];
-
-            const statusText = {
-                'correct': 'Correct',
-                'wrong': 'Wrong',
-                'skipped': 'Not Answered'
-            }[answer.status];
-
-            const studentAnswerHTML = answer.studentAnswer.trim() === '' 
-                ? '<em class="no-answer">No answer provided</em>'
-                : answer.studentAnswer;
-
-            card.innerHTML = `
-                <div class="question-review-header">
-                    <span class="question-number">Q${number}</span>
-                    <span class="question-status ${answer.status}">
-                        ${statusIcon} ${statusText}
-                    </span>
-                    <span class="question-marks">
-                        ${answer.obtained}/${answer.marks} marks
-                    </span>
-                </div>
-
-                <div class="question-review-body">
-                    <div class="question-text">
-                        <strong>Question:</strong>
-                        <p>${answer.question}</p>
-                    </div>
-
-                    <div class="answer-section">
-                        <div class="answer-item student-answer ${answer.status}">
-                            <strong>Your Answer:</strong>
-                            <p>${studentAnswerHTML}</p>
-                        </div>
-
-                        <div class="answer-item correct-answer">
-                            <strong>Correct Answer${answer.correctAnswers.length > 1 ? 's' : ''}:</strong>
-                            <ul class="correct-answers-list">
-                                ${answer.correctAnswers.map(ans => `<li>${ans}</li>`).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            return card;
-        }
-
-        function filterAnswers(filter) {
-            currentFilter = filter;
-
-            // Update active button
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-filter') === filter) {
-                    btn.classList.add('active');
-                }
-            });
-
-            // Re-display questions
-            displayQuestions(submissionData.answers);
-        }
-
-        function goToResult() {
-            window.location.href = './result.html';
-        }
-
-        function goHome() {
-            localStorage.removeItem('submission_id');
-            window.location.href = './index.html';
-        }
-    </script>
+    <script src="js/config.js"></script>
+    <script src="js/review.js"></script>
 </body>
 </html>
