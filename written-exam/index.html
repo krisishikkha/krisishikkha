@@ -3,96 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Written Exam - কৃষি শিক্ষা</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <link rel="stylesheet" href="./css/written-exam.css">
+    <title>Written Exam - Exam List</title>
+    <link rel="stylesheet" href="css/written-exam.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="header-title">📝 Written Exam</h1>
-                <p class="header-subtitle">লিখিত পরীক্ষা</p>
+    <div class="container">
+        <header class="page-header">
+            <h1>📝 Written Exam System</h1>
+            <p>লিখিত পরীক্ষা সিস্টেম</p>
+        </header>
+
+        <div class="exam-list-container">
+            <h2>Available Exams / উপলব্ধ পরীক্ষা</h2>
+            <div id="examList" class="exam-grid">
+                <!-- Exams will be loaded here -->
             </div>
         </div>
-    </header>
 
-    <main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <h2 class="page-title">Available Exams</h2>
-                <p class="page-description">পরীক্ষা নির্বাচন করুন</p>
-            </div>
-
-            <div id="loading" class="loading">
-                <div class="spinner"></div>
-                <p>Loading exams...</p>
-            </div>
-
-            <div id="exam-grid" class="exam-grid" style="display: none;"></div>
+        <div class="admin-link">
+            <a href="admin-scoreboard.html">🔐 Admin Panel</a>
         </div>
-    </main>
+    </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 কৃষি শিক্ষা | Written Exam System</p>
-        </div>
-    </footer>
-
-    <!-- Load files in order -->
-    <script src="./js/config.js"></script>
-    <script src="./data/exams.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const loading = document.getElementById('loading');
-                const examGrid = document.getElementById('exam-grid');
-                
-                const activeExams = EXAMS_LIST.filter(e => e.isActive);
-                
-                activeExams.forEach(exam => {
-                    const card = document.createElement('div');
-                    card.className = 'exam-card';
-                    card.innerHTML = `
-                        <div class="exam-card-header">
-                            <h3 class="exam-title">${exam.title}</h3>
-                            <p class="exam-description">${exam.description}</p>
-                        </div>
-                        <div class="exam-card-body">
-                            <div class="exam-info">
-                                <div class="info-item">
-                                    <span class="info-icon">📋</span>
-                                    <span class="info-text">${exam.totalQuestions} Questions</span>
-                                </div>
-                                <div class="info-item">
-                                    <span class="info-icon">✏️</span>
-                                    <span class="info-text">${exam.totalMarks} Marks</span>
-                                </div>
-                                <div class="info-item">
-                                    <span class="info-icon">⏱️</span>
-                                    <span class="info-text">${exam.duration} Minutes</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="exam-card-footer">
-                            <button onclick="startExam('${exam.id}')" class="btn btn-primary btn-block">
-                                Start Exam
-                            </button>
-                        </div>
-                    `;
-                    examGrid.appendChild(card);
-                });
-                
-                loading.style.display = 'none';
-                examGrid.style.display = 'grid';
-            }, 300);
-        });
-
-        function startExam(examId) {
-            localStorage.setItem('selected_exam_id', examId);
-            window.location.href = './exam.html';
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="data/exams.js"></script>
+    <script src="js/exam-list.js"></script>
 </body>
 </html>
