@@ -3,17 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Written Exam - Krishi Shikkha">
     <title>Written Exam - কৃষি শিক্ষা</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/written-exam.css">
-    
-    <!-- Supabase Client -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="./css/written-exam.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -23,164 +17,84 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Page Title -->
             <div class="page-header">
                 <h2 class="page-title">Available Exams</h2>
                 <p class="page-description">পরীক্ষা নির্বাচন করুন</p>
             </div>
 
-            <!-- Loading State -->
             <div id="loading" class="loading">
                 <div class="spinner"></div>
                 <p>Loading exams...</p>
             </div>
 
-            <!-- Error State -->
             <div id="error" class="error-message" style="display: none;">
                 <p id="error-text"></p>
-                <button onclick="loadExams()" class="btn btn-primary">Retry</button>
+                <button onclick="location.reload()" class="btn btn-primary">Retry</button>
             </div>
 
-            <!-- Exam Cards Grid -->
-            <div id="exam-grid" class="exam-grid" style="display: none;">
-                <!-- Exam cards will be dynamically inserted here -->
-            </div>
+            <div id="exam-grid" class="exam-grid" style="display: none;"></div>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 কৃষি শিক্ষা | Written Exam System</p>
         </div>
     </footer>
 
-    <!-- Config -->
-    <script src="./js/config.js"></script>
-    
-    <!-- Main Script -->
+    <script src="./js/exam-data.js"></script>
     <script>
-        // Initialize Supabase
-        const supabase = window.supabase.createClient(
-            SUPABASE_CONFIG.url,
-            SUPABASE_CONFIG.anonKey
-        );
-
-        // Load exams on page load
         document.addEventListener('DOMContentLoaded', () => {
-            loadExams();
-        });
-
-        // Load exams from JSON
-        async function loadExams() {
-            const loading = document.getElementById('loading');
-            const error = document.getElementById('error');
-            const examGrid = document.getElementById('exam-grid');
-
-            try {
-                // Show loading
-                loading.style.display = 'block';
-                error.style.display = 'none';
-                examGrid.style.display = 'none';
-
-                // Fetch exams.json
-                const response = await fetch(DATA_PATH + EXAMS_JSON);
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                const examGrid = document.getElementById('exam-grid');
                 
-                if (!response.ok) {
-                    throw new Error('Failed to load exams');
-                }
-
-                const data = await response.json();
+                const activeExams = EXAMS_DATA.exams.filter(e => e.isActive);
                 
-                // Filter active exams
-                const activeExams = data.exams.filter(exam => exam.isActive);
-
-                if (activeExams.length === 0) {
-                    throw new Error('No active exams available');
-                }
-
-                // Display exams
-                displayExams(activeExams);
-
-                // Hide loading, show grid
+                activeExams.forEach(exam => {
+                    const card = document.createElement('div');
+                    card.className = 'exam-card';
+                    card.innerHTML = `
+                        <div class="exam-card-header">
+                            <h3 class="exam-title">${exam.title}</h3>
+                            <p class="exam-description">${exam.description}</p>
+                        </div>
+                        <div class="exam-card-body">
+                            <div class="exam-info">
+                                <div class="info-item">
+                                    <span class="info-icon">📋</span>
+                                    <span class="info-text">${exam.totalQuestions} Questions</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-icon">✏️</span>
+                                    <span class="info-text">${exam.totalMarks} Marks</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-icon">⏱️</span>
+                                    <span class="info-text">${exam.duration} Minutes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exam-card-footer">
+                            <button onclick="startExam('${exam.id}')" class="btn btn-primary btn-block">
+                                Start Exam
+                            </button>
+                        </div>
+                    `;
+                    examGrid.appendChild(card);
+                });
+                
                 loading.style.display = 'none';
                 examGrid.style.display = 'grid';
+            }, 300);
+        });
 
-            } catch (err) {
-                console.error('Error loading exams:', err);
-                
-                // Show error
-                loading.style.display = 'none';
-                error.style.display = 'block';
-                document.getElementById('error-text').textContent = 
-                    'Failed to load exams. Please check your internet connection and try again.';
-            }
-        }
-
-        // Display exams in grid
-        function displayExams(exams) {
-            const examGrid = document.getElementById('exam-grid');
-            examGrid.innerHTML = '';
-
-            exams.forEach(exam => {
-                const card = createExamCard(exam);
-                examGrid.appendChild(card);
-            });
-        }
-
-        // Create exam card element
-        function createExamCard(exam) {
-            const card = document.createElement('div');
-            card.className = 'exam-card';
-            
-            card.innerHTML = `
-                <div class="exam-card-header">
-                    <h3 class="exam-title">${exam.title}</h3>
-                    <p class="exam-description">${exam.description}</p>
-                </div>
-                
-                <div class="exam-card-body">
-                    <div class="exam-info">
-                        <div class="info-item">
-                            <span class="info-icon">📋</span>
-                            <span class="info-text">${exam.totalQuestions} Questions</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">✏️</span>
-                            <span class="info-text">${exam.totalMarks} Marks</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">⏱️</span>
-                            <span class="info-text">${exam.duration} Minutes</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="exam-card-footer">
-                    <button 
-                        onclick="startExam('${exam.id}', '${exam.dataFile}')" 
-                        class="btn btn-primary btn-block"
-                    >
-                        Start Exam
-                    </button>
-                </div>
-            `;
-
-            return card;
-        }
-
-        // Start exam - redirect to exam entry page
-        function startExam(examId, dataFile) {
-            // Store exam info in localStorage
+        function startExam(examId) {
             localStorage.setItem('selected_exam_id', examId);
-            localStorage.setItem('selected_exam_file', dataFile);
-            
-            // Redirect to exam page
             window.location.href = './exam.html';
         }
     </script>
 </body>
-  </html>
+</html>
