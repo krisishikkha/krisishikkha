@@ -4,11 +4,11 @@ const EXAMS_REGISTRY = [
         id: 'bina-so-exam-1',
         name: 'BINA SO Exam - Set 1',
         description: 'বিনা এসও পরীক্ষা - সেট ১',
-        totalQuestions: 40,
+        totalQuestions: 4,
         duration: 60, // minutes
         marksPerQuestion: 1,
         negativeMarking: true,
-        negativeMarks: 0.25,
+        negativeMarks: 0,
         accessCode: 'BINA2024',
         status: 'active',
         dataFile: 'data/bina-so-exam-1.js'
