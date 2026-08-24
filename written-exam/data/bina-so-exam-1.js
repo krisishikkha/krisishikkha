@@ -10,9 +10,9 @@ const EXAM_BINA_SO_1 = {
         subtitle: "Bangladesh Institute of Nuclear Agriculture",
         accessCode: "BINA2026",
         durationMinutes: 30,
-        totalMarks: 50,
-        passingMarks: 25,
-        negativeMark: 0.25,
+        totalMarks: 10,
+        passingMarks: 5,
+        negativeMark: 0,
         attemptLimit: 1,
         instructions: [
             "এই পরীক্ষায় ৫০টি লিখিত প্রশ্ন রয়েছে",
