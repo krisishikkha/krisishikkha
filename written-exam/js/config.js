@@ -1,268 +1,57 @@
 // ============================================
-// Supabase Configuration
-// Written Exam System
-// Project: krisishikkha's Org
+// Written Exam System - Configuration
 // ============================================
 
+// Supabase Configuration
 const SUPABASE_CONFIG = {
-    // Supabase Project URL
     url: 'https://bpkheipwdjzlyuzyqdxz.supabase.co',
-    
-    // Supabase Anon/Public Key
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwa2hlaXB3ZGp6bHl1enlxZHh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNDIxNDEsImV4cCI6MjA4ODYxODE0MX0.OGgbZffNS8q6IOnCY0Hq02D0A_MTfHPFZ8KSzBcAfZs'
 };
 
-// ============================================
-// Database Configuration
-// ============================================
-
-// Table name for written exam submissions
 const WRITTEN_EXAM_TABLE = 'written_exam_submissions';
 
-// MCQ exam table (existing - for reference, not used in written exam)
-const MCQ_EXAM_TABLE = 'exam_results';
+// Exam List (Only metadata)
+const EXAMS_LIST = [
+    {
+        id: "bina-so-exam-1",
+        title: "BINA SO Exam – 1",
+        description: "Bangladesh Institute of Nuclear Agriculture - Scientific Officer Exam",
+        totalQuestions: 50,
+        totalMarks: 50,
+        duration: 30,
+        isActive: true,
+        dataFile: "bina-so-exam-1.js"  // আলাদা file
+    },
+    {
+        id: "bina-so-exam-2",
+        title: "BINA SO Exam – 2",
+        description: "Bangladesh Institute of Nuclear Agriculture - Set 2",
+        totalQuestions: 50,
+        totalMarks: 50,
+        duration: 30,
+        isActive: true,
+        dataFile: "bina-so-exam-2.js"  // আলাদা file
+    },
+    {
+        id: "bari-so-exam-3",
+        title: "BARI SO Exam – 3",
+        description: "Bangladesh Agricultural Research Institute",
+        totalQuestions: 60,
+        totalMarks: 60,
+        duration: 45,
+        isActive: true,
+        dataFile: "bari-so-exam-3.js"  // আলাদা file
+    },
+    {
+        id: "bsri-exam-4",
+        title: "BSRI Exam – 4",
+        description: "Bangladesh Sugarcane Research Institute",
+        totalQuestions: 40,
+        totalMarks: 40,
+        duration: 25,
+        isActive: true,
+        dataFile: "bsri-exam-4.js"  // আলাদা file
+    }
+];
 
-// ============================================
-// Data Paths Configuration
-// ============================================
-
-const DATA_PATH = './data/';
-const EXAMS_JSON = 'exams.json';
-
-// ============================================
-// Exam System Configuration
-// ============================================
-
-const EXAM_CONFIG = {
-    // Auto-save interval (milliseconds)
-    // Student answers will be saved to localStorage every 10 seconds
-    autoSaveInterval: 10000,
-    
-    // Warning time (seconds)
-    // Show warning when this much time is remaining
-    warningTime: 300, // 5 minutes
-    
-    // Critical time (seconds)
-    // Show critical warning (red) when this much time is remaining
-    criticalTime: 60, // 1 minute
-    
-    // Enable fullscreen mode for exam
-    enableFullscreen: false,
-    
-    // Shuffle questions (randomize order)
-    shuffleQuestions: false,
-    
-    // Prevent copy-paste in answer fields
-    preventCopyPaste: true,
-    
-    // Prevent right-click during exam
-    preventRightClick: false,
-    
-    // Show question palette/navigator
-    showQuestionNavigator: true,
-    
-    // Auto-submit when time ends
-    autoSubmitOnTimeEnd: true,
-    
-    // Confirm before leaving exam page
-    confirmBeforeLeave: true,
-    
-    // Show progress bar
-    showProgress: true
-};
-
-// ============================================
-// Answer Checking Configuration
-// ============================================
-
-const ANSWER_CHECKER_CONFIG = {
-    // Case sensitivity
-    caseSensitive: false,
-    
-    // Ignore leading/trailing spaces
-    trimSpaces: true,
-    
-    // Normalize multiple spaces to single space
-    normalizeSpaces: true,
-    
-    // Remove common punctuation before comparison
-    removePunctuation: false,
-    
-    // Bengali-English number normalization
-    normalizeBengaliNumbers: true,
-    
-    // Fuzzy matching (disabled for accuracy)
-    enableFuzzyMatch: false,
-    
-    // Fuzzy match threshold (if enabled)
-    fuzzyMatchThreshold: 0.9
-};
-
-// ============================================
-// UI Configuration
-// ============================================
-
-const UI_CONFIG = {
-    // Primary color
-    primaryColor: '#2563eb',
-    
-    // Success color (correct answer)
-    successColor: '#10b981',
-    
-    // Error color (wrong answer)
-    errorColor: '#ef4444',
-    
-    // Warning color
-    warningColor: '#f59e0b',
-    
-    // Questions per page (for pagination - optional)
-    questionsPerPage: 0, // 0 = show all questions
-    
-    // Show marks with each question
-    showMarksWithQuestion: false,
-    
-    // Animation duration (milliseconds)
-    animationDuration: 300
-};
-
-// ============================================
-// PDF Generation Configuration
-// ============================================
-
-const PDF_CONFIG = {
-    // Organization/Brand name
-    organizationName: 'কৃষি শিক্ষা',
-    organizationNameEnglish: 'Krishi Shikkha',
-    
-    // Logo URL (optional)
-    logoUrl: '',
-    
-    // PDF page size
-    pageSize: 'a4',
-    
-    // PDF orientation
-    orientation: 'portrait',
-    
-    // Include watermark
-    includeWatermark: false,
-    
-    // Watermark text
-    watermarkText: 'কৃষি শিক্ষা',
-    
-    // Footer text
-    footerText: 'Generated by Krishi Shikkha - Written Exam System'
-};
-
-// ============================================
-// Security Configuration
-// ============================================
-
-const SECURITY_CONFIG = {
-    // Maximum attempts per exam
-    maxAttemptsPerExam: 1,
-    
-    // Block multiple tabs
-    blockMultipleTabs: false,
-    
-    // Session timeout (minutes) - 0 = no timeout
-    sessionTimeout: 0,
-    
-    // Require access code
-    requireAccessCode: true,
-    
-    // Minimum name length
-    minNameLength: 3,
-    
-    // Maximum name length
-    maxNameLength: 50
-};
-
-// ============================================
-// Local Storage Keys
-// ============================================
-
-const STORAGE_KEYS = {
-    currentExam: 'written_exam_current',
-    answers: 'written_exam_answers',
-    startTime: 'written_exam_start_time',
-    studentName: 'written_exam_student_name',
-    examId: 'written_exam_id',
-    timeRemaining: 'written_exam_time_remaining'
-};
-
-// ============================================
-// API Endpoints (if needed for future)
-// ============================================
-
-const API_ENDPOINTS = {
-    exams: DATA_PATH + EXAMS_JSON,
-    examData: (filename) => DATA_PATH + filename
-};
-
-// ============================================
-// Helper Functions
-// ============================================
-
-// Get full data path
-function getDataPath(filename) {
-    return DATA_PATH + filename;
-}
-
-// Get exam JSON path
-function getExamDataPath(filename) {
-    return DATA_PATH + filename;
-}
-
-// Clear all exam-related localStorage
-function clearExamStorage() {
-    Object.values(STORAGE_KEYS).forEach(key => {
-        localStorage.removeItem(key);
-    });
-}
-
-// Get configuration value
-function getConfig(category, key) {
-    const configs = {
-        exam: EXAM_CONFIG,
-        answer: ANSWER_CHECKER_CONFIG,
-        ui: UI_CONFIG,
-        pdf: PDF_CONFIG,
-        security: SECURITY_CONFIG
-    };
-    
-    return configs[category]?.[key];
-}
-
-// ============================================
-// Export Configuration (for ES6 modules)
-// ============================================
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        SUPABASE_CONFIG,
-        WRITTEN_EXAM_TABLE,
-        MCQ_EXAM_TABLE,
-        DATA_PATH,
-        EXAMS_JSON,
-        EXAM_CONFIG,
-        ANSWER_CHECKER_CONFIG,
-        UI_CONFIG,
-        PDF_CONFIG,
-        SECURITY_CONFIG,
-        STORAGE_KEYS,
-        API_ENDPOINTS,
-        getDataPath,
-        getExamDataPath,
-        clearExamStorage,
-        getConfig
-    };
-}
-
-// ============================================
-// Console Info (Development)
-// ============================================
-
-console.log('✅ Written Exam Config Loaded');
-console.log('📊 Supabase URL:', SUPABASE_CONFIG.url);
-console.log('📁 Data Path:', DATA_PATH);
-console.log('🗄️ Table:', WRITTEN_EXAM_TABLE);
+console.log('✅ Config loaded');
