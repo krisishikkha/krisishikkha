@@ -2,7 +2,9 @@
 
 var EXAM_BINA_SO_1 = {
     id: "bina-so-exam-1",
-    title: "BINA SO Exam – 1",
+    title: "BINA SO Exam – 01",
+    institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
+    setName: "Model Test – 01",
     accessCode: "BINA2026",
     durationMinutes: 30,
     totalMarks: 4,
