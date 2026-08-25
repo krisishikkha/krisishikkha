@@ -1,92 +1,37 @@
-class ExamListManager {
-    constructor() {
-        this.exams = [];
-        this.init();
+// written-exam/js/exam-list.js
+
+function renderExamList() {
+    const container = document.getElementById('examListContainer');
+
+    if (!Array.isArray(EXAMS_REGISTRY) || EXAMS_REGISTRY.length === 0) {
+        container.innerHTML = '<p class="we-empty">No exams available right now.</p>';
+        return;
     }
 
-    async init() {
-        await this.loadExamDetails();
-        this.renderExamList();
-    }
+    container.innerHTML = '';
 
-    async loadExamDetails() {
-        // Active exams load করুন
-        const activeExams = EXAM_REGISTRY.exams.filter(e => e.status === 'active');
-        
-        // প্রতি exam এর জন্য question file থেকে info নিন
-        for (let exam of activeExams) {
-            try {
-                // Question file dynamically load করুন
-                await this.loadExamQuestionFile(exam.id);
-                
-                const varName = 'EXAM_DATA_' + exam.id.toUpperCase().replace(/-/g, '_');
-                const examData = window[varName];
-                
-                if (examData) {
-                    this.exams.push({
-                        ...exam,
-                        totalQuestions: examData.questions.length,  // automatic count
-                        duration: examData.duration,
-                        marksPerQuestion: examData.marksPerQuestion,
-                        negativeMarking: examData.negativeMarking,
-                        negativeMarks: examData.negativeMarks
-                    });
-                }
-            } catch (error) {
-                console.error('Error loading exam:', exam.id, error);
-            }
-        }
-    }
+    EXAMS_REGISTRY.forEach(entry => {
+        const examData = window[entry.dataVar];
 
-    loadExamQuestionFile(examId) {
-        return new Promise((resolve, reject) => {
-            const script = document.createElement('script');
-            script.src = `data/${examId}.js`;
-            script.onload = () => resolve();
-            script.onerror = () => reject(new Error('Failed to load ' + examId));
-            document.head.appendChild(script);
-        });
-    }
-
-    renderExamList() {
-        const examList = document.getElementById('examList');
-        
-        if (this.exams.length === 0) {
-            examList.innerHTML = `
-                <div style="text-align:center;padding:40px;grid-column:1/-1;">
-                    <h3>No Active Exams</h3>
-                    <p>কোন সক্রিয় পরীক্ষা নেই</p>
-                </div>
-            `;
-            return;
+        if (!examData || !Array.isArray(examData.questions)) {
+            console.error(`Exam data missing or invalid for: ${entry.dataVar}`);
+            return; // এই exam skip, বাকিগুলো render হবে
         }
 
-        examList.innerHTML = this.exams.map(exam => `
-            <div class="exam-card">
-                <h3>${exam.name}</h3>
-                <p>${exam.description}</p>
-                <div class="exam-meta">
-                    <span>📝 ${exam.totalQuestions} Questions</span>
-                    <span>⏱️ ${exam.duration} Minutes</span>
-                </div>
-                <div class="exam-meta">
-                    <span>✅ +${exam.marksPerQuestion} each</span>
-                    ${exam.negativeMarking ? `<span>❌ -${exam.negativeMarks} wrong</span>` : ''}
-                </div>
-                <button class="btn btn-primary start-exam-btn" onclick="window.startExam('${exam.id}')">
-                    Start Exam
-                </button>
-            </div>
-        `).join('');
+        const card = document.createElement('div');
+        card.className = 'we-exam-card';
+        card.innerHTML = `
+            <h2 class="we-exam-title">${examData.title}</h2>
+            <p class="we-exam-meta">${examData.questions.length} Questions | ${examData.totalMarks} Marks</p>
+            <p class="we-exam-meta">Duration: ${examData.durationMinutes} minutes</p>
+            <a href="exam.html?id=${examData.id}" class="we-btn we-btn-start">Start Exam</a>
+        `;
+        container.appendChild(card);
+    });
+
+    if (container.innerHTML === '') {
+        container.innerHTML = '<p class="we-empty">No valid exams found.</p>';
     }
 }
 
-// Global function
-window.startExam = function(examId) {
-    sessionStorage.setItem('selectedExamId', examId);
-    window.location.href = 'exam.html';
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    new ExamListManager();
-});
+document.addEventListener('DOMContentLoaded', renderExamList);
