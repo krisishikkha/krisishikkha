@@ -1,10 +1,10 @@
-// written-exam/js/exam-list.js (DEBUG VERSION)
+// written-exam/js/exam-list.js
 
 function renderExamList() {
     const container = document.getElementById('examListContainer');
 
     if (typeof EXAMS_REGISTRY === 'undefined') {
-        container.innerHTML = '<p class="we-error">Error: EXAMS_REGISTRY পাওয়া যায়নি — exams.js লোড হয়নি (path/file নাম চেক করুন)।</p>';
+        container.innerHTML = '<p class="we-error">Error: EXAMS_REGISTRY পাওয়া যায়নি।</p>';
         return;
     }
 
@@ -20,11 +20,11 @@ function renderExamList() {
         const examData = window[entry.dataVar];
 
         if (!examData) {
-            debugMessages.push(`❌ "${entry.dataVar}" নামের ভ্যারিয়েবল পাওয়া যায়নি (exam: ${entry.id}) — data ফাইলটা লোড হয়নি বা ভ্যারিয়েবল নাম ভুল।`);
+            debugMessages.push(`❌ "${entry.dataVar}" পাওয়া যায়নি (exam: ${entry.id})`);
             return;
         }
         if (!Array.isArray(examData.questions)) {
-            debugMessages.push(`❌ "${entry.dataVar}"-এ questions array পাওয়া যায়নি (exam: ${entry.id}).`);
+            debugMessages.push(`❌ "${entry.dataVar}"-এ questions array পাওয়া যায়নি (exam: ${entry.id})`);
             return;
         }
 
@@ -46,4 +46,6 @@ function renderExamList() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', renderExamList);
+document.addEventListener('DOMContentLoaded', () => {
+    loadExamDataFiles(renderExamList);
+});
