@@ -1,88 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Scoreboard</title>
-    <link rel="stylesheet" href="css/written-exam.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Scoreboard</title>
+<link rel="stylesheet" href="css/written-exam.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Admin Login -->
-        <div id="adminLogin" class="modal active">
-            <div class="modal-content">
-                <h2>🔐 Admin Login</h2>
-                <form id="adminLoginForm">
-                    <div class="form-group">
-                        <label>Admin Access Code:</label>
-                        <input type="password" id="adminPassword" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-            </div>
+
+    <!-- ========== LOGIN SCREEN ========== -->
+    <div id="loginScreen" class="we-entry-wrap">
+        <h1 class="we-entry-title">Admin Login</h1>
+        <div class="we-form-group">
+            <label for="adminEmail">Email</label>
+            <input type="email" id="adminEmail" placeholder="admin@example.com">
+        </div>
+        <div class="we-form-group">
+            <label for="adminPassword">Password</label>
+            <input type="password" id="adminPassword" placeholder="Password">
+        </div>
+        <p id="loginError" class="we-error" style="display:none;"></p>
+        <button id="loginBtn" class="we-btn we-btn-primary">Login</button>
+    </div>
+
+    <!-- ========== DASHBOARD ========== -->
+    <div id="dashboard" class="we-container" style="display:none;">
+        <div class="we-admin-top">
+            <h1>Written Exam Scoreboard</h1>
+            <button id="logoutBtn" class="we-btn we-btn-secondary">Logout</button>
         </div>
 
-        <!-- Admin Panel -->
-        <div id="adminPanel" style="display: none;">
-            <header class="page-header">
-                <h1>📊 Admin Scoreboard</h1>
-                <button class="btn btn-secondary" id="logoutBtn">Logout</button>
-            </header>
-
-            <!-- Filters -->
-            <div class="filter-section">
-                <div class="form-group">
-                    <label>Select Exam:</label>
-                    <select id="examFilter">
-                        <option value="">All Exams</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>From Date:</label>
-                    <input type="date" id="fromDate">
-                </div>
-                <div class="form-group">
-                    <label>To Date:</label>
-                    <input type="date" id="toDate">
-                </div>
-                <button class="btn btn-primary" id="filterBtn">🔍 Filter</button>
-                <button class="btn btn-success" id="downloadPdfBtn">📄 Download PDF</button>
+        <div class="we-filter-box">
+            <div class="we-form-group">
+                <label for="examSelect">Exam Set</label>
+                <select id="examSelect"></select>
             </div>
-
-            <!-- Scoreboard Table -->
-            <div class="scoreboard-container">
-                <div class="scoreboard-stats">
-                    <h3>Total Participants: <span id="totalParticipants">0</span></h3>
-                </div>
-                <div class="table-responsive">
-                    <table class="scoreboard-table">
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Student Name</th>
-                                <th>Exam</th>
-                                <th>Correct</th>
-                                <th>Wrong</th>
-                                <th>Not Answered</th>
-                                <th>Total Marks</th>
-                                <th>Obtained</th>
-                                <th>Percentage</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody id="scoreboardBody">
-                            <!-- Data will be loaded here -->
-                        </tbody>
-                    </table>
-                </div>
+            <div class="we-form-group">
+                <label for="fromDate">From Date</label>
+                <input type="date" id="fromDate">
             </div>
+            <div class="we-form-group">
+                <label for="toDate">To Date</label>
+                <input type="date" id="toDate">
+            </div>
+            <button id="generateBtn" class="we-btn we-btn-primary">Generate Scoreboard</button>
         </div>
+
+        <div id="scoreboardResult"></div>
+
+        <button id="downloadPdfBtn" class="we-btn we-btn-primary" style="display:none;">
+            Download Scoreboard PDF
+        </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
     <script src="js/config.js"></script>
+    <script src="data/bina-so-exam-1.js"></script>
+    <!-- নতুন exam যোগ হলে এখানে আরেকটা <script> লাইন -->
     <script src="data/exams.js"></script>
     <script src="js/admin-scoreboard.js"></script>
 </body>
