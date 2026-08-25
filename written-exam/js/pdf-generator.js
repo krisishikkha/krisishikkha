@@ -39,8 +39,8 @@ async function generateQuestionAnswerPdf() {
         <tr>
             <td>${i + 1}</td>
             <td>${q.question}</td>
-            <td>${q.acceptedAnswers.join(' / ')}</td>
-            <td>${q.marks}</td>
+            <td>${q.acceptedAnswers[0]}</td>
+            <td>${q.explanation || '-'}</td>
         </tr>
     `).join('');
 
@@ -48,16 +48,17 @@ async function generateQuestionAnswerPdf() {
     renderArea.className = 'we-pdf-render-area';
     renderArea.innerHTML = `
         <h2>${examData.title}</h2>
-        <p class="we-pdf-meta">Total Questions: ${examData.questions.length} | Total Marks: ${examData.totalMarks}</p>
+        <p class="we-pdf-meta">${examData.institute || ''} ${examData.setName ? '| ' + examData.setName : ''}</p>
+        <p class="we-pdf-meta">Total Questions: ${examData.questions.length}</p>
         <table>
-            <thead><tr><th>#</th><th>Question</th><th>Accepted Answer(s)</th><th>Marks</th></tr></thead>
+            <thead><tr><th>#</th><th>Question</th><th>Answer</th><th>Explanation</th></tr></thead>
             <tbody>${rowsHtml}</tbody>
         </table>
     `;
     document.body.appendChild(renderArea);
 
     if (document.fonts && document.fonts.ready) {
-        await document.fonts.ready; // ফন্ট লোড নিশ্চিত হওয়ার পর ক্যাপচার
+        await document.fonts.ready;
     }
 
     try {
