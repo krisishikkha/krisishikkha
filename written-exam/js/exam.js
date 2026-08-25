@@ -319,12 +319,16 @@ async function submitExam(autoSubmitted) {
         answers: answersDetail // <--- শুধুমাত্র এখানে 'answers_detail' বদলে 'answers' করা হয়েছে
     };
 
-    // Supabase-এ সেভ করার চেষ্টা
+    // Supabase-এ সেভ করার চেষ্টা (temporary debug ভার্সন)
     try {
         const { error } = await supabaseClient.from(SUBMISSIONS_TABLE).insert([resultPayload]);
-        if (error) console.error('Submission save error:', error);
+        if (error) {
+            alert('❌ Supabase Insert Error:\n\n' + error.message + '\n\nCode: ' + (error.code || 'N/A') + '\nDetails: ' + (error.details || 'N/A'));
+        } else {
+            alert('✅ Insert Success!');
+        }
     } catch (err) {
-        console.error('Unexpected submission error:', err);
+        alert('❌ Unexpected JS Error: ' + err.message);
     }
 
     // Result/Review পেজের জন্য localStorage-এ রাখা (এই পেজগুলো Supabase থেকে re-fetch করে না)
