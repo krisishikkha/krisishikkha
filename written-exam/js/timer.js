@@ -1,76 +1,42 @@
-// Timer Management
-class ExamTimer {
-    constructor(durationMinutes, onTimeUp, onTick) {
-        this.totalSeconds = durationMinutes * 60;
-        this.remainingSeconds = this.totalSeconds;
-        this.timerInterval = null;
-        this.onTimeUp = onTimeUp;
-        this.onTick = onTick;
-        this.isPaused = false;
+// written-exam/js/timer.js
+
+let timerInterval = null;
+
+/**
+ * Timer শুরু করে। examId দিয়ে localStorage-এ endTime সেভ থাকে,
+ * তাই refresh হলেও সঠিক সময় থেকে চলবে।
+ */
+function startTimer(examId, durationMinutes, onTick, onExpire) {
+    const storageKey = `we_timer_end_${examId}`;
+    let endTime = localStorage.getItem(storageKey);
+
+    if (!endTime) {
+        endTime = Date.now() + durationMinutes * 60 * 1000;
+        localStorage.setItem(storageKey, endTime);
+    } else {
+        endTime = parseInt(endTime, 10);
     }
 
-    start() {
-        this.timerInterval = setInterval(() => {
-            if (!this.isPaused) {
-                this.remainingSeconds--;
-                this.updateDisplay();
-                
-                if (this.onTick) {
-                    this.onTick(this.remainingSeconds);
-                }
+    function tick() {
+        const remainingMs = endTime - Date.now();
 
-                if (this.remainingSeconds <= 0) {
-                    this.stop();
-                    if (this.onTimeUp) {
-                        this.onTimeUp();
-                    }
-                }
-            }
-        }, 1000);
-    }
-
-    stop() {
-        if (this.timerInterval) {
-            clearInterval(this.timerInterval);
-            this.timerInterval = null;
+        if (remainingMs <= 0) {
+            clearInterval(timerInterval);
+            onExpire();
+            return;
         }
+
+        const totalSeconds = Math.floor(remainingMs / 1000);
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        onTick(`${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`);
     }
 
-    pause() {
-        this.isPaused = true;
-    }
+    tick();
+    timerInterval = setInterval(tick, 1000);
+}
 
-    resume() {
-        this.isPaused = false;
-    }
-
-    updateDisplay() {
-        const timerElement = document.getElementById('timer');
-        if (!timerElement) return;
-
-        const minutes = Math.floor(this.remainingSeconds / 60);
-        const seconds = this.remainingSeconds % 60;
-        
-        const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        timerElement.textContent = timeString;
-
-        // Add warning classes
-        timerElement.classList.remove('warning', 'danger');
-        
-        if (this.remainingSeconds <= 60) {
-            timerElement.classList.add('danger');
-        } else if (this.remainingSeconds <= 300) {
-            timerElement.classList.add('warning');
-        }
-    }
-
-    getTimeElapsed() {
-        return this.totalSeconds - this.remainingSeconds;
-    }
-
-    getFormattedTime() {
-        const minutes = Math.floor(this.remainingSeconds / 60);
-        const seconds = this.remainingSeconds % 60;
-        return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-    }
+function stopTimer(examId) {
+    clearInterval(timerInterval);
+    localStorage.removeItem(`we_timer_end_${examId}`);
 }
