@@ -9,6 +9,15 @@
 </head>
 <body>
 
+    <script>
+    window.addEventListener('error', function(e) {
+        var msg = document.createElement('div');
+        msg.style.cssText = 'background:#fee;color:#900;padding:12px;font-size:13px;text-align:left;border:2px solid #f99;margin:10px;white-space:pre-wrap;';
+        msg.textContent = '⚠️ JS ERROR:\n' + e.message + '\nFile: ' + e.filename + '\nLine: ' + e.lineno + ', Col: ' + e.colno;
+        document.body.insertBefore(msg, document.body.firstChild);
+    });
+    </script>
+
     <header class="we-header">
         <a href="../index.html" class="we-back">← Home</a>
         <h1>Written Exam</h1>
