@@ -26,14 +26,14 @@ function renderReview() {
            Not Answered: <strong>${result.skipped}</strong></p>
     `;
 
-    if (!Array.isArray(result.answers_detail) || result.answers_detail.length === 0) {
+    if (!Array.isArray(result.answers) || result.answers.length === 0) { // <--- 'answers_detail' বদলে 'answers' করা হয়েছে
         listEl.innerHTML = '<p class="we-empty">Question-wise review data পাওয়া যায়নি।</p>';
         return;
     }
 
     listEl.innerHTML = '';
 
-    result.answers_detail.forEach((item, index) => {
+    result.answers.forEach((item, index) => { // <--- 'answers_detail' বদলে 'answers' করা হয়েছে
         const statusClass =
             item.status === 'correct' ? 'we-review-correct' :
             item.status === 'wrong' ? 'we-review-wrong' : 'we-review-skipped';
