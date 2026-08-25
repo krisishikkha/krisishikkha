@@ -79,6 +79,8 @@ async function generateQuestionAnswerPdf() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    populatePdfExamSelect();
-    document.getElementById('downloadQPdfBtn').addEventListener('click', generateQuestionAnswerPdf);
+    loadExamDataFiles(() => {
+        populatePdfExamSelect();
+        document.getElementById('downloadQPdfBtn').addEventListener('click', generateQuestionAnswerPdf);
+    });
 });
