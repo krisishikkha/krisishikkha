@@ -50,6 +50,7 @@ function renderReview() {
             <p class="we-review-question">${item.question}</p>
             <p class="we-review-your-answer">Your Answer: <strong>${item.student_answer || '(ফাঁকা)'}</strong></p>
             <p class="we-review-correct-answer">Correct Answer: <strong>${item.correct_answer}</strong></p>
+            ${item.explanation ? `<p class="we-review-explanation">💡 Explanation: ${item.explanation}</p>` : ''}
             <p class="we-review-status">${statusLabel}</p>
         `;
         listEl.appendChild(block);
