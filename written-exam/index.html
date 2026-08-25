@@ -1,34 +1,27 @@
+<!-- written-exam/index.html -->
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Written Exam - Exam List</title>
-    <link rel="stylesheet" href="css/written-exam.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Written Exam</title>
+<link rel="stylesheet" href="css/written-exam.css">
 </head>
 <body>
-    <div class="container">
-        <header class="page-header">
-            <h1>📝 Written Exam System</h1>
-            <p>লিখিত পরীক্ষা সিস্টেম</p>
-        </header>
 
-        <div class="exam-list-container">
-            <h2>Available Exams / উপলব্ধ পরীক্ষা</h2>
-            <div id="examList" class="exam-grid">
-                <div style="text-align: center; padding: 40px;">
-                    <p>Loading exams...</p>
-                </div>
-            </div>
+    <header class="we-header">
+        <a href="../index.html" class="we-back">← Home</a>
+        <h1>Written Exam</h1>
+    </header>
+
+    <main class="we-container">
+        <div id="examListContainer" class="we-exam-grid">
+            <p class="we-loading">Loading exams...</p>
         </div>
+    </main>
 
-        <div class="admin-link">
-            <a href="admin-scoreboard.html">🔐 Admin Panel</a>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/config.js"></script>
+    <script src="data/bina-so-exam-1.js"></script>
+    <!-- নতুন exam যোগ হলে এখানে আরেকটা <script> লাইন -->
     <script src="data/exams.js"></script>
     <script src="js/exam-list.js"></script>
 </body>
