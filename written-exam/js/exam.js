@@ -1,10 +1,8 @@
-// written-exam/js/exam.js — PART 1 of 2
-// (এই ফাইলের নিচে ধাপ ৬-এ আরও কোড যোগ হবে — এখনই এটা বসিয়ে রাখুন, এই মুহূর্তে
-//  এন্ট্রি স্ক্রিন কাজ করবে, "Enter Exam"-এ ক্লিক করলে exam স্ক্রিন blank দেখাবে,
-//  ধাপ ৬ যোগ করার পর পুরো ইঞ্জিন চালু হবে)
+// written-exam/js/exam.js
 
 let currentExam = null;
 let currentStudentName = '';
+let studentAnswers = {};
 
 function getExamIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
@@ -67,13 +65,12 @@ async function handleEnterExam() {
     enterBtn.disabled = true;
     enterBtn.textContent = 'Checking...';
 
-    // Attempt limit check — একই exam_id + student_name আগে submit করেছে কিনা
     try {
         const { data, error } = await supabaseClient
             .from(SUBMISSIONS_TABLE)
             .select('id')
             .eq('exam_id', currentExam.id)
-            .ilike('student_name', name); // case-insensitive match
+            .ilike('student_name', name);
 
         if (error) {
             console.error('Attempt check error:', error);
@@ -98,20 +95,8 @@ async function handleEnterExam() {
     }
 
     currentStudentName = name;
-    startExam(); // ধাপ ৬-এ define হবে
+    startExam();
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    currentExam = loadCurrentExam();
-    if (currentExam) {
-        document.getElementById('enterExamBtn').addEventListener('click', handleEnterExam);
-    }
-});
-
-// ⬇️ ধাপ ৬-এর কোড এই লাইনের নিচে যোগ হবে (startExam, timer, render, autosave, submit)
-// written-exam/js/exam.js — PART 2 of 2 (পার্ট ১-এর নিচে যোগ করুন, একই ফাইল)
-
-let studentAnswers = {};   // { questionId: { text, locked } }
 
 function getAnswersStorageKey() {
     return `we_answers_${currentExam.id}`;
@@ -147,7 +132,6 @@ function startExam() {
             document.getElementById('timerDisplay').textContent = `Time Remaining: ${display}`;
         },
         () => {
-            // সময় শেষ — automatic submit
             submitExam(true);
         }
     );
@@ -184,7 +168,6 @@ function renderQuestions() {
         document.getElementById(`tick-${q.id}`).addEventListener('click', () => lockAnswer(q.id));
         document.getElementById(`edit-${q.id}`).addEventListener('click', () => unlockAnswer(q.id));
 
-        // টাইপ করার সময়ে সাথে সাথে autosave (লক না হওয়া পর্যন্ত)
         document.getElementById(`answer-${q.id}`).addEventListener('input', (e) => {
             studentAnswers[q.id] = { text: e.target.value, locked: false };
             saveAnswersToLocal();
@@ -271,7 +254,7 @@ async function submitExam(autoSubmitted) {
                 question_id: q.id, question: q.question,
                 student_answer: '', correct_answer: q.acceptedAnswers[0],
                 is_correct: false, marks_obtained: 0, status: 'skipped',
-                explanation: q.explanation || '' // <--- Added here
+                explanation: q.explanation || ''
             });
             return;
         }
@@ -284,7 +267,7 @@ async function submitExam(autoSubmitted) {
                 question_id: q.id, question: q.question,
                 student_answer: studentAns, correct_answer: q.acceptedAnswers[0],
                 is_correct: true, marks_obtained: q.marks, status: 'correct',
-                explanation: q.explanation || '' // <--- Added here
+                explanation: q.explanation || ''
             });
         } else {
             wrong++;
@@ -294,12 +277,12 @@ async function submitExam(autoSubmitted) {
                 question_id: q.id, question: q.question,
                 student_answer: studentAns, correct_answer: q.acceptedAnswers[0],
                 is_correct: false, marks_obtained: -penalty, status: 'wrong',
-                explanation: q.explanation || '' // <--- Added here
+                explanation: q.explanation || ''
             });
         }
     });
 
-    if (obtainedMarks < 0) obtainedMarks = 0; // নেগেটিভ মার্কিংয়ে টোটাল ঋণাত্মক না হওয়াই ভালো
+    if (obtainedMarks < 0) obtainedMarks = 0;
     const percentage = currentExam.totalMarks > 0
         ? Math.round((obtainedMarks / currentExam.totalMarks) * 10000) / 100
         : 0;
@@ -316,10 +299,9 @@ async function submitExam(autoSubmitted) {
         obtained_marks: obtainedMarks,
         percentage,
         attempt_no: 1,
-        answers: answersDetail // <--- শুধুমাত্র এখানে 'answers_detail' বদলে 'answers' করা হয়েছে
+        answers: answersDetail
     };
 
-    // Supabase-এ সেভ করার চেষ্টা
     try {
         const { error } = await supabaseClient.from(SUBMISSIONS_TABLE).insert([resultPayload]);
         if (error) console.error('Submission save error:', error);
@@ -327,9 +309,17 @@ async function submitExam(autoSubmitted) {
         console.error('Unexpected submission error:', err);
     }
 
-    // Result/Review পেজের জন্য localStorage-এ রাখা (এই পেজগুলো Supabase থেকে re-fetch করে না)
     localStorage.setItem('we_last_result', JSON.stringify(resultPayload));
     localStorage.removeItem(getAnswersStorageKey());
 
     window.location.href = 'result.html';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadExamDataFiles(() => {
+        currentExam = loadCurrentExam();
+        if (currentExam) {
+            document.getElementById('enterExamBtn').addEventListener('click', handleEnterExam);
+        }
+    });
+});
