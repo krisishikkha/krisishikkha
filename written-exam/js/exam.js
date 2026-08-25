@@ -270,7 +270,8 @@ async function submitExam(autoSubmitted) {
             answersDetail.push({
                 question_id: q.id, question: q.question,
                 student_answer: '', correct_answer: q.acceptedAnswers[0],
-                is_correct: false, marks_obtained: 0, status: 'skipped'
+                is_correct: false, marks_obtained: 0, status: 'skipped',
+                explanation: q.explanation || '' // <--- Added here
             });
             return;
         }
@@ -282,7 +283,8 @@ async function submitExam(autoSubmitted) {
             answersDetail.push({
                 question_id: q.id, question: q.question,
                 student_answer: studentAns, correct_answer: q.acceptedAnswers[0],
-                is_correct: true, marks_obtained: q.marks, status: 'correct'
+                is_correct: true, marks_obtained: q.marks, status: 'correct',
+                explanation: q.explanation || '' // <--- Added here
             });
         } else {
             wrong++;
@@ -291,7 +293,8 @@ async function submitExam(autoSubmitted) {
             answersDetail.push({
                 question_id: q.id, question: q.question,
                 student_answer: studentAns, correct_answer: q.acceptedAnswers[0],
-                is_correct: false, marks_obtained: -penalty, status: 'wrong'
+                is_correct: false, marks_obtained: -penalty, status: 'wrong',
+                explanation: q.explanation || '' // <--- Added here
             });
         }
     });
