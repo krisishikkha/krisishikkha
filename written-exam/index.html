@@ -9,22 +9,6 @@
 </head>
 <body>
 
-    <div id="rawCheck" style="background:#fff8e1;color:#333;padding:12px;font-size:12px;text-align:left;border:2px solid #ffca28;margin:10px;white-space:pre-wrap;word-break:break-all;">Checking raw file content...</div>
-
-    <script>
-    fetch('data/bina-so-exam-1.js?nocache=' + Date.now())
-        .then(res => {
-            document.getElementById('rawCheck').textContent += '\n\nHTTP Status: ' + res.status;
-            return res.text();
-        })
-        .then(text => {
-            document.getElementById('rawCheck').textContent += '\n\nFirst 300 characters of what browser actually received:\n\n' + text.substring(0, 300);
-        })
-        .catch(err => {
-            document.getElementById('rawCheck').textContent += '\n\nFetch FAILED: ' + err.message;
-        });
-    </script>
-
     <header class="we-header">
         <a href="../index.html" class="we-back">← Home</a>
         <h1>Written Exam</h1>
