@@ -266,6 +266,14 @@ body {
 .we-review-qnum { font-size: 0.8rem; color: var(--we-text-muted); margin: 0 0 4px; }
 .we-review-question { font-weight: 600; margin: 0 0 8px; }
 .we-review-your-answer, .we-review-correct-answer { margin: 4px 0; font-size: 0.92rem; }
+.we-review-explanation {
+    background: #f0fdf4;
+    border-left: 3px solid var(--we-primary);
+    padding: 8px 10px;
+    margin: 8px 0;
+    font-size: 0.88rem;
+    border-radius: 4px;
+}
 .we-review-status { margin-top: 8px; font-weight: 700; font-size: 0.9rem; }
 
 /* ===== Admin ===== */
