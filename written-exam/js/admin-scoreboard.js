@@ -4,6 +4,11 @@ let currentScoreboardData = [];
 let currentExamTitle = '';
 let currentFromDate = '';
 let currentToDate = '';
+let currentExamInstitute = '';
+let currentExamSetName = '';
+let currentExamQuestionsCount = 0;
+let currentExamTotalMarks = '';
+let currentExamDuration = '';
 
 // ---------- AUTH ----------
 
@@ -82,7 +87,7 @@ async function generateScoreboard() {
         .select('*')
         .eq('exam_id', examId)
         .order('obtained_marks', { ascending: false })
-        .order('submitted_at', { ascending: true }); // tie হলে যে আগে সাবমিট করেছে সে উপরে (deterministic)
+        .order('submitted_at', { ascending: true });
 
     if (fromDate) {
         query = query.gte('submitted_at', `${fromDate}T00:00:00`);
@@ -105,8 +110,17 @@ async function generateScoreboard() {
     }
 
     currentScoreboardData = data;
+
     const examEntry = EXAMS_REGISTRY.find(e => e.id === examId);
     currentExamTitle = examEntry ? examEntry.title : examId;
+
+    const fullExamData = examEntry ? window[examEntry.dataVar] : null;
+    currentExamInstitute = fullExamData ? (fullExamData.institute || '') : '';
+    currentExamSetName = fullExamData ? (fullExamData.setName || '') : '';
+    currentExamQuestionsCount = fullExamData ? fullExamData.questions.length : 0;
+    currentExamTotalMarks = fullExamData ? fullExamData.totalMarks : '';
+    currentExamDuration = fullExamData ? fullExamData.durationMinutes : '';
+
     currentFromDate = fromDate || '—';
     currentToDate = toDate || '—';
 
@@ -165,8 +179,19 @@ async function downloadScoreboardPdf() {
     const renderArea = document.createElement('div');
     renderArea.className = 'we-pdf-render-area';
     renderArea.innerHTML = `
-        <h2>Written Exam Scoreboard</h2>
-        <p class="we-pdf-meta">Exam: ${currentExamTitle} | From: ${currentFromDate}  To: ${currentToDate} | Total Participants: ${currentScoreboardData.length}</p>
+        <div style="text-align:center;border-bottom:2px solid #16a34a;padding-bottom:8px;margin-bottom:10px;">
+            <h2 style="margin:0;">Research Institute Job Preparation</h2>
+            <p style="margin:2px 0;font-size:12px;">www.krisishikkha.com</p>
+        </div>
+        <h2 style="text-align:center;margin:6px 0;">WRITTEN EXAM SCOREBOARD</h2>
+        <table style="width:100%;border:none;margin-bottom:14px;">
+            <tr><td style="border:none;padding:2px 0;"><strong>Institute</strong></td><td style="border:none;">: ${currentExamInstitute}</td></tr>
+            <tr><td style="border:none;padding:2px 0;"><strong>Exam</strong></td><td style="border:none;">: ${currentExamTitle}</td></tr>
+            <tr><td style="border:none;padding:2px 0;"><strong>Set</strong></td><td style="border:none;">: ${currentExamSetName}</td></tr>
+            <tr><td style="border:none;padding:2px 0;"><strong>Questions</strong></td><td style="border:none;">: ${currentExamQuestionsCount}   Marks: ${currentExamTotalMarks}   Time: ${currentExamDuration}m</td></tr>
+            <tr><td style="border:none;padding:2px 0;"><strong>From – To</strong></td><td style="border:none;">: ${currentFromDate} to ${currentToDate}</td></tr>
+            <tr><td style="border:none;padding:2px 0;"><strong>Participants</strong></td><td style="border:none;">: ${currentScoreboardData.length}</td></tr>
+        </table>
         <table>
             <thead><tr><th>Rank</th><th>Name</th><th>Correct</th><th>Wrong</th><th>Not Ans.</th><th>Marks</th><th>%</th></tr></thead>
             <tbody>${rowsHtml}</tbody>
