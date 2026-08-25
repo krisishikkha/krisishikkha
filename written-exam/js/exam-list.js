@@ -1,7 +1,12 @@
-// written-exam/js/exam-list.js
+// written-exam/js/exam-list.js (DEBUG VERSION)
 
 function renderExamList() {
     const container = document.getElementById('examListContainer');
+
+    if (typeof EXAMS_REGISTRY === 'undefined') {
+        container.innerHTML = '<p class="we-error">Error: EXAMS_REGISTRY পাওয়া যায়নি — exams.js লোড হয়নি (path/file নাম চেক করুন)।</p>';
+        return;
+    }
 
     if (!Array.isArray(EXAMS_REGISTRY) || EXAMS_REGISTRY.length === 0) {
         container.innerHTML = '<p class="we-empty">No exams available right now.</p>';
@@ -9,13 +14,18 @@ function renderExamList() {
     }
 
     container.innerHTML = '';
+    let debugMessages = [];
 
     EXAMS_REGISTRY.forEach(entry => {
         const examData = window[entry.dataVar];
 
-        if (!examData || !Array.isArray(examData.questions)) {
-            console.error(`Exam data missing or invalid for: ${entry.dataVar}`);
-            return; // এই exam skip, বাকিগুলো render হবে
+        if (!examData) {
+            debugMessages.push(`❌ "${entry.dataVar}" নামের ভ্যারিয়েবল পাওয়া যায়নি (exam: ${entry.id}) — data ফাইলটা লোড হয়নি বা ভ্যারিয়েবল নাম ভুল।`);
+            return;
+        }
+        if (!Array.isArray(examData.questions)) {
+            debugMessages.push(`❌ "${entry.dataVar}"-এ questions array পাওয়া যায়নি (exam: ${entry.id}).`);
+            return;
         }
 
         const card = document.createElement('div');
@@ -30,7 +40,9 @@ function renderExamList() {
     });
 
     if (container.innerHTML === '') {
-        container.innerHTML = '<p class="we-empty">No valid exams found.</p>';
+        container.innerHTML = '<p class="we-empty">No valid exams found.</p>' +
+            '<div style="padding:10px;font-size:12px;color:#c00;text-align:left;">' +
+            debugMessages.join('<br>') + '</div>';
     }
 }
 
