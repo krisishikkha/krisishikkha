@@ -143,36 +143,55 @@ function renderScoreboardTable(data) {
     `;
 }
 
-// ---------- PDF DOWNLOAD ----------
+// ---------- PDF DOWNLOAD (html2canvas দিয়ে, বাংলা ফন্ট সাপোর্ট সহ) ----------
 
-function downloadScoreboardPdf() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+async function downloadScoreboardPdf() {
+    const btn = document.getElementById('downloadPdfBtn');
+    btn.disabled = true;
+    btn.textContent = 'Generating...';
 
-    doc.setFontSize(16);
-    doc.text('Written Exam Scoreboard', 14, 15);
-    doc.setFontSize(11);
-    doc.text(`Exam: ${currentExamTitle}`, 14, 24);
-    doc.text(`From: ${currentFromDate}   To: ${currentToDate}`, 14, 31);
-    doc.text(`Total Participants: ${currentScoreboardData.length}`, 14, 38);
+    const rowsHtml = currentScoreboardData.map((row, i) => `
+        <tr>
+            <td>${i + 1}</td>
+            <td>${row.student_name}</td>
+            <td>${row.correct}</td>
+            <td>${row.wrong}</td>
+            <td>${row.skipped}</td>
+            <td>${row.obtained_marks}/${row.total_marks}</td>
+            <td>${row.percentage}%</td>
+        </tr>
+    `).join('');
 
-    const tableRows = currentScoreboardData.map((row, index) => [
-        index + 1,
-        row.student_name,
-        row.correct,
-        row.wrong,
-        row.skipped,
-        `${row.obtained_marks}/${row.total_marks}`,
-        `${row.percentage}%`
-    ]);
+    const renderArea = document.createElement('div');
+    renderArea.className = 'we-pdf-render-area';
+    renderArea.innerHTML = `
+        <h2>Written Exam Scoreboard</h2>
+        <p class="we-pdf-meta">Exam: ${currentExamTitle} | From: ${currentFromDate}  To: ${currentToDate} | Total Participants: ${currentScoreboardData.length}</p>
+        <table>
+            <thead><tr><th>Rank</th><th>Name</th><th>Correct</th><th>Wrong</th><th>Not Ans.</th><th>Marks</th><th>%</th></tr></thead>
+            <tbody>${rowsHtml}</tbody>
+        </table>
+    `;
+    document.body.appendChild(renderArea);
 
-    doc.autoTable({
-        startY: 44,
-        head: [['Rank', 'Name', 'Correct', 'Wrong', 'Not Ans.', 'Marks', '%']],
-        body: tableRows
-    });
+    if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready;
+    }
 
-    doc.save(`${currentExamTitle.replace(/\s+/g, '_')}_scoreboard.pdf`);
+    try {
+        const canvas = await html2canvas(renderArea, { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p', 'pt', 'a4');
+        await canvasToMultiPagePdf(canvas, doc);
+        doc.save(`${currentExamTitle.replace(/\s+/g, '_')}_scoreboard.pdf`);
+    } catch (err) {
+        console.error(err);
+        alert('PDF তৈরি করতে সমস্যা হয়েছে, আবার চেষ্টা করুন।');
+    } finally {
+        document.body.removeChild(renderArea);
+        btn.disabled = false;
+        btn.textContent = 'Download Scoreboard PDF';
+    }
 }
 
 // ---------- EVENTS ----------
