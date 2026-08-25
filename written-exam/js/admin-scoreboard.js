@@ -10,8 +10,6 @@ let currentExamQuestionsCount = 0;
 let currentExamTotalMarks = '';
 let currentExamDuration = '';
 
-// ---------- AUTH ----------
-
 async function checkAdminSession() {
     const { data: { session } } = await supabaseClient.auth.getSession();
     if (session) {
@@ -57,8 +55,6 @@ function showDashboard() {
     populateExamSelect();
 }
 
-// ---------- FILTER UI ----------
-
 function populateExamSelect() {
     const select = document.getElementById('examSelect');
     select.innerHTML = '';
@@ -69,8 +65,6 @@ function populateExamSelect() {
         select.appendChild(opt);
     });
 }
-
-// ---------- SCOREBOARD GENERATE ----------
 
 async function generateScoreboard() {
     const examId = document.getElementById('examSelect').value;
@@ -157,8 +151,6 @@ function renderScoreboardTable(data) {
     `;
 }
 
-// ---------- PDF DOWNLOAD (html2canvas দিয়ে, বাংলা ফন্ট সাপোর্ট সহ) ----------
-
 async function downloadScoreboardPdf() {
     const btn = document.getElementById('downloadPdfBtn');
     btn.disabled = true;
@@ -219,12 +211,12 @@ async function downloadScoreboardPdf() {
     }
 }
 
-// ---------- EVENTS ----------
-
 document.addEventListener('DOMContentLoaded', () => {
-    checkAdminSession();
-    document.getElementById('loginBtn').addEventListener('click', handleLogin);
-    document.getElementById('logoutBtn').addEventListener('click', handleLogout);
-    document.getElementById('generateBtn').addEventListener('click', generateScoreboard);
-    document.getElementById('downloadPdfBtn').addEventListener('click', downloadScoreboardPdf);
+    loadExamDataFiles(() => {
+        checkAdminSession();
+        document.getElementById('loginBtn').addEventListener('click', handleLogin);
+        document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+        document.getElementById('generateBtn').addEventListener('click', generateScoreboard);
+        document.getElementById('downloadPdfBtn').addEventListener('click', downloadScoreboardPdf);
+    });
 });
