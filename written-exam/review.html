@@ -1,29 +1,26 @@
+<!-- written-exam/review.html -->
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Answers</title>
-    <link rel="stylesheet" href="css/written-exam.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review</title>
+<link rel="stylesheet" href="css/written-exam.css">
 </head>
 <body>
-    <div class="container">
-        <header class="page-header">
-            <h1>📝 Answer Review</h1>
-            <h2 id="examName"></h2>
-        </header>
 
-        <div class="review-container" id="reviewContainer">
-            <!-- Questions will be loaded here -->
+    <header class="we-header">
+        <a href="result.html" class="we-back">← Result</a>
+        <h1 id="reviewExamName">Review</h1>
+    </header>
+
+    <main class="we-container">
+        <div id="reviewSummary" class="we-review-summary"></div>
+        <div id="reviewList" class="we-review-list">
+            <p class="we-loading">Loading review...</p>
         </div>
+    </main>
 
-        <div class="review-actions">
-            <a href="result.html" class="btn btn-secondary">⬅️ Back to Result</a>
-            <a href="index.html" class="btn btn-primary">🏠 Home</a>
-        </div>
-    </div>
-
-    <script src="js/config.js"></script>
     <script src="js/review.js"></script>
 </body>
 </html>
