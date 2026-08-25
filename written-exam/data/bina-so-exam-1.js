@@ -1,6 +1,6 @@
 // written-exam/data/bina-so-exam-1.js
 
-const EXAM_BINA_SO_1 = {
+var EXAM_BINA_SO_1 = {
     id: "bina-so-exam-1",
     title: "BINA SO Exam – 1",
     accessCode: "BINA2026",
