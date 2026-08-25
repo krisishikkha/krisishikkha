@@ -11,7 +11,7 @@ function populatePdfExamSelect() {
     });
 }
 
-function generateQuestionAnswerPdf() {
+async function generateQuestionAnswerPdf() {
     const statusEl = document.getElementById('pdfStatus');
     statusEl.style.display = 'none';
 
@@ -25,42 +25,56 @@ function generateQuestionAnswerPdf() {
     }
 
     const examData = window[entry.dataVar];
-
     if (!examData || !Array.isArray(examData.questions) || examData.questions.length === 0) {
         statusEl.textContent = 'এই Exam-এর প্রশ্ন ডেটা পাওয়া যায়নি।';
         statusEl.style.display = 'block';
         return;
     }
 
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+    const btn = document.getElementById('downloadQPdfBtn');
+    btn.disabled = true;
+    btn.textContent = 'Generating...';
 
-    doc.setFontSize(16);
-    doc.text(examData.title, 14, 15);
-    doc.setFontSize(10);
-    doc.text(`Total Questions: ${examData.questions.length}  |  Total Marks: ${examData.totalMarks}`, 14, 22);
+    const rowsHtml = examData.questions.map((q, i) => `
+        <tr>
+            <td>${i + 1}</td>
+            <td>${q.question}</td>
+            <td>${q.acceptedAnswers.join(' / ')}</td>
+            <td>${q.marks}</td>
+        </tr>
+    `).join('');
 
-    const rows = examData.questions.map((q, index) => [
-        index + 1,
-        q.question,
-        q.acceptedAnswers.join(' / '),
-        q.marks
-    ]);
+    const renderArea = document.createElement('div');
+    renderArea.className = 'we-pdf-render-area';
+    renderArea.innerHTML = `
+        <h2>${examData.title}</h2>
+        <p class="we-pdf-meta">Total Questions: ${examData.questions.length} | Total Marks: ${examData.totalMarks}</p>
+        <table>
+            <thead><tr><th>#</th><th>Question</th><th>Accepted Answer(s)</th><th>Marks</th></tr></thead>
+            <tbody>${rowsHtml}</tbody>
+        </table>
+    `;
+    document.body.appendChild(renderArea);
 
-    doc.autoTable({
-        startY: 28,
-        head: [['#', 'Question', 'Accepted Answer(s)', 'Marks']],
-        body: rows,
-        styles: { fontSize: 9, cellWidth: 'wrap' },
-        columnStyles: {
-            0: { cellWidth: 10 },
-            1: { cellWidth: 90 },
-            2: { cellWidth: 70 },
-            3: { cellWidth: 15 }
-        }
-    });
+    if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready; // ফন্ট লোড নিশ্চিত হওয়ার পর ক্যাপচার
+    }
 
-    doc.save(`${examData.title.replace(/\s+/g, '_')}_Q_and_A.pdf`);
+    try {
+        const canvas = await html2canvas(renderArea, { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p', 'pt', 'a4');
+        await canvasToMultiPagePdf(canvas, doc);
+        doc.save(`${examData.title.replace(/\s+/g, '_')}_Q_and_A.pdf`);
+    } catch (err) {
+        console.error(err);
+        statusEl.textContent = 'PDF তৈরি করতে সমস্যা হয়েছে, আবার চেষ্টা করুন।';
+        statusEl.style.display = 'block';
+    } finally {
+        document.body.removeChild(renderArea);
+        btn.disabled = false;
+        btn.textContent = 'Download PDF';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
