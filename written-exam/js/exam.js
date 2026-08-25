@@ -316,7 +316,7 @@ async function submitExam(autoSubmitted) {
         obtained_marks: obtainedMarks,
         percentage,
         attempt_no: 1,
-        answers_detail: answersDetail
+        answers: answersDetail // <--- শুধুমাত্র এখানে 'answers_detail' বদলে 'answers' করা হয়েছে
     };
 
     // Supabase-এ সেভ করার চেষ্টা
