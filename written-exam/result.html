@@ -1,71 +1,29 @@
+<!-- written-exam/result.html -->
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Result</title>
-    <link rel="stylesheet" href="css/written-exam.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result</title>
+<link rel="stylesheet" href="css/written-exam.css">
 </head>
 <body>
-    <div class="container">
-        <div class="result-container">
-            <div class="result-header">
-                <h1>📊 Exam Result</h1>
-                <h2 id="examName"></h2>
-            </div>
 
-            <div class="student-info">
-                <h3 id="studentName"></h3>
-                <p id="submissionTime"></p>
-            </div>
+    <header class="we-header">
+        <a href="index.html" class="we-back">← Exam List</a>
+        <h1 id="resultExamName">Result</h1>
+    </header>
 
-            <div class="result-cards">
-                <div class="result-card">
-                    <div class="result-label">Total Questions</div>
-                    <div class="result-value" id="totalQuestions">0</div>
-                </div>
-                <div class="result-card answered">
-                    <div class="result-label">Answered</div>
-                    <div class="result-value" id="answered">0</div>
-                </div>
-                <div class="result-card correct">
-                    <div class="result-label">Correct</div>
-                    <div class="result-value" id="correct">0</div>
-                </div>
-                <div class="result-card wrong">
-                    <div class="result-label">Wrong</div>
-                    <div class="result-value" id="wrong">0</div>
-                </div>
-                <div class="result-card skipped">
-                    <div class="result-label">Not Answered</div>
-                    <div class="result-value" id="skipped">0</div>
-                </div>
-            </div>
-
-            <div class="marks-section">
-                <div class="marks-card">
-                    <h3>Total Marks</h3>
-                    <div class="marks-value" id="totalMarks">0</div>
-                </div>
-                <div class="marks-card obtained">
-                    <h3>Obtained Marks</h3>
-                    <div class="marks-value" id="obtainedMarks">0</div>
-                </div>
-                <div class="marks-card percentage">
-                    <h3>Percentage</h3>
-                    <div class="marks-value" id="percentage">0%</div>
-                </div>
-            </div>
-
-            <div class="result-actions">
-                <button class="btn btn-primary" id="reviewBtn">📝 Review Answers</button>
-                <a href="index.html" class="btn btn-secondary">🏠 Back to Home</a>
-            </div>
+    <main class="we-container">
+        <div id="resultBox" class="we-result-box">
+            <p class="we-loading">Loading result...</p>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/config.js"></script>
+        <a href="review.html" id="reviewLink" class="we-btn we-btn-primary we-block-btn">
+            Question + Answer Review দেখুন
+        </a>
+    </main>
+
     <script src="js/result.js"></script>
 </body>
 </html>
