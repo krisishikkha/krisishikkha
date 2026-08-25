@@ -10,7 +10,7 @@ const EXAMS_REGISTRY = [
     },
     {
         id: 'bina-so-exam-2',
-        title: 'BINA SO Exam – 2',
+        title: 'BINA SO Exam – 02 access code:2024',
         dataVar: 'EXAM_BINA_SO_2'
     },
     {
