@@ -27,6 +27,14 @@ function loadCurrentExam() {
         return null;
     }
 
+    const status = examData.status || 'live';
+    if (status === 'locked' || status === 'draft') {
+        document.getElementById('entryExamTitle').textContent = examData.title;
+        document.getElementById('entryExamMeta').textContent = 'এই পরীক্ষাটি এখন সরাসরি নেওয়া যাচ্ছে না। ভর্তি সংক্রান্ত তথ্যের জন্য WhatsApp-এ যোগাযোগ করুন।';
+        document.getElementById('enterExamBtn').disabled = true;
+        return null;
+    }
+
     document.getElementById('entryExamTitle').textContent = examData.title;
     document.getElementById('entryExamMeta').textContent =
         `${examData.questions.length} Questions | ${examData.totalMarks} Marks | ${examData.durationMinutes} minutes`;
