@@ -14,3 +14,6 @@ const supabaseClient = window.supabase.createClient(
 
 // পুরো written-exam মডিউল জুড়ে একই টেবিল নাম ব্যবহার হবে
 const SUBMISSIONS_TABLE = 'written_exam_submissions';
+// WhatsApp ভর্তি যোগাযোগ তথ্য (সব exam-এর জন্য কমন)
+const ADMISSION_WHATSAPP_NUMBER = '8801516013089'; // এখানে আপনার নম্বর বসান, কোড সহ, + বা 00 ছাড়া
+const ADMISSION_WHATSAPP_MESSAGE = 'I want to enroll in the Written Exam batch';
