@@ -1,6 +1,7 @@
 var EXAM_BINA_SO_2 = {
     id: "bina-so-exam-2",
     title: "BINA SO Exam – 02 access code:2024",
+status: "locked",   // এখানে: "draft" | "live" | "locked" | "archive"
     institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
     setName: "Model Test – 03",
     accessCode: "2024",
