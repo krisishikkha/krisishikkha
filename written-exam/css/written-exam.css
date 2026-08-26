@@ -339,3 +339,21 @@ body {
     border: 1px solid #ccc; padding: 6px 8px; text-align: left; vertical-align: top;
 }
 .we-pdf-render-area th { background: #16a34a; color: #fff; }
+/* ===== Status Badges ===== */
+.we-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+.we-badge-locked { background: #fee2e2; color: #b91c1c; }
+.we-badge-archive { background: #e0e7ff; color: #3730a3; }
+
+.we-locked-btn {
+    background: #9ca3af;
+    cursor: pointer;
+    border: none;
+}
