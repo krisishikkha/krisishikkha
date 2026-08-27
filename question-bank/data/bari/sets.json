@@ -2,15 +2,15 @@
   "instituteId": "bari",
   "sets": [
     {
-      "id": "so-2017",
-      "title": "Scientific Officer 2017",
-      "year": 2017,
+      "id": "so-20255",
+      "title": "Scientific Officer(Temporary) 2025",
+      "year": 2025,
       "position": "Scientific Officer",
       "visible": true,
       "type": "free",
-      "format": ["article", "pdf"],
-      "totalQuestions": 20,
-      "description": "BARI Scientific Officer পরীক্ষা ২০১৭ - MCQ ও Written প্রশ্ন"
+      "format": ["article"],
+      "totalQuestions": 54,
+      "description": "BARI Scientific Officer পরীক্ষা ২০২৫ - MCQ ও Written প্রশ্ন"
     },
     {
       "id": "so-2025",
