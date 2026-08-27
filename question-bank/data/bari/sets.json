@@ -13,15 +13,15 @@
       "description": "BARI Scientific Officer পরীক্ষা ২০১৭ - MCQ ও Written প্রশ্ন"
     },
     {
-      "id": "so-2022",
-      "title": "Scientific Officer 2022",
-      "year": 2022,
+      "id": "so-2025",
+      "title": "Scientific Officer 2025",
+      "year": 2025,
       "position": "Scientific Officer",
       "visible": true,
-      "type": "premium",
+      "type": "free",
       "format": ["article"],
       "totalQuestions": 20,
-      "description": "BARI Scientific Officer পরীক্ষা ২০২২ - MCQ ও Written প্রশ্ন"
+      "description": "BARI Scientific Officer পরীক্ষা ২০২৫ - MCQ ও Written প্রশ্ন"
     },
     {
       "id": "so-2023",
@@ -29,7 +29,7 @@
       "year": 2023,
       "position": "Scientific Officer",
       "visible": true,
-      "type": "premium",
+      "type": "free",
       "format": ["article", "pdf"],
       "totalQuestions": 80,
       "description": "BARI Scientific Officer পরীক্ষা ২০২৩"
@@ -40,7 +40,7 @@
       "year": 2024,
       "position": "Assistant Director",
       "visible": true,
-      "type": "premium",
+      "type": "free",
       "format": ["pdf"],
       "totalQuestions": 100,
       "description": "BARI Assistant Director পরীক্ষা ২০২৪"
