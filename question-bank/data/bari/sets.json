@@ -35,15 +35,15 @@
       "description": "BARI Scientific Officer পরীক্ষা ২০২৩"
     },
     {
-      "id": "ad-2024",
-      "title": "Assistant Director 2024",
+      "id": "so-2024",
+      "title": "Scientific Officer 2024",
       "year": 2024,
-      "position": "Assistant Director",
+      "position": "Scientific Officer",
       "visible": true,
       "type": "free",
-      "format": ["pdf"],
-      "totalQuestions": 100,
-      "description": "BARI Assistant Director পরীক্ষা ২০২৪"
+      "format": ["article"],
+      "totalQuestions": 37,
+      "description": "BARI scientific officer পরীক্ষা ২০২৪"
     }
   ]
 }
