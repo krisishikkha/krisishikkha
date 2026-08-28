@@ -44,6 +44,17 @@
       "format": ["article"],
       "totalQuestions": 37,
       "description": "BARI scientific officer পরীক্ষা ২০২৪"
+    },
+    {
+      "id": "so-2024",
+      "title": "Assistant Director2017",
+      "year": 2017,
+      "position": "assistant director",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 39,
+      "description": "BARI assistant director পরীক্ষা ২০১৭"
     }
   ]
 }
