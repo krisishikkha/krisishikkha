@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diploma Agriculture | Krisishikkha</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="features.js"></script>
 </head>
 <body>
   <div class="research-container">
@@ -29,22 +30,22 @@
     </p>
 
     <div class="section-grid">
-      <a href="text-book/index.html" class="section-card textbook-card">
+      <a id="textBookCard" href="text-book/index.html" class="section-card textbook-card">
         <span class="section-icon">📘</span>
         <span class="section-title">Text Book</span>
       </a>
 
-      <a href="question-bank/index.html" class="section-card question-card">
+      <a id="questionBankCard" href="question-bank/index.html" class="section-card question-card">
         <span class="section-icon">📙</span>
         <span class="section-title">Question Bank</span>
       </a>
 
-      <a href="saao/index.html" class="section-card saao-card">
+      <a id="saaoCard" href="saao/index.html" class="section-card saao-card">
         <span class="section-icon">🧑‍🌾</span>
         <span class="section-title">SAAO</span>
       </a>
 
-      <a href="scientific-assistant/index.html" class="section-card scientific-card">
+      <a id="scientificAssistantCard" href="scientific-assistant/index.html" class="section-card scientific-card">
         <span class="section-icon">🧑‍🔬</span>
         <span class="section-title">Scientific Assistant</span>
       </a>
@@ -78,6 +79,20 @@
         homeLoginStatus.textContent = "Not logged in";
       }
     }
+  </script>
+
+  <script>
+    document.getElementById("textBookCard").style.display =
+      FEATURES.textBook ? "" : "none";
+
+    document.getElementById("questionBankCard").style.display =
+      FEATURES.questionBank ? "" : "none";
+
+    document.getElementById("saaoCard").style.display =
+      FEATURES.saao ? "" : "none";
+
+    document.getElementById("scientificAssistantCard").style.display =
+      FEATURES.scientificAssistant ? "" : "none";
   </script>
 </body>
 </html>
