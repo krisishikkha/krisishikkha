@@ -37,7 +37,7 @@
       "nameEn": "BLRI",
       "nameBn": "বাংলাদেশ প্রাণিসম্পদ গবেষণা ইনস্টিটিউট",
       "fullName": "Bangladesh Livestock Research Institute",
-      "visible": true,
+      "visible": false,
       "icon": "🐄"
     },
     {
@@ -45,7 +45,7 @@
       "nameEn": "BFRI",
       "nameBn": "বাংলাদেশ বন গবেষণা ইনস্টিটিউট",
       "fullName": "Bangladesh Forestry Research Institute",
-      "visible": true,
+      "visible": false,
       "icon": "🌳"
     },
     {
@@ -53,7 +53,7 @@
       "nameEn": "BFRI (Fisheries)",
       "nameBn": "বাংলাদেশ মৎস্য গবেষণা ইনস্টিটিউট",
       "fullName": "Bangladesh Fisheries Research Institute",
-      "visible": true,
+      "visible": false,
       "icon": "🐟"
     },
     {
@@ -61,7 +61,7 @@
       "nameEn": "BTRI",
       "nameBn": "বাংলাদেশ চা গবেষণা ইনস্টিটিউট",
       "fullName": "Bangladesh Tea Research Institute",
-      "visible": true,
+      "visible": false,
       "icon": "🍵"
     },
     {
@@ -77,7 +77,7 @@
       "nameEn": "SRDI",
       "nameBn": "মৃত্তিকা সম্পদ উন্নয়ন ইনস্টিটিউট",
       "fullName": "Soil Resource Development Institute",
-      "visible": true,
+      "visible": false,
       "icon": "🏔️"
     },
     {
