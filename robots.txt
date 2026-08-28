@@ -4,9 +4,9 @@
 User-agent: *
 Allow: /
 Allow: /assets/
-Allow: /bcs/
-Allow: /diploma/
-Allow: /research/
+Disallow: /bcs/
+Disallow: /diploma/
+Disallow: /research/
 Allow: /exam-corner/
 Allow: /important-job-topic/
 
