@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "title": "BARI 2022 SO Exam",
+    "institute": "Bangladesh Agricultural Research Institute (BARI)",
+    "year": 2022,
+    "position": "Scientific Officer",
+    "totalQuestions": 20,
+    "type": "free",
+    "examDate": "2022"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "written",
+      "question": "শস্যের নিবিড়তা (Cropping intensity) কী? শস্যের নিবিড়তা পরিমাপের সূত্র লিখুন।",
+      "answer": "Cropping intensity is the number of crops grown on the same piece of land during a year, expressed as a percentage of the net sown area.\n\nCropping Intensity (%) = (Total Cropped area / Net Cropped area) × 100",
+      "explanation": "Cropping intensity is the number of crops grown on the same piece of land during a year, expressed as a percentage of the net sown area.\n\nশস্যের নিবিড়তা হলো এক বছরে একই জমিতে যতগুলো ফসল চাষ করা হয়, তা নিট চাষকৃত জমির শতাংশ হিসেবে প্রকাশ করা হয়।\n\nসূত্র:\nCropping Intensity (%) = (মোট চাষকৃত জমির পরিমাণ / নিট চাষকৃত জমির পরিমাণ) × ১০০\n\nবাংলাদেশে সীমিত কৃষিজমি থেকে বেশি খাদ্য উৎপাদনের জন্য শস্যের নিবিড়তা বৃদ্ধি অত্যন্ত গুরুত্বপূর্ণ। বর্তমানে বাংলাদেশে শস্যের নিবিড়তা প্রায় ১৯৫%, যা বৃদ্ধি করে খাদ্য নিরাপত্তা নিশ্চিত করা সম্ভব। উন্নত কৃষি প্রযুক্তি, সেচ ব্যবস্থা এবং স্বল্পমেয়াদি জাত ব্যবহারের মাধ্যমে এই নিবিড়তা আরও বাড়ানো যায়।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "written",
+      "question": "C3 এবং C4 প্লান্টে ফটোসিনথেসিস (Photosynthesis) চক্রের নাম কী?",
+      "answer": "C3 Plant: Calvin Cycle\nC4 Plant: Hatch-Slack Pathway",
+      "explanation": "C3 Plant: Calvin Cycle\nC4 Plant: Hatch-Slack Pathway\n\nC3 উদ্ভিদে ফটোসিনথেসিস চক্রের নাম ক্যালভিন চক্র (Calvin Cycle) এবং C4 উদ্ভিদে হ্যাচ-স্ল্যাক পাথওয়ে (Hatch-Slack Pathway)।\n\nC3 উদ্ভিদে প্রথম স্থিতিশীল যৌগ 3-কার্বন বিশিষ্ট (3-Phosphoglyceric acid বা PGA), যেমন: ধান, গম, আলু। C4 উদ্ভিদে প্রথম স্থিতিশীল যৌগ 4-কার্বন বিশিষ্ট (Oxaloacetic acid বা OAA), যেমন: ভুট্টা, আখ, জোয়ার। C4 উদ্ভিদ উচ্চ তাপমাত্রা ও শুষ্ক পরিবেশে বেশি কার্যকর এবং ফটোরেস্পিরেশন কম হয়।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "written",
+      "question": "গাছের Vascular bundle এর জাইলেম ও ফ্লোয়েম ভেসেলের সুনির্দিষ্ট কাজ কী?",
+      "answer": "জাইলেম (Xylem): মূল থেকে পানি ও খনিজ পদার্থ পরিবহন এবং যান্ত্রিক দৃঢ়তা প্রদান।\n\nফ্লোয়েম (Phloem): পাতায় তৈরি খাদ্য (গ্লুকোজ) উদ্ভিদের বিভিন্ন অংশে পরিবহন।",
+      "explanation": "জাইলেম (Xylem):\n\nকাজসমূহ:\n১. পানি পরিবহন: মূল থেকে উদ্ভিদের উপরের অংশে পানি ও খনিজ পদার্থ পরিবহন করে।\n২. যান্ত্রিক দৃঢ়তা প্রদান: লিগনিনযুক্ত কোষ দেয়ালের মাধ্যমে উদ্ভিদকে শক্তি ও দৃঢ়তা দেয়।\n৩. উদ্ভিদের উচ্চতায় বৃদ্ধি সহায়তা: পানি প্রবাহের মাধ্যমে টারগর চাপ বজায় রাখে।\n\nফ্লোয়েম (Phloem):\n\nকাজসমূহ:\n১. খাদ্য পরিবহন: পাতায় আলোকসংশ্লেষণ দ্বারা তৈরি গ্লুকোজ বা অন্যান্য জৈব খাদ্যদ্রব্য উদ্ভিদের বিভিন্ন অংশে পরিবহন করে (Translocation)।\n২. দুইমুখী পরিবহন: খাদ্য উপরের দিক থেকে নিচে ও নিচ থেকে উপরের দিকে উভয় দিকেই যেতে পারে।\n৩. সংরক্ষণ ও স্থানান্তর: খাদ্যদ্রব্য অস্থায়ীভাবে সংরক্ষণ করে প্রয়োজনমতো স্থানান্তর করে।\n\nজাইলেম এবং ফ্লোয়েম একসাথে ভাস্কুলার বান্ডল গঠন করে, যা উদ্ভিদের জীবনধারণের জন্য অপরিহার্য।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "written",
+      "question": "বীজের সংজ্ঞা লিখুন। বীজ অঙ্কুরোদগমের পর কোন অংশটি মাটিতে প্রবেশ করে?",
+      "answer": "Any part of plant either vegetative or reproductive having capacity of regenerating new plants is called agricultural seed. Mature and fertilized ovule is called seed.\n\nAfter germination, radicle gets entry into soil.",
+      "explanation": "Any part of plant either vegetative or reproductive having capacity of regenerating new plants is called agricultural seed. Mature and fertilized ovule is called seed.\n\nকৃষিতত্ত্ব অনুযায়ী, উদ্ভিদের যেকোনো অংশ (অঙ্গজ বা প্রজননগত) যা নতুন উদ্ভিদ সৃষ্টি করতে সক্ষম তাকে কৃষিবীজ বলে। উদ্ভিদবিজ্ঞান অনুযায়ী, পরিপক্ব ও নিষিক্ত ডিম্বককে (ovule) বীজ বলে।\n\nAfter germination, radicle gets entry into soil.\n\nবীজ অঙ্কুরোদগমের পর প্রথমে মূলাংকুর (radicle) মাটিতে প্রবেশ করে এবং পরবর্তীতে মূল সিস্টেম তৈরি করে। এটি উদ্ভিদকে মাটিতে স্থিতিশীল করে এবং পানি ও খনিজ পদার্থ শোষণ শুরু করে। এরপর প্লুমিউল (plumule) উপরের দিকে বৃদ্ধি পেয়ে কাণ্ড ও পাতা তৈরি করে।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "written",
+      "question": "গ্রীন হাউস গ্যাস কী? ৪টি গ্রীন হাউস গ্যাসের নাম লিখুন।",
+      "answer": "A greenhouse gas is any gas in the atmosphere that absorbs and emits infrared radiation (heat), trapping it and warming the planet's surface.\n\nGreenhouse gases:\n1. Carbon dioxide (CO₂)\n2. Methane (CH₄)\n3. Nitrous oxide (N₂O)\n4. Water vapor (H₂O)",
+      "explanation": "A greenhouse gas is any gas in the atmosphere that absorbs and emits infrared radiation (heat), trapping it and warming the planet's surface.\n\nগ্রীন হাউস গ্যাস হলো বায়ুমণ্ডলে উপস্থিত এমন গ্যাস যা ইনফ্রারেড রশ্মি (তাপ) শোষণ ও নিঃসরণ করে, ফলে তাপ আটকে রেখে পৃথিবীর তাপমাত্রা বৃদ্ধি করে।\n\nপ্রধান ৪টি গ্রীন হাউস গ্যাস:\n১. কার্বন ডাই-অক্সাইড (CO₂) - জীবাশ্ম জ্বালানি দহন ও বন উজাড়ের ফলে নির্গত হয়।\n২. মিথেন (CH₄) - ধানক্ষেত, গবাদি পশুর পরিপাক তন্ত্র এবং জৈব বর্জ্য থেকে নির্গত হয়।\n৩. নাইট্রাস অক্সাইড (N₂O) - সার প্রয়োগ ও শিল্প কারখানা থেকে নির্গত হয়।\n৪. জলীয় বাষ্প (H₂O) - প্রাকৃতিক গ্রীন হাউস গ্যাস যা বাষ্পীভবনের মাধ্যমে তৈরি হয়।\n\nবাংলাদেশে ধান চাষ এবং গবাদি পশু পালনের কারণে মিথেন নির্গমন একটি বড় সমস্যা। জলবায়ু পরিবর্তন রোধে গ্রীন হাউস গ্যাস নিঃসরণ কমানো জরুরি।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "written",
+      "question": "নিম্নের ফসলের বৈজ্ঞানিক নাম লিখুন।\nক) চীনা বাদাম\nখ) ব্রোকলি\nগ) দারুচিনি\nঘ) ড্রাগণ ফ্রুট",
+      "answer": "ক) চীনা বাদাম: Arachis hypogaea\nখ) ব্রোকলি: Brassica oleracea var. italica\nগ) দারুচিনি: Cinnamomum zeylanicum\nঘ) ড্রাগণ ফ্রুট: Hylocereus undatus",
+      "explanation": "ক) চীনা বাদাম (Groundnut/Peanut): Arachis hypogaea - এটি Fabaceae পরিবারের অন্তর্ভুক্ত একটি তেলবীজ ফসল। বাংলাদেশে রবি মৌসুমে চাষ করা হয়।\n\nখ) ব্রোকলি (Broccoli): Brassica oleracea var. italica - এটি Brassicaceae পরিবারের একটি শীতকালীন সবজি। ফুলকপির মতো এর ভক্ষণযোগ্য অংশ হলো পুষ্পমঞ্জরী।\n\nগ) দারুচিনি (Cinnamon): Cinnamomum zeylanicum - এটি Lauraceae পরিবারের একটি মসলা জাতীয় ফসল। এর বাকল মসলা হিসেবে ব্যবহৃত হয়।\n\nঘ) ড্রাগণ ফ্রুট (Dragon Fruit): Hylocereus undatus - এটি Cactaceae পরিবারের একটি ক্যাকটাস জাতীয় ফল। বাংলাদেশে সম্প্রতি এর চাষ জনপ্রিয় হচ্ছে।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "written",
+      "question": "Bulk density এবং Particle density এর সংজ্ঞা লিখুন।",
+      "answer": "Bulk density: Mass of dry soil (solids + pore space) per unit volume.\n\nParticle density: Mass of soil solids only per unit volume.",
+      "explanation": "Bulk density: Mass of dry soil (solids + pore space) per unit volume is called bulk density.\n\nবাল্ক ডেনসিটি: শুষ্ক মাটির ভর (কঠিন কণা + ছিদ্র স্থান) প্রতি একক আয়তনে উপস্থিত থাকলে তাকে বাল্ক ডেনসিটি বলে। সাধারণত ১.০-১.৬ g/cm³ হয়ে থাকে।\n\nParticle density: Mass of soil solids only per unit volume is called particle density.\n\nপার্টিকেল ডেনসিটি: শুধুমাত্র মাটির কঠিন কণার ভর প্রতি একক আয়তনে থাকলে তাকে পার্টিকেল ডেনসিটি বলে। সাধারণত ২.৬৫ g/cm³ হয়ে থাকে।\n\nবাল্ক ডেনসিটি সবসময় পার্টিকেল ডেনসিটির চেয়ে কম হয় কারণ বাল্ক ডেনসিটিতে মাটির ছিদ্র স্থানও হিসাবে আসে। মাটির পোরোসিটি (porosity) নির্ণয়ে এই দুটি মান ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "written",
+      "question": "কোন কম্পোস্ট সারে ২৫% কার্বন এবং ২% নাইট্রোজেন আছে। ছত্রাক দ্বারা উক্ত কম্পোস্টের বিয়োজন ঘটাতে হলে কী পরিমান নাইট্রোজেন ছত্রাক কর্তৃক আত্মীকৃত (Immobilized) হবে; যেখানে ছত্রাকের কার্বন আত্মীকরন হার ৩৬% এবং নাইট্রোজেন ব্যবহারের পরিমান ১০%।",
+      "answer": "0.9% of the total compost mass will be immobilized as nitrogen by the fungi.",
+      "explanation": "প্রদত্ত তথ্য:\nকম্পোস্টে কার্বন = ২৫%\nকম্পোস্টে নাইট্রোজেন = ২%\nছত্রাকের কার্বন আত্মীকরণ হার = ৩৬%\nছত্রাকের নাইট্রোজেন ব্যবহারের হার = ১০%\n\nধাপ ১: ছত্রাক কর্তৃক আত্মীকৃত কার্বন নির্ণয়\n\nআত্মীকৃত কার্বন = কম্পোস্টের কার্বন × আত্মীকরণ হার\n\nআত্মীকৃত কার্বন = ০.২৫ × ০.৩৬\n\nআত্মীকৃত কার্বন = ০.০৯ বা ৯%\n\nধাপ ২: ছত্রাক কর্তৃক আত্মীকৃত নাইট্রোজেন নির্ণয়\n\nআত্মীকৃত নাইট্রোজেন = আত্মীকৃত কার্বন × নাইট্রোজেন ব্যবহারের হার\n\nআত্মীকৃত নাইট্রোজেন = ০.০৯ × ০.১০\n\nআত্মীকৃত নাইট্রোজেন = ০.০০৯ বা ০.৯%\n\nসুতরাং, মোট কম্পোস্টের ০.৯% নাইট্রোজেন ছত্রাক কর্তৃক আত্মীকৃত (Immobilized) হবে।\n\nএই প্রক্রিয়ায় নাইট্রোজেন সাময়িকভাবে মাটিতে অনুপলব্ধ হয়ে যায় কারণ ছত্রাক তা নিজের দেহ গঠনে ব্যবহার করে।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "written",
+      "question": "ফুলকপি এবং বাঁধাকপির ভক্ষণযোগ্য অংশকে কী বলে?",
+      "answer": "ফুলকপির ভক্ষণযোগ্য অংশকে Curd বলে এবং বাঁধাকপির ভক্ষণযোগ্য অংশকে Head বলে।",
+      "explanation": "ফুলকপির ভক্ষণযোগ্য অংশকে Curd (কার্ড) বলে এবং বাঁধাকপির ভক্ষণযোগ্য অংশকে Head (হেড) বলে।\n\nফুলকপি (Cauliflower): এর ভক্ষণযোগ্য অংশ Curd হলো অসংখ্য ঘনসন্নিবিষ্ট পুষ্পমঞ্জরী বা ফুলের কুঁড়ি যা সাদা, সবুজ বা বেগুনি রঙের হতে পারে। এটি মূলত পরিবর্তিত পুষ্পমঞ্জরী।\n\nবাঁধাকপি (Cabbage): এর ভক্ষণযোগ্য অংশ Head হলো অসংখ্য পাতা যা শক্তভাবে একে অপরের সাথে জড়িয়ে একটি মাথার মতো গঠন তৈরি করে। এটি পরিবর্তিত পত্রমুকুল (Terminal bud)।\n\nদুটোই Brassica oleracea প্রজাতির বিভিন্ন ভ্যারাইটি এবং বাংলাদেশে শীতকালীন প্রধান সবজি হিসেবে চাষ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "written",
+      "question": "বাংলাদেশে প্রথম সঙ্করায়িত (Hybrid) আমের জাত কোনটি এবং কোন কোন প্যারেন্টসের ক্রসের মাধ্যমে উদ্ভাবিত?",
+      "answer": "বারি আম-৪ হলো বাংলাদেশে প্রথম হাইব্রিড আমের জাত। এটি আশ্বিনা আম এবং ফ্লোরিডা এম-৩৮৯৬ এর ক্রস করে তৈরি করা হয়েছে।",
+      "explanation": "বাংলাদেশে প্রথম হাইব্রিড আমের জাত হলো বারি আম-৪।\n\nপ্যারেন্টস:\nমাতৃ জাত (Female parent): আশ্বিনা\nপিতৃ জাত (Male parent): ফ্লোরিডা এম-৩৮৯৬ (Florida M-3896)\n\nবৈশিষ্ট্য:\nবারি আম-৪ উচ্চ ফলনশীল এবং নিয়মিত ফল দেয়। ফল মাঝারি আকারের এবং মিষ্টি স্বাদযুক্ত। এই জাতটি বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট (BARI) কর্তৃক উদ্ভাবিত হয়েছে। হাইব্রিড জাতের সুবিধা হলো এতে উভয় প্যারেন্টের ভালো গুণাবলী পাওয়া যায়। বাংলাদেশে আমের উৎপাদন বৃদ্ধিতে এই জাতটি গুরুত্বপূর্ণ ভূমিকা রাখছে।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "written",
+      "question": "Climacteric এবং Non-Climacteric ফল বলতে কী বুঝায় এবং প্রত্যেকটির দুটি করে উদাহরণ লিখুন।",
+      "answer": "Climacteric fruits: These fruits are characterized by a spike in their respiration rate and a surge of ethylene production during ripening. They continue to ripen after harvest. E.g. Apple, Banana\n\nNon-climacteric fruits: These fruits ripen gradually while still attached to the plant and do not ripen further once picked. They lack the climacteric peak of respiration and do not experience a surge in ethylene production during ripening. E.g. Orange, Grape",
+      "explanation": "Climacteric fruits: These fruits are characterized by a spike in their respiration rate and a surge of ethylene production during ripening. They continue to ripen after harvest. Examples: Apple, Banana\n\nক্লাইম্যাক্টেরিক ফল: এই ফলগুলো পাকার সময় শ্বসন হার এবং ইথিলিন গ্যাস উৎপাদনে হঠাৎ বৃদ্ধি ঘটে। সংগ্রহের পরও এরা পাকতে থাকে। উদাহরণ: আপেল, কলা, আম, পেঁপে, টমেটো।\n\nNon-climacteric fruits: These fruits ripen gradually while still attached to the plant and do not ripen further once picked. They lack the climacteric peak of respiration and do not experience a surge in ethylene production during ripening. Examples: Orange, Grape\n\nনন-ক্লাইম্যাক্টেরিক ফল: এই ফলগুলো গাছে থাকা অবস্থায় ধীরে ধীরে পাকে এবং সংগ্রহের পর আর পাকে না। এদের শ্বসন হারে কোনো হঠাৎ বৃদ্ধি ঘটে না এবং ইথিলিন উৎপাদনও কম হয়। উদাহরণ: কমলা, আঙুর, লেবু, স্ট্রবেরি।\n\nপ্রায়োগিক গুরুত্ব: ক্লাইম্যাক্টেরিক ফল কাঁচা অবস্থায় সংগ্রহ করে পরিবহন করা যায়, কিন্তু নন-ক্লাইম্যাক্টেরিক ফল পরিপক্ব অবস্থায় সংগ্রহ করতে হয়।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "written",
+      "question": "উদ্যানতাত্ত্বিক ফসলের Horticultural maturity এবং Physiological maturity বলতে কী বুঝায়?",
+      "answer": "Horticultural maturity: যে অবস্থায় ফল বা সবজি খাদ্য, সংরক্ষণ বা বাজারজাতকরণের জন্য উপযুক্ত অবস্থায় পৌঁছে, সেই অবস্থাকে Horticultural Maturity বলে।\n\nPhysiological maturity: যে অবস্থায় ফল বা উদ্ভিদ অঙ্গ জীবনচক্রের পূর্ণতা অর্জন করে এবং বীজ বা ফলের বৃদ্ধি সম্পূর্ণ থেমে যায়, সেই অবস্থাকে Physiological Maturity বলে।",
+      "explanation": "Horticultural maturity (উদ্যানতাত্ত্বিক পরিপক্বতা):\nযে অবস্থায় ফল বা সবজি খাদ্য, সংরক্ষণ বা বাজারজাতকরণের জন্য উপযুক্ত অবস্থায় পৌঁছে, সেই অবস্থাকে Horticultural Maturity বলে। এই পর্যায়ে ফল বা সবজির রং, আকার, স্বাদ, টেক্সচার ভোক্তা বা বাজারের চাহিদা অনুযায়ী হয়। উদাহরণ: টমেটো সবুজ অবস্থায় সংগ্রহ করা হয় দূরে পরিবহনের জন্য।\n\nPhysiological maturity (শারীরবৃত্তীয় পরিপক্বতা):\nযে অবস্থায় ফল বা উদ্ভিদ অঙ্গ জীবনচক্রের পূর্ণতা অর্জন করে এবং বীজ বা ফলের বৃদ্ধি সম্পূর্ণ থেমে যায়, সেই অবস্থাকে Physiological Maturity বলে। এই পর্যায়ে বীজ সম্পূর্ণভাবে পরিপক্ব হয় এবং অঙ্কুরোদগম ক্ষমতা অর্জন করে। উদাহরণ: ধানের দানা শক্ত হয়ে যায় এবং আর্দ্রতা কমে যায়।\n\nপার্থক্য: Horticultural maturity বাজার ও ব্যবহারের উপর নির্ভরশীল, কিন্তু Physiological maturity জৈবিক প্রক্রিয়ার সম্পূর্ণতা নির্দেশ করে।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "written",
+      "question": "Cryo-preservation কী? কোন ক্ষেত্রে এটি ব্যবহার করা হয়?",
+      "answer": "জীবন্ত কোষ, টিস্যু, বীজ, পরাগ (pollen), ভ্রূণ (embryo) ইত্যাদি অত্যন্ত নিম্ন তাপমাত্রায় (-196°C) তরল নাইট্রোজেনে সংরক্ষণ করাকে Cryo-preservation বলে।\n\nব্যবহার ক্ষেত্র:\n১. জার্মপ্লাজম সংরক্ষণে (Germplasm Conservation)\n২. টিস্যু কালচার (Tissue culture) উপাদান সংরক্ষণে\n৩. বীজ ব্যাংক বা জিন ব্যাংকে (Gene Bank)",
+      "explanation": "Cryo-preservation (ক্রায়ো-সংরক্ষণ):\nজীবন্ত কোষ, টিস্যু, বীজ, পরাগ (pollen), ভ্রূণ (embryo) ইত্যাদি অত্যন্ত নিম্ন তাপমাত্রায় (-196°C) তরল নাইট্রোজেনে সংরক্ষণ করাকে Cryo-preservation বলে। এই তাপমাত্রায় সকল জৈবিক কার্যক্রম স্থগিত থাকে এবং কোষ দীর্ঘদিন জীবিত থাকতে পারে।\n\nব্যবহার ক্ষেত্র:\n\n১. জার্মপ্লাজম সংরক্ষণে (Germplasm Conservation): বিরল ও বিলুপ্তপ্রায় উদ্ভিদের জেনেটিক সম্পদ সংরক্ষণের জন্য।\n\n২. টিস্যু কালচার (Tissue culture) উপাদান সংরক্ষণে: দীর্ঘমেয়াদী সংরক্ষণ যেখানে বার বার সাব-কালচার করার প্রয়োজন নেই।\n\n৩. বীজ ব্যাংক বা জিন ব্যাংকে (Gene Bank): ফসলের বিভিন্ন জাত ও বন্য প্রজাতির বীজ সংরক্ষণে।\n\n৪. পরাগ সংরক্ষণে: উদ্ভিদ প্রজনন গবেষণায় ব্যবহারের জন্য।\n\nসুবিধা: দীর্ঘমেয়াদী সংরক্ষণ, জেনেটিক পরিবর্তন হয় না, স্থান কম লাগে। বাংলাদেশে BARI, BRRI সহ বিভিন্ন গবেষণা প্রতিষ্ঠানে এই পদ্ধতি ব্যবহৃত হচ্ছে।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "written",
+      "question": "মেন্ডেলের প্রথম সূত্রের F₂ জেনারেশনের জেনোটাইপিক ও দ্বিতীয় সূত্রের F₂ জেনারেশনের ফেনোটাইপিক অনুপাত কত?",
+      "answer": "মেন্ডেলের প্রথম সূত্রের F₂ জেনারেশনের জেনোটাইপিক অনুপাত: ১:২:১\n\nমেন্ডেলের দ্বিতীয় সূত্রের F₂ জেনারেশনের ফেনোটাইপিক অনুপাত: ৯:৩:৩:১",
+      "explanation": "মেন্ডেলের প্রথম সূত্র (Law of Segregation):\nF₂ জেনারেশনের জেনোটাইপিক অনুপাত = ১:২:১\n(১ হোমোজাইগাস ডমিনেন্ট : ২ হেটারোজাইগাস : ১ হোমোজাইগাস রিসেসিভ)\nউদাহরণ: লম্বা মটর গাছের ক্ষেত্রে TT : Tt : tt = ১:২:১\nফেনোটাইপিক অনুপাত = ৩:১ (৩ লম্বা : ১ খাটো)\n\nমেন্ডেলের দ্বিতীয় সূত্র (Law of Independent Assortment):\nF₂ জেনারেশনের ফেনোটাইপিক অনুপাত = ৯:৩:৩:১\n(৯ উভয় ডমিনেন্ট : ৩ প্রথম ডমিনেন্ট দ্বিতীয় রিসেসিভ : ৩ প্রথম রিসেসিভ দ্বিতীয় ডমিনেন্ট : ১ উভয় রিসেসিভ)\nউদাহরণ: গোল ও হলুদ মটর (RRYY) এবং কুঁচকানো ও সবুজ মটর (rryy) এর মধ্যে ক্রস করলে F₂ তে:\n৯ গোল ও হলুদ : ৩ গোল ও সবুজ : ৩ কুঁচকানো ও হলুদ : ১ কুঁচকানো ও সবুজ\nজেনোটাইপিক অনুপাত = ১:২:১:২:৪:২:১:২:১\n\nএই অনুপাতগুলো জেনেটিক্স ও প্লান্ট ব্রিডিং এর মূলভিত্তি।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "written",
+      "question": "Heterosis এবং Inbreeding depression বলতে কী বুঝায়?",
+      "answer": "Heterosis: Degree of superiority of hybrid over its parents.\n\nInbreeding depression: When biological fitness of a population reduce by the loss of genetic diversity as a consequence of inbreeding is called inbreeding depression.",
+      "explanation": "Heterosis (Hybrid vigor): Degree of superiority of hybrid over its parents.\n\nহেটেরোসিস (সংকর শক্তি): সংকর জাতের উদ্ভিদ বা প্রাণী যখন তার উভয় প্যারেন্টের চেয়ে উৎকর্ষতা প্রদর্শন করে, তাকে হেটেরোসিস বলে। এক্ষেত্রে ফলন, বৃদ্ধির হার, রোগ প্রতিরোধ ক্ষমতা ইত্যাদি বৈশিষ্ট্য প্যারেন্টের চেয়ে ভালো হয়। উদাহরণ: হাইব্রিড ধান, হাইব্রিড ভুট্টা।\n\nInbreeding depression: When biological fitness of a population reduce by the loss of genetic diversity as a consequence of inbreeding (continuous selfing of cross-pollinated crops) is called inbreeding depression.\n\nইনব্রিডিং ডিপ্রেশন (অন্তঃপ্রজনন অবনমন): ক্রমাগত আত্মপরাগায়ন বা নিকটাত্মীয় প্রজননের ফলে জেনেটিক বৈচিত্র্য হ্রাস পেলে এবং জনসংখ্যার জৈবিক সক্ষমতা (ফলন, বৃদ্ধি, প্রজনন ক্ষমতা) কমে গেলে তাকে ইনব্রিডিং ডিপ্রেশন বলে। ক্রস পরাগায়নকারী ফসলে (যেমন: ভুট্টা, সূর্যমুখী) ক্রমাগত সেলফিং করলে এই সমস্যা দেখা যায়।\n\nপার্থক্য: হেটেরোসিস হলো হাইব্রিডের উৎকর্ষতা, আর ইনব্রিডিং ডিপ্রেশন হলো অন্তঃপ্রজননের অবনমন। উদ্ভিদ প্রজনন কর্মসূচিতে হেটেরোসিস কাজে লাগিয়ে উচ্চ ফলনশীল জাত উদ্ভাবন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "written",
+      "question": "Co-efficient of variation এবং Standard error এর ফর্মুলা লিখুন।",
+      "answer": "Standard Error (SE) = σ / √n\nযেখানে σ = standard deviation, n = sample size\n\nCoefficient of Variation (CV) = (σ / μ) × 100\nযেখানে σ = standard deviation, μ = mean",
+      "explanation": "Standard Error (SE):\n\nDefinition: The standard deviation of a sampling distribution (usually of the sample mean). It measures how far a sample mean is likely to be from the true population mean.\n\nসংজ্ঞা: স্ট্যান্ডার্ড এরর হলো স্যাম্পলিং ডিস্ট্রিবিউশনের স্ট্যান্ডার্ড ডেভিয়েশন। এটি পরিমাপ করে স্যাম্পল মিন প্রকৃত পপুলেশন মিন থেকে কতটা দূরে থাকতে পারে।\n\nFormula:\nSE = σ / √n\n\nযেখানে:\nσ = স্ট্যান্ডার্ড ডেভিয়েশন\nn = স্যাম্পল সাইজ\n\nউদাহরণ:\nযদি SD = 10 এবং sample size = 25 হয়,\nSE = 10 / √25\nSE = 10 / 5\nSE = 2\n\nCoefficient of Variation (CV):\n\nDefinition: A relative measure of variability that shows the ratio of the standard deviation (σ) to the mean (μ), expressed as a percentage.\n\nসংজ্ঞা: পরিবর্তনশীলতার আপেক্ষিক পরিমাপ যা স্ট্যান্ডার্ড ডেভিয়েশন এবং গড়ের অনুপাত শতাংশ হিসেবে প্রকাশ করে।\n\nFormula:\nCV = (σ / μ) × 100\n\nযেখানে:\nσ = স্ট্যান্ডার্ড ডেভিয়েশন\nμ = মিন বা গড়\n\nব্যবহার: CV ব্যবহার করে বিভিন্ন পরীক্ষার তথ্যের সামঞ্জস্যতা ও নির্ভুলতা যাচাই করা হয়। কৃষি গবেষণায় CV এর মান ১৫% এর নিচে হলে তথ্য সঠিক ও নির্ভরযোগ্য বলে বিবেচিত হয়।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "written",
+      "question": "Exopterygota and Endopterygota এর পার্থক্য কী? উভয়ের ক্ষেত্রে stage গুলোর নাম লিখুন।",
+      "answer": "Exopterygota: Incomplete metamorphosis (Hemimetabolous), wings develop externally as wing pads on nymphs, no pupal stage.\nStages: Egg → Nymph → Adult\n\nEndopterygota: Complete metamorphosis (Holometabolous), wings develop internally as imaginal buds inside the body, pupal stage present.\nStages: Egg → Larva → Pupa → Adult",
+      "explanation": "Exopterygota:\n\nবৈশিষ্ট্য:\n১. Wing development: পাখা বাহ্যিকভাবে নিম্ফের শরীরে wing pads হিসেবে বিকশিত হয়।\n২. Type of metamorphosis: অসম্পূর্ণ রূপান্তর (Incomplete metamorphosis বা Hemimetabolous)।\n৩. Pupal stage: পিউপা দশা অনুপস্থিত (নিম্ফ সরাসরি পূর্ণাঙ্গ পতঙ্গে পরিণত হয়)।\n\nজীবনচক্রের পর্যায়:\nEgg (ডিম) → Nymph (নিম্ফ) → Adult (পূর্ণাঙ্গ)\n\nউদাহরণ: ঘাসফড়িং (Grasshopper), আরশোলা (Cockroach), উকুন (Lice)\n\nEndopterygota:\n\nবৈশিষ্ট্য:\n১. Wing development: পাখা অভ্যন্তরীণভাবে imaginal buds হিসেবে শরীরের ভিতরে বিকশিত হয়।\n২. Type of metamorphosis: সম্পূর্ণ রূপান্তর (Complete metamorphosis বা Holometabolous)।\n৩. Pupal stage: পিউপা দশা উপস্থিত (লার্ভা থেকে পিউপা এবং পিউপা থেকে পূর্ণাঙ্গ)।\n\nজীবনচক্রের পর্যায়:\nEgg (ডিম) → Larva (লার্ভা) → Pupa (পিউপা) → Adult (পূর্ণাঙ্গ)\n\nউদাহরণ: প্রজাপতি (Butterfly), মশা (Mosquito), বিটল (Beetle), মাছি (Fly)\n\nকৃষি গুরুত্ব: বেশিরভাগ ক্ষতিকারক কীটপতঙ্গ Endopterygota গ্রুপের অন্তর্ভুক্ত। লার্ভা দশায় এরা সবচেয়ে বেশি ক্ষতি করে, তাই এই সময় দমন ব্যবস্থা নেওয়া কার্যকর।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "written",
+      "question": "সাম্প্রতিক বহুল আলোচিত দুটি Invasive pest এর বৈজ্ঞানিক নাম ও প্রধান ফসলসহ উল্লেখ করুন।",
+      "answer": "১. Fall Armyworm\nবৈজ্ঞানিক নাম: Spodoptera frugiperda\nপ্রধান ফসল: ভুট্টা\n\n২. Rugose Spiralling Whitefly\nবৈজ্ঞানিক নাম: Aleurodicus rugioperculatus\nপ্রধান ফসল: নারিকেল",
+      "explanation": "১. Fall Armyworm (ফল আর্মিওয়ার্ম):\n\nবৈজ্ঞানিক নাম: Spodoptera frugiperda\n\nপ্রধান ফসল: ভুট্টা (Maize)\n\nঅন্যান্য আক্রান্ত ফসল: ধান, গম, আখ, তুলা সহ ৮০+ প্রজাতির উদ্ভিদ।\n\nক্ষতির ধরন: লার্ভা পাতা, কচি ডগা এবং ভুট্টার মোচা খেয়ে ব্যাপক ক্ষতি করে। বাংলাদেশে ২০১৮ সালে প্রথম শনাক্ত হয় এবং দ্রুত ছড়িয়ে পড়ে।\n\nদমন ব্যবস্থা: ফেরোমন ট্র্যাপ, জৈবিক দমন (Trichogramma, NPV), রাসায়নিক কীটনাশক।\n\n২. Rugose Spiralling Whitefly (রুগোজ স্পাইরালিং সাদা মাছি):\n\nবৈজ্ঞানিক নাম: Aleurodicus rugioperculatus\n\nপ্রধান ফসল: নারিকেল (Coconut)\n\nঅন্যান্য আক্রান্ত ফসল: কলা, পেয়ারা, আম, পেঁপে সহ বিভিন্ন ফলজ ও শোভাবর্ধক গাছ।\n\nক্ষতির ধরন: পাতার নিচে সাদা মোমজাতীয় পদার্থ দিয়ে সর্পিলাকারে ডিম পাড়ে। পাতার রস শোষণ করে এবং হানিডিউ নিঃসরণের ফলে সুটি মোল্ড হয়। বাংলাদেশে ২০২০ সালে প্রথম দেখা যায়।\n\nদমন ব্যবস্থা: জৈবিক শত্রু (Encarsia guadeloupae), সাবান-পানির দ্রবণ, নিম তেল স্প্রে।\n\nদুটিই বাংলাদেশের কৃষিতে নতুন হুমকি হিসেবে বিবেচিত এবং সমন্বিত বালাই ব্যবস্থাপনা (IPM) প্রয়োগ করা হচ্ছে।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "written",
+      "question": "মাটিতে বহুল ব্যবহৃত একটি Insecticide গ্রুপের ব্যবহার long residual effect এর কারণে band করা হয়েছে। Insecticide গ্রুপের নাম এবং একটি বাণিজ্যিক নাম লিখুন।",
+      "answer": "Banned Insecticide Group: Carbofuran (Carbamate group)\nTrade name: Furadan 5G",
+      "explanation": "Banned Insecticide Group: Carbofuran (Carbamate group)\n\nবাণিজ্যিক নাম: Furadan 5G\n\nরাসায়নিক গ্রুপ: কার্বামেট (Carbamate)\n\nব্যান করার কারণ:\n১. Long residual effect: মাটিতে দীর্ঘদিন থেকে যায় এবং পরিবেশে জমা হয়।\n২. মানব স্বাস্থ্যের জন্য অত্যন্ত বিষাক্ত এবং মৃত্যুর কারণ হতে পারে।\n৩. উপকারী পোকামাকড় ও মাটির অণুজীব ধ্বংস করে।\n৪. পাখি এবং জলজ প্রাণীর জন্য মারাত্মক ক্ষতিকর।\n৫. খাদ্য শৃঙ্খলে জমা হয়ে ব্যাপক ক্ষতি করে।\n\nবাংলাদেশে ব্যান: বাংলাদেশ সরকার Carbofuran সহ বেশ কিছু উচ্চ ঝুঁকিপূর্ণ কীটনাশক নিষিদ্ধ করেছে।\n\nবিকল্প: জৈবিক কীটনাশক, ইন্টিগ্রেটেড পেস্ট ম্যানেজমেন্ট (IPM), নিরাপদ রাসায়নিক কীটনাশক (যেমন: নিম-ভিত্তিক কীটনাশক)।\n\nঅন্যান্য নিষিদ্ধ কীটনাশক: DDT, Aldrin, Heptachlor, Chlordane ইত্যাদি।\n\nকৃষকদের সচেতনতা বৃদ্ধি এবং নিরাপদ বালাইনাশক ব্যবহার নিশ্চিত করা অত্যন্ত জরুরি।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "written",
+      "question": "ফসল উল্লেখপূর্বক দুটি Nematode disease এর নাম লিখুন।",
+      "answer": "১. Ufra of Rice: Ditylenchus angustus\n২. Seed gall disease of Wheat: Anguina tritici",
+      "explanation": "১. Ufra disease of Rice (ধানের উফরা রোগ):\n\nরোগের নাম: Ufra বা Ufra disease\n\nফসল: ধান (Rice)\n\nরোগের কারণ: Ditylenchus angustus (নিমাটোড)\n\nলক্ষণ:\n• পাতা প্যাঁচানো ও মোচড়ানো\n• গাছ বেঁটে থেকে যায়\n• শীষ বের হয় না বা আংশিক বের হয়\n• শীষে দানা হয় না (অপুষ্ট শীষ)\n• গাছ হলুদ হয়ে যায়\n\nআক্রমণকারী অঞ্চল: বাংলাদেশের উত্তরাঞ্চলে বেশি দেখা যায়।\n\nদমন ব্যবস্থা: রোগমুক্ত বীজ ব্যবহার, জমি শুকিয়ে চাষ, প্রতিরোধী জাত ব্যবহার।\n\n২. Seed gall disease of Wheat (গমের বীজ গল রোগ):\n\nরোগের নাম: Seed gall disease বা Ear cockle disease\n\nফসল: গম (Wheat)\n\nরোগের কারণ: Anguina tritici (নিমাটোড)\n\nলক্ষণ:\n• শীষে স্বাভাবিক দানার পরিবর্তে গোলাকার গল তৈরি হয়\n• গল গাঢ় বাদামি বা কালো রঙের হয়\n• গলের ভিতরে হাজার হাজার নিমাটোড লার্ভা থাকে\n• আক্রান্ত শীষ খাটো ও বিকৃত হয়\n• ফলন মারাত্মকভাবে কমে যায়\n\nদমন ব্যবস্থা: রোগমুক্ত বীজ ব্যবহার, বীজ শোধন (গরম পানি ৫০-৫২°C তে ১০-১৫ মিনিট), শস্য পর্যায় অনুসরণ।\n\nনিমাটোড বাংলাদেশের কৃষিতে একটি গুরুত্বপূর্ণ সমস্যা এবং সমন্বিত ব্যবস্থাপনার মাধ্যমে এর দমন সম্ভব।",
+      "image": null
+    }
+  ]
+}
