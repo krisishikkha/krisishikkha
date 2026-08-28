@@ -276,9 +276,9 @@
   <!-- Main Navigation Grid -->
   <div class="main-grid">
     <a href="ntrca.html" class="main-box ntrca">📘 NTRCA</a>
-    <a href="bcs/index.html" class="main-box bcs">📗 BCS</a>
-    <a href="research/index.html" class="main-box research">🔬 Research Institute</a>
-    <a href="diploma/index.html" class="main-box others">🌱 Diploma Agriculture</a>
+    <a href="bcs/index.html" class="main-box bcs" data-feature="bcs">📗 BCS</a>
+    <a href="research/index.html" class="main-box research" data-feature="research">🔬 Research Institute</a>
+    <a href="diploma/index.html" class="main-box others" data-feature="diploma">🌱 Diploma Agriculture</a>
     <a href="exam-corner.html" class="main-box exam">📝 Exam Corner</a>
     <a href="question-bank/index.html" class="main-box question-bank">📋 Question Bank SO/AD</a>
     <a href="written-exam/index.html" class="main-box written">✍️ Written Exam</a>
@@ -454,6 +454,15 @@ window.addEventListener('appinstalled', () => {
     "https://youtube.com/@krisishikkha"
   ]
 }
+</script>
+
+<!-- Feature Visibility Control -->
+<script src="features.js"></script>
+<script>
+  document.querySelectorAll('[data-feature]').forEach(el => {
+    const key = el.getAttribute('data-feature');
+    if (siteFeatures[key] === false) el.style.display = 'none';
+  });
 </script>
 
 </body>
