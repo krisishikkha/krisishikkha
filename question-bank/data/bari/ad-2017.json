@@ -1,0 +1,570 @@
+{
+  "meta": {
+    "title": "BARI AD Exam",
+    "institute": "Bangladesh Agricultural Research Institute (BARI)",
+    "year": 2017,
+    "position": "Agricultural Development",
+    "totalQuestions": 39,
+    "type": "free",
+    "examDate": "2017",
+    "duration": "N/A",
+    "totalMarks": "N/A"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "At what stage more nutrients are essentially required in cereal crops?",
+      "options": [
+        "Growth stage of plants",
+        "Formation of leaves",
+        "Panicle initiation",
+        "Maturity of crops",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "In cereal crops, maximum nutrients are required during the growth stage of plants, particularly during the vegetative growth phase. This is when the plant is actively developing its root system, stems, and leaves, requiring substantial amounts of nitrogen, phosphorus, and potassium for cell division and expansion.\n\nশস্য ফসলে সবচেয়ে বেশি পুষ্টি উপাদান প্রয়োজন হয় উদ্ভিদের বৃদ্ধির পর্যায়ে, বিশেষত অঙ্গজ বৃদ্ধির সময়। এই সময় গাছ সক্রিয়ভাবে শিকড়, কান্ড এবং পাতা তৈরি করে, যার জন্য কোষ বিভাজন ও সম্প্রসারণের জন্য প্রচুর পরিমাণে নাইট্রোজেন, ফসফরাস এবং পটাশিয়াম প্রয়োজন হয়।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Maximum photosynthesis takes place in",
+      "options": [
+        "Blue light",
+        "Red light",
+        "Violet light",
+        "Green light",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Maximum photosynthesis takes place in red light. Red light (wavelength 600-700 nm) is most efficiently absorbed by chlorophyll a and chlorophyll b, which are the primary photosynthetic pigments. Blue light also contributes to photosynthesis but red light is more effective for the light-dependent reactions.\n\nসর্বোচ্চ সালোকসংশ্লেষণ ঘটে লাল আলোতে। লাল আলো (তরঙ্গদৈর্ঘ্য ৬০০-৭০০ ন্যানোমিটার) ক্লোরোফিল a এবং ক্লোরোফিল b দ্বারা সবচেয়ে কার্যকরভাবে শোষিত হয়, যা প্রধান সালোকসংশ্লেষী রঞ্জক পদার্থ। নীল আলোও সালোকসংশ্লেষণে অবদান রাখে তবে আলো-নির্ভর বিক্রিয়ার জন্য লাল আলো বেশি কার্যকর।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Bending of plants towards light is called -",
+      "options": [
+        "Phototropism",
+        "Vernalization",
+        "Photorespiration",
+        "Photosynthesis",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Phototropism is the directional growth response of plants towards or away from light. Positive phototropism causes stems to bend towards light, which is mediated by the plant hormone auxin. Auxin accumulates on the shaded side of the stem, causing cells there to elongate more than cells on the illuminated side, resulting in bending towards light.\n\nফটোট্রপিজম হলো আলোর দিকে বা থেকে উদ্ভিদের দিকনির্দেশক বৃদ্ধির প্রতিক্রিয়া। ইতিবাচক ফটোট্রপিজম কান্ডকে আলোর দিকে বাঁকায়, যা উদ্ভিদ হরমোন অক্সিন দ্বারা নিয়ন্ত্রিত হয়। অক্সিন কান্ডের ছায়াযুক্ত দিকে জমা হয়, যার ফলে সেখানকার কোষগুলো আলোকিত দিকের কোষের চেয়ে বেশি লম্বা হয়, ফলে আলোর দিকে বাঁকা হয়।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "What is the main function of zinc in the plants?",
+      "options": [
+        "Synthesis of nitrogen",
+        "Synthesis of phosphorus",
+        "Required for synthesis of tryptophan",
+        "To increase activity of the boron",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Zinc plays a crucial role in the synthesis of tryptophan, an essential amino acid that is a precursor for the plant hormone auxin (IAA - Indole Acetic Acid). Zinc is also involved in enzyme activation, protein synthesis, and carbohydrate metabolism. Zinc deficiency leads to stunted growth and chlorosis in plants.\n\nজিঙ্ক ট্রিপটোফ্যান সংশ্লেষণে গুরুত্বপূর্ণ ভূমিকা পালন করে, যা একটি অপরিহার্য অ্যামিনো অ্যাসিড এবং উদ্ভিদ হরমোন অক্সিন (IAA - ইন্ডোল এসিটিক এসিড) এর পূর্বসূরি। জিঙ্ক এনজাইম সক্রিয়করণ, প্রোটিন সংশ্লেষণ এবং কার্বোহাইড্রেট বিপাকেও জড়িত। জিঙ্কের ঘাটতি গাছের বৃদ্ধি ব্যাহত করে এবং ক্লোরোসিস সৃষ্টি করে।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Which of the following has the greatest permeability?",
+      "options": [
+        "Sand",
+        "Loam",
+        "Clay",
+        "Humus",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Sand has the greatest permeability among soil types because it has the largest particle size and largest pore spaces between particles. Water moves quickly through sandy soil due to these large pores. The permeability order is: Sand > Loam > Clay. Clay has the smallest particles and lowest permeability.\n\nমাটির প্রকারভেদের মধ্যে বালির ভেদ্যতা সবচেয়ে বেশি কারণ এতে সবচেয়ে বড় কণার আকার এবং কণার মধ্যে সবচেয়ে বড় ছিদ্র থাকে। এই বড় ছিদ্রের কারণে বেলে মাটির মধ্য দিয়ে পানি দ্রুত চলাচল করে। ভেদ্যতার ক্রম হলো: বালি > দোআঁশ > কাদামাটি। কাদামাটিতে সবচেয়ে ছোট কণা এবং সর্বনিম্ন ভেদ্যতা থাকে।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Tassel is the reproductive part of -",
+      "options": [
+        "Barley",
+        "Rice",
+        "Maize",
+        "Wheat",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Tassel is the male reproductive structure (inflorescence) of maize (corn). It is located at the top of the plant and produces pollen. Maize is monoecious, having separate male (tassel) and female (ear/silk) flowers on the same plant. The tassel releases pollen which is carried by wind to pollinate the silks.\n\nট্যাসেল হলো ভুট্টার পুরুষ প্রজনন অংশ (পুষ্পবিন্যাস)। এটি গাছের শীর্ষে অবস্থিত এবং পরাগ উৎপাদন করে। ভুট্টা একই গাছে পৃথক পুরুষ (ট্যাসেল) এবং স্ত্রী (মোচা/সিল্ক) ফুল বিশিষ্ট একলিঙ্গ উদ্ভিদ। ট্যাসেল পরাগ ছেড়ে দেয় যা বাতাস দ্বারা বাহিত হয়ে সিল্ককে পরাগায়িত করে।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Which one of the following is not a method of weed control?",
+      "options": [
+        "Selective herbicide",
+        "Burning and firing",
+        "Mowing",
+        "Smothering",
+        "None"
+      ],
+      "answer": 4,
+      "explanation": "All the options listed (selective herbicide, burning and firing, mowing, and smothering) are methods of weed control. Selective herbicides kill specific weeds without harming crops. Burning destroys weeds and their seeds. Mowing cuts weeds before seed formation. Smothering uses mulch or cover crops to prevent weed growth. Therefore, the answer is 'None' - meaning all are weed control methods.\n\nতালিকাভুক্ত সব বিকল্প (নির্বাচনী আগাছানাশক, পোড়ানো, কাটা এবং স্মাদারিং) আগাছা নিয়ন্ত্রণের পদ্ধতি। নির্বাচনী আগাছানাশক ফসলের ক্ষতি না করে নির্দিষ্ট আগাছা মারে। পোড়ানো আগাছা এবং তাদের বীজ ধ্বংস করে। কাটা বীজ গঠনের আগে আগাছা কেটে ফেলে। স্মাদারিং মালচ বা কভার ক্রপ ব্যবহার করে আগাছার বৃদ্ধি রোধ করে। তাই উত্তর 'None' - অর্থাৎ সবগুলোই আগাছা নিয়ন্ত্রণ পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Which of the following factor is not considered during determination of seed rate?",
+      "options": [
+        "Desired population",
+        "Percentage of size of seed",
+        "Individual seed weight",
+        "Percentage of purity",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Percentage of size of seed is not a standard factor considered during determination of seed rate. The main factors considered are: desired plant population per unit area, germination percentage, seed purity percentage, and individual seed weight (1000 grain weight). These factors help calculate the actual amount of seed needed for optimal crop establishment.\n\nবীজের আকারের শতাংশ বীজ হার নির্ধারণের সময় বিবেচিত একটি মানক ফ্যাক্টর নয়। প্রধান বিবেচিত ফ্যাক্টরগুলি হল: একক এলাকায় কাঙ্ক্ষিত উদ্ভিদ সংখ্যা, অঙ্কুরোদগম শতাংশ, বীজ বিশুদ্ধতা শতাংশ এবং স্বতন্ত্র বীজের ওজন (১০০০ দানার ওজন)। এই ফ্যাক্টরগুলি সর্বোত্তম ফসল স্থাপনের জন্য প্রয়োজনীয় বীজের প্রকৃত পরিমাণ গণনা করতে সাহায্য করে।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Which of the following elements play an important role in nitrogen metabolism?",
+      "options": [
+        "Manganese",
+        "Magnesium",
+        "Molybdenum",
+        "Iron",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Molybdenum plays a crucial role in nitrogen metabolism in plants. It is an essential component of two important enzymes: nitrate reductase (which reduces nitrate to nitrite) and nitrogenase (which enables nitrogen fixation in legumes). Without adequate molybdenum, plants cannot efficiently convert nitrate into amino acids and proteins.\n\nমলিবডেনাম উদ্ভিদে নাইট্রোজেন বিপাকে গুরুত্বপূর্ণ ভূমিকা পালন করে। এটি দুটি গুরুত্বপূর্ণ এনজাইমের একটি অপরিহার্য উপাদান: নাইট্রেট রিডাক্টেজ (যা নাইট্রেটকে নাইট্রাইটে পরিণত করে) এবং নাইট্রোজিনেজ (যা লিগিউমে নাইট্রোজেন স্থিতিকরণ সক্ষম করে)। পর্যাপ্ত মলিবডেনাম ছাড়া, উদ্ভিদ দক্ষতার সাথে নাইট্রেটকে অ্যামিনো অ্যাসিড এবং প্রোটিনে রূপান্তর করতে পারে না।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Conversion of A.D.P to A.T.P is called -",
+      "options": [
+        "Phosphorylation",
+        "Photosynthesis",
+        "Oxidation",
+        "Transpiration",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "The conversion of ADP (Adenosine Diphosphate) to ATP (Adenosine Triphosphate) is called phosphorylation. This process involves the addition of a phosphate group to ADP. It occurs during cellular respiration and photosynthesis. There are two main types: oxidative phosphorylation (in mitochondria) and photophosphorylation (in chloroplasts).\n\nADP (অ্যাডেনোসিন ডাইফসফেট) থেকে ATP (অ্যাডেনোসিন ট্রাইফসফেট) রূপান্তরকে ফসফোরাইলেশন বলে। এই প্রক্রিয়ায় ADP-তে একটি ফসফেট গ্রুপ যুক্ত হয়। এটি কোষীয় শ্বসন এবং সালোকসংশ্লেষণের সময় ঘটে। দুটি প্রধান ধরন রয়েছে: অক্সিডেটিভ ফসফোরাইলেশন (মাইটোকন্ড্রিয়ায়) এবং ফটোফসফোরাইলেশন (ক্লোরোপ্লাস্টে)।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Which one of the following nutrients usually plants directly get from soil?",
+      "options": [
+        "Carbon",
+        "Sulfur",
+        "Nitrogen",
+        "Oxygen",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Sulfur is directly obtained by plants from the soil in the form of sulfate ions (SO₄²⁻). Carbon and oxygen are obtained from air through stomata during photosynthesis. While nitrogen is also absorbed from soil, it must first be converted to usable forms by microorganisms. Sulfur is readily absorbed from soil solution as sulfate.\n\nগাছ সালফার সরাসরি মাটি থেকে সালফেট আয়ন (SO₄²⁻) আকারে গ্রহণ করে। কার্বন এবং অক্সিজেন সালোকসংশ্লেষণের সময় পত্ররন্ধ্রের মাধ্যমে বায়ু থেকে প্রাপ্ত হয়। যদিও নাইট্রোজেনও মাটি থেকে শোষিত হয়, তবে প্রথমে অণুজীব দ্বারা ব্যবহারযোগ্য রূপে রূপান্তরিত হতে হয়। সালফার মাটির দ্রবণ থেকে সালফেট হিসাবে সহজেই শোষিত হয়।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Which one is not a rice cultivar?",
+      "options": [
+        "BR 10",
+        "BRRI Dhan 28",
+        "BRRI Dhan 49",
+        "BR 13",
+        "None"
+      ],
+      "answer": 3,
+      "explanation": "BR 13 is not a rice cultivar released by BRRI (Bangladesh Rice Research Institute). BRRI has released varieties numbered from BR 1 onwards, but BR 13 does not exist in their official release list. BRRI varieties include BR 3, BR 4, BR 7, BR 9, BR 10, BR 11, BR 12, BR 14, and many BRRI Dhan series, but BR 13 was skipped in the naming sequence.\n\nBR 13 BRRI (বাংলাদেশ ধান গবেষণা ইনস্টিটিউট) কর্তৃক প্রকাশিত কোনো ধানের জাত নয়। BRRI BR 1 থেকে শুরু করে অনেক জাত প্রকাশ করেছে, কিন্তু BR 13 তাদের সরকারি তালিকায় নেই। BRRI জাতগুলির মধ্যে রয়েছে BR 3, BR 4, BR 7, BR 9, BR 10, BR 11, BR 12, BR 14 এবং অনেক BRRI ধান সিরিজ, তবে নামকরণ ক্রমে BR 13 বাদ দেওয়া হয়েছিল।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Singling is one of the most important intercultural operation of -",
+      "options": [
+        "Sugarcane",
+        "Sugar beet",
+        "Lentil",
+        "Potato",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Singling is the process of reducing the number of plants in a row or reducing multiple plants from a multigerm seed to a single plant. This operation is most important in sugar beet cultivation because sugar beet seeds are multigerm (each seed ball contains 2-6 seeds), resulting in multiple seedlings emerging from one seed ball. Singling ensures proper plant spacing and optimal growth.\n\nসিঙ্গলিং হলো একটি সারিতে উদ্ভিদের সংখ্যা কমানো বা মাল্টিজার্ম বীজ থেকে একাধিক চারা থেকে একটি একক উদ্ভিদে কমানোর প্রক্রিয়া। এই অপারেশন চিনি বিট চাষে সবচেয়ে গুরুত্বপূর্ণ কারণ চিনি বিটের বীজ মাল্টিজার্ম (প্রতিটি বীজ বলে ২-৬টি বীজ থাকে), ফলে একটি বীজ বল থেকে একাধিক চারা বের হয়। সিঙ্গলিং সঠিক উদ্ভিদ ব্যবধান এবং সর্বোত্তম বৃদ্ধি নিশ্চিত করে।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Which of the following is mutagenic agent?",
+      "options": [
+        "Ionizing radiation",
+        "Alkylating agent",
+        "Acridine dyes",
+        "All of these",
+        "None"
+      ],
+      "answer": 3,
+      "explanation": "All of the listed options are mutagenic agents. Ionizing radiation (like X-rays and gamma rays) causes mutations by breaking DNA strands. Alkylating agents (like EMS - Ethyl Methane Sulfonate) add alkyl groups to DNA bases causing mispairing. Acridine dyes intercalate between DNA base pairs causing frameshift mutations. These mutagens are used in plant breeding to induce genetic variation.\n\nতালিকাভুক্ত সব বিকল্পই মিউটাজেনিক এজেন্ট। আয়নাইজিং রেডিয়েশন (যেমন এক্স-রে এবং গামা রে) DNA স্ট্র্যান্ড ভেঙে মিউটেশন ঘটায়। অ্যালকাইলেটিং এজেন্ট (যেমন EMS - ইথাইল মিথেন সালফোনেট) DNA বেসে অ্যালকাইল গ্রুপ যোগ করে মিসপেয়ারিং ঘটায়। অ্যাক্রিডিন ডাই DNA বেস জোড়ার মধ্যে প্রবেশ করে ফ্রেমশিফট মিউটেশন ঘটায়। এই মিউটাজেনগুলি উদ্ভিদ প্রজননে জেনেটিক বৈচিত্র্য সৃষ্টির জন্য ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "The group of organism convert light to food is called -",
+      "options": [
+        "Autotrophs",
+        "Heterotrophs",
+        "Decomposers",
+        "Omnivores",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Autotrophs are organisms that can synthesize their own food from inorganic substances using light or chemical energy. The term comes from Greek autos (self) and trophe (nourishing). Green plants, algae, and certain bacteria are autotrophs. They convert light energy into chemical energy through photosynthesis, producing complex organic compounds from simple inorganic materials like CO₂ and water.\n\nঅটোট্রফ হলো এমন জীব যারা আলো বা রাসায়নিক শক্তি ব্যবহার করে অজৈব পদার্থ থেকে নিজেদের খাদ্য সংশ্লেষণ করতে পারে। শব্দটি গ্রীক অটোস (স্ব) এবং ট্রফি (পুষ্টিকর) থেকে এসেছে। সবুজ উদ্ভিদ, শৈবাল এবং কিছু ব্যাকটেরিয়া অটোট্রফ। তারা সালোকসংশ্লেষণের মাধ্যমে আলো শক্তিকে রাসায়নিক শক্তিতে রূপান্তরিত করে, CO₂ এবং জলের মতো সরল অজৈব উপাদান থেকে জটিল জৈব যৌগ উৎপাদন করে।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "A vegetable source of protein is -",
+      "options": [
+        "Egg plants",
+        "Soybean",
+        "Radish",
+        "Potato",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Soybean is an excellent vegetable source of protein, containing approximately 36-40% protein on a dry weight basis. It is considered a complete protein as it contains all essential amino acids. Soybean is widely used as a protein source in human nutrition and animal feed. Other options like eggplant, radish, and potato contain much lower protein content.\n\nসয়াবিন প্রোটিনের একটি চমৎকার উদ্ভিজ্জ উৎস, শুকনো ওজনের ভিত্তিতে প্রায় ৩৬-৪০% প্রোটিন রয়েছে। এটি একটি সম্পূর্ণ প্রোটিন হিসাবে বিবেচিত কারণ এতে সমস্ত প্রয়োজনীয় অ্যামিনো অ্যাসিড রয়েছে। সয়াবিন মানব পুষ্টি এবং পশুখাদ্যে প্রোটিন উৎস হিসাবে ব্যাপকভাবে ব্যবহৃত হয়। বেগুন, মুলা এবং আলুর মতো অন্যান্য বিকল্পে অনেক কম প্রোটিন রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "The weed Chenopodium album grows well in the field of ----",
+      "options": [
+        "Millets",
+        "Aus rice",
+        "Jute",
+        "Wheat",
+        "None"
+      ],
+      "answer": 3,
+      "explanation": "Chenopodium album (commonly known as lamb's quarters or bathua) grows well in wheat fields. It is a common broadleaf weed in rabi crops, particularly wheat, thriving in cool weather conditions. This weed competes with wheat for nutrients, water, and light, reducing crop yield if not controlled properly.\n\nচেনোপোডিয়াম অ্যালবাম (সাধারণত ব্যাটুয়া নামে পরিচিত) গমের ক্ষেতে ভালো জন্মায়। এটি রবি ফসলে, বিশেষত গমে একটি সাধারণ প্রশস্ত পাতার আগাছা, যা শীতল আবহাওয়ায় বৃদ্ধি পায়। এই আগাছা পুষ্টি, পানি এবং আলোর জন্য গমের সাথে প্রতিযোগিতা করে, সঠিকভাবে নিয়ন্ত্রণ না করলে ফসলের ফলন হ্রাস করে।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Papain is a",
+      "options": [
+        "Cysteine Protease Enzyme",
+        "Aspartate Protease Enzyme",
+        "Threonine Protease Enzyme",
+        "Serine Protease Enzyme",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Papain is a cysteine protease enzyme naturally found in unripe papayas (Carica papaya). It is a proteolytic enzyme that breaks down proteins into smaller peptides and amino acids. Papain has various commercial applications including meat tenderization, brewing, and pharmaceutical uses. The enzyme is most concentrated in the latex of unripe papaya fruits.\n\nপাপেইন একটি সিস্টাইন প্রোটিয়েজ এনজাইম যা কাঁচা পেঁপেতে (ক্যারিকা পেপায়া) প্রাকৃতিকভাবে পাওয়া যায়। এটি একটি প্রোটিওলাইটিক এনজাইম যা প্রোটিনকে ছোট পেপটাইড এবং অ্যামিনো অ্যাসিডে ভেঙে দেয়। পাপেইনের মাংস নরমকরণ, মদ তৈরি এবং ফার্মাসিউটিক্যাল ব্যবহার সহ বিভিন্ন বাণিজ্যিক প্রয়োগ রয়েছে। এনজাইমটি কাঁচা পেঁপে ফলের রসে সবচেয়ে বেশি ঘনীভূত।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Parthenocarpy occurs in which one of the following-",
+      "options": [
+        "Banana",
+        "Jackfruit",
+        "Peach",
+        "Mango",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Parthenocarpy occurs in banana. Parthenocarpy is the development of fruit without fertilization, resulting in seedless fruits. Cultivated bananas are parthenocarpic and produce fruits without seeds (the small black dots in bananas are undeveloped ovules). This characteristic makes banana commercially valuable as seedless fruits are preferred by consumers.\n\nকলায় পার্থেনোকার্পি ঘটে। পার্থেনোকার্পি হলো নিষেক ছাড়াই ফল বিকাশ, যার ফলে বীজহীন ফল হয়। চাষকৃত কলা পার্থেনোকার্পিক এবং বীজ ছাড়াই ফল উৎপন্ন করে (কলায় ছোট কালো বিন্দুগুলি অবিকশিত ডিম্বাণু)। এই বৈশিষ্ট্য কলাকে বাণিজ্যিকভাবে মূল্যবান করে তোলে কারণ ভোক্তারা বীজহীন ফল পছন্দ করে।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "How much tomatoes are required for one kg tomato seeds?",
+      "options": [
+        "50-60 kg",
+        "160-210 kg",
+        "220-250 kg",
+        "300-350 kg",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Approximately 160-210 kg of tomatoes are required to produce 1 kg of tomato seeds. The seed extraction ratio varies depending on the variety and fruit quality. Generally, 1 kg of fresh tomatoes yields about 4-6 grams of seeds. Seed extraction involves fermentation of the pulp, washing, and drying to obtain clean, viable seeds.\n\n১ কেজি টমেটো বীজ উৎপাদনের জন্য প্রায় ১৬০-২১০ কেজি টমেটো প্রয়োজন। বীজ নিষ্কাশন অনুপাত জাত এবং ফলের গুণমানের উপর নির্ভর করে পরিবর্তিত হয়। সাধারণত, ১ কেজি তাজা টমেটো থেকে প্রায় ৪-৬ গ্রাম বীজ পাওয়া যায়। বীজ নিষ্কাশনে সজ্জার গাঁজন, ধোয়া এবং শুকানো জড়িত যাতে পরিষ্কার, কার্যকর বীজ পাওয়া যায়।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Seed treatment with vitavax is the main controlling method of ----",
+      "options": [
+        "Loose smut",
+        "Normal smut",
+        "Cover smut",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Vitavax (carboxin) seed treatment is the main controlling method for loose smut disease in cereals, particularly wheat and barley. Loose smut is a seed-borne and soil-borne fungal disease caused by Ustilago species. Vitavax is a systemic fungicide that protects seeds and seedlings from infection. The recommended dose is typically 2-2.5 g/kg of seed.\n\nভিটাভ্যাক্স (কার্বক্সিন) বীজ শোধন শস্যে, বিশেষত গম এবং যবে লুজ স্মাট রোগ নিয়ন্ত্রণের প্রধান পদ্ধতি। লুজ স্মাট একটি বীজবাহিত এবং মাটিবাহিত ছত্রাক রোগ যা উস্টিলাগো প্রজাতি দ্বারা সৃষ্ট। ভিটাভ্যাক্স একটি সিস্টেমিক ছত্রাকনাশক যা বীজ এবং চারাকে সংক্রমণ থেকে রক্ষা করে। প্রস্তাবিত মাত্রা সাধারণত ২-২.৫ গ্রাম/কেজি বীজ।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Weeding in dry condition with the help of niri or khurpi results in -",
+      "options": [
+        "Natural mulching",
+        "Earthing up",
+        "Artificial mulching",
+        "Gap filling",
+        "Both A and B",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Weeding in dry condition using niri or khurpi (hand weeding tools) results in artificial mulching. When weeds are removed and left on the soil surface to dry, they form a mulch layer that conserves soil moisture, regulates soil temperature, and suppresses further weed growth. This is called artificial mulching as the mulch is created through human intervention.\n\nনিড়ানি বা খুরপি (হাতের নিড়ানি সরঞ্জাম) ব্যবহার করে শুকনো অবস্থায় নিড়ানি দিলে কৃত্রিম মালচিং হয়। যখন আগাছা অপসারণ করে মাটির পৃষ্ঠে শুকাতে রেখে দেওয়া হয়, তখন তারা একটি মালচ স্তর গঠন করে যা মাটির আর্দ্রতা সংরক্ষণ করে, মাটির তাপমাত্রা নিয়ন্ত্রণ করে এবং আরও আগাছার বৃদ্ধি দমন করে। এটিকে কৃত্রিম মালচিং বলা হয় কারণ মালচ মানুষের হস্তক্ষেপের মাধ্যমে তৈরি হয়।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "What is phytophthora?",
+      "options": [
+        "Virus",
+        "Nematode",
+        "Fungi",
+        "Bacteria",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Phytophthora is a genus of fungus-like organisms (oomycetes) that are plant pathogens. Although traditionally classified as fungi, they are actually more closely related to algae. Phytophthora species cause serious plant diseases including late blight of potato and tomato, root rot, and damping-off. They are soil-borne pathogens that thrive in moist conditions and can cause sudden plant death.\n\nফাইটোফথোরা একটি ছত্রাক-সদৃশ জীবের (ওমাইসিট) গণ যা উদ্ভিদ রোগজীবাণু। যদিও ঐতিহ্যগতভাবে ছত্রাক হিসাবে শ্রেণিবদ্ধ করা হয়, তারা আসলে শৈবালের সাথে আরও ঘনিষ্ঠভাবে সম্পর্কিত। ফাইটোফথোরা প্রজাতি আলু এবং টমেটোর লেট ব্লাইট, শিকড় পচা এবং ড্যাম্পিং-অফ সহ গুরুতর উদ্ভিদ রোগ সৃষ্টি করে। এগুলি মাটিবাহিত রোগজীবাণু যা আর্দ্র অবস্থায় বৃদ্ধি পায় এবং হঠাৎ উদ্ভিদ মৃত্যু ঘটাতে পারে।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "Which manure contains higher amount of potassium?",
+      "options": [
+        "Cowdung",
+        "Compost",
+        "Ash",
+        "Farm Yard Manure",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Ash contains the highest amount of potassium among the given options. Wood ash typically contains 3-7% potassium (K₂O), while cowdung contains about 0.5-0.6%, compost contains 0.5-1.0%, and farm yard manure contains about 0.5% potassium. Ash is produced from burning plant materials, which concentrates minerals, especially potassium and phosphorus.\n\nদেওয়া বিকল্পগুলির মধ্যে ছাইতে সবচেয়ে বেশি পরিমাণে পটাশিয়াম থাকে। কাঠের ছাইতে সাধারণত ৩-৭% পটাশিয়াম (K₂O) থাকে, যেখানে গোবরে প্রায় ০.৫-০.৬%, কম্পোস্টে ০.৫-১.০% এবং খামার সারে প্রায় ০.৫% পটাশিয়াম থাকে। উদ্ভিদ উপাদান পোড়ানো থেকে ছাই উৎপন্ন হয়, যা খনিজ, বিশেষত পটাশিয়াম এবং ফসফরাস ঘনীভূত করে।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "The most active site of protein synthesis is the -",
+      "options": [
+        "Nucleus",
+        "Mitochondria",
+        "Ribosome",
+        "Cell sap",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "The ribosome is the most active site of protein synthesis in cells. Ribosomes are cellular organelles composed of ribosomal RNA (rRNA) and proteins. They translate messenger RNA (mRNA) into polypeptide chains (proteins) through a process called translation. Ribosomes can be found free in the cytoplasm or attached to the endoplasmic reticulum.\n\nরাইবোজোম কোষে প্রোটিন সংশ্লেষণের সবচেয়ে সক্রিয় স্থান। রাইবোজোম রাইবোসোমাল RNA (rRNA) এবং প্রোটিন দ্বারা গঠিত কোষীয় অঙ্গাণু। তারা ট্রান্সলেশন নামক একটি প্রক্রিয়ার মাধ্যমে মেসেঞ্জার RNA (mRNA) কে পলিপেপটাইড চেইন (প্রোটিন) এ অনুবাদ করে। রাইবোজোম সাইটোপ্লাজমে মুক্ত বা এন্ডোপ্লাজমিক রেটিকুলামের সাথে সংযুক্ত পাওয়া যেতে পারে।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "The mollic epipedon is a -",
+      "options": [
+        "Mineral surface horizon",
+        "Mineral sub-surface horizon",
+        "Organic surface horizon",
+        "Organic sub-surface horizon",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "The mollic epipedon is a mineral surface horizon. It is a key diagnostic horizon in Soil Taxonomy, characterized by dark color, high organic matter content (>1%), good structure, and high base saturation (>50%). The mollic epipedon is recognized in various soil classification schemes including Chernozems, Phaeozems, and Kastanozems. It typically forms under grassland vegetation.\n\nমলিক এপিপেডন একটি খনিজ পৃষ্ঠ স্তর। এটি মাটি শ্রেণীবিভাগে একটি প্রধান ডায়াগনস্টিক স্তর, যা গাঢ় রঙ, উচ্চ জৈব পদার্থ সামগ্রী (>১%), ভাল গঠন এবং উচ্চ ক্ষারক সম্পৃক্ততা (>৫০%) দ্বারা চিহ্নিত। মলিক এপিপেডন চেরনোজেম, ফেওজেম এবং কাস্টানোজেম সহ বিভিন্ন মাটি শ্রেণিবিন্যাস পদ্ধতিতে স্বীকৃত। এটি সাধারণত তৃণভূমি উদ্ভিদের নীচে গঠিত হয়।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Which of the following are destructive insect pests on cultivated plants in temperate regions?",
+      "options": [
+        "Aphids",
+        "Coccinellidae",
+        "Calosoma",
+        "Carabids",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Aphids are destructive insect pests on cultivated plants in temperate regions. They are small sap-sucking insects that feed on plant phloem, causing direct damage by removing nutrients and indirect damage by transmitting plant viruses. Aphids reproduce rapidly and can cause significant yield losses. Coccinellidae (ladybugs), Calosoma, and Carabids are actually beneficial insects that prey on pests.\n\nএফিড নাতিশীতোষ্ণ অঞ্চলে চাষকৃত উদ্ভিদে ধ্বংসাত্মক পোকামাকড়। এগুলি ছোট রস-চোষক পোকা যা উদ্ভিদের ফ্লোয়েম খায়, পুষ্টি অপসারণ করে সরাসরি ক্ষতি এবং উদ্ভিদ ভাইরাস সংক্রমণ করে পরোক্ষ ক্ষতি করে। এফিড দ্রুত প্রজনন করে এবং উল্লেখযোগ্য ফলন ক্ষতি ঘটাতে পারে। কক্সিনেলিডি (লেডিবাগ), কালোসোমা এবং ক্যারাবিড আসলে উপকারী পোকা যা কীটপতঙ্গ শিকার করে।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Which color tag is used for foundation seed by Seed Certification Agency?",
+      "options": [
+        "White",
+        "Green",
+        "Red",
+        "Blue",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "White color tag is used for foundation seed by the Seed Certification Agency. The seed certification system uses different colored tags to identify different classes of seeds: Breeder seed (Golden yellow), Foundation seed (White), Registered seed (Purple), and Certified seed (Blue). This color coding system ensures proper seed quality and traceability in the seed production chain.\n\nবীজ প্রত্যয়ন সংস্থা দ্বারা ফাউন্ডেশন বীজের জন্য সাদা রঙের ট্যাগ ব্যবহার করা হয়। বীজ প্রত্যয়ন ব্যবস্থা বীজের বিভিন্ন শ্রেণী চিহ্নিত করতে বিভিন্ন রঙের ট্যাগ ব্যবহার করে: ব্রিডার বীজ (সোনালি হলুদ), ফাউন্ডেশন বীজ (সাদা), রেজিস্টার্ড বীজ (বেগুনি) এবং সার্টিফাইড বীজ (নীল)। এই রঙ কোডিং ব্যবস্থা বীজ উৎপাদন শৃঙ্খলে সঠিক বীজ গুণমান এবং ট্রেসযোগ্যতা নিশ্চিত করে।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "For the production of breeder seed, the isolation distance for self-pollinated crops is -",
+      "options": [
+        "6m",
+        "12m",
+        "3m",
+        "9m",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "For the production of breeder seed, the isolation distance for self-pollinated crops is 3 meters. Self-pollinated crops like rice, wheat, and pulses require minimal isolation because they predominantly self-pollinate with very low chances of cross-pollination. However, some isolation is maintained to ensure genetic purity and prevent mechanical mixing during cultivation and harvest.\n\nব্রিডার বীজ উৎপাদনের জন্য, স্ব-পরাগায়িত ফসলের জন্য বিচ্ছিন্নতা দূরত্ব ৩ মিটার। ধান, গম এবং ডালের মতো স্ব-পরাগায়িত ফসলের ন্যূনতম বিচ্ছিন্নতা প্রয়োজন কারণ তারা প্রধানত স্ব-পরাগায়ন করে এবং পর-পরাগায়নের সম্ভাবনা খুবই কম। তবে, জেনেটিক বিশুদ্ধতা নিশ্চিত করতে এবং চাষ ও ফসল কাটার সময় যান্ত্রিক মিশ্রণ রোধ করতে কিছু বিচ্ছিন্নতা বজায় রাখা হয়।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "A plant disease caused by bacteria is",
+      "options": [
+        "Loose smut",
+        "Leaf rust",
+        "Crown gall",
+        "Powdery mildew",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Crown gall is a plant disease caused by bacteria, specifically Agrobacterium tumefaciens. This bacterium causes tumor-like growths (galls) on the crown, roots, and stems of many plant species. The other options are fungal diseases: loose smut is caused by Ustilago species, leaf rust by Puccinia species, and powdery mildew by various fungi including Erysiphe and Podosphaera.\n\nক্রাউন গল একটি ব্যাকটেরিয়া দ্বারা সৃষ্ট উদ্ভিদ রোগ, বিশেষত অ্যাগ্রোব্যাকটেরিয়াম টিউমিফেসিয়েন্স। এই ব্যাকটেরিয়া অনেক উদ্ভিদ প্রজাতির মুকুট, শিকড় এবং কান্ডে টিউমারের মতো বৃদ্ধি (গল) সৃষ্টি করে। অন্যান্য বিকল্পগুলি ছত্রাক রোগ: লুজ স্মাট উস্টিলাগো প্রজাতি দ্বারা, লিফ রাস্ট পুক্সিনিয়া প্রজাতি দ্বারা এবং পাউডারি মিলডিউ এরিসিফি এবং পডোস্ফেরা সহ বিভিন্ন ছত্রাক দ্বারা সৃষ্ট।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "Deficiency symptoms due to micronutrients first show in the -",
+      "options": [
+        "Older leaf",
+        "Younger leaf",
+        "Stem",
+        "Root",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Deficiency symptoms of immobile micronutrients first show in younger leaves. Micronutrients like iron, zinc, manganese, copper, and boron are relatively immobile in the plant and cannot be easily translocated from older to younger tissues. Therefore, when these nutrients are deficient, the newer growth shows symptoms first. In contrast, mobile nutrients like nitrogen and potassium show deficiency symptoms in older leaves first.\n\nঅচল অণুপুষ্টির ঘাটতির লক্ষণ প্রথম কচি পাতায় দেখা যায়। আয়রন, জিঙ্ক, ম্যাঙ্গানিজ, তামা এবং বোরনের মতো অণুপুষ্টি উদ্ভিদে তুলনামূলকভাবে অচল এবং পুরানো থেকে নতুন টিস্যুতে সহজে স্থানান্তরিত হতে পারে না। তাই, যখন এই পুষ্টিগুলির ঘাটতি হয়, তখন নতুন বৃদ্ধিতে প্রথম লক্ষণ দেখা যায়। বিপরীতে, নাইট্রোজেন এবং পটাশিয়ামের মতো চল পুষ্টির ঘাটতির লক্ষণ প্রথমে পুরানো পাতায় দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "When a live seed is not germinated even under all favourable conditions, it is known as -",
+      "options": [
+        "Dead seed",
+        "Mature seed",
+        "Dormant seed",
+        "a & b",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Seed dormancy is defined as a state in which viable seeds fail to germinate even under favorable environmental conditions. These conditions include adequate water, suitable temperature, light, oxygen, and mechanical factors. Seed dormancy is a survival mechanism that prevents germination at inappropriate times. It can be broken through various treatments like stratification, scarification, or chemical treatment.\n\nবীজ সুপ্তাবস্থা এমন একটি অবস্থা হিসাবে সংজ্ঞায়িত করা হয় যেখানে অনুকূল পরিবেশগত অবস্থার অধীনেও কার্যকর বীজ অঙ্কুরিত হতে ব্যর্থ হয়। এই অবস্থার মধ্যে রয়েছে পর্যাপ্ত পানি, উপযুক্ত তাপমাত্রা, আলো, অক্সিজেন এবং যান্ত্রিক কারণ। বীজ সুপ্তাবস্থা একটি বেঁচে থাকার প্রক্রিয়া যা অনুপযুক্ত সময়ে অঙ্কুরোদগম রোধ করে। এটি স্তরীকরণ, দাগকরণ বা রাসায়নিক চিকিত্সার মতো বিভিন্ন চিকিত্সার মাধ্যমে ভাঙা যায়।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "Xerophytic plants need -",
+      "options": [
+        "Stagnant water",
+        "Less moisture",
+        "Flood water",
+        "Less temperature",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Xerophytic plants need less moisture. Xerophytes are plants adapted to survive in environments with very limited water availability, such as deserts or arid regions. They have special adaptations including thick cuticles, reduced leaf surface area, deep root systems, water storage tissues, and specialized metabolic pathways (CAM photosynthesis) to minimize water loss and maximize water absorption.\n\nজেরোফাইটিক উদ্ভিদের কম আর্দ্রতা প্রয়োজন। জেরোফাইট হল এমন উদ্ভিদ যা অত্যন্ত সীমিত পানির প্রাপ্যতা সহ পরিবেশে বেঁচে থাকার জন্য অভিযোজিত, যেমন মরুভূমি বা শুষ্ক অঞ্চল। তাদের বিশেষ অভিযোজন রয়েছে যার মধ্যে রয়েছে পুরু কিউটিকল, হ্রাসকৃত পাতার পৃষ্ঠ এলাকা, গভীর শিকড় ব্যবস্থা, পানি সঞ্চয় টিস্যু এবং পানির ক্ষয় কমাতে এবং পানি শোষণ সর্বাধিক করার জন্য বিশেষ বিপাকীয় পথ (CAM সালোকসংশ্লেষণ)।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "Which one is the highest digestible non-leguminous fodder crop among the following?",
+      "options": [
+        "Napier",
+        "Maize silage",
+        "Maize",
+        "Jowar",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Napier grass (Pennisetum purpureum) is one of the highest digestible non-leguminous fodder crops. It is a perennial tropical grass with high biomass production, good palatability, and digestibility ranging from 55-65%. Napier grass is rich in protein (8-12%) and provides excellent nutrition for dairy and beef cattle. It can be fed fresh, as silage, or as hay.\n\nনেপিয়ার ঘাস (পেনিসেটাম পারপিউরিয়াম) সবচেয়ে বেশি হজমযোগ্য অ-লিগিউমিনাস খাদ্য ফসলগুলির মধ্যে একটি। এটি উচ্চ জৈববস্তু উৎপাদন, ভাল স্বাদগ্রহণযোগ্যতা এবং ৫৫-৬৫% পর্যন্ত হজমযোগ্যতা সহ একটি বহুবর্ষজীবী গ্রীষ্মমণ্ডলীয় ঘাস। নেপিয়ার ঘাস প্রোটিন সমৃদ্ধ (৮-১২%) এবং দুগ্ধ ও গরুর মাংসের গবাদি পশুর জন্য চমৎকার পুষ্টি সরবরাহ করে। এটি তাজা, সাইলেজ বা খড় হিসাবে খাওয়ানো যেতে পারে।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "What do Blister Beetles produce?",
+      "options": [
+        "Latex",
+        "Cantharidin",
+        "Honey",
+        "Jowar",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Blister beetles produce cantharidin, a toxic defensive chemical compound. Cantharidin is a terpenoid that protects blister beetles from predators. When a beetle is crushed against the skin, cantharidin causes painful blisters, hence the common name. Blister beetles belong to the family Meloidae and can be agricultural pests on various crops while also having some medicinal applications.\n\nব্লিস্টার বিটল ক্যান্থারিডিন উৎপন্ন করে, যা একটি বিষাক্ত প্রতিরক্ষামূলক রাসায়নিক যৌগ। ক্যান্থারিডিন একটি টারপেনয়েড যা ব্লিস্টার বিটলকে শিকারীদের থেকে রক্ষা করে। যখন একটি বিটল ত্বকের বিরুদ্ধে চূর্ণ হয়, তখন ক্যান্থারিডিন বেদনাদায়ক ফোস্কা সৃষ্টি করে, তাই সাধারণ নাম। ব্লিস্টার বিটল মেলোইডি পরিবারের অন্তর্গত এবং বিভিন্ন ফসলের কৃষি কীটপতঙ্গ হতে পারে এবং কিছু ঔষধি প্রয়োগও রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "Life in soil is greatly influenced by soil pH. Which pH value is considered as neutral?",
+      "options": [
+        "6",
+        "8",
+        "7",
+        "9",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "pH 7 is considered as neutral. The pH scale ranges from 0 to 14, where pH 7 represents a neutral point with equal concentrations of hydrogen ions (H⁺) and hydroxide ions (OH⁻). Values below 7 are acidic and above 7 are alkaline. Most agricultural crops grow best in slightly acidic to neutral soil (pH 6.0-7.5), though specific crops may have different pH preferences.\n\npH 7 কে নিরপেক্ষ হিসাবে বিবেচনা করা হয়। pH স্কেল ০ থেকে ১৪ পর্যন্ত, যেখানে pH 7 হাইড্রোজেন আয়ন (H⁺) এবং হাইড্রক্সাইড আয়ন (OH⁻) এর সমান ঘনত্ব সহ একটি নিরপেক্ষ বিন্দু প্রতিনিধিত্ব করে। ৭ এর নিচের মান অম্লীয় এবং ৭ এর উপরে ক্ষারীয়। বেশিরভাগ কৃষি ফসল সামান্য অম্লীয় থেকে নিরপেক্ষ মাটিতে (pH ৬.০-৭.৫) সবচেয়ে ভাল জন্মায়, যদিও নির্দিষ্ট ফসলের বিভিন্ন pH পছন্দ থাকতে পারে।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "Which one of the following can be assessed by using the following equation? A = Economic production/biomass production",
+      "options": [
+        "Harvest index",
+        "Rate of flowering",
+        "Panicle emergence rate",
+        "Leaf production rate",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Harvest Index (HI) is assessed using the equation: HI = Economic yield/Total biomass production. Harvest index is the ratio of economic yield (grain, fruit, tuber) to total biological yield (above-ground biomass). It indicates the efficiency of a crop in converting total dry matter into economically useful product. Higher harvest index values indicate better partitioning of photosynthates to economic parts.\n\nহার্ভেস্ট ইনডেক্স (HI) সমীকরণ ব্যবহার করে মূল্যায়ন করা হয়: HI = অর্থনৈতিক ফলন/মোট জৈববস্তু উৎপাদন। হার্ভেস্ট ইনডেক্স হল অর্থনৈতিক ফলন (শস্য, ফল, কন্দ) এবং মোট জৈবিক ফলন (মাটির উপরের জৈববস্তু) এর অনুপাত। এটি মোট শুকনো পদার্থকে অর্থনৈতিকভাবে উপযোগী পণ্যে রূপান্তরিত করতে একটি ফসলের দক্ষতা নির্দেশ করে। উচ্চতর হার্ভেস্ট ইনডেক্স মান অর্থনৈতিক অংশে ফটোসিন্থেটসের ভাল বণ্টন নির্দেশ করে।",
+      "image": null
+    }
+  ]
+}
