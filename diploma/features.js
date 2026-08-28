@@ -1,6 +1,6 @@
 const FEATURES = {
   textBook: false,
   questionBank: false,
-  saao: true,
+  saao: false,
   scientificAssistant: false
 };
