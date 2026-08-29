@@ -1,0 +1,683 @@
+{
+  "meta": {
+    "title": "BARI Scientific Officer (SO) Recruitment Exam 2009",
+    "institute": "Bangladesh Agricultural Research Institute (BARI)",
+    "year": 2009,
+    "position": "Scientific Officer (SO)",
+    "totalQuestions": 81,
+    "type": "free",
+    "examDate": "2009",
+    "duration": "1 hours",
+    "totalMarks": 100
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Transpiration is regulated by the activity of guard cell.",
+      "options": ["True", "False"],
+      "answer": 0,
+      "explanation": "Guard cells regulate transpiration by opening and closing the stomata based on their turgidity.\n\nরক্ষীকোষ তাদের রসস্ফীতি (turgidity) পরিবর্তনের মাধ্যমে পত্ররন্ধ্র খোলা ও বন্ধ করে প্রস্বেদন নিয়ন্ত্রণ করে।\n\nউদ্ভিদের অধিকাংশ প্রস্বেদন পত্ররন্ধ্রের (Stomata) মাধ্যমে ঘটে থাকে। রক্ষীকোষের স্ফীতি বাড়লে পত্ররন্ধ্র খুলে যায় এবং স্ফীতি কমলে পত্ররন্ধ্র বন্ধ হয়ে যায়, যার মাধ্যমে উদ্ভিদ পানির অপচয় রোধ করে।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Soil organic matter decreases the adsorption of herbicide.",
+      "options": ["True", "False"],
+      "answer": 1,
+      "explanation": "Soil organic matter increases the adsorption of herbicides due to its high surface area and cation exchange capacity.\n\nমাটির জৈব পদার্থ আগাছানাশকের শোষণ (adsorption) বৃদ্ধি করে, কমায় না।\n\nমাটিতে জৈব পদার্থের পরিমাণ বেশি থাকলে আগাছানাশকের কার্যকারিতা সাধারণত কমে যায়, কারণ জৈব পদার্থ রাসায়নিক উপাদানগুলোকে দৃঢ়ভাবে ধরে রাখে (adsorb করে)। বাংলাদেশের মাটিতে সাধারণত জৈব পদার্থের পরিমাণ ১-২% এর নিচে থাকে।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Carrot is very rich in vitamin C.",
+      "options": ["True", "False"],
+      "answer": 1,
+      "explanation": "Carrot is exceptionally rich in Vitamin A (beta-carotene), not Vitamin C.\n\nগাজরে প্রচুর পরিমাণে ভিটামিন এ (বিটা-ক্যারোটিন) থাকে, ভিটামিন সি নয়।\n\nভিটামিন সি এর প্রধান উৎস হলো সাইট্রাস জাতীয় ফল (যেমন- লেবু, কমলা), পেয়ারা, আমলকী ইত্যাদি। গাজর চোখের দৃষ্টিশক্তি ভালো রাখতে এবং রাতকানা রোগ প্রতিরোধে সাহায্য করে।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Gypsum contains 18% of S.",
+      "options": ["True", "False"],
+      "answer": 0,
+      "explanation": "Gypsum fertilizer chemically contains approximately 18-19% Sulfur and 23.3% Calcium.\n\nজিপসাম সারে রাসায়নিকভাবে প্রায় ১৮-১৯% সালফার এবং ২৩.৩% ক্যালসিয়াম থাকে।\n\nবাংলাদেশের উত্তরাঞ্চলের মাটিতে সালফারের ঘাটতি প্রকট। ধানসহ অন্যান্য ফসলের সালফারের অভাব পূরণে জিপসাম একটি অত্যন্ত জনপ্রিয় এবং কার্যকরী সার।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Homozygous line identify at all loci.",
+      "options": ["True", "False"],
+      "answer": 0,
+      "explanation": "A homozygous line possesses identical alleles at all given loci, ensuring true breeding traits.\n\nএকটি হোমোজাইগাস (Homozygous) লাইনের সকল লোকাসে অভিন্ন অ্যালিল থাকে।\n\nবিশুদ্ধ সারি বা Pure line উদ্ভাবনের জন্য হোমোজাইগাস বৈশিষ্ট্য অত্যন্ত গুরুত্বপূর্ণ, কারণ এটি বংশপরম্পরায় অপরিবর্তিত বৈশিষ্ট্য প্রদর্শন করে। (মূল প্রশ্নে Homogenous শব্দটি টাইপো ছিল, সঠিক শব্দ Homozygous)।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Ecdysone is a plant hormone.",
+      "options": ["True", "False"],
+      "answer": 1,
+      "explanation": "The provided answer was marked True, but factually Ecdysone is a steroidal hormone found in insects that controls moulting.\n\nপ্রদানকৃত উত্তরে এটি 'সত্য' বলা হলেও, বৈজ্ঞানিকভাবে একডাইসোন (Ecdysone) হলো পতঙ্গের খোলস পাল্টানোর (moulting) হরমোন।\n\nউদ্ভিদের প্রধান ফাইটোহরমোনগুলো হলো অক্সিন, জিবেরেলিন, সাইটোকাইনিন, অ্যাবসিসিক এসিড এবং ইথিলিন। যদিও কিছু উদ্ভিদে ফাইটোএকডাইস্টেরয়েড থাকে, তবে এটি মূলত একটি পতঙ্গ হরমোন।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Smaller standard error the stronger is the evidence that estimate statistical significant.",
+      "options": ["True", "False"],
+      "answer": 0,
+      "explanation": "The provided answer was marked False, but factually a smaller standard error indicates a more precise estimate, providing stronger evidence for statistical significance.\n\nপ্রদানকৃত উত্তরটি 'মিথ্যা' ছিল, কিন্তু পরিসংখ্যানের নিয়ম অনুযায়ী স্ট্যান্ডার্ড এরর (Standard error) যত ছোট হয়, প্রাক্কলন তত বেশি নির্ভুল হয়।\n\nস্ট্যান্ডার্ড এরর কম হলে টেস্ট স্ট্যাটিসটিক (t বা Z মান) বড় হয়, যা নাল হাইপোথিসিস (Null hypothesis) বাতিল করার সম্ভাবনা বাড়িয়ে দেয় এবং ফলাফলকে পরিসংখ্যানগতভাবে তাৎপর্যপূর্ণ (significant) করে তোলে।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Resistance against specific single race of pathogen is called horizontal resistance.",
+      "options": ["True", "False"],
+      "answer": 1,
+      "explanation": "Resistance against a specific single race of a pathogen is called Vertical resistance, not Horizontal resistance.\n\nকোনো প্যাথোজেনের নির্দিষ্ট একটি রেসের বিরুদ্ধে কাজ করা প্রতিরোধ ব্যবস্থাকে ভার্টিক্যাল রেজিস্ট্যান্স (Vertical resistance) বলে।\n\nহরিজন্টাল রেজিস্ট্যান্স (Horizontal resistance) সকল রেস বা স্ট্রেইনের বিরুদ্ধে সমভাবে কাজ করে এবং এটি তুলনামূলকভাবে দীর্ঘস্থায়ী হয়। ভার্টিক্যাল রেজিস্ট্যান্স সহজেই প্যাথোজেন দ্বারা ভেঙে যেতে পারে।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Additive gene action is desired for a good hybrid variety.",
+      "options": ["True", "False"],
+      "answer": 1,
+      "explanation": "Non-additive gene action (dominance and epistasis) is primarily responsible for heterosis or hybrid vigor, which is desired for hybrids.\n\nহাইব্রিড বা সংকর জাতের সফলতার জন্য নন-অ্যাডিটিভ জিন অ্যাকশন (প্রকটতা বা Dominance) প্রয়োজন, অ্যাডিটিভ জিন অ্যাকশন নয়।\n\nঅ্যাডিটিভ জিন অ্যাকশন সাধারণত সিন্থেটিক বা কম্পোজিট জাতের ক্ষেত্রে কাঙ্ক্ষিত। বাংলাদেশে উচ্চফলনশীল হাইব্রিড ধান বা ভুট্টার ফলন বৃদ্ধির পেছনে নন-অ্যাডিটিভ জিন অ্যাকশনের ভূমিকা রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "There are 35 AEZ in Bangladesh.",
+      "options": ["True", "False"],
+      "answer": 1,
+      "explanation": "Bangladesh is divided into 30 Agro-Ecological Zones (AEZ), not 35.\n\nবাংলাদেশকে মোট ৩০টি কৃষি-পরিবেশ অঞ্চলে (AEZ) ভাগ করা হয়েছে।\n\nমাটির গুণাগুণ, জলবায়ু, বৃষ্টিপাত এবং ভৌগোলিক বৈশিষ্ট্যের উপর ভিত্তি করে এই বিভাজন করা হয়েছে, যা ফসল নির্বাচন ও কৃষিকাজে গুরুত্বপূর্ণ ভূমিকা রাখে।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "written",
+      "question": "Fill in the blank: The characteristics of population is called ________.",
+      "answer": "Parameter",
+      "explanation": "In statistics, a characteristic or measure obtained by using all data values from a specific population is called a parameter.\n\nপরিসংখ্যানে, সম্পূর্ণ পপুলেশন বা সমগ্রকের তথ্যের ওপর ভিত্তি করে নির্ণীত বৈশিষ্ট্যকে প্যারামিটার (Parameter) বলা হয়। অন্যদিকে নমুনার (Sample) বৈশিষ্ট্যকে স্ট্যাটিস্টিক (Statistic) বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "written",
+      "question": "Fill in the blank: Osmotic adjustment is called ________.",
+      "answer": "Osmoregulation",
+      "explanation": "Osmoregulation is the active regulation of the osmotic pressure of an organism's body fluids to maintain the homeostasis of the organism's water content.\n\nজীবদেহে পানির পরিমাণ এবং লবণের ভারসাম্য বজায় রাখার জন্য অভিস্রবণিক চাপের সক্রিয় নিয়ন্ত্রণকে অসমোরেগুলেশন (Osmoregulation) বলে। খরা বা লবণাক্ততার মতো প্রতিকূল পরিবেশে উদ্ভিদ কোষে অসমোটিক সমন্বয় খুবই গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "written",
+      "question": "Fill in the blank: Gene structure is invented by ________.",
+      "answer": "Watson & Crick",
+      "explanation": "James Watson and Francis Crick proposed the double-helix model of DNA in 1953, which explains the physical structure of a gene.\n\n১৯৫৩ সালে জেমস ওয়াটসন এবং ফ্রান্সিস ক্রিক ডিএনএ (DNA) এর ডাবল হেলিক্স বা দ্বি-সূত্রক কাঠামোর মডেল আবিষ্কার করেন, যা জিনের গঠন ব্যাখ্যা করে। এজন্য তারা নোবেল পুরস্কার লাভ করেন।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "written",
+      "question": "Fill in the blank: In C4 plant, ________ ATP are used to produce a single glucose.",
+      "answer": "30",
+      "explanation": "The provided answer was 18, but factually C4 plants require 30 ATP molecules to synthesize one molecule of glucose.\n\nপ্রদানকৃত উত্তরে ১৮ বলা হলেও, বৈজ্ঞানিকভাবে C4 উদ্ভিদে একটি গ্লুকোজ অণু তৈরি করতে ৩০টি ATP অণু প্রয়োজন হয়।\n\nC3 উদ্ভিদে ক্যালভিন চক্রে ১৮টি ATP লাগে, কিন্তু C4 উদ্ভিদে কার্বন ডাই-অক্সাইড পরিবহনের জন্য অতিরিক্ত ১২টি ATP (মোট ১৮+১২=৩০) খরচ হয়। ভুট্টা এবং আখ হলো C4 উদ্ভিদের উদাহরণ।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "written",
+      "question": "Fill in the blank: Rodent order is ________.",
+      "answer": "Rodentia",
+      "explanation": "Rodents are mammals of the order Rodentia, characterized by a single pair of continuously growing incisors in each of the upper and lower jaws.\n\nস্তন্যপায়ী প্রাণীদের যে বর্গে ইঁদুর জাতীয় প্রাণী অন্তর্ভুক্ত, তাকে রোডেনশিয়া (Rodentia) বলা হয়। বাংলাদেশের কৃষিতে ইঁদুর ফসলের ব্যাপক ক্ষয়ক্ষতি করে থাকে।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "written",
+      "question": "Fill in the blank: Loss of one chromosome from a diploid seed is called ________.",
+      "answer": "Monosomic",
+      "explanation": "A condition in which a diploid organism lacks one chromosome (2n-1) is known as monosomy.\n\nডিপ্লয়েড জীবের ক্রোমোজোম সেট থেকে একটি ক্রোমোজোম হারিয়ে গেলে (2n-1) সেই অবস্থাকে মনোসোমিক (Monosomic) বলা হয়। এটি এক প্রকার অ্যানিউপ্লয়েডি (Aneuploidy) মিউটেশন।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "written",
+      "question": "Fill in the blank: The pathogen or its parts are seen on the plant is called ________.",
+      "answer": "Sign",
+      "explanation": "In plant pathology, a 'sign' is the visible physical presence of the pathogen itself (e.g., fungal mycelium, spores) on the host plant.\n\nউদ্ভিদ রোগতত্ত্বে, আক্রান্ত উদ্ভিদে প্যাথোজেন বা তার কোনো অংশ (যেমন- ছত্রাকের মাইসেলিয়াম বা স্পোর) সরাসরি দৃশ্যমান হলে তাকে সাইন (Sign) বলা হয়। অন্যদিকে উদ্ভিদের বাহ্যিক পরিবর্তনকে লক্ষণ (Symptom) বলে।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "written",
+      "question": "Fill in the blank: The tube like structure of nematode or insect used for infection or absorption of food materials is ________.",
+      "answer": "Stylet",
+      "explanation": "A stylet is a hard, sharp, hollow, needle-like structure found in plant-parasitic nematodes and piercing-sucking insects used to pierce plant cells and withdraw nutrients.\n\nউদ্ভিদ-পরজীবী নেমাটোড বা শোষক পোকার মুখের যে সুচালো নলাকার অংশের সাহায্যে তারা উদ্ভিদের কোষে ছিদ্র করে পুষ্টি উপাদান শোষণ করে, তাকে স্টাইলেট (Stylet) বলা হয়। (মূল প্রশ্নে উত্তর অস্পষ্ট থাকায় সঠিক বৈজ্ঞানিক পরিভাষাটি যুক্ত করা হলো)।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "written",
+      "question": "Fill in the blank: ________ means the inability of mature and viable seed to germinate even placed under favorable condition.",
+      "answer": "Seed dormancy",
+      "explanation": "Seed dormancy is a state in which viable seeds prevent germination even under environmental conditions normally favorable for plant growth.\n\nজীবন্ত ও পরিপক্ব বীজ অনুকূল পরিবেশ (যথাযথ আর্দ্রতা, তাপমাত্রা ও অক্সিজেন) পাওয়া সত্ত্বেও যদি অঙ্কুরিত হতে ব্যর্থ হয়, তবে সেই অবস্থাকে সুপ্তাবস্থা বা Seed dormancy বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "written",
+      "question": "Fill in the blank: Rice is a ________ type plant.",
+      "answer": "Semi-aquatic",
+      "explanation": "Rice (Oryza sativa) is considered a semi-aquatic plant because it thrives in flooded soils and can transport oxygen to its submerged roots via aerenchyma tissues.\n\nধান (Rice) হলো একটি আধা-জলজ (Semi-aquatic) উদ্ভিদ। ধান গাছ জলাবদ্ধ অবস্থায় বেঁচে থাকতে পারে কারণ এর কাণ্ড ও শিকড়ে অ্যারেনকাইমা (aerenchyma) নামক বিশেষ টিস্যু থাকে, যা দিয়ে এরা পানির নিচে অক্সিজেন সরবরাহ করতে পারে।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "A pair of homologous chromosome is called:",
+      "options": ["Pachytene", "Zygotene", "Synapsis", "Diplotene"],
+      "answer": 2,
+      "explanation": "The pairing process of homologous chromosomes during the zygotene stage of meiosis is called synapsis.\n\nমিয়োসিস কোষ বিভাজনের জাইগোটিন উপপর্যায়ে সমসংস্থ বা হোমোলোগাস ক্রোমোজোম জোড়া বাঁধার প্রক্রিয়াকে সিন্যাপসিস (Synapsis) বলা হয়। জোড়া বাঁধা ক্রোমোজোমকে বাইভ্যালেন্ট বলা হয়। (মূল প্রশ্নে Synapses টাইপো ছিল, যা ঠিক করা হয়েছে)।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "The genetic formula of Triticum aestivum is:",
+      "options": ["AABBRR", "AABBDD", "AABBCC", "None of these"],
+      "answer": 1,
+      "explanation": "Triticum aestivum (common wheat) is an allohexaploid with three distinct but related genomes, represented as AABBDD.\n\nসাধারণ গম বা Triticum aestivum হলো একটি হেক্সাপ্লয়েড (6x) উদ্ভিদ, যার ক্রোমোজোম সংখ্যা ৪২। এটি তিনটি ভিন্ন বন্য প্রজাতির ঘাসের সংকরায়ণের মাধ্যমে উদ্ভূত হয়েছে, তাই এর জিনোমিক ফর্মুলা AABBDD।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Larval stage of the fruit fly is called:",
+      "options": ["Larva", "Nymph", "Maggot", "None of these"],
+      "answer": 2,
+      "explanation": "The legless larval stage of flies (Order Diptera), including fruit flies, is scientifically termed a maggot.\n\nমাছি জাতীয় পতঙ্গের (যেমন- ফলের মাছি) পা-বিহীন লার্ভা দশাকে ম্যাগট (Maggot) বলা হয়। ফলের মাছির ম্যাগট ফল ও সবজির ভেতরে প্রবেশ করে শাঁস খেয়ে ব্যাপক ক্ষতি করে, যা বাংলাদেশের কৃষিতে একটি বড় সমস্যা।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "Late blight of potato is a ________ disease.",
+      "options": ["Fungal", "Viral", "Nematode", "Bacterial"],
+      "answer": 0,
+      "explanation": "Late blight of potato is caused by Phytophthora infestans, which is historically and practically classified as a fungal pathogen in agricultural pathology, though it is technically an oomycete.\n\nআলুর লেইট ব্লাইট বা মড়ক রোগ একটি ছত্রাকজনিত (Fungal) রোগ। এটি Phytophthora infestans নামক প্যাথোজেন দ্বারা ঘটে। আয়ারল্যান্ডের ঐতিহাসিক দুর্ভিক্ষের জন্য এই রোগটি দায়ী ছিল এবং বাংলাদেশেও এটি আলুর প্রধান ক্ষতিকারক রোগ।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Mushroom is a:",
+      "options": ["Fungus", "Bacteria", "Algae", "Virus"],
+      "answer": 0,
+      "explanation": "A mushroom is the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source.\n\nমাশরুম হলো এক প্রকার ভক্ষণযোগ্য ছত্রাক (Fungus)। এটি ক্লোরোফিলবিহীন, তাই নিজের খাদ্য নিজে তৈরি করতে পারে না। বাংলাদেশের পুষ্টি উন্নয়নে মাশরুম চাষ একটি সম্ভাবনাময় খাত।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Bipolaris sorokiniana is a causal organism of ________ disease.",
+      "options": ["Rice", "Wheat", "Maize", "Sugarcane"],
+      "answer": 1,
+      "explanation": "Bipolaris sorokiniana is a highly destructive fungal pathogen that causes leaf blight or spot blotch disease in wheat.\n\nBipolaris sorokiniana নামক ছত্রাক গমের পাতা ঝলসানো (Leaf blight) বা স্পট ব্লচ রোগ সৃষ্টি করে। বাংলাদেশে গমের ফলন বিপর্যয়ের অন্যতম প্রধান কারণ হলো এই ছত্রাকজনিত রোগ।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "The ability of a plant to sustain the effect of a disease without crop loss is:",
+      "options": ["Tolerance", "Resistance", "Susceptive", "None of these"],
+      "answer": 0,
+      "explanation": "Tolerance is the capacity of a plant to endure disease infection without suffering severe yield loss or significant impairment.\n\nকোনো উদ্ভিদের রোগাক্রান্ত হওয়া সত্ত্বেও ফলনের উল্লেখযোগ্য ক্ষতি না হওয়ার সক্ষমতাকে সহনশীলতা বা টলারেন্স (Tolerance) বলা হয়। অন্যদিকে, রোগ সৃষ্টিকারী প্যাথোজেনের আক্রমণ প্রতিহত করার ক্ষমতাকে রেজিস্ট্যান্স (Resistance) বলে।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Which one of the following is not a simple fruit?",
+      "options": ["Lemon", "Pineapple", "Mango", "Banana"],
+      "answer": 1,
+      "explanation": "Pineapple is not a simple fruit; it is a multiple (or composite) fruit derived from the fusion of many individual flowers in an inflorescence.\n\nআনারস (Pineapple) কোনো সরল ফল (Simple fruit) নয়, এটি একটি যৌগিক বা গুচ্ছফল (Multiple fruit)। সম্পূর্ণ পুষ্পমঞ্জরি পরিবর্তিত হয়ে যখন একটি মাত্র ফলে পরিণত হয়, তখন তাকে যৌগিক ফল বলে। লেবু, আম, কলা হলো সরল ফল।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Which one of the following is not climacteric fruit?",
+      "options": ["Mango", "Apple", "Banana", "Litchi"],
+      "answer": 3,
+      "explanation": "Litchi is a non-climacteric fruit, meaning it does not ripen further once harvested and does not show a peak in ethylene production.\n\nলিচু (Litchi) ক্লাইম্যাকটেরিক ফল নয়। যে সকল ফল গাছ থেকে পাড়ার পর পাকে না এবং ইথিলিন উৎপাদন বৃদ্ধি পায় না, তাদের নন-ক্লাইম্যাকটেরিক ফল বলে। আম, কলা এবং আপেল হলো ক্লাইম্যাকটেরিক ফল, যা পাড়ার পর পাকতে পারে।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "Endosperm of rice is:",
+      "options": ["Haploid", "Diploid", "Triploid", "Tetraploid"],
+      "answer": 2,
+      "explanation": "The endosperm of angiosperms like rice is formed by triple fusion (one male gamete fuses with two polar nuclei), resulting in a triploid (3n) structure.\n\nধানের এন্ডোস্পার্ম বা শাঁস হলো ট্রিপ্লয়েড (Triploid) বা 3n প্রকৃতির। গুপ্তবীজী উদ্ভিদে দ্বি-নিষেক (Double fertilization) ঘটার সময় একটি পুংগ্যামেট সেকেন্ডারি নিউক্লিয়াসের (2n) সাথে মিলিত হয়ে এই ট্রিপ্লয়েড শস্যকলা গঠন করে।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "written",
+      "question": "Write down the scientific name of Lentil.",
+      "answer": "Lens culinaris (or Lens esculenta)",
+      "explanation": "Lentil is a high-protein pulse crop widely cultivated in Bangladesh.\n\nমসুর ডালের বৈজ্ঞানিক নাম হলো Lens culinaris বা Lens esculenta. এটি বাংলাদেশের একটি অন্যতম প্রধান ডাল জাতীয় ফসল, যা শীতকালীন ফসল হিসেবে আবাদ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "written",
+      "question": "Write down the scientific name of Sweet potato.",
+      "answer": "Ipomoea batatas",
+      "explanation": "Sweet potato belongs to the morning glory family (Convolvulaceae).\n\nমিষ্টি আলুর বৈজ্ঞানিক নাম হলো Ipomoea batatas. এটি শর্করা এবং ভিটামিন এ-এর একটি চমৎকার উৎস, যা বাংলাদেশের বিভিন্ন অঞ্চলে চাষ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "written",
+      "question": "Write down the scientific name of Onion.",
+      "answer": "Allium cepa",
+      "explanation": "Onion is an essential spice and bulb crop grown extensively worldwide.\n\nপেঁয়াজের বৈজ্ঞানিক নাম হলো Allium cepa. এটি বাংলাদেশের রান্নার একটি অপরিহার্য মসলা এবং রবি মৌসুমের অন্যতম অর্থকরী ফসল।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "written",
+      "question": "Write down the scientific name of Bottle gourd.",
+      "answer": "Lagenaria siceraria",
+      "explanation": "Bottle gourd is a popular cucurbitaceous vegetable crop.\n\nলাউয়ের বৈজ্ঞানিক নাম হলো Lagenaria siceraria. এটি একটি জনপ্রিয় শীতকালীন সবজি, তবে বর্তমানে বাংলাদেশে গ্রীষ্মকালেও এর উন্নত জাত চাষ করা হচ্ছে।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "written",
+      "question": "Write down the scientific name of Bermuda grass.",
+      "answer": "Cynodon dactylon",
+      "explanation": "Bermuda grass is a common weed but also used for fodder and turf.\n\nদুর্বা ঘাসের বৈজ্ঞানিক নাম হলো Cynodon dactylon. এটি ফসলের মাঠে একটি সাধারণ আগাছা হলেও গৃহপালিত পশুর খাদ্য হিসেবে এর ব্যবহার রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "written",
+      "question": "Write down the scientific name of Okra.",
+      "answer": "Abelmoschus esculentus",
+      "explanation": "Okra, also known as lady's finger, belongs to the Malvaceae family.\n\nঢেঁড়স এর বৈজ্ঞানিক নাম হলো Abelmoschus esculentus. এটি বাংলাদেশের একটি জনপ্রিয় গ্রীষ্মকালীন সবজি, যা ভিটামিন ও খনিজ উপাদানে সমৃদ্ধ।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "written",
+      "question": "Write down the scientific name of Wheat.",
+      "answer": "Triticum aestivum",
+      "explanation": "Wheat is the most widely grown cereal grain globally and is crucial for global food security.\n\nগমের বৈজ্ঞানিক নাম হলো Triticum aestivum. ধানের পর গম বাংলাদেশের দ্বিতীয় প্রধান খাদ্যশস্য, যা রবি বা শীত মৌসুমে চাষ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "written",
+      "question": "Write down the sowing date of Mustard.",
+      "answer": "October-November",
+      "explanation": "Mustard is a Rabi crop in Bangladesh, sown in the early winter season.\n\nসরিষা (Mustard) বাংলাদেশের প্রধান ভোজ্যতেল ফসল। রবি বা শীত মৌসুমের শুরুতে, অর্থাৎ অক্টোবর থেকে নভেম্বরের মধ্যে এর বীজ বপন করা হয়। আমন ধান কাটার পর পতিত জমিতে সরিষা চাষ খুবই লাভজনক।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "written",
+      "question": "Write down the seed rate of Potato.",
+      "answer": "1500-2000 kg/ha",
+      "explanation": "The seed rate for potato depends on the size of the seed tubers used.\n\nআলুর জন্য প্রতি হেক্টরে সাধারণত ১৫০০ থেকে ২০০০ কেজি (১.৫ - ২ টন) বীজ আলুর প্রয়োজন হয়। বীজের আকার ও রোপণ দূরত্বের উপর নির্ভর করে এই পরিমাণ কিছুটা কম-বেশি হতে পারে।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "written",
+      "question": "Write down the seed rate of Radish.",
+      "answer": "2.5-3 kg/ha",
+      "explanation": "Radish requires a very small amount of seed per unit area due to the small size of the seeds.\n\nমুলার (Radish) বীজের আকার অত্যন্ত ছোট হওয়ায় হেক্টরপ্রতি এর বীজহার মাত্র ২.৫ থেকে ৩ কেজি। এটি সরাসরি জমিতে ছিটিয়ে বা সারিতে বপন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "written",
+      "question": "Write down the seed rate of Sesame.",
+      "answer": "6-8 kg/ha",
+      "explanation": "Sesame is cultivated mostly for oil extraction. The standard seed rate is generally 6-8 kg/ha.\n\nতিল (Sesame) একটি অন্যতম ভোজ্যতেল ফসল। হেক্টরপ্রতি তিলের বীজহার সাধারণত ৬ থেকে ৮ কেজি হয়ে থাকে। এটি ছিটিয়ে বপন করা হলে তুলনামূলক বেশি বীজের প্রয়োজন হয়।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "written",
+      "question": "Write down the seed rate of Maize.",
+      "answer": "20-25 kg/ha",
+      "explanation": "For grain production, the recommended seed rate for hybrid maize is 20-25 kg per hectare.\n\nদানা ফসল হিসেবে ভুট্টার (Maize) জন্য হেক্টরপ্রতি ২০ থেকে ২৫ কেজি বীজের প্রয়োজন হয়। তবে গো-খাদ্য বা সাইলেজ তৈরির উদ্দেশ্যে চাষ করলে বীজের হার বেশি (৪০-৫০ কেজি/হেক্টর) হয়ে থাকে।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "written",
+      "question": "Write down the seed rate of Black gram.",
+      "answer": "20-25 kg/ha",
+      "explanation": "Black gram (Mashkalai) is widely cultivated as a pulse and fodder crop.\n\nমাষকলাই (Black gram) চাষের জন্য হেক্টরপ্রতি ২০ থেকে ২৫ কেজি বীজ প্রয়োজন হয়। ফসলটি সাধারণত ছিটিয়ে বপন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "written",
+      "question": "In a field trial of 500 m² area, required time to spray is 81.25 sec by a spray machine of 0.561 l/min. Determine the required spray solution for one hectare area of land?",
+      "answer": "15.18 liters",
+      "explanation": "Calculation step by line:\nDischarge in 60 seconds = 0.561 liters\nDischarge in 1 second = 0.561 / 60 liters\nDischarge in 81.25 seconds = (0.561 × 81.25) / 60 = 0.759 liters\nFor 500 m² area of land, required solution = 0.759 liters\nFor 1 m² area of land, required solution = 0.759 / 500 liters\nFor 10,000 m² (1 hectare) area, required solution = (0.759 × 10000) / 500 = 15.18 liters",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "written",
+      "question": "Elaborate the acronym: SAC",
+      "answer": "SAARC Agriculture Centre",
+      "explanation": "SAARC Agriculture Centre (SAC) is the first regional agricultural institution of the South Asian Association for Regional Cooperation.\n\nসার্ক এগ্রিকালচার সেন্টার (SAC) হলো দক্ষিণ এশীয় আঞ্চলিক সহযোগিতা সংস্থা (সার্ক)-এর প্রথম আঞ্চলিক কৃষি প্রতিষ্ঠান। এটি বাংলাদেশের ঢাকায় (ফার্মগেট) অবস্থিত এবং সার্কভুক্ত দেশগুলোর কৃষি উন্নয়নে কাজ করে।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "written",
+      "question": "Elaborate the acronym: ICARDA",
+      "answer": "International Centre for Agricultural Research in the Dry Areas",
+      "explanation": "ICARDA focuses on improving agricultural productivity and food security in the non-tropical dry areas of the world.\n\nইকার্ডা (ICARDA) শুষ্ক অঞ্চলে কৃষি গবেষণা ও উন্নয়নের জন্য একটি আন্তর্জাতিক প্রতিষ্ঠান। এর লক্ষ্য শুষ্ক ও অনাবৃষ্টিপ্রবণ এলাকায় কৃষির উৎপাদনশীলতা বৃদ্ধি করা।",
+      "image": null
+    },
+    {
+      "id": 47,
+      "type": "written",
+      "question": "Elaborate the acronym: ICRISAT",
+      "answer": "International Crops Research Institute for the Semi-Arid Tropics",
+      "explanation": "ICRISAT conducts agricultural research for rural development in the semi-arid tropics of Asia and Sub-Saharan Africa.\n\nইক্রিস্যাট (ICRISAT) হলো আন্তর্জাতিক ফসল গবেষণা ইনস্টিটিউট, যা মূলত অর্ধ-শুষ্ক বা সেমি-অ্যারিড অঞ্চলের কৃষির উন্নয়নের জন্য কাজ করে। এর সদর দপ্তর ভারতের হায়দ্রাবাদে অবস্থিত।",
+      "image": null
+    },
+    {
+      "id": 48,
+      "type": "written",
+      "question": "Elaborate the acronym: PRSP",
+      "answer": "Poverty Reduction Strategy Paper",
+      "explanation": "PRSPs are documents required by the IMF and World Bank before a country can be considered for debt relief.\n\nপভার্টি রিডাকশন স্ট্র্যাটেজি পেপার (PRSP) হলো একটি জাতীয় পরিকল্পনা দলিল, যা দেশের দারিদ্র্য বিমোচন এবং অর্থনৈতিক উন্নয়নের জন্য আন্তর্জাতিক সংস্থাগুলোর (যেমন- বিশ্বব্যাংক ও আইএমএফ) সহায়তায় প্রস্তুত করা হয়।",
+      "image": null
+    },
+    {
+      "id": 49,
+      "type": "written",
+      "question": "Elaborate the acronym: JICA",
+      "answer": "Japan International Cooperation Agency",
+      "explanation": "JICA is a governmental agency that coordinates official development assistance for the government of Japan.\n\nজাইকা (JICA) হলো জাপানের একটি সরকারি সংস্থা, যা বাংলাদেশের মত উন্নয়নশীল দেশগুলোর বিভিন্ন উন্নয়ন প্রকল্পে (যেমন- কৃষি, অবকাঠামো, শিক্ষা) কারিগরি ও আর্থিক সহায়তা প্রদান করে।",
+      "image": null
+    },
+    {
+      "id": 50,
+      "type": "written",
+      "question": "You have gone 6 meter west from point 'A' to 'B'. Then you turn left at 90 deg angle and walk 8 meter south to point 'C'. What is the distance between A & C?",
+      "answer": "10 meters",
+      "explanation": "Calculation step by line:\nDistance from A to B (West) = 6 meters\nDistance from B to C (South) = 8 meters\nSince the turn is 90 degrees, it forms a right-angled triangle ABC.\nAccording to Pythagoras theorem:\nAC² = AB² + BC²\nAC² = 6² + 8²\nAC² = 36 + 64\nAC² = 100\nAC = √100\nAC = 10 meters\n(Note: The original exam paper mistakenly mentioned the root as 16m, which has been corrected to mathematically accurate 10m).",
+      "image": null
+    },
+    {
+      "id": 51,
+      "type": "written",
+      "question": "With 9% interest, how many years will it take for Tk. 500 to yield an interest of Tk. 280?",
+      "answer": "6.22 years",
+      "explanation": "Calculation step by line:\nGiven, Rate of interest (r) = 9%\nTotal Interest (I) = Tk. 280\nPrincipal (P) = Tk. 500\nWe know the formula for simple interest:\nI = (P × n × r) / 100\nn = (I × 100) / (P × r)\nn = (280 × 100) / (500 × 9)\nn = 28000 / 4500\nn = 6.22 years\nSo, the required time is 6.22 years.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "written",
+      "question": "Translate into English: তার কিছুই হয়নি",
+      "answer": "Nothing happened to him.",
+      "explanation": "The Bangla sentence 'তার কিছুই হয়নি' implies that the person was unharmed or unaffected by an event, correctly translated as 'Nothing happened to him.'",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "written",
+      "question": "Translate into English: চাঁদ যেন রাতের প্রদীপ",
+      "answer": "The moon is as it were the lamp of night.",
+      "explanation": "The phrase 'যেন' in a poetic or descriptive context is translated using the idiom 'as it were', which means 'in a manner of speaking' or 'so to speak'.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "written",
+      "question": "Translate into English: কলম দুটির একটিও চলবে না",
+      "answer": "Neither of the pens will do.",
+      "explanation": "When referring to 'not one of the two', the word 'neither' is used. The phrase 'will do' means 'will be suitable or acceptable' for the task.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "written",
+      "question": "Translate into English: তারা যা খুশি বলুক",
+      "answer": "Let them say whatever they like.",
+      "explanation": "The sentence is an imperative permission or dismissal. 'Let them say' correctly captures 'তারা বলুক', and 'whatever they like' covers 'যা খুশি'.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "type": "written",
+      "question": "Translate into English: সততা একটি মহৎ গুন",
+      "answer": "Honesty is a noble virtue.",
+      "explanation": "This is a universal proverb. 'সততা' translates to Honesty, and 'মহৎ গুন' translates to 'noble virtue'.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "type": "written",
+      "question": "Translate into English: লোকটি মর মর অবস্থা",
+      "answer": "The man is about to die.",
+      "explanation": "The expression 'মর মর অবস্থা' means someone is on the verge of death. It can also be translated as 'The man is at the point of death.'",
+      "image": null
+    },
+    {
+      "id": 58,
+      "type": "written",
+      "question": "Correct the sentence: Every clerk & every peon should do their duties.",
+      "answer": "Every clerk & every peon should do his duty.",
+      "explanation": "When two singular nouns connected by 'and' are preceded by 'each' or 'every', the pronoun must be singular. Thus, 'their' becomes 'his' (or 'his/her'), and 'duties' becomes 'duty'.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "type": "written",
+      "question": "Correct the sentence: I, you & he are friends.",
+      "answer": "You, he & I are friends.",
+      "explanation": "When personal pronouns of different persons are joined together for a positive sense, the rule of '231' is followed: Second person (You) first, Third person (he/she) second, and First person (I) last.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "type": "written",
+      "question": "Correct the sentence: Forty miles are a long way.",
+      "answer": "Forty miles is a long way.",
+      "explanation": "When a plural noun denotes a specific quantity, distance, or time considered as a whole or single unit, the verb must be singular. So, 'are' becomes 'is'.",
+      "image": null
+    },
+    {
+      "id": 61,
+      "type": "written",
+      "question": "Correct the sentence: I have a breakfast at 7am.",
+      "answer": "I have breakfast at 7am.",
+      "explanation": "Articles ('a', 'an', 'the') are generally not used before names of regular meals like breakfast, lunch, or dinner, unless they are specified by an adjective (e.g., 'a heavy breakfast').",
+      "image": null
+    },
+    {
+      "id": 62,
+      "type": "written",
+      "question": "এক কথায় প্রকাশ কর: তিন ফলের সমাহার",
+      "answer": "ত্রিফলা",
+      "explanation": "আমলকী, হরিতকী ও বহেরা—এই তিনটি ফলের মিশ্রণকে একত্রে 'ত্রিফলা' বলা হয়, যা আয়ুর্বেদিক চিকিৎসায় ব্যাপকভাবে ব্যবহৃত হয়। এটি একটি দ্বিগু সমাস।",
+      "image": null
+    },
+    {
+      "id": 63,
+      "type": "written",
+      "question": "এক কথায় প্রকাশ কর: উপকারীর অপকার করে যে",
+      "answer": "কৃতঘ্ন",
+      "explanation": "যে ব্যক্তি অন্যের করা উপকার স্বীকার করে না এবং উল্টো ক্ষতি করে, তাকে 'কৃতঘ্ন' বলা হয়। আর যে উপকারীর উপকার স্বীকার করে তাকে 'কৃতজ্ঞ' বলে।",
+      "image": null
+    },
+    {
+      "id": 64,
+      "type": "written",
+      "question": "এক কথায় প্রকাশ কর: সকলের জন্য প্রযোজ্য",
+      "answer": "সার্বজনীন",
+      "explanation": "যা সবার জন্য প্রযোজ্য বা হিতকর, এক কথায় তাকে 'সার্বজনীন' বলা হয়। যেমন: সার্বজনীন প্রাথমিক শিক্ষা।",
+      "image": null
+    },
+    {
+      "id": 65,
+      "type": "written",
+      "question": "এক কথায় প্রকাশ কর: যে নারীর সন্তান হয় না",
+      "answer": "বন্ধ্যা",
+      "explanation": "যে নারী সন্তান জন্মদানে অক্ষম, তাকে এক কথায় 'বন্ধ্যা' বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 66,
+      "type": "written",
+      "question": "এক কথায় প্রকাশ কর: কোন কিছুতেই ভয় নেই যার",
+      "answer": "অকুতোভয়",
+      "explanation": "যার মনে কোনো ভয় বা ভীতি নেই, তাকে এক কথায় 'অকুতোভয়' বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 67,
+      "type": "written",
+      "question": "এক কথায় প্রকাশ কর: যে সকল অত্যাচারই সয়ে যায়",
+      "answer": "সর্বংসহা",
+      "explanation": "যে ব্যক্তি বা নারী সবকিছু মুখ বুজে সহ্য করে নেয়, তাকে 'সর্বংসহা' বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 68,
+      "type": "written",
+      "question": "সন্ধি বিচ্ছেদ কর: মহেশ",
+      "answer": "মহা + ঈশ",
+      "explanation": "আ + ঈ মিলে 'এ' কার হয়েছে। এটি স্বরসন্ধির একটি নিয়ম। যেমন: মহা + ঈশ = মহেশ।",
+      "image": null
+    },
+    {
+      "id": 69,
+      "type": "written",
+      "question": "সন্ধি বিচ্ছেদ কর: হিতৈষী",
+      "answer": "হিত + এষী",
+      "explanation": "অ + এ মিলে 'ঐ' কার হয়েছে। এটিও স্বরসন্ধির একটি প্রচলিত নিয়ম। যেমন: হিত + এষী = হিতৈষী।",
+      "image": null
+    },
+    {
+      "id": 70,
+      "type": "written",
+      "question": "সন্ধি বিচ্ছেদ কর: বৃষ্টি",
+      "answer": "বৃষ্ + তি",
+      "explanation": "এটি ব্যঞ্জনসন্ধির একটি উদাহরণ। 'ষ'-এর পরে 'ত' থাকলে, 'ত' স্থানে 'ট' হয়। যেমন: বৃষ্ + তি = বৃষ্টি।",
+      "image": null
+    },
+    {
+      "id": 71,
+      "type": "written",
+      "question": "সন্ধি বিচ্ছেদ কর: উৎফুল্ল",
+      "answer": "উৎ + ফুল্ল",
+      "explanation": "এটি ব্যঞ্জনসন্ধির নিয়ম অনুসারে গঠিত হয়েছে। উৎ + ফুল্ল মিলে উৎফুল্ল হয়।",
+      "image": null
+    },
+    {
+      "id": 72,
+      "type": "written",
+      "question": "What is the currency of China?",
+      "answer": "Yuan",
+      "explanation": "The official currency of the People's Republic of China is the Renminbi (RMB), and its basic unit is the Yuan.\n\nচীনের সরকারি মুদ্রার নাম রেনমিনবি (Renminbi), এবং এর প্রধান একক হলো ইউয়ান (Yuan)।",
+      "image": null
+    },
+    {
+      "id": 73,
+      "type": "written",
+      "question": "What is the state language of Morocco?",
+      "answer": "Arabic",
+      "explanation": "Arabic is the official state language of Morocco.\n\nউত্তর আফ্রিকার দেশ মরক্কোর রাষ্ট্রীয় ভাষা হলো আরবি। তবে সেখানে ফ্রেঞ্চ এবং বার্বার ভাষারও ব্যাপক প্রচলন রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 74,
+      "type": "written",
+      "question": "Who is the father of modern computer?",
+      "answer": "Charles Babbage",
+      "explanation": "Charles Babbage is universally recognized in fundamental computer science history as the 'father of the computer' for conceptualizing the Analytical Engine.\n\nচার্লস ব্যাবেজকে আধুনিক কম্পিউটারের জনক বলা হয়। তিনি প্রথম ডিফারেন্স ইঞ্জিন এবং অ্যানালিটিক্যাল ইঞ্জিনের নকশা তৈরি করেছিলেন। (তবে অ্যালান টুরিংকেও অনেক ক্ষেত্রে কম্পিউটার সায়েন্সের জনক বলা হয়)।",
+      "image": null
+    },
+    {
+      "id": 75,
+      "type": "written",
+      "question": "What is called the program of computer?",
+      "answer": "Software / Operating system",
+      "explanation": "A set of instructions that perform specific tasks on a computer is called a program or software. The core program is the Operating System.\n\nকম্পিউটারকে পরিচালিত করার জন্য প্রদত্ত নির্দেশমালার সমষ্টিকে প্রোগ্রাম বা সফটওয়্যার বলা হয়। অপারেটিং সিস্টেম (Operating System) হলো কম্পিউটারের সবচেয়ে গুরুত্বপূর্ণ সিস্টেম সফটওয়্যার।",
+      "image": null
+    },
+    {
+      "id": 76,
+      "type": "written",
+      "question": "What is the capital of Bhutan?",
+      "answer": "Thimphu",
+      "explanation": "Thimphu is the capital and largest city of the Kingdom of Bhutan.\n\nসার্কভুক্ত দেশ ভুটানের রাজধানীর নাম থিম্পু (Thimphu)। এটি হিমালয় পর্বতমালার কোলে অবস্থিত একটি শান্ত ও পরিচ্ছন্ন শহর।",
+      "image": null
+    },
+    {
+      "id": 77,
+      "type": "written",
+      "question": "In what continent Chile is situated?",
+      "answer": "South America",
+      "explanation": "Chile is a long, narrow country situated along the western edge of South America.\n\nচিলি (Chile) দক্ষিণ আমেরিকা (South America) মহাদেশে অবস্থিত। দেশটি প্রশান্ত মহাসাগর এবং আন্দিজ পর্বতমালার মাঝে একটি দীর্ঘ ফালির মতো বিস্তৃত।",
+      "image": null
+    },
+    {
+      "id": 78,
+      "type": "written",
+      "question": "What is the Bangla date of today?",
+      "answer": "Dependent on exam day",
+      "explanation": "This is a dynamic General Knowledge question that candidates must answer based on the exact day of the examination.\n\nএটি একটি পরিবর্তনশীল প্রশ্ন। পরীক্ষার্থীদের পরীক্ষার দিন অনুযায়ী বাংলা বর্ষপঞ্জির সঠিক তারিখ (দিন, মাস ও বঙ্গাব্দ) জেনে রাখা আবশ্যক।",
+      "image": null
+    },
+    {
+      "id": 79,
+      "type": "written",
+      "question": "What is the name of Governor of Bangladesh Bank?",
+      "answer": "Dr. Atiur Rahman (as of 2009)",
+      "explanation": "Dr. Atiur Rahman served as the Governor of Bangladesh Bank during the year of this examination (2009).\n\nএই পরীক্ষাটি ২০০৯ সালে অনুষ্ঠিত হওয়ায় তৎকালীন গভর্নর ছিলেন ড. আতিউর রহমান। তবে বর্তমান সময়ে পরীক্ষার জন্য বাংলাদেশ ব্যাংকের বর্তমান গভর্নরের নাম মনে রাখা জরুরি।",
+      "image": null
+    },
+    {
+      "id": 80,
+      "type": "written",
+      "question": "In what year Bangladesh became the member of UN & OIC?",
+      "answer": "1974",
+      "explanation": "Bangladesh officially joined both the United Nations (UN) and the Organization of Islamic Cooperation (OIC) in 1974.\n\nবাংলাদেশ ১৭ সেপ্টেম্বর ১৯৭৪ সালে জাতিসংঘের ২৯তম অধিবেশনে ১৩৬তম সদস্যপদ লাভ করে। একই বছর ফেব্রুয়ারি মাসে পাকিস্তানের লাহোরে অনুষ্ঠিত দ্বিতীয় সম্মেলনে বাংলাদেশ ওআইসি (OIC)-এর সদস্যপদ লাভ করে।",
+      "image": null
+    },
+    {
+      "id": 81,
+      "type": "written",
+      "question": "What is the per capita land of Bangladesh?",
+      "answer": "0.17 acre (Historical context)",
+      "explanation": "In historical context (around 2009), the per capita agricultural land was approximately 0.17 acre.\n\n২০০৯ সালের প্রেক্ষাপটে বাংলাদেশের মাথাপিছু জমির পরিমাণ প্রায় ০.১৭ একর ছিল। তবে জনসংখ্যা বৃদ্ধি এবং নগরায়ণের কারণে বর্তমানে এই মাথাপিছু আবাদি জমির পরিমাণ উল্লেখযোগ্য হারে হ্রাস পেয়ে প্রায় ০.১২ একরের নিচে নেমে এসেছে।",
+      "image": null
+    }
+  ]
+}
