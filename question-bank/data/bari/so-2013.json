@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "title": "BARI SO 2013",
+    "institute": "Bangladesh Agricultural Research Institute (BARI)",
+    "year": 2013,
+    "position": "Scientific Officer (SO)",
+    "totalQuestions": 31,
+    "type": "free",
+    "examDate": "2013",
+    "duration": "",
+    "totalMarks": ""
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "written",
+      "question": "The branch of agriculture that deals with rearing of fish is called",
+      "answer": "Pisciculture",
+      "explanation": "Pisciculture is the branch of agriculture that deals with fish farming and rearing. It involves breeding, raising, and harvesting fish in controlled environments such as ponds, tanks, or enclosures.\n\nপিসিকালচার হলো কৃষির একটি শাখা যা মাছ চাষ ও পালনের সাথে সম্পর্কিত। এতে পুকুর, ট্যাংক বা ঘেরে নিয়ন্ত্রিত পরিবেশে মাছের প্রজনন, বৃদ্ধি এবং আহরণ অন্তর্ভুক্ত থাকে। বাংলাদেশে মৎস্য চাষ একটি গুরুত্বপূর্ণ কৃষি কার্যক্রম।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "written",
+      "question": "Type of soils hold more water",
+      "answer": "Clay soil",
+      "explanation": "Clay soil has the highest water-holding capacity among all soil types due to its very fine particles and small pore spaces. The tiny particles create more surface area, which allows clay to retain water through capillary action and adsorption.\n\nকাদামাটি বা এঁটেল মাটি সব ধরনের মাটির মধ্যে সবচেয়ে বেশি পানি ধারণ করতে পারে কারণ এর কণা অত্যন্ত সূক্ষ্ম এবং ছিদ্র ছোট। ক্ষুদ্র কণাগুলো বেশি পৃষ্ঠতল তৈরি করে, যা কৈশিক ক্রিয়া এবং শোষণের মাধ্যমে পানি ধরে রাখতে সাহায্য করে।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "written",
+      "question": "The branch of agriculture that deals with rearing of silkworm is called",
+      "answer": "Sericulture",
+      "explanation": "Sericulture is the cultivation of silkworms for silk production. It involves breeding silkworms, feeding them with mulberry leaves, and harvesting silk from their cocoons. This is an important agro-based industry.\n\nসেরিকালচার হলো রেশম উৎপাদনের জন্য রেশম পোকা পালন। এতে রেশম পোকার প্রজনন, তুঁত পাতা খাওয়ানো এবং গুটি থেকে রেশম সংগ্রহ করা হয়। এটি একটি গুরুত্বপূর্ণ কৃষিভিত্তিক শিল্প। বাংলাদেশের রাজশাহী অঞ্চলে রেশম চাষ প্রচলিত।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "written",
+      "question": "A pedogenic regime in which humic (organic) acid E to B horizon",
+      "answer": "Podzolization",
+      "explanation": "Podzolization is a soil-forming process where organic acids move from the E horizon (eluviation layer) to the B horizon (illuviation layer). This process is common in acidic, cool, and humid climates, typically under coniferous forests. It results in the formation of podzol soils with distinct horizons.\n\nপডজোলাইজেশন হলো একটি মৃত্তিকা গঠন প্রক্রিয়া যেখানে জৈব এসিড E স্তর থেকে B স্তরে স্থানান্তরিত হয়। এই প্রক্রিয়া অম্লীয়, শীতল এবং আর্দ্র জলবায়ুতে সাধারণত শঙ্কুবৃক্ষ বনাঞ্চলে দেখা যায়। এর ফলে সুস্পষ্ট স্তরবিশিষ্ট পডজল মাটি তৈরি হয়।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "written",
+      "question": "Which one of the following crops requires continuous semi aquatic condition for cultivation?",
+      "answer": "Rice",
+      "explanation": "Rice (Oryza sativa) requires continuous semi-aquatic conditions for cultivation, especially during the vegetative and reproductive stages. Paddy fields are kept flooded with 5-10 cm of water for most of the growing period, which helps control weeds, maintains soil temperature, and provides favorable conditions for rice growth.\n\nধান (Oryza sativa) চাষের জন্য ক্রমাগত আধা-জলজ অবস্থার প্রয়োজন, বিশেষত জীবনবৃদ্ধি এবং প্রজনন পর্যায়ে। ধানক্ষেত বেশিরভাগ সময় ৫-১০ সেমি পানিতে ডুবিয়ে রাখা হয়, যা আগাছা নিয়ন্ত্রণ, মাটির তাপমাত্রা বজায় রাখতে এবং ধানের বৃদ্ধির জন্য অনুকূল পরিবেশ তৈরি করে। বাংলাদেশের প্রধান ফসল ধান এই কারণেই জলাবদ্ধ জমিতে ভালো জন্মায়।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "written",
+      "question": "Which of the following is a cash crop?",
+      "answer": "Rubber",
+      "explanation": "Rubber is a cash crop, meaning it is grown primarily for sale and profit rather than for the farmer's own consumption. Cash crops are cultivated for commercial purposes. Other examples include cotton, tea, coffee, sugarcane, and jute.\n\nরবার একটি অর্থকরী ফসল, যার অর্থ এটি মূলত বিক্রয় এবং লাভের জন্য চাষ করা হয়, কৃষকের নিজস্ব ব্যবহারের জন্য নয়। অর্থকরী ফসল বাণিজ্যিক উদ্দেশ্যে চাষ করা হয়। অন্যান্য উদাহরণ হলো তুলা, চা, কফি, আখ এবং পাট। বাংলাদেশে পার্বত্য চট্টগ্রাম অঞ্চলে রবার চাষ হয়।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "written",
+      "question": "Which of the following soils has low humus content?",
+      "answer": "Desertic soil",
+      "explanation": "Desert soils (Desertic/Aridisols) have very low humus content because of minimal vegetation, low rainfall, and high temperatures that accelerate organic matter decomposition. These soils are typically sandy, dry, and lack organic matter accumulation.\n\nমরুভূমির মাটিতে (ডেজার্টিক) হিউমাসের পরিমাণ খুবই কম থাকে কারণ এখানে গাছপালা কম, বৃষ্টিপাত কম এবং উচ্চ তাপমাত্রা জৈব পদার্থের পচন ত্বরান্বিত করে। এই মাটি সাধারণত বালুময়, শুষ্ক এবং জৈব পদার্থের সঞ্চয় কম থাকে।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "written",
+      "question": "Which of the following soils is most suitable for cultivation of cereals?",
+      "answer": "Alluvial soils",
+      "explanation": "Alluvial soils are most suitable for cereal cultivation because they are rich in nutrients, well-drained, and have good water-holding capacity. These soils are formed by river deposits and are highly fertile. They are ideal for growing wheat, rice, maize, and other cereals.\n\nপলিমাটি শস্য চাষের জন্য সবচেয়ে উপযুক্ত কারণ এতে পুষ্টি উপাদান বেশি থাকে, ভালো নিষ্কাশন ব্যবস্থা এবং পানি ধারণ ক্ষমতা রয়েছে। নদীর পলি থেকে এই মাটি তৈরি হয় এবং অত্যন্ত উর্বর। এটি গম, ধান, ভুট্টা এবং অন্যান্য শস্য চাষের জন্য আদর্শ। বাংলাদেশের বেশিরভাগ কৃষিজমি পলিমাটি দিয়ে গঠিত।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "written",
+      "question": "Which crop is generally sown to restore and maintain soil fertility?",
+      "answer": "Pulses",
+      "explanation": "Pulses (legumes) are sown to restore and maintain soil fertility because they have nitrogen-fixing bacteria (Rhizobium) in their root nodules. These bacteria convert atmospheric nitrogen into forms usable by plants, thereby enriching the soil with nitrogen naturally. Examples include lentils, peas, chickpeas, and beans.\n\nডাল জাতীয় ফসল (শিম্বী) মাটির উর্বরতা পুনরুদ্ধার এবং বজায় রাখার জন্য বপন করা হয় কারণ এদের শিকড়ের গুটিতে নাইট্রোজেন সংবন্ধনকারী ব্যাকটেরিয়া (রাইজোবিয়াম) থাকে। এই ব্যাকটেরিয়া বায়ুমণ্ডলীয় নাইট্রোজেনকে উদ্ভিদের ব্যবহারযোগ্য রূপে রূপান্তরিত করে, ফলে মাটিতে প্রাকৃতিকভাবে নাইট্রোজেন সমৃদ্ধ হয়। উদাহরণ হলো মসুর, মটর, ছোলা এবং শিম। বাংলাদেশে ডাল চাষ মাটির স্বাস্থ্য রক্ষায় গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "written",
+      "question": "Which of the following types of soil have a maximum capacity to retain water?",
+      "answer": "Regur soil",
+      "explanation": "Regur soil (Black cotton soil) has maximum water retention capacity. It is rich in clay content, particularly montmorillonite clay, which can expand when wet and retain large amounts of water. This soil is highly suitable for cotton cultivation and is found in volcanic regions.\n\nরেগুর মাটি (কালো তুলা মাটি) সর্বোচ্চ পানি ধারণ ক্ষমতা রাখে। এতে প্রচুর পরিমাণে কাদামাটি থাকে, বিশেষত মন্টমোরিলোনাইট কাদা, যা ভেজা হলে প্রসারিত হয় এবং প্রচুর পানি ধরে রাখতে পারে। এই মাটি তুলা চাষের জন্য অত্যন্ত উপযুক্ত এবং আগ্নেয়গিরি অঞ্চলে পাওয়া যায়। ভারতের দাক্ষিণাত্য মালভূমিতে এই মাটি বেশি দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "written",
+      "question": "What is the color of laterite soil?",
+      "answer": "Red",
+      "explanation": "Laterite soil is red in color due to high iron oxide content. This soil is formed in hot and humid tropical regions through intense leaching. The red color comes from the oxidation of iron compounds. Laterite soils are typically found in areas with high rainfall and temperature.\n\nল্যাটেরাইট মাটির রং লাল কারণ এতে প্রচুর পরিমাণে লৌহ অক্সাইড থাকে। এই মাটি উষ্ণ ও আর্দ্র ক্রান্তীয় অঞ্চলে তীব্র নিক্ষালনের মাধ্যমে তৈরি হয়। লোহার যৌগের জারণ থেকে লাল রং আসে। ল্যাটেরাইট মাটি সাধারণত বেশি বৃষ্টিপাত এবং তাপমাত্রা সম্পন্ন এলাকায় পাওয়া যায়। বাংলাদেশের পার্বত্য চট্টগ্রাম এবং সিলেটের কিছু অঞ্চলে এই মাটি দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "written",
+      "question": "Which is not a natural factor affecting soil fertility?",
+      "answer": "Air",
+      "explanation": "Air is not typically classified as a natural factor affecting soil fertility. The main natural factors affecting soil fertility are climate, parent material, topography, organisms, and time. While soil air (oxygen in soil pores) is important for soil health, atmospheric air itself is not considered a direct natural factor of soil fertility.\n\nবায়ু সাধারণত মাটির উর্বরতা প্রভাবিত করার প্রাকৃতিক উপাদান হিসেবে শ্রেণিবদ্ধ করা হয় না। মাটির উর্বরতাকে প্রভাবিত করার প্রধান প্রাকৃতিক উপাদান হলো জলবায়ু, মূল উপাদান, ভূমিরূপ, জীবসমূহ এবং সময়। যদিও মাটির বাতাস (মাটির ছিদ্রে অক্সিজেন) মাটির স্বাস্থ্যের জন্য গুরুত্বপূর্ণ, বায়ুমণ্ডলীয় বাতাস নিজেই মাটির উর্বরতার প্রত্যক্ষ প্রাকৃতিক উপাদান হিসেবে বিবেচিত হয় না।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "written",
+      "question": "The major fungi that affect food-grains in storage are",
+      "answer": "Mucor",
+      "explanation": "Mucor is a major fungal genus that affects stored food grains. It causes spoilage and contamination of stored cereals and pulses. Other common storage fungi include Aspergillus and Penicillium. These fungi thrive in warm and humid storage conditions and can produce mycotoxins.\n\nMucor একটি প্রধান ছত্রাক গণ যা সংরক্ষিত খাদ্য শস্যকে আক্রান্ত করে। এটি সংরক্ষিত শস্য এবং ডালের পচন ও দূষণ ঘটায়। অন্যান্য সাধারণ সংরক্ষণ ছত্রাক হলো Aspergillus এবং Penicillium। এই ছত্রাকগুলো উষ্ণ এবং আর্দ্র সংরক্ষণ পরিবেশে বৃদ্ধি পায় এবং মাইকোটক্সিন তৈরি করতে পারে। বাংলাদেশে ভান্ডারে সংরক্ষিত শস্যে এই ছত্রাকের আক্রমণ একটি বড় সমস্যা।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "written",
+      "question": "Which elements are useful in energy storage, transfer and bonding?",
+      "answer": "NKS (Nitrogen, Potassium, Sulphur)",
+      "explanation": "NKS refers to Nitrogen (N), Potassium (K), and Sulphur (S). These elements play crucial roles in plant metabolism: Nitrogen is essential for protein synthesis and enzymes; Potassium helps in enzyme activation and osmotic regulation; Sulphur is important for protein structure and some amino acids. However, Phosphorus (P) is the primary element for energy storage and transfer through ATP.\n\nNKS বলতে নাইট্রোজেন (N), পটাশিয়াম (K) এবং সালফার (S) বোঝায়। এই উপাদানগুলো উদ্ভিদের বিপাক ক্রিয়ায় গুরুত্বপূর্ণ ভূমিকা পালন করে: নাইট্রোজেন প্রোটিন সংশ্লেষণ এবং এনজাইমের জন্য অপরিহার্য; পটাশিয়াম এনজাইম সক্রিয়করণ এবং অভিস্রবণ নিয়ন্ত্রণে সাহায্য করে; সালফার প্রোটিন গঠন এবং কিছু অ্যামিনো এসিডের জন্য গুরুত্বপূর্ণ। তবে ফসফরাস (P) ATP এর মাধ্যমে শক্তি সংরক্ষণ এবং স্থানান্তরের প্রধান উপাদান।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "written",
+      "question": "Effective cause of atmospheric pressure is not",
+      "answer": "Soil erosion",
+      "explanation": "Soil erosion is not a cause of atmospheric pressure. Atmospheric pressure is caused by the weight of air molecules in the atmosphere, which is influenced by altitude, temperature, and air density. Soil erosion is a land degradation process caused by wind, water, and human activities, and has no relation to atmospheric pressure.\n\nমাটি ক্ষয় বায়ুমণ্ডলীয় চাপের কারণ নয়। বায়ুমণ্ডলীয় চাপ বায়ুমণ্ডলে বায়ু অণুর ওজনের কারণে সৃষ্টি হয়, যা উচ্চতা, তাপমাত্রা এবং বায়ুর ঘনত্ব দ্বারা প্রভাবিত হয়। মাটি ক্ষয় একটি ভূমি অবনমন প্রক্রিয়া যা বায়ু, পানি এবং মানুষের কার্যকলাপ দ্বারা সৃষ্ট হয়, এবং বায়ুমণ্ডলীয় চাপের সাথে এর কোনো সম্পর্ক নেই।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "written",
+      "question": "A plant breeder wants to develop a disease resistant variety. What should he do first?",
+      "answer": "Selection",
+      "explanation": "Selection is the first step in developing a disease-resistant variety. The plant breeder must first identify and select plants that show natural resistance to the disease from existing populations. After selection, these resistant plants can be used for further breeding through hybridization, mutation, or other techniques.\n\nনির্বাচন বা সিলেকশন হলো রোগ প্রতিরোধী জাত উন্নয়নের প্রথম ধাপ। উদ্ভিদ প্রজননবিদকে প্রথমে বিদ্যমান জনগোষ্ঠী থেকে রোগের বিরুদ্ধে প্রাকৃতিক প্রতিরোধ ক্ষমতা সম্পন্ন গাছ চিহ্নিত এবং নির্বাচন করতে হবে। নির্বাচনের পর, এই প্রতিরোধী গাছগুলোকে সংকরায়ণ, পরিব্যক্তি বা অন্যান্য কৌশলের মাধ্যমে আরও প্রজননের জন্য ব্যবহার করা যেতে পারে। বাংলাদেশে বিভিন্ন ফসলের রোগ প্রতিরোধী জাত উন্নয়নে এই পদ্ধতি ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "written",
+      "question": "What is the relation between a nitrogen-fixing bacteria near the root nodule?",
+      "answer": "Mutualism",
+      "explanation": "The relationship between nitrogen-fixing bacteria (like Rhizobium) and legume root nodules is mutualism, a symbiotic relationship where both organisms benefit. The bacteria convert atmospheric nitrogen into ammonia for the plant, while the plant provides carbohydrates and shelter to the bacteria.\n\nনাইট্রোজেন সংবন্ধনকারী ব্যাকটেরিয়া (যেমন রাইজোবিয়াম) এবং শিম্বীজাতীয় উদ্ভিদের শিকড় গুটির মধ্যে সম্পর্ক হলো মিউচুয়ালিজম বা পারস্পরিক সহযোগিতা, একটি সহজীবী সম্পর্ক যেখানে উভয় জীব উপকৃত হয়। ব্যাকটেরিয়া বায়ুমণ্ডলীয় নাইট্রোজেনকে উদ্ভিদের জন্য অ্যামোনিয়ায় রূপান্তরিত করে, আর উদ্ভিদ ব্যাকটেরিয়াকে কার্বোহাইড্রেট এবং আশ্রয় প্রদান করে। এই সম্পর্ক মাটির উর্বরতা বৃদ্ধিতে গুরুত্বপূর্ণ ভূমিকা পালন করে।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "written",
+      "question": "Foot and mouth disease of cattle, buffalo, camels, sheep, goats, deer and pigs is caused by",
+      "answer": "Virus",
+      "explanation": "Foot and Mouth Disease (FMD) is caused by a virus, specifically the FMD virus (FMDV), which belongs to the genus Aphthovirus of the family Picornaviridae. It is a highly contagious viral disease affecting cloven-hoofed animals. The disease causes fever, blisters in the mouth and on feet.\n\nক্ষুরা রোগ (Foot and Mouth Disease - FMD) একটি ভাইরাস দ্বারা সৃষ্ট, বিশেষত FMD ভাইরাস (FMDV), যা Picornaviridae পরিবারের Aphthovirus গণের অন্তর্ভুক্ত। এটি খুরযুক্ত প্রাণীদের আক্রান্ত করে এমন একটি অত্যন্ত সংক্রামক ভাইরাসজনিত রোগ। এই রোগে জ্বর, মুখে এবং পায়ে ফোস্কা সৃষ্টি হয়। বাংলাদেশে গবাদি পশুর এই রোগ একটি প্রধান সমস্যা।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "written",
+      "question": "What is present in the carbon cycle?",
+      "answer": "Plant respiration",
+      "explanation": "Plant respiration is an important component of the carbon cycle. During respiration, plants break down glucose to release energy, producing carbon dioxide (CO₂) which is released back into the atmosphere. Other components of the carbon cycle include photosynthesis, decomposition, and combustion.\n\nউদ্ভিদের শ্বসন কার্বন চক্রের একটি গুরুত্বপূর্ণ উপাদান। শ্বসনের সময়, উদ্ভিদ শক্তি মুক্ত করতে গ্লুকোজ ভাঙে এবং কার্বন ডাই অক্সাইড (CO₂) উৎপন্ন করে যা বায়ুমণ্ডলে ফিরে যায়। কার্বন চক্রের অন্যান্য উপাদানগুলোর মধ্যে রয়েছে সালোকসংশ্লেষণ, পচন এবং দহন। এই চক্র পরিবেশে কার্বনের ভারসাম্য বজায় রাখে।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "written",
+      "question": "The desired varieties of economically useful crops are raised by",
+      "answer": "Hybridization",
+      "explanation": "Hybridization is the process of crossing two genetically different plants to combine desirable traits from both parents. This technique is widely used to develop improved crop varieties with higher yield, disease resistance, drought tolerance, and better quality. It is a fundamental method in plant breeding programs.\n\nসংকরায়ণ হলো দুটি জিনগতভাবে ভিন্ন উদ্ভিদের মধ্যে সংকরণের প্রক্রিয়া যাতে উভয় পিতামাতার কাঙ্ক্ষিত বৈশিষ্ট্য একত্রিত করা যায়। এই কৌশলটি উচ্চ ফলনশীল, রোগ প্রতিরোধী, খরা সহনশীল এবং উন্নত মানের ফসলের জাত উন্নয়নে ব্যাপকভাবে ব্যবহৃত হয়। এটি উদ্ভিদ প্রজনন কর্মসূচিতে একটি মৌলিক পদ্ধতি। বাংলাদেশে বিভিন্ন ফসলের উন্নত জাত এই পদ্ধতিতে উদ্ভাবিত হয়েছে।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "written",
+      "question": "Selection of homozygous plant is",
+      "answer": "Pure line selection",
+      "explanation": "Pure line selection is the method of selecting homozygous plants. A pure line consists of descendants from a single homozygous self-pollinated plant. In this method, individual plants are selected and self-pollinated repeatedly to obtain genetically uniform, homozygous lines with desired characteristics.\n\nপিউর লাইন সিলেকশন বা বিশুদ্ধ সারি নির্বাচন হলো হোমোজাইগাস উদ্ভিদ নির্বাচনের পদ্ধতি। একটি বিশুদ্ধ সারি একটি একক হোমোজাইগাস স্ব-পরাগায়িত উদ্ভিদের বংশধরদের নিয়ে গঠিত। এই পদ্ধতিতে, স্বতন্ত্র উদ্ভিদ নির্বাচন করা হয় এবং কাঙ্ক্ষিত বৈশিষ্ট্য সহ জিনগতভাবে অভিন্ন, হোমোজাইগাস লাইন পেতে বারবার স্ব-পরাগায়ন করানো হয়। এই পদ্ধতি স্ব-পরাগী ফসলে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "written",
+      "question": "High milk yielding varieties of cows are obtained by",
+      "answer": "Super ovulation, artificial insemination, use of surrogate mothers (all)",
+      "explanation": "High milk-yielding varieties of cows are obtained through a combination of advanced reproductive technologies: Super ovulation increases the number of eggs produced; Artificial insemination allows use of superior bull genetics; Surrogate mothers (embryo transfer) enable multiplication of superior genetics from elite cows. These techniques together accelerate genetic improvement.\n\nউচ্চ দুধ উৎপাদনশীল গাভীর জাত উন্নত প্রজনন প্রযুক্তির সমন্বয়ে পাওয়া যায়: সুপার ওভুলেশন ডিমের সংখ্যা বৃদ্ধি করে; কৃত্রিম প্রজনন উন্নত ষাঁড়ের জিনতত্ত্ব ব্যবহারের সুযোগ দেয়; সারোগেট মাদার (ভ্রূণ স্থানান্তর) অভিজাত গাভী থেকে উন্নত জিনতত্ত্বের বহুগুণ বৃদ্ধি করতে সক্ষম করে। এই কৌশলগুলো একসাথে জিনগত উন্নতি ত্বরান্বিত করে। বাংলাদেশে দুগ্ধ খামারে এই প্রযুক্তিগুলো ব্যবহার বৃদ্ধি পাচ্ছে।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "written",
+      "question": "Intense and prolonged episodes of freezing and thawing cycles often produces a soil structure that is what?",
+      "answer": "Platy",
+      "explanation": "Platy soil structure is often produced by intense and prolonged freezing and thawing cycles. This structure is characterized by horizontal, plate-like layers or aggregates. The expansion and contraction of ice during freeze-thaw cycles create horizontal planes of weakness, resulting in thin, flat, plate-like structural units.\n\nতীব্র এবং দীর্ঘস্থায়ী হিমায়ন এবং গলন চক্র প্রায়ই প্লাটি মাটির গঠন তৈরি করে। এই গঠন অনুভূমিক, প্লেটের মতো স্তর বা সমষ্টি দ্বারা চিহ্নিত। হিমায়ন-গলন চক্রে বরফের প্রসারণ এবং সংকোচন অনুভূমিক দুর্বলতার তল তৈরি করে, যার ফলে পাতলা, সমতল, প্লেটের মতো কাঠামোগত একক তৈরি হয়। এই ধরনের গঠন শীতপ্রধান অঞ্চলে বেশি দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "written",
+      "question": "A soil with a dark brown or black color is indicative of what?",
+      "answer": "Considerable organic matter content",
+      "explanation": "Dark brown or black colored soil indicates considerable organic matter content. Humus, the decomposed organic matter, gives soil its dark color. Soils rich in organic matter are generally more fertile, have better water retention, improved structure, and enhanced microbial activity.\n\nগাঢ় বাদামী বা কালো রঙের মাটি যথেষ্ট পরিমাণে জৈব পদার্থের উপস্থিতি নির্দেশ করে। হিউমাস, যা পচা জৈব পদার্থ, মাটিকে এর গাঢ় রং দেয়। জৈব পদার্থে সমৃদ্ধ মাটি সাধারণত বেশি উর্বর হয়, ভালো পানি ধারণ ক্ষমতা থাকে, উন্নত গঠন এবং বর্ধিত অণুজীব কার্যকলাপ থাকে। বাংলাদেশে পলিমাটিতে জৈব পদার্থের উপস্থিতি মাটির উর্বরতা বৃদ্ধি করে।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "written",
+      "question": "What is the most important factor in determining soil characteristics?",
+      "answer": "Climate",
+      "explanation": "Climate is the most important factor in determining soil characteristics. It influences temperature, precipitation, and weathering processes that affect soil formation, organic matter decomposition, and mineral weathering. Climate determines the rate and type of soil development through its control over physical, chemical, and biological processes.\n\nজলবায়ু মাটির বৈশিষ্ট্য নির্ধারণে সবচেয়ে গুরুত্বপূর্ণ উপাদান। এটি তাপমাত্রা, বৃষ্টিপাত এবং আবহবিকার প্রক্রিয়াকে প্রভাবিত করে যা মাটি গঠন, জৈব পদার্থের পচন এবং খনিজ আবহবিকারকে প্রভাবিত করে। জলবায়ু শারীরিক, রাসায়নিক এবং জৈবিক প্রক্রিয়ার উপর নিয়ন্ত্রণের মাধ্যমে মাটির বিকাশের হার এবং প্রকার নির্ধারণ করে। বাংলাদেশের ক্রান্তীয় জলবায়ু এখানকার মাটির বৈশিষ্ট্য গঠনে প্রধান ভূমিকা পালন করে।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "written",
+      "question": "Moisture that is held at the surface of soil particles by surface tension is called",
+      "answer": "Capillary water",
+      "explanation": "Capillary water is the moisture held at the surface of soil particles by surface tension and capillary forces. It is held in the small pores between soil particles and is the main source of water available to plants. This water moves through the soil by capillary action against gravity.\n\nকৈশিক পানি বা ক্যাপিলারি ওয়াটার হলো পৃষ্ঠ টান এবং কৈশিক শক্তি দ্বারা মাটির কণার পৃষ্ঠে ধারণকৃত আর্দ্রতা। এটি মাটির কণার মধ্যে ছোট ছিদ্রে ধরে রাখা হয় এবং উদ্ভিদের জন্য উপলব্ধ পানির প্রধান উৎস। এই পানি মাধ্যাকর্ষণের বিরুদ্ধে কৈশিক ক্রিয়ার মাধ্যমে মাটিতে চলাচল করে। উদ্ভিদের শিকড় এই পানি সহজে শোষণ করতে পারে।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "written",
+      "question": "Which country is the member of G-8?",
+      "answer": "None of these",
+      "explanation": "The answer 'None of these' suggests that none of the options provided in the original question were G-8 members. The G-8 (now G-7 after Russia's suspension in 2014) originally consisted of Canada, France, Germany, Italy, Japan, Russia, United Kingdom, and United States. Note: If the question was asked in 2013, Russia was still a member making it G-8.\n\n'None of these' উত্তরটি নির্দেশ করে যে মূল প্রশ্নে দেওয়া অপশনগুলোর কোনটিই G-8 সদস্য ছিল না। G-8 (২০১৪ সালে রাশিয়ার স্থগিতাদেশের পর এখন G-7) মূলত কানাডা, ফ্রান্স, জার্মানি, ইটালি, জাপান, রাশিয়া, যুক্তরাজ্য এবং মার্কিন যুক্তরাষ্ট্র নিয়ে গঠিত ছিল। উল্লেখ্য: ২০১৩ সালে প্রশ্ন করা হলে, রাশিয়া তখনও সদস্য ছিল যা G-8 হিসেবে পরিচিত ছিল।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "written",
+      "question": "Which one of the landlocked country?",
+      "answer": "Afghanistan/Nepal/Bhutan (Note: Australia in source is incorrect)",
+      "explanation": "The provided answer 'Australia' is factually incorrect. Australia is not a landlocked country; it is an island continent surrounded by oceans. Landlocked countries have no direct access to the ocean. Examples of landlocked countries include Afghanistan, Nepal, Bhutan, Mongolia, and many others in Central Asia and Africa.\n\nপ্রদত্ত উত্তর 'অস্ট্রেলিয়া' প্রকৃতপক্ষে ভুল। অস্ট্রেলিয়া স্থলবেষ্টিত দেশ নয়; এটি মহাসাগর দ্বারা বেষ্টিত একটি দ্বীপ মহাদেশ। স্থলবেষ্টিত দেশের সমুদ্রে সরাসরি প্রবেশাধিকার নেই। স্থলবেষ্টিত দেশের উদাহরণ হলো আফগানিস্তান, নেপাল, ভুটান, মঙ্গোলিয়া এবং মধ্য এশিয়া ও আফ্রিকার আরও অনেক দেশ। বাংলাদেশের প্রতিবেশী নেপাল এবং ভুটান স্থলবেষ্টিত দেশ।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "written",
+      "question": "Where is IMF Headquarters?",
+      "answer": "Washington DC",
+      "explanation": "The International Monetary Fund (IMF) headquarters is located in Washington DC, United States. The IMF was established in 1945 and works to promote global monetary cooperation, financial stability, international trade, high employment, and sustainable economic growth.\n\nআন্তর্জাতিক মুদ্রা তহবিল (IMF) এর সদর দপ্তর মার্কিন যুক্তরাষ্ট্রের ওয়াশিংটন ডিসিতে অবস্থিত। IMF ১৯৪৫ সালে প্রতিষ্ঠিত হয়েছিল এবং বৈশ্বিক মুদ্রা সহযোগিতা, আর্থিক স্থিতিশীলতা, আন্তর্জাতিক বাণিজ্য, উচ্চ কর্মসংস্থান এবং টেকসই অর্থনৈতিক প্রবৃদ্ধি প্রচারের জন্য কাজ করে। বাংলাদেশ IMF এর সদস্য দেশ।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "written",
+      "question": "Which place of India is connected with Bangladesh?",
+      "answer": "Cooch Behar (Koch Bihar)",
+      "explanation": "Cooch Behar (Koch Bihar) is a district in West Bengal, India, that shares a border with Bangladesh. It is located in the northeastern part of India and has several border points with Bangladesh. The district was historically a princely state and has significant cultural and economic connections with Bangladesh.\n\nকোচবিহার ভারতের পশ্চিমবঙ্গের একটি জেলা যা বাংলাদেশের সাথে সীমান্ত ভাগ করে। এটি ভারতের উত্তর-পূর্ব অংশে অবস্থিত এবং বাংলাদেশের সাথে বেশ কয়েকটি সীমান্ত পয়েন্ট রয়েছে। জেলাটি ঐতিহাসিকভাবে একটি রাজকীয় রাজ্য ছিল এবং বাংলাদেশের সাথে এর উল্লেখযোগ্য সাংস্কৃতিক ও অর্থনৈতিক সংযোগ রয়েছে। বাংলাদেশের সাথে ভারতের মোট ৫টি রাজ্যের সীমান্ত রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "written",
+      "question": "Submarine Cable started in Bangladesh",
+      "answer": "2006",
+      "explanation": "Bangladesh was connected to the submarine cable network in 2006 through the SEA-ME-WE 4 (South East Asia-Middle East-Western Europe 4) submarine cable system. This was a milestone in Bangladesh's telecommunications history, providing high-speed international connectivity and significantly improving internet and communication services.\n\nবাংলাদেশ ২০০৬ সালে SEA-ME-WE 4 (সাউথ ইস্ট এশিয়া-মিডল ইস্ট-ওয়েস্টার্ন ইউরোপ ৪) সাবমেরিন ক্যাবল সিস্টেমের মাধ্যমে সাবমেরিন ক্যাবল নেটওয়ার্কের সাথে সংযুক্ত হয়। এটি বাংলাদেশের টেলিযোগাযোগ ইতিহাসে একটি মাইলফলক ছিল, যা উচ্চ-গতির আন্তর্জাতিক সংযোগ প্রদান করে এবং ইন্টারনেট ও যোগাযোগ সেবার উল্লেখযোগ্য উন্নতি করে। পরবর্তীতে বাংলাদেশ আরও সাবমেরিন ক্যাবলের সাথে সংযুক্ত হয়।",
+      "image": null
+    }
+  ]
+}
