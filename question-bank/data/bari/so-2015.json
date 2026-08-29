@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "title": "BARI Scientific Officer Recruitment Exam",
+    "institute": "Bangladesh Agricultural Research Institute (BARI)",
+    "year": 2015,
+    "position": "Scientific Officer",
+    "totalQuestions": 60,
+    "type": "free",
+    "examDate": "2015",
+    "duration": "N/A",
+    "totalMarks": "N/A"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Which type of seed is denoted by yellow tag?",
+      "options": ["Breeder seed", "Foundation seed", "Certified seed", "Truthfully labeled seed", "None of these"],
+      "answer": 3,
+      "explanation": "Yellow tag is used for Truthfully Labeled Seed (TLS). Different colored tags are used to identify different classes of seeds: Golden yellow for Breeder seed, White for Foundation seed, Azure blue for Certified seed, and Yellow (Opal) for Truthfully Labeled seed.\n\nহলুদ ট্যাগ ট্রুথফুলি লেবেলড সিড (TLS) এর জন্য ব্যবহৃত হয়। বিভিন্ন শ্রেণীর বীজ চিহ্নিত করতে বিভিন্ন রঙের ট্যাগ ব্যবহার করা হয়: ব্রিডার সিডের জন্য সোনালী হলুদ, ফাউন্ডেশন সিডের জন্য সাদা, সার্টিফাইড সিডের জন্য আকাশী নীল এবং ট্রুথফুলি লেবেলড সিডের জন্য হলুদ (ওপাল)। বাংলাদেশে বীজ আইন অনুযায়ী এই ট্যাগিং সিস্টেম অনুসরণ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which is not an essential plant nutrient but plant uptake it or helpful for plants?",
+      "options": ["Boron", "Silicon", "Copper", "Iodine", "None of these"],
+      "answer": 1,
+      "explanation": "Silicon is not classified as an essential plant nutrient but is beneficial for plant growth and development. It helps in strengthening cell walls, improving resistance to diseases and pests, and enhancing tolerance to various stresses. Boron and Copper are essential micronutrients.\n\nসিলিকন একটি অপরিহার্য উদ্ভিদ পুষ্টি উপাদান হিসেবে শ্রেণীবদ্ধ নয় তবে উদ্ভিদের বৃদ্ধি ও বিকাশের জন্য উপকারী। এটি কোষ প্রাচীর শক্তিশালী করতে, রোগ ও পোকামাকড় প্রতিরোধ ক্ষমতা বৃদ্ধি করতে এবং বিভিন্ন চাপ সহনশীলতা বাড়াতে সাহায্য করে। বোরন এবং কপার অপরিহার্য মাইক্রোনিউট্রিয়েন্ট। ধান গাছে সিলিকন ব্লাস্ট রোগ প্রতিরোধে সহায়ক।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "First blight of sugarcane is the causes of deficiency of -",
+      "options": ["Manganese (Mn)", "Potassium (K)", "Phosphate (P)", "Magnesium (Mg)", "None of these"],
+      "answer": 0,
+      "explanation": "First blight or Frenching disease of sugarcane is caused by Manganese (Mn) deficiency. Symptoms include interveinal chlorosis in young leaves with green veins, resulting in a striped appearance.\n\nআখের ফার্স্ট ব্লাইট বা ফ্রেঞ্চিং রোগ ম্যাঙ্গানিজ (Mn) এর ঘাটতির কারণে হয়। লক্ষণগুলির মধ্যে রয়েছে কচি পাতায় শিরা মধ্যবর্তী স্থানে হলুদাভ হওয়া যেখানে শিরাগুলি সবুজ থাকে, ফলে ডোরাকাটা চেহারা দেখা যায়। ম্যাঙ্গানিজ ক্লোরোফিল সংশ্লেষণ এবং এনজাইম সক্রিয়করণে গুরুত্বপূর্ণ ভূমিকা পালন করে।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Little finger is a variety of -",
+      "options": ["Egg plant", "Carrot", "Banana", "Both a & b", "None of these"],
+      "answer": 3,
+      "explanation": "Little finger is a variety name used for both eggplant and carrot. It describes small, finger-sized vegetables that are tender and suitable for various culinary uses.\n\nলিটল ফিঙ্গার বেগুন এবং গাজর উভয়ের জন্য ব্যবহৃত একটি জাতের নাম। এটি ছোট, আঙুলের আকারের সবজি বর্ণনা করে যা কোমল এবং বিভিন্ন রান্নার জন্য উপযুক্ত। এই জাতগুলি সাধারণত দ্রুত বর্ধনশীল এবং অল্প জায়গায় চাষ করা যায়।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Control measure of damping off disease is",
+      "options": ["Captan (sold as Captan)", "Metalaxyl (sold as Subdue or Apron)", "Iprodione (sold as Chipco)", "Etridiazole and Thiophanate-methyl (Sold as Banrot)", "None of these"],
+      "answer": 0,
+      "explanation": "Captan is an effective fungicide for controlling damping off disease, which is caused by soil-borne fungi like Pythium, Rhizoctonia, and Fusarium. It is applied as seed treatment or soil drench. Other mentioned fungicides are also effective but Captan is widely used and recommended.\n\nক্যাপটান ড্যাম্পিং অফ রোগ নিয়ন্ত্রণের জন্য একটি কার্যকর ছত্রাকনাশক, যা পিথিয়াম, রাইজোকটোনিয়া এবং ফিউজারিয়ামের মতো মাটিবাহিত ছত্রাক দ্বারা সৃষ্ট হয়। এটি বীজ শোধন বা মাটিতে প্রয়োগ করা হয়। অন্যান্য উল্লিখিত ছত্রাকনাশকগুলিও কার্যকর তবে ক্যাপটান ব্যাপকভাবে ব্যবহৃত এবং সুপারিশকৃত। চারা অবস্থায় এই রোগ গাছের গোড়া পচিয়ে মৃত্যু ঘটায়।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "If high level of N appears in fluid, it is a sign of -",
+      "options": ["Nutrient burn", "Fertilizer burn", "Acid burn", "All of these", "None of these"],
+      "answer": 1,
+      "explanation": "High level of nitrogen (N) in plant fluid is a sign of fertilizer burn. Fertilizer burn occurs when excessive fertilizer is applied, leading to high salt concentration in the soil, which damages plant tissues. Symptoms include browning of leaf tips and margins, wilting, and stunted growth.\n\nউদ্ভিদের তরলে উচ্চ মাত্রার নাইট্রোজেন (N) সার পোড়ার লক্ষণ। অতিরিক্ত সার প্রয়োগের ফলে মাটিতে লবণের ঘনত্ব বেড়ে যায়, যা উদ্ভিদ কোষকে ক্ষতিগ্রস্ত করে। লক্ষণগুলির মধ্যে রয়েছে পাতার অগ্রভাগ ও কিনারা বাদামী হওয়া, নেতিয়ে পড়া এবং বৃদ্ধি বাধাগ্রস্ত হওয়া। সঠিক মাত্রায় সার প্রয়োগ করা উচিত।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Which one is a monocyclic pathogen?",
+      "options": ["Phytophthora infestans", "Xanthomonas phaseoli", "Verticillium dahliae", "All of these", "None of these"],
+      "answer": 2,
+      "explanation": "Verticillium dahliae is a monocyclic pathogen. Monocyclic pathogens complete only one disease cycle per growing season. Verticillium causes wilt diseases and survives in soil as microsclerotia. In contrast, Phytophthora infestans (late blight) is polycyclic with multiple infection cycles per season.\n\nভার্টিসিলিয়াম ডাহলিয়া একটি মনোসাইক্লিক প্যাথোজেন। মনোসাইক্লিক প্যাথোজেন প্রতি ক্রমবর্ধমান মৌসুমে শুধুমাত্র একটি রোগচক্র সম্পন্ন করে। ভার্টিসিলিয়াম উইল্ট রোগ সৃষ্টি করে এবং মাইক্রোস্ক্লেরোশিয়া হিসাবে মাটিতে বেঁচে থাকে। বিপরীতে, ফাইটোফথোরা ইনফেস্ট্যান্স (লেট ব্লাইট) পলিসাইক্লিক যা প্রতি মৌসুমে একাধিক সংক্রমণ চক্র সম্পন্ন করে।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Causal organism of bean rust -",
+      "options": ["Uromyces appendiculatus", "Phakopsora pachyrhizi", "Puccinia sorghi", "Hemileia vastatrix", "None of these"],
+      "answer": 0,
+      "explanation": "Uromyces appendiculatus is the causal organism of bean rust. It is a fungal pathogen that causes rust disease in common beans (Phaseolus vulgaris). The disease appears as reddish-brown pustules on leaves, stems, and pods. Phakopsora pachyrhizi causes soybean rust, Puccinia sorghi causes corn rust, and Hemileia vastatrix causes coffee rust.\n\nইউরোমাইসিস অ্যাপেন্ডিকুলেটাস শিমের রাস্ট রোগের কার্যকারক জীব। এটি একটি ছত্রাক প্যাথোজেন যা সাধারণ শিমে (ফেসিওলাস ভালগারিস) রাস্ট রোগ সৃষ্টি করে। রোগটি পাতা, কান্ড এবং শুঁটিতে লালচে-বাদামী পুস্টুল হিসাবে দেখা দেয়। ফ্যাকোপসোরা প্যাকিরাইজি সয়াবিন রাস্ট, পাক্সিনিয়া সরঘি ভুট্টা রাস্ট এবং হেমিলিয়া ভ্যাস্ট্যাট্রিক্স কফি রাস্ট সৃষ্টি করে।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Glycolysis occurs only in the -",
+      "options": ["Presence of oxygen", "Absence of oxygen", "Presence of oxygen & absence of oxygen", "All of these", "None of these"],
+      "answer": 2,
+      "explanation": "Glycolysis occurs in both the presence and absence of oxygen. It is an anaerobic process that takes place in the cytoplasm and breaks down glucose into pyruvate. In the presence of oxygen, pyruvate enters aerobic respiration (Krebs cycle). In the absence of oxygen, it undergoes fermentation.\n\nগ্লাইকোলাইসিস অক্সিজেনের উপস্থিতি এবং অনুপস্থিতি উভয় ক্ষেত্রেই ঘটে। এটি একটি অ্যানারোবিক প্রক্রিয়া যা সাইটোপ্লাজমে ঘটে এবং গ্লুকোজকে পাইরুভেটে ভেঙে দেয়। অক্সিজেনের উপস্থিতিতে, পাইরুভেট বায়বীয় শ্বসনে (ক্রেবস চক্র) প্রবেশ করে। অক্সিজেনের অনুপস্থিতিতে এটি গাঁজন প্রক্রিয়ায় যায়। এটি শ্বসনের প্রথম ধাপ।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Among the following which one is of Anacardiaceae family?",
+      "options": ["Litchi", "Jackfruit", "Mango", "Banana", "None of these"],
+      "answer": 2,
+      "explanation": "Mango belongs to the Anacardiaceae family. This family includes many economically important plants like mango, cashew, pistachio, and sumac. Litchi belongs to Sapindaceae, Jackfruit to Moraceae, and Banana to Musaceae.\n\nআম Anacardiaceae পরিবারের অন্তর্গত। এই পরিবারে আম, কাজুবাদাম, পেস্তা এবং সুমাকের মতো অনেক অর্থনৈতিকভাবে গুরুত্বপূর্ণ উদ্ভিদ রয়েছে। লিচু Sapindaceae, কাঁঠাল Moraceae এবং কলা Musaceae পরিবারের অন্তর্গত। বাংলাদেশে আম অত্যন্ত জনপ্রিয় ও গুরুত্বপূর্ণ ফল।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Stenocarpy is observed in which fruit?",
+      "options": ["Mango", "Banana", "Watermelon", "Grapes", "None of these"],
+      "answer": 3,
+      "explanation": "Stenocarpy is observed in grapes. It refers to the development of seedless fruits through parthenocarpy or stenospermocarpic process where seed development is aborted at early stages, resulting in small, undeveloped seed traces. This is common in seedless grape varieties.\n\nস্টেনোকার্পি আঙুরে দেখা যায়। এটি পার্থেনোকার্পি বা স্টেনোস্পার্মোকার্পিক প্রক্রিয়ার মাধ্যমে বীজহীন ফলের বিকাশকে বোঝায় যেখানে বীজের বিকাশ প্রাথমিক পর্যায়ে বন্ধ হয়ে যায়, ফলে ছোট, অনুন্নত বীজের চিহ্ন থাকে। এটি বীজহীন আঙুরের জাতগুলিতে সাধারণ। এই প্রক্রিয়ায় বীজ সম্পূর্ণভাবে বিলুপ্ত হয় না কিন্তু অনুন্নত থাকে।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Which one is valentine cyst nematode?",
+      "options": ["Heterodera cardiolata", "Heterodera turcomanica", "Heterodera ustinovi", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "Heterodera cardiolata is known as valentine cyst nematode. The name comes from the heart-shaped cysts produced by the female nematode. It is a plant-parasitic nematode that affects various crops.\n\nহেটেরোডেরা কার্ডিওলাটা ভ্যালেন্টাইন সিস্ট নেমাটোড নামে পরিচিত। নামটি মহিলা নেমাটোড দ্বারা উত্পাদিত হৃদয় আকৃতির সিস্ট থেকে এসেছে। এটি একটি উদ্ভিদ-পরজীবী নেমাটোড যা বিভিন্ন ফসলকে প্রভাবিত করে। এই নেমাটোড মূলত শিকড়ে আক্রমণ করে এবং পুষ্টি শোষণে বাধা সৃষ্টি করে।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Where does mango leaf hopper lay eggs?",
+      "options": ["Ventral surface on the fresh leaf & inflorescence", "Lower surface on the leaves", "Lower surface on the leaves and inflorescence", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "Mango leaf hopper (Amritodus atkinsoni) lays eggs on the ventral (lower) surface of fresh leaves and inflorescence. The female inserts eggs into the tender plant tissue. Leaf hoppers are serious pests of mango, causing hopper burn and reducing fruit set.\n\nআমের লিফ হপার (আমরিটোডাস অ্যাটকিনসোনি) কচি পাতার নিম্নতল এবং পুষ্পমঞ্জরীতে ডিম পাড়ে। মহিলা পোকা কোমল উদ্ভিদ টিস্যুতে ডিম ঢোকায়। লিফ হপার আমের মারাত্মক ক্ষতিকর পোকা, যা হপার বার্ন সৃষ্টি করে এবং ফল ধারণ কমায়। এই পোকা রস শোষণ করে এবং বিষাক্ত লালা নিঃসরণ করে যা পাতা ও ফুল শুকিয়ে যেতে পারে।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Which irrigation is effective for vegetables planted in ridges?",
+      "options": ["Level basin irrigation method", "Drip irrigation method", "Sprinkler irrigation method", "Furrow irrigation method", "None of these"],
+      "answer": 3,
+      "explanation": "Furrow irrigation method is most effective for vegetables planted in ridges. In this method, water flows through furrows (channels) between ridges where crops are planted. It is efficient, economical, and prevents waterlogging on the ridge where plants grow.\n\nনালা সেচ পদ্ধতি (ফারো ইরিগেশন) উঁচু জমিতে রোপিত সবজির জন্য সবচেয়ে কার্যকর। এই পদ্ধতিতে, ফসল রোপণ করা উঁচু সারির মাঝখানের নালা (চ্যানেল) দিয়ে পানি প্রবাহিত হয়। এটি দক্ষ, অর্থনৈতিক এবং গাছ যেখানে বৃদ্ধি পায় সেখানে জলাবদ্ধতা প্রতিরোধ করে। বাংলাদেশে সবজি চাষে এই পদ্ধতি ব্যাপকভাবে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Destructive stage of leaf miner for citrus is",
+      "options": ["Adult", "Egg", "Larva", "Nymph", "None of these"],
+      "answer": 2,
+      "explanation": "The larva is the destructive stage of citrus leaf miner (Phyllocnistis citrella). The larvae mine through the leaf tissue creating serpentine tunnels, which causes leaf curling, distortion, and reduced photosynthesis. Adults are small moths that only lay eggs and do not cause direct damage.\n\nসাইট্রাস লিফ মাইনার (ফাইলোকনিস্টিস সিট্রেলা) এর লার্ভা ক্ষতিকারক পর্যায়। লার্ভা পাতার টিস্যুতে সুড়ঙ্গ তৈরি করে যা সর্পিল আকারের, এর ফলে পাতা কুঁকড়ে যায়, বিকৃত হয় এবং সালোকসংশ্লেষণ হ্রাস পায়। পূর্ণবয়স্করা ছোট মথ যারা শুধু ডিম পাড়ে এবং সরাসরি ক্ষতি করে না। বাংলাদেশে লেবুজাতীয় ফসলে এই পোকা মারাত্মক সমস্যা।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Which one is a beneficial plant nutrient?",
+      "options": ["NPK", "NKS", "PKS", "NKZn", "None of these"],
+      "answer": 0,
+      "explanation": "NPK (Nitrogen, Phosphorus, and Potassium) are the three primary beneficial plant nutrients. These are macronutrients required in large quantities for plant growth, development, and productivity. Nitrogen promotes vegetative growth, Phosphorus supports root development and flowering, and Potassium enhances overall plant health and stress tolerance.\n\nNPK (নাইট্রোজেন, ফসফরাস এবং পটাশিয়াম) তিনটি প্রধান উপকারী উদ্ভিদ পুষ্টি উপাদান। এগুলি ম্যাক্রোনিউট্রিয়েন্ট যা উদ্ভিদের বৃদ্ধি, বিকাশ এবং উৎপাদনশীলতার জন্য প্রচুর পরিমাণে প্রয়োজন। নাইট্রোজেন উদ্ভিজ্জ বৃদ্ধি প্রচার করে, ফসফরাস শিকড় বিকাশ এবং ফুল ধারণে সহায়তা করে এবং পটাশিয়াম সামগ্রিক উদ্ভিদ স্বাস্থ্য এবং চাপ সহনশীলতা বাড়ায়। বাংলাদেশের মাটিতে এই তিনটি উপাদানের সুষম প্রয়োগ অত্যন্ত গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Which of the following gas emission in the rice field?",
+      "options": ["CH₄", "NH₃", "CO₂", "O₂", "None of these"],
+      "answer": 0,
+      "explanation": "Methane (CH₄) is the primary gas emitted from rice fields. Rice paddies are a significant source of atmospheric methane due to anaerobic decomposition of organic matter in flooded soil conditions. Methanogenic bacteria produce methane in the absence of oxygen.\n\nমিথেন (CH₄) ধানক্ষেত থেকে নির্গত প্রধান গ্যাস। জলাবদ্ধ মাটির অবস্থায় জৈব পদার্থের বায়ুহীন পচনের কারণে ধানক্ষেত বায়ুমণ্ডলীয় মিথেনের একটি উল্লেখযোগ্য উৎস। মিথানোজেনিক ব্যাকটেরিয়া অক্সিজেনের অনুপস্থিতিতে মিথেন উৎপাদন করে। বাংলাদেশে বিপুল পরিমাণ ধান চাষ হওয়ায় এটি গ্রিনহাউজ গ্যাস নির্গমনের একটি গুরুত্বপূর্ণ উৎস।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Which of the following factors does not affect the nitrification?",
+      "options": ["Air", "Seed", "Temperature", "Moisture", "None of these"],
+      "answer": 1,
+      "explanation": "Seed does not affect nitrification. Nitrification is a microbial process where ammonia is converted to nitrite and then to nitrate by nitrifying bacteria (Nitrosomonas and Nitrobacter). This process is affected by air (oxygen), temperature, moisture, pH, and soil conditions, but not by seeds.\n\nবীজ নাইট্রিফিকেশনকে প্রভাবিত করে না। নাইট্রিফিকেশন একটি অণুজীব প্রক্রিয়া যেখানে অ্যামোনিয়া নাইট্রাইটে এবং তারপর নাইট্রেটে রূপান্তরিত হয় নাইট্রিফাইং ব্যাকটেরিয়া (নাইট্রোসোমোনাস এবং নাইট্রোব্যাক্টর) দ্বারা। এই প্রক্রিয়া বায়ু (অক্সিজেন), তাপমাত্রা, আর্দ্রতা, pH এবং মাটির অবস্থা দ্বারা প্রভাবিত হয়, তবে বীজ দ্বারা নয়। নাইট্রিফিকেশন মাটিতে নাইট্রোজেন চক্রের একটি গুরুত্বপূর্ণ অংশ।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Piercing and sucking type mouth parts occurs in which insects?",
+      "options": ["Bugs, lice, flies and mosquitoes", "Cockroach", "Grasshopper", "Aphid", "None of these"],
+      "answer": 0,
+      "explanation": "Piercing and sucking type mouth parts occur in bugs, lice, flies, and mosquitoes. These insects have specialized mouthparts adapted to pierce plant or animal tissue and suck fluids. Aphids also have piercing-sucking mouthparts, but the more comprehensive answer includes bugs, lice, flies, and mosquitoes.\n\nছিদ্রকারী ও শোষণকারী ধরনের মুখাংশ বাগ, উকুন, মাছি এবং মশায় পাওয়া যায়। এই পোকামাকড়ের বিশেষায়িত মুখাংশ রয়েছে যা উদ্ভিদ বা প্রাণীর টিস্যু ছিদ্র করতে এবং তরল শোষণ করতে অভিযোজিত। এফিডেরও ছিদ্রকারী-শোষণকারী মুখাংশ রয়েছে, তবে আরও ব্যাপক উত্তরে বাগ, উকুন, মাছি এবং মশা অন্তর্ভুক্ত। এই ধরনের মুখাংশ সাধারণত স্টাইলেট বা সূঁচের মতো অংশ দিয়ে গঠিত।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "Which of the following is the weed control method?",
+      "options": ["Slashing", "Dozing", "Mowing", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "All of these (Slashing, Dozing, and Mowing) are mechanical weed control methods. Slashing involves cutting weeds with sharp tools, dozing uses heavy machinery to remove weeds, and mowing cuts weeds to ground level. These are physical/mechanical methods of weed management.\n\nএই সবগুলি (স্ল্যাশিং, ডোজিং এবং মোয়িং) যান্ত্রিক আগাছা নিয়ন্ত্রণ পদ্ধতি। স্ল্যাশিং তীক্ষ্ণ সরঞ্জাম দিয়ে আগাছা কাটা, ডোজিং ভারী যন্ত্রপাতি ব্যবহার করে আগাছা অপসারণ এবং মোয়িং আগাছা মাটির স্তরে কাটা জড়িত। এগুলি আগাছা ব্যবস্থাপনার শারীরিক/যান্ত্রিক পদ্ধতি। বাংলাদেশে ফসলের জমিতে এই পদ্ধতিগুলি ব্যাপকভাবে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Chemical formula of Fool's gold is",
+      "options": ["FeS₂", "FeSO₂", "CuS", "Fe₂(SO₄)₃", "None of these"],
+      "answer": 0,
+      "explanation": "The chemical formula of Fool's gold is FeS₂ (Iron pyrite or Iron disulfide). It is called 'Fool's gold' because of its metallic luster and pale brass-yellow color, which resembles gold and has historically deceived people.\n\nফুলস গোল্ডের রাসায়নিক সূত্র হলো FeS₂ (আয়রন পাইরাইট বা আয়রন ডাইসালফাইড)। এটিকে 'ফুলস গোল্ড' বলা হয় কারণ এর ধাতব দীপ্তি এবং ফ্যাকাশে পিতল-হলুদ রঙ সোনার সাথে সাদৃশ্যপূর্ণ এবং ঐতিহাসিকভাবে মানুষকে প্রতারিত করেছে। এটি একটি সাধারণ খনিজ পদার্থ যা বিভিন্ন ভূতাত্ত্বিক পরিবেশে পাওয়া যায়।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Hard rock found in -",
+      "options": ["Dinajpur", "Nilphamari", "Joypurhat", "Thakurgaon", "None of these"],
+      "answer": 0,
+      "explanation": "Hard rock is found in Dinajpur district of Bangladesh. The Dinajpur-Rangpur region is known for having basement rock (hard rock) at relatively shallow depths compared to other parts of Bangladesh, which is mostly covered by alluvial deposits.\n\nবাংলাদেশের দিনাজপুর জেলায় শক্ত শিলা পাওয়া যায়। দিনাজপুর-রংপুর অঞ্চল তুলনামূলকভাবে অগভীর গভীরতায় বেসমেন্ট শিলা (শক্ত শিলা) থাকার জন্য পরিচিত, যেখানে বাংলাদেশের অধিকাংশ অংশ পলল জমা দ্বারা আচ্ছাদিত। এই অঞ্চলে ভূ-তাত্ত্বিক জরিপে প্রাচীন শিলা স্তরের উপস্থিতি পাওয়া গেছে।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Which one of the following is the unsaturated fatty acid?",
+      "options": ["Stearidonic acid", "Linoleic acid", "Oleic acid", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "All of these are unsaturated fatty acids. Stearidonic acid is an omega-3 fatty acid with 4 double bonds, Linoleic acid is an omega-6 fatty acid with 2 double bonds, and Oleic acid is an omega-9 fatty acid with 1 double bond. Unsaturated fatty acids contain one or more carbon-carbon double bonds.\n\nএই সবগুলিই অসম্পৃক্ত ফ্যাটি অ্যাসিড। স্টিয়ারিডোনিক অ্যাসিড একটি ওমেগা-৩ ফ্যাটি অ্যাসিড যার ৪টি দ্বিবন্ধন রয়েছে, লিনোলিক অ্যাসিড একটি ওমেগা-৬ ফ্যাটি অ্যাসিড যার ২টি দ্বিবন্ধন রয়েছে এবং ওলিক অ্যাসিড একটি ওমেগা-৯ ফ্যাটি অ্যাসিড যার ১টি দ্বিবন্ধন রয়েছে। অসম্পৃক্ত ফ্যাটি অ্যাসিডে একটি বা একাধিক কার্বন-কার্বন দ্বিবন্ধন থাকে। এগুলি স্বাস্থ্যের জন্য উপকারী।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "Aseptate mycelium found in",
+      "options": ["Aspergillus", "Rhizomucor", "Coenocytic", "All of these", "None of these"],
+      "answer": 2,
+      "explanation": "Aseptate mycelium is found in coenocytic fungi. Coenocytic refers to a multinucleate cell structure where the mycelium lacks cross-walls (septa), creating continuous cytoplasm. This is characteristic of lower fungi like Zygomycetes (e.g., Rhizopus, Mucor). Aspergillus has septate mycelium.\n\nঅসেপ্টেট মাইসেলিয়াম সিনোসাইটিক ছত্রাকে পাওয়া যায়। সিনোসাইটিক বলতে বহু-নিউক্লিয়াস যুক্ত কোষ কাঠামো বোঝায় যেখানে মাইসেলিয়ামে আড়াআড়ি দেয়াল (সেপটা) নেই, ফলে অবিচ্ছিন্ন সাইটোপ্লাজম তৈরি হয়। এটি নিম্ন শ্রেণীর ছত্রাক যেমন জাইগোমাইসিটস (যেমন, রাইজোপাস, মিউকর) এর বৈশিষ্ট্য। অ্যাসপারজিলাসের সেপ্টেট মাইসেলিয়াম রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Synaptic knob were found in",
+      "options": ["Numerous mitochondria", "Plastid", "Chloroplast", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "Synaptic knobs contain numerous mitochondria. The synaptic knob (also called axon terminal or synaptic button) is the terminal part of an axon that forms a synapse with another neuron. Mitochondria are abundant here because synaptic transmission requires significant energy (ATP) for neurotransmitter synthesis and release.\n\nসিনাপটিক নব-এ প্রচুর মাইটোকন্ড্রিয়া থাকে। সিনাপটিক নব (যাকে অ্যাক্সন টার্মিনাল বা সিনাপটিক বাটনও বলা হয়) হল একটি অ্যাক্সনের টার্মিনাল অংশ যা অন্য নিউরনের সাথে সিন্যাপস গঠন করে। এখানে মাইটোকন্ড্রিয়া প্রচুর পরিমাণে থাকে কারণ সিনাপটিক ট্রান্সমিশনের জন্য নিউরোট্রান্সমিটার সংশ্লেষণ এবং নিঃসরণের জন্য উল্লেখযোগ্য শক্তি (ATP) প্রয়োজন।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Tobacco is detrimental - health.",
+      "options": ["to", "of", "for", "on", "None of these"],
+      "answer": 0,
+      "explanation": "The correct preposition is 'to'. 'Detrimental to' is the standard phrase meaning harmful or damaging to something. Therefore, 'Tobacco is detrimental to health' is grammatically correct.\n\nসঠিক প্রিপজিশন হল 'to'। 'Detrimental to' হল একটি প্রমাণ বাক্যাংশ যার অর্থ কোনো কিছুর জন্য ক্ষতিকর বা ধ্বংসাত্মক। অতএব, 'Tobacco is detrimental to health' ব্যাকরণগতভাবে সঠিক।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Nitrogen is an important constituent of",
+      "options": ["Phospholipids", "Proteins", "Lipids", "Carbohydrates", "None of these"],
+      "answer": 1,
+      "explanation": "Nitrogen is an important constituent of proteins. Proteins are made up of amino acids, which contain nitrogen in their amino (-NH₂) groups. Nitrogen is essential for protein synthesis and is a key element in all enzymes, which are proteins.\n\nনাইট্রোজেন প্রোটিনের একটি গুরুত্বপূর্ণ উপাদান। প্রোটিন অ্যামিনো অ্যাসিড দিয়ে তৈরি, যাতে তাদের অ্যামিনো (-NH₂) গ্রুপে নাইট্রোজেন থাকে। নাইট্রোজেন প্রোটিন সংশ্লেষণের জন্য অপরিহার্য এবং সমস্ত এনজাইমের একটি মূল উপাদান, যা প্রোটিন। উদ্ভিদে নাইট্রোজেন ক্লোরোফিল এবং নিউক্লিক অ্যাসিডেরও অংশ।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Prejudice is not compatible - true religion",
+      "options": ["to", "at", "with", "for", "None of these"],
+      "answer": 2,
+      "explanation": "The correct preposition is 'with'. 'Compatible with' is the standard phrase meaning able to exist or work together without conflict. Therefore, 'Prejudice is not compatible with true religion' is grammatically correct.\n\nসঠিক প্রিপজিশন হল 'with'। 'Compatible with' হল একটি প্রমাণ বাক্যাংশ যার অর্থ দ্বন্দ্ব ছাড়াই একসাথে বিদ্যমান থাকতে বা কাজ করতে সক্ষম। অতএব, 'Prejudice is not compatible with true religion' ব্যাকরণগতভাবে সঠিক।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Police said they were very concerned - the boy's safety.",
+      "options": ["with", "again", "about", "for", "None of these"],
+      "answer": 2,
+      "explanation": "The correct preposition is 'about'. 'Concerned about' is the standard phrase meaning worried or anxious about something. Therefore, 'Police said they were very concerned about the boy's safety' is grammatically correct.\n\nসঠিক প্রিপজিশন হল 'about'। 'Concerned about' হল একটি প্রমাণ বাক্যাংশ যার অর্থ কোনো কিছু নিয়ে চিন্তিত বা উদ্বিগ্ন। অতএব, 'Police said they were very concerned about the boy's safety' ব্যাকরণগতভাবে সঠিক।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "The leaves blew - on the autumn winds.",
+      "options": ["away", "with", "to", "at", "None of these"],
+      "answer": 0,
+      "explanation": "The correct word is 'away'. 'Blew away' is a phrasal verb meaning to be carried off by the wind. Therefore, 'The leaves blew away on the autumn winds' is grammatically correct and means the leaves were carried away by the wind.\n\nসঠিক শব্দ হল 'away'। 'Blew away' হল একটি phrasal verb যার অর্থ বাতাসে উড়ে যাওয়া। অতএব, 'The leaves blew away on the autumn winds' ব্যাকরণগতভাবে সঠিক এবং এর অর্থ পাতাগুলি বাতাসে উড়ে গেছে।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "They did not come to term - the price",
+      "options": ["to", "in", "up", "on", "None of these"],
+      "answer": 3,
+      "explanation": "The correct preposition is 'on'. 'Come to terms on' means to reach an agreement about something. Therefore, 'They did not come to terms on the price' is grammatically correct and means they could not agree on the price.\n\nসঠিক প্রিপজিশন হল 'on'। 'Come to terms on' অর্থ কোনো বিষয়ে একটি চুক্তিতে পৌঁছানো। অতএব, 'They did not come to terms on the price' ব্যাকরণগতভাবে সঠিক এবং এর অর্থ তারা মূল্যে সম্মত হতে পারেনি।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "I just thought I'd call - on my way into town",
+      "options": ["in", "by", "up", "back", "None of these"],
+      "answer": 1,
+      "explanation": "The correct word is 'by'. 'Call by' means to visit someone briefly or stop at a place for a short time while going somewhere else. Therefore, 'I just thought I'd call by on my way into town' is grammatically correct.\n\nসঠিক শব্দ হল 'by'। 'Call by' অর্থ সংক্ষিপ্তভাবে কাউকে দেখা বা অন্য কোথাও যাওয়ার পথে কোনো স্থানে সংক্ষিপ্ত সময়ের জন্য থামা। অতএব, 'I just thought I'd call by on my way into town' ব্যাকরণগতভাবে সঠিক।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "When he was not invited to the wedding, he considered it a personal insult.",
+      "options": ["slur", "veneration", "assuage", "tenacity", "None of these"],
+      "answer": 0,
+      "explanation": "The word 'slur' is most similar to 'insult'. A slur is a disparaging remark or an insult, especially one based on identity. Therefore, 'slur' is the best synonym for 'insult' in this context.\n\n'Slur' শব্দটি 'insult' এর সবচেয়ে কাছাকাছি। একটি slur হল একটি অপমানজনক মন্তব্য বা অপমান, বিশেষত পরিচয়ের উপর ভিত্তি করে। অতএব, এই প্রসঙ্গে 'slur' হল 'insult' এর সেরা প্রতিশব্দ।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "Lax intellectual property rights penalize cutting-edge research.",
+      "options": ["Laborious", "Unambiguous", "Stringent", "Innovative", "None of these"],
+      "answer": 2,
+      "explanation": "The word 'stringent' is the opposite of 'lax'. Lax means loose or relaxed, while stringent means strict or rigorous. The sentence suggests that loose intellectual property rights harm advanced research, implying that strict (stringent) rights would be better.\n\n'Stringent' শব্দটি 'lax' এর বিপরীত। Lax অর্থ শিথিল বা আলগা, যেখানে stringent অর্থ কঠোর বা কড়া। বাক্যটি ইঙ্গিত দেয় যে শিথিল বুদ্ধিবৃত্তিক সম্পত্তির অধিকার উন্নত গবেষণাকে ক্ষতিগ্রস্ত করে, যা বোঝায় যে কঠোর (stringent) অধিকার আরও ভাল হবে।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "China's continued economic progress depends on mastering - art of mould-breaking innovation",
+      "options": ["will", "on", "for", "the", "None of these"],
+      "answer": 3,
+      "explanation": "The correct article is 'the'. We use 'the' before 'art of' because it refers to a specific skill or practice. Therefore, 'China's continued economic progress depends on mastering the art of mould-breaking innovation' is grammatically correct.\n\nসঠিক আর্টিকেল হল 'the'। আমরা 'art of' এর আগে 'the' ব্যবহার করি কারণ এটি একটি নির্দিষ্ট দক্ষতা বা অনুশীলনকে বোঝায়। অতএব, 'China's continued economic progress depends on mastering the art of mould-breaking innovation' ব্যাকরণগতভাবে সঠিক।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "'Earth Hour' is represented by",
+      "options": ["World Wide Fund for Nature", "Greenpeace", "UNDP", "UNO", "None of these"],
+      "answer": 0,
+      "explanation": "Earth Hour is represented by the World Wide Fund for Nature (WWF). It is a worldwide movement organized by WWF, encouraging individuals, communities, and businesses to turn off non-essential electric lights for one hour to raise awareness about climate change and energy conservation.\n\nআর্থ আওয়ার ওয়ার্ল্ড ওয়াইড ফান্ড ফর নেচার (WWF) দ্বারা প্রতিনিধিত্ব করা হয়। এটি WWF দ্বারা সংগঠিত একটি বিশ্বব্যাপী আন্দোলন, যা ব্যক্তি, সম্প্রদায় এবং ব্যবসায়িক প্রতিষ্ঠানকে জলবায়ু পরিবর্তন এবং শক্তি সংরক্ষণ সম্পর্কে সচেতনতা বাড়াতে এক ঘণ্টার জন্য অপ্রয়োজনীয় বৈদ্যুতিক আলো বন্ধ করতে উৎসাহিত করে। সাধারণত মার্চ মাসের শেষ শনিবার এই কর্মসূচি পালন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "Which country is not a Scandinavian country?",
+      "options": ["Denmark", "Sweden", "Norway", "France", "None of these"],
+      "answer": 3,
+      "explanation": "France is not a Scandinavian country. The Scandinavian countries are Denmark, Sweden, and Norway. These countries are located in Northern Europe and share historical, cultural, and linguistic ties. France is located in Western Europe.\n\nফ্রান্স একটি স্ক্যান্ডিনেভিয়ান দেশ নয়। স্ক্যান্ডিনেভিয়ান দেশগুলি হল ডেনমার্ক, সুইডেন এবং নরওয়ে। এই দেশগুলি উত্তর ইউরোপে অবস্থিত এবং ঐতিহাসিক, সাংস্কৃতিক এবং ভাষাগত বন্ধন ভাগ করে। ফ্রান্স পশ্চিম ইউরোপে অবস্থিত। কখনও কখনও ফিনল্যান্ড এবং আইসল্যান্ডকেও নর্ডিক দেশ হিসেবে অন্তর্ভুক্ত করা হয়।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "এভারেস্ট জয়ী প্রথম নারীর নাম কি?",
+      "options": ["নিশাত মজুমদার", "ওয়াসফিয়া নাসরিন", "ফাতেমা নাসরিন", "নাসরিন জেবা", "কোনটিই নয়"],
+      "answer": 0,
+      "explanation": "The first Bangladeshi woman to conquer Mount Everest was Nishat Majumder on May 19, 2012. She successfully reached the summit of the world's highest peak, making history for Bangladesh. Wasfia Nazreen climbed Everest on May 26, 2012, becoming the second Bangladeshi woman to achieve this feat.\n\nমাউন্ট এভারেস্ট জয় করা প্রথম বাংলাদেশী নারী ছিলেন নিশাত মজুমদার ১৯ মে ২০১২ সালে। তিনি সফলভাবে বিশ্বের সর্বোচ্চ শৃঙ্গে পৌঁছেছিলেন, বাংলাদেশের জন্য ইতিহাস সৃষ্টি করেছিলেন। ওয়াসফিয়া নাজরীন ২৬ মে ২০১২ সালে এভারেস্ট আরোহণ করেন, এই কৃতিত্ব অর্জনকারী দ্বিতীয় বাংলাদেশী নারী হন।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "বিশ্ব স্বাস্থ্য দিবস কত তারিখ?",
+      "options": ["৫ই এপ্রিল", "৯ই এপ্রিল", "৭ই এপ্রিল", "১০ই এপ্রিল", "কোনটিই নয়"],
+      "answer": 2,
+      "explanation": "World Health Day is observed on April 7 every year. This date was chosen to commemorate the founding of the World Health Organization (WHO) in 1948. The day is used to raise awareness about global health issues and promote healthy living.\n\nবিশ্ব স্বাস্থ্য দিবস প্রতি বছর ৭ই এপ্রিল পালন করা হয়। ১৯৪৮ সালে বিশ্ব স্বাস্থ্য সংস্থা (WHO) প্রতিষ্ঠার স্মরণে এই তারিখটি বেছে নেওয়া হয়েছিল। এই দিনটি বৈশ্বিক স্বাস্থ্য সমস্যা সম্পর্কে সচেতনতা বৃদ্ধি এবং স্বাস্থ্যকর জীবনযাপনের প্রচারের জন্য ব্যবহৃত হয়। প্রতি বছর একটি নির্দিষ্ট থিম নিয়ে এই দিবস পালন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "পাটের জীনতত্ত্ব আবিস্কার করেন কে?",
+      "options": ["মাহবুবুর আলম", "ফরহাদ আলম", "মাকসুদুল আলম", "নুরুল আলম", "কোনটিই নয়"],
+      "answer": 2,
+      "explanation": "Dr. Maqsudul Alam discovered the genome sequence of jute. He led the research team that successfully sequenced the jute genome in 2010, making Bangladesh one of the few countries to sequence a plant genome. This breakthrough is significant for improving jute varieties and production.\n\nড. মাকসুদুল আলম পাটের জিনোম সিকোয়েন্স আবিস্কার করেছিলেন। তিনি ২০১০ সালে পাটের জিনোম সফলভাবে সিকোয়েন্স করা গবেষক দলের নেতৃত্ব দিয়েছিলেন, যা বাংলাদেশকে উদ্ভিদ জিনোম সিকোয়েন্স করা কয়েকটি দেশের একটিতে পরিণত করেছিল। এই যুগান্তকারী আবিস্কার পাটের জাত উন্নতি এবং উৎপাদন বৃদ্ধির জন্য গুরুত্বপূর্ণ। তিনি ঢাকা বিশ্ববিদ্যালয়ের একজন বিশিষ্ট গবেষক ছিলেন।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "mcq",
+      "question": "সন্ধি বিচ্ছেদ করুন: আশ্চর্য",
+      "options": ["আ + চর্য", "আ + আচর্য", "আশ + চর্য", "আস + চর্য", "কোনটিই নয়"],
+      "answer": 0,
+      "explanation": "The sandhi viched (সন্ধি বিচ্ছেদ) of আশ্চর্য is আ + চর্য. This is a case of স্বরসন্ধি (vowel sandhi) where আ + চর্য = আশ্চর্য with the insertion of শ্চ for pronunciation.\n\nআশ্চর্য এর সন্ধি বিচ্ছেদ হল আ + চর্য। এটি স্বরসন্ধির একটি উদাহরণ যেখানে উচ্চারণের সুবিধার জন্য আ + চর্য = আশ্চর্য হয়েছে এবং শ্চ যুক্ত হয়েছে। বাংলা ব্যাকরণে সন্ধি বিচ্ছেদ একটি গুরুত্বপূর্ণ বিষয়।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "mcq",
+      "question": "যা ক্রম বর্ধমান -",
+      "options": ["বর্ধিষ্ণু", "ক্ষতিজ্ঞ", "সহিষ্ণু", "সম্প্রসারণ", "কোনটিই নয়"],
+      "answer": 0,
+      "explanation": "The word for 'যা ক্রমবর্ধমান' (that which is gradually increasing) is 'বর্ধিষ্ণু'. It means growing, increasing, or thriving progressively.\n\n'যা ক্রমবর্ধমান' এর এক কথায় প্রকাশ হল 'বর্ধিষ্ণু'। এর অর্থ ক্রমান্বয়ে বৃদ্ধি পাচ্ছে, বাড়ছে বা সমৃদ্ধ হচ্ছে। বাংলা ভাষায় এক কথায় প্রকাশ ব্যাকরণের একটি গুরুত্বপূর্ণ অংশ।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "mcq",
+      "question": "চক্ষুদান করা",
+      "options": ["উপকার করা", "অপকার করা", "চুরি করা", "সাহায্য করা", "কোনটিই নয়"],
+      "answer": 2,
+      "explanation": "The idiomatic meaning of 'চক্ষুদান করা' is 'চুরি করা' (to steal). This is a sarcastic phrase where 'দান' (donation) is used ironically to mean theft.\n\n'চক্ষুদান করা' বাগধারার অর্থ 'চুরি করা'। এটি একটি ব্যঙ্গাত্মক বাক্যাংশ যেখানে 'দান' শব্দটি পরিহাসের সাথে চুরি বোঝাতে ব্যবহৃত হয়। বাংলা ভাষায় বাগধারা অর্থ জানা পরীক্ষার জন্য গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "mcq",
+      "question": "'অনুরক্ত' এর বিপরীত শব্দ কোনটি?",
+      "options": ["বিরক্ত", "আসক্ত", "ভক্ত", "উপকৃত", "কোনটিই নয়"],
+      "answer": 0,
+      "explanation": "The antonym of 'অনুরক্ত' (attached, devoted, fond of) is 'বিরক্ত' (annoyed, irritated, displeased). অনুরক্ত means having affection or attachment, while বিরক্ত means having displeasure or annoyance.\n\n'অনুরক্ত' (আসক্ত, ভালোবাসা যুক্ত) এর বিপরীত শব্দ হল 'বিরক্ত' (বিরক্তিযুক্ত, অসন্তুষ্ট)। অনুরক্ত মানে স্নেহ বা আসক্তি থাকা, যেখানে বিরক্ত মানে অসন্তুষ্টি বা বিরক্তি থাকা। বাংলা ব্যাকরণে বিপরীত শব্দ জানা গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "'আগুন' এর সমার্থক শব্দ কোনটি?",
+      "options": ["জ্বলজ্বল", "হুতাশন", "অনিল", "সমীর", "কোনটিই নয়"],
+      "answer": 1,
+      "explanation": "The synonym of 'আগুন' (fire) is 'হুতাশন'. Other synonyms of fire include অগ্নি, বহ্নি, পাবক, দহন, etc. অনিল and সমীর are synonyms of বায়ু (wind).\n\n'আগুন' এর সমার্থক শব্দ হল 'হুতাশন'। আগুনের অন্যান্য সমার্থক শব্দের মধ্যে রয়েছে অগ্নি, বহ্নি, পাবক, দহন ইত্যাদি। অনিল এবং সমীর হল বায়ু এর সমার্থক শব্দ। বাংলা ভাষায় সমার্থক শব্দ জানা পরীক্ষার জন্য অত্যন্ত গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "চীনের সাথে সীমান্ত সংযোগ নেই কোন দেশটির?",
+      "options": ["ভুটান", "থাইল্যান্ড", "আফগানিস্তান", "ভারত", "কোনটিই নয়"],
+      "answer": 1,
+      "explanation": "Thailand does not share a border with China. China shares borders with 14 countries including Bhutan, Afghanistan, and India, but not Thailand. Thailand is separated from China by Myanmar and Laos.\n\nথাইল্যান্ডের সাথে চীনের সীমান্ত সংযোগ নেই। চীন ভুটান, আফগানিস্তান এবং ভারত সহ ১৪টি দেশের সাথে সীমান্ত ভাগ করে, কিন্তু থাইল্যান্ডের সাথে নয়। মিয়ানমার এবং লাওস দ্বারা থাইল্যান্ড চীন থেকে পৃথক। চীনের সীমান্তবর্তী দেশগুলির মধ্যে রয়েছে রাশিয়া, মঙ্গোলিয়া, কাজাখস্তান, পাকিস্তান, নেপাল ইত্যাদি।",
+      "image": null
+    },
+    {
+      "id": 47,
+      "type": "mcq",
+      "question": "পারমাণবিক চুক্তি স্বাক্ষর সংস্থা কোনটি?",
+      "options": ["UNO", "UNDP", "OPEC", "CTBT", "কোনটিই নয়"],
+      "answer": 3,
+      "explanation": "CTBT (Comprehensive Nuclear-Test-Ban Treaty) is the nuclear treaty signing organization. It is a multilateral treaty that bans all nuclear explosions, for both civilian and military purposes. The treaty was adopted by the United Nations General Assembly in 1996.\n\nCTBT (কমপ্রিহেনসিভ নিউক্লিয়ার-টেস্ট-ব্যান ট্রিটি) হল পারমাণবিক চুক্তি স্বাক্ষর সংস্থা। এটি একটি বহুপাক্ষিক চুক্তি যা বেসামরিক এবং সামরিক উভয় উদ্দেশ্যে সমস্ত পারমাণবিক বিস্ফোরণ নিষিদ্ধ করে। ১৯৯৬ সালে জাতিসংঘ সাধারণ পরিষদ দ্বারা এই চুক্তি গৃহীত হয়েছিল। বিশ্ব শান্তি ও নিরাপত্তার জন্য এই চুক্তি গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 48,
+      "type": "mcq",
+      "question": "গ্রীনিচ মান বাংলাদেশ থেকে কত বেশি?",
+      "options": ["৫ ঘন্টা", "৮ ঘন্টা", "৬ ঘন্টা", "৭ ঘন্টা", "কোনটিই নয়"],
+      "answer": 2,
+      "explanation": "Bangladesh is 6 hours ahead of Greenwich Mean Time (GMT). Bangladesh Standard Time (BST) is GMT+6. This means when it is 12:00 noon in Greenwich, it is 6:00 PM in Bangladesh.\n\nবাংলাদেশ গ্রীনিচ মান সময় (GMT) থেকে ৬ ঘন্টা এগিয়ে। বাংলাদেশ স্ট্যান্ডার্ড টাইম (BST) হল GMT+6। এর অর্থ হল গ্রীনিচে যখন দুপুর ১২:০০ টা, তখন বাংলাদেশে সন্ধ্যা ৬:০০ টা। পৃথিবীর বিভিন্ন অঞ্চলে বিভিন্ন সময় অঞ্চল রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 49,
+      "type": "mcq",
+      "question": "কোনটি গণতান্ত্রিক রাষ্ট্র নয়?",
+      "options": ["কাতার", "ইংল্যান্ড", "ভারত", "বাংলাদেশ", "কোনটিই নয়"],
+      "answer": 0,
+      "explanation": "Qatar is not a democratic state. Qatar is an absolute monarchy ruled by the Al Thani family. England (UK), India, and Bangladesh are democratic countries with elected governments and parliamentary systems.\n\nকাতার একটি গণতান্ত্রিক রাষ্ট্র নয়। কাতার আল থানি পরিবার দ্বারা শাসিত একটি নিরঙ্কুশ রাজতন্ত্র। ইংল্যান্ড (যুক্তরাজ্য), ভারত এবং বাংলাদেশ নির্বাচিত সরকার এবং সংসদীয় ব্যবস্থা সহ গণতান্ত্রিক দেশ। মধ্যপ্রাচ্যের অনেক দেশ রাজতন্ত্র দ্বারা শাসিত।",
+      "image": null
+    },
+    {
+      "id": 50,
+      "type": "mcq",
+      "question": "টিপাইমুখ বাঁধ কোন নদীর উপর?",
+      "options": ["নাফ নদী", "বরাক নদী", "গড়াই নদী", "সুরমা নদী", "কোনটিই নয়"],
+      "answer": 1,
+      "explanation": "Tipaimukh Dam is planned on the Barak River. The dam is located in Manipur, India, and has been a subject of concern for Bangladesh as it may affect water flow in the Surma and Kushiyara rivers, which are distributaries of the Barak River.\n\nটিপাইমুখ বাঁধ বরাক নদীর উপর পরিকল্পিত। বাঁধটি ভারতের মণিপুরে অবস্থিত এবং এটি বাংলাদেশের জন্য উদ্বেগের বিষয় হয়ে দাঁড়িয়েছে কারণ এটি সুরমা এবং কুশিয়ারা নদীতে জলপ্রবাহকে প্রভাবিত করতে পারে, যা বরাক নদীর শাখা নদী। এই বাঁধ বাংলাদেশের পূর্বাঞ্চলীয় নদীগুলির জন্য গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 51,
+      "type": "mcq",
+      "question": "If x = 20, x = -20 then which is right?",
+      "options": ["1 - 2x", "1 - x", "1 - 3x", "All of these", "None of these"],
+      "answer": 4,
+      "explanation": "This question appears to have a logical error. A variable x cannot simultaneously equal both 20 and -20. If the question intends to ask about |x| = 20 (absolute value), then x could be either 20 or -20, but not both at the same time. Without clear context, none of the expressions can be definitively identified as 'right'.\n\nএই প্রশ্নটিতে একটি যৌক্তিক ত্রুটি আছে বলে মনে হচ্ছে। একটি চলক x একই সাথে 20 এবং -20 উভয় হতে পারে না। যদি প্রশ্নটি |x| = 20 (পরম মান) সম্পর্কে জিজ্ঞাসা করতে চায়, তাহলে x হতে পারে 20 বা -20, কিন্তু একই সময়ে উভয়ই নয়। স্পষ্ট প্রেক্ষাপট ছাড়া, কোনো রাশিকেই নিশ্চিতভাবে 'সঠিক' হিসাবে চিহ্নিত করা যায় না।",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "mcq",
+      "question": "If x + y = 80, y + z = 60 then z - x =",
+      "options": ["-20", "20", "-30", "30", "None of these"],
+      "answer": 0,
+      "explanation": "Given: x + y = 80 ... (1) and y + z = 60 ... (2)\n\nFrom equation (1): y = 80 - x\n\nSubstitute in equation (2): (80 - x) + z = 60\n\n80 - x + z = 60\n\nz - x = 60 - 80\n\nz - x = -20\n\nদেওয়া আছে: x + y = 80 ... (1) এবং y + z = 60 ... (2)\n\nসমীকরণ (1) থেকে: y = 80 - x\n\nসমীকরণ (2) এ বসিয়ে: (80 - x) + z = 60\n\n80 - x + z = 60\n\nz - x = 60 - 80\n\nz - x = -20",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "mcq",
+      "question": "If 2^x = 16 then x^2 =",
+      "options": ["16", "-16", "2", "4", "None of these"],
+      "answer": 0,
+      "explanation": "Given: 2^x = 16\n\nWe know that 16 = 2^4\n\nSo, 2^x = 2^4\n\nTherefore, x = 4\n\nNow, x^2 = 4^2 = 16\n\nদেওয়া আছে: 2^x = 16\n\nআমরা জানি যে 16 = 2^4\n\nসুতরাং, 2^x = 2^4\n\nঅতএব, x = 4\n\nএখন, x^2 = 4^2 = 16",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "mcq",
+      "question": "If 1/3 × 1/4 = 15 then 3/10 =",
+      "options": ["55", "60", "54", "40", "None of these"],
+      "answer": 2,
+      "explanation": "This question seems to involve a pattern or scaling factor. If 1/3 × 1/4 = 15 (instead of the actual value 1/12), then there's a multiplication factor.\n\n1/3 × 1/4 = 1/12, but given as 15\n\nScaling factor = 15 ÷ (1/12) = 15 × 12 = 180\n\nTherefore, 3/10 with the same scaling = 3/10 × 180 = 54\n\nএই প্রশ্নটিতে একটি প্যাটার্ন বা স্কেলিং ফ্যাক্টর জড়িত বলে মনে হচ্ছে। যদি 1/3 × 1/4 = 15 হয় (প্রকৃত মান 1/12 এর পরিবর্তে), তাহলে একটি গুণিতক রয়েছে।\n\n1/3 × 1/4 = 1/12, কিন্তু দেওয়া আছে 15\n\nস্কেলিং ফ্যাক্টর = 15 ÷ (1/12) = 15 × 12 = 180\n\nঅতএব, একই স্কেলিং সহ 3/10 = 3/10 × 180 = 54",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "mcq",
+      "question": "If male students are 12 & female students are 18, what is the fraction of male students?",
+      "options": ["3/10", "2/7", "7/10", "2/5", "None of these"],
+      "answer": 3,
+      "explanation": "Total students = Male + Female = 12 + 18 = 30\n\nFraction of male students = Male students / Total students = 12/30 = 2/5\n\nমোট শিক্ষার্থী = ছেলে + মেয়ে = 12 + 18 = 30\n\nছেলে শিক্ষার্থীর ভগ্নাংশ = ছেলে শিক্ষার্থী / মোট শিক্ষার্থী = 12/30 = 2/5",
+      "image": null
+    },
+    {
+      "id": 56,
+      "type": "mcq",
+      "question": "If three consecutive numbers' grand total is 75, what is the lowest number of them?",
+      "options": ["24", "27", "29", "37", "None of these"],
+      "answer": 0,
+      "explanation": "Let the three consecutive numbers be x, x+1, and x+2\n\nGiven: x + (x+1) + (x+2) = 75\n\n3x + 3 = 75\n\n3x = 72\n\nx = 24\n\nTherefore, the lowest number is 24. The three numbers are 24, 25, and 26.\n\nমনে করি তিনটি ক্রমিক সংখ্যা হল x, x+1, এবং x+2\n\nদেওয়া আছে: x + (x+1) + (x+2) = 75\n\n3x + 3 = 75\n\n3x = 72\n\nx = 24\n\nঅতএব, সবচেয়ে ছোট সংখ্যা হল 24। তিনটি সংখ্যা হল 24, 25, এবং 26।",
+      "image": null
+    },
+    {
+      "id": 57,
+      "type": "mcq",
+      "question": "If A = 68, B = 51 then the ratio of them?",
+      "options": ["3:4", "4:3", "6:7", "7:6", "None of these"],
+      "answer": 1,
+      "explanation": "Ratio of A to B = A:B = 68:51\n\nDivide both by their GCD (Greatest Common Divisor)\n\nGCD of 68 and 51 = 17\n\n68 ÷ 17 = 4\n\n51 ÷ 17 = 3\n\nTherefore, A:B = 4:3\n\nA এবং B এর অনুপাত = A:B = 68:51\n\nউভয়কে তাদের গসাগু (সর্ববৃহৎ সাধারণ গুণনীয়ক) দিয়ে ভাগ করি\n\n68 এবং 51 এর গসাগু = 17\n\n68 ÷ 17 = 4\n\n51 ÷ 17 = 3\n\nঅতএব, A:B = 4:3",
+      "image": null
+    },
+    {
+      "id": 58,
+      "type": "mcq",
+      "question": "Out of 40 questions, first 30 questions' right answer is equal to 75% when the number of right answer questions is 10, then what will be?",
+      "options": ["60%", "80%", "72%", "75%", "None of these"],
+      "answer": 1,
+      "explanation": "First 30 questions: 75% correct = 0.75 × 30 = 22.5 ≈ 23 correct answers (approximately)\n\nLast 10 questions: All 10 correct (as stated)\n\nTotal correct = 23 + 10 = 33 out of 40\n\nPercentage = (33/40) × 100 = 82.5% ≈ 80%\n\nAlternatively, if we use 22.5: Total = 22.5 + 10 = 32.5\n\nPercentage = (32.5/40) × 100 = 81.25% ≈ 80%\n\nপ্রথম 30টি প্রশ্ন: 75% সঠিক = 0.75 × 30 = 22.5 ≈ 23টি সঠিক উত্তর (প্রায়)\n\nশেষ 10টি প্রশ্ন: সব 10টি সঠিক (যেমন বলা হয়েছে)\n\nমোট সঠিক = 23 + 10 = 33টি (40টির মধ্যে)\n\nশতকরা = (33/40) × 100 = 82.5% ≈ 80%\n\nবিকল্পভাবে, যদি আমরা 22.5 ব্যবহার করি: মোট = 22.5 + 10 = 32.5\n\nশতকরা = (32.5/40) × 100 = 81.25% ≈ 80%",
+      "image": null
+    },
+    {
+      "id": 59,
+      "type": "mcq",
+      "question": "If x + y = 40, y + z = 30 then z - x =",
+      "options": ["-10", "30", "10", "-30", "None of these"],
+      "answer": 0,
+      "explanation": "Given: x + y = 40 ... (1) and y + z = 30 ... (2)\n\nFrom equation (1): y = 40 - x\n\nSubstitute in equation (2): (40 - x) + z = 30\n\n40 - x + z = 30\n\nz - x = 30 - 40\n\nz - x = -10\n\nদেওয়া আছে: x + y = 40 ... (1) এবং y + z = 30 ... (2)\n\nসমীকরণ (1) থেকে: y = 40 - x\n\nসমীকরণ (2) এ বসিয়ে: (40 - x) + z = 30\n\n40 - x + z = 30\n\nz - x = 30 - 40\n\nz - x = -10",
+      "image": null
+    },
+    {
+      "id": 60,
+      "type": "mcq",
+      "question": "If 3^x = 81 then x^2 =",
+      "options": ["16", "-16", "2", "4", "None of these"],
+      "answer": 0,
+      "explanation": "Given: 3^x = 81\n\nWe know that 81 = 3^4\n\nSo, 3^x = 3^4\n\nTherefore, x = 4\n\nNow, x^2 = 4^2 = 16\n\nদেওয়া আছে: 3^x = 81\n\nআমরা জানি যে 81 = 3^4\n\nসুতরাং, 3^x = 3^4\n\nঅতএব, x = 4\n\nএখন, x^2 = 4^2 = 16",
+      "image": null
+    }
+  ]
+}
