@@ -77,6 +77,17 @@
       "format": ["article"],
       "totalQuestions": 60,
       "description": "BARI Scientific Officer পরীক্ষা ২০১৫ - MCQ ও Written প্রশ্ন"
+    },
+    {
+      "id": "so-2013",
+      "title": "Scientific Officer 2013",
+      "year": 2013,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 31,
+      "description": "BARI Scientific Officer পরীক্ষা ২০১৩ - MCQ ও Written প্রশ্ন"
     }
   ]
 }
