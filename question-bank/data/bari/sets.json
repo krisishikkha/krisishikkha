@@ -110,6 +110,17 @@
       "format": ["article"],
       "totalQuestions": 60,
       "description": "BARI Scientific Officer পরীক্ষা ২০১১ - MCQ ও Written প্রশ্ন"
+    },
+   {
+      "id": "so-2009",
+      "title": "Scientific Officer 2009",
+      "year": 2009,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 81,
+      "description": "BARI Scientific Officer পরীক্ষা ২০০৯ - MCQ ও Written প্রশ্ন"
     }
   ]
 }
