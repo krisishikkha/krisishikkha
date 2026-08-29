@@ -1,0 +1,615 @@
+{
+  "meta": {
+    "title": "BARI SO Exam",
+    "institute": "Bangladesh Agricultural Research Institute (BARI)",
+    "year": 2016,
+    "position": "Scientific Officer",
+    "totalQuestions": 40,
+    "type": "free",
+    "examDate": "2016",
+    "duration": "Not specified",
+    "totalMarks": "Not specified"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Glycolysis occurs in --",
+      "options": [
+        "Nucleus",
+        "Mitochondria",
+        "Chloroplast",
+        "Cytoplasm",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "Glycolysis is the process of breaking down glucose (sugar) into pyruvate, producing ATP and NADH. This metabolic pathway occurs in the cytoplasm of cells, not in any organelle. It is the first step of cellular respiration and does not require oxygen (anaerobic process).\n\nগ্লাইকোলাইসিস হলো গ্লুকোজকে পাইরুভেটে ভাঙার প্রক্রিয়া, যা ATP এবং NADH উৎপন্ন করে। এই বিপাকীয় প্রক্রিয়াটি কোষের সাইটোপ্লাজমে ঘটে, কোনো অর্গানেলে নয়। এটি কোষীয় শ্বসনের প্রথম ধাপ এবং এতে অক্সিজেনের প্রয়োজন হয় না (অবাত প্রক্রিয়া)।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which one is self-pollinated crop?",
+      "options": [
+        "Pumpkin",
+        "Coconut",
+        "Wax gourd",
+        "Barley",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "Barley is a self-pollinated crop where pollination occurs within the same flower before it opens (cleistogamy). Other options like pumpkin, coconut, and wax gourd are cross-pollinated crops. Self-pollinated crops maintain genetic purity more easily and show less variation compared to cross-pollinated crops.\n\nবার্লি একটি স্ব-পরাগায়িত ফসল যেখানে ফুল খোলার আগেই একই ফুলের মধ্যে পরাগায়ন ঘটে। অন্যান্য বিকল্প যেমন কুমড়া, নারকেল এবং চাল কুমড়া পর-পরাগায়িত ফসল। স্ব-পরাগায়িত ফসল সহজে জিনগত বিশুদ্ধতা বজায় রাখে এবং পর-পরাগায়িত ফসলের তুলনায় কম পরিবর্তনশীলতা দেখায়।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Which increase acidity in soil?",
+      "options": [
+        "Ammonium chloride",
+        "Urea",
+        "Aluminium chloride",
+        "Ammonium sulphate",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "Ammonium sulphate (NH₄)₂SO₄ increases soil acidity because when ammonium is converted to nitrate through nitrification by soil bacteria, hydrogen ions (H⁺) are released, which lower the soil pH. This acidifying effect makes it useful in alkaline soils but may require lime application in already acidic soils.\n\nঅ্যামোনিয়াম সালফেট (NH₄)₂SO₄ মাটির অম্লতা বৃদ্ধি করে কারণ যখন মাটির ব্যাকটেরিয়া দ্বারা নাইট্রিফিকেশনের মাধ্যমে অ্যামোনিয়াম নাইট্রেটে রূপান্তরিত হয়, তখন হাইড্রোজেন আয়ন (H⁺) নির্গত হয়, যা মাটির pH কমিয়ে দেয়। এই অম্লীকরণ প্রভাব ক্ষারীয় মাটিতে উপকারী কিন্তু ইতিমধ্যে অম্লীয় মাটিতে চুন প্রয়োগের প্রয়োজন হতে পারে।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Which one is naturally cross pollinated?",
+      "options": [
+        "Potato",
+        "Groundnuts",
+        "Soyabean",
+        "Garlic",
+        "None of these"
+      ],
+      "answer": 5,
+      "explanation": "Among the given options, none is naturally cross-pollinated. Potato reproduces vegetatively through tubers, groundnuts and soybean are self-pollinated crops, and garlic also reproduces vegetatively through cloves. Cross-pollinated crops include maize, sunflower, pumpkin, and most cucurbits. The marked answer 'Garlic' in the original appears to be incorrect.\n\nদেওয়া বিকল্পগুলির মধ্যে কোনোটিই প্রাকৃতিকভাবে পর-পরাগায়িত নয়। আলু কন্দের মাধ্যমে অঙ্গজভাবে বংশবৃদ্ধি করে, চিনাবাদাম এবং সয়াবিন স্ব-পরাগায়িত ফসল, এবং রসুনও কোয়ার মাধ্যমে অঙ্গজভাবে বংশবৃদ্ধি করে। পর-পরাগায়িত ফসলের মধ্যে রয়েছে ভুট্টা, সূর্যমুখী, কুমড়া এবং বেশিরভাগ লাউ জাতীয় ফসল।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Which one is imported from other country except one?",
+      "options": [
+        "Katla",
+        "Tilapia",
+        "Nilotica",
+        "Grass carp",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Katla (Catla catla) is a native fish of Bangladesh and the Indian subcontinent, found naturally in rivers like the Padma, Jamuna, and Brahmaputra. On the other hand, Tilapia, Nilotica (a type of Tilapia), and Grass carp are exotic species imported from other countries. Tilapia was introduced from Thailand and Africa, while Grass carp was imported from China for aquaculture purposes.\n\nকাতলা (Catla catla) বাংলাদেশ এবং ভারতীয় উপমহাদেশের দেশীয় মাছ, যা পদ্মা, যমুনা এবং ব্রহ্মপুত্রের মতো নদীতে প্রাকৃতিকভাবে পাওয়া যায়। অন্যদিকে, তেলাপিয়া, নাইলোটিকা (এক ধরনের তেলাপিয়া), এবং গ্রাস কার্প বিদেশ থেকে আমদানি করা বিদেশী প্রজাতি। তেলাপিয়া থাইল্যান্ড এবং আফ্রিকা থেকে আনা হয়েছিল, আর গ্রাস কার্প চীন থেকে জলজ চাষের উদ্দেশ্যে আমদানি করা হয়েছিল।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Which equipment is used for irrigation in Bangladesh?",
+      "options": [
+        "Low lift pump",
+        "Shallow tubewell",
+        "Deep tubewell",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "In Bangladesh, all these irrigation equipment are widely used. Low lift pumps (LLP) are used to lift water from surface water sources like rivers and ponds. Shallow tubewells (STW) extract groundwater from shallow aquifers (up to 60-70 meters), and deep tubewells (DTW) extract water from deeper aquifers (100-300 meters). These are the most common irrigation methods in Bangladesh's agriculture.\n\nবাংলাদেশে এই সকল সেচ সরঞ্জাম ব্যাপকভাবে ব্যবহৃত হয়। নিম্নমুখী পাম্প (LLP) নদী এবং পুকুরের মতো ভূ-পৃষ্ঠের জল উত্তোলনে ব্যবহৃত হয়। অগভীর নলকূপ (STW) অগভীর জলস্তর থেকে ভূগর্ভস্থ পানি উত্তোলন করে (৬০-৭০ মিটার পর্যন্ত), এবং গভীর নলকূপ (DTW) গভীর জলস্তর থেকে পানি উত্তোলন করে (১০০-৩০০ মিটার)। এগুলো বাংলাদেশের কৃষিতে সবচেয়ে প্রচলিত সেচ পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Which one rice growing season?",
+      "options": [
+        "Kharif-1",
+        "Kharif-2",
+        "Winter",
+        "Rabi",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Winter season is a rice growing season in Bangladesh, specifically for Boro rice which is cultivated during the winter months (November-December) and harvested in April-May. The three main rice seasons in Bangladesh are: Aus (Kharif-1, March-July), Aman (Kharif-2, June-December), and Boro (Rabi/Winter, November-May). Boro rice is cultivated in the winter/dry season and is the highest yielding season.\n\nশীতকাল বাংলাদেশে ধান চাষের মৌসুম, বিশেষত বোরো ধানের জন্য যা শীতের মাসে (নভেম্বর-ডিসেম্বর) চাষ করা হয় এবং এপ্রিল-মে মাসে কাটা হয়। বাংলাদেশে তিনটি প্রধান ধান মৌসুম রয়েছে: আউশ (খরিফ-১, মার্চ-জুলাই), আমন (খরিফ-২, জুন-ডিসেম্বর), এবং বোরো (রবি/শীত, নভেম্বর-মে)। বোরো ধান শীত/শুষ্ক মৌসুমে চাষ করা হয় এবং এটি সর্বোচ্চ ফলনশীল মৌসুম।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Plant, water hyacinth, garbage etc. makes --",
+      "options": [
+        "Green manure",
+        "Farm Yard Manure",
+        "Compost",
+        "Urea",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Plant residues, water hyacinth, garbage, and other organic materials make compost through decomposition. Composting is the biological decomposition of organic waste by microorganisms under controlled aerobic conditions. It is different from green manure (which involves incorporating fresh green plants into soil) and farmyard manure (animal waste mixed with bedding material).\n\nউদ্ভিদের অবশিষ্টাংশ, কচুরিপানা, আবর্জনা এবং অন্যান্য জৈব পদার্থ পচনের মাধ্যমে কম্পোস্ট তৈরি করে। কম্পোস্টিং হলো নিয়ন্ত্রিত বায়ুবীয় পরিস্থিতিতে অণুজীব দ্বারা জৈব বর্জ্যের জৈবিক পচন। এটি সবুজ সার (যা তাজা সবুজ গাছপালা মাটিতে মিশিয়ে দেওয়া) এবং গোয়ালঘরের সার (বিছানার উপাদানের সাথে মিশ্রিত পশুর বর্জ্য) থেকে আলাদা। কম্পোস্ট মাটির উর্বরতা বৃদ্ধি করে এবং জৈব পদার্থ সরবরাহ করে।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "The fertilizer which is applied in sulfur deficient soil?",
+      "options": [
+        "Gypsum",
+        "Potash",
+        "Urea",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Gypsum (calcium sulfate, CaSO₄·2H₂O) is the fertilizer applied in sulfur-deficient soil. It contains about 18-20% sulfur and 22-23% calcium. Gypsum not only provides sulfur but also improves soil structure, reduces soil salinity, and enhances water infiltration. In Bangladesh, sulfur deficiency is common in many soils, especially in rice-growing areas, and gypsum is widely used to correct this deficiency.\n\nজিপসাম (ক্যালসিয়াম সালফেট, CaSO₄·2H₂O) সালফার ঘাটতিযুক্ত মাটিতে প্রয়োগ করা সার। এতে প্রায় ১৮-২০% সালফার এবং ২২-২৩% ক্যালসিয়াম থাকে। জিপসাম শুধু সালফার সরবরাহ করে না বরং মাটির গঠন উন্নত করে, মাটির লবণাক্ততা হ্রাস করে এবং পানি অনুপ্রবেশ বৃদ্ধি করে। বাংলাদেশে অনেক মাটিতে, বিশেষ করে ধান চাষের এলাকায়, সালফারের ঘাটতি সাধারণ এবং এই ঘাটতি সংশোধনে জিপসাম ব্যাপকভাবে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "What is chilling temperature?",
+      "options": [
+        "-273°C",
+        "-5°C",
+        "4-5°C",
+        "Below 0°C",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Chilling temperature refers to temperatures above freezing point but low enough to cause physiological damage to sensitive plants, typically ranging from 0°C to 12-15°C. However, the most commonly referenced chilling temperature is around 4-5°C. Chilling injury occurs in tropical and subtropical crops like rice, mango, banana, and tomato when exposed to these temperatures. It can cause stunted growth, leaf discoloration, and reduced yield.\n\nচিলিং তাপমাত্রা বলতে হিমাঙ্কের উপরে কিন্তু সংবেদনশীল উদ্ভিদের শারীরবৃত্তীয় ক্ষতির জন্য যথেষ্ট কম তাপমাত্রা বোঝায়, সাধারণত ০°সে থেকে ১২-১৫°সে পর্যন্ত। তবে সবচেয়ে সাধারণভাবে উল্লেখিত চিলিং তাপমাত্রা প্রায় ৪-৫°সে। গ্রীষ্মমণ্ডলীয় এবং উপ-গ্রীষ্মমণ্ডলীয় ফসল যেমন ধান, আম, কলা এবং টমেটো এই তাপমাত্রায় প্রকাশিত হলে চিলিং ইনজুরি হয়। এটি বৃদ্ধি বাধাগ্রস্ত, পাতার বিবর্ণতা এবং ফলন হ্রাস করতে পারে।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Scientific name of Rohi fish is-",
+      "options": [
+        "Labeo rohita",
+        "Catla catla",
+        "Cirrhinus mrigala",
+        "Hypophthalmichthys molitrix",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The scientific name of Rohi (Rui) fish is Labeo rohita. It is one of the three Indian major carps, along with Catla (Catla catla) and Mrigal (Cirrhinus mrigala). Rohi is a freshwater fish native to rivers in the Indian subcontinent, particularly the Ganges, Brahmaputra, and other river systems. It is an important aquaculture species in Bangladesh and contributes significantly to fish production.\n\nরুই মাছের বৈজ্ঞানিক নাম Labeo rohita। এটি তিনটি ভারতীয় প্রধান কার্পের একটি, কাতলা (Catla catla) এবং মৃগেল (Cirrhinus mrigala) এর সাথে। রুই একটি মিঠা পানির মাছ যা ভারতীয় উপমহাদেশের নদীগুলিতে, বিশেষত গঙ্গা, ব্রহ্মপুত্র এবং অন্যান্য নদী ব্যবস্থায় দেশীয়। এটি বাংলাদেশে একটি গুরুত্বপূর্ণ জলজ চাষ প্রজাতি এবং মাছ উৎপাদনে উল্লেখযোগ্য অবদান রাখে।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "How many days old seedling is used for transplanting in case of Aus rice?",
+      "options": [
+        "20-30 days",
+        "35-40 days",
+        "30-35 days",
+        "40-45 days",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "For Aus rice, 20-30 days old seedlings are used for transplanting. Aus rice is grown during the Kharif-1 season (pre-monsoon) from March to July. Younger seedlings (20-30 days) are preferred for Aus rice compared to Aman (30-40 days) and Boro (35-45 days) because of the shorter growing period and warmer temperatures. Younger seedlings establish better and give higher yields in the Aus season.\n\nআউশ ধানের জন্য ২০-৩০ দিন বয়সী চারা রোপণে ব্যবহৃত হয়। আউশ ধান খরিফ-১ মৌসুমে (প্রাক-মৌসুমী) মার্চ থেকে জুলাই পর্যন্ত চাষ করা হয়। আমন (৩০-৪০ দিন) এবং বোরো (৩৫-৪৫ দিন) এর তুলনায় আউশ ধানের জন্য কম বয়সী চারা (২০-৩০ দিন) পছন্দ করা হয় কারণ বৃদ্ধির সময়কাল ছোট এবং তাপমাত্রা উষ্ণ। কম বয়সী চারা ভালোভাবে প্রতিষ্ঠিত হয় এবং আউশ মৌসুমে উচ্চ ফলন দেয়।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Most suitable soil for crop is --",
+      "options": [
+        "Loamy soil",
+        "Sandy soil",
+        "Clay soil",
+        "Coarse soil",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Loamy soil is the most suitable soil for crop production. It is a balanced mixture of sand, silt, and clay (approximately 40% sand, 40% silt, and 20% clay). Loamy soil has excellent properties: good drainage, adequate water retention, proper aeration, rich in organic matter and nutrients, easy to work, and suitable for a wide range of crops. It provides the best growing conditions for most agricultural crops.\n\nদো-আঁশ মাটি ফসল উৎপাদনের জন্য সবচেয়ে উপযুক্ত মাটি। এটি বালি, পলি এবং কাদার একটি সুষম মিশ্রণ (প্রায় ৪০% বালি, ৪০% পলি এবং ২০% কাদা)। দো-আঁশ মাটির চমৎকার বৈশিষ্ট্য রয়েছে: ভাল নিষ্কাশন, পর্যাপ্ত জল ধারণ, সঠিক বায়ু চলাচল, জৈব পদার্থ এবং পুষ্টিতে সমৃদ্ধ, কাজ করা সহজ এবং বিস্তৃত ফসলের জন্য উপযুক্ত। এটি বেশিরভাগ কৃষি ফসলের জন্য সর্বোত্তম বৃদ্ধির পরিস্থিতি প্রদান করে।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Which one of the following is not C4 plant except one?",
+      "options": [
+        "Maize",
+        "Sugar beet",
+        "Barley",
+        "Rice",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Among the options, Maize is the only C4 plant, while sugar beet, barley, and rice are C3 plants. C4 plants have a specialized photosynthetic pathway that is more efficient in hot, dry conditions with high light intensity. They include maize, sugarcane, sorghum, and pearl millet. C3 plants (rice, wheat, barley, sugar beet) use the Calvin cycle directly and are less efficient under high temperature and light stress.\n\nবিকল্পগুলির মধ্যে, ভুট্টা একমাত্র C4 উদ্ভিদ, যখন চিনির বিট, বার্লি এবং ধান C3 উদ্ভিদ। C4 উদ্ভিদের একটি বিশেষায়িত সালোকসংশ্লেষণ পথ রয়েছে যা উচ্চ আলোর তীব্রতা সহ গরম, শুষ্ক অবস্থায় আরও দক্ষ। এর মধ্যে রয়েছে ভুট্টা, আখ, জোয়ার এবং বাজরা। C3 উদ্ভিদ (ধান, গম, বার্লি, চিনির বিট) সরাসরি ক্যালভিন চক্র ব্যবহার করে এবং উচ্চ তাপমাত্রা ও আলোর চাপে কম দক্ষ।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Which of the following is not a step of hybridization?",
+      "options": [
+        "Pollination",
+        "Tagging",
+        "Bagging",
+        "Emasculation",
+        "None of these"
+      ],
+      "answer": 5,
+      "explanation": "All the listed options - pollination, tagging, bagging, and emasculation - are essential steps of hybridization in plant breeding. Emasculation is the removal of anthers before pollen is shed. Bagging is covering the emasculated flower to prevent unwanted pollination. Pollination is the transfer of desired pollen to the stigma. Tagging is labeling the cross with relevant information. Therefore, 'None of these' is the correct answer as all are steps of hybridization.\n\nতালিকাভুক্ত সমস্ত বিকল্প - পরাগায়ন, ট্যাগিং, ব্যাগিং এবং ইমাসকুলেশন - উদ্ভিদ প্রজননে সংকরায়নের প্রয়োজনীয় ধাপ। ইমাসকুলেশন হলো পরাগ ঝরার আগে পরাগধানী অপসারণ। ব্যাগিং হলো অবাঞ্ছিত পরাগায়ন রোধে ইমাসকুলেটেড ফুল ঢেকে রাখা। পরাগায়ন হলো কলঙ্কায় কাঙ্ক্ষিত পরাগ স্থানান্তর। ট্যাগিং হলো প্রাসঙ্গিক তথ্য সহ সংকরায়ণটি লেবেল করা। অতএব, 'None of these' সঠিক উত্তর কারণ সবগুলোই সংকরায়নের ধাপ।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Which irrigation system is randomly used in Bangladesh?",
+      "options": [
+        "Surface irrigation",
+        "Sprinkler irrigation",
+        "Sub-surface irrigation",
+        "Drip irrigation",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Surface irrigation is the most commonly and randomly used irrigation system in Bangladesh. It includes flood irrigation, furrow irrigation, and basin irrigation. About 90% of irrigation in Bangladesh is done through surface irrigation methods, especially for rice cultivation. This method is preferred due to its low cost, simple technology, and suitability for flat topography. However, sprinkler and drip irrigation are gaining popularity for vegetables and high-value crops.\n\nভূ-পৃষ্ঠ সেচ বাংলাদেশে সবচেয়ে সাধারণভাবে এবং এলোমেলোভাবে ব্যবহৃত সেচ ব্যবস্থা। এর মধ্যে রয়েছে বন্যা সেচ, নালা সেচ এবং বেসিন সেচ। বাংলাদেশে প্রায় ৯০% সেচ ভূ-পৃষ্ঠ সেচ পদ্ধতির মাধ্যমে করা হয়, বিশেষত ধান চাষের জন্য। এই পদ্ধতিটি কম খরচ, সরল প্রযুক্তি এবং সমতল ভূ-প্রকৃতির উপযুক্ততার কারণে পছন্দ করা হয়। তবে সবজি এবং উচ্চ মূল্যের ফসলের জন্য স্প্রিংকলার এবং ড্রিপ সেচ জনপ্রিয়তা পাচ্ছে।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Which one is not correctly matched?",
+      "options": [
+        "Goatling - under aged goat",
+        "Khashi - castrated male",
+        "Doe - female goat",
+        "Buck - male goat for breeding purpose",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "The term 'Goatling' actually refers to a young goat, typically between weaning and one year of age, not specifically 'under aged'. The other terms are correctly matched: Khashi is a castrated male goat, Doe is a female goat, and Buck is an intact male goat used for breeding purposes. Therefore, the first option contains an imprecise definition.\n\n'গোটলিং' শব্দটি আসলে একটি তরুণ বকরিকে বোঝায়, সাধারণত দুধ ছাড়ানো এবং এক বছর বয়সের মধ্যে, বিশেষভাবে 'কম বয়সী' নয়। অন্যান্য পদগুলি সঠিকভাবে মিলেছে: খাসি হলো একটি খোজা করা পুরুষ বকরি, ডো হলো একটি মহিলা বকরি, এবং বাক হলো প্রজননের উদ্দেশ্যে ব্যবহৃত একটি অক্ষত পুরুষ বকরি। অতএব, প্রথম বিকল্পটিতে একটি অস্পষ্ট সংজ্ঞা রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Removal of infected plant from a population is called?",
+      "options": [
+        "Roguing",
+        "Thinning",
+        "Mulching",
+        "Both a & b",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Roguing is the practice of removing infected, diseased, off-type, or undesirable plants from a crop population to maintain genetic purity and prevent disease spread. This is especially important in seed production and plant breeding programs. Thinning is removing excess plants to provide proper spacing, and mulching is covering soil surface with organic or inorganic materials. Therefore, roguing is the correct answer.\n\nরগিং হলো জিনগত বিশুদ্ধতা বজায় রাখতে এবং রোগ বিস্তার প্রতিরোধে ফসল জনসংখ্যা থেকে সংক্রমিত, রোগাক্রান্ত, ভিন্ন ধরনের বা অবাঞ্ছিত গাছপালা অপসারণের অনুশীলন। এটি বিশেষভাবে বীজ উৎপাদন এবং উদ্ভিদ প্রজনন কর্মসূচিতে গুরুত্বপূর্ণ। থিনিং হলো সঠিক ব্যবধান প্রদানের জন্য অতিরিক্ত গাছ অপসারণ, এবং মালচিং হলো জৈব বা অজৈব পদার্থ দিয়ে মাটির পৃষ্ঠ ঢেকে দেওয়া। অতএব, রগিং সঠিক উত্তর।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Which gas is responsible for greenhouse effect?",
+      "options": [
+        "CO₂",
+        "O₃",
+        "CH₄",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "All the mentioned gases - CO₂ (carbon dioxide), O₃ (ozone), and CH₄ (methane) - are responsible for the greenhouse effect. These greenhouse gases trap heat in the atmosphere, leading to global warming. CO₂ is the most abundant, CH₄ is more potent per molecule, and O₃ in the troposphere also contributes. Other greenhouse gases include N₂O and water vapor.\n\nউল্লিখিত সমস্ত গ্যাস - CO₂ (কার্বন ডাই অক্সাইড), O₃ (ওজোন), এবং CH₄ (মিথেন) - গ্রিনহাউস প্রভাবের জন্য দায়ী। এই গ্রিনহাউস গ্যাসগুলি বায়ুমণ্ডলে তাপ আটকে রাখে, যা বৈশ্বিক উষ্ণায়নের দিকে পরিচালিত করে। CO₂ সবচেয়ে প্রচুর, CH₄ প্রতি অণুতে আরও শক্তিশালী, এবং ট্রপোস্ফিয়ারে O₃ও অবদান রাখে। অন্যান্য গ্রিনহাউস গ্যাসের মধ্যে রয়েছে N₂O এবং জলীয় বাষ্প।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "Which soil has high water holding capacity?",
+      "options": [
+        "Coarse soil",
+        "Fine soil",
+        "Sandy soil",
+        "Clay soil",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "Clay soil has the highest water holding capacity due to its very fine texture and small pore spaces. Clay particles are less than 0.002 mm in diameter, creating numerous micropores that retain water through capillary action. Clay soil can hold 40-60% water by volume. However, much of this water is held tightly and not available to plants. Sandy and coarse soils have low water holding capacity due to large pore spaces.\n\nকাদা মাটির অত্যন্ত সূক্ষ্ম গঠন এবং ছোট ছিদ্র স্থানের কারণে সর্বোচ্চ জল ধারণ ক্ষমতা রয়েছে। কাদা কণা ব্যাস ০.০০২ মিমি এর কম, যা কৈশিক ক্রিয়ার মাধ্যমে জল ধরে রাখে এমন অসংখ্য মাইক্রোপোর তৈরি করে। কাদা মাটি আয়তনের ৪০-৬০% জল ধরে রাখতে পারে। তবে এই জলের বেশিরভাগ শক্তভাবে ধরে রাখা হয় এবং গাছের জন্য উপলব্ধ নয়। বালুকাময় এবং মোটা মাটির বড় ছিদ্র স্থানের কারণে কম জল ধারণ ক্ষমতা রয়েছে।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Agroforestry deals with -",
+      "options": [
+        "Silviculture",
+        "Tree, crop and animal",
+        "Tree & crop",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Agroforestry is a land use management system that integrates trees, crops, and animals on the same piece of land. It combines agricultural and forestry practices to create more diverse, productive, sustainable, and profitable land-use systems. In Bangladesh, agroforestry systems include homestead forestry, alley cropping, and silvopastoral systems that combine trees with livestock grazing.\n\nএগ্রোফরেস্ট্রি হলো একটি ভূমি ব্যবহার ব্যবস্থাপনা ব্যবস্থা যা একই জমিতে গাছ, ফসল এবং পশু একীভূত করে। এটি আরও বৈচিত্র্যময়, উৎপাদনশীল, টেকসই এবং লাভজনক ভূমি-ব্যবহার ব্যবস্থা তৈরি করতে কৃষি এবং বনায়ন অনুশীলনগুলি একত্রিত করে। বাংলাদেশে, এগ্রোফরেস্ট্রি সিস্টেমের মধ্যে রয়েছে বাড়ির বন, অ্যালি ক্রপিং এবং সিলভোপাস্টোরাল সিস্টেম যা গবাদি পশু চারণের সাথে গাছ একত্রিত করে।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Which type of water is uptaken by plant with mineral?",
+      "options": [
+        "Capillary water",
+        "Hygroscopic water",
+        "Gravitational water",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Capillary water is the type of water absorbed by plant roots along with minerals. It is held in the soil micropores by capillary forces and surface tension, available between field capacity and permanent wilting point. This water moves slowly through soil and is readily available to plants. Hygroscopic water is tightly bound to soil particles and unavailable to plants, while gravitational water drains quickly due to gravity.\n\nকৈশিক জল হলো সেই ধরনের জল যা খনিজ সহ উদ্ভিদের শিকড় দ্বারা শোষিত হয়। এটি কৈশিক শক্তি এবং পৃষ্ঠ টান দ্বারা মাটির মাইক্রোপোরে ধরে রাখা হয়, মাঠ ক্ষমতা এবং স্থায়ী ঢিলে পয়েন্টের মধ্যে উপলব্ধ। এই জল মাটির মধ্য দিয়ে ধীরে ধীরে চলে এবং উদ্ভিদের জন্য সহজেই উপলব্ধ। হাইগ্রোস্কোপিক জল মাটির কণার সাথে শক্তভাবে আবদ্ধ এবং উদ্ভিদের জন্য অনুপলব্ধ, যখন মাধ্যাকর্ষণ জল মাধ্যাকর্ষণের কারণে দ্রুত নিষ্কাশিত হয়।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "At field capacity which water is prevail?",
+      "options": [
+        "Capillary",
+        "Gravitational water",
+        "Hygroscopic",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "At field capacity, capillary water prevails in the soil. Field capacity is the amount of water remaining in the soil after excess gravitational water has drained away (usually 2-3 days after irrigation or heavy rain). At this point, the soil contains maximum capillary water that is available for plant use. It represents the optimal soil moisture condition for plant growth.\n\nমাঠ ক্ষমতায়, মাটিতে কৈশিক জল বিরাজ করে। মাঠ ক্ষমতা হলো অতিরিক্ত মাধ্যাকর্ষণ জল নিষ্কাশিত হওয়ার পরে মাটিতে অবশিষ্ট জলের পরিমাণ (সাধারণত সেচ বা ভারী বৃষ্টির ২-৩ দিন পরে)। এই সময়ে, মাটিতে সর্বাধিক কৈশিক জল থাকে যা উদ্ভিদ ব্যবহারের জন্য উপলব্ধ। এটি উদ্ভিদ বৃদ্ধির জন্য সর্বোত্তম মাটির আর্দ্রতা অবস্থার প্রতিনিধিত্ব করে।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "Which machine is used to apply highly concentrated insecticide in Bangladesh?",
+      "options": [
+        "Hand sprayer",
+        "Compression sprayer",
+        "Foot sprayer",
+        "Power pump",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Foot sprayer is used to apply highly concentrated insecticide in Bangladesh. It can generate high pressure (up to 40-60 psi) by foot operation, making it suitable for applying concentrated pesticides over larger areas. It has a capacity of 8-16 liters and is more efficient than hand sprayers for commercial farming. The high pressure ensures better coverage and penetration of pesticides.\n\nফুট স্প্রেয়ার বাংলাদেশে অত্যন্ত ঘনীভূত কীটনাশক প্রয়োগের জন্য ব্যবহৃত হয়। এটি পা দিয়ে চালনার মাধ্যমে উচ্চ চাপ (৪০-৬০ psi পর্যন্ত) তৈরি করতে পারে, যা বৃহত্তর এলাকায় ঘনীভূত কীটনাশক প্রয়োগের জন্য উপযুক্ত। এর ক্ষমতা ৮-১৬ লিটার এবং বাণিজ্যিক চাষের জন্য হ্যান্ড স্প্রেয়ারের চেয়ে বেশি দক্ষ। উচ্চ চাপ কীটনাশকের ভাল কভারেজ এবং অনুপ্রবেশ নিশ্চিত করে।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Yellowing of older leaves occurs due to deficiency of -",
+      "options": [
+        "Nitrogen",
+        "Phosphorus",
+        "Sulfur",
+        "Silicon",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Yellowing of older leaves (chlorosis) occurs due to nitrogen deficiency. Nitrogen is a mobile nutrient that can be translocated from older to younger tissues when supply is limited. Therefore, deficiency symptoms appear first on older leaves. Nitrogen is essential for chlorophyll formation, protein synthesis, and overall plant growth. Other mobile nutrients showing similar symptoms include phosphorus, potassium, and magnesium.\n\nপুরনো পাতার হলুদ হওয়া (ক্লোরোসিস) নাইট্রোজেনের অভাবের কারণে ঘটে। নাইট্রোজেন একটি মোবাইল পুষ্টি যা সরবরাহ সীমিত হলে পুরনো টিস্যু থেকে নতুন টিস্যুতে স্থানান্তরিত হতে পারে। অতএব, অভাবের লক্ষণগুলি প্রথমে পুরনো পাতায় দেখা দেয়। ক্লোরোফিল গঠন, প্রোটিন সংশ্লেষণ এবং সামগ্রিক উদ্ভিদ বৃদ্ধির জন্য নাইট্রোজেন অপরিহার্য। অনুরূপ লক্ষণ দেখানো অন্যান্য মোবাইল পুষ্টির মধ্যে রয়েছে ফসফরাস, পটাসিয়াম এবং ম্যাগনেসিয়াম।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Which borer causes most damage in rice?",
+      "options": [
+        "Stem borer",
+        "Yellow rice stem borer",
+        "Top shoot borer",
+        "Fruit and shoot borer",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Yellow rice stem borer (Scirpophaga incertulas) causes the most damage in rice in Bangladesh. It is the most serious pest of rice, causing symptoms like 'dead heart' at vegetative stage and 'white head' at reproductive stage. The larvae bore into the stem and feed on internal tissues, causing significant yield losses (20-30% or more). Control measures include using resistant varieties, proper field management, and timely insecticide application.\n\nহলুদ ধানের কাণ্ড ছিদ্রকারী (Scirpophaga incertulas) বাংলাদেশে ধানে সবচেয়ে বেশি ক্ষতি করে। এটি ধানের সবচেয়ে গুরুতর কীটপতঙ্গ, যা উদ্ভিজ্জ পর্যায়ে 'মরা হৃদয়' এবং প্রজনন পর্যায়ে 'সাদা মাথা' এর মতো লক্ষণ সৃষ্টি করে। লার্ভা কাণ্ডে ছিদ্র করে এবং অভ্যন্তরীণ টিস্যু খায়, উল্লেখযোগ্য ফলন ক্ষতি (২০-৩০% বা তার বেশি) সৃষ্টি করে। নিয়ন্ত্রণ ব্যবস্থায় প্রতিরোধী জাত ব্যবহার, সঠিক মাঠ ব্যবস্থাপনা এবং সময়মত কীটনাশক প্রয়োগ অন্তর্ভুক্ত।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Auxin is a -",
+      "options": [
+        "Growth promoter",
+        "Growth inhibitor",
+        "Growth retardant",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Auxin is a plant growth promoter hormone. The most common naturally occurring auxin is indole-3-acetic acid (IAA). Auxin promotes cell elongation, apical dominance, root initiation, fruit development, and prevents abscission. It is synthesized in shoot tips, young leaves, and developing seeds. Synthetic auxins like 2,4-D and NAA are used as herbicides and rooting hormones.\n\nঅক্সিন একটি উদ্ভিদ বৃদ্ধি প্রবর্তক হরমোন। সবচেয়ে সাধারণ প্রাকৃতিকভাবে ঘটছে অক্সিন হলো ইনডোল-৩-অ্যাসিটিক অ্যাসিড (IAA)। অক্সিন কোষ দীর্ঘায়ন, শীর্ষ আধিপত্য, শিকড় শুরু, ফল বিকাশকে উৎসাহিত করে এবং ঝরে পড়া প্রতিরোধ করে। এটি অঙ্কুর টিপস, তরুণ পাতা এবং বিকাশমান বীজে সংশ্লেষিত হয়। কৃত্রিম অক্সিন যেমন ২,৪-ডি এবং NAA আগাছানাশক এবং শিকড় হরমোন হিসাবে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Cultivation of crops in recurrent regular succession for a definite period of time is called --",
+      "options": [
+        "Crop calendar",
+        "Cropping pattern",
+        "Crop rotation",
+        "Both a and b",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Crop rotation is the cultivation of crops in recurrent regular succession for a definite period of time on the same piece of land. It involves growing different crops in a planned sequence to improve soil fertility, break pest and disease cycles, and optimize resource use. For example, Rice-Wheat-Mungbean rotation or Rice-Mustard-Jute rotation. This practice is essential for sustainable agriculture.\n\nফসল আবর্তন হলো একই জমিতে একটি নির্দিষ্ট সময়ের জন্য পুনরাবৃত্ত নিয়মিত ক্রমানুসারে ফসল চাষ। এটি মাটির উর্বরতা উন্নত করতে, কীটপতঙ্গ এবং রোগের চক্র ভাঙতে এবং সম্পদ ব্যবহার অপ্টিমাইজ করতে পরিকল্পিত ক্রমে বিভিন্ন ফসল চাষ জড়িত। উদাহরণস্বরূপ, ধান-গম-মুগ আবর্তন বা ধান-সরিষা-পাট আবর্তন। টেকসই কৃষির জন্য এই অনুশীলন অপরিহার্য।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Costs that are incurred even when no production is done?",
+      "options": [
+        "Overhead cost",
+        "Supplementary cost",
+        "Fixed cost",
+        "None of these",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Fixed costs are costs that are incurred even when no production is done. These costs remain constant regardless of the level of production or output. Examples include rent, land revenue, permanent labor salary, depreciation, and interest on fixed capital. Unlike variable costs which change with production levels, fixed costs must be paid whether the farm produces anything or not.\n\nস্থির খরচ হলো এমন খরচ যা কোনো উৎপাদন না হলেও করতে হয়। এই খরচগুলি উৎপাদন বা আউটপুট স্তর নির্বিশেষে স্থির থাকে। উদাহরণের মধ্যে রয়েছে ভাড়া, ভূমি রাজস্ব, স্থায়ী শ্রম বেতন, অবচয় এবং স্থির মূলধনের সুদ। পরিবর্তনশীল খরচের বিপরীতে যা উৎপাদন স্তরের সাথে পরিবর্তিত হয়, খামার কিছু উৎপাদন করুক বা না করুক স্থির খরচ দিতে হবে।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "The least importance point of IPM is",
+      "options": [
+        "Use of pesticide",
+        "Biological control",
+        "Removal of infected plants",
+        "Cultural control",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Use of pesticide is the least important point in Integrated Pest Management (IPM). IPM emphasizes preventing pest problems through cultural, biological, and mechanical methods first. Chemical pesticides are used only as a last resort when other methods fail to keep pest populations below economic threshold levels. The priority in IPM is: prevention, monitoring, cultural practices, biological control, and finally chemical control.\n\nসমন্বিত কীটপতঙ্গ ব্যবস্থাপনায় (IPM) কীটনাশক ব্যবহার সবচেয়ে কম গুরুত্বপূর্ণ পয়েন্ট। IPM প্রথমে সাংস্কৃতিক, জৈবিক এবং যান্ত্রিক পদ্ধতির মাধ্যমে কীটপতঙ্গ সমস্যা প্রতিরোধের উপর জোর দেয়। রাসায়নিক কীটনাশক শুধুমাত্র শেষ অবলম্বন হিসাবে ব্যবহার করা হয় যখন অন্যান্য পদ্ধতি অর্থনৈতিক প্রান্তিক স্তরের নিচে কীটপতঙ্গ জনসংখ্যা রাখতে ব্যর্থ হয়। IPM-এ অগ্রাধিকার হলো: প্রতিরোধ, পর্যবেক্ষণ, সাংস্কৃতিক অনুশীলন, জৈবিক নিয়ন্ত্রণ এবং অবশেষে রাসায়নিক নিয়ন্ত্রণ।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "Ca & Mg are the - type of nutrition for the plant?",
+      "options": [
+        "Primary",
+        "Micro",
+        "Secondary",
+        "Macro",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Calcium (Ca) and Magnesium (Mg) are secondary nutrients for plants, not primary. Plant nutrients are classified into three categories: Primary nutrients (N, P, K) which are required in large quantities, Secondary nutrients (Ca, Mg, S) which are required in moderate quantities, and Micronutrients (Fe, Mn, Zn, Cu, B, Mo, Cl) which are required in small quantities. The original answer marked as 'Primary' is incorrect.\n\nক্যালসিয়াম (Ca) এবং ম্যাগনেসিয়াম (Mg) উদ্ভিদের জন্য গৌণ পুষ্টি, প্রাথমিক নয়। উদ্ভিদ পুষ্টিকে তিনটি শ্রেণীতে শ্রেণীবদ্ধ করা হয়: প্রাথমিক পুষ্টি (N, P, K) যা প্রচুর পরিমাণে প্রয়োজন, গৌণ পুষ্টি (Ca, Mg, S) যা মাঝারি পরিমাণে প্রয়োজন, এবং অণুপুষ্টি (Fe, Mn, Zn, Cu, B, Mo, Cl) যা অল্প পরিমাণে প্রয়োজন। মূল উত্তর 'প্রাথমিক' হিসাবে চিহ্নিত করা ভুল।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "If the yield is 4.4 ton/ha at 20% moisture. What will be the yield at 12% moisture?",
+      "options": [
+        "4000 kg",
+        "3000 kg",
+        "2500 kg",
+        "2000 kg",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Calculation steps:\n\nYield at 20% moisture = 4.4 ton/ha = 4400 kg/ha\n\nDry matter at 20% moisture = 100% - 20% = 80%\n\nDry matter weight = 4400 × 80/100 = 3520 kg\n\nDry matter at 12% moisture = 100% - 12% = 88%\n\nYield at 12% moisture = 3520 × 100/88 = 4000 kg/ha\n\nগণনার ধাপ:\n\n২০% আর্দ্রতায় ফলন = ৪.৪ টন/হেক্টর = ৪৪০০ কেজি/হেক্টর\n\n২০% আর্দ্রতায় শুষ্ক পদার্থ = ১০০% - ২০% = ৮০%\n\nশুষ্ক পদার্থের ওজন = ৪৪০০ × ৮০/১০০ = ৩৫২০ কেজি\n\n১২% আর্দ্রতায় শুষ্ক পদার্থ = ১০০% - ১২% = ৮৮%\n\n১২% আর্দ্রতায় ফলন = ৩৫২০ × ১০০/৮৮ = ৪০০০ কেজি/হেক্টর",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "If plant to plant distance is 25 cm, row to row distance is 10 cm. What will be the number of plant in one ha of land?",
+      "options": [
+        "40000",
+        "25000",
+        "400000",
+        "250000",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "Calculation steps:\n\nPlant to plant distance = 25 cm = 0.25 m\n\nRow to row distance = 10 cm = 0.10 m\n\nArea per plant = 0.25 m × 0.10 m = 0.025 m²\n\n1 hectare = 10000 m²\n\nNumber of plants = 10000 m² ÷ 0.025 m² = 400000 plants\n\nগণনার ধাপ:\n\nগাছ থেকে গাছের দূরত্ব = ২৫ সেমি = ০.২৫ মিটার\n\nসারি থেকে সারির দূরত্ব = ১০ সেমি = ০.১০ মিটার\n\nপ্রতি গাছের জন্য এলাকা = ০.২৫ মিটার × ০.১০ মিটার = ০.০২৫ বর্গমিটার\n\n১ হেক্টর = ১০০০০ বর্গমিটার\n\nগাছের সংখ্যা = ১০০০০ বর্গমিটার ÷ ০.০২৫ বর্গমিটার = ৪০০০০০ গাছ",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "125 kg urea was applied in 5000 m² land (N=45%). How much N required for 1 ha of land?",
+      "options": [
+        "100 kg",
+        "110 kg",
+        "108 kg",
+        "112.5 kg",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "Calculation steps:\n\nUrea applied in 5000 m² = 125 kg\n\nNitrogen content in urea = 45%\n\nN in 125 kg urea = 125 × 45/100 = 56.25 kg\n\n1 hectare = 10000 m²\n\nN required for 1 ha = 56.25 × 10000/5000 = 56.25 × 2 = 112.5 kg\n\nগণনার ধাপ:\n\n৫০০০ বর্গমিটারে ইউরিয়া প্রয়োগ = ১২৫ কেজি\n\nইউরিয়ায় নাইট্রোজেন উপাদান = ৪৫%\n\n১২৫ কেজি ইউরিয়ায় N = ১২৫ × ৪৫/১০০ = ৫৬.২৫ কেজি\n\n১ হেক্টর = ১০০০০ বর্গমিটার\n\n১ হেক্টরের জন্য প্রয়োজনীয় N = ৫৬.২৫ × ১০০০০/৫০০০ = ৫৬.২৫ × ২ = ১১২.৫ কেজি",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "Which one is not Grass fodder?",
+      "options": [
+        "Para",
+        "Ipil-Ipil",
+        "Napier",
+        "German",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "Ipil-Ipil (Leucaena leucocephala) is not a grass fodder; it is a leguminous tree fodder. Para grass (Brachiaria mutica), Napier grass (Pennisetum purpureum), and German grass (Echinochloa polystachya) are all grass fodders widely used for livestock feeding in Bangladesh. Ipil-Ipil is a multipurpose tree that provides high-protein fodder from its leaves and is used in agroforestry systems.\n\nইপিল-ইপিল (Leucaena leucocephala) ঘাস জাতীয় খাদ্য নয়; এটি একটি শিম জাতীয় গাছ খাদ্য। পারা ঘাস (Brachiaria mutica), নেপিয়ার ঘাস (Pennisetum purpureum), এবং জার্মান ঘাস (Echinochloa polystachya) সবই ঘাস জাতীয় খাদ্য যা বাংলাদেশে গবাদি পশু খাওয়ানোর জন্য ব্যাপকভাবে ব্যবহৃত হয়। ইপিল-ইপিল একটি বহুমুখী গাছ যা তার পাতা থেকে উচ্চ-প্রোটিন খাদ্য সরবরাহ করে এবং এগ্রোফরেস্ট্রি সিস্টেমে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "Which one is not local variety?",
+      "options": [
+        "Katarivogh",
+        "BRRI Dhan28",
+        "Nazirshail",
+        "Ganvoa",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "BRRI Dhan28 is not a local variety; it is a high-yielding modern variety developed by Bangladesh Rice Research Institute (BRRI). It was released in 1994 for Boro season and is widely cultivated. Katarivogh, Nazirshail, and Ganvoa are traditional local varieties that have been grown by farmers for generations. Local varieties are also called landraces or indigenous varieties.\n\nBRRI Dhan28 স্থানীয় জাত নয়; এটি বাংলাদেশ ধান গবেষণা ইনস্টিটিউট (BRRI) দ্বারা উন্নত একটি উচ্চ ফলনশীল আধুনিক জাত। এটি ১৯৯৪ সালে বোরো মৌসুমের জন্য প্রকাশিত হয়েছিল এবং ব্যাপকভাবে চাষ করা হয়। কাটারিভোগ, নাজিরশাইল এবং গাংভোয়া ঐতিহ্যবাহী স্থানীয় জাত যা প্রজন্মের পর প্রজন্ম ধরে কৃষকদের দ্বারা চাষ করা হয়েছে। স্থানীয় জাতকে ল্যান্ডরেস বা দেশীয় জাতও বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "Sulfur fertilizer used in our country..",
+      "options": [
+        "Gypsum",
+        "CaOH",
+        "CaCO₃",
+        "TSP",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Gypsum (CaSO₄·2H₂O) is the sulfur fertilizer commonly used in Bangladesh. It contains 18-20% sulfur and 22-23% calcium. Other sulfur-containing fertilizers include ammonium sulfate and elemental sulfur. CaOH (calcium hydroxide) and CaCO₃ (calcium carbonate/lime) are used for correcting soil acidity but do not supply sulfur. TSP (Triple Super Phosphate) is a phosphorus fertilizer.\n\nজিপসাম (CaSO₄·2H₂O) বাংলাদেশে সাধারণভাবে ব্যবহৃত সালফার সার। এতে ১৮-২০% সালফার এবং ২২-২৩% ক্যালসিয়াম থাকে। অন্যান্য সালফার-যুক্ত সারের মধ্যে রয়েছে অ্যামোনিয়াম সালফেট এবং মৌলিক সালফার। CaOH (ক্যালসিয়াম হাইড্রক্সাইড) এবং CaCO₃ (ক্যালসিয়াম কার্বনেট/চুন) মাটির অম্লতা সংশোধনের জন্য ব্যবহৃত হয় কিন্তু সালফার সরবরাহ করে না। TSP (ট্রিপল সুপার ফসফেট) একটি ফসফরাস সার।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "All are benefit of bio-fertilizer EXCEPT",
+      "options": [
+        "Application is difficult",
+        "Eco friendly",
+        "Contains microorganism",
+        "Low cost",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "Application is difficult is NOT a benefit of bio-fertilizer; rather it is a disadvantage or limitation. Bio-fertilizers have many benefits: they are eco-friendly (environmentally safe), contain beneficial microorganisms (like Rhizobium, Azotobacter, Azospirillum, PSB), low cost compared to chemical fertilizers, improve soil health, and sustainable for long-term use. The challenge is that they require specific storage and application conditions.\n\nপ্রয়োগ কঠিন জৈব সারের সুবিধা নয়; বরং এটি একটি অসুবিধা বা সীমাবদ্ধতা। জৈব সারের অনেক সুবিধা রয়েছে: তারা পরিবেশ বান্ধব (পরিবেশগতভাবে নিরাপদ), উপকারী অণুজীব ধারণ করে (যেমন রাইজোবিয়াম, অ্যাজোটোব্যাক্টর, অ্যাজোস্পাইরিলাম, PSB), রাসায়নিক সারের তুলনায় কম খরচ, মাটির স্বাস্থ্য উন্নত করে এবং দীর্ঘমেয়াদী ব্যবহারের জন্য টেকসই। চ্যালেঞ্জ হলো যে তাদের নির্দিষ্ট সংরক্ষণ এবং প্রয়োগের শর্ত প্রয়োজন।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "If pure live seed is 80%, germination percentage is 90%. What will be the purity percentage of the seed?",
+      "options": [
+        "70%",
+        "84.86%",
+        "62.5%",
+        "88.88%",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "Calculation steps:\n\nPure Live Seed (PLS) = (Purity % × Germination %) / 100\n\n80 = (Purity % × 90) / 100\n\n80 = Purity % × 0.90\n\nPurity % = 80 / 0.90 = 88.88%\n\nগণনার ধাপ:\n\nশুদ্ধ জীবিত বীজ (PLS) = (বিশুদ্ধতা % × অঙ্কুরোদগম %) / ১০০\n\n৮০ = (বিশুদ্ধতা % × ৯০) / ১০০\n\n৮০ = বিশুদ্ধতা % × ০.৯০\n\nবিশুদ্ধতা % = ৮০ / ০.৯০ = ৮৮.৮৮%\n\nPure Live Seed (PLS) একটি বীজের মানের সূচক যা বিশুদ্ধতা এবং অঙ্কুরোদগম উভয়ই বিবেচনা করে। এটি প্রকৃত রোপণযোগ্য বীজের শতাংশ নির্দেশ করে।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "(A × B) × C is:",
+      "options": [
+        "Top cross",
+        "Single cross",
+        "Three way cross",
+        "Double cross",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "(A × B) × C is a three-way cross in plant breeding. First, two inbred lines A and B are crossed to produce a single cross hybrid (A × B). Then this single cross hybrid is crossed with another inbred line C to produce a three-way cross hybrid. This type of cross is used to combine desirable traits from three different parents. A double cross would be (A × B) × (C × D), involving four parents.\n\n(A × B) × C উদ্ভিদ প্রজননে একটি ত্রিমুখী সংকরায়ণ। প্রথমে, দুটি ইনব্রেড লাইন A এবং B সংকরায়িত হয়ে একটি একক সংকর হাইব্রিড (A × B) তৈরি করে। তারপর এই একক সংকর হাইব্রিডকে অন্য একটি ইনব্রেড লাইন C এর সাথে সংকরায়িত করে একটি ত্রিমুখী সংকর হাইব্রিড তৈরি করা হয়। এই ধরনের সংকরায়ণ তিনটি ভিন্ন পিতামাতার কাঙ্ক্ষিত বৈশিষ্ট্য একত্রিত করতে ব্যবহৃত হয়। একটি দ্বিগুণ সংকরায়ণ হবে (A × B) × (C × D), চারটি পিতামাতা জড়িত।",
+      "image": null
+    }
+  ]
+}
