@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "title": "BARI Scientific Officer Recruitment Exam",
+    "institute": "Bangladesh Agricultural Research Institute (BARI)",
+    "year": 2012,
+    "position": "Scientific Officer (SO)",
+    "totalQuestions": 60,
+    "type": "free",
+    "examDate": "2012",
+    "duration": "",
+    "totalMarks": ""
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Which one of the following is not a basic principle of agronomy?",
+      "options": ["Selection of appropriate materials for seed and sowing", "Management of soil and climate", "Appropriated intercropping activities management for crops", "Livestock management for agriculture", "None of these"],
+      "answer": 3,
+      "explanation": "Agronomy হলো ফসল উৎপাদন ও মাটি ব্যবস্থাপনার বিজ্ঞান। এর মূল নীতিগুলো হলো: বীজ নির্বাচন ও বপন, মাটি ও আবহাওয়া ব্যবস্থাপনা, এবং ফসলের আন্তঃফসল ব্যবস্থাপনা। Livestock management (প্রাণিসম্পদ ব্যবস্থাপনা) Animal Husbandry বা Livestock Science-এর অন্তর্ভুক্ত, Agronomy-এর মূল নীতি নয়। Agronomy মূলত শস্য উৎপাদনের সাথে সম্পর্কিত, প্রাণিপালনের সাথে নয়।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which one of the following is not a method of weed control?",
+      "options": ["Selective herbicide", "Burning and firing", "Mowing", "Smothering", "None of these"],
+      "answer": 4,
+      "explanation": "আগাছা দমনের বিভিন্ন পদ্ধতি রয়েছে: রাসায়নিক পদ্ধতি (Selective herbicide), তাপীয় পদ্ধতি (Burning and firing), যান্ত্রিক পদ্ধতি (Mowing - কেটে ফেলা), এবং ভৌত পদ্ধতি (Smothering - ঢেকে রাখা)। উল্লেখিত সকল পদ্ধতিই আগাছা নিয়ন্ত্রণের জন্য ব্যবহৃত হয়। তাই সঠিক উত্তর 'None of these' কারণ সবগুলোই আগাছা দমন পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Agriculture contributes to economic developments of a country through-",
+      "options": ["Food and fiber production", "Positive impact in rural welfare", "Generating market demand", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "কৃষি একটি দেশের অর্থনৈতিক উন্নয়নে বহুমুখী অবদান রাখে। এটি খাদ্য ও আঁশ উৎপাদন করে জাতীয় খাদ্য নিরাপত্তা নিশ্চিত করে। গ্রামীণ জনগণের কল্যাণে ইতিবাচক প্রভাব ফেলে কর্মসংস্থান ও আয়ের সুযোগ সৃষ্টির মাধ্যমে। কৃষি পণ্যের চাহিদা সৃষ্টি করে বাজার অর্থনীতিকে সচল রাখে এবং শিল্পের জন্য কাঁচামাল যোগান দেয়। তাই সবগুলো অপশনই সঠিক।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Which of the following factor is not considered during determination of seed rate?",
+      "options": ["Desired population", "Individual seed weight", "Percentage of size of seed", "Percentage of purity", "None of these"],
+      "answer": 2,
+      "explanation": "বীজের হার নির্ধারণে যে বিষয়গুলো বিবেচনা করা হয়: কাঙ্ক্ষিত জনসংখ্যা/গাছের সংখ্যা (Desired population), বীজের ওজন (Individual seed weight), বীজের বিশুদ্ধতা (Percentage of purity), এবং অঙ্কুরোদগম হার (Germination percentage)। তবে 'Percentage of size of seed' বীজের হার নির্ধারণের সূত্রে সরাসরি ব্যবহৃত হয় না। বীজের আকার পরোক্ষভাবে বীজের ওজনের সাথে সম্পর্কিত।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "What is the utility of zinc in growing plants?",
+      "options": ["Required for synthesis of nitrogen", "Required for synthesis of phosphorus", "Required for starch formation", "Increases activity of boron", "None of these"],
+      "answer": 4,
+      "explanation": "দস্তা (Zinc) উদ্ভিদের বৃদ্ধিতে একটি অত্যাবশ্যক অণুপুষ্টি উপাদান। এটি অক্সিন (Auxin) হরমোন সংশ্লেষণ, প্রোটিন সংশ্লেষণ, এনজাইম সক্রিয়করণ এবং ক্লোরোফিল গঠনে সহায়তা করে। উল্লেখিত অপশনগুলোর কোনটিই জিঙ্কের প্রকৃত কাজ নয়। জিঙ্ক নাইট্রোজেন বা ফসফরাস সংশ্লেষণে সরাসরি ভূমিকা রাখে না, স্টার্চ গঠনেও নয়, এবং বোরনের কার্যকারিতা বৃদ্ধি করে না। তাই সঠিক উত্তর 'None of these'।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Horticulture means",
+      "options": ["Growing of fruits & vegetables", "Primitive farming", "Growing of wheat", "None of these"],
+      "answer": 0,
+      "explanation": "Horticulture (উদ্যানতত্ত্ব) হলো ফল, শাকসবজি, ফুল এবং শোভাবর্ধনকারী গাছপালা চাষাবাদের বিজ্ঞান ও শিল্প। এটি কৃষিবিজ্ঞানের একটি শাখা যা বাগান ফসলের নিবিড় চাষাবাদ নিয়ে কাজ করে। Horticulture-কে বিভিন্ন ভাগে ভাগ করা হয়: Pomology (ফল চাষ), Olericulture (সবজি চাষ), Floriculture (ফুল চাষ), এবং Landscape horticulture (ভূদৃশ্য উদ্যানতত্ত্ব)।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Which layer of soil has the most influence on the type of soil it is?",
+      "options": ["Top soil", "Sub soil", "Parent material", "All of these", "None of these"],
+      "answer": 2,
+      "explanation": "মাটির প্রকৃতি ও শ্রেণিবিন্যাস নির্ধারণে Parent material (মূল উপাদান) সবচেয়ে বেশি প্রভাব ফেলে। মাটি মূলত এই প্যারেন্ট ম্যাটেরিয়াল থেকেই তৈরি হয় শিলা বিয়োজনের মাধ্যমে। Parent material-এর খনিজ উপাদান, রাসায়নিক গঠন এবং ভৌত বৈশিষ্ট্য মাটির মৌলিক ধর্ম নির্ধারণ করে। যদিও Top soil কৃষিকাজে সবচেয়ে গুরুত্বপূর্ণ, কিন্তু মাটির প্রকারভেদ নির্ণয়ে Parent material-ই মূল ভূমিকা পালন করে।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Which of the following agricultural development theories help to explain the mechanism in society chooses an optimal path and technical and industrial change in agriculture?",
+      "options": ["Location and diffusion theory", "Resource exploitation and conservation theory", "High pay-off inputs theory", "Induced innovation theory", "None of these"],
+      "answer": 0,
+      "explanation": "Location and diffusion theory ব্যাখ্যা করে কিভাবে সমাজ কৃষিতে সর্বোত্তম পথ এবং প্রযুক্তিগত ও শিল্প পরিবর্তন বেছে নেয়। এই তত্ত্ব কৃষি প্রযুক্তির ভৌগোলিক বিস্তার এবং গ্রহণের প্রক্রিয়া ব্যাখ্যা করে। Induced innovation theory উৎপাদন উপকরণের দামের সাথে সম্পর্কিত, High pay-off inputs theory উন্নত উপকরণ ব্যবহারের সাথে সম্পর্কিত। তবে সমাজে প্রযুক্তি বিস্তার ও গ্রহণের ব্যাখ্যায় Location and diffusion theory সবচেয়ে উপযুক্ত।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Zinc sulphate should not be mixed with",
+      "options": ["DAP", "Ammonium chloride", "Compost fertilizer", "Urea", "None of these"],
+      "answer": 0,
+      "explanation": "জিঙ্ক সালফেট (ZnSO₄) এর সাথে DAP (Di-ammonium Phosphate) মেশানো উচিত নয় কারণ ফসফেট আয়ন জিঙ্কের সাথে বিক্রিয়া করে অদ্রবণীয় জিঙ্ক ফসফেট তৈরি করে, যা উদ্ভিদের জন্য অপ্রাপ্য হয়ে যায়। এই রাসায়নিক বিক্রিয়া উভয় সারের কার্যকারিতা হ্রাস করে। তাই জিঙ্ক সালফেট ও ফসফেট সার আলাদাভাবে এবং ভিন্ন সময়ে প্রয়োগ করা উচিত।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "What are the three main layers in a soil profile?",
+      "options": ["Mineral, humus and air", "Top soil, sub soil and parent materials", "Loam, sand and clay", "Rock, sand and humus", "None of these"],
+      "answer": 1,
+      "explanation": "মাটির প্রোফাইলে তিনটি প্রধান স্তর রয়েছে: Top soil (উপরিভাগের মাটি বা A horizon), Sub soil (মধ্যস্তর বা B horizon), এবং Parent material (মূল উপাদান বা C horizon)। Top soil-এ জৈব পদার্থ ও পুষ্টি উপাদান বেশি থাকে এবং এটি কৃষিকাজের জন্য সবচেয়ে গুরুত্বপূর্ণ। Sub soil-এ খনিজ পদার্থ জমা হয় এবং Parent material হলো আবহবিকারপ্রাপ্ত শিলা যা থেকে মাটি তৈরি হয়।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "The most efficient use of Potassium is achieved by",
+      "options": ["Broadcasting at the sowing time", "Top dressing after one month of sowing", "Basal placement at the sowing time", "Foliar spray", "None of these"],
+      "answer": 2,
+      "explanation": "পটাশিয়ামের সবচেয়ে কার্যকর ব্যবহার হয় Basal placement (বীজ বপনের সময় মাটিতে মিশিয়ে প্রয়োগ) পদ্ধতিতে। এই পদ্ধতিতে সার মাটির সাথে ভালোভাবে মিশে যায় এবং গাছের শিকড়ের কাছাকাছি থাকে। পটাশিয়াম মাটিতে কম চলাচলশীল, তাই বীজের কাছে রাখলে গাছ সহজে তা গ্রহণ করতে পারে। Broadcasting-এ সার সমানভাবে ছড়িয়ে পড়ে কিন্তু কার্যকারিতা কম হয়, এবং Top dressing-এ সার উপরিভাগে থেকে যায়।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Line breeding is a type of -",
+      "options": ["Inbreeding", "Natural breeding", "Out breeding", "Cross breeding", "None of these"],
+      "answer": 0,
+      "explanation": "Line breeding হলো Inbreeding (অন্তঃপ্রজনন) এর একটি বিশেষ ধরন যেখানে একটি নির্দিষ্ট পূর্বপুরুষের সাথে সম্পর্কিত প্রাণীদের মধ্যে প্রজনন করানো হয়। এটি একটি মৃদু ধরনের inbreeding যেখানে কাঙ্ক্ষিত বৈশিষ্ট্য ধরে রাখার চেষ্টা করা হয় কিন্তু ঘনিষ্ঠ আত্মীয়তা এড়িয়ে যাওয়া হয়। এই পদ্ধতিতে superior পূর্বপুরুষের জিন বজায় রাখা হয় এবং একই সাথে inbreeding depression কমানো হয়।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "In Horticulture \"slash and burn\" refers to -",
+      "options": ["A method by field preparation for farming", "A technique of warfare used by horticulturists", "A method of elimination of insect from a field", "A method of cutting crops", "None of these"],
+      "answer": 0,
+      "explanation": "Slash and burn (কেটে পুড়িয়ে ফেলা) হলো জমি প্রস্তুতির একটি ঐতিহ্যবাহী পদ্ধতি। এই পদ্ধতিতে প্রথমে গাছপালা ও ঝোপঝাড় কেটে ফেলা হয় (slash), তারপর শুকিয়ে পুড়িয়ে দেওয়া হয় (burn)। পুড়ানো ছাই মাটিতে পুষ্টি যোগ করে এবং জমি চাষের জন্য পরিষ্কার হয়। এই পদ্ধতি বাংলাদেশের পাহাড়ি অঞ্চলে 'ঝুম চাষ' নামে পরিচিত। তবে এটি পরিবেশের জন্য ক্ষতিকর এবং মাটির উর্বরতা কমায়।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "What order of the insect has the greatest color variation?",
+      "options": ["Hemiptera", "Diptera", "Lepidoptera", "Zoraptera", "None of these"],
+      "answer": 2,
+      "explanation": "Lepidoptera (প্রজাপতি ও মথ) বর্গের পতঙ্গে সবচেয়ে বেশি রঙের বৈচিত্র্য দেখা যায়। এদের ডানা আঁইশ দিয়ে আবৃত থাকে যাতে বিভিন্ন রঙিন রঞ্জক পদার্থ থাকে। প্রজাপতিরা লাল, নীল, হলুদ, সবুজ, কমলা সহ প্রায় সব রঙের হয়ে থাকে। এই রঙ বৈচিত্র্য তাদের সঙ্গী আকর্ষণ, শিকারি থেকে রক্ষা এবং পরিবেশের সাথে মানিয়ে নিতে সাহায্য করে। Hemiptera (শোষক পতঙ্গ) ও Diptera (মাছি) বর্গে এত রঙের বৈচিত্র্য নেই।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "In which type of soils earthworms generally found?",
+      "options": ["Medium-texture upland soil", "Droughty sands", "Poorly drained low lands", "High-texture low lands", "None of these"],
+      "answer": 0,
+      "explanation": "কেঁচো সাধারণত Medium-texture upland soil (মধ্যম আকারের উঁচু জমির মাটি) তে পাওয়া যায়। এই ধরনের মাটিতে পর্যাপ্ত আর্দ্রতা, বায়ু চলাচল এবং জৈব পদার্থ থাকে যা কেঁচোর বেঁচে থাকার জন্য আদর্শ। শুষ্ক বালুকাময় মাটিতে (Droughty sands) আর্দ্রতার অভাব থাকে এবং জলাবদ্ধ নিচু জমিতে (Poorly drained lowlands) অক্সিজেনের অভাব থাকে, যা কেঁচোর জন্য উপযুক্ত নয়। কেঁচো মাটির উর্বরতা বৃদ্ধিতে গুরুত্বপূর্ণ ভূমিকা পালন করে।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Stridulation is used by-",
+      "options": ["Butterfly", "Birds", "Cow", "Grasshopper", "None of these"],
+      "answer": 3,
+      "explanation": "Stridulation (ঘর্ষণ দ্বারা শব্দ উৎপাদন) পদ্ধতি ফড়িং বা Grasshopper ব্যবহার করে। ফড়িং তাদের পিছনের পায়ের ফিমার (femur) অংশ ডানার সাথে ঘষে শব্দ সৃষ্টি করে। এই শব্দ সঙ্গী আকর্ষণ, এলাকা চিহ্নিতকরণ এবং যোগাযোগের জন্য ব্যবহৃত হয়। ঝিঁঝিঁ পোকা (Cricket) এবং কিছু গুবরে পোকাও stridulation ব্যবহার করে। প্রজাপতি, পাখি এবং গরু এই পদ্ধতি ব্যবহার করে না।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Broccoli is an example of flower bud",
+      "options": ["Cultivated", "Edible", "Lateral", "Dehydrated", "None of these"],
+      "answer": 1,
+      "explanation": "ব্রকলি একটি Edible flower bud (ভোজ্য ফুলের কুঁড়ি) এর উদাহরণ। ব্রকলি হলো ফুলকপির মতো একটি সবজি যেখানে আমরা অপরিণত ফুলের কুঁড়ি এবং কান্ড খাই। এটি Brassica oleracea প্রজাতির অন্তর্গত। ব্রকলিতে প্রচুর পরিমাণে ভিটামিন C, ভিটামিন K, ফাইবার এবং অ্যান্টিঅক্সিডেন্ট রয়েছে। অন্যান্য edible flower bud-এর উদাহরণ হলো ফুলকপি ও আর্টিচোক।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Which of the following is the part of a plant disease triangle?",
+      "options": ["Environment", "Pathogen", "Susceptible hosts", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "Plant disease triangle (উদ্ভিদ রোগ ত্রিভুজ) তিনটি উপাদান নিয়ে গঠিত এবং এই তিনটির উপস্থিতি রোগ সৃষ্টির জন্য অপরিহার্য: (১) Pathogen (রোগজীবাণু) - যেমন ছত্রাক, ব্যাকটেরিয়া বা ভাইরাস, (২) Susceptible host (সংবেদনশীল পোষক) - যে উদ্ভিদ রোগে আক্রান্ত হয়, এবং (৩) Favorable environment (অনুকূল পরিবেশ) - তাপমাত্রা, আর্দ্রতা ইত্যাদি। এই তিনটি উপাদান একসাথে থাকলেই রোগ দেখা দেয়, কোনো একটির অনুপস্থিতিতে রোগ হবে না।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Which of the following substance is not secreted by pathogens in the plant that seems to be involved in production of diseases?",
+      "options": ["Hormones", "Polysaccharides", "Enzymes", "Toxin", "None of these"],
+      "answer": 0,
+      "explanation": "রোগজীবাণু (Pathogens) উদ্ভিদে রোগ সৃষ্টির জন্য বিভিন্ন পদার্থ নিঃসৃত করে যেমন: Enzymes (এনজাইম) - কোষপ্রাচীর ভাঙতে, Toxins (বিষাক্ত পদার্থ) - কোষ ধ্বংস করতে, এবং Polysaccharides (পলিস্যাকারাইড) - জাইলেম বন্ধ করতে। তবে Hormones (হরমোন) মূলত উদ্ভিদ নিজে তৈরি করে এবং সাধারণত রোগজীবাণু কর্তৃক নিঃসৃত হয় না। কিছু ব্যতিক্রম থাকলেও সাধারণভাবে হরমোন pathogen secretion নয়।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "\"Plants grow poorly and are light green in color. Lower leaves turned yellow or light brown and stems are short and slender\"-these are the symptoms as a result of deficiency of which of the following nutrient?",
+      "options": ["Calcium", "Molybdenum", "Nitrogen", "Zinc", "None of these"],
+      "answer": 2,
+      "explanation": "এই লক্ষণগুলো Nitrogen (নাইট্রোজেন) এর অভাবজনিত। নাইট্রোজেন ক্লোরোফিল ও প্রোটিন তৈরির জন্য অপরিহার্য। নাইট্রোজেনের অভাবে: গাছের বৃদ্ধি কম হয়, পাতা হালকা সবুজ বা হলদে হয়ে যায় (chlorosis), নিচের পুরাতন পাতা আগে হলুদ বা বাদামী হয় কারণ নাইট্রোজেন mobile উপাদান এবং পুরাতন পাতা থেকে নতুন পাতায় স্থানান্তরিত হয়, এবং কান্ড সরু ও দুর্বল হয়। বাংলাদেশের মাটিতে নাইট্রোজেনের অভাব একটি প্রধান সমস্যা।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Antibiotics are produced by the",
+      "options": ["Microorganisms", "Plants", "Animals", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "Antibiotics (প্রতিজৈবিক) মূলত Microorganisms (অণুজীব) দ্বারা উৎপাদিত হয়। বেশিরভাগ অ্যান্টিবায়োটিক ছত্রাক (যেমন Penicillium থেকে Penicillin) এবং ব্যাকটেরিয়া (যেমন Streptomyces থেকে Streptomycin) থেকে পাওয়া যায়। এই অণুজীবরা প্রাকৃতিকভাবে অন্য অণুজীবের বৃদ্ধি রোধ করতে এই পদার্থ তৈরি করে। যদিও কিছু উদ্ভিদ ও প্রাণীও antimicrobial পদার্থ তৈরি করে, কিন্তু বাণিজ্যিক অ্যান্টিবায়োটিক প্রধানত অণুজীব থেকেই আসে।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Crop rotation helps to",
+      "options": ["Eliminate parasites which have selective host", "Produce a greater choice of plant products", "More yields", "Lessen use of pesticide", "None of these"],
+      "answer": 0,
+      "explanation": "Crop rotation (ফসল আবর্তন) হলো একই জমিতে পর্যায়ক্রমে বিভিন্ন ফসল চাষ করা। Crop rotation is the systematic planting of different crops in a particular order over several years in the same growing space. This process helps maintain nutrients in the soil, reduce soil erosion, and prevents plant diseases and pests. এটি বিশেষভাবে নির্দিষ্ট পোষক-নির্ভর পরজীবী (selective host parasites) দূর করতে সাহায্য করে কারণ ভিন্ন ফসল চাষ করলে সেই পরজীবীর খাদ্য উৎস বাধাপ্রাপ্ত হয়। ফসল আবর্তন মাটির উর্বরতা বৃদ্ধি করে, বিশেষত যদি শস্য ফসলের সাথে লেগুম জাতীয় ফসল চাষ করা হয়। এটি রোগ ও পোকামাকড়ের আক্রমণ কমায়, কীটনাশকের ব্যবহার হ্রাস করে এবং মাটির ক্ষয়রোধ করে। বাংলাদেশে ধান-গম-পাট বা ধান-আলু-পাট এরকম আবর্তন প্রচলিত।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Gynodioecious varieties of papaya produce...",
+      "options": ["Only female plants", "Only male plants", "Male and hermaphrodite plants", "Female and hermaphrodite", "None of these"],
+      "answer": 3,
+      "explanation": "Gynodioecious varieties (গাইনোডাইওসিয়াস জাত) পেঁপেতে Female (স্ত্রী) এবং Hermaphrodite (উভলিঙ্গ) উভয় ধরনের গাছ উৎপন্ন হয়। Hermaphrodite ফুলে পুং ও স্ত্রী উভয় অঙ্গ থাকে এবং এরা স্বপরাগায়ন করতে পারে। পেঁপের তিন ধরনের লিঙ্গ আছে: পুরুষ (male), স্ত্রী (female), এবং উভলিঙ্গ (hermaphrodite)। Gynodioecious জাতে শুধু স্ত্রী ও উভলিঙ্গ গাছ থাকে, পুরুষ গাছ থাকে না। বাণিজ্যিক চাষে hermaphrodite গাছ বেশি পছন্দনীয় কারণ এরা ভালো আকারের ফল দেয়।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "The optimum cardinal temperature point for germination of rice seed is ...",
+      "options": ["20°-25° C", "30°-32° C", "14°-18° C", "37°-39° C", "None of these"],
+      "answer": 1,
+      "explanation": "ধানের বীজ অঙ্কুরোদগমের জন্য সর্বোত্তম (optimum) তাপমাত্রা হলো 30°-32° C। Cardinal temperature তিন ধরনের: Minimum (সর্বনিম্ন) 10-12°C, Optimum (সর্বোত্তম) 30-35°C, এবং Maximum (সর্বোচ্চ) 40-42°C। এই optimum তাপমাত্রায় সবচেয়ে দ্রুত ও সমান অঙ্কুরোদগম হয়। 20-25°C তাপমাত্রা সর্বোত্তম নয়, বরং এটি minimum ও optimum এর মাঝামাঝি। বাংলাদেশের আবহাওয়ায় বোরো মৌসুমে এই optimum তাপমাত্রা পাওয়া যায় যা ভালো অঙ্কুরোদগমে সহায়ক।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Opening and closing of stomata depends on which of the following...",
+      "options": ["Sunlight", "Transpiration", "Temperature", "Water pressure", "None of these"],
+      "answer": 3,
+      "explanation": "পত্ররন্ধ্র (Stomata) এর খোলা ও বন্ধ হওয়া মূলত Water pressure বা guard cell-এর টার্গর চাপের (turgor pressure) উপর নির্ভর করে। যখন guard cell-এ পানি প্রবেশ করে টার্গর চাপ বাড়ে, তখন পত্ররন্ধ্র খুলে যায়। পানি বের হয়ে গেলে চাপ কমে এবং পত্ররন্ধ্র বন্ধ হয়। Sunlight, temperature এবং CO₂ concentration এই টার্গর চাপ পরিবর্তনকে প্রভাবিত করে। Transpiration (বাষ্পমোচন) হলো পত্ররন্ধ্র খোলার ফলাফল, কারণ নয়। পত্ররন্ধ্র দিয়ে গ্যাস বিনিময় ও বাষ্পমোচন ঘটে, যা উদ্ভিদের জন্য অত্যন্ত গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "The ratio between marketable crop yield and water used in evapotranspiration is known as....",
+      "options": ["Field water used efficiency", "Consumptive use efficiency", "Water logging efficiency", "Economic irrigation efficiency", "None of these"],
+      "answer": 0,
+      "explanation": "বাজারজাত ফসলের ফলন এবং বাষ্পমোচন (evapotranspiration) এ ব্যবহৃত পানির অনুপাতকে Field water use efficiency বলা হয়। এটি পানির উৎপাদনশীল ব্যবহার পরিমাপ করে। Consumptive use efficiency হলো ফসল কর্তৃক ব্যবহৃত পানি ও প্রয়োগকৃত পানির অনুপাত। Economic irrigation efficiency অর্থনৈতিক দিক বিবেচনা করে। বাংলাদেশে পানি সম্পদ সীমিত হওয়ায় water use efficiency বৃদ্ধি অত্যন্ত জরুরি। এর জন্য উন্নত সেচ পদ্ধতি যেমন ড্রিপ বা স্প্রিংকলার ব্যবহার করা যায়।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Which of the following is a mutagenic agent?",
+      "options": ["Ionizing radiation", "Alkylating agent", "Acridine dyes", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "Mutagenic agents (মিউটেজেনিক এজেন্ট) বা মিউটাজেন হলো এমন পদার্থ বা রশ্মি যা DNA-তে পরিবর্তন (mutation) ঘটায়। উল্লেখিত সবগুলোই mutagenic agent: (১) Ionizing radiation (আয়নীকরণ রশ্মি) - যেমন X-ray, Gamma ray যা DNA strand ভাঙতে পারে, (২) Alkylating agents - রাসায়নিক পদার্থ যা DNA-তে alkyl group যুক্ত করে, (৩) Acridine dyes - যা DNA-তে intercalate করে frameshift mutation ঘটায়। উদ্ভিদ প্রজননে নতুন জাত উদ্ভাবনে এসব mutagen ব্যবহার করা হয়।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Citrus tristeza virus is transmitted through which one of the following?",
+      "options": ["Aphid", "Thrips", "Plant hopper", "Nematode", "None of these"],
+      "answer": 0,
+      "explanation": "Citrus tristeza virus (CTV) লেবু জাতীয় ফলের একটি মারাত্মক রোগ যা Aphid (এফিড বা জাব পোকা) দ্বারা সংক্রমিত হয়। বিশেষত Toxoptera citricida এবং Aphis gossypii প্রজাতির এফিড এই ভাইরাস ছড়ায়। এফিড রোগাক্রান্ত গাছের রস খেয়ে ভাইরাস গ্রহণ করে এবং সুস্থ গাছে রস খাওয়ার সময় ভাইরাস সংক্রমিত করে। এই রোগে গাছ দুর্বল হয়ে যায়, পাতা হলুদ হয় এবং ফলন কমে যায়। Grafting-এর মাধ্যমেও এই ভাইরাস ছড়াতে পারে।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "The chemical that attacks opposite sex of a species are know as",
+      "options": ["Hormones", "Allomone", "Pheromone", "Kairomones", "None of these"],
+      "answer": 2,
+      "explanation": "Pheromone (ফেরোমোন) হলো রাসায়নিক সংকেত যা একই প্রজাতির বিপরীত লিঙ্গকে আকৃষ্ট করে বা প্রভাবিত করে। এটি পতঙ্গের মধ্যে যোগাযোগের প্রধান মাধ্যম। Sex pheromone সঙ্গী আকর্ষণে ব্যবহৃত হয়। Allomone অন্য প্রজাতিকে প্রভাবিত করে যা নিঃসরণকারীর জন্য উপকারী। Kairomone অন্য প্রজাতিকে প্রভাবিত করে যা গ্রহণকারীর জন্য উপকারী। কীটপতঙ্গ নিয়ন্ত্রণে pheromone trap ব্যবহার করা হয় যা পরিবেশবান্ধব পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "Damping-off disease of vegetable nursery can be controlled by which one of the following?",
+      "options": ["Solarization", "Mixing of fungicide in soils", "Seed treatment", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "Damping-off রোগ চারা গাছের একটি মারাত্মক রোগ যা Pythium, Rhizoctonia, Fusarium ইত্যাদি ছত্রাক দ্বারা হয়। এই রোগ নিয়ন্ত্রণের সব পদ্ধতিই কার্যকর: (১) Solarization - মাটি পলিথিন দিয়ে ঢেকে সূর্যের তাপে জীবাণু মারা, (২) Fungicide mixing - মাটিতে ছত্রাকনাশক মিশিয়ে রোগজীবাণু দমন, (৩) Seed treatment - বীজ শোধন করে রোগমুক্ত চারা উৎপাদন। অন্যান্য ব্যবস্থা: উঁচু বেড তৈরি, পানি নিকাশের ব্যবস্থা, অতিরিক্ত সেচ এড়ানো। বাংলাদেশে সবজি বীজতলায় এই রোগ একটি বড় সমস্যা।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "After how many weeks does a hen starts laying eggs?",
+      "options": ["15", "8", "20", "5", "None of these"],
+      "answer": 2,
+      "explanation": "মুরগি সাধারণত ২০ সপ্তাহ (প্রায় ৫ মাস) বয়সে ডিম পাড়া শুরু করে। তবে জাত ভেদে এই সময় ১৮-২৪ সপ্তাহ হতে পারে। Layer breed (ডিম পাড়া জাত) সাধারণত ১৮-২০ সপ্তাহে ডিম পাড়া শুরু করে। দেশি মুরগি একটু দেরিতে যৌন পরিপক্কতা লাভ করে। সঠিক পুষ্টি, আলো ব্যবস্থাপনা এবং স্বাস্থ্য ব্যবস্থাপনা ডিম পাড়া শুরুর সময়কে প্রভাবিত করে। বাংলাদেশে বাণিজ্যিক layer farm-এ hybrid মুরগি পালন করা হয় যা ১৮-২০ সপ্তাহে ডিম দেওয়া শুরু করে।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "Which one of the following poultry feed stuffs contains 34-55% protein",
+      "options": ["Fish meal", "Mustard oil", "Groundnut cake", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "Fish meal (মাছের গুঁড়া বা ফিশ মিল) এ ৩৪-৫৫% প্রোটিন থাকে, যা হাঁস-মুরগির খাদ্যে উচ্চমানের প্রোটিন উৎস। এতে প্রয়োজনীয় অ্যামিনো এসিড, ক্যালসিয়াম, ফসফরাস এবং ভিটামিন থাকে। Groundnut cake (চিনাবাদাম খৈল) এ প্রায় ৪৫-৫০% প্রোটিন থাকে তবে সাধারণত ৩৪% এর নিচে হয় না। Mustard oil (সরিষার তেল) প্রোটিন উৎস নয়, এটি চর্বি। তাই Fish meal সঠিক উত্তর। মুরগির খাদ্যে প্রোটিন অত্যন্ত গুরুত্বপূর্ণ কারণ এটি বৃদ্ধি ও ডিম উৎপাদনে প্রয়োজনীয়।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "How many nursery area is required for transplanting one hectare of paddy?",
+      "options": ["1000 m²", "500 m²", "750 m²", "250-400 m²", "None of these"],
+      "answer": 1,
+      "explanation": "১ হেক্টর (১০,০০০ বর্গমিটার) জমিতে ধান রোপণের জন্য সাধারণত ৫০০ বর্গমিটার বীজতলার প্রয়োজন হয়, যা মূল জমির প্রায় ৫%। তবে ঐতিহ্যবাহী পদ্ধতিতে ১০০০ বর্গমিটার (১০%) ব্যবহার করা হতো। আধুনিক পদ্ধতিতে যেমন dapog বা mat-type nursery ব্যবহার করলে আরও কম জায়গায় বীজতলা করা যায়। সঠিক বীজতলা ব্যবস্থাপনা ভালো চারা উৎপাদনে গুরুত্বপূর্ণ। বাংলাদেশে BRRI উন্নত বীজতলা প্রযুক্তি উদ্ভাবন করেছে যা জায়গা ও বীজ সাশ্রয়ী।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "At what stage of crop life cycle, there is no competition for light, moisture and nutrient",
+      "options": ["Seedling stage", "Node formation stage", "Before maturity stage", "Grain formation stage", "None of these"],
+      "answer": 2,
+      "explanation": "ফসলের জীবনচক্রে 'Before maturity stage' বা পরিপক্কতার পূর্বের পর্যায়ে আলো, পানি ও পুষ্টির জন্য কোনো প্রতিযোগিতা থাকে না কারণ এই সময় ফসল সম্পূর্ণ বৃদ্ধি পেয়ে গেছে এবং আগাছা বা অন্য উদ্ভিদের সাথে প্রতিযোগিতা শেষ হয়ে যায়। Seedling stage-এ প্রতিযোগিতা সবচেয়ে বেশি কারণ এই সময় ফসল দুর্বল এবং আগাছা দ্রুত বৃদ্ধি পায়। Critical period of weed competition সাধারণত বপনের ২০-৪৫ দিন পর্যন্ত থাকে। এই সময় আগাছা দমন না করলে ফলন মারাত্মকভাবে হ্রাস পায়।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "Puddling is done to",
+      "options": ["Reduce percolation of water", "Kill weeds", "Pulverize and leveling soil", "All of these", "None of these"],
+      "answer": 3,
+      "explanation": "Puddling (কাদা করা) ধান চাষের একটি গুরুত্বপূর্ণ প্রক্রিয়া যার বহুবিধ উদ্দেশ্য রয়েছে: (১) Reduce percolation - পানির অনুপ্রবেশ কমায়, ফলে সেচের পানি সাশ্রয় হয়, (২) Kill weeds - আগাছা দমন করে কারণ কাদাযুক্ত মাটিতে আগাছা জন্মাতে পারে না, (৩) Pulverize and leveling - মাটি গুঁড়া ও সমান করে যা চারা রোপণে সুবিধা দেয়। এছাড়াও puddling মাটিতে পুষ্টি উপাদান মুক্ত করে এবং ভালো root establishment-এ সাহায্য করে। বাংলাদেশে জমি তৈরিতে power tiller দিয়ে puddling করা হয়।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "What do Blister Beetle produce?",
+      "options": ["Latex", "Honey", "Cantharadin", "Di-oxine", "None of these"],
+      "answer": 2,
+      "explanation": "Blister Beetle (ফোসকা সৃষ্টিকারী গুবরে পোকা) Cantharadin (ক্যানথারিডিন) নামক একটি বিষাক্ত রাসায়নিক পদার্থ উৎপন্ন করে। এই পদার্থ ত্বকে লাগলে ফোসকা পড়ে। পোকা হুমকির সম্মুখীন হলে এই রাসায়নিক নিঃসরণ করে আত্মরক্ষার জন্য। Cantharadin প্রাচীনকালে ঔষধ হিসেবে ব্যবহৃত হতো। এই পোকা কৃষিক্ষেত্রে ক্ষতিকর কারণ এরা ফসলের পাতা খায় এবং প্রাণীদের জন্যও বিষাক্ত। সবজি ও ডাল ফসলে এদের আক্রমণ বেশি দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "Soil type is mainly determined by which layer?",
+      "options": ["Top soil", "Parent material", "Sub soil", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "মাটির ধরন (Soil type) মূলত Top soil (উপরিভাগের মাটি বা A horizon) দ্বারা নির্ধারিত হয়, বিশেষত কৃষিকাজের ক্ষেত্রে। Top soil-এর বৈশিষ্ট্য যেমন texture (বালি, পলি, কাদা), structure, জৈব পদার্থের পরিমাণ, pH ইত্যাদি দ্বারা মাটির কৃষিগত শ্রেণিবিন্যাস হয়। যদিও মাটি বিজ্ঞানে সম্পূর্ণ profile এবং parent material গুরুত্বপূর্ণ, কিন্তু ব্যবহারিক কৃষিকাজে top soil-ই মাটির ধরন নির্ধারণে প্রধান ভূমিকা পালন করে কারণ এখানেই শিকড়ের বিস্তার ও পুষ্টি গ্রহণ হয়।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "Among the following, which one is the highest digestive system non-leguminous crop?",
+      "options": ["Joar", "Maize", "Maize silage", "Napier", "None of these"],
+      "answer": 0,
+      "explanation": "Joar (জোয়ার বা Sorghum) হলো সবচেয়ে বেশি হজমযোগ্য (digestible) অ-লেগুম জাতীয় ফসল। জোয়ার একটি দানাদার খাদ্যশস্য এবং পশুখাদ্য হিসেবে উৎকৃষ্ট। এতে প্রোটিন, শর্করা এবং অন্যান্য পুষ্টি উপাদান সহজপাচ্য আকারে থাকে। Maize (ভুট্টা) ও Napier (নেপিয়ার ঘাস) ভালো পশুখাদ্য হলেও হজমযোগ্যতায় জোয়ার এগিয়ে। জোয়ার খরা সহনশীল এবং বাংলাদেশের শুষ্ক অঞ্চলে চাষ করা যায়। এটি সবুজ ঘাস ও দানা উভয়ভাবেই ব্যবহার করা যায়।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "Chemical signals between individuals of the same species are called",
+      "options": ["Kineses", "Pheromones", "Endogenous", "Hormones", "None of these"],
+      "answer": 1,
+      "explanation": "একই প্রজাতির সদস্যদের মধ্যে রাসায়নিক সংকেতকে Pheromones (ফেরোমোন) বলা হয়। এটি পতঙ্গ ও প্রাণীদের মধ্যে যোগাযোগের একটি গুরুত্বপূর্ণ মাধ্যম। ফেরোমোনের প্রকারভেদ: Sex pheromone (সঙ্গী আকর্ষণ), Alarm pheromone (বিপদ সংকেত), Trail pheromone (পথ নির্দেশনা), Aggregation pheromone (সমবেত হওয়া)। Hormones শরীরের অভ্যন্তরীণ রাসায়নিক বার্তাবাহক। Kineses হলো গতিবিধি প্রতিক্রিয়া। কীটপতঙ্গ নিয়ন্ত্রণে pheromone trap কৃষিতে ব্যাপকভাবে ব্যবহৃত হচ্ছে।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "A group of similar looking plant that has be approved for general cultivation in an ecological zone is called",
+      "options": ["Variety", "Strain", "Taxonomy", "Aridisol", "None of these"],
+      "answer": 0,
+      "explanation": "একটি নির্দিষ্ট পরিবেশ অঞ্চলে চাষাবাদের জন্য অনুমোদিত সমরূপ উদ্ভিদের দলকে Variety (জাত) বলা হয়। কৃষিতে variety হলো একটি cultivar (চাষযোগ্য বৈচিত্র্য) যা নির্দিষ্ট বৈশিষ্ট্যের জন্য নির্বাচিত ও অনুমোদিত। যেমন BRRI dhan28, BARI Gom 26 ইত্যাদি। Strain সাধারণত অণুজীব বা প্রাণীর ক্ষেত্রে ব্যবহৃত হয়। Taxonomy হলো শ্রেণিবিন্যাস বিজ্ঞান এবং Aridisol একটি মাটির শ্রেণি। বাংলাদেশে বিভিন্ন গবেষণা প্রতিষ্ঠান থেকে অনুমোদিত জাত মুক্তায়ন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "mcq",
+      "question": "Lime must be used on",
+      "options": ["Organic soil", "Peat soil", "Mineral soil", "None above", "None of these"],
+      "answer": 1,
+      "explanation": "Peat soil (পিট মাটি) বা জৈব মাটিতে চুন (Lime) ব্যবহার করা আবশ্যক কারণ এই মাটি সাধারণত অম্লীয় (acidic) হয়। পিট মাটি জলাভূমিতে জৈব পদার্থ জমে তৈরি হয় এবং এর pH সাধারণত ৪-৫ হয়। চুন প্রয়োগে মাটির অম্লত্ব কমে এবং pH বৃদ্ধি পায় যা ফসল চাষের জন্য উপযুক্ত পরিবেশ তৈরি করে। চুন ক্যালসিয়াম ও ম্যাগনেসিয়ামও সরবরাহ করে। বাংলাদেশের হাওর অঞ্চল এবং উপকূলীয় এলাকার কিছু মাটিতে চুন প্রয়োগ প্রয়োজন হয়।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "mcq",
+      "question": "Rice plant is very sensitive to water stress at",
+      "options": ["Vegetative phase", "Reproductive phase", "Ripening phase", "All above", "None of these"],
+      "answer": 3,
+      "explanation": "ধান গাছ জীবনচক্রের সব পর্যায়েই পানির অভাবে সংবেদনশীল, তবে মাত্রা ভিন্ন। Vegetative phase (চারা থেকে কুশি পর্যায়) - পানির অভাবে কুশির সংখ্যা কমে। Reproductive phase (ফুল আসা ও পরাগায়ন) - এই সময় সবচেয়ে বেশি সংবেদনশীল, পানির অভাবে ফুল শুকিয়ে যায় এবং ফলন মারাত্মক ক্ষতিগ্রস্ত হয়। Ripening phase (দানা পুষ্টি পর্যায়) - পানির অভাবে চিটা বেশি হয়। তাই 'All above' সঠিক উত্তর। বাংলাদেশে Aus মৌসুমে খরার কারণে ধানের ফলন কমে যায়।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "mcq",
+      "question": "Rabi season duration is",
+      "options": ["16 July-15 October", "16 October-15 March", "16 March-15 July", "All of these", "None of these"],
+      "answer": 1,
+      "explanation": "রবি মৌসুম হলো ১৬ অক্টোবর থেকে ১৫ মার্চ পর্যন্ত। এটি শীতকালীন ফসল মৌসুম যখন তাপমাত্রা কম থাকে এবং বৃষ্টিপাত কম হয়। রবি মৌসুমের প্রধান ফসল: গম, ভুট্টা, আলু, সরিষা, মসুর, ছোলা ইত্যাদি। বাংলাদেশে তিনটি প্রধান কৃষি মৌসুম: খরিফ-১ (মার্চ-জুন), খরিফ-২ (জুলাই-অক্টোবর), এবং রবি (অক্টোবর-মার্চ)। রবি মৌসুমে সেচের প্রয়োজন হয় কারণ বৃষ্টিপাত কম থাকে। এই মৌসুমে ফসলের রোগবালাইও তুলনামূলক কম হয়।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "mcq",
+      "question": "TSP contains P%",
+      "options": ["46%", "50%", "20%", "36%", "None of these"],
+      "answer": 2,
+      "explanation": "TSP (Triple Super Phosphate) এ ২০% P (ফসফরাস) থাকে বা ৪৬% P₂O₅ (ফসফরাস পেন্টক্সাইড) থাকে। সারে ফসফরাসের পরিমাণ সাধারণত P₂O₅ হিসেবে প্রকাশ করা হয়। P₂O₅ থেকে P তে রূপান্তর: P = P₂O₅ × 0.436। তাই 46% P₂O₅ = প্রায় 20% P। TSP একটি উচ্চ বিশ্লেষণ ফসফেট সার যা পানিতে দ্রবণীয় এবং গাছ সহজে গ্রহণ করতে পারে। বাংলাদেশে TSP ধান, গম, সবজি ও অন্যান্য ফসলে ব্যাপকভাবে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "What type of seed used by the farmers?",
+      "options": ["Breeder seed", "Nuclear seed", "Certified seed", "Foundation seed", "Both b & d"],
+      "answer": 4,
+      "explanation": "কৃষকরা সাধারণত Certified seed (প্রত্যয়িত বীজ) ব্যবহার করেন। তবে প্রশ্নে 'both b & d' অর্থাৎ Nuclear seed ও Foundation seed উল্লেখ আছে। বীজ উৎপাদন শৃঙ্খল: Breeder seed → Foundation seed → Certified seed → Truthfully Labeled seed। Breeder seed প্রজননবিদগণ তৈরি করেন। Foundation seed ব্যবহার করে Certified seed উৎপাদন হয় যা কৃষক ব্যবহার করেন। 'Nuclear seed' শব্দটি সাধারণত Breeder seed-এর সমার্থক। কিছু ক্ষেত্রে কৃষক Foundation seed ও ব্যবহার করেন। বাংলাদেশে BADC এবং বিভিন্ন বীজ কোম্পানি মানসম্পন্ন বীজ সরবরাহ করে।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "Put this .... your drawer and do not let anyone see it.",
+      "options": ["at", "for", "to", "in", "None of these"],
+      "answer": 3,
+      "explanation": "সঠিক উত্তর হলো 'in'। বাক্যটি হবে: 'Put this in your drawer and do not let anyone see it.' কোনো কিছু drawer-এর ভিতরে রাখার জন্য 'in' preposition ব্যবহার করতে হয়। 'At' স্থান নির্দেশ করে কিন্তু ভিতরে রাখা বোঝায় না। 'For' উদ্দেশ্য বোঝায়। 'To' দিক নির্দেশ করে। তাই 'in' হলো সঠিক preposition এই বাক্যে।",
+      "image": null
+    },
+    {
+      "id": 47,
+      "type": "mcq",
+      "question": "In a time of fiscal crisis, such lavish expenditure must be.",
+      "options": ["Quickened", "Adjusted", "Corrected", "Curtailed", "None of these"],
+      "answer": 3,
+      "explanation": "সঠিক উত্তর হলো 'curtailed' (হ্রাস করা বা সংকুচিত করা)। বাক্যটি হবে: 'In a time of fiscal crisis, such lavish expenditure must be curtailed.' অর্থনৈতিক সংকটের সময় অপ্রয়োজনীয় ব্যয় কমাতে হয়। 'Curtailed' মানে reduce বা cut back। 'Quickened' মানে দ্রুত করা, 'Adjusted' মানে সমন্বয় করা, 'Corrected' মানে সংশোধন করা - এগুলো প্রসঙ্গে উপযুক্ত নয়।",
+      "image": null
+    },
+    {
+      "id": 48,
+      "type": "mcq",
+      "question": "Some people in our community are indifferent.......the sufferings of others.",
+      "options": ["on", "of", "for", "to", "None of these"],
+      "answer": 3,
+      "explanation": "সঠিক উত্তর হলো 'to'। বাক্যটি হবে: 'Some people in our community are indifferent to the sufferings of others.' 'Indifferent' শব্দের পরে সবসময় 'to' preposition ব্যবহৃত হয়। এর অর্থ হলো উদাসীন বা নির্লিপ্ত। কিছু বিষয়ে উদাসীন থাকা বোঝাতে 'indifferent to' phrase ব্যবহার করা হয়। অন্য preposition গুলো এই শব্দের সাথে ব্যবহৃত হয় না।",
+      "image": null
+    },
+    {
+      "id": 49,
+      "type": "mcq",
+      "question": "I would have lent you my notes if you.. .me",
+      "options": ["would have asked", "had asked", "could ask", "could have asked", "None of these"],
+      "answer": 1,
+      "explanation": "সঠিক উত্তর হলো 'had asked'। সম্পূর্ণ বাক্য: 'I would have lent you my notes if you had asked me.' এটি Third Conditional (Type 3) বাক্য যা অতীতের অবাস্তব শর্ত প্রকাশ করে। গঠন: If + past perfect, would have + past participle। এর অর্থ: তুমি যদি আমাকে চাইতে (অতীতে) তাহলে আমি তোমাকে নোট ধার দিতাম। কিন্তু তুমি চাওনি তাই আমি দেইনি। এই ধরনের বাক্যে if clause-এ past perfect (had + V3) ব্যবহার হয়।",
+      "image": null
+    },
+    {
+      "id": 50,
+      "type": "mcq",
+      "question": "All questions must be original, that is, formulated ..........for the test.",
+      "options": ["really", "exclusively", "certainly", "commonly", "equally"],
+      "answer": 1,
+      "explanation": "সঠিক উত্তর হলো 'exclusively' (একচেটিয়াভাবে বা বিশেষভাবে)। বাক্যটি হবে: 'All questions must be original, that is, formulated exclusively for the test.' এর অর্থ প্রশ্নগুলো মৌলিক হতে হবে অর্থাৎ শুধুমাত্র এই পরীক্ষার জন্য বিশেষভাবে তৈরি করা। 'Exclusively' মানে শুধুমাত্র এই উদ্দেশ্যে। 'Really' (সত্যিই), 'Certainly' (নিশ্চিতভাবে), 'Commonly' (সাধারণভাবে), 'Equally' (সমানভাবে) - এগুলো অর্থের সাথে মানানসই নয়।",
+      "image": null
+    },
+    {
+      "id": 51,
+      "type": "mcq",
+      "question": "বীরবল কার ছদ্মনাম?",
+      "options": ["প্রমথ চৌধুরী", "জীবনান্দ দাস", "সত্যেন্দ্রনাথ দত্ত", "কায়কোবাদ", "সুকান্ত ভট্টাচার্য"],
+      "answer": 0,
+      "explanation": "বীরবল হলো প্রমথ চৌধুরীর ছদ্মনাম। প্রমথ চৌধুরী (১৮৬৮-১৯৪৬) ছিলেন একজন বিখ্যাত বাঙালি লেখক ও সাহিত্যিক। তিনি চলিত ভাষার প্রবর্তক হিসেবে পরিচিত। তাঁর বিখ্যাত রচনা 'চার ইয়ারি কথা', 'বীরবলের হালখাতা' ইত্যাদি। তিনি রবীন্দ্রনাথ ঠাকুরের ভাগ্নী ইন্দিরা দেবীকে বিয়ে করেছিলেন। তাঁর সম্পাদিত 'সবুজ পত্র' পত্রিকা বাংলা সাহিত্যে গুরুত্বপূর্ণ ভূমিকা পালন করেছে।",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "mcq",
+      "question": "নাগরিক কবি কাকে বলা হয়?",
+      "options": ["শামসুর রাহমান", "জসীম উদ্দীন", "হুমায়ুন আহমেদ", "কাজী নজরুল ইসলাম", "রবীন্দ্রনাথ ঠাকুর"],
+      "answer": 0,
+      "explanation": "শামসুর রাহমানকে নাগরিক কবি বলা হয়। শামসুর রাহমান (১৯২৯-২০০৬) ছিলেন বিংশ শতাব্দীর অন্যতম প্রধান বাংলা কবি। তিনি তাঁর কবিতায় নগর জীবনের বিভিন্ন দিক তুলে ধরেছেন। ঢাকা শহরকে কেন্দ্র করে তাঁর অনেক কবিতা রচিত। তাঁর বিখ্যাত কাব্যগ্রন্থ: 'প্রথম গান দ্বিতীয় মৃত্যুর আগে', 'নিজ বাসভূমে', 'বন্দী শিবির থেকে' ইত্যাদি। ভাষা আন্দোলন ও মুক্তিযুদ্ধ তাঁর কবিতার প্রধান বিষয়। পক্ষান্তরে জসীম উদ্দীনকে বলা হয় 'পল্লীকবি'।",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "mcq",
+      "question": "জহির রায়হানের রচনা কোনটি?",
+      "options": ["সংসপ্তক", "হালখাতা", "আরেক ফাল্গুন", "কবর", "পদ্মা নদীর মাঝি"],
+      "answer": 3,
+      "explanation": "জহির রায়হানের রচনা হলো 'কবর'। জহির রায়হান (১৯৩৫-১৯৭২) ছিলেন একজন বিখ্যাত চলচ্চিত্র নির্মাতা, ঔপন্যাসিক ও গল্পকার। 'কবর' একটি গল্প। তাঁর বিখ্যাত উপন্যাস 'হাজার বছর ধরে' এবং 'আরেক ফাল্গুন'। তিনি 'জীবন থেকে নেয়া' ছবি পরিচালনা করেন যা ভাষা আন্দোলনের উপর নির্মিত। একাত্তরের মুক্তিযুদ্ধের সময় তাঁর ভাই শহীদুল্লাহ কায়সারকে খুঁজতে গিয়ে তিনি নিখোঁজ হন। 'সংসপ্তক' হুমায়ূন আহমেদের রচনা এবং 'পদ্মা নদীর মাঝি' মানিক বন্দ্যোপাধ্যায়ের উপন্যাস।",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "mcq",
+      "question": "'ভু-ষন্ডির কাক' বাগধারার অর্থ কি?",
+      "options": ["দীর্ঘায়ু ব্যক্তি", "ভন্ড", "বোকা", "অপদার্থ", "অত্যাচারি"],
+      "answer": 0,
+      "explanation": "'ভু-ষন্ডির কাক' বাগধারার অর্থ দীর্ঘায়ু ব্যক্তি বা অনেক দিন বেঁচে থাকা ব্যক্তি। পৌরাণিক কাহিনী অনুসারে ভু-ষন্ডি একজন দীর্ঘজীবী ঋষি ছিলেন যিনি কাকের রূপে ছিলেন এবং অনেক যুগ ধরে বেঁচে ছিলেন। তাই এই বাগধারা দীর্ঘায়ু বা অনেক বছর বয়সের ব্যক্তিকে বোঝাতে ব্যবহৃত হয়। উদাহরণ: সে তো ভু-ষন্ডির কাক, এখনও সুস্থ আছে।",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "mcq",
+      "question": "'কবর' কোন ধরনের সাহিত্য কর্ম?",
+      "options": ["নাটক", "কবিতা", "গল্প", "উপন্যাস", "প্রবন্ধ"],
+      "answer": 0,
+      "explanation": "'কবর' একটি নাটক যা মুনীর চৌধুরী রচনা করেছেন। এটি ১৯৫২ সালের ভাষা আন্দোলনের পটভূমিতে রচিত একটি কালজয়ী নাটক। মুনীর চৌধুরী তখন ঢাকা কেন্দ্রীয় কারাগারে বন্দী ছিলেন এবং সেখানেই এই নাটক রচনা করেন। নাটকটি ভাষা আন্দোলনের শহীদদের প্রতি শ্রদ্ধাঞ্জলি। একই নামে জহির রায়হানের একটি গল্প আছে, কিন্তু সবচেয়ে বিখ্যাত 'কবর' হলো মুনীর চৌধুরীর নাটক। এই নাটক বাংলা সাহিত্যে একটি মাইলফলক হিসেবে বিবেচিত।",
+      "image": null
+    },
+    {
+      "id": 56,
+      "type": "mcq",
+      "question": "Which of the following sea also called the salt sea?",
+      "options": ["Dead sea", "Bay of Bengal", "Caspian sea", "Persian gulf", "None of these"],
+      "answer": 0,
+      "explanation": "Dead Sea (মৃত সাগর) কে Salt Sea (লবণ সাগর) ও বলা হয়। এটি পৃথিবীর সবচেয়ে লবণাক্ত জলাশয়গুলোর একটি। এই সাগরে লবণাক্ততা এত বেশি (প্রায় ৩৪%) যে কোনো মাছ বা জলজ প্রাণী বাঁচতে পারে না, তাই একে 'Dead Sea' বলা হয়। এটি ইসরায়েল ও জর্ডানের মধ্যে অবস্থিত। এর পানির ঘনত্ব এত বেশি যে মানুষ সহজেই ভাসতে পারে। এটি সমুদ্র পৃষ্ঠ থেকে প্রায় ৪৩০ মিটার নিচে অবস্থিত যা পৃথিবীর সর্বনিম্ন স্থলভাগ।",
+      "image": null
+    },
+    {
+      "id": 57,
+      "type": "mcq",
+      "question": "Which organization declared 21st February as the International Mother Language day?",
+      "options": ["UNESCO", "UNHCR", "UNICEF", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "UNESCO (United Nations Educational, Scientific and Cultural Organization) ২১শে ফেব্রুয়ারিকে আন্তর্জাতিক মাতৃভাষা দিবস হিসেবে ঘোষণা করে। ১৯৯৯ সালের ১৭ নভেম্বর UNESCO-র সাধারণ অধিবেশনে এই সিদ্ধান্ত গৃহীত হয় এবং ২০০০ সাল থেকে সারা বিশ্বে দিবসটি পালিত হচ্ছে। বাংলাদেশের ভাষা আন্দোলন ও ভাষা শহীদদের স্মরণে এই দিবস ঘোষিত হয়। ১৯৫২ সালের ২১শে ফেব্রুয়ারি রাষ্ট্রভাষা বাংলার দাবিতে আন্দোলনরত ছাত্র-জনতার উপর পুলিশের গুলিতে সালাম, বরকত, রফিক, জব্বার সহ অনেকে শহীদ হন।",
+      "image": null
+    },
+    {
+      "id": 58,
+      "type": "mcq",
+      "question": "The sea border dispute between Bangladesh and Myanmar was...",
+      "options": ["International tribunal for the law of the sea", "International court for Maritime dispute", "International court for the law of the sea", "International tribunal for Maritime dispute", "None of these"],
+      "answer": 0,
+      "explanation": "বাংলাদেশ ও মিয়ানমারের মধ্যে সমুদ্রসীমা বিরোধ নিষ্পত্তি হয় International Tribunal for the Law of the Sea (ITLOS) তে। ২০১২ সালের ১৪ মার্চ ITLOS বাংলাদেশের পক্ষে রায় দেয়। এই রায়ে বাংলাদেশ বঙ্গোপসাগরে ২০০ নটিক্যাল মাইল পর্যন্ত exclusive economic zone এবং continental shelf এর অধিকার পায়। এটি বাংলাদেশের জন্য একটি বড় কূটনৈতিক বিজয় ছিল। এর ফলে সমুদ্রে তেল-গ্যাস অনুসন্ধান ও মৎস্য সম্পদ আহরণে বাংলাদেশের অধিকার প্রতিষ্ঠিত হয়।",
+      "image": null
+    },
+    {
+      "id": 59,
+      "type": "mcq",
+      "question": "Myanmar's political figure Aung Suu Kyi belongs to which political party?",
+      "options": ["National Unity party", "National Democratic party", "National League for Democracy", "Myanmar Nationalist party", "None of these"],
+      "answer": 2,
+      "explanation": "অং সান সু চি National League for Democracy (NLD) দলের নেত্রী। NLD ১৯৮৮ সালে প্রতিষ্ঠিত হয় এবং অং সান সু চি এর সভানেত্রী নির্বাচিত হন। তিনি মিয়ানমারের গণতন্ত্রের জন্য দীর্ঘ সংগ্রাম করেছেন এবং বহু বছর গৃহবন্দী ছিলেন। ১৯৯১ সালে তিনি নোবেল শান্তি পুরস্কার পান। ২০১৫ সালের নির্বাচনে NLD বিপুল সংখ্যাগরিষ্ঠতা পায় এবং সু চি State Counsellor হন। তিনি মিয়ানমারের স্বাধীনতা সংগ্রামী জেনারেল অং সানের কন্যা।",
+      "image": null
+    },
+    {
+      "id": 60,
+      "type": "mcq",
+      "question": "How many NRB Banks has approved by Bangladesh Bank recently?",
+      "options": ["3", "6", "5", "9", "None of these"],
+      "answer": 2,
+      "explanation": "Bangladesh Bank সাম্প্রতিক সময়ে কয়েকটি NRB (Non-Resident Bangladeshi) ব্যাংক অনুমোদন দিয়েছে। NRB ব্যাংক হলো এমন ব্যাংক যেখানে প্রবাসী বাংলাদেশীরা বিনিয়োগ করতে পারেন। এই ব্যাংকগুলো দেশের অর্থনীতিতে প্রবাসী আয় বিনিয়োগে সহায়তা করে এবং রেমিট্যান্স প্রবাহ বৃদ্ধি করে। প্রবাসীদের জন্য বিশেষ ব্যাংকিং সুবিধা প্রদান করা হয় এই ব্যাংকগুলোতে। বাংলাদেশে লাখ লাখ প্রবাসী কাজ করেন এবং তাদের পাঠানো অর্থ দেশের অর্থনীতির একটি বড় অংশ।",
+      "image": null
+    }
+  ]
+}
