@@ -55,6 +55,17 @@
       "format": ["article"],
       "totalQuestions": 39,
       "description": "BARI assistant director পরীক্ষা ২০১৭"
+    },
+    {
+      "id": "so-2016",
+      "title": "Scientific Officer 2016",
+      "year": 2016,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 40,
+      "description": "BARI Scientific Officer পরীক্ষা ২০১৬ - MCQ ও Written প্রশ্ন"
     }
   ]
 }
