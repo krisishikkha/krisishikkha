@@ -1,75 +1,914 @@
 {
   "meta": {
-    "title": "BARI Scientific Officer Exam 2011",
+    "title": "Scientific Officer Recruitment Test 2011",
     "institute": "Bangladesh Agricultural Research Institute (BARI)",
     "year": 2011,
     "position": "Scientific Officer",
     "totalQuestions": 60,
     "type": "free",
     "examDate": "2011",
-    "duration": "1 hours",
     "totalMarks": 100
   },
   "questions": [
-    {"id": 1, "type": "mcq", "question": "Which is not basic principle of Agronomy?", "options": ["To select appropriate materials for seed & sowing", "Management of soil and climate", "Appropriate intercropping activities management for crop", "Livestock management for agriculture", "None of these"], "answer": 4, "explanation": "Agronomy is the branch of agriculture that deals with field crop production and soil management. Its basic principles include proper selection of seeds and sowing materials, soil and climate management, and intercropping. Livestock management is not a part of agronomy; it belongs to Animal Husbandry.\n\nএগ্রোনমি হলো কৃষিবিজ্ঞানের একটি শাখা যা মাঠ ফসল উৎপাদন ও মৃত্তিকা ব্যবস্থাপনার সাথে সম্পর্কিত। এর মূল নীতিগুলোর মধ্যে রয়েছে যথাযথ বীজ ও বপন উপকরণ নির্বাচন, মাটি ও জলবায়ু ব্যবস্থাপনা এবং আন্তঃফসল চাষ। পশুপালন এগ্রোনমির অন্তর্ভুক্ত নয়; এটি পশুপালন বিজ্ঞানের অন্তর্ভুক্ত।", "image": null},
-    {"id": 2, "type": "mcq", "question": "Which one of the following is not a method of weed control?", "options": ["Selective herbicide", "Burning and firing", "Mowing", "Smothering", "None of these"], "answer": 5, "explanation": "Weed control methods include chemical (selective herbicide), physical/mechanical (burning, mowing), and cultural (smothering) methods. All the options given here are valid weed control methods, so the answer is 'None of these'.\n\nআগাছা দমনের পদ্ধতিগুলোর মধ্যে রয়েছে রাসায়নিক (নির্বাচনী আগাছানাশক), যান্ত্রিক/ভৌত (পোড়ানো, কাটা) এবং সাংস্কৃতিক (smothering) পদ্ধতি। উল্লিখিত সব অপশনই বৈধ আগাছা দমন পদ্ধতি, তাই সঠিক উত্তর 'কোনটিই নয়'।", "image": null},
-    {"id": 3, "type": "mcq", "question": "Which of the following factor is not considered during determination of seed rate?", "options": ["Desired population", "Individual seed weight", "Percentage of size of seed", "Percentage of purity", "None of these"], "answer": 3, "explanation": "Seed rate is determined based on desired plant population, individual seed weight, germination percentage, and purity percentage. The percentage of size of seed is not a standard factor considered in seed rate calculation.\n\nবীজের হার নির্ধারণ করা হয় কাঙ্ক্ষিত গাছের সংখ্যা, প্রতিটি বীজের ওজন, অঙ্কুরোদগমের শতকরা হার এবং বিশুদ্ধতার শতকরা হারের উপর ভিত্তি করে। বীজের আকারের শতকরা হার বীজের হার নির্ধারণে বিবেচনায় নেওয়া হয় না।", "image": null},
-    {"id": 4, "type": "mcq", "question": "Which of the following elements play an important role in nitrogen metabolism?", "options": ["Magnesium", "Manganese", "Molybdenum", "Iron", "None of these"], "answer": 3, "explanation": "Molybdenum (Mo) is a micronutrient essential for nitrogen metabolism in plants. It is a component of nitrogenase enzyme (nitrogen fixation) and nitrate reductase enzyme (nitrate reduction).\n\nমলিবডেনাম (Mo) উদ্ভিদের নাইট্রোজেন বিপাকের জন্য অপরিহার্য একটি অণুপুষ্টি উপাদান। এটি নাইট্রোজিনেজ এনজাইম (নাইট্রোজেন সংবন্ধন) এবং নাইট্রেট রিডাক্টেজ এনজাইমের (নাইট্রেট রিডাকশন) একটি উপাদান।", "image": null},
-    {"id": 5, "type": "mcq", "question": "Which layer of soil has the most influence on the type of soil?", "options": ["Top soil", "Parent material", "Sub soil", "All of these", "None of these"], "answer": 2, "explanation": "Parent material is the layer of soil that has the most influence on the type of soil. The physical, chemical and mineralogical composition of the parent material determines the properties of the soil formed.\n\nমাটির ধরনের উপর সবচেয়ে বেশি প্রভাব বিস্তার করে মূল উপাদান (Parent material)। মূল উপাদানের ভৌত, রাসায়নিক ও খনিজ গঠন গঠিত মাটির বৈশিষ্ট্য নির্ধারণ করে।", "image": null},
-    {"id": 6, "type": "mcq", "question": "What are the three main layers in a soil profile?", "options": ["Top soil, sub soil and parent material", "Mineral, humus and air", "Loam, sand and clay", "All of these", "None of these"], "answer": 1, "explanation": "A soil profile has three main layers: Top soil (A horizon), Sub soil (B horizon), and Parent material (C horizon). These layers together represent the vertical section of soil from surface to bedrock.\n\nমাটির প্রোফাইলে তিনটি প্রধান স্তর রয়েছে: উপরি মৃত্তিকা (A স্তর), অবমৃত্তিকা (B স্তর) এবং মূল উপাদান (C স্তর)। এই স্তরগুলো ভূপৃষ্ঠ থেকে শিলা পর্যন্ত মাটির উল্লম্ব বিভাগ উপস্থাপন করে।", "image": null},
-    {"id": 7, "type": "mcq", "question": "Flowering plants are reproduced by", "options": ["Pollination", "cross breeding", "breeding", "all of these", "none of these"], "answer": 1, "explanation": "Flowering plants (angiosperms) reproduce sexually through pollination, which involves the transfer of pollen from the anther to the stigma, leading to fertilization and seed formation.\n\nসপুষ্পক উদ্ভিদ (আবৃতবীজী) পরাগায়নের মাধ্যমে যৌন প্রজনন করে, যেখানে পরাগধানী থেকে গর্ভমুণ্ডে পরাগরেণু স্থানান্তরিত হয়, যার ফলে নিষেক ও বীজ সৃষ্টি হয়।", "image": null},
-    {"id": 8, "type": "mcq", "question": "Line breeding is a type of", "options": ["Inbreeding", "Natural breeding", "Out breeding", "Cross breeding", "None of these"], "answer": 1, "explanation": "Line breeding is a form of inbreeding where closely related individuals within a specific line or family are mated to concentrate desirable genes and maintain uniformity.\n\nলাইন ব্রিডিং হলো ইনব্রিডিং এর একটি রূপ যেখানে একটি নির্দিষ্ট লাইন বা পরিবারের ঘনিষ্ঠ সম্পর্কযুক্ত ব্যক্তিদের মধ্যে প্রজনন ঘটানো হয় যাতে কাঙ্ক্ষিত জিন কেন্দ্রীভূত হয় এবং একরূপতা বজায় থাকে।", "image": null},
-    {"id": 9, "type": "mcq", "question": "What order of the insect has the greatest colour variation?", "options": ["Lepidoptera", "Diptera", "Hemiptera", "Zoraptera", "None of these"], "answer": 1, "explanation": "Lepidoptera (butterflies and moths) is the insect order with the greatest colour variation. Their wings display a huge diversity of colours and patterns due to the presence of pigmented scales.\n\nলেপিডোপ্টেরা (প্রজাপতি ও মথ) হলো সবচেয়ে বেশি রঙের বৈচিত্র্যযুক্ত পতঙ্গের বর্গ। তাদের ডানায় রঙিন আঁশের উপস্থিতির কারণে বিপুল বৈচিত্র্যের রং ও নকশা দেখা যায়।", "image": null},
-    {"id": 10, "type": "mcq", "question": "In which type of soils earthworms generally found?", "options": ["Medium texture upland soil", "Droughty sands", "Poorly drained lowlands", "High texture lowlands", "None of these"], "answer": 1, "explanation": "Earthworms are generally found in medium texture upland soils where there is adequate moisture, organic matter, and aeration. They avoid extremely dry sandy soils and waterlogged lowlands.\n\nকেঁচো সাধারণত মাঝারি বুননের উঁচু জমির মাটিতে পাওয়া যায় যেখানে পর্যাপ্ত আর্দ্রতা, জৈব পদার্থ ও বায়ু চলাচল থাকে। তারা অত্যন্ত শুষ্ক বেলে মাটি ও জলাবদ্ধ নিচু জমি এড়িয়ে চলে।", "image": null},
-    {"id": 11, "type": "mcq", "question": "Stridulation is used by -", "options": ["Butterfly", "Birds", "Cow", "Grasshopper", "None of these"], "answer": 4, "explanation": "Stridulation is the act of producing sound by rubbing together certain body parts. Grasshoppers, crickets and cicadas are famous for stridulation, produced by rubbing their hind legs against wings.\n\nস্ট্রিডুলেশন হলো শরীরের কিছু অংশ একে অপরের সাথে ঘষে শব্দ উৎপাদনের ক্রিয়া। ঘাসফড়িং, ঝিঁঝিঁপোকা এবং সিকাডা স্ট্রিডুলেশনের জন্য বিখ্যাত, যা তারা পিছনের পা ডানার সাথে ঘষে উৎপন্ন করে।", "image": null},
-    {"id": 12, "type": "mcq", "question": "Broccoli is an example of ---- flower bud", "options": ["Cultivated", "Lateral", "Edible", "Dehydrated", "None of these"], "answer": 3, "explanation": "Broccoli is an example of an edible flower bud. The edible portion of broccoli consists of the immature flower heads (florets) and stem.\n\nব্রকলি হলো একটি খাদ্যযোগ্য ফুলের কুঁড়ির উদাহরণ। ব্রকলির খাদ্যযোগ্য অংশ হলো অপরিপক্ব ফুলের মাথা (ফ্লোরেট) এবং কাণ্ড।", "image": null},
-    {"id": 13, "type": "mcq", "question": "Which one of the following cycle is known as bio cycle?", "options": ["Carbon cycle", "Sulfur cycle", "Nitrogen cycle", "All of these", "None of these"], "answer": 4, "explanation": "Bio-geochemical cycles include carbon cycle, sulfur cycle, and nitrogen cycle. All of these are known as bio cycles as they involve movement of essential elements through living organisms and their environment.\n\nজৈব-ভূ-রাসায়নিক চক্রের মধ্যে কার্বন চক্র, সালফার চক্র এবং নাইট্রোজেন চক্র অন্তর্ভুক্ত। এই সবগুলোকেই বায়ো চক্র বলা হয় কারণ এগুলো জীবিত প্রাণী ও তাদের পরিবেশের মধ্য দিয়ে অপরিহার্য উপাদানের চলাচলে জড়িত।", "image": null},
-    {"id": 14, "type": "mcq", "question": "Which of the following is the part of a plant disease triangle?", "options": ["Environment", "Pathogen", "Susceptible hosts", "All of these", "None of these"], "answer": 4, "explanation": "The plant disease triangle consists of three components: a susceptible host, a virulent pathogen, and a favorable environment. All three must be present for a disease to occur.\n\nউদ্ভিদ রোগ ত্রিভুজ তিনটি উপাদান নিয়ে গঠিত: সংবেদনশীল পোষক, ক্ষতিকর প্যাথোজেন এবং অনুকূল পরিবেশ। রোগ হওয়ার জন্য এই তিনটিই উপস্থিত থাকতে হবে।", "image": null},
-    {"id": 15, "type": "mcq", "question": "Which of the following nutrients usually plants get directly from soil?", "options": ["Nitrogen", "Sulfur", "Carbon", "Oxygen", "None of these"], "answer": 2, "explanation": "Plants get sulfur directly from soil in the form of sulfate (SO4²⁻) ions. Carbon and oxygen come from air/water, and nitrogen is mainly obtained from soil after fixation or as nitrate/ammonium ions.\n\nউদ্ভিদ মাটি থেকে সরাসরি সালফার গ্রহণ করে সালফেট (SO4²⁻) আয়ন হিসেবে। কার্বন ও অক্সিজেন বায়ু/পানি থেকে আসে, এবং নাইট্রোজেন প্রধানত সংবন্ধনের পরে বা নাইট্রেট/অ্যামোনিয়াম আয়ন হিসেবে মাটি থেকে পাওয়া যায়।", "image": null},
-    {"id": 16, "type": "mcq", "question": "Generally certified seed is not breed from which of the following", "options": ["Certified seed", "Foundation seed", "Registered seed", "Breeder seed", "None of these"], "answer": 5, "explanation": "Certified seed is generally produced from Foundation seed or Registered seed, but sometimes may also be produced from Breeder seed or previous Certified seed depending on the seed multiplication system. Therefore, none of the options is strictly excluded.\n\nসার্টিফাইড বীজ সাধারণত ফাউন্ডেশন বীজ বা রেজিস্টার্ড বীজ থেকে উৎপাদিত হয়, তবে কখনও কখনও ব্রিডার বীজ বা পূর্বের সার্টিফাইড বীজ থেকেও উৎপাদিত হতে পারে। সেই অনুযায়ী কোনো অপশন কঠোরভাবে বাদ পড়ে না।", "image": null},
-    {"id": 17, "type": "mcq", "question": "ADP to ATP change is called -", "options": ["Photosynthesis", "Transpiration", "Phosphorylation", "Oxidation", "None of these"], "answer": 3, "explanation": "The conversion of ADP (Adenosine Diphosphate) to ATP (Adenosine Triphosphate) by the addition of a phosphate group is called phosphorylation. This process stores energy in the form of ATP.\n\nফসফেট গ্রুপ যোগের মাধ্যমে ADP (অ্যাডেনোসিন ডাইফসফেট) থেকে ATP (অ্যাডেনোসিন ট্রাইফসফেট) এ রূপান্তরকে ফসফোরাইলেশন বলে। এই প্রক্রিয়ায় ATP আকারে শক্তি সঞ্চিত হয়।", "image": null},
-    {"id": 18, "type": "mcq", "question": "Germination is inhibited by -", "options": ["Red light", "Blue light", "UV Light", "I.R light", "None of these"], "answer": 3, "explanation": "Ultraviolet (UV) light inhibits seed germination as it damages DNA and cellular structures. Red light generally promotes germination through the phytochrome system.\n\nআল্ট্রাভায়োলেট (UV) আলো বীজের অঙ্কুরোদগম বাধাগ্রস্ত করে কারণ এটি DNA ও কোষীয় গঠনের ক্ষতি করে। লাল আলো সাধারণত ফাইটোক্রোম সিস্টেমের মাধ্যমে অঙ্কুরোদগমকে উৎসাহিত করে।", "image": null},
-    {"id": 19, "type": "mcq", "question": "At what stage are more nutrients necessarily required in cereal crops?", "options": ["Growth stage of plants", "Formation of leaves", "Panicle initiation", "Maturity of crops", "None of these"], "answer": 1, "explanation": "More nutrients are necessarily required during the growth stage of plants in cereal crops. This is when plants are actively developing biomass and require ample supply of N, P, K and other nutrients.\n\nদানাদার ফসলে উদ্ভিদের বৃদ্ধি পর্যায়ে সবচেয়ে বেশি পুষ্টি প্রয়োজন হয়। এই সময়ে গাছ সক্রিয়ভাবে বায়োমাস তৈরি করে এবং N, P, K ও অন্যান্য পুষ্টির প্রচুর সরবরাহ প্রয়োজন হয়।", "image": null},
-    {"id": 20, "type": "mcq", "question": "Soil erosion is -", "options": ["A process by which soil is formed", "A process that moves soil by wind and water away from where it is needed", "Another process that works like green-house effect", "Another name of soil pollution", "None of these"], "answer": 2, "explanation": "Soil erosion is the process by which soil particles are moved from one place to another by natural agents like wind and water. It leads to loss of fertile topsoil.\n\nমৃত্তিকা ক্ষয় হলো এমন একটি প্রক্রিয়া যার মাধ্যমে বায়ু ও পানির মতো প্রাকৃতিক উপাদান দ্বারা মাটির কণা এক জায়গা থেকে অন্য জায়গায় স্থানান্তরিত হয়। এতে উর্বর উপরিভাগের মাটি হারিয়ে যায়।", "image": null},
-    {"id": 21, "type": "mcq", "question": "Which one of the following is a widely used Potassium fertilizer?", "options": ["TSP", "MOP", "Gypsum", "Compost", "None of these"], "answer": 2, "explanation": "MOP (Muriate of Potash / KCl) is the most widely used potassium fertilizer worldwide. It contains about 60% K2O. TSP contains phosphorus and Gypsum provides calcium and sulfur.\n\nMOP (মিউরিয়েট অব পটাশ / KCl) বিশ্বব্যাপী সবচেয়ে ব্যাপকভাবে ব্যবহৃত পটাসিয়াম সার। এতে প্রায় ৬০% K2O থাকে। TSP-এ ফসফরাস থাকে এবং জিপসাম ক্যালসিয়াম ও সালফার সরবরাহ করে।", "image": null},
-    {"id": 22, "type": "mcq", "question": "Maximum photosynthesis occurred in", "options": ["Blue light", "Violet light", "Red light", "Green light", "None of these"], "answer": 3, "explanation": "Maximum photosynthesis occurs in red light (wavelength 660 nm) followed by blue light (430 nm). Chlorophyll absorbs red and blue light most efficiently while reflecting green light.\n\nসর্বোচ্চ সালোকসংশ্লেষণ লাল আলোতে (তরঙ্গদৈর্ঘ্য ৬৬০ ন্যানোমিটার) ঘটে, এরপর নীল আলোতে (৪৩০ ন্যানোমিটার)। ক্লোরোফিল লাল ও নীল আলো সবচেয়ে দক্ষতার সাথে শোষণ করে এবং সবুজ আলো প্রতিফলিত করে।", "image": null},
-    {"id": 23, "type": "mcq", "question": "Which of the following factors does not affect the nitrification?", "options": ["Air", "Temperature", "Seed", "Moisture", "None of these"], "answer": 3, "explanation": "Nitrification is the biological oxidation of ammonia to nitrite and then to nitrate by nitrifying bacteria. It is affected by air (oxygen), temperature, moisture, pH and soil texture. Seed does not affect nitrification.\n\nনাইট্রিফিকেশন হলো নাইট্রিফায়িং ব্যাকটেরিয়া দ্বারা অ্যামোনিয়াকে নাইট্রাইট এবং তারপর নাইট্রেটে জৈবিক জারণ। এটি বায়ু (অক্সিজেন), তাপমাত্রা, আর্দ্রতা, pH এবং মাটির বুনন দ্বারা প্রভাবিত হয়। বীজ নাইট্রিফিকেশনকে প্রভাবিত করে না।", "image": null},
-    {"id": 24, "type": "mcq", "question": "Bending of plants towards light is called -", "options": ["Phototropism", "Photorespiration", "Vernalization", "Photosynthesis", "None of these"], "answer": 1, "explanation": "Phototropism is the growth response of plants in the direction of light. It is caused by unequal distribution of auxin, resulting in bending of the plant towards light.\n\nফটোট্রপিজম হলো আলোর দিকে উদ্ভিদের বৃদ্ধিমূলক প্রতিক্রিয়া। অক্সিনের অসম বণ্টনের কারণে এটি ঘটে, ফলে গাছ আলোর দিকে বেঁকে যায়।", "image": null},
-    {"id": 25, "type": "mcq", "question": "___ are the units of heredity", "options": ["Cells", "Chromosome", "Gene", "Alleles", "None of these"], "answer": 3, "explanation": "Genes are the units of heredity. They are segments of DNA that carry genetic information and are transmitted from parents to offspring.\n\nজিন হলো বংশগতির একক। এগুলো DNA-এর খণ্ড যা জেনেটিক তথ্য বহন করে এবং পিতামাতা থেকে সন্তানের কাছে সঞ্চারিত হয়।", "image": null},
-    {"id": 26, "type": "mcq", "question": "The study of interactions between living organisms and environment is called -", "options": ["Ecosystem", "Phytogeography", "Ecology", "Phytosociology", "None of these"], "answer": 3, "explanation": "Ecology is the branch of biology that deals with the study of interactions between living organisms and their environment. The term was coined by Ernst Haeckel in 1869.\n\nইকোলজি হলো জীববিজ্ঞানের একটি শাখা যা জীবিত প্রাণী ও তাদের পরিবেশের মধ্যকার মিথস্ক্রিয়া অধ্যয়ন করে। শব্দটি প্রথম ব্যবহার করেন আর্নস্ট হেকেল ১৮৬৯ সালে।", "image": null},
-    {"id": 27, "type": "mcq", "question": "The process of covering the soil surface with any material such as organic wastes is called -", "options": ["Mulching", "Reciprocation", "Dibbling", "Densification", "None of these"], "answer": 1, "explanation": "Mulching is the process of covering the soil surface with organic or inorganic materials to conserve moisture, control weeds, moderate soil temperature and prevent erosion.\n\nমালচিং হলো জৈব বা অজৈব উপাদান দিয়ে মাটির উপরিভাগ ঢেকে রাখার প্রক্রিয়া যা আর্দ্রতা সংরক্ষণ, আগাছা নিয়ন্ত্রণ, মাটির তাপমাত্রা নিয়ন্ত্রণ এবং ক্ষয় প্রতিরোধ করে।", "image": null},
-    {"id": 28, "type": "mcq", "question": "Which of the following is not mixed with urea?", "options": ["Cowdung", "Gypsum", "Compost", "Lime", "None of these"], "answer": 4, "explanation": "Lime should not be mixed with urea because lime causes rapid volatilization of urea into ammonia gas, resulting in nitrogen loss. Cowdung, gypsum and compost can be mixed with urea safely.\n\nচুন ইউরিয়ার সাথে মেশানো উচিত নয় কারণ চুন ইউরিয়াকে দ্রুত অ্যামোনিয়া গ্যাসে বাষ্পীভূত করে, ফলে নাইট্রোজেনের ক্ষতি হয়। গোবর, জিপসাম ও কম্পোস্ট নিরাপদে ইউরিয়ার সাথে মেশানো যায়।", "image": null},
-    {"id": 29, "type": "mcq", "question": "Which of the following requires more irrigation?", "options": ["T. Aman", "Jute", "Boro Dhan", "Sugarcane", "None of these"], "answer": 3, "explanation": "Boro rice requires more irrigation as it is cultivated in the dry season (December-May) when there is very little rainfall. It needs about 1200-1500 mm of water throughout its life cycle.\n\nবোরো ধানের বেশি সেচ প্রয়োজন কারণ এটি শুষ্ক মৌসুমে (ডিসেম্বর-মে) চাষ করা হয় যখন খুব কম বৃষ্টিপাত হয়। এর জীবনচক্র জুড়ে প্রায় ১২০০-১৫০০ মিমি পানি প্রয়োজন।", "image": null},
-    {"id": 30, "type": "mcq", "question": "Opening and closing of stomata depends on which of the following", "options": ["Sunlight", "transpiration", "temperature", "water pressure", "none of these"], "answer": 4, "explanation": "Opening and closing of stomata primarily depends on water pressure (turgor pressure) in the guard cells. When guard cells absorb water, they become turgid and stomata open; when they lose water, stomata close.\n\nপত্ররন্ধ্রের খোলা ও বন্ধ হওয়া প্রাথমিকভাবে রক্ষী কোষের পানির চাপ (স্ফীতি চাপ) এর উপর নির্ভর করে। যখন রক্ষী কোষ পানি শোষণ করে, তখন তারা স্ফীত হয় এবং পত্ররন্ধ্র খোলে; যখন তারা পানি হারায়, তখন পত্ররন্ধ্র বন্ধ হয়।", "image": null},
-    {"id": 31, "type": "mcq", "question": "How many times rouging is done?", "options": ["2-3 times", "4 times", "1 time", "According to the crops needed", "None of these"], "answer": 4, "explanation": "Rouging is the process of removing off-type or diseased plants from a seed crop. The number of times rouging is done depends on the crop and growth stages requiring inspection.\n\nরগিং হলো বীজ ফসল থেকে অস্বাভাবিক বা রোগাক্রান্ত গাছ অপসারণের প্রক্রিয়া। রগিং কতবার করা হবে তা ফসল এবং পরিদর্শনের প্রয়োজনীয় বৃদ্ধি পর্যায়ের উপর নির্ভর করে।", "image": null},
-    {"id": 32, "type": "mcq", "question": "Kharif-2 season duration is -", "options": ["16 March-15 July", "16 July-15 October", "16 October-15 March", "All of these", "None of these"], "answer": 2, "explanation": "In Bangladesh, Kharif-2 season is from 16 July to 15 October. Major crops of this season include T. Aman rice, jute, and vegetables. Kharif-1 is from 16 March to 15 July, and Rabi is from 16 October to 15 March.\n\nবাংলাদেশে খরিফ-২ মৌসুম হলো ১৬ জুলাই থেকে ১৫ অক্টোবর। এই মৌসুমের প্রধান ফসল হলো টি. আমন ধান, পাট ও শাকসবজি। খরিফ-১ হলো ১৬ মার্চ থেকে ১৫ জুলাই এবং রবি হলো ১৬ অক্টোবর থেকে ১৫ মার্চ।", "image": null},
-    {"id": 33, "type": "mcq", "question": "TSP contains P-", "options": ["16%", "20%", "46%", "48%", "None of these"], "answer": 2, "explanation": "TSP (Triple Super Phosphate) contains about 46% P2O5, which is equivalent to about 20% elemental phosphorus (P). Since the question asks about P (not P2O5), the answer is 20%.\n\nTSP (ট্রিপল সুপার ফসফেট) প্রায় ৪৬% P2O5 ধারণ করে, যা প্রায় ২০% মৌলিক ফসফরাস (P) এর সমতুল্য। যেহেতু প্রশ্নে P (P2O5 নয়) সম্পর্কে জিজ্ঞাসা করা হয়েছে, উত্তর হলো ২০%।", "image": null},
-    {"id": 34, "type": "mcq", "question": "What is the name of rice blast fungus pathogen?", "options": ["Cercospora", "Pyricularia oryzae", "Elytroderma", "Guignardia bidwellii", "None of these"], "answer": 2, "explanation": "Rice blast is caused by the fungus Pyricularia oryzae (also known as Magnaporthe oryzae). It is one of the most destructive diseases of rice worldwide, affecting leaves, nodes, and panicles.\n\nধানের ব্লাস্ট রোগ Pyricularia oryzae (যা Magnaporthe oryzae নামেও পরিচিত) ছত্রাক দ্বারা সৃষ্ট হয়। এটি বিশ্বব্যাপী ধানের সবচেয়ে ধ্বংসাত্মক রোগগুলির মধ্যে একটি, যা পাতা, গিঁট এবং শীষকে আক্রমণ করে।", "image": null},
-    {"id": 35, "type": "mcq", "question": "The chemical that attacks opposite sex of species are known as", "options": ["Hormones", "Pheromones", "Allomones", "Kairomones", "None of these"], "answer": 2, "explanation": "Pheromones are chemical substances secreted by one individual and received by another of the same species, often to attract the opposite sex for mating. Sex pheromones are widely used in insect pest management.\n\nফেরোমোন হলো এক ব্যক্তি দ্বারা নিঃসৃত এবং একই প্রজাতির অন্য ব্যক্তি দ্বারা গৃহীত রাসায়নিক পদার্থ, প্রায়শই সঙ্গমের জন্য বিপরীত লিঙ্গকে আকর্ষণ করে। সেক্স ফেরোমোন পোকামাকড় দমনে ব্যাপকভাবে ব্যবহৃত হয়।", "image": null},
-    {"id": 36, "type": "mcq", "question": "In order to raise soil pH, one can use -", "options": ["Limestone", "Alluvium", "Urea", "TSP", "None of these"], "answer": 1, "explanation": "Limestone (CaCO3) is used to raise soil pH (reduce acidity). Liming neutralizes soil acidity and supplies calcium to plants.\n\nচুনাপাথর (CaCO3) মাটির pH বাড়াতে (অম্লতা কমাতে) ব্যবহার করা হয়। চুন প্রয়োগ মাটির অম্লতা প্রশমিত করে এবং গাছকে ক্যালসিয়াম সরবরাহ করে।", "image": null},
-    {"id": 37, "type": "mcq", "question": "What is the meaning of Latin word 'Pome'?", "options": ["Flower", "Fruit", "Spice", "Vegetables", "None of these"], "answer": 2, "explanation": "The Latin word 'Pome' means fruit. In botany, pome is a type of fleshy fruit developed from a compound inferior ovary, e.g., apple, pear.\n\nল্যাটিন শব্দ 'Pome' এর অর্থ ফল। উদ্ভিদবিদ্যায়, পোম হলো একটি যৌগিক অধোবর্তী ডিম্বাশয় থেকে বিকশিত রসাল ফলের একটি প্রকার, যেমন - আপেল, নাশপাতি।", "image": null},
-    {"id": 38, "type": "mcq", "question": "Which of the following is not a part of photosynthesis?", "options": ["The calvin cycle", "Glycolysis", "The splitting of a water molecule", "Capturing of light energy", "None of these"], "answer": 2, "explanation": "Glycolysis is not a part of photosynthesis; it is the first step of cellular respiration where glucose is broken down into pyruvate. The Calvin cycle, water splitting (photolysis), and light energy capture are parts of photosynthesis.\n\nগ্লাইকোলাইসিস সালোকসংশ্লেষণের অংশ নয়; এটি কোষীয় শ্বসনের প্রথম ধাপ যেখানে গ্লুকোজ পাইরুভেটে ভেঙে যায়। ক্যালভিন চক্র, পানি বিভাজন (ফটোলাইসিস) এবং আলোক শক্তি সংগ্রহ সালোকসংশ্লেষণের অংশ।", "image": null},
-    {"id": 39, "type": "mcq", "question": "Salt-loving plants are known as -", "options": ["Xerophytes", "Mesophytes", "Halophytes", "Glycophytes", "None of these"], "answer": 3, "explanation": "Halophytes are salt-loving plants that grow in saline environments such as coastal areas and salt marshes. Examples include mangroves (Sundari), Suaeda, and Salicornia.\n\nহ্যালোফাইট হলো লবণপ্রিয় উদ্ভিদ যা লবণাক্ত পরিবেশে যেমন উপকূলীয় এলাকা ও লবণাক্ত জলাভূমিতে বেড়ে ওঠে। উদাহরণ - ম্যানগ্রোভ (সুন্দরী), সুয়েডা এবং স্যালিকর্নিয়া।", "image": null},
-    {"id": 40, "type": "mcq", "question": "The site of chromosome on which a gene is located is called -", "options": ["Allele", "Locus", "Site", "Trait", "None of these"], "answer": 2, "explanation": "Locus (plural: loci) is the specific location or position of a gene on a chromosome. Different alleles of a gene occupy the same locus on homologous chromosomes.\n\nলোকাস (বহুবচন: লোকি) হলো ক্রোমোজোমে একটি জিনের নির্দিষ্ট অবস্থান বা স্থান। একটি জিনের বিভিন্ন অ্যালিল সমসংস্থ ক্রোমোজোমে একই লোকাস দখল করে।", "image": null},
-    {"id": 41, "type": "mcq", "question": "The book 'Origin of Species' was written by -", "options": ["Linnaeus", "Mendel", "Lamarck", "Darwin", "None of these"], "answer": 4, "explanation": "'On the Origin of Species' (1859) was written by Charles Darwin. This book laid the foundation of evolutionary biology through the theory of natural selection.\n\n'অন দ্য অরিজিন অব স্পিসিজ' (১৮৫৯) লিখেছেন চার্লস ডারউইন। এই বইটি প্রাকৃতিক নির্বাচনের তত্ত্বের মাধ্যমে বিবর্তনীয় জীববিজ্ঞানের ভিত্তি স্থাপন করে।", "image": null},
-    {"id": 42, "type": "mcq", "question": "Which insect has the largest colonies?", "options": ["Termites", "Grasshopper", "Cockroach", "Mole cricket", "None of these"], "answer": 1, "explanation": "Termites have the largest colonies among insects, sometimes containing millions of individuals. They are social insects with well-organized caste systems including workers, soldiers, and reproductives.\n\nপোকামাকড়ের মধ্যে উইপোকার সবচেয়ে বড় কলোনি থাকে, কখনও কখনও লক্ষ লক্ষ সদস্য থাকে। এরা সামাজিক পতঙ্গ যাদের সু-সংগঠিত জাত ব্যবস্থা রয়েছে যেমন - কর্মী, সৈনিক ও প্রজননক্ষম।", "image": null},
-    {"id": 43, "type": "mcq", "question": "Which is not an inorganic matter in the following?", "options": ["Magnesium", "Iron", "Fat", "Iodine", "None of these"], "answer": 3, "explanation": "Fat is an organic matter as it contains carbon, hydrogen and oxygen bonded in complex organic molecules. Magnesium, Iron and Iodine are inorganic elements/minerals.\n\nচর্বি হলো একটি জৈব পদার্থ কারণ এতে জটিল জৈব অণুতে যুক্ত কার্বন, হাইড্রোজেন ও অক্সিজেন থাকে। ম্যাগনেসিয়াম, লোহা এবং আয়োডিন অজৈব উপাদান/খনিজ।", "image": null},
-    {"id": 44, "type": "mcq", "question": "All the TSP & MP fertilizers are to be applied.....", "options": ["before final ploughing", "during final ploughing", "after first ploughing", "during first irrigation", "none of these"], "answer": 2, "explanation": "TSP and MP fertilizers should be applied during the final ploughing so that they get properly mixed with the soil in the root zone before sowing/transplanting.\n\nTSP ও MP সার শেষ চাষের সময় প্রয়োগ করা উচিত যাতে বপন/রোপণের আগে এগুলো সঠিকভাবে শিকড় অঞ্চলের মাটির সাথে মিশে যায়।", "image": null},
-    {"id": 45, "type": "mcq", "question": "Which one of the following is most fertile soil texture?", "options": ["Loam", "clay", "alluvium", "silt", "none of these"], "answer": 1, "explanation": "Loam soil is considered the most fertile soil texture. It has a balanced mixture of sand, silt and clay, providing good aeration, water retention, and nutrient availability for plant growth.\n\nদোআঁশ মাটিকে সবচেয়ে উর্বর মাটির বুনন হিসেবে বিবেচনা করা হয়। এতে বালি, পলি ও কাদার সুষম মিশ্রণ থাকে যা গাছের বৃদ্ধির জন্য ভালো বায়ু চলাচল, পানি ধারণ ক্ষমতা এবং পুষ্টির সহজলভ্যতা প্রদান করে।", "image": null},
-    {"id": 46, "type": "mcq", "question": "'তার বৃদ্ধি হয়েছে কিন্তু বুদ্ধি পাকেনি' এটি কোন ধরনের বাক্য?", "options": ["জটিল বাক্য", "যৌগিক বাক্য", "সরল বাক্য", "ক ও খ", "কোনটিই নয়"], "answer": 2, "explanation": "'তার বৃদ্ধি হয়েছে কিন্তু বুদ্ধি পাকেনি' এটি একটি যৌগিক বাক্য। যৌগিক বাক্যে দুই বা ততোধিক স্বাধীন বাক্য সংযোজক অব্যয় (এবং, ও, কিন্তু, অথবা ইত্যাদি) দ্বারা যুক্ত থাকে। এখানে 'কিন্তু' সংযোজক অব্যয় দ্বারা দুটি স্বাধীন বাক্য যুক্ত হয়েছে।", "image": null},
-    {"id": 47, "type": "mcq", "question": "'জমিদার দর্পণ' উপন্যাসের লেখক কে?", "options": ["আব্দুল হাই", "মুনীর চৌধুরী", "এস. ওয়াজেদ আলী", "মীর মোশাররফ হোসেন", "কোনটিই নয়"], "answer": 4, "explanation": "'জমিদার দর্পণ' নাটকটি (উপন্যাস নয়) রচনা করেন মীর মোশাররফ হোসেন। এটি ১৮৭৩ সালে প্রকাশিত হয়। তাঁর অন্যান্য উল্লেখযোগ্য রচনা - বিষাদ সিন্ধু, গাজী মিয়ার বস্তানী ইত্যাদি।", "image": null},
-    {"id": 48, "type": "mcq", "question": "কোনটি দ্বন্দ্ব সমাস?", "options": ["হাট-বাজার", "মধুকণ্ঠি", "গোমড়া মুখো", "রাতাকানা", "কোনটিই নয়"], "answer": 1, "explanation": "'হাট-বাজার' একটি দ্বন্দ্ব সমাসের উদাহরণ। দ্বন্দ্ব সমাসে উভয় পদের অর্থই প্রধান থাকে। 'হাট-বাজার' = হাট ও বাজার। অন্যদিকে মধুকণ্ঠি (কর্মধারয়), গোমড়ামুখো (বহুব্রীহি), রাতাকানা (বহুব্রীহি) সমাস।", "image": null},
-    {"id": 49, "type": "mcq", "question": "মীর মোশাররফ হোসেনের আত্মজীবনীমূলক রচনা কোনটি?", "options": ["বিষাদ সিন্ধু", "গাজী মিয়ার বস্তানী", "জমিদার দর্পণ", "একটিও না", "কোনটিই নয়"], "answer": 2, "explanation": "মীর মোশাররফ হোসেনের আত্মজীবনীমূলক রচনা হলো 'গাজী মিয়ার বস্তানী'। এটি তাঁর আত্মজীবনীর বিভিন্ন ঘটনা ও অভিজ্ঞতার সংকলন। বিষাদ সিন্ধু ঐতিহাসিক উপন্যাস এবং জমিদার দর্পণ একটি নাটক।", "image": null},
-    {"id": 50, "type": "mcq", "question": "সন্ধির নিয়মে কোনটি সঠিক?", "options": ["শির + ছেদ = শিরচ্ছেদ", "শিরঃ + ছেদ = শিরশ্ছেদ", "শিরো + ছেদ = শিরোচ্ছেদ", "ক ও খ", "কোনটিই নয়"], "answer": 2, "explanation": "সঠিক সন্ধিবিচ্ছেদ হলো 'শিরঃ + ছেদ = শিরশ্ছেদ'। এটি বিসর্গ সন্ধির একটি উদাহরণ। বিসর্গের পরে 'ছ' থাকলে বিসর্গ 'শ্' হয় এবং পরের 'ছ' এর সঙ্গে যুক্ত হয়ে 'চ্ছ' হয়।", "image": null},
-    {"id": 51, "type": "mcq", "question": "Fill in the blank with the right option: I am looking forward ___ you.", "options": ["to seeing", "to see", "seeing", "to have seen", "none of these"], "answer": 1, "explanation": "The correct answer is 'to seeing'. 'Look forward to' is a phrasal verb where 'to' is a preposition, and a preposition is always followed by a noun or gerund (-ing form).\n\nসঠিক উত্তর হলো 'to seeing'। 'Look forward to' একটি phrasal verb যেখানে 'to' একটি preposition, এবং preposition এর পরে সবসময় noun বা gerund (-ing form) বসে।", "image": null},
-    {"id": 52, "type": "mcq", "question": "Sky is to 'bird' as water is to-", "options": ["fish", "ship", "boat", "lotus", "none of these"], "answer": 1, "explanation": "As birds live and move in the sky, fish live and move in water. This is an analogy of habitat.\n\nযেমন পাখি আকাশে বাস করে ও চলাফেরা করে, তেমনি মাছ পানিতে বাস করে ও চলাফেরা করে। এটি বাসস্থানের একটি সাদৃশ্য।", "image": null},
-    {"id": 53, "type": "mcq", "question": "Which is the correct spelling?", "options": ["Obnoksous", "Obnoxious", "Obnoxous", "Obnecious", "none of these"], "answer": 2, "explanation": "The correct spelling is 'Obnoxious', which means extremely unpleasant or offensive.\n\nসঠিক বানান হলো 'Obnoxious', যার অর্থ অত্যন্ত অপ্রীতিকর বা আপত্তিকর।", "image": null},
-    {"id": 54, "type": "mcq", "question": "Which one is the imperative sentence", "options": ["I shall go", "You will sit here", "She is dancing", "Sit down", "none of these"], "answer": 4, "explanation": "'Sit down' is an imperative sentence. Imperative sentences express commands, requests, or instructions. The subject 'you' is usually understood/hidden.\n\n'Sit down' একটি imperative sentence। Imperative sentence আদেশ, অনুরোধ বা নির্দেশ প্রকাশ করে। এতে subject 'you' সাধারণত উহ্য থাকে।", "image": null},
-    {"id": 55, "type": "mcq", "question": "'Maiden speech' means-", "options": ["Speech made", "Final Speech", "First speech", "Early Speech", "none of these"], "answer": 3, "explanation": "'Maiden speech' means the first speech given by a person, especially in Parliament or public forum.\n\n'Maiden speech' অর্থ কোনো ব্যক্তির প্রথম বক্তৃতা, বিশেষত সংসদে বা জনসভায় প্রদত্ত।", "image": null},
-    {"id": 56, "type": "mcq", "question": "'White elephant' means-", "options": ["An elephant which is white", "An elephant which is expensive", "A very Expensive possession", "A very rich person", "none of these"], "answer": 3, "explanation": "'White elephant' is an idiom meaning a very expensive possession that is more trouble than it is worth, i.e., a costly burden.\n\n'White elephant' একটি বাগধারা যার অর্থ অত্যন্ত ব্যয়বহুল সম্পত্তি যা এর মূল্যের চেয়ে বেশি ঝামেলার, অর্থাৎ ব্যয়বহুল বোঝা।", "image": null},
-    {"id": 57, "type": "mcq", "question": "Which of the following crosses Bangladesh?", "options": ["The equator", "The tropic of Cancer", "The tropic of Capricorn", "The 38th parallel", "none of these"], "answer": 2, "explanation": "The Tropic of Cancer (23.5° N latitude) crosses Bangladesh. It passes through the middle of the country, dividing it approximately into northern and southern halves.\n\nকর্কটক্রান্তি রেখা (২৩.৫° উত্তর অক্ষাংশ) বাংলাদেশের মধ্য দিয়ে অতিক্রম করেছে। এটি দেশের মধ্যাংশ দিয়ে গেছে, যা দেশটিকে উত্তর ও দক্ষিণ অংশে বিভক্ত করেছে।", "image": null},
-    {"id": 58, "type": "mcq", "question": "When was the water treaty signed between Bangladesh and India?", "options": ["26 March 1944", "12 December 1996", "17 March 1995", "16 December 1997", "none of these"], "answer": 2, "explanation": "The Ganges Water Sharing Treaty between Bangladesh and India was signed on 12 December 1996. It was signed by Prime Minister Sheikh Hasina and Prime Minister H.D. Deve Gowda for a period of 30 years.\n\nবাংলাদেশ ও ভারতের মধ্যে গঙ্গার পানি বণ্টন চুক্তি ১৯৯৬ সালের ১২ ডিসেম্বর স্বাক্ষরিত হয়। এটি প্রধানমন্ত্রী শেখ হাসিনা ও ভারতের প্রধানমন্ত্রী এইচ. ডি. দেবগৌড়া কর্তৃক ৩০ বছর মেয়াদের জন্য স্বাক্ষরিত হয়।", "image": null},
-    {"id": 59, "type": "mcq", "question": "In which district is the Dahagram enclave located?", "options": ["Kustia", "Lalmonirhat", "Rangpur", "Kurigram", "none of these"], "answer": 2, "explanation": "The Dahagram-Angarpota enclave is located in Patgram Upazila of Lalmonirhat district. It is connected to mainland Bangladesh through the Tin Bigha Corridor.\n\nদহগ্রাম-আঙ্গরপোতা ছিটমহল লালমনিরহাট জেলার পাটগ্রাম উপজেলায় অবস্থিত। এটি তিন বিঘা করিডোরের মাধ্যমে বাংলাদেশের মূল ভূখণ্ডের সাথে সংযুক্ত।", "image": null},
-    {"id": 60, "type": "mcq", "question": "In which year did the French Revolution begin?", "options": ["1799", "1789", "1773", "1797", "none of these"], "answer": 2, "explanation": "The French Revolution began in 1789 with the storming of the Bastille on 14 July 1789. It brought about significant changes in French society and government, ending the monarchy.\n\nফরাসি বিপ্লব শুরু হয়েছিল ১৭৮৯ সালে ১৪ জুলাই বাস্তিল দুর্গ পতনের মাধ্যমে। এটি ফরাসি সমাজ ও সরকারে উল্লেখযোগ্য পরিবর্তন এনেছিল এবং রাজতন্ত্রের অবসান ঘটিয়েছিল।", "image": null}
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Which is not basic principle of Agronomy?",
+      "options": [
+        "To select appropriate materials for seed & sowing",
+        "Management of soil and climate",
+        "Appropriate intercropping activities managment for crop",
+        "Livestock management for agriculture",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "কৃষিবিজ্ঞান বা Agronomy হলো ফসল উৎপাদন এবং ভূমি ব্যবস্থাপনার নীতি ও অনুশীলন নিয়ে আলোচনা। এর মূলনীতিগুলোর মধ্যে রয়েছে مناسب বীজ ও বপন সামগ্রী নির্বাচন, মাটি ও জলবায়ু ব্যবস্থাপনা এবং ফসলের জন্য উপযুক্ত আন্তঃফসল কার্যক্রম ব্যবস্থাপনা। অন্যদিকে, পশুসম্পদ ব্যবস্থাপনা (Livestock management) কৃষিবিদ্যার একটি ভিন্ন শাখা, যা প্রাণীपालन বা পশুপালন (Animal Husbandry) এর অন্তর্ভুক্ত। তাই, পশুসম্পদ ব্যবস্থাপনা কৃষিবিজ্ঞানের মূলনীতির অংশ নয়।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which one of the following is not a method of weed control?",
+      "options": [
+        "Selective herbicide",
+        "Burning and firing",
+        "Mowing",
+        "Smothering",
+        "None of these"
+      ],
+      "answer": 4,
+      "explanation": "প্রশ্নে উল্লেখিত সবগুলোই আগাছা দমনের পদ্ধতি। যেমন:\n১. **Selective herbicide:** নির্বাচিত আগাছানাশক যা শুধুমাত্র নির্দিষ্ট আগাছা দমন করে, কিন্তু মূল ফসলের ক্ষতি করে না।\n২. **Burning and firing:** আগুন দিয়ে পুড়িয়ে আগাছা দমন করা হয়।\n৩. **Mowing:** যন্ত্রের সাহায্যে আগাছা কেটে ফেলা হয়।\n৪. **Smothering:** কোনো কিছু দিয়ে মাটি ঢেকে দিয়ে আলোর অভাবে আগাছা জন্মাতে বাধা দেওয়া হয়, যেমন মালচিং।\nযেহেতু প্রদত্ত সবগুলো বিকল্পই আগাছা দমনের পদ্ধতি, তাই সঠিক উত্তর হবে 'None of these' অর্থাৎ এগুলোর কোনোটিই এমন নয় যা আগাছা দমনের পদ্ধতি নয়।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Which of the following factor is not considered during determination of seed rate?",
+      "options": [
+        "Desired population",
+        "Individual seed weight",
+        "Percentage of size of seed",
+        "Percentage of purity",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "বীজের হার (seed rate) নির্ধারণ করার জন্য কয়েকটি গুরুত্বপূর্ণ বিষয় বিবেচনা করা হয়। এর মধ্যে রয়েছে কাঙ্ক্ষিত গাছের সংখ্যা (Desired population), বীজের ওজন (Test weight/Individual seed weight), অঙ্কুরোদগম হার (Germination percentage) এবং বীজের বিশুদ্ধতার হার (Percentage of purity)। বীজের আকার (size of seed) সরাসরি বীজের হার নির্ধারণের সূত্রে ব্যবহৃত হয় না, যদিও এটি বীজের ওজনের উপর প্রভাব ফেলে। সুতরাং, 'Percentage of size of seed' সরাসরি বিবেচ্য বিষয় নয়।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Which of the following elements play an important role in nitrogen metabolism?",
+      "options": [
+        "Magnesium",
+        "Manganese",
+        "Molybdenum",
+        "Iron",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "মলিবডেনাম (Molybdenum) উদ্ভিদের নাইট্রোজেন বিপাকে (nitrogen metabolism) অত্যন্ত গুরুত্বপূর্ণ ভূমিকা পালন করে। यह নাইট্রেট রিডাক্টেজ (nitrate reductase) এবং নাইট্রোজিনেজ (nitrogenase) নামক দুটি অত্যাবশ্যকীয় এনজাইমের গাঠনিক উপাদান। নাইট্রেট রিডাক্টেজ এনজাইম নাইট্রেটকে নাইট্রাইটে রূপান্তরিত করে, যা উদ্ভিদের নাইট্রোজেন আত্তীকরণের প্রথম ধাপ। অন্যদিকে, নাইট্রোজিনেজ এনজাইম বায়ুমণ্ডলীয় নাইট্রোজেনকে অ্যামোনিয়াতে রূপান্তরিত করে, যা শিম জাতীয় উদ্ভিদে রাইজোবিয়াম ব্যাকটেরিয়ার নাইট্রোজেন সংবন্ধনের জন্য অপরিহার্য।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Which layer of soil has the most influence on the type of soil?",
+      "options": [
+        "Top soil",
+        "Parent material",
+        "Sub soil",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "মাটির ধরন নির্ধারণে जनक পদার্থ বা Parent material সবচেয়ে বেশি প্রভাব ফেলে। জনক পদার্থ হলো সেই মূল খনিজ বা শিলা যা থেকে মাটি তৈরি হয়। এর রাসায়নিক গঠন এবং ভৌত বৈশিষ্ট্যই উত্তরাধিকার সূত্রে মাটির মৌলিক বৈশিষ্ট্য যেমন - খনিজ উপাদান, গঠন (texture) এবং অম্লত্ব বা ক্ষারত্ব নির্ধারণ করে। উপরের মাটি (Top soil) এবং নীচের মাটি (Sub soil) পরবর্তীতে জলবায়ু ও জৈবিক কার্যকলাপের প্রভাবে जनक পদার্থ থেকে বিকশিত হয়।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "What are the three main layers in a soil profile?",
+      "options": [
+        "Top soil, sub soil and parent material",
+        "Mineral, humus and air",
+        "Loam, sand and clay",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "একটি আদর্শ মৃত্তিকা পার্শ্বচিত্রে (soil profile) প্রধান তিনটি স্তর বা হরাইজন (horizon) থাকে। এগুলো হলো:\n১. **Top soil (উপরের মাটি):** এটি 'A' হরাইজন নামে পরিচিত, যা জৈব পদার্থে সমৃদ্ধ এবং ফসল উৎপাদনের জন্য সবচেয়ে গুরুত্বপূর্ণ।\n২. **Sub soil (নীচের মাটি):** এটি 'B' হরাইজন, যেখানে উপরের স্তর থেকে ধুয়ে আসা খনিজ পদার্থ জমা হয়।\n৩. **Parent material (জনক পদার্থ):** এটি 'C' হরাইজন, যা মূল শিলা বা খনিজ পদার্থ নিয়ে গঠিত এবং যেখান থেকে উপরের স্তরগুলো তৈরি হয়।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Flowering plants are reproduced by",
+      "options": [
+        "Pollination",
+        "cross breeding",
+        "breeding",
+        "all of these",
+        "none of these"
+      ],
+      "answer": 0,
+      "explanation": "সপুষ্পক উদ্ভিদের প্রজনন প্রক্রিয়া শুরু হয় পরাগায়নের (Pollination) মাধ্যমে। পরাগায়ন হলো পরাগরেণুর পুংকেশর থেকে স্ত্রীকেশরের গর্ভমুণ্ডে স্থানান্তরিত হওয়ার প্রক্রিয়া। এটিই সপুষ্পক উদ্ভিদের যৌন প্রজননের প্রথম এবং অপরিহার্য ধাপ, যা পরবর্তীতে নিষেক এবং ফল ও বীজ গঠনের দিকে নিয়ে যায়। প্রজনন (Breeding) এবং সংকরায়ন (Cross breeding) হলো কৃত্রিমভাবে উন্নত জাত তৈরির পদ্ধতি, যা মানুষ দ্বারা নিয়ন্ত্রিত হয়।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Line breeding is a type of",
+      "options": [
+        "Inbreeding",
+        "Natural breeding",
+        "Out breeding",
+        "Cross breeding",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "লাইন ব্রিডিং (Line breeding) হলো অন্তঃপ্রজনন বা ইনব্রিডিং (Inbreeding) এর একটি বিশেষ পদ্ধতি। এই পদ্ধতিতে কোনো নির্দিষ্ট পূর্বপুরুষের (সাধারণত উন্নত মানের) জিনগত বৈশিষ্ট্যসমূহ পরবর্তী প্রজন্মের মধ্যে ধরে রাখার জন্য নিকট আত্মীয়দের মধ্যে প্রজনন ঘটানো হয়। তবে এটি নিকটতম আত্মীয়দের (যেমন- পিতা-কন্যা, ভাই-বোন) মধ্যে প্রজনন এড়িয়ে চলে, যা ক্লোজ-ইনব্রিডিং (Close-inbreeding) থেকে কিছুটা ভিন্ন।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "What order of the insect has the greatest colour variation?",
+      "options": [
+        "Lepidoptera",
+        "Diptera",
+        "Hemiptera",
+        "Zoraptera",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "লেপিডোপ্টেরা (Lepidoptera) বর্গের পোকামাকড়দের মধ্যে রঙের বৈচিত্র্য সবচেয়ে বেশি দেখা যায়। এই বর্গের অন্তর্ভুক্ত হলো প্রজাপতি (butterflies) এবং মথ (moths)। তাদের ডানায় থাকা ক্ষুদ্র আঁশ (scales) এবং রঞ্জক পদার্থের (pigments) কারণে উজ্জ্বল ও বিভিন্ন রঙের সমাহার ঘটে। এই রঙগুলো কখনো ছদ্মবেশ ধারণ, সঙ্গী আকর্ষণ বা শিকারিকে ভয় দেখানোর জন্য ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "In which type of soils earthworms generally found?",
+      "options": [
+        "Medium texture upland soil",
+        "Droughty sands",
+        "Poorly drained lowlands",
+        "High texture lowlands",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "কেঁচো সাধারণত মাঝারি বুনটের উঁচু জমির মাটিতে (Medium texture upland soil) বেশি পাওয়া যায়। কেঁচোর বসবাসের জন্য আর্দ্র, বায়ু চলাচলযুক্ত এবং জৈব পদার্থ সমৃদ্ধ মাটি প্রয়োজন। মাঝারি বুনটের মাটি (যেমন- দোআঁশ মাটি) পানি ও বায়ু ধারণের জন্য আদর্শ। খরাপ্রবণ বেলে মাটি (Droughty sands) অতিরিক্ত শুষ্ক এবং জলাবদ্ধ নিম্নভূমি (Poorly drained lowlands) বায়ুশূন্য (anoxic) হওয়ায় কেঁচোর বসবাসের অনুপযোগী।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Stridulation is used by -",
+      "options": [
+        "Butterfly",
+        "Birds",
+        "Cow",
+        "Grasshopper",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "স্ট্রিডুলেশন (Stridulation) হলো শরীরের এক অংশকে অন্য অংশের সাথে ঘষে শব্দ তৈরি করার একটি প্রক্রিয়া। ঘাসফড়িং (Grasshopper) এই পদ্ধতিতে শব্দ তৈরি করে। তারা সাধারণত তাদের পায়ের খসখসে অংশটি ডানার শিরার সাথে ঘষে 'কিচিরমিচির' শব্দ করে, যা সঙ্গী আকর্ষণ বা যোগাযোগের জন্য ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Brococoli is an example of ---- flower bud",
+      "options": [
+        "Cultivated",
+        "Lateral",
+        "Edible",
+        "Dehydrated",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "ব্রোকলি (Broccoli) একটি ভোজ্য বা خوردنی (Edible) ফুলের কুঁড়ি। আমরা যে ব্রোকলি সবজি হিসেবে খাই তা আসলে গাছের সবুজ রঙের অপরিণত ফুলের সমষ্টি। এই ফুলগুলো ফোটার আগেই ফসল হিসেবে সংগ্রহ করা হয়। তাই ব্রোকলিকে ভোজ্য ফুলের কুঁড়ির একটি চমৎকার উদাহরণ হিসেবে বিবেচনা করা হয়।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Which one of the following cycle is known as bio cycle?",
+      "options": [
+        "Carbon cycle",
+        "Sulfur cycle",
+        "Nitrogen cycle",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "কার্বন চক্র, সালফার চক্র এবং নাইট্রোজেন চক্র সবগুলোই জীব-ভূ-রাসায়নিক চক্র (Biogeochemical cycle), যা সাধারণভাবে বায়ো সাইকেল বা জীবচক্র নামে পরিচিত। এই চক্রগুলো জীবমণ্ডল (biosphere), বায়ুমণ্ডল (atmosphere), বারিমণ্ডল (hydrosphere) এবং অশ্মমণ্ডল (lithosphere) এর মধ্যে বিভিন্ন রাসায়নিক উপাদানের আবর্তন প্রক্রিয়া বর্ণনা করে। যেহেতু প্রদত্ত সবকটি চক্রই এই সংজ্ঞার অন্তর্ভুক্ত, তাই সঠিক উত্তর 'All of these' হবে।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Which of the following is the part of a plant disease triangle?",
+      "options": [
+        "Environment",
+        "Pathogen",
+        "Susceptible hosts",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "উদ্ভিদের রোগ ত্রিভুজ (Plant Disease Triangle) হলো একটি মডেল যা রোগ সংঘটনের জন্য প্রয়োজনীয় তিনটি প্রধান উপাদানকে বোঝায়। এই তিনটি উপাদান হলো:\n১. **Pathogen (রোগ সৃষ্টিকারী জীবাণু):** যেমন ছত্রাক, ব্যাকটেরিয়া, ভাইরাস।\n২. **Susceptible Host (সংবেদনশীল পোষক উদ্ভিদ):** যে উদ্ভিদটি রোগে আক্রান্ত হতে পারে।\n৩. **Favorable Environment (অনুকূল পরিবেশ):** যেমন আর্দ্রতা, তাপমাত্রা যা জীবাণুর বৃদ্ধি ও বিস্তারে সহায়তা করে।\nএই তিনটি উপাদান একই সময়ে উপস্থিত থাকলেই কেবল উদ্ভিদে রোগ দেখা দেয়। তাই উত্তর হবে 'All of these' বা সবগুলোই।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Which of the following nutrients usually plants get directly from soil?",
+      "options": [
+        "Nitrogen",
+        "Sulfur",
+        "Carbon",
+        "Oxygen",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "উদ্ভিদ তার প্রয়োজনীয় পুষ্টি উপাদান বিভিন্ন উৎস থেকে গ্রহণ করে।\n- **কার্বন (Carbon)** ও **অক্সিজেন (Oxygen)** প্রধানত বায়ু (CO2) এবং পানি (H2O) থেকে পায়।\n- **নাইট্রোজেন (Nitrogen)** বায়ুমণ্ডলে প্রচুর পরিমাণে থাকলেও উদ্ভিদ সরাসরি গ্রহণ করতে পারে না; এটি মাটিতে সংবন্ধিত (fixed) হওয়ার পর শোষিত হয়।\n- **সালফার (Sulfur)** উদ্ভিদ সরাসরি মাটি থেকে সালফেট (SO₄²⁻) আয়ন হিসেবে গ্রহণ করে।\nসুতরাং, প্রদত্ত বিকল্পগুলির মধ্যে সালফারই উদ্ভিদ সরাসরি মাটি থেকে গ্রহণ করে।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Generally certified seed is not breed from which of the following",
+      "options": [
+        "Certified seed",
+        "Foundation seed",
+        "Registered seed",
+        "Breeder seed",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "বীজ উৎপাদনের একটি নির্দিষ্ট ক্রম বা পর্যায় রয়েছে। এই পর্যায়ক্রমটি হলো: প্রজনন বীজ (Breeder seed) → ভিত্তি বীজ (Foundation seed) → নিবন্ধিত বীজ (Registered seed) → প্রত্যয়িত বীজ (Certified seed)। প্রত্যয়িত বীজ সরাসরি ভিত্তি বীজ বা নিবন্ধিত বীজ থেকে উৎপাদন করা হয়। প্রজনন বীজ বা ব্রিডার সিড ব্যবহার করে ভিত্তি বীজ তৈরি করা হয়, সরাসরি প্রত্যয়িত বীজ নয়। তাই, প্রত্যয়িত বীজ সাধারণত প্রজনন বীজ থেকে তৈরি করা হয় না।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "ADP to ATP change is called -",
+      "options": [
+        "Photosynthesis",
+        "Transpiration",
+        "Phosphophorylation",
+        "Oxidation",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "এডিনোসিন ডাইফসফেট (ADP) এর সাথে একটি ফসফেট গ্রুপ (Pi) যুক্ত হয়ে এডিনোসিন ট্রাইফসফেট (ATP) তৈরি হওয়ার প্রক্রিয়াকে ফসফোরাইলেশন (Phosphorylation) বলা হয়। এই প্রক্রিয়ায় শক্তি সঞ্চিত হয়। সালোকসংশ্লেষণ এবং শ্বসন উভয় প্রক্রিয়ার সময়ই ফসফোরাইলেশন ঘটে, যার মাধ্যমে জীবকোষ তার প্রয়োজনীয় শক্তি (ATP) উৎপাদন করে।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Germination is inhibited by -",
+      "options": [
+        "Red light",
+        "Blue light",
+        "UV Light",
+        "I.R light",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "অতিবেগুনি রশ্মি বা UV Light বীজের অঙ্কুরোদগমে বাধা সৃষ্টি করতে পারে। উচ্চ শক্তির এই রশ্মি বীজের ভ্রূণের কোষের ডিএনএ (DNA) এবং অন্যান্য গুরুত্বপূর্ণ জৈব অণুর ক্ষতি করে, যার ফলে অঙ্কুরোদগম প্রক্রিয়া ব্যাহত হয় বা বীজটি মারা যায়। অন্যদিকে, লাল আলো (Red light) অনেক উদ্ভিদের বীজের অঙ্কুরোদগমকে উদ্দীপ্ত করে।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "At what stage are more nutrients necessarily required in cereal crops?",
+      "options": [
+        "Growth stage of plants",
+        "Formation of leaves",
+        "Panicle initiation",
+        "Maturity of crops",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "দানাশস্য জাতীয় ফসলের ক্ষেত্রে শীষ আসা পর্যায় বা Panicle initiation stage-এ সবচেয়ে বেশি পুষ্টি উপাদানের প্রয়োজন হয়। এই পর্যায়টি উদ্ভিদের প্রজনন পর্বের সূচনা করে এবং 이때 গাছের পুষ্টির চাহিদা সর্বোচ্চ থাকে। এই সময়ে পর্যাপ্ত পুষ্টি সরবরাহ করা হলে শীষের আকার, দানার সংখ্যা এবং最终 ফলন বৃদ্ধি পায়। বিশেষ করে নাইট্রোজেন, ফসফরাস ও পটাশিয়ামের চাহিদা এ সময় খুব বেশি থাকে।",
+      "image": all
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "Soil erosion is -",
+      "options": [
+        "A process by which soil is formed",
+        "A process that moves soil by wind and water away from where it is needed",
+        "Another process that works like green-house effect",
+        "Another name of soil pollution",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "মৃত্তিকা ক্ষয় বা Soil erosion হলো একটি প্রাকৃতিক প্রক্রিয়া যেখানে মাটি তার অবস্থান থেকে বায়ু, পানি বা অন্যান্য শক্তির প্রভাবে অপসারিত হয়। এই প্রক্রিয়ায় জমির উপরিভাগের উর্বর মাটি অন্যত্র চলে যায়, ফলে জমির উর্বরতা ও উৎপাদন ক্ষমতা হ্রাস পায়। এটি পরিবেশের জন্য একটি মারাত্মক সমস্যা।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Which one of the following is a widely used Potassium fertilizer?",
+      "options": [
+        "TSP",
+        "MOP",
+        "Gypsum",
+        "Compost",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "MOP বা মিউরেট অফ পটাশ (KCl) হলো বহুল ব্যবহৃত একটি পটাশিয়াম সমৃদ্ধ রাসায়নিক সার। বাংলাদেশে পটাশিয়ামের চাহিদা পূরণের জন্য এটি সবচেয়ে জনপ্রিয়। MOP-তে প্রায় ৫০-৬০% পটাশিয়াম (K2O) থাকে। TSP হলো ফসফরাসের, জিপসাম ক্যালসিয়াম ও সালফারের এবং কম্পোস্ট একটি জৈব সার।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Maxium photosynthesis occurred in",
+      "options": [
+        "Blue light",
+        "Violet light",
+        "Red light",
+        "Green light",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "সালোকসংশ্লেষণের হার আলোর বিভিন্ন তরঙ্গদৈর্ঘ্যে ভিন্ন ভিন্ন হয়। ক্লোরোফিল নামক রঞ্জক পদার্থ লাল এবং নীল-বেগুনি আলো সবচেয়ে বেশি শোষণ করে, তাই এই দুই রঙের আলোতে সালোকসংশ্লেষণের হার সর্বোচ্চ হয়। সাধারণত, লাল আলোতে (Red light) সালোকসংশ্লেষণের হার সর্বাধিক থাকে। সবুজ আলো প্রতিফলিত হয় বলে এই আলোতে সালোকসংশ্লেষণের হার সর্বনিম্ন।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Which of the following factors does not affect the nitrification?",
+      "options": [
+        "Air",
+        "Temperature",
+        "Seed",
+        "Moisture",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "নাইট্রিফিকেশন (Nitrification) হলো একটি অণুজীবীয় প্রক্রিয়া যেখানে অ্যামোনিয়া (NH₃) বা অ্যামোনিয়াম (NH₄⁺) জারিত হয়ে প্রথমে নাইট্রাইট (NO₂⁻) এবং পরে নাইট্রেটে (NO₃⁻) রূপান্তরিত হয়। এই প্রক্রিয়াটি মাটিতে বসবাসকারী নির্দিষ্ট ব্যাকটেরিয়া দ্বারা সম্পন্ন হয়। বায়ু (অক্সিজেন), তাপমাত্রা এবং আর্দ্রতা (Moisture) এই ব্যাকটেরিয়ার কার্যকারিতাকে প্রভাবিত করে। বীজ (Seed) এই প্রক্রিয়ার উপর কোনো প্রভাব ফেলে না।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "Bending of plants towards light is called -",
+      "options": [
+        "Phototropism",
+        "Photorespiration",
+        "Vernalization",
+        "Photosynthesis",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "উদ্ভিদের আলোর উৎসের দিকে বেঁকে যাওয়ার ঘটনাকে ফটোট্রপিজম (Phototropism) বা আলোকমুখিতা বলে। এটি উদ্ভিদের একটি দিকমুখী চলন, যা অক্সিন নামক হরমোনের অসম বণ্টনের কারণে ঘটে। কাণ্ড আলোর দিকে বৃদ্ধি পায় (ধনাত্মক ফটোট্রপিজম) এবং মূল আলোর বিপরীত দিকে বৃদ্ধি পায় (ঋণাত্মক ফটোট্রপিজম)।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "are the units of heredity",
+      "options": [
+        "Cells",
+        "Chromosome",
+        "Gene",
+        "Alleles",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "জিন (Gene) হলো বংশগতির একক (unit of heredity)। জিন হলো ডিএনএ (DNA)-এর একটি নির্দিষ্ট অংশ যা একটি নির্দিষ্ট প্রোটিন তৈরির সংকেত বহন করে এবং জীবের একটি নির্দিষ্ট বৈশিষ্ট্য নিয়ন্ত্রণ করে। জিনগুলো ক্রোমোজোমের উপর অবস্থিত এবং পিতামাতা থেকে সন্তানের মধ্যে বংশগত বৈশিষ্ট্য স্থানান্তর করে।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "The study of interactions between living organisms and environment is called -",
+      "options": [
+        "Ecosystem",
+        "Phytogeography",
+        "Ecology",
+        "Phytosociology",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "বাস্তুবিদ্যা বা ইকোলজি (Ecology) হলো জীববিজ্ঞানের সেই শাখা যেখানে জীবন্ত প্রাণী (living organisms) এবং তাদের পরিবেশের (environment) মধ্যকার মিথস্ক্রিয়া বা আন্তঃসম্পর্ক নিয়ে আলোচনা করা হয়। এটি জীব ও তার পারিপার্শ্বিক ভৌত ও জৈব পরিবেশের সম্পর্ক নিয়ে গবেষণা করে।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "The process of covering the soil surface with any material such as organic wastes is called -",
+      "options": [
+        "Mulching",
+        "Reciprocation",
+        "Dibbling",
+        "Densification",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "জমির পৃষ্ঠকে কোনো উপাদান (যেমন- খড়, কচুরিপানা, পলিথিন) দিয়ে ঢেকে দেওয়ার প্রক্রিয়াকে মালচিং (Mulching) বলা হয়। মালচিং মাটির আর্দ্রতা ধরে রাখতে, তাপমাত্রা নিয়ন্ত্রণ করতে, আগাছা দমন করতে এবং মাটির ক্ষয়রোধ করতে সাহায্য করে। এটি মাটির উর্বরতা বৃদ্ধিতেও সহায়ক।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Which of the following is not mixed with urea?",
+      "options": [
+        "Cowdung",
+        "Gypsum",
+        "Compost",
+        "Lime",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "ইউরিয়া সারের সাথে চুন (Lime) মেশানো উচিত নয়। ইউরিয়া একটি অম্লধর্মী সার এবং চুন ক্ষারীয়। একসাথে মেশালে রাসায়নিক বিক্রিয়ার মাধ্যমে অ্যামোনিয়া গ্যাস উৎপন্ন হয়, যার ফলে ইউরিয়ার নাইট্রোজেন নষ্ট হয়ে যায়। এর ফলে সারের কার্যকারিতা অনেকাংশে কমে যায়।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Which of the following requires more irrigation?",
+      "options": [
+        "T. Aman",
+        "Jute",
+        "Boro Dhan",
+        "Sugarcane",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "বোরো ধান (Boro Dhan) চাষে সবচেয়ে বেশি সেচের প্রয়োজন হয়। কারণ বোরো ধান বাংলাদেশের শুষ্ক রবি মৌসুমে (শীত ও বসন্তকালে) চাষ করা হয়, যখন বৃষ্টিপাত প্রায় হয় না বললেই চলে। ফলে ফসলের পুরো জীবনচক্রে কৃত্রিম সেচের উপর নির্ভর করতে হয়। অন্যান্য ফসল যেমন আউশ, আমন বা পাট বর্ষাকালে চাষ হওয়ায় সেচের প্রয়োজন তুলনামূলকভাবে কম হয়।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "Opening and closing of stomata depends on which of the following...",
+      "options": [
+        "Sunlight",
+        "temperature",
+        "water pressure",
+        "transpiration",
+        "none of these"
+      ],
+      "answer": 3,
+      "explanation": "পত্ররন্ধ্র বা স্টোমাটা খোলা ও বন্ধ হওয়া মূলত প্রস্বেদন বা Transpiration এর সাথে সম্পর্কিত। প্রস্বেদন হলো উদ্ভিদ থেকে পানি বাষ্পাকারে বের হয়ে যাওয়ার প্রক্রিয়া। যখন উদ্ভিদ পানি হারায় (প্রস্বেদনের মাধ্যমে), তখন রক্ষীকোষের (guard cells) স্ফীতি চাপ (turgor pressure) কমে যায় এবং পত্ররন্ধ্র বন্ধ হয়ে যায়। আবার, পর্যাপ্ত পানি থাকলে রক্ষীকোষ স্ফীত হয়ে পত্ররন্ধ্র খুলে দেয়। তাই প্রস্বেদন পত্ররন্ধ্রের কার্যক্রমকে সরাসরি নিয়ন্ত্রণ করে।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "How may times rouging is done?",
+      "options": [
+        "2-3 times",
+        "4 times",
+        "1 time",
+        "According to the crops needed",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "রগিং (Rouging) বা বাছাইকরণ হলো বীজ প্লট থেকে অনাকাঙ্ক্ষিত (off-type), রোগাক্রান্ত বা ভিন্ন জাতের গাছ তুলে ফেলার প্রক্রিয়া। রগিং কতবার করতে হবে তার কোনো নির্দিষ্ট সংখ্যা নেই। এটি ফসলের প্রয়োজনীয়তা অনুযায়ী (According to the crops needed) করা হয়। সাধারণত ফুল আসার আগে, ফুল আসার সময় এবং ফসল পাকার সময় রগিং করা হয়, তবে প্রয়োজনে আরও বেশিবার করা যেতে পারে। মূল উদ্দেশ্য হলো বীজের জাতগত বিশুদ্ধতা রক্ষা করা।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "Kahrif-2 season duration is -",
+      "options": [
+        "16 March-15 July",
+        "16 July-15 October",
+        "16 October 15 March",
+        "All of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "বাংলাদেশে কৃষি মৌসুমকে প্রধানত দুটি ভাগে ভাগ করা হয়: খরিফ এবং রবি। খরিফ মৌসুমকে আবার দুটি ভাগে ভাগ করা হয়:\n- **খরিফ-১ (Kharif-1):** ১৬ মার্চ থেকে ১৫ জুলাই (গ্রীষ্মকাল)। এই সময়ে আউশ ধান, পাট ইত্যাদি চাষ হয়।\n- **খরিফ-২ (Kharif-2):** ১৬ জুলাই থেকে ১৫ অক্টোবর (বর্ষাকাল)। এই সময়ে রোপা আমন ধান চাষ হয়।\n- **রবি মৌসুম:** ১৬ অক্টোবর থেকে ১৫ মার্চ (শীতকাল)। এই সময়ে বোরো ধান, গম, আলু, ডাল ইত্যাদি চাষ হয়।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "TSP contains P-",
+      "options": [
+        "16%",
+        "20%",
+        "46%",
+        "48%",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "টিএসপি (TSP - Triple Superphosphate) সারে ফসফরাস পেন্টক্সাইড (P₂O₅) হিসেবে প্রায় ৪৬% ফসফরাস থাকে। তবে প্রশ্নটিতে মৌল ফসফরাস (P) এর পরিমাণ জানতে চাওয়া হয়েছে।\nহিসাবটি নিম্নরূপ:\nP₂O₅ এর আণবিক ভর = (৩১ × ২) + (১৬ × ৫) = ৬২ + ৮০ = ১৪২\nমৌল ফসফরাস (P) এর পারমাণবিক ভর = ৩১\nP₂O₅ এ মৌল ফসফরাসের পরিমাণ = (২ × ৩১) / ১৪২ × ১০০% ≈ ৪৩.৬%\nসুতরাং, ৪৬% P₂O₅ যুক্ত টিএসপি সারে মৌল ফসফরাসের পরিমাণ = ৪৬ × ৪৩.৬% ≈ ২০.০৫%।\nতাই, টিএসপি সারে প্রায় ২০% মৌল ফসফরাস (P) থাকে।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "What is the name of rice blast fungus pathogen?",
+      "options": [
+        "Cercospora",
+        "Pyricularia oryza",
+        "Elytrodarma",
+        "Gulgnardia bidwellii",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "ধানের ব্লাস্ট (Blast) রোগের জন্য দায়ী ছত্রাকের নাম *Pyricularia oryzae* (পাইরিকুলারিয়া ওরাইজি)। এটি ধানের একটি অন্যতম विनाशकारी রোগ যা পাতা, কাণ্ড এবং শীষে আক্রমণ করে ফলন মারাত্মকভাবে কমিয়ে দেয়। *Cercospora* অন্য উদ্ভিদে পাতার দাগ রোগ সৃষ্টি করে।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "The chemical that attacks opposite sex of species are known as",
+      "options": [
+        "Hormones",
+        "Pheromones",
+        "Allomones",
+        "Kairomones",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "ফেরোমন (Pheromones) হলো এক প্রকার রাসায়নিক পদার্থ যা কোনো প্রাণী তার নিজ প্রজাতির অন্য সদস্যদের আচরণকে প্রভাবিত করার জন্য পরিবেশে নিঃসরণ করে। এর মধ্যে সেক্স ফেরোমন (Sex Pheromone) বিপরীত লিঙ্গের প্রাণীকে আকর্ষণ করার জন্য ব্যবহৃত হয়। পোকামাকড় দমনে ফেরোমন ফাঁদ একটি পরিবেশবান্ধব পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "In order to raise soil Ph, one can use -",
+      "options": [
+        "Limestone",
+        "Alluvium",
+        "Urea",
+        "TSP",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "মাটির pH বাড়ানোর জন্য, অর্থাৎ মাটির অম্লত্ব কমানোর জন্য চুন জাতীয় পদার্থ ব্যবহার করা হয়। চুনাপাথর বা লাইমস্টোন (Limestone) হলো ক্যালসিয়াম কার্বনেট (CaCO₃) যা পানিতে দ্রবীভূত হয়ে ক্ষারীয় পরিবেশ তৈরি করে এবং মাটির অম্লতাকে প্রশমিত করে pH মান বাড়ায়। ইউরিয়া এবং টিএসপি অম্লীয় প্রকৃতির সার, যা মাটির pH কমাতে পারে।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "What is the meaning of Latin word 'Pome'?",
+      "options": [
+        "Flower",
+        "Fruit",
+        "Spice",
+        "Vegetables",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "ল্যাটিন শব্দ 'Pomum' থেকে 'Pome' শব্দটি এসেছে, যার অর্থ ফল (Fruit), বিশেষ করে আপেল। উদ্ভিদবিজ্ঞানে, 'পোম' (Pome) এক বিশেষ ধরনের মাংসল ফলকে বোঝায়, যার উদাহরণ হলো আপেল, नाशपाती ইত্যাদি।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "Which of the following is not a part of photosynthesis?",
+      "options": [
+        "the calvin cycle",
+        "Glycolysis",
+        "The splitting of a water molecule",
+        "Capturing of light energy",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "গ্লাইকোলাইসিস (Glycolysis) সালোকসংশ্লেষণের অংশ নয়, এটি শ্বসন (Respiration) প্রক্রিয়ার প্রথম ধাপ। সালোকসংশ্লেষণের প্রধান অংশগুলো হলো:\n- আলোক শক্তি শোষণ (Capturing of light energy)।\n- পানির অণুর বিভাজন বা ফটোলাইসিস (The splitting of a water molecule)।\n- কেলভিন চক্র (The Calvin cycle), যেখানে কার্বন ডাই অক্সাইড ব্যবহার করে শর্করা তৈরি হয়।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "Salt-loving plants are known as -",
+      "options": [
+        "Xerophytes",
+        "Mesophytes",
+        "Halophytes",
+        "Glycophytes",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "লবণাক্ত পরিবেশে জন্মানো উদ্ভিদকে হ্যালোফাইট (Halophytes) বা লবণাম্বুজ উদ্ভিদ বলা হয়। এই উদ্ভিদগুলো উচ্চ লবণাক্ততা সহনশীল এবং বিশেষ অভিযোজন প্রক্রিয়ার মাধ্যমে লবণাক্ত মাটি বা পানি থেকে পানি শোষণ করতে পারে। বাংলাদেশের সুন্দরবনের উদ্ভিদসমূহ (যেমন- সুন্দরী, গেওয়া) হলো হ্যালোফাইটের চমৎকার উদাহরণ।\n- Xerophytes: মরু উদ্ভিদ।\n- Mesophytes: সাধারণ বা মাঝারি আর্দ্রতার উদ্ভিদ।\n- Glycophytes: লবণাক্ততা অসহনশীল উদ্ভিদ।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "The site of chromosome on which a gene is located is called -",
+      "options": [
+        "Allele",
+        "Locus",
+        "Site",
+        "Trait",
+        "None of these"
+      ],
+      "answer": 1,
+      "explanation": "ক্রোমোজোমের উপর জিনের নির্দিষ্ট অবস্থানকে লোকাস (Locus) বলা হয়। একটি নির্দিষ্ট লোকাসে একটি নির্দিষ্ট জিনের বিভিন্ন রূপ বা অ্যালিল (Allele) থাকতে পারে। সুতরাং, লোকাস হলো জিনের ঠিকানা।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "mcq",
+      "question": "The book 'Origin of Species' was written by -",
+      "options": [
+        "Linnaeus",
+        "Mendel",
+        "Lamarck",
+        "Darwin",
+        "None of these"
+      ],
+      "answer": 3,
+      "explanation": "বিখ্যাত বই 'On the Origin of Species' লিখেছেন চার্লস ডারউইন (Charles Darwin)। বইটি ১৮৫৯ সালে প্রকাশিত হয় এবং এতে তিনি প্রাকৃতিক নির্বাচনের (Natural Selection) মাধ্যমে বিবর্তন তত্ত্বের ধারণা দেন, যা জীববিজ্ঞানের ইতিহাসে একটি যুগান্তকারী ঘটনা।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "mcq",
+      "question": "Which insect has the largest colonies?",
+      "options": [
+        "Termites",
+        "Grasshopper",
+        "Cockroach",
+        "Mole cricket",
+        "None of these"
+      ],
+      "answer": 0,
+      "explanation": "উইপোকা (Termites) সবচেয়ে বড় কলোনি বা উপনিবেশ গঠনকারী পোকামাকড়দের মধ্যে অন্যতম। কিছু প্রজাতির উইপোকার কলোনিতে লক্ষ লক্ষ এমনকি মিলিয়ন মিলিয়ন সদস্য থাকতে পারে। তারা অত্যন্ত সংগঠিত সামাজিক জীব, যেখানে রানী, রাজা, শ্রমিক এবং সৈনিক উইপোকা বিভিন্ন দায়িত্ব পালন করে।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "mcq",
+      "question": "Which is not an inorganic matter in the following?",
+      "options": [
+        "Magnesium",
+        "Iron",
+        "Fat",
+        "lodine",
+        "None of these"
+      ],
+      "answer": 2,
+      "explanation": "চর্বি বা ফ্যাট (Fat) একটি জৈব পদার্থ (organic matter), অজৈব পদার্থ (inorganic matter) নয়। ফ্যাট হলো কার্বন, হাইড্রোজেন এবং অক্সিজেন দ্বারা গঠিত একটি বৃহৎ জৈব অণু। অন্যদিকে, ম্যাগনেসিয়াম (Magnesium), লোহা (Iron) এবং আয়োডিন (Iodine) হলো খনিজ উপাদান বা মৌল, যা অজৈব পদার্থের অন্তর্ভুক্ত।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "mcq",
+      "question": "All the TSP & MP fertilizers are to be applied.....",
+      "options": [
+        "before final ploughing",
+        "during final ploughing",
+        "after first ploughing",
+        "during first irrigation",
+        "none of these"
+      ],
+      "answer": 1,
+      "explanation": "টিএসপি (ফসফরাস) এবং এমপি (পটাশ) সার সাধারণত শেষ চাষের সময় (during final ploughing) প্রয়োগ করা হয়। কারণ এই সারগুলো মাটিতে তুলনামূলকভাবে কম চলাচল করে (less mobile)। তাই শেষ চাষের সময় প্রয়োগ করলে সারগুলো ভালোভাবে মাটির সাথে মিশে যায় এবং ফসলের মূলের কাছাকাছি থাকে, যা উদ্ভিদকে সহজে পুষ্টি উপাদান গ্রহণ করতে সাহায্য করে।",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "Which one of the following is most fertile soil texture?",
+      "options": [
+        "Loam",
+        "clay",
+        "alluvium",
+        "silt",
+        "none of these"
+      ],
+      "answer": 0,
+      "explanation": "দোআঁশ মাটি (Loam) সবচেয়ে উর্বর মাটি হিসেবে বিবেচিত হয়। কারণ দোআঁশ মাটিতে বালি, পলি এবং কাদা কণার পরিমাণ প্রায় সমান অনুপাতে থাকে। এই ভারসাম্যপূর্ণ গঠনের জন্য দোআঁশ মাটিতে পানি নিষ্কাশন, বায়ু চলাচল এবং পুষ্টি উপাদান ধারণ ক্ষমতা আদর্শ পর্যায়ে থাকে, যা ফসল উৎপাদনের জন্য অত্যন্ত উপযোগী।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "'তার বৃদ্ধি হয়েছে কিন্তু বুদ্ধি পাকেনি' এটি কোন ধরনের বাক্য?",
+      "options": [
+        "জটিল বাক্য",
+        "যৌগিক বাক্য",
+        "সরল বাক্য",
+        "ক ও খ",
+        "কোনটিই নয়"
+      ],
+      "answer": 1,
+      "explanation": "এটি একটি যৌগিক বাক্য। যে বাক্যে দুই বা ততোধিক স্বাধীন বা নিরপেক্ষ বাক্য 'এবং', 'ও', 'কিন্তু', 'অথবা', 'তথাপি' ইত্যাদি অব্যয় দ্বারা যুক্ত থাকে, তাকে যৌগিক বাক্য বলে। এখানে 'তার বৃদ্ধি হয়েছে' এবং 'বুদ্ধি পাকেনি' দুটি স্বাধীন বাক্য 'কিন্তু' অব্যয় দ্বারা যুক্ত হয়েছে।",
+      "image": null
+    },
+    {
+      "id": 47,
+      "type": "mcq",
+      "question": "'জমিদার দর্পণ' উপন্যাসের লেখক কে?",
+      "options": [
+        "আব্দুল হাই",
+        "মুনীর চৌধুরী",
+        "এস, ওয়াজেদ আলী",
+        "মীর মোশারফ হোসেন",
+        "কোনটিই নয়"
+      ],
+      "answer": 3,
+      "explanation": "'জমিদার দর্পণ' এর লেখক মীর মোশাররফ হোসেন। এটি ১৮৭৩ সালে প্রকাশিত একটি বিখ্যাত নাটক। প্রশ্নটিতে এটিকে উপন্যাস বলা হলেও এটি মূলত একটি নাটক। এই নাটকে তৎকালীন জমিদারদের অত্যাচার ও প্রজাদের দুর্দশার চিত্র তুলে ধরা হয়েছে।",
+      "image": null
+    },
+    {
+      "id": 48,
+      "type": "mcq",
+      "question": "কোনটি দ্বন্দ্ব সমাস?",
+      "options": [
+        "হাট-বাজার",
+        "মধুকণ্ঠি",
+        "গোমড়া মুখো",
+        "রাতাকানা",
+        "কোনটিই নয়"
+      ],
+      "answer": 0,
+      "explanation": "‘হাট-বাজার’ দ্বন্দ্ব সমাসের উদাহরণ। যে সমাসে প্রতিটি পদের অর্থ প্রধান থাকে এবং ব্যাসবাক্যে 'ও', 'এবং', 'আর' ইত্যাদি সংযোজক অব্যয় ব্যবহৃত হয়, তাকে দ্বন্দ্ব সমাস বলে। এখানে, হাট-বাজার এর ব্যাসবাক্য হলো 'হাট ও বাজার'। উভয় পদের অর্থই প্রধান।",
+      "image": null
+    },
+    {
+      "id": 49,
+      "type": "mcq",
+      "question": "মীর মোশারফ হোসেনের আত্মজীবনীমূলক রচনা কোনটি?",
+      "options": [
+        "বিষাদ সিন্ধু",
+        "গাজী মিয়ার বস্তানী",
+        "জমিদার দর্পণ",
+        "একটিও না",
+        "কোনটিই নয়"
+      ],
+      "answer": 1,
+      "explanation": "'গাজী মিয়ার বস্তানী' মীর মোশাররফ হোসেনের একটি আত্মজীবনীমূলক ব্যঙ্গরসাত্মক রচনা। এটি ১৮৯৯ সালে প্রকাশিত হয়। এতে তিনি সমকালীন সমাজ, তৎকালীন বিচার ব্যবস্থা এবং ব্যক্তিগত অভিজ্ঞতাকে বিদ্রূপের ছলে তুলে ধরেছেন। 'বিষাদ সিন্ধু' একটি উপন্যাস এবং 'জমিদার দর্পণ' একটি নাটক।",
+      "image": null
+    },
+    {
+      "id": 50,
+      "type": "mcq",
+      "question": "সন্ধির নিয়মে কোনটি সঠিক?",
+      "options": [
+        "শির + ছেদ = শিরচ্ছেদ",
+        "শিরঃ + ছেদ = শিরশ্ছেদ",
+        "শিরো + ছেদ = শিরোচ্ছেদ",
+        "ক ও খ",
+        "কোনটিই নয়"
+      ],
+      "answer": 1,
+      "explanation": "সঠিক সন্ধিটি হলো 'শিরঃ + ছেদ = শিরশ্ছেদ'। এটি বিসর্গ সন্ধির একটি নিয়ম। নিয়মটি হলো: বিসর্গের পর 'চ' বা 'ছ' থাকলে বিসর্গের স্থলে 'শ' হয়। যেমন: निः + চয় = নিশ্চয়, শিরঃ + ছেদ = শিরশ্ছেদ।",
+      "image": null
+    },
+    {
+      "id": 51,
+      "type": "mcq",
+      "question": "Fill in the blank with the right option: I am looking forward - you.",
+      "options": [
+        "to seeing",
+        "to see",
+        "seeing",
+        "to have seen",
+        "none of these"
+      ],
+      "answer": 0,
+      "explanation": "The phrase 'look forward to' is a phrasal verb that is followed by a noun or a gerund (-ing form of a verb). Therefore, the correct option is 'to seeing'. The complete sentence is: 'I am looking forward to seeing you.'",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "mcq",
+      "question": "Sky is to 'bird' as water is to-",
+      "options": [
+        "fish",
+        "ship",
+        "boat",
+        "lotus",
+        "none of these"
+      ],
+      "answer": 0,
+      "explanation": "This is an analogy question. The relationship is 'habitat'. A bird's primary medium or habitat is the sky. Similarly, a fish's primary medium or habitat is water. Therefore, 'water is to fish'.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "mcq",
+      "question": "Which is the correct spelling?",
+      "options": [
+        "Obnoksous",
+        "Obnoxious",
+        "Obnoxous",
+        "Obnecious",
+        "none of these"
+      ],
+      "answer": 1,
+      "explanation": "The correct spelling is 'Obnoxious'. It means extremely unpleasant, offensive, or disagreeable.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "mcq",
+      "question": "Which one is the imperative sentence",
+      "options": [
+        "I shall go",
+        "You willsit here",
+        "She is dancing",
+        "Sit down",
+        "none of these"
+      ],
+      "answer": 3,
+      "explanation": "An imperative sentence gives a command, makes a request, or expresses a wish. 'Sit down' is a direct command. The other options are declarative ('I shall go', 'She is dancing') or predictive ('You will sit here') sentences.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "mcq",
+      "question": "'Maiden speech' means-",
+      "options": [
+        "Spech made",
+        "Final Speech",
+        "First speech",
+        "Early Speech",
+        "none of these"
+      ],
+      "answer": 2,
+      "explanation": "The idiom 'maiden speech' refers to the very first speech given by a person, especially a new member in a legislature or parliament. So, it means 'First speech'.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "type": "mcq",
+      "question": "'White elephant' means-",
+      "options": [
+        "An elephant which is white",
+        "An elephant which is expensive",
+        "A very Expensive possession",
+        "A very rich person",
+        "none of these"
+      ],
+      "answer": 2,
+      "explanation": "The idiom 'white elephant' refers to a possession that is useless or troublesome, especially one that is expensive to maintain or difficult to dispose of. Thus, it means 'a very expensive possession' that is more of a burden than a benefit.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "type": "mcq",
+      "question": "Which of the following crosses Bangladesh?",
+      "options": [
+        "The equator",
+        "The tropic of Cancer",
+        "The tropic of Capricorn",
+        "The 38th parallel",
+        "none of these"
+      ],
+      "answer": 1,
+      "explanation": "The Tropic of Cancer (কর্কটক্রান্তি রেখা) crosses through the middle of Bangladesh. This imaginary line, located at approximately 23.5° N latitude, passes over several districts including Chuadanga, Jhenaidah, Magura, and Dhaka.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "type": "mcq",
+      "question": "When was the water treaty signed between Bangladesh and India?",
+      "options": [
+        "26 March 1944",
+        "12 December 1996",
+        "17 March 1995",
+        "16 December 1997",
+        "none of these"
+      ],
+      "answer": 1,
+      "explanation": "The Ganges Water Sharing Treaty between Bangladesh and India was signed on 12 December 1996. This 30-year treaty was signed in New Delhi by the then Prime Minister of Bangladesh, Sheikh Hasina, and the then Prime Minister of India, H. D. Deve Gowda.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "type": "mcq",
+      "question": "In which district is the Dohagram enclave located?",
+      "options": [
+        "Kustia",
+        "Lalmonirhat",
+        "Rangpur",
+        "Kurigram",
+        "none of these"
+      ],
+      "answer": 1,
+      "explanation": "The Dohagram-Angarpota enclave is located in the Lalmonirhat district of Bangladesh. It was one of the largest Bangladeshi enclaves inside India, connected to the mainland by the Tin Bigha Corridor.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "type": "mcq",
+      "question": "In which year did the French Revolution begin?",
+      "options": [
+        "1799",
+        "1789",
+        "1773",
+        "1797",
+        "none of these"
+      ],
+      "answer": 1,
+      "explanation": "The French Revolution began in 1789 with the storming of the Bastille on July 14th. This pivotal event in European history led to the end of the monarchy in France and had a lasting impact on the world, promoting ideas of liberty, equality, and fraternity.",
+      "image": null
+    }
   ]
 }
