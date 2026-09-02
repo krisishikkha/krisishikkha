@@ -196,7 +196,7 @@ const EXAM_STATUS = {
 
   "exam-26": {
     title: "HSC 2nd Paper 1st Chapter🔴",
-    category: "live",
+    category: "draft",
     startDate: "2026-08-29T06:00:00+06:00",
     endDate: "2026-08-31T11:00:00+06:00",
     codes: ["exam2233"]
@@ -204,9 +204,9 @@ const EXAM_STATUS = {
 
   "exam-27": {
     title: "HSC 2nd Paper 2nd Chapter",
-    category: "draft",
-    startDate: "2026-07-22T06:00:00+06:00",
-    endDate: "2026-09-25T11:00:00+06:00",
+    category: "live",
+    startDate: "2026-09-03T06:00:00+06:00",
+    endDate: "2026-09-04T11:00:00+06:00",
     codes: ["exam2222"]
   },
 
