@@ -1,4 +1,4 @@
-var EXAM_BINA_SO_1 = {
+var EXAM_BINA_SO_2 = {
     id: "bina-so-exam-1",
     title: "BINA SO Exam – 01",
     institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
