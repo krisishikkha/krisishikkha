@@ -1,9 +1,10 @@
 var EXAM_BINA_SO_2 = {
-    id: "bina-so-exam-1",
-    title: "BINA SO Exam – 01",
+    id: "bina-so-exam-2",
+    title: "BINA SO Exam – 02",
+    status: "live",   // এখানে: "draft" | "live" | "locked" | "archive"
     institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
-    setName: "Model Test – 01",
-    accessCode: "BINA2026",
+    setName: "Model Test – 02",
+    accessCode: "B2026",
     durationMinutes: 60,
     totalMarks: 60,
     negativeMark: 0,
