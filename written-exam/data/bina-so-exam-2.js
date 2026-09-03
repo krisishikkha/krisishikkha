@@ -1,7 +1,7 @@
 var EXAM_BINA_SO_2 = {
     id: "bina-so-exam-2",
     title: "BINA SO Exam – 02",
-    status: "live",   // এখানে: "draft" | "live" | "locked" | "archive"
+    status: "live",
     institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
     setName: "Model Test – 02",
     accessCode: "B2026",
@@ -12,423 +12,423 @@ var EXAM_BINA_SO_2 = {
     questions: [
         {
             id: 1,
-            question: "বাংলাদেশে মোট কতটি কৃষি পরিবেশ অঞ্চল (AEZ) রয়েছে?",
-            acceptedAnswers: ["30", "৩০", "thirty", "ত্রিশ", "ত্রিশটি", "30টি", "30 টি"],
+            question: "What is the study of crop production and field management called?",
+            acceptedAnswers: ["Agronomy", "agronomy", "AGRONOMY", "কৃষিতত্ত্ব", "এগ্রোনমি"],
             marks: 1,
-            explanation: "বাংলাদেশকে ভূমি ও জলবায়ুগত বৈশিষ্ট্যের ভিত্তিতে ৩০টি Agro-Ecological Zone (AEZ) এ ভাগ করা হয়েছে, যা ফসল উৎপাদন পরিকল্পনায় গুরুত্বপূর্ণ ভূমিকা পালন করে।"
+            explanation: "Agronomy হলো ফসল উৎপাদন ও ক্ষেত্র ব্যবস্থাপনার বিজ্ঞান। এটি মাটি, জলবায়ু, বীজ, সার এবং ফসল উৎপাদনের সামগ্রিক দিক নিয়ে আলোচনা করে।"
         },
         {
             id: 2,
-            question: "চর্যাপদ কোন সাল আবিষ্কৃত হয়?",
-            acceptedAnswers: ["1907", "১৯০৭", "1907 সালে", "১৯০৭ সালে"],
+            question: "চর্যাপদের আবিষ্কারক কে?",
+            acceptedAnswers: ["হরপ্রসাদ শাস্ত্রী", "Haraprasad Shastri", "হরপ্রসাদ", "Haraprasad", "হরপ্রসাদ শাস্ত্রি"],
             marks: 1,
-            explanation: "মহামহোপাধ্যায় হরপ্রসাদ শাস্ত্রী ১৯০৭ সালে নেপালের রাজদরবারের গ্রন্থাগার থেকে চর্যাপদ আবিষ্কার করেন। এটি বাংলা সাহিত্যের প্রাচীনতম নিদর্শন।"
+            explanation: "১৯০৭ সালে হরপ্রসাদ শাস্ত্রী নেপালের রাজদরবারের গ্রন্থাগার থেকে চর্যাপদ আবিষ্কার করেন। এটি বাংলা সাহিত্যের প্রাচীনতম নিদর্শন।"
         },
         {
             id: 3,
-            question: "AEZ এর পূর্ণরূপ কী?",
-            acceptedAnswers: ["Agro-Ecological Zone", "Agro Ecological Zone", "agro-ecological zone", "agro ecological zone", "এগ্রো-ইকোলজিক্যাল জোন", "কৃষি পরিবেশ অঞ্চল"],
+            question: "How many Agro-Ecological Zones (AEZ) are there in Bangladesh?",
+            acceptedAnswers: ["30", "Thirty", "thirty", "৩০", "ত্রিশ", "ত্রিশটি"],
             marks: 1,
-            explanation: "AEZ অর্থ Agro-Ecological Zone, যা মাটি, জলবায়ু, ভূমিরূপ এবং পানি সম্পদের ভিত্তিতে নির্ধারিত একটি নির্দিষ্ট ভৌগোলিক এলাকা।"
+            explanation: "বাংলাদেশকে মোট ৩০টি কৃষি পরিবেশগত অঞ্চলে (AEZ) ভাগ করা হয়েছে। এই বিভাজন মাটির ধরন, জলবায়ু, ভূমির উচ্চতা এবং কৃষি উৎপাদনের বৈশিষ্ট্যের ভিত্তিতে করা হয়েছে।"
         },
         {
             id: 4,
-            question: "First conditional sentence এর main clause-এ কোন tense ব্যবহৃত হয়?",
-            acceptedAnswers: ["Future simple", "future simple", "Simple future", "simple future", "Will", "will", "ভবিষ্যৎ কাল"],
+            question: "Fill in the blank: If I _____ rich, I would buy a house. (first conditional)",
+            acceptedAnswers: ["were", "was", "Were", "Was"],
             marks: 1,
-            explanation: "First conditional এর structure: If + present simple, will + base verb। Main clause এ future simple tense (will + verb) ব্যবহার করা হয়।"
+            explanation: "এটি Second Conditional এর উদাহরণ, First Conditional নয়। Second Conditional-এ 'If + past tense' ব্যবহার হয়, তাই 'were' সঠিক উত্তর।"
         },
         {
             id: 5,
-            question: "বাংলাদেশে রবি মৌসুম কোন মাসে শুরু হয়?",
-            acceptedAnswers: ["November", "november", "নভেম্বর", "নভেম্বরে"],
+            question: "What is the local name for summer season crops in Bangladesh?",
+            acceptedAnswers: ["Boro", "boro", "BORO", "বোরো"],
             marks: 1,
-            explanation: "রবি মৌসুম নভেম্বর মাসে শুরু হয়ে এপ্রিল পর্যন্ত স্থায়ী থাকে। এ মৌসুমে গম, সরিষা, ডাল, আলু ইত্যাদি ফসল চাষ করা হয়।"
+            explanation: "বাংলাদেশে গ্রীষ্মকালীন ফসলকে বোরো বলা হয়। বোরো মৌসুম ডিসেম্বর-জানুয়ারিতে শুরু হয়ে এপ্রিল-মে মাসে শেষ হয়।"
         },
         {
             id: 6,
-            question: "জমি কর্ষণকে ইংরেজিতে কী বলা হয়?",
-            acceptedAnswers: ["Tillage", "tillage", "Land tillage", "land tillage"],
+            question: "বাংলা সাহিত্যের আদি কবি কাকে বলা হয়?",
+            acceptedAnswers: ["লুইপা", "Luipa", "লুইপাদ", "Luipad", "লুই", "Lui"],
             marks: 1,
-            explanation: "জমি কর্ষণ বা Tillage হলো মাটি প্রস্তুতির জন্য যান্ত্রিক বা হস্তচালিত পদ্ধতিতে মাটি আলগা ও ঝুরঝুরে করার প্রক্রিয়া, যা ফসল উৎপাদনের জন্য অপরিহার্য।"
+            explanation: "চর্যাপদের রচয়িতাদের মধ্যে লুইপাকে বাংলা সাহিত্যের আদি কবি বলা হয়। তিনি চর্যাপদের প্রথম পদটি রচনা করেছেন।"
         },
         {
             id: 7,
-            question: "মুক্তিযুদ্ধে মোট কতটি সেক্টর ছিল?",
-            acceptedAnswers: ["11", "১১", "eleven", "Eleven", "এগারো", "এগারোটি", "11টি"],
+            question: "What is the practice of growing two or more crops simultaneously on the same land called?",
+            acceptedAnswers: ["Intercropping", "intercropping", "INTERCROPPING", "সাথী ফসল", "মিশ্র চাষ"],
             marks: 1,
-            explanation: "১৯৭১ সালের মহান মুক্তিযুদ্ধে সমগ্র বাংলাদেশকে ১১টি সেক্টরে বিভক্ত করে মুক্তিবাহিনী সুসংগঠিতভাবে যুদ্ধ পরিচালনা করে।"
+            explanation: "Intercropping হলো একই জমিতে একসাথে দুই বা ততোধিক ফসল চাষ করার পদ্ধতি। এতে জমির সর্বোচ্চ ব্যবহার এবং ঝুঁকি কমানো যায়।"
         },
         {
             id: 8,
-            question: "Drip irrigation এর অপর নাম কী?",
-            acceptedAnswers: ["Trickle irrigation", "trickle irrigation", "Trickle", "trickle", "ট্রিকল ইরিগেশন"],
+            question: "Change the voice: 'He writes a letter.'",
+            acceptedAnswers: ["A letter is written by him", "A letter is written by him.", "Letter is written by him"],
             marks: 1,
-            explanation: "Drip বা Trickle irrigation হলো পানি সাশ্রয়ী সেচ পদ্ধতি যেখানে ফোঁটা ফোঁটা করে সরাসরি উদ্ভিদের মূলে পানি সরবরাহ করা হয়।"
+            explanation: "Active voice থেকে Passive voice-এ রূপান্তরের নিয়ম: Object + is/am/are + Past Participle + by + Subject."
         },
         {
             id: 9,
-            question: "বাংলাদেশে কয়টি প্রধান ফসলি মৌসুম রয়েছে?",
-            acceptedAnswers: ["3", "৩", "three", "Three", "তিন", "তিনটি", "3টি"],
+            question: "What is the main monsoon season called in Bangladesh agriculture?",
+            acceptedAnswers: ["Aman", "aman", "AMAN", "আমন"],
             marks: 1,
-            explanation: "বাংলাদেশে তিনটি প্রধান ফসলি মৌসুম রয়েছে: খরিফ-১ (মার্চ-জুন), খরিফ-২ (জুলাই-অক্টোবর) এবং রবি (নভেম্বর-ফেব্রুয়ারি)।"
+            explanation: "আমন বাংলাদেশের প্রধান বর্ষাকালীন ধান চাষের মৌসুম। এটি জুন-জুলাই মাসে রোপণ করে নভেম্বর-ডিসেম্বরে কাটা হয়।"
         },
         {
             id: 10,
-            question: "চর্যাপদের আবিষ্কারক কে?",
-            acceptedAnswers: ["হরপ্রসাদ শাস্ত্রী", "হরপ্রসাদ শাস্ত্রি", "Haraprasad Shastri", "haraprasad shastri", "মহামহোপাধ্যায় হরপ্রসাদ শাস্ত্রী"],
+            question: "চর্যাপদে কোন ধর্মের প্রভাব দেখা যায়?",
+            acceptedAnswers: ["বৌদ্ধ", "বৌদ্ধ ধর্ম", "Buddhist", "Buddhism", "বুদ্ধ"],
             marks: 1,
-            explanation: "মহামহোপাধ্যায় হরপ্রসাদ শাস্ত্রী ১৯০৭ সালে নেপালের রাজদরবার থেকে চর্যাপদ আবিষ্কার করেন এবং ১৯১৬ সালে এটি প্রকাশ করেন।"
+            explanation: "চর্যাপদে প্রধানত বৌদ্ধ ধর্মের প্রভাব দেখা যায়। এর রচয়িতারা ছিলেন বৌদ্ধ সহজিয়া সাধক এবং এতে বৌদ্ধ তন্ত্রের গূঢ় তত্ত্ব প্রকাশিত হয়েছে।"
         },
         {
             id: 11,
-            question: "Cropping intensity কোন একক দ্বারা প্রকাশ করা হয়?",
-            acceptedAnswers: ["Percentage", "percentage", "Percent", "percent", "%", "শতাংশ"],
+            question: "What is the artificial application of water to soil called?",
+            acceptedAnswers: ["Irrigation", "irrigation", "IRRIGATION", "সেচ", "সিঞ্চন"],
             marks: 1,
-            explanation: "Cropping intensity = (Total cropped area / Net cultivated area) × 100। এটি শতাংশ (%) হিসেবে প্রকাশ করা হয় এবং জমির ব্যবহার নিবিড়তা নির্দেশ করে।"
+            explanation: "সেচ বা Irrigation হলো কৃত্রিমভাবে ফসলের প্রয়োজন অনুযায়ী পানি প্রয়োগের পদ্ধতি। এটি ফসল উৎপাদন বৃদ্ধির জন্য অত্যন্ত গুরুত্বপূর্ণ।"
         },
         {
             id: 12,
-            question: "Passive voice-এ verb এর কোন form ব্যবহৃত হয়?",
-            acceptedAnswers: ["Past participle", "past participle", "V3", "3rd form", "তৃতীয় রূপ"],
+            question: "What type of conditional is: 'If you heat ice, it melts'?",
+            acceptedAnswers: ["Zero conditional", "zero conditional", "Zero", "zero", "Zero Conditional"],
             marks: 1,
-            explanation: "Passive voice এর গঠন: Object + be verb + past participle (V3) + by + subject। মূল verb এর past participle form ব্যবহার করা হয়।"
+            explanation: "এটি Zero Conditional এর উদাহরণ। Zero Conditional সাধারণ সত্য বা বৈজ্ঞানিক সত্য প্রকাশ করে যেখানে if-clause ও main clause উভয়েই present tense-এ থাকে।"
         },
         {
             id: 13,
-            question: "খরিফ-১ মৌসুম কোন মাসে শুরু হয়?",
-            acceptedAnswers: ["March", "march", "মার্চ", "মার্চে"],
+            question: "Which irrigation method applies water directly to plant roots through a network of tubes?",
+            acceptedAnswers: ["Drip irrigation", "drip irrigation", "DRIP IRRIGATION", "ড্রিপ সেচ", "ফোঁটা সেচ"],
             marks: 1,
-            explanation: "খরিফ-১ মৌসুম মার্চ থেকে জুন পর্যন্ত। এ মৌসুমে আউশ ধান, পাট, শাকসবজি ইত্যাদি চাষ হয়।"
+            explanation: "ড্রিপ সেচ পদ্ধতিতে নল বা টিউবের মাধ্যমে সরাসরি গাছের শিকড়ে পানি প্রয়োগ করা হয়। এটি পানি সাশ্রয়ী ও দক্ষ সেচ পদ্ধতি।"
         },
         {
             id: 14,
-            question: "একই সাথে দুই বা ততোধিক ফসল চাষকে কী বলা হয়?",
-            acceptedAnswers: ["Intercropping", "intercropping", "Inter-cropping", "inter-cropping", "ইন্টারক্রপিং", "সাথী ফসল"],
+            question: "প্রাচীন যুগের কাব্যে কোন ছন্দের ব্যবহার বেশি দেখা যায়?",
+            acceptedAnswers: ["মাত্রাবৃত্ত", "মাত্রাবৃত্ত ছন্দ", "Matravritta", "payar", "পয়ার"],
             marks: 1,
-            explanation: "Intercropping হলো একই জমিতে একই সময়ে দুই বা ততোধিক ফসল চাষ করার পদ্ধতি, যা জমির সর্বোচ্চ ব্যবহার নিশ্চিত করে।"
+            explanation: "প্রাচীন যুগের কাব্যে প্রধানত মাত্রাবৃত্ত ছন্দের ব্যবহার দেখা যায়। চর্যাপদেও এই ছন্দের প্রয়োগ রয়েছে।"
         },
         {
             id: 15,
-            question: "বাংলাদেশের সংবিধান কত সালে প্রণীত হয়?",
-            acceptedAnswers: ["1972", "১৯৭২", "1972 সালে", "১৯৭২ সালে"],
+            question: "What is the percentage of cultivated area to total area called?",
+            acceptedAnswers: ["Cropping intensity", "cropping intensity", "CROPPING INTENSITY", "ফসল নিবিড়তা", "চাষ নিবিড়তা"],
             marks: 1,
-            explanation: "গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান ১৯৭২ সালের ৪ নভেম্বর গণপরিষদে গৃহীত এবং ১৬ ডিসেম্বর থেকে কার্যকর হয়।"
+            explanation: "Cropping Intensity হলো মোট আবাদি জমির তুলনায় কৃষিকাজে ব্যবহৃত জমির শতকরা হার। এটি কৃষি উৎপাদনশীলতার একটি গুরুত্বপূর্ণ সূচক।"
         },
         {
             id: 16,
-            question: "Surface irrigation এর একটি পদ্ধতির নাম কী?",
-            acceptedAnswers: ["Flood irrigation", "flood irrigation", "Basin", "basin", "Furrow", "furrow", "বেসিন", "ফারো"],
+            question: "Complete the passive voice: 'The book _____ by students.'",
+            acceptedAnswers: ["is read", "was read", "is being read", "has been read"],
             marks: 1,
-            explanation: "Surface irrigation এর প্রধান পদ্ধতিগুলো হলো: Flood irrigation, Basin irrigation, Furrow irrigation এবং Border irrigation।"
+            explanation: "Passive voice গঠনে Object + auxiliary verb (is/am/are/was/were) + Past Participle + by + Subject ব্যবহৃত হয়।"
         },
         {
             id: 17,
-            question: "Zero conditional-এ উভয় clause-এ কোন tense ব্যবহৃত হয়?",
-            acceptedAnswers: ["Present simple", "present simple", "Simple present", "simple present", "বর্তমান কাল"],
+            question: "What is the practice of cultivating the same crop repeatedly in the same field called?",
+            acceptedAnswers: ["Monoculture", "monoculture", "MONOCULTURE", "এক ফসল চাষ", "মনো কালচার"],
             marks: 1,
-            explanation: "Zero conditional এর structure: If + present simple, present simple। এটি সার্বজনীন সত্য বা বৈজ্ঞানিক তথ্য প্রকাশে ব্যবহৃত হয়।"
+            explanation: "Monoculture হলো একই জমিতে বার বার একই ফসল চাষ করার পদ্ধতি। এতে মাটির উর্বরতা কমে এবং কীটপতঙ্গের আক্রমণ বেড়ে যায়।"
         },
         {
             id: 18,
-            question: "বাংলা সাহিত্যের প্রাচীন যুগের সময়কাল কত খ্রিস্টাব্দ পর্যন্ত?",
-            acceptedAnswers: ["650-1200", "৬৫০-১২০০", "650 to 1200", "৬৫০ থেকে ১২০০"],
+            question: "চর্যাপদের ভাষাকে কী নামে অভিহিত করা হয়?",
+            acceptedAnswers: ["সন্ধ্যাভাষা", "Sandhyabhasha", "সান্ধ্যভাষা", "আলো-আঁধারি ভাষা", "গোপন ভাষা"],
             marks: 1,
-            explanation: "বাংলা সাহিত্যের প্রাচীন যুগ ৬৫০ খ্রিস্টাব্দ থেকে ১২০০ খ্রিস্টাব্দ পর্যন্ত বিস্তৃত। এ যুগের প্রধান নিদর্শন চর্যাপদ।"
+            explanation: "চর্যাপদের ভাষাকে সন্ধ্যাভাষা বলা হয়। এটি এক ধরনের সাংকেতিক বা গূঢ় ভাষা যা বৌদ্ধ সহজিয়া সাধকরা ব্যবহার করতেন।"
         },
         {
             id: 19,
-            question: "মাটিতে আর্দ্রতা সংরক্ষণের প্রধান পদ্ধতি কী?",
-            acceptedAnswers: ["Mulching", "mulching", "মালচিং", "মাল্চিং"],
+            question: "Which type of intercropping involves growing crops in alternating rows?",
+            acceptedAnswers: ["Row intercropping", "row intercropping", "ROW INTERCROPPING", "সারি সাথী ফসল"],
             marks: 1,
-            explanation: "Mulching হলো মাটির উপরিভাগ খড়, পলিথিন বা জৈব পদার্থ দিয়ে ঢেকে রাখা, যা মাটির আর্দ্রতা সংরক্ষণ এবং আগাছা দমনে সহায়ক।"
+            explanation: "Row Intercropping পদ্ধতিতে বিভিন্ন ফসল পর্যায়ক্রমে সারিতে সারিতে চাষ করা হয়। এতে ফসল ব্যবস্থাপনা সহজ হয় এবং যন্ত্রের ব্যবহার সম্ভব হয়।"
         },
         {
             id: 20,
-            question: "খরিফ-২ মৌসুম কোন মাসে শুরু হয়?",
-            acceptedAnswers: ["July", "july", "জুলাই", "জুলাইয়ে"],
+            question: "What is the first conditional structure?",
+            acceptedAnswers: ["If + present simple, will + base verb", "If + present, will + verb", "Present + will"],
             marks: 1,
-            explanation: "খরিফ-২ মৌসুম জুলাই থেকে অক্টোবর পর্যন্ত। এটি বাংলাদেশের প্রধান ধান উৎপাদন মৌসুম (আমন ধান)।"
+            explanation: "First Conditional এর গঠন: If + Present Simple, will + base form of verb. এটি ভবিষ্যতে ঘটার সম্ভাব্য ঘটনা প্রকাশ করে।"
         },
         {
             id: 21,
-            question: "একই জমিতে ফসলের ধারাবাহিক ক্রমকে কী বলা হয়?",
-            acceptedAnswers: ["Cropping pattern", "cropping pattern", "Crop pattern", "crop pattern", "ফসল বিন্যাস"],
+            question: "What is the main dry season crop called in Bangladesh?",
+            acceptedAnswers: ["Aus", "aus", "AUS", "আউশ"],
             marks: 1,
-            explanation: "Cropping pattern হলো একটি নির্দিষ্ট জমিতে নির্দিষ্ট সময়ে বছরব্যাপী ফসলের ক্রম ও বিন্যাস।"
+            explanation: "আউশ বাংলাদেশের প্রধান শুষ্ক মৌসুমের ধান। এটি এপ্রিল-মে মাসে রোপণ করে জুলাই-আগস্টে কাটা হয়।"
         },
         {
             id: 22,
-            question: "Second conditional-এ if clause-এ কোন tense ব্যবহৃত হয়?",
-            acceptedAnswers: ["Past simple", "past simple", "Simple past", "simple past", "অতীত কাল"],
+            question: "ডাক ও খনার বচনের রচয়িতা কে?",
+            acceptedAnswers: ["অজ্ঞাত", "অজানা", "Unknown", "জানা নেই", "অনির্দিষ্ট"],
             marks: 1,
-            explanation: "Second conditional এর structure: If + past simple, would + base verb। এটি বর্তমান বা ভবিষ্যতের অবাস্তব বা কাল্পনিক পরিস্থিতি বোঝাতে ব্যবহৃত হয়।"
+            explanation: "ডাক ও খনার বচনের প্রকৃত রচয়িতা অজ্ঞাত। এগুলো লোকমুখে প্রচলিত প্রাচীন কৃষি ও জ্যোতিষ সংক্রান্ত বচন।"
         },
         {
             id: 23,
-            question: "চর্যাপদ কোথা থেকে আবিষ্কৃত হয়?",
-            acceptedAnswers: ["Nepal", "nepal", "নেপাল", "নেপাল থেকে", "নেপালের রাজদরবার"],
+            question: "What does AEZ stand for in agriculture?",
+            acceptedAnswers: ["Agro-Ecological Zone", "Agro-ecological zone", "AGRO-ECOLOGICAL ZONE", "কৃষি পরিবেশগত অঞ্চল"],
             marks: 1,
-            explanation: "চর্যাপদ নেপালের রাজদরবারের গ্রন্থাগার থেকে আবিষ্কৃত হয়। এটি তালপাতায় লেখা ছিল।"
+            explanation: "AEZ এর পূর্ণরূপ হলো Agro-Ecological Zone বা কৃষি পরিবেশগত অঞ্চল। এটি একই ধরনের কৃষি পরিবেশ ও উৎপাদন ক্ষমতা সম্পন্ন এলাকার ভৌগোলিক এককে বোঝায়।"
         },
         {
             id: 24,
-            question: "Strip cropping-এ ফসল কীভাবে রোপণ করা হয়?",
-            acceptedAnswers: ["In strips", "in strips", "Strips", "strips", "সারিতে", "ফিতায়"],
+            question: "Change to passive: 'They are building a house.'",
+            acceptedAnswers: ["A house is being built by them", "House is being built by them", "A house is being built"],
             marks: 1,
-            explanation: "Strip cropping হলো মাটি ক্ষয় রোধের জন্য ভূমির ঢাল বরাবর বিকল্প সারিতে (strips) বিভিন্ন ফসল চাষ করার পদ্ধতি।"
+            explanation: "Present Continuous থেকে Passive এ রূপান্তর: Object + is/am/are + being + Past Participle + by + Subject."
         },
         {
             id: 25,
-            question: "বাংলাদেশের জাতীয় ফুল কোনটি?",
-            acceptedAnswers: ["Shapla", "shapla", "শাপলা", "Water lily", "water lily"],
+            question: "Which irrigation method involves flooding the entire field?",
+            acceptedAnswers: ["Flood irrigation", "flood irrigation", "Basin irrigation", "basin irrigation", "বন্যা সেচ"],
             marks: 1,
-            explanation: "বাংলাদেশের জাতীয় ফুল শাপলা (Nymphaea nouchali)। এটি দেশের জলাভূমিতে প্রচুর পরিমাণে জন্মে।"
+            explanation: "Flood Irrigation বা Basin Irrigation পদ্ধতিতে সম্পূর্ণ জমি পানিতে প্লাবিত করা হয়। এটি ধান চাষে ব্যাপকভাবে ব্যবহৃত হয়।"
         },
         {
             id: 26,
-            question: "Primary tillage-এর একটি প্রধান যন্ত্রের নাম কী?",
-            acceptedAnswers: ["Plough", "plough", "Plow", "plow", "লাঙল", "Mould board plough"],
+            question: "বাংলা সাহিত্যের প্রাচীনতম নিদর্শন কী?",
+            acceptedAnswers: ["চর্যাপদ", "Charyapada", "চর্যাগীতি", "Charyageeti", "চর্যা"],
             marks: 1,
-            explanation: "Primary tillage এর প্রধান যন্ত্র হলো লাঙল (Plough)। এছাড়া Disc plough, Mould board plough ব্যবহৃত হয়।"
+            explanation: "চর্যাপদ বাংলা সাহিত্যের প্রাচীনতম নিদর্শন। এটি দশম-দ্বাদশ শতাব্দীতে রচিত বৌদ্ধ সহজিয়া সাধকদের রচনা।"
         },
         {
             id: 27,
-            question: "Relay cropping-এ দ্বিতীয় ফসল কখন রোপণ করা হয়?",
-            acceptedAnswers: ["Before harvest", "before harvest", "Before harvesting", "কাটার আগে", "ফসল কাটার আগে"],
+            question: "What is the operation performed after sowing to maintain optimum plant population called?",
+            acceptedAnswers: ["Thinning", "thinning", "THINNING", "পাতলাকরণ", "থিনিং"],
             marks: 1,
-            explanation: "Relay cropping-এ প্রথম ফসল কাটার আগেই দ্বিতীয় ফসল রোপণ করা হয়, যাতে জমি ফাঁকা না থাকে এবং সময় সাশ্রয় হয়।"
+            explanation: "Thinning হলো বীজ বপনের পর অতিরিক্ত চারা তুলে ফেলে উপযুক্ত গাছের দূরত্ব বজায় রাখার পদ্ধতি। এটি intercultural operation-এর একটি অংশ।"
         },
         {
             id: 28,
-            question: "Third conditional-এ main clause-এ কোন modal verb ব্যবহৃত হয়?",
-            acceptedAnswers: ["Would have", "would have", "Would've", "would've", "উড হ্যাভ"],
+            question: "If I had studied, I _____ passed. (third conditional)",
+            acceptedAnswers: ["would have", "could have", "might have", "should have"],
             marks: 1,
-            explanation: "Third conditional এর structure: If + past perfect, would have + past participle। এটি অতীতের অবাস্তব পরিস্থিতি বোঝায়।"
+            explanation: "Third Conditional এর গঠন: If + Past Perfect, would/could/might + have + Past Participle. এটি অতীতের অবাস্তব পরিস্থিতি প্রকাশ করে।"
         },
         {
             id: 29,
-            question: "বাংলাদেশের রবি মৌসুমের প্রধান খাদ্যশস্য কোনটি?",
-            acceptedAnswers: ["Wheat", "wheat", "গম"],
+            question: "What is mixed intercropping?",
+            acceptedAnswers: ["Random mixing", "random mixing", "Mixed cropping", "mixed cropping", "মিশ্র চাষ"],
             marks: 1,
-            explanation: "রবি মৌসুমে গম (Wheat) হলো প্রধান খাদ্যশস্য। এছাড়া ভুট্টা, যব ইত্যাদিও চাষ হয়।"
+            explanation: "Mixed Intercropping-এ বিভিন্ন ফসল কোনো নির্দিষ্ট প্যাটার্ন ছাড়াই এলোমেলোভাবে একসাথে চাষ করা হয়।"
         },
         {
             id: 30,
-            question: "একই জমিতে বছরে একটি মাত্র ফসল চাষকে কী বলা হয়?",
-            acceptedAnswers: ["Monocropping", "monocropping", "Mono-cropping", "mono-cropping", "মনোক্রপিং", "এক ফসলি"],
+            question: "চর্যাপদ কোন যুগের রচনা?",
+            acceptedAnswers: ["প্রাচীন যুগ", "Ancient period", "আদি যুগ", "Early period", "প্রাচীন"],
             marks: 1,
-            explanation: "Monocropping হলো একই জমিতে বছরে শুধুমাত্র একটি ফসল চাষ করার পদ্ধতি, যা জমির সর্বোচ্চ ব্যবহার নিশ্চিত করে না।"
+            explanation: "চর্যাপদ বাংলা সাহিত্যের প্রাচীন যুগের (৬৫০-১২০০ খ্রিস্টাব্দ) রচনা। এটি দশম-দ্বাদশ শতাব্দীর মধ্যে রচিত হয়েছে।"
         },
         {
             id: 31,
-            question: "বাংলাদেশে মোট বিভাগ কতটি আছে?",
-            acceptedAnswers: ["8", "৮", "eight", "Eight", "আট", "আটটি", "8টি"],
+            question: "What is the intercultural operation of breaking soil crust called?",
+            acceptedAnswers: ["Hoeing", "hoeing", "HOEING", "নিড়ানি", "মাটি ভাঙা"],
             marks: 1,
-            explanation: "বাংলাদেশে ৮টি প্রশাসনিক বিভাগ রয়েছে: ঢাকা, চট্টগ্রাম, রাজশাহী, খুলনা, বরিশাল, সিলেট, রংপুর ও ময়মনসিংহ।"
+            explanation: "Hoeing হলো মাটির শক্ত আস্তরণ ভেঙে ফেলা এবং আগাছা পরিষ্কার করার intercultural operation। এটি মাটির বায়ু চলাচল উন্নত করে।"
         },
         {
             id: 32,
-            question: "Weeding কোন ধরনের operation?",
-            acceptedAnswers: ["Intercultural operation", "intercultural operation", "Intercultural", "intercultural", "আন্তঃচাষ কাজ"],
+            question: "What voice is this: 'The letter was written by him'?",
+            acceptedAnswers: ["Passive voice", "passive voice", "Passive", "passive", "PASSIVE VOICE"],
             marks: 1,
-            explanation: "Weeding হলো একটি প্রধান intercultural operation যা ফসল রোপণের পর আগাছা দমনের জন্য করা হয়।"
+            explanation: "এটি Passive Voice। Passive Voice-এ কর্মই বাক্যের উদ্দেশ্য হয়ে যায় এবং কর্তা 'by' এর পরে বসে।"
         },
         {
             id: 33,
-            question: "Sprinkler irrigation কোন ধরনের সেচ পদ্ধতি?",
-            acceptedAnswers: ["Overhead irrigation", "overhead irrigation", "Overhead", "overhead", "ওভারহেড"],
+            question: "Which type of intercropping provides support to climbing crops?",
+            acceptedAnswers: ["Relay intercropping", "relay intercropping", "Support cropping", "support cropping", "রিলে সাথী ফসল"],
             marks: 1,
-            explanation: "Sprinkler irrigation হলো overhead সেচ পদ্ধতি যেখানে ঝরনার মতো করে উপর থেকে পানি ছিটিয়ে সেচ দেওয়া হয়।"
+            explanation: "Relay Intercropping-এ এক ফসল অন্য ফসলের সাপোর্ট হিসেবে কাজ করে। যেমন ভুট্টার সাথে মটরশুটি চাষ।"
         },
         {
             id: 34,
-            question: "চর্যাপদে মোট কতটি পদ রয়েছে?",
-            acceptedAnswers: ["সাড়ে ছেচল্লিশ", "সাড়ে ছেচল্লিশটি", "46.5", "৪৬.৫", "46 and half", "সাড়ে ৪৬"],
+            question: "শ্রীকৃষ্ণকীর্তন কাব্যের রচয়িতা কে?",
+            acceptedAnswers: ["বড়ু চণ্ডীদাস", "Baru Chandidas", "চণ্ডীদাস", "Chandidas", "বড়ু"],
             marks: 1,
-            explanation: "চর্যাপদে মোট সাড়ে ছেচল্লিশটি (৪৬.৫) পদ পাওয়া গেছে। ২৩ নম্বর পদটি অর্ধেক পাওয়া গিয়েছিল।"
+            explanation: "শ্রীকৃষ্ণকীর্তন কাব্যের রচয়িতা বড়ু চণ্ডীদাস। এটি প্রাচীন যুগের শেষ দিকের একটি গুরুত্বপূর্ণ কাব্য।"
         },
         {
             id: 35,
-            question: "Mixed cropping-এ সর্বনিম্ন কতটি ফসল থাকে?",
-            acceptedAnswers: ["2", "২", "two", "Two", "দুই", "দুইটি", "2টি"],
+            question: "What is the practice of fallowing land called in agriculture?",
+            acceptedAnswers: ["Crop rotation", "crop rotation", "Fallow", "fallow", "পতিত রাখা"],
             marks: 1,
-            explanation: "Mixed cropping-এ একই জমিতে কোনো নির্দিষ্ট সারি ছাড়াই দুই বা ততোধিক ফসল একসাথে চাষ করা হয়।"
+            explanation: "Fallowing হলো জমিকে কিছু সময়ের জন্য পতিত রেখে মাটির উর্বরতা ফিরিয়ে আনার পদ্ধতি।"
         },
         {
             id: 36,
-            question: "AEZ 28 বাংলাদেশের কোন এলাকায় অবস্থিত?",
-            acceptedAnswers: ["Madhupur Tract", "madhupur tract", "Madhupur", "madhupur", "মধুপুর গড়", "মধুপুর"],
+            question: "Complete: 'If it rains, the match _____ cancelled.'",
+            acceptedAnswers: ["will be", "would be", "is", "gets"],
             marks: 1,
-            explanation: "AEZ 28 হলো Madhupur Tract (মধুপুর গড়), যা টাংগাইল ও ময়মনসিংহ জেলায় অবস্থিত উঁচু শাল বনাঞ্চল।"
+            explanation: "First Conditional এ future possibility প্রকাশ করতে 'will be' ব্যবহৃত হয়।"
         },
         {
             id: 37,
-            question: "Active voice-এ object কে passive করলে কী হয়?",
-            acceptedAnswers: ["Subject", "subject", "কর্তা", "সাবজেক্ট"],
+            question: "Which irrigation system uses channels and furrows?",
+            acceptedAnswers: ["Furrow irrigation", "furrow irrigation", "Channel irrigation", "channel irrigation", "নালা সেচ"],
             marks: 1,
-            explanation: "Active voice থেকে passive voice করার সময় active এর object, passive এর subject হয় এবং active এর subject, passive এর 'by + object' হয়।"
+            explanation: "Furrow Irrigation-এ ফসলের সারির মাঝে নালা কেটে পানি প্রয়োগ করা হয়। এটি সারি ফসলের জন্য উপযুক্ত।"
         },
         {
             id: 38,
-            question: "খরিফ-২ মৌসুমের প্রধান ফসল কোনটি?",
-            acceptedAnswers: ["Rice", "rice", "Aman rice", "aman rice", "ধান", "আমন ধান"],
+            question: "মধ্যযুগের প্রথম কবি কে?",
+            acceptedAnswers: ["শাহ মুহম্মদ সগীর", "Shah Muhammad Sagir", "সগীর", "Sagir", "শাহ সগীর"],
             marks: 1,
-            explanation: "খরিফ-২ মৌসুমের প্রধান ফসল হলো আমন ধান, যা বাংলাদেশের মোট ধান উৎপাদনের একটি বড় অংশ।"
+            explanation: "শাহ মুহম্মদ সগীর মধ্যযুগের প্রথম কবি। তিনি 'ইউসুফ-জুলেখা' কাব্য রচনা করেন।"
         },
         {
             id: 39,
-            question: "Crop rotation-এর প্রধান উদ্দেশ্য কী?",
-            acceptedAnswers: ["Soil fertility", "soil fertility", "Maintain fertility", "maintain fertility", "মাটির উর্বরতা", "উর্বরতা রক্ষা"],
+            question: "What is the rotation of different crops in sequence called?",
+            acceptedAnswers: ["Crop rotation", "crop rotation", "CROP ROTATION", "ফসল আবর্তন", "শস্য পর্যায়"],
             marks: 1,
-            explanation: "Crop rotation হলো একই জমিতে বিভিন্ন মৌসুমে বিভিন্ন ফসল পর্যায়ক্রমে চাষ করা, যা মাটির উর্বরতা রক্ষা ও রোগবালাই কমায়।"
+            explanation: "Crop Rotation হলো একই জমিতে পর্যায়ক্রমে বিভিন্ন ফসল চাষ করার পদ্ধতি। এতে মাটির উর্বরতা রক্ষা পায় এবং রোগবালাই কমে।"
         },
         {
             id: 40,
-            question: "Furrow irrigation কোন ধরনের সেচ পদ্ধতি?",
-            acceptedAnswers: ["Surface irrigation", "surface irrigation", "Surface", "surface", "ভূ-পৃষ্ঠ সেচ"],
+            question: "Active to Passive: 'She teaches English.'",
+            acceptedAnswers: ["English is taught by her", "English is taught by her.", "English gets taught by her"],
             marks: 1,
-            explanation: "Furrow irrigation হলো surface irrigation এর একটি পদ্ধতি যেখানে সারির মাঝে নালা কেটে পানি প্রবাহিত করা হয়।"
+            explanation: "Present Simple এর Passive form: Object + is/am/are + Past Participle + by + Subject."
         },
         {
             id: 41,
-            question: "দুই বা ততোধিক ফসল মিশিয়ে চাষকে কী বলা হয়?",
-            acceptedAnswers: ["Mixed cropping", "mixed cropping", "Mix cropping", "mix cropping", "মিক্সড ক্রপিং", "মিশ্র ফসল"],
+            question: "What is strip intercropping?",
+            acceptedAnswers: ["Crops in strips", "crops in strips", "Strip cropping", "strip cropping", "ফালি চাষ"],
             marks: 1,
-            explanation: "Mixed cropping-এ দুই বা ততোধিক ফসল একই জমিতে কোনো নির্দিষ্ট সারি ছাড়াই একসাথে চাষ করা হয়।"
+            explanation: "Strip Intercropping-এ বিভিন্ন ফসল প্রশস্ত ফালি বা স্ট্রিপে চাষ করা হয়। এটি ক্ষয়রোধ ও মাটি সংরক্ষণে কার্যকর।"
         },
         {
             id: 42,
-            question: "পানি সাশ্রয়ী সেচ পদ্ধতি কোনটি?",
-            acceptedAnswers: ["Drip irrigation", "drip irrigation", "Drip", "drip", "ড্রিপ", "Trickle"],
+            question: "বাংলা সাহিত্যের ইতিহাস কে প্রথম রচনা করেন?",
+            acceptedAnswers: ["দীনেশচন্দ্র সেন", "Dineshchandra Sen", "দীনেশ সেন", "Dinesh Sen"],
             marks: 1,
-            explanation: "Drip বা Trickle irrigation সবচেয়ে পানি সাশ্রয়ী সেচ পদ্ধতি, যেখানে ৯০-৯৫% পানি সাশ্রয় সম্ভব।"
+            explanation: "দীনেশচন্দ্র সেন সর্বপ্রথম পূর্ণাঙ্গ বাংলা সাহিত্যের ইতিহাস রচনা করেন 'বঙ্গভাষা ও সাহিত্য' নামে।"
         },
         {
             id: 43,
-            question: "Secondary tillage-এর প্রধান উদ্দেশ্য কী?",
-            acceptedAnswers: ["Pulverization", "pulverization", "Soil pulverization", "মাটি ভাঙা", "মাটি গুঁড়া করা"],
+            question: "What is land capability classification based on?",
+            acceptedAnswers: ["Soil quality", "soil quality", "Land suitability", "land suitability", "মাটির গুণমান"],
             marks: 1,
-            explanation: "Secondary tillage এর উদ্দেশ্য হলো মাটির বড় ঢেলা ভেঙে সূক্ষ্ম ও ঝুরঝুরে করা, যা বীজ বপনের জন্য উপযুক্ত।"
+            explanation: "Land Capability Classification মাটির গুণমান, ঢাল, ক্ষয়ের ঝুঁকি এবং কৃষিকাজের উপযোগিতার ভিত্তিতে করা হয়।"
         },
         {
             id: 44,
-            question: "খরিফ-১ মৌসুমের একটি প্রধান আঁশ ফসল কী?",
-            acceptedAnswers: ["Jute", "jute", "পাট"],
+            question: "What conditional expresses unreal past situations?",
+            acceptedAnswers: ["Third conditional", "third conditional", "Third", "third", "Type 3"],
             marks: 1,
-            explanation: "খরিফ-১ মৌসুমে পাট (Jute) হলো প্রধান আঁশ ফসল। বাংলাদেশ পাটের অন্যতম প্রধান উৎপাদক দেশ।"
+            explanation: "Third Conditional অতীতের অবাস্তব পরিস্থিতি প্রকাশ করে। গঠন: If + Past Perfect, would have + Past Participle."
         },
         {
             id: 45,
-            question: "Border irrigation কোন ধরনের সেচ?",
-            acceptedAnswers: ["Surface irrigation", "surface irrigation", "Surface", "surface", "ভূ-পৃষ্ঠ সেচ"],
+            question: "Which operation controls weed growth between crop rows?",
+            acceptedAnswers: ["Weeding", "weeding", "WEEDING", "আগাছা দমন", "নিড়ানি"],
             marks: 1,
-            explanation: "Border irrigation হলো surface irrigation এর একটি পদ্ধতি যেখানে জমি ছোট ছোট বর্ডারে ভাগ করে সেচ দেওয়া হয়।"
+            explanation: "Weeding হলো ফসলের ক্ষেত থেকে আগাছা পরিষ্কার করার intercultural operation। এটি ফসলের পুষ্টি ও আলোর প্রতিযোগিতা কমায়।"
         },
         {
             id: 46,
-            question: "Ratooning কোন ফসলে বেশি দেখা যায়?",
-            acceptedAnswers: ["Sugarcane", "sugarcane", "Sugar cane", "sugar cane", "আখ"],
+            question: "প্রাচীন যুগের সময়সীমা কত?",
+            acceptedAnswers: ["৬৫০-১২০০", "650-1200", "৬৫০ থেকে ১২০০", "650 to 1200", "৬৫০-১২০০ খ্রিস্টাব্দ"],
             marks: 1,
-            explanation: "Ratooning হলো একবার ফসল কাটার পর গোড়া থেকে আবার নতুন চারা গজানো, যা প্রধানত আখ ফসলে দেখা যায়।"
+            explanation: "বাংলা সাহিত্যের প্রাচীন যুগের সময়সীমা ৬৫০-১২০০ খ্রিস্টাব্দ পর্যন্ত। এই যুগে চর্যাপদ রচিত হয়।"
         },
         {
             id: 47,
-            question: "Basin irrigation-এর অপর নাম কী?",
-            acceptedAnswers: ["Check basin", "check basin", "Level basin", "level basin", "চেক বেসিন"],
+            question: "What is the maximum land utilization percentage ideally?",
+            acceptedAnswers: ["100%", "100 percent", "Hundred percent", "শত ভাগ", "১০০%"],
             marks: 1,
-            explanation: "Basin irrigation বা Check basin হলো সমতল জমিকে ছোট ছোট বেসিনে ভাগ করে পানি ভরে সেচ দেওয়ার পদ্ধতি।"
+            explanation: "আদর্শভাবে Land Utilization ১০০% হওয়া উচিত, অর্থাৎ সমস্ত উপযোগী জমি কৃষিকাজে ব্যবহৃত হওয়া।"
         },
         {
             id: 48,
-            question: "Land utilization intensity কী দ্বারা প্রকাশ করা হয়?",
-            acceptedAnswers: ["Percentage", "percentage", "Percent", "percent", "%", "শতাংশ"],
+            question: "Passive form: 'I will complete the work.'",
+            acceptedAnswers: ["The work will be completed by me", "Work will be completed by me", "The work will be completed"],
             marks: 1,
-            explanation: "Land utilization intensity ভূমির ব্যবহার নিবিড়তা নির্দেশ করে এবং এটি শতাংশ (%) হিসেবে প্রকাশ করা হয়।"
+            explanation: "Future Simple এর Passive form: Object + will be + Past Participle + by + Subject."
         },
         {
             id: 49,
-            question: "Alley cropping-এ মূলত কী ব্যবহার করা হয়?",
-            acceptedAnswers: ["Trees", "trees", "Tree", "tree", "গাছ"],
+            question: "What is companion planting also known as?",
+            acceptedAnswers: ["Intercropping", "intercropping", "INTERCROPPING", "সাথী ফসল", "মিশ্র চাষ"],
             marks: 1,
-            explanation: "Alley cropping হলো সারিবদ্ধ গাছের মাঝে ফসল চাষ করা, যা Agroforestry এর একটি পদ্ধতি।"
+            explanation: "Companion Planting বা সাথী ফসল চাষ Intercropping নামেও পরিচিত। এতে পারস্পরিক উপকারী ফসল একসাথে চাষ করা হয়।"
         },
         {
             id: 50,
-            question: "রবি মৌসুম কোন মাসে শেষ হয়?",
-            acceptedAnswers: ["April", "april", "এপ্রিল", "এপ্রিলে"],
+            question: "চর্যাপদের পদ সংখ্যা কত?",
+            acceptedAnswers: ["সাড়ে ছেচল্লিশ", "46.5", "৪৬.৫", "Forty six and half", "সাড়ে ৪৬"],
             marks: 1,
-            explanation: "রবি মৌসুম নভেম্বর থেকে শুরু হয়ে এপ্রিল মাসে শেষ হয়, যা শুষ্ক মৌসুম হিসেবে পরিচিত।"
+            explanation: "চর্যাপদে মোট সাড়ে ছেচল্লিশটি (৪৬.৫) পদ রয়েছে। ২৩তম পদের অর্ধেক অংশ পাওয়া গেছে বলে এই সংখ্যা।"
         },
         {
             id: 51,
-            question: "Double cropping-এ কতটি ফসল চাষ হয়?",
-            acceptedAnswers: ["2", "২", "two", "Two", "দুই", "দুইটি", "2টি"],
+            question: "Which practice involves leaving strips of land uncultivated?",
+            acceptedAnswers: ["Strip farming", "strip farming", "Fallow strips", "fallow strips", "ফালি পতিত"],
             marks: 1,
-            explanation: "Double cropping হলো একই জমিতে বছরে দুইটি ফসল পর্যায়ক্রমে চাষ করার পদ্ধতি।"
+            explanation: "Strip Farming-এ জমিকে ফালিতে ভাগ করে কিছু ফালি চাষ করা হয় এবং কিছু পতিত রাখা হয় মাটি সংরক্ষণের জন্য।"
         },
         {
             id: 52,
-            question: "Soil mulching-এ প্রধান উপকরণ কী?",
-            acceptedAnswers: ["Straw", "straw", "Rice straw", "rice straw", "খড়", "ধানের খড়"],
+            question: "Zero conditional structure:",
+            acceptedAnswers: ["If + present, present", "Present + present", "If present then present"],
             marks: 1,
-            explanation: "Mulching-এ সাধারণত ধানের খড়, শুকনো ঘাস, পলিথিন বা জৈব পদার্থ ব্যবহার করা হয়।"
+            explanation: "Zero Conditional এর গঠন: If + Present Simple, Present Simple। এটি সাধারণ সত্য বা বৈজ্ঞানিক সত্য প্রকাশ করে।"
         },
         {
             id: 53,
-            question: "AEZ নির্ধারণের প্রধান ভিত্তি কী?",
-            acceptedAnswers: ["Soil", "soil", "Climate", "climate", "মাটি", "জলবায়ু", "Soil and climate"],
+            question: "What is surface irrigation?",
+            acceptedAnswers: ["Gravity irrigation", "gravity irrigation", "Flood irrigation", "flood irrigation", "ভূপৃষ্ঠ সেচ"],
             marks: 1,
-            explanation: "AEZ নির্ধারণে মাটির ধরন, জলবায়ু, ভূমিরূপ, পানি সম্পদ এবং কৃষি পদ্ধতি বিবেচনা করা হয়।"
+            explanation: "Surface Irrigation-এ মাধ্যাকর্ষণের সাহায্যে জমির উপরিভাগ দিয়ে পানি প্রয়োগ করা হয়। এটি সবচেয়ে পুরাতন সেচ পদ্ধতি।"
         },
         {
             id: 54,
-            question: "Row cropping-এ ফসল কীভাবে রোপণ করা হয়?",
-            acceptedAnswers: ["In rows", "in rows", "Rows", "rows", "সারিতে", "সারিবদ্ধভাবে"],
+            question: "বাংলা ভাষার উৎপত্তি কোন ভাষা থেকে?",
+            acceptedAnswers: ["সংস্কৃত", "Sanskrit", "প্রাকৃত", "Prakrit", "সংস্কৃত ভাষা"],
             marks: 1,
-            explanation: "Row cropping হলো ফসল সারিবদ্ধভাবে রোপণ করা, যা intercultural operations সহজ করে।"
+            explanation: "বাংলা ভাষার উৎপত্তি সংস্কৃত ভাষা থেকে প্রাকৃত ভাষার মাধ্যমে। সংস্কৃত → প্রাকৃত → বাংলা এই ক্রমে বিবর্তন ঘটেছে।"
         },
         {
             id: 55,
-            question: "Agronomy শব্দটি কোন ভাষা থেকে এসেছে?",
-            acceptedAnswers: ["Greek", "greek", "গ্রিক", "গ্রীক"],
+            question: "What is multiple cropping intensity formula?",
+            acceptedAnswers: ["GCA/NCA × 100", "Gross area/Net area × 100", "(GCA/NCA) × 100"],
             marks: 1,
-            explanation: "Agronomy শব্দটি গ্রীক ভাষা থেকে এসেছে, যেখানে 'Agros' অর্থ ক্ষেত এবং 'Nomos' অর্থ নিয়ম বা ব্যবস্থাপনা।"
+            explanation: "Cropping Intensity = (Gross Cropped Area/Net Cropped Area) × 100। এটি একই জমিতে বছরে কতবার ফসল করা হয় তা নির্দেশ করে।"
         },
         {
             id: 56,
-            question: "Companion cropping-এর অপর নাম কী?",
-            acceptedAnswers: ["Mixed cropping", "mixed cropping", "Mix cropping", "মিক্সড ক্রপিং"],
+            question: "Voice change: 'We are watching TV.'",
+            acceptedAnswers: ["TV is being watched by us", "Television is being watched by us", "TV is being watched"],
             marks: 1,
-            explanation: "Companion cropping এবং Mixed cropping একই অর্থ বহন করে, যেখানে একাধিক ফসল একসাথে মিশিয়ে চাষ করা হয়।"
+            explanation: "Present Continuous এর Passive form: Object + is/am/are + being + Past Participle + by + Subject."
         },
         {
             id: 57,
-            question: "Field capacity-তে মাটিতে পানির অবস্থা কেমন?",
-            acceptedAnswers: ["Optimum", "optimum", "Optimal", "optimal", "সর্বোত্তম", "আদর্শ"],
+            question: "Which operation involves soil mixing around plants?",
+            acceptedAnswers: ["Earthing up", "earthing up", "EARTHING UP", "মাটি তোলা", "গোড়ায় মাটি"],
             marks: 1,
-            explanation: "Field capacity হলো মাটিতে পানির সেই অবস্থা যেখানে অতিরিক্ত পানি নিষ্কাশিত হওয়ার পর উদ্ভিদের জন্য সর্বোত্তম আর্দ্রতা থাকে।"
+            explanation: "Earthing up হলো গাছের গোড়ায় মাটি তুলে দেওয়ার intercultural operation। এটি গাছের শিকড় শক্তিশালী করে এবং আর্দ্রতা সংরক্ষণ করে।"
         },
         {
             id: 58,
-            question: "Triple cropping-এ বছরে কতটি ফসল হয়?",
-            acceptedAnswers: ["3", "৩", "three", "Three", "তিন", "তিনটি", "3টি"],
+            question: "চর্যাপদের ভাষায় কোন অঞ্চলের প্রভাব বেশি?",
+            acceptedAnswers: ["পশ্চিমবঙ্গ", "West Bengal", "পূর্ববঙ্গ", "East Bengal", "বাংলা অঞ্চল"],
             marks: 1,
-            explanation: "Triple cropping হলো একই জমিতে বছরে তিনটি ফসল পর্যায়ক্রমে চাষ করার পদ্ধতি, যা জমির সর্বোচ্চ ব্যবহার নিশ্চিত করে।"
+            explanation: "চর্যাপদের ভাষায় তৎকালীন বাংলা অঞ্চলের বিভিন্ন এলাকার ভাষার মিশ্রণ রয়েছে, তবে পূর্ববঙ্গের ভাষার প্রভাব বেশি।"
         },
         {
             id: 59,
-            question: "Agronomy-এর জনক কে?",
-            acceptedAnswers: ["Peter de Crescenzi", "peter de crescenzi", "Pietro de Crescenzi", "pietro de crescenzi", "পিটার দে ক্রেসেনজি"],
+            question: "What is the term for growing cash crops for profit?",
+            acceptedAnswers: ["Commercial farming", "commercial farming", "Cash cropping", "cash cropping", "বাণিজ্যিক চাষ"],
             marks: 1,
-            explanation: "Peter de Crescenzi (১২৩০-১৩২০) কে Agronomy বা শস্যবিজ্ঞানের জনক বলা হয়। তিনি ইতালীয় কৃষিবিদ ছিলেন।"
+            explanation: "Commercial Farming বা বাণিজ্যিক চাষ হলো লাভের উদ্দেশ্যে নগদ অর্থকরী ফসল উৎপাদন করা। এতে বাজারের চাহিদা অনুযায়ী ফসল নির্বাচন করা হয়।"
         },
         {
             id: 60,
-            question: "বাংলাদেশের বর্তমান cropping intensity প্রায় কত শতাংশ?",
-            acceptedAnswers: ["200", "২০০", "200%", "২০০%", "প্রায় ২০০", "about 200"],
+            question: "Second conditional uses which tense in if-clause?",
+            acceptedAnswers: ["Past simple", "past simple", "Simple past", "simple past", "Past tense"],
             marks: 1,
-            explanation: "বাংলাদেশে বর্তমানে cropping intensity প্রায় ২০০% বা তার বেশি, যা নিবিড় কৃষি পদ্ধতির ফল।"
+            explanation: "Second Conditional এর if-clause-এ Past Simple tense ব্যবহৃত হয়। গঠন: If + Past Simple, would + base verb।"
         }
     ]
 };
