@@ -1,434 +1,434 @@
 var EXAM_BINA_SO_2 = {
-    id: "bina-so-exam-2",
-    title: "BINA SO Exam – 02",
-    status: "live",
-    institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
-    setName: "Model Test – 02",
-    accessCode: "B2026",
-    durationMinutes: 60,
-    totalMarks: 60,
-    negativeMark: 0,
-    attemptLimit: 1,
-    questions: [
-        {
-            id: 1,
-            question: "What is the study of crop production and field management called?",
-            acceptedAnswers: ["Agronomy", "agronomy", "AGRONOMY", "কৃষিতত্ত্ব", "এগ্রোনমি"],
-            marks: 1,
-            explanation: "Agronomy হলো ফসল উৎপাদন ও ক্ষেত্র ব্যবস্থাপনার বিজ্ঞান। এটি মাটি, জলবায়ু, বীজ, সার এবং ফসল উৎপাদনের সামগ্রিক দিক নিয়ে আলোচনা করে।"
-        },
-        {
-            id: 2,
-            question: "চর্যাপদের আবিষ্কারক কে?",
-            acceptedAnswers: ["হরপ্রসাদ শাস্ত্রী", "Haraprasad Shastri", "হরপ্রসাদ", "Haraprasad", "হরপ্রসাদ শাস্ত্রি"],
-            marks: 1,
-            explanation: "১৯০৭ সালে হরপ্রসাদ শাস্ত্রী নেপালের রাজদরবারের গ্রন্থাগার থেকে চর্যাপদ আবিষ্কার করেন। এটি বাংলা সাহিত্যের প্রাচীনতম নিদর্শন।"
-        },
-        {
-            id: 3,
-            question: "How many Agro-Ecological Zones (AEZ) are there in Bangladesh?",
-            acceptedAnswers: ["30", "Thirty", "thirty", "৩০", "ত্রিশ", "ত্রিশটি"],
-            marks: 1,
-            explanation: "বাংলাদেশকে মোট ৩০টি কৃষি পরিবেশগত অঞ্চলে (AEZ) ভাগ করা হয়েছে। এই বিভাজন মাটির ধরন, জলবায়ু, ভূমির উচ্চতা এবং কৃষি উৎপাদনের বৈশিষ্ট্যের ভিত্তিতে করা হয়েছে।"
-        },
-        {
-            id: 4,
-            question: "Fill in the blank: If I _____ rich, I would buy a house. (first conditional)",
-            acceptedAnswers: ["were", "was", "Were", "Was"],
-            marks: 1,
-            explanation: "এটি Second Conditional এর উদাহরণ, First Conditional নয়। Second Conditional-এ 'If + past tense' ব্যবহার হয়, তাই 'were' সঠিক উত্তর।"
-        },
-        {
-            id: 5,
-            question: "What is the local name for summer season crops in Bangladesh?",
-            acceptedAnswers: ["Boro", "boro", "BORO", "বোরো"],
-            marks: 1,
-            explanation: "বাংলাদেশে গ্রীষ্মকালীন ফসলকে বোরো বলা হয়। বোরো মৌসুম ডিসেম্বর-জানুয়ারিতে শুরু হয়ে এপ্রিল-মে মাসে শেষ হয়।"
-        },
-        {
-            id: 6,
-            question: "বাংলা সাহিত্যের আদি কবি কাকে বলা হয়?",
-            acceptedAnswers: ["লুইপা", "Luipa", "লুইপাদ", "Luipad", "লুই", "Lui"],
-            marks: 1,
-            explanation: "চর্যাপদের রচয়িতাদের মধ্যে লুইপাকে বাংলা সাহিত্যের আদি কবি বলা হয়। তিনি চর্যাপদের প্রথম পদটি রচনা করেছেন।"
-        },
-        {
-            id: 7,
-            question: "What is the practice of growing two or more crops simultaneously on the same land called?",
-            acceptedAnswers: ["Intercropping", "intercropping", "INTERCROPPING", "সাথী ফসল", "মিশ্র চাষ"],
-            marks: 1,
-            explanation: "Intercropping হলো একই জমিতে একসাথে দুই বা ততোধিক ফসল চাষ করার পদ্ধতি। এতে জমির সর্বোচ্চ ব্যবহার এবং ঝুঁকি কমানো যায়।"
-        },
-        {
-            id: 8,
-            question: "Change the voice: 'He writes a letter.'",
-            acceptedAnswers: ["A letter is written by him", "A letter is written by him.", "Letter is written by him"],
-            marks: 1,
-            explanation: "Active voice থেকে Passive voice-এ রূপান্তরের নিয়ম: Object + is/am/are + Past Participle + by + Subject."
-        },
-        {
-            id: 9,
-            question: "What is the main monsoon season called in Bangladesh agriculture?",
-            acceptedAnswers: ["Aman", "aman", "AMAN", "আমন"],
-            marks: 1,
-            explanation: "আমন বাংলাদেশের প্রধান বর্ষাকালীন ধান চাষের মৌসুম। এটি জুন-জুলাই মাসে রোপণ করে নভেম্বর-ডিসেম্বরে কাটা হয়।"
-        },
-        {
-            id: 10,
-            question: "চর্যাপদে কোন ধর্মের প্রভাব দেখা যায়?",
-            acceptedAnswers: ["বৌদ্ধ", "বৌদ্ধ ধর্ম", "Buddhist", "Buddhism", "বুদ্ধ"],
-            marks: 1,
-            explanation: "চর্যাপদে প্রধানত বৌদ্ধ ধর্মের প্রভাব দেখা যায়। এর রচয়িতারা ছিলেন বৌদ্ধ সহজিয়া সাধক এবং এতে বৌদ্ধ তন্ত্রের গূঢ় তত্ত্ব প্রকাশিত হয়েছে।"
-        },
-        {
-            id: 11,
-            question: "What is the artificial application of water to soil called?",
-            acceptedAnswers: ["Irrigation", "irrigation", "IRRIGATION", "সেচ", "সিঞ্চন"],
-            marks: 1,
-            explanation: "সেচ বা Irrigation হলো কৃত্রিমভাবে ফসলের প্রয়োজন অনুযায়ী পানি প্রয়োগের পদ্ধতি। এটি ফসল উৎপাদন বৃদ্ধির জন্য অত্যন্ত গুরুত্বপূর্ণ।"
-        },
-        {
-            id: 12,
-            question: "What type of conditional is: 'If you heat ice, it melts'?",
-            acceptedAnswers: ["Zero conditional", "zero conditional", "Zero", "zero", "Zero Conditional"],
-            marks: 1,
-            explanation: "এটি Zero Conditional এর উদাহরণ। Zero Conditional সাধারণ সত্য বা বৈজ্ঞানিক সত্য প্রকাশ করে যেখানে if-clause ও main clause উভয়েই present tense-এ থাকে।"
-        },
-        {
-            id: 13,
-            question: "Which irrigation method applies water directly to plant roots through a network of tubes?",
-            acceptedAnswers: ["Drip irrigation", "drip irrigation", "DRIP IRRIGATION", "ড্রিপ সেচ", "ফোঁটা সেচ"],
-            marks: 1,
-            explanation: "ড্রিপ সেচ পদ্ধতিতে নল বা টিউবের মাধ্যমে সরাসরি গাছের শিকড়ে পানি প্রয়োগ করা হয়। এটি পানি সাশ্রয়ী ও দক্ষ সেচ পদ্ধতি।"
-        },
-        {
-            id: 14,
-            question: "প্রাচীন যুগের কাব্যে কোন ছন্দের ব্যবহার বেশি দেখা যায়?",
-            acceptedAnswers: ["মাত্রাবৃত্ত", "মাত্রাবৃত্ত ছন্দ", "Matravritta", "payar", "পয়ার"],
-            marks: 1,
-            explanation: "প্রাচীন যুগের কাব্যে প্রধানত মাত্রাবৃত্ত ছন্দের ব্যবহার দেখা যায়। চর্যাপদেও এই ছন্দের প্রয়োগ রয়েছে।"
-        },
-        {
-            id: 15,
-            question: "What is the percentage of cultivated area to total area called?",
-            acceptedAnswers: ["Cropping intensity", "cropping intensity", "CROPPING INTENSITY", "ফসল নিবিড়তা", "চাষ নিবিড়তা"],
-            marks: 1,
-            explanation: "Cropping Intensity হলো মোট আবাদি জমির তুলনায় কৃষিকাজে ব্যবহৃত জমির শতকরা হার। এটি কৃষি উৎপাদনশীলতার একটি গুরুত্বপূর্ণ সূচক।"
-        },
-        {
-            id: 16,
-            question: "Complete the passive voice: 'The book _____ by students.'",
-            acceptedAnswers: ["is read", "was read", "is being read", "has been read"],
-            marks: 1,
-            explanation: "Passive voice গঠনে Object + auxiliary verb (is/am/are/was/were) + Past Participle + by + Subject ব্যবহৃত হয়।"
-        },
-        {
-            id: 17,
-            question: "What is the practice of cultivating the same crop repeatedly in the same field called?",
-            acceptedAnswers: ["Monoculture", "monoculture", "MONOCULTURE", "এক ফসল চাষ", "মনো কালচার"],
-            marks: 1,
-            explanation: "Monoculture হলো একই জমিতে বার বার একই ফসল চাষ করার পদ্ধতি। এতে মাটির উর্বরতা কমে এবং কীটপতঙ্গের আক্রমণ বেড়ে যায়।"
-        },
-        {
-            id: 18,
-            question: "চর্যাপদের ভাষাকে কী নামে অভিহিত করা হয়?",
-            acceptedAnswers: ["সন্ধ্যাভাষা", "Sandhyabhasha", "সান্ধ্যভাষা", "আলো-আঁধারি ভাষা", "গোপন ভাষা"],
-            marks: 1,
-            explanation: "চর্যাপদের ভাষাকে সন্ধ্যাভাষা বলা হয়। এটি এক ধরনের সাংকেতিক বা গূঢ় ভাষা যা বৌদ্ধ সহজিয়া সাধকরা ব্যবহার করতেন।"
-        },
-        {
-            id: 19,
-            question: "Which type of intercropping involves growing crops in alternating rows?",
-            acceptedAnswers: ["Row intercropping", "row intercropping", "ROW INTERCROPPING", "সারি সাথী ফসল"],
-            marks: 1,
-            explanation: "Row Intercropping পদ্ধতিতে বিভিন্ন ফসল পর্যায়ক্রমে সারিতে সারিতে চাষ করা হয়। এতে ফসল ব্যবস্থাপনা সহজ হয় এবং যন্ত্রের ব্যবহার সম্ভব হয়।"
-        },
-        {
-            id: 20,
-            question: "What is the first conditional structure?",
-            acceptedAnswers: ["If + present simple, will + base verb", "If + present, will + verb", "Present + will"],
-            marks: 1,
-            explanation: "First Conditional এর গঠন: If + Present Simple, will + base form of verb. এটি ভবিষ্যতে ঘটার সম্ভাব্য ঘটনা প্রকাশ করে।"
-        },
-        {
-            id: 21,
-            question: "What is the main dry season crop called in Bangladesh?",
-            acceptedAnswers: ["Aus", "aus", "AUS", "আউশ"],
-            marks: 1,
-            explanation: "আউশ বাংলাদেশের প্রধান শুষ্ক মৌসুমের ধান। এটি এপ্রিল-মে মাসে রোপণ করে জুলাই-আগস্টে কাটা হয়।"
-        },
-        {
-            id: 22,
-            question: "ডাক ও খনার বচনের রচয়িতা কে?",
-            acceptedAnswers: ["অজ্ঞাত", "অজানা", "Unknown", "জানা নেই", "অনির্দিষ্ট"],
-            marks: 1,
-            explanation: "ডাক ও খনার বচনের প্রকৃত রচয়িতা অজ্ঞাত। এগুলো লোকমুখে প্রচলিত প্রাচীন কৃষি ও জ্যোতিষ সংক্রান্ত বচন।"
-        },
-        {
-            id: 23,
-            question: "What does AEZ stand for in agriculture?",
-            acceptedAnswers: ["Agro-Ecological Zone", "Agro-ecological zone", "AGRO-ECOLOGICAL ZONE", "কৃষি পরিবেশগত অঞ্চল"],
-            marks: 1,
-            explanation: "AEZ এর পূর্ণরূপ হলো Agro-Ecological Zone বা কৃষি পরিবেশগত অঞ্চল। এটি একই ধরনের কৃষি পরিবেশ ও উৎপাদন ক্ষমতা সম্পন্ন এলাকার ভৌগোলিক এককে বোঝায়।"
-        },
-        {
-            id: 24,
-            question: "Change to passive: 'They are building a house.'",
-            acceptedAnswers: ["A house is being built by them", "House is being built by them", "A house is being built"],
-            marks: 1,
-            explanation: "Present Continuous থেকে Passive এ রূপান্তর: Object + is/am/are + being + Past Participle + by + Subject."
-        },
-        {
-            id: 25,
-            question: "Which irrigation method involves flooding the entire field?",
-            acceptedAnswers: ["Flood irrigation", "flood irrigation", "Basin irrigation", "basin irrigation", "বন্যা সেচ"],
-            marks: 1,
-            explanation: "Flood Irrigation বা Basin Irrigation পদ্ধতিতে সম্পূর্ণ জমি পানিতে প্লাবিত করা হয়। এটি ধান চাষে ব্যাপকভাবে ব্যবহৃত হয়।"
-        },
-        {
-            id: 26,
-            question: "বাংলা সাহিত্যের প্রাচীনতম নিদর্শন কী?",
-            acceptedAnswers: ["চর্যাপদ", "Charyapada", "চর্যাগীতি", "Charyageeti", "চর্যা"],
-            marks: 1,
-            explanation: "চর্যাপদ বাংলা সাহিত্যের প্রাচীনতম নিদর্শন। এটি দশম-দ্বাদশ শতাব্দীতে রচিত বৌদ্ধ সহজিয়া সাধকদের রচনা।"
-        },
-        {
-            id: 27,
-            question: "What is the operation performed after sowing to maintain optimum plant population called?",
-            acceptedAnswers: ["Thinning", "thinning", "THINNING", "পাতলাকরণ", "থিনিং"],
-            marks: 1,
-            explanation: "Thinning হলো বীজ বপনের পর অতিরিক্ত চারা তুলে ফেলে উপযুক্ত গাছের দূরত্ব বজায় রাখার পদ্ধতি। এটি intercultural operation-এর একটি অংশ।"
-        },
-        {
-            id: 28,
-            question: "If I had studied, I _____ passed. (third conditional)",
-            acceptedAnswers: ["would have", "could have", "might have", "should have"],
-            marks: 1,
-            explanation: "Third Conditional এর গঠন: If + Past Perfect, would/could/might + have + Past Participle. এটি অতীতের অবাস্তব পরিস্থিতি প্রকাশ করে।"
-        },
-        {
-            id: 29,
-            question: "What is mixed intercropping?",
-            acceptedAnswers: ["Random mixing", "random mixing", "Mixed cropping", "mixed cropping", "মিশ্র চাষ"],
-            marks: 1,
-            explanation: "Mixed Intercropping-এ বিভিন্ন ফসল কোনো নির্দিষ্ট প্যাটার্ন ছাড়াই এলোমেলোভাবে একসাথে চাষ করা হয়।"
-        },
-        {
-            id: 30,
-            question: "চর্যাপদ কোন যুগের রচনা?",
-            acceptedAnswers: ["প্রাচীন যুগ", "Ancient period", "আদি যুগ", "Early period", "প্রাচীন"],
-            marks: 1,
-            explanation: "চর্যাপদ বাংলা সাহিত্যের প্রাচীন যুগের (৬৫০-১২০০ খ্রিস্টাব্দ) রচনা। এটি দশম-দ্বাদশ শতাব্দীর মধ্যে রচিত হয়েছে।"
-        },
-        {
-            id: 31,
-            question: "What is the intercultural operation of breaking soil crust called?",
-            acceptedAnswers: ["Hoeing", "hoeing", "HOEING", "নিড়ানি", "মাটি ভাঙা"],
-            marks: 1,
-            explanation: "Hoeing হলো মাটির শক্ত আস্তরণ ভেঙে ফেলা এবং আগাছা পরিষ্কার করার intercultural operation। এটি মাটির বায়ু চলাচল উন্নত করে।"
-        },
-        {
-            id: 32,
-            question: "What voice is this: 'The letter was written by him'?",
-            acceptedAnswers: ["Passive voice", "passive voice", "Passive", "passive", "PASSIVE VOICE"],
-            marks: 1,
-            explanation: "এটি Passive Voice। Passive Voice-এ কর্মই বাক্যের উদ্দেশ্য হয়ে যায় এবং কর্তা 'by' এর পরে বসে।"
-        },
-        {
-            id: 33,
-            question: "Which type of intercropping provides support to climbing crops?",
-            acceptedAnswers: ["Relay intercropping", "relay intercropping", "Support cropping", "support cropping", "রিলে সাথী ফসল"],
-            marks: 1,
-            explanation: "Relay Intercropping-এ এক ফসল অন্য ফসলের সাপোর্ট হিসেবে কাজ করে। যেমন ভুট্টার সাথে মটরশুটি চাষ।"
-        },
-        {
-            id: 34,
-            question: "শ্রীকৃষ্ণকীর্তন কাব্যের রচয়িতা কে?",
-            acceptedAnswers: ["বড়ু চণ্ডীদাস", "Baru Chandidas", "চণ্ডীদাস", "Chandidas", "বড়ু"],
-            marks: 1,
-            explanation: "শ্রীকৃষ্ণকীর্তন কাব্যের রচয়িতা বড়ু চণ্ডীদাস। এটি প্রাচীন যুগের শেষ দিকের একটি গুরুত্বপূর্ণ কাব্য।"
-        },
-        {
-            id: 35,
-            question: "What is the practice of fallowing land called in agriculture?",
-            acceptedAnswers: ["Crop rotation", "crop rotation", "Fallow", "fallow", "পতিত রাখা"],
-            marks: 1,
-            explanation: "Fallowing হলো জমিকে কিছু সময়ের জন্য পতিত রেখে মাটির উর্বরতা ফিরিয়ে আনার পদ্ধতি।"
-        },
-        {
-            id: 36,
-            question: "Complete: 'If it rains, the match _____ cancelled.'",
-            acceptedAnswers: ["will be", "would be", "is", "gets"],
-            marks: 1,
-            explanation: "First Conditional এ future possibility প্রকাশ করতে 'will be' ব্যবহৃত হয়।"
-        },
-        {
-            id: 37,
-            question: "Which irrigation system uses channels and furrows?",
-            acceptedAnswers: ["Furrow irrigation", "furrow irrigation", "Channel irrigation", "channel irrigation", "নালা সেচ"],
-            marks: 1,
-            explanation: "Furrow Irrigation-এ ফসলের সারির মাঝে নালা কেটে পানি প্রয়োগ করা হয়। এটি সারি ফসলের জন্য উপযুক্ত।"
-        },
-        {
-            id: 38,
-            question: "মধ্যযুগের প্রথম কবি কে?",
-            acceptedAnswers: ["শাহ মুহম্মদ সগীর", "Shah Muhammad Sagir", "সগীর", "Sagir", "শাহ সগীর"],
-            marks: 1,
-            explanation: "শাহ মুহম্মদ সগীর মধ্যযুগের প্রথম কবি। তিনি 'ইউসুফ-জুলেখা' কাব্য রচনা করেন।"
-        },
-        {
-            id: 39,
-            question: "What is the rotation of different crops in sequence called?",
-            acceptedAnswers: ["Crop rotation", "crop rotation", "CROP ROTATION", "ফসল আবর্তন", "শস্য পর্যায়"],
-            marks: 1,
-            explanation: "Crop Rotation হলো একই জমিতে পর্যায়ক্রমে বিভিন্ন ফসল চাষ করার পদ্ধতি। এতে মাটির উর্বরতা রক্ষা পায় এবং রোগবালাই কমে।"
-        },
-        {
-            id: 40,
-            question: "Active to Passive: 'She teaches English.'",
-            acceptedAnswers: ["English is taught by her", "English is taught by her.", "English gets taught by her"],
-            marks: 1,
-            explanation: "Present Simple এর Passive form: Object + is/am/are + Past Participle + by + Subject."
-        },
-        {
-            id: 41,
-            question: "What is strip intercropping?",
-            acceptedAnswers: ["Crops in strips", "crops in strips", "Strip cropping", "strip cropping", "ফালি চাষ"],
-            marks: 1,
-            explanation: "Strip Intercropping-এ বিভিন্ন ফসল প্রশস্ত ফালি বা স্ট্রিপে চাষ করা হয়। এটি ক্ষয়রোধ ও মাটি সংরক্ষণে কার্যকর।"
-        },
-        {
-            id: 42,
-            question: "বাংলা সাহিত্যের ইতিহাস কে প্রথম রচনা করেন?",
-            acceptedAnswers: ["দীনেশচন্দ্র সেন", "Dineshchandra Sen", "দীনেশ সেন", "Dinesh Sen"],
-            marks: 1,
-            explanation: "দীনেশচন্দ্র সেন সর্বপ্রথম পূর্ণাঙ্গ বাংলা সাহিত্যের ইতিহাস রচনা করেন 'বঙ্গভাষা ও সাহিত্য' নামে।"
-        },
-        {
-            id: 43,
-            question: "What is land capability classification based on?",
-            acceptedAnswers: ["Soil quality", "soil quality", "Land suitability", "land suitability", "মাটির গুণমান"],
-            marks: 1,
-            explanation: "Land Capability Classification মাটির গুণমান, ঢাল, ক্ষয়ের ঝুঁকি এবং কৃষিকাজের উপযোগিতার ভিত্তিতে করা হয়।"
-        },
-        {
-            id: 44,
-            question: "What conditional expresses unreal past situations?",
-            acceptedAnswers: ["Third conditional", "third conditional", "Third", "third", "Type 3"],
-            marks: 1,
-            explanation: "Third Conditional অতীতের অবাস্তব পরিস্থিতি প্রকাশ করে। গঠন: If + Past Perfect, would have + Past Participle."
-        },
-        {
-            id: 45,
-            question: "Which operation controls weed growth between crop rows?",
-            acceptedAnswers: ["Weeding", "weeding", "WEEDING", "আগাছা দমন", "নিড়ানি"],
-            marks: 1,
-            explanation: "Weeding হলো ফসলের ক্ষেত থেকে আগাছা পরিষ্কার করার intercultural operation। এটি ফসলের পুষ্টি ও আলোর প্রতিযোগিতা কমায়।"
-        },
-        {
-            id: 46,
-            question: "প্রাচীন যুগের সময়সীমা কত?",
-            acceptedAnswers: ["৬৫০-১২০০", "650-1200", "৬৫০ থেকে ১২০০", "650 to 1200", "৬৫০-১২০০ খ্রিস্টাব্দ"],
-            marks: 1,
-            explanation: "বাংলা সাহিত্যের প্রাচীন যুগের সময়সীমা ৬৫০-১২০০ খ্রিস্টাব্দ পর্যন্ত। এই যুগে চর্যাপদ রচিত হয়।"
-        },
-        {
-            id: 47,
-            question: "What is the maximum land utilization percentage ideally?",
-            acceptedAnswers: ["100%", "100 percent", "Hundred percent", "শত ভাগ", "১০০%"],
-            marks: 1,
-            explanation: "আদর্শভাবে Land Utilization ১০০% হওয়া উচিত, অর্থাৎ সমস্ত উপযোগী জমি কৃষিকাজে ব্যবহৃত হওয়া।"
-        },
-        {
-            id: 48,
-            question: "Passive form: 'I will complete the work.'",
-            acceptedAnswers: ["The work will be completed by me", "Work will be completed by me", "The work will be completed"],
-            marks: 1,
-            explanation: "Future Simple এর Passive form: Object + will be + Past Participle + by + Subject."
-        },
-        {
-            id: 49,
-            question: "What is companion planting also known as?",
-            acceptedAnswers: ["Intercropping", "intercropping", "INTERCROPPING", "সাথী ফসল", "মিশ্র চাষ"],
-            marks: 1,
-            explanation: "Companion Planting বা সাথী ফসল চাষ Intercropping নামেও পরিচিত। এতে পারস্পরিক উপকারী ফসল একসাথে চাষ করা হয়।"
-        },
-        {
-            id: 50,
-            question: "চর্যাপদের পদ সংখ্যা কত?",
-            acceptedAnswers: ["সাড়ে ছেচল্লিশ", "46.5", "৪৬.৫", "Forty six and half", "সাড়ে ৪৬"],
-            marks: 1,
-            explanation: "চর্যাপদে মোট সাড়ে ছেচল্লিশটি (৪৬.৫) পদ রয়েছে। ২৩তম পদের অর্ধেক অংশ পাওয়া গেছে বলে এই সংখ্যা।"
-        },
-        {
-            id: 51,
-            question: "Which practice involves leaving strips of land uncultivated?",
-            acceptedAnswers: ["Strip farming", "strip farming", "Fallow strips", "fallow strips", "ফালি পতিত"],
-            marks: 1,
-            explanation: "Strip Farming-এ জমিকে ফালিতে ভাগ করে কিছু ফালি চাষ করা হয় এবং কিছু পতিত রাখা হয় মাটি সংরক্ষণের জন্য।"
-        },
-        {
-            id: 52,
-            question: "Zero conditional structure:",
-            acceptedAnswers: ["If + present, present", "Present + present", "If present then present"],
-            marks: 1,
-            explanation: "Zero Conditional এর গঠন: If + Present Simple, Present Simple। এটি সাধারণ সত্য বা বৈজ্ঞানিক সত্য প্রকাশ করে।"
-        },
-        {
-            id: 53,
-            question: "What is surface irrigation?",
-            acceptedAnswers: ["Gravity irrigation", "gravity irrigation", "Flood irrigation", "flood irrigation", "ভূপৃষ্ঠ সেচ"],
-            marks: 1,
-            explanation: "Surface Irrigation-এ মাধ্যাকর্ষণের সাহায্যে জমির উপরিভাগ দিয়ে পানি প্রয়োগ করা হয়। এটি সবচেয়ে পুরাতন সেচ পদ্ধতি।"
-        },
-        {
-            id: 54,
-            question: "বাংলা ভাষার উৎপত্তি কোন ভাষা থেকে?",
-            acceptedAnswers: ["সংস্কৃত", "Sanskrit", "প্রাকৃত", "Prakrit", "সংস্কৃত ভাষা"],
-            marks: 1,
-            explanation: "বাংলা ভাষার উৎপত্তি সংস্কৃত ভাষা থেকে প্রাকৃত ভাষার মাধ্যমে। সংস্কৃত → প্রাকৃত → বাংলা এই ক্রমে বিবর্তন ঘটেছে।"
-        },
-        {
-            id: 55,
-            question: "What is multiple cropping intensity formula?",
-            acceptedAnswers: ["GCA/NCA × 100", "Gross area/Net area × 100", "(GCA/NCA) × 100"],
-            marks: 1,
-            explanation: "Cropping Intensity = (Gross Cropped Area/Net Cropped Area) × 100। এটি একই জমিতে বছরে কতবার ফসল করা হয় তা নির্দেশ করে।"
-        },
-        {
-            id: 56,
-            question: "Voice change: 'We are watching TV.'",
-            acceptedAnswers: ["TV is being watched by us", "Television is being watched by us", "TV is being watched"],
-            marks: 1,
-            explanation: "Present Continuous এর Passive form: Object + is/am/are + being + Past Participle + by + Subject."
-        },
-        {
-            id: 57,
-            question: "Which operation involves soil mixing around plants?",
-            acceptedAnswers: ["Earthing up", "earthing up", "EARTHING UP", "মাটি তোলা", "গোড়ায় মাটি"],
-            marks: 1,
-            explanation: "Earthing up হলো গাছের গোড়ায় মাটি তুলে দেওয়ার intercultural operation। এটি গাছের শিকড় শক্তিশালী করে এবং আর্দ্রতা সংরক্ষণ করে।"
-        },
-        {
-            id: 58,
-            question: "চর্যাপদের ভাষায় কোন অঞ্চলের প্রভাব বেশি?",
-            acceptedAnswers: ["পশ্চিমবঙ্গ", "West Bengal", "পূর্ববঙ্গ", "East Bengal", "বাংলা অঞ্চল"],
-            marks: 1,
-            explanation: "চর্যাপদের ভাষায় তৎকালীন বাংলা অঞ্চলের বিভিন্ন এলাকার ভাষার মিশ্রণ রয়েছে, তবে পূর্ববঙ্গের ভাষার প্রভাব বেশি।"
-        },
-        {
-            id: 59,
-            question: "What is the term for growing cash crops for profit?",
-            acceptedAnswers: ["Commercial farming", "commercial farming", "Cash cropping", "cash cropping", "বাণিজ্যিক চাষ"],
-            marks: 1,
-            explanation: "Commercial Farming বা বাণিজ্যিক চাষ হলো লাভের উদ্দেশ্যে নগদ অর্থকরী ফসল উৎপাদন করা। এতে বাজারের চাহিদা অনুযায়ী ফসল নির্বাচন করা হয়।"
-        },
-        {
-            id: 60,
-            question: "Second conditional uses which tense in if-clause?",
-            acceptedAnswers: ["Past simple", "past simple", "Simple past", "simple past", "Past tense"],
-            marks: 1,
-            explanation: "Second Conditional এর if-clause-এ Past Simple tense ব্যবহৃত হয়। গঠন: If + Past Simple, would + base verb।"
-        }
-    ]
+id: "bina-so-exam-2",
+title: "BINA SO Exam – 02",
+status: "live",
+institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
+setName: "Model Test – 02",
+accessCode: "2026",
+durationMinutes: 60,
+totalMarks: 60,
+negativeMark: 0,
+attemptLimit: 1,
+questions: [
+{
+id: 1,
+question: "বাংলা সাহিত্যের প্রাচীন যুগের একমাত্র লিখিত নিদর্শন কী?",
+acceptedAnswers: ["চর্যাপদ", "Charyapada", "charyapada", "চর্যাগান", "চর্যাগীতিকা", "Charyagiti"],
+marks: 1,
+explanation: "চর্যাপদ হলো বাংলা সাহিত্যের প্রাচীন যুগের একমাত্র লিখিত নিদর্শন, যা পাল আমলে রচিত হয়। এটি বৌদ্ধ সহজিয়াদের সাধনসঙ্গীত।"
+},
+{
+id: 2,
+question: "What is the physical condition of soil resulting from appropriate tillage operations called?",
+acceptedAnswers: ["Tilth", "tilth", "টিলথ", "Soil tilth", "soil tilth"],
+marks: 1,
+explanation: "Tilth refers to the physical condition of soil that makes it suitable for growing crops, achieved through appropriate tillage operations."
+},
+{
+id: 3,
+question: "If I ___ a bird, I would fly in the sky. (Fill in the blank to complete the conditional sentence)",
+acceptedAnswers: ["were", "Were", "WERE"],
+marks: 1,
+explanation: "In the second conditional for unreal or hypothetical situations, 'were' is used for all subjects (e.g., I, he, she) instead of 'was'."
+},
+{
+id: 4,
+question: "How many Agro-Ecological Zones (AEZ) are there in Bangladesh?",
+acceptedAnswers: ["30", "Thirty", "thirty", "৩০", "ত্রিশ"],
+marks: 1,
+explanation: "Bangladesh is divided into 30 Agro-Ecological Zones (AEZ) based on physiography, soil properties, land levels, and agro-climatic factors."
+},
+{
+id: 5,
+question: "In which district is the headquarters of the Bangladesh Institute of Nuclear Agriculture (BINA) located?",
+acceptedAnswers: ["Mymensingh", "mymensingh", "ময়মনসিংহ", "Mymensing", "mymensing"],
+marks: 1,
+explanation: "The headquarters of BINA is situated on the campus of Bangladesh Agricultural University (BAU) in Mymensingh."
+},
+{
+id: 6,
+question: "What is the practice of growing two or more crops simultaneously in the same field with a definite row arrangement called?",
+acceptedAnswers: ["Intercropping", "intercropping", "Inter-cropping", "inter-cropping", "ইন্টারক্রপিং"],
+marks: 1,
+explanation: "Intercropping involves cultivating two or more crops in the same space at the same time in distinct rows, maximizing land utilization and minimizing risk."
+},
+{
+id: 7,
+question: "What type of cropping involves planting a succeeding crop into a standing first crop before the harvest of the latter?",
+acceptedAnswers: ["Relay cropping", "relay cropping", "Relay", "relay", "রিলে ক্রপিং"],
+marks: 1,
+explanation: "Relay cropping is a multiple cropping system where a second crop is planted into an existing crop when it has reached its reproductive stage but before harvesting."
+},
+{
+id: 8,
+question: "What are crops called that are grown primarily to attract and intercept insect pests away from the main crop?",
+acceptedAnswers: ["Trap crop", "trap crop", "Trap crops", "trap crops", "ফাঁদ ফসল", "ট্র্যাপ ক্রপ"],
+marks: 1,
+explanation: "Trap crops are planted around or interspersed with the main crop to attract pests, making pest management easier and protecting the primary harvest."
+},
+{
+id: 9,
+question: "Which form of the main verb is unconditionally used in all passive voice sentences?",
+acceptedAnswers: ["Past participle", "past participle", "V3", "v3", "Past Participle", "পাস্ট পার্টিসিপল"],
+marks: 1,
+explanation: "The passive voice always uses the past participle (V3) form of the main verb, preceded by the appropriate 'be' verb depending on the tense."
+},
+{
+id: 10,
+question: "What kind of crop is grown rapidly to provide an emergency yield when the main regular crop fails?",
+acceptedAnswers: ["Catch crop", "catch crop", "Catch crops", "catch crops", "ক্যাচ ক্রপ"],
+marks: 1,
+explanation: "Catch crops are fast-growing crops planted between successive plantings of a main crop, or as a substitute when the main crop fails due to natural disasters."
+},
+{
+id: 11,
+question: "চর্যাপদের আবিষ্কৃত পদগুলোর মধ্যে সবচেয়ে বেশি পদ রচনা করেছেন কে?",
+acceptedAnswers: ["কাহ্নপা", "Kahnapa", "kahnapa", "কানহপা", "কাহ্নপাদ"],
+marks: 1,
+explanation: "চর্যাপদের মোট আবিষ্কৃত পদগুলোর মধ্যে কাহ্নপা সর্বোচ্চ ১৩টি পদ রচনা করেছেন। তিনি প্রাচীন বাংলার একজন শ্রেষ্ঠ কবি ছিলেন।"
+},
+{
+id: 12,
+question: "Which irrigation method applies water in a manner simulating natural rainfall through pressurized pipes?",
+acceptedAnswers: ["Sprinkler", "sprinkler", "Sprinkler irrigation", "sprinkler irrigation", "স্প্রিংকলার", "স্প্রিংকলার ইরিগেশন"],
+marks: 1,
+explanation: "Sprinkler irrigation distributes water through a system of pipes usually by pumping, and it is sprayed into the air to fall like rain."
+},
+{
+id: 13,
+question: "Which highly efficient irrigation method applies water directly to the root zone of plants drop by drop?",
+acceptedAnswers: ["Drip", "drip", "Drip irrigation", "drip irrigation", "Trickle", "trickle", "ড্রিপ", "ড্রিপ ইরিগেশন"],
+marks: 1,
+explanation: "Drip irrigation, also known as trickle irrigation, minimizes evaporation and runoff by delivering water directly to the plant's root zone."
+},
+{
+id: 14,
+question: "What is the mechanical or manual removal of unwanted plants from a crop field called?",
+acceptedAnswers: ["Weeding", "weeding", "উইডিং", "আগাছা দমন", "আগাছা পরিষ্কার"],
+marks: 1,
+explanation: "Weeding is a vital intercultural operation aimed at eliminating competition for nutrients, water, light, and space between crops and weeds."
+},
+{
+id: 15,
+question: "The Bangladesh Institute of Nuclear Agriculture (BINA) operates under which government ministry?",
+acceptedAnswers: ["Ministry of Agriculture", "Agriculture", "Agriculture Ministry", "agriculture", "কৃষি মন্ত্রণালয়"],
+marks: 1,
+explanation: "BINA is an autonomous research organization under the Ministry of Agriculture in Bangladesh, dedicated to agricultural improvement."
+},
+{
+id: 16,
+question: "What is the process of identifying and removing off-type or diseased plants from a seed production field called?",
+acceptedAnswers: ["Roguing", "roguing", "Rouging", "rouging", "রোগিং"],
+marks: 1,
+explanation: "Roguing is critical in seed production to maintain the genetic purity and physical quality of the desired crop variety."
+},
+{
+id: 17,
+question: "Which intercultural operation involves covering the soil surface with crop residues or plastic to conserve moisture and suppress weeds?",
+acceptedAnswers: ["Mulching", "mulching", "মালচিং"],
+marks: 1,
+explanation: "Mulching protects the soil from erosion, reduces moisture evaporation, regulates soil temperature, and suppresses weed growth."
+},
+{
+id: 18,
+question: "If water is heated to 100 degrees Celsius, it ___. (Complete the zero conditional sentence)",
+acceptedAnswers: ["Boils", "boils", "BOILS", "বয়েলস"],
+marks: 1,
+explanation: "The zero conditional uses the present simple tense in both clauses to express scientific facts or general truths."
+},
+{
+id: 19,
+question: "What is the intercultural operation called where soil is drawn up around the base of plants, commonly practiced in potato cultivation?",
+acceptedAnswers: ["Earthing up", "earthing up", "Earthing-up", "earthing-up", "মাটি তুলে দেওয়া"],
+marks: 1,
+explanation: "Earthing up prevents lodging, facilitates tuber expansion, prevents greening of tubers in potatoes, and improves drainage."
+},
+{
+id: 20,
+question: "What is the mechanical support provided to tall crops like sugarcane or banana to prevent them from lodging called?",
+acceptedAnswers: ["Propping", "propping", "প্রপিং"],
+marks: 1,
+explanation: "Propping involves using bamboo stakes or tying plants together to protect them from high winds and prevent lodging, ensuring crop quality."
+},
+{
+id: 21,
+question: "চর্যাপদ কোন দেশের রাজদরবারের গ্রন্থাগার থেকে আবিষ্কৃত হয়েছিল?",
+acceptedAnswers: ["নেপাল", "Nepal", "nepal", "নেপালের", "নেপাল রাজদরবার"],
+marks: 1,
+explanation: "১৯০৭ সালে মহামহোপাধ্যায় হরপ্রসাদ শাস্ত্রী নেপালের রাজদরবারের গ্রন্থাগার (রয়েল লাইব্রেরি) থেকে চর্যাপদের পাণ্ডুলিপি আবিষ্কার করেন।"
+},
+{
+id: 22,
+question: "What is the biochemical and microbial process of extracting fibers from the bast of jute plants called?",
+acceptedAnswers: ["Retting", "retting", "জাগ দেওয়া", "জাগ", "রেটিং"],
+marks: 1,
+explanation: "Retting involves submerging plant stems in water, allowing microorganisms to break down the cellular tissues surrounding the fiber bundles."
+},
+{
+id: 23,
+question: "What term is used for the ratio of the total cropped area to the net cropped area in a year, expressed as a percentage?",
+acceptedAnswers: ["Cropping intensity", "cropping intensity", "Cropping Intensity", "ক্রপিং ইন্টেনসিটি", "শস্য নিবিড়তা"],
+marks: 1,
+explanation: "Cropping intensity indicates the degree of land utilization for agricultural production over a year. A higher percentage means more crops per year on the same land."
+},
+{
+id: 24,
+question: "What is a piece of cultivable land called when it is deliberately left unplanted for a season or more to recover fertility?",
+acceptedAnswers: ["Fallow", "fallow", "Fallow land", "fallow land", "পতিত", "পতিত জমি"],
+marks: 1,
+explanation: "Leaving land fallow allows it to naturally replenish nutrients, recover soil organic matter, and break pest and disease cycles."
+},
+{
+id: 25,
+question: "In which year was BINA constituted as a full-fledged national research institute through a presidential ordinance?",
+acceptedAnswers: ["1984", "১৯৮৪", "Nineteen eighty four", "nineteen eighty four"],
+marks: 1,
+explanation: "Though its foundation was laid earlier, BINA was constituted as an independent statutory research institute under the BINA Ordinance in 1984."
+},
+{
+id: 26,
+question: "What type of deep tillage is performed specifically to shatter compacted subsurface layers or hardpans without inverting the soil?",
+acceptedAnswers: ["Subsoiling", "subsoiling", "Sub-soiling", "সাবসয়েলিং"],
+marks: 1,
+explanation: "Subsoiling improves root penetration, aeration, and water infiltration by breaking up hardpans caused by continuous shallow tillage."
+},
+{
+id: 27,
+question: "Zero conditional sentences are primarily used to express general facts and scientific ___. (Fill in the blank)",
+acceptedAnswers: ["Truths", "truths", "Truth", "truth", "ট্রুথস"],
+marks: 1,
+explanation: "The zero conditional (If + present simple, present simple) is standard in English grammar for stating absolute truths and natural laws."
+},
+{
+id: 28,
+question: "What are undecomposed plant materials, primarily leguminous crops, called when incorporated into the soil to improve its fertility?",
+acceptedAnswers: ["Green manure", "green manure", "Green manuring", "green manuring", "সবুজ সার", "গ্রিন ম্যানিউর"],
+marks: 1,
+explanation: "Green manure crops like Sesbania (Dhaincha) are grown and ploughed back into the soil to add organic matter and fix atmospheric nitrogen."
+},
+{
+id: 29,
+question: "What is the practice of growing different types of crops sequentially in the same field across seasons to avoid depleting the soil called?",
+acceptedAnswers: ["Crop rotation", "crop rotation", "শস্য পর্যায়", "ক্রপ রোটেশন"],
+marks: 1,
+explanation: "Crop rotation mitigates soil erosion, improves soil structure, balances nutrient demands, and effectively interrupts pest and disease life cycles."
+},
+{
+id: 30,
+question: "চর্যাপদের ভাষাকে পণ্ডিতগণ আলো-আঁধারির মিশ্রণের কারণে কী ভাষা বলে আখ্যায়িত করেছেন?",
+acceptedAnswers: ["সান্ধ্য ভাষা", "সান্ধ্য", "Sandhya bhasha", "sandhya bhasha", "আলো-আঁধারি", "সন্ধ্যা ভাষা"],
+marks: 1,
+explanation: "চর্যাপদের ভাষায় কিছু অংশ স্পষ্ট এবং কিছু অংশ অস্পষ্ট হওয়ার কারণে হরপ্রসাদ শাস্ত্রী একে 'সান্ধ্য ভাষা' বা 'সন্ধ্যা ভাষা' নামে অভিহিত করেছেন।"
+},
+{
+id: 31,
+question: "Who invented the horse-drawn seed drill and is often associated with the foundation of modern tillage?",
+acceptedAnswers: ["Jethro Tull", "jethro tull", "জেথ্রো টাল"],
+marks: 1,
+explanation: "Jethro Tull was an English agricultural pioneer who perfected a horse-drawn seed drill in 1701 and advocated for thorough tillage."
+},
+{
+id: 32,
+question: "What is the specific wet tillage operation called that is done in standing water to prepare rice fields and reduce percolation losses?",
+acceptedAnswers: ["Puddling", "puddling", "কাদাময় করা", "পাডলিং"],
+marks: 1,
+explanation: "Puddling destroys soil structure to create a muddy, semi-liquid state which forms an impermeable layer, drastically reducing water loss through percolation in paddy fields."
+},
+{
+id: 33,
+question: "BINA focuses on the peaceful application of what kind of energy for agricultural advancement?",
+acceptedAnswers: ["Nuclear", "nuclear", "Nuclear energy", "nuclear energy", "পারমাণবিক"],
+marks: 1,
+explanation: "BINA applies nuclear techniques, specifically ionizing radiation, for mutation breeding to develop high-yielding and stress-tolerant crop varieties."
+},
+{
+id: 34,
+question: "The Kharif-II season in Bangladesh is predominantly dependent on which climatic phenomenon?",
+acceptedAnswers: ["Monsoon", "monsoon", "Monsoon rain", "monsoon rain", "Rainfall", "বৃষ্টিপাত", "মৌসুমি বায়ু"],
+marks: 1,
+explanation: "Kharif-II (mid-July to mid-October) is characterized by heavy rainfall and high humidity driven by the South-West monsoon."
+},
+{
+id: 35,
+question: "Which distinct cropping season in Bangladesh is characterized by low temperatures, clear skies, and low humidity?",
+acceptedAnswers: ["Rabi", "rabi", "রবি", "রবি মৌসুম", "Rabi season"],
+marks: 1,
+explanation: "The Rabi season spans from mid-October to mid-March, offering favorable conditions for crops like wheat, potato, mustard, and winter vegetables."
+},
+{
+id: 36,
+question: "In standard passive voice construction, what preposition usually introduces the agent (the doer of the action)?",
+acceptedAnswers: ["By", "by", "BY", "বাই"],
+marks: 1,
+explanation: "In English passive voice, the entity that performs the action is typically placed at the end of the clause as the object of the preposition 'by'."
+},
+{
+id: 37,
+question: "Which crop season in Bangladesh starts in mid-March and ends in mid-July, often facing pre-monsoon showers and drought spells?",
+acceptedAnswers: ["Kharif-1", "kharif-1", "Kharif-I", "kharif-I", "Kharif 1", "খরিফ-১", "Aus season"],
+marks: 1,
+explanation: "Kharif-I is a transitional season characterized by high temperatures and moderate to erratic rainfall, suitable for crops like Aus rice and Jute."
+},
+{
+id: 38,
+question: "What is the sowing method called where seeds are dropped directly into the main field instead of transplanting seedlings?",
+acceptedAnswers: ["Direct seeding", "direct seeding", "Direct sowing", "direct sowing", "সরাসরি বপন"],
+marks: 1,
+explanation: "Direct seeding skips the nursery preparation and transplanting phases, saving labor and time, though it requires robust weed management."
+},
+{
+id: 39,
+question: "What is the specially prepared small land area called where seeds are sown to raise seedlings for later transplanting?",
+acceptedAnswers: ["Nursery", "nursery", "Seedbed", "seedbed", "নার্সারি", "বীজতলা"],
+marks: 1,
+explanation: "A nursery or seedbed provides a controlled and highly managed environment to ensure optimal germination and early growth of delicate seedlings."
+},
+{
+id: 40,
+question: "মহামহোপাধ্যায় হরপ্রসাদ শাস্ত্রী কত সালে চর্যাপদ আবিষ্কার করেন?",
+acceptedAnswers: ["১৯০৭", "1907", "1907 সালে", "১৯০৭ সালে"],
+marks: 1,
+explanation: "মহামহোপাধ্যায় হরপ্রসাদ শাস্ত্রী ১৯০৭ সালে নেপালের রাজদরবারের গ্রন্থাগার থেকে চর্যাপদের পাণ্ডুলিপি আবিষ্কার করেন, যা ১৯১৬ সালে গ্রন্থাকারে প্রকাশিত হয়।"
+},
+{
+id: 41,
+question: "What is the intercultural practice of removing the terminal growing bud of crops like tobacco and cotton called?",
+acceptedAnswers: ["Topping", "topping", "Nipping", "nipping", "টপিং"],
+marks: 1,
+explanation: "Topping stimulates lateral branch development or redirects the plant's energy towards reproductive organs, improving yield and quality."
+},
+{
+id: 42,
+question: "What is the harvesting process in tobacco called where mature leaves are progressively plucked from the bottom upward?",
+acceptedAnswers: ["Priming", "priming", "প্রাইমিং"],
+marks: 1,
+explanation: "Priming ensures that only fully matured leaves are harvested sequentially as they ripen, maximizing the quality of the tobacco yield."
+},
+{
+id: 43,
+question: "What specific breeding technique does BINA primarily use to create genetic variations by exposing seeds to gamma rays?",
+acceptedAnswers: ["Mutation", "mutation", "Mutation breeding", "mutation breeding", "মিউটেশন"],
+marks: 1,
+explanation: "Mutation breeding uses chemical or physical mutagens like Gamma rays (from Cobalt-60) to induce favorable genetic changes in crop plants."
+},
+{
+id: 44,
+question: "What is the physiological process called by which plants lose water in the form of vapor through their stomata?",
+acceptedAnswers: ["Transpiration", "transpiration", "প্রস্বেদন", "ট্রান্সপিরেশন"],
+marks: 1,
+explanation: "Transpiration is crucial for cooling the plant and driving the ascent of sap from the roots, delivering water and minerals to the leaves."
+},
+{
+id: 45,
+question: "Which type of intercropping lacks a distinct row arrangement and involves mixing seeds of different crops before broadcasting?",
+acceptedAnswers: ["Mixed cropping", "mixed cropping", "Mixed", "mixed", "মিশ্র ফসল", "মিক্সড ক্রপিং"],
+marks: 1,
+explanation: "Mixed cropping minimizes the risk of total crop failure due to adverse weather or pests, commonly practiced by subsistence farmers."
+},
+{
+id: 46,
+question: "How many Agro-Ecological Sub-regions are established within the primary 30 AEZs of Bangladesh?",
+acceptedAnswers: ["88", "Eighty eight", "eighty eight", "৮৮", "অষ্টআশি"],
+marks: 1,
+explanation: "For more precise agricultural planning and localized management, the 30 major AEZs are further subdivided into 88 agro-ecological sub-regions."
+},
+{
+id: 47,
+question: "What is the amount of water required by a crop to complete its life cycle normally called?",
+acceptedAnswers: ["Water requirement", "water requirement", "পানির চাহিদা"],
+marks: 1,
+explanation: "Water requirement encompasses all water needed for evapotranspiration, metabolic activities, and unavoidable application losses during the crop's lifecycle."
+},
+{
+id: 48,
+question: "What term is used for crops that are grown strictly to be grazed by livestock or harvested as whole plants for animal feed?",
+acceptedAnswers: ["Forage", "forage", "Fodder", "fodder", "Forage crop", "পশুখাদ্য", "ফরেজ"],
+marks: 1,
+explanation: "Forage or fodder crops like Napier grass, alfalfa, and maize are essential components of sustainable livestock production systems."
+},
+{
+id: 49,
+question: "Which is the most extensively cultivated cereal crop in Bangladesh, dominating all three cropping seasons?",
+acceptedAnswers: ["Rice", "rice", "Paddy", "paddy", "ধান", "Oryza sativa"],
+marks: 1,
+explanation: "Rice is the staple food of Bangladesh and dictates the country's cropping patterns, primarily grown in Aus, Aman, and Boro seasons."
+},
+{
+id: 50,
+question: "What is the generic term for the artificial application of water to agricultural land to assist in crop production?",
+acceptedAnswers: ["Irrigation", "irrigation", "সেচ", "জলসেচ"],
+marks: 1,
+explanation: "Irrigation provides essential moisture for seed germination, nutrient uptake, and plant growth in areas or seasons with inadequate rainfall."
+},
+{
+id: 51,
+question: "What is the artificial removal of excess surface or groundwater from agricultural fields called?",
+acceptedAnswers: ["Drainage", "drainage", "নিষ্কাশন", "জল নিষ্কাশন"],
+marks: 1,
+explanation: "Proper drainage prevents waterlogging, which can cause root asphyxiation, nutrient leaching, and the buildup of toxic compounds in the soil."
+},
+{
+id: 52,
+question: "What specific critical growth stage in wheat requires the first and most important irrigation, usually 20-25 days after sowing?",
+acceptedAnswers: ["CRI", "cri", "Crown Root Initiation", "crown root initiation", "Crown root"],
+marks: 1,
+explanation: "Crown Root Initiation (CRI) is the most moisture-sensitive stage in wheat. Water stress at this stage drastically reduces tillering and final yield."
+},
+{
+id: 53,
+question: "What is the manual sowing method called where seeds are placed at specific depths and spacings using a pointed tool?",
+acceptedAnswers: ["Dibbling", "dibbling", "ডিবলিং"],
+marks: 1,
+explanation: "Dibbling requires less seed compared to broadcasting and ensures uniform plant geometry, although it is a labor-intensive sowing method."
+},
+{
+id: 54,
+question: "What is the practice of growing only a single crop species on the same piece of land year after year called?",
+acceptedAnswers: ["Monocropping", "monocropping", "Monoculture", "monoculture", "একক ফসল", "মনোক্রপিং"],
+marks: 1,
+explanation: "While monocropping simplifies management and mechanization, it can lead to soil degradation and increased vulnerability to specific pests."
+},
+{
+id: 55,
+question: "What is the basal portion of a crop stem called that remains rooted in the field after the harvest of the main plant?",
+acceptedAnswers: ["Stubble", "stubble", "খড়", "ন্যাড়া"],
+marks: 1,
+explanation: "Stubble can be incorporated into the soil to build organic matter, used as protective mulch, or grazed by livestock post-harvest."
+},
+{
+id: 56,
+question: "What is the uppermost layer of foliage formed by the crowns of plants in a crop field called?",
+acceptedAnswers: ["Canopy", "canopy", "ক্যানোপি"],
+marks: 1,
+explanation: "A dense crop canopy intercepts maximum sunlight for photosynthesis and shades out weeds, reducing soil moisture evaporation."
+},
+{
+id: 57,
+question: "Which tillage system completely avoids primary soil inversion, sowing seeds directly into the residue of the previous crop?",
+acceptedAnswers: ["Zero tillage", "zero tillage", "No-till", "no-till", "বিনা চাষ", "জিরো টিলেজ"],
+marks: 1,
+explanation: "Zero tillage is a cornerstone of conservation agriculture, preserving soil moisture, reducing erosion, and lowering fuel costs."
+},
+{
+id: 58,
+question: "What is the intercultural practice of selectively removing excess seedlings to maintain optimum plant population and spacing called?",
+acceptedAnswers: ["Thinning", "thinning", "থিনিং", "পাতলাকরণ"],
+marks: 1,
+explanation: "Thinning ensures that the remaining plants receive adequate sunlight, nutrients, and water, thereby maximizing individual plant vigor and yield."
+},
+{
+id: 59,
+question: "What is the downward movement of water through saturated soil called?",
+acceptedAnswers: ["Percolation", "percolation", "পারকোলেশন", "চুইয়ে পড়া"],
+marks: 1,
+explanation: "Percolation is the deep downward movement of water beyond the root zone, often carrying dissolved nutrients with it, causing leaching."
+},
+{
+id: 60,
+question: "Which branch of agriculture specifically deals with the principles and practices of soil management and crop production?",
+acceptedAnswers: ["Agronomy", "agronomy", "কৃষিতত্ত্ব", "এগ্রোনমি"],
+marks: 1,
+explanation: "Agronomy integrates sciences like soil science, genetics, and meteorology to improve farming techniques and maximize crop yield and sustainability."
+}
+]
 };
