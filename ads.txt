@@ -4,16 +4,16 @@
 # Contact: krisishikkha@gmail.com
 
 # Google AdSense (PRIMARY)
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-4083828255859107, DIRECT, f08c47fec0942fa0
 
 # Google AdMob (Optional - for mobile app monetization)
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# google.com, pub-4083828255859107, DIRECT, f08c47fec0942fa0
 
 # Google Ad Manager (Optional - for advanced ad management)
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# google.com, pub-4083828255859107, DIRECT, f08c47fec0942fa0
 
 # Google AdX (Optional - for premium advertisers)
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# google.com, pub-4083828255859107, DIRECT, f08c47fec0942fa0
 
 # ========================================
 # IMPORTANT INSTRUCTIONS:
