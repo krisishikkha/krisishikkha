@@ -4,7 +4,7 @@ var EXAM_BINA_SO_4 = {
 
     title: "BINA SO Exam – 04",
 
-    status: "live",   
+    status: "draft",   
 
     institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
 
