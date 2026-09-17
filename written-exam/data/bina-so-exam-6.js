@@ -431,4 +431,4 @@ var EXAM_BINA_SO_1 = {
             explanation: "A variety is a distinct plant type within a species that has specific characteristics distinguishing it from other varieties. It maintains these characteristics when reproduced and is a fundamental unit in crop improvement."
         }
     ]
-};
+}; 
