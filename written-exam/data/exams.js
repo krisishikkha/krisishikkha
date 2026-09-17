@@ -35,7 +35,7 @@ var EXAMS_REGISTRY = [
     {
         id: 'bina-so-exam-6',
         title: 'BINA SO Exam – 06',
-        file: 'bina-so-exam-06.js',
+        file: 'bina-so-exam-6.js',
         dataVar: 'EXAM_BINA_SO_6'
     },
     {
