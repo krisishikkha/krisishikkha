@@ -1,0 +1,383 @@
+{
+  "meta": {
+    "title": "BRRI Scientific Officer (SO) Recruitment Exam",
+    "institute": "Bangladesh Rice Research Institute (BRRI)",
+    "year": 2024,
+    "position": "Scientific Officer (SO)",
+    "totalQuestions": 46,
+    "type": "free",
+    "examDate": "2024",
+    "duration": "N/A",
+    "totalMarks": "N/A"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "written",
+      "question": "What are the principles of selection?",
+      "answer": "Variability, Heritability, Adequate population size, Selection intensity, Focus on economically important traits, Consistency and repetition, and Consideration of genotype-environment interaction.",
+      "explanation": "The main principles of selection in plant breeding are: Variability, Heritability, Adequate population size, Selection intensity, Focus on economically important traits, Consistency and repetition, and Consideration of genotype-environment interaction.\n\nনির্বাচনের মূল নীতিগুলো হলো: ভেদমান (Variability), বংশগতিযোগ্যতা (Heritability), পর্যাপ্ত জনসংখ্যা আকার, নির্বাচন তীব্রতা, অর্থনৈতিকভাবে গুরুত্বপূর্ণ বৈশিষ্ট্যের প্রতি মনোযোগ, ধারাবাহিকতা ও পুনরাবৃত্তি এবং জিনোটাইপ-পরিবেশ মিথস্ক্রিয়া বিবেচনা। উদ্ভিদ প্রজনন কর্মসূচিতে (যেমন BRRI-এর ধান জাত উন্নয়ন) এই নীতিগুলো অনুসরণ করে কাঙ্ক্ষিত বৈশিষ্ট্যসম্পন্ন জাত নির্বাচন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "written",
+      "question": "Rice improvement work started in this subcontinent in-",
+      "answer": "1910",
+      "explanation": "Formal rice improvement work was started in this subcontinent in 1910.\n\nএই উপমহাদেশে আনুষ্ঠানিক ধান উন্নয়ন কার্যক্রম শুরু হয় ১৯১০ সালে। এর পরবর্তীতে বিভিন্ন গবেষণা কেন্দ্র স্থাপনের মাধ্যমে (যেমন কটক, ভারত) ধানের জাত উন্নয়নের কাজ ধারাবাহিকভাবে এগিয়ে চলে, যা পরবর্তীতে বাংলাদেশে BRRI প্রতিষ্ঠার (১৯৭০) মাধ্যমে আরও ত্বরান্বিত হয়।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "written",
+      "question": "Define the term recalcitrant seeds.",
+      "answer": "Recalcitrant seeds are desiccation-sensitive seeds that cannot tolerate drying or freezing and hence cannot be stored for long periods in conventional seed banks.",
+      "explanation": "Recalcitrant seeds are seeds that cannot tolerate drying or freezing and are therefore desiccation-sensitive. They cannot be stored for long periods in conventional seed banks because they have a high moisture content at maturity and remain metabolically active. They often germinate shortly after shedding, and storage is typically limited to just a few days or weeks.\n\nরিক্যালসিট্রেন্ট বীজ হলো এমন বীজ যা শুকানো বা হিমায়িত অবস্থা সহ্য করতে পারে না, অর্থাৎ এরা আর্দ্রতা-সংবেদনশীল। এদের পরিপক্বতার সময় আর্দ্রতার পরিমাণ বেশি থাকে এবং বিপাকীয়ভাবে সক্রিয় থাকে বলে প্রচলিত বীজ ব্যাংকে দীর্ঘদিন সংরক্ষণ করা যায় না। উদাহরণ: রাবার, আম, কাঁঠাল, লিচু ইত্যাদির বীজ।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "written",
+      "question": "Dee-geo woo-gen, a dwarf variety containing dwarf gene is native from-",
+      "answer": "Taiwan",
+      "explanation": "The dwarf rice variety Dee-geo woo-gen, which contains the dwarfing gene sd1-d, is native to Taiwan. It was introduced to the International Rice Research Institute (IRRI) and used in breeding semi-dwarf, high-yielding varieties like the famous IR8.\n\nডি-জিও উ-জেন একটি বামন ধানের জাত যা sd1-d বামন জিন ধারণ করে এবং এটি তাইওয়ানের স্থানীয় জাত। এটি আন্তর্জাতিক ধান গবেষণা ইনস্টিটিউট (IRRI)-তে সংগ্রহ করে বিশ্বখ্যাত অর্ধ-বামন উচ্চফলনশীল জাত IR8 তৈরিতে ব্যবহার করা হয়, যা 'সবুজ বিপ্লবের' সূচনা করে।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "written",
+      "question": "What are the production factors?",
+      "answer": "Land, Labor, Capital, and Entrepreneurship.",
+      "explanation": "Factors of Production are the basic inputs used to produce goods and services, traditionally grouped into four categories: 1. Land - all natural resources (soil, water, minerals, forests, fisheries) which is fixed in supply; 2. Labor - human physical and mental effort, including skilled, unskilled, and professional workers; 3. Capital - man-made resources (machines, tools, buildings, equipment) that increase productivity; 4. Entrepreneurship - the ability to organize land, labor and capital, involving risk-taking, innovation, and decision-making.\n\nউৎপাদনের উপকরণ চারটি: ১. ভূমি- প্রাকৃতিক সম্পদ (মাটি, পানি, খনিজ) যার সরবরাহ সীমিত; ২. শ্রম- মানুষের শারীরিক ও মানসিক পরিশ্রম; ৩. পুঁজি- মানবসৃষ্ট সম্পদ (যন্ত্রপাতি, ভবন) যা উৎপাদনশীলতা বাড়ায়; ৪. উদ্যোক্তা- যিনি ভূমি, শ্রম ও পুঁজি সংগঠিত করে ঝুঁকি নিয়ে সিদ্ধান্ত নেন। কৃষি অর্থনীতিতে এই চারটি উপকরণ একত্রে কাজ করে উৎপাদন সম্পন্ন হয়।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "written",
+      "question": "Crossing over takes place in which stage of meiosis?",
+      "answer": "Pachytene stage of Prophase-I",
+      "explanation": "Crossing over takes place at the Pachytene stage of Prophase-I of meiosis.\n\nমিয়োসিসের প্রফেজ-১ এর প্যাকাইটিন উপ-পর্যায়ে ক্রসিং ওভার সংঘটিত হয়। এই পর্যায়ে হোমোলগাস ক্রোমোজোমের নন-সিস্টার ক্রোমাটিডের মধ্যে জিন বিনিময় ঘটে, যা জেনেটিক ভেরিয়েশন সৃষ্টির প্রধান কারণ এবং উদ্ভিদ প্রজননে নতুন জিন সংমিশ্রণ তৈরিতে গুরুত্বপূর্ণ ভূমিকা পালন করে।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "written",
+      "question": "What are the basic components of soil texture?",
+      "answer": "Sand, Silt and Clay.",
+      "explanation": "The basic components of soil texture are: Sand, Silt and Clay.\n\nমাটির গঠন (Soil Texture) নির্ধারণের মূল উপাদান তিনটি: বালি (Sand), পলি (Silt) এবং কাদা (Clay)। এই তিনটি উপাদানের অনুপাতের ভিত্তিতে মাটিকে বিভিন্ন শ্রেণিতে (যেমন দোআঁশ, বেলে দোআঁশ, এঁটেল) ভাগ করা হয়, যা মাটির পানি ধারণক্ষমতা ও উর্বরতা নির্ধারণে গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "written",
+      "question": "Those nutrients required by plants in concentration exceeding _______ ppm is termed as macronutrients.",
+      "answer": "1000 ppm",
+      "explanation": "Nutrients required by plants in concentration exceeding 1000 ppm are termed macronutrients.\n\nউদ্ভিদের জন্য যেসব পুষ্টি উপাদান ১০০০ পিপিএম-এর বেশি প্রয়োজন হয় তাদের ম্যাক্রোনিউট্রিয়েন্ট বা প্রধান পুষ্টি উপাদান বলা হয়। উদাহরণ- নাইট্রোজেন, ফসফরাস, পটাশিয়াম, ক্যালসিয়াম, ম্যাগনেসিয়াম ও সালফার। এর কম প্রয়োজনীয় উপাদানগুলোকে মাইক্রোনিউট্রিয়েন্ট বলা হয়, যেমন- জিংক, বোরন, আয়রন।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "written",
+      "question": "Intermediate stage of order Diptera is-",
+      "answer": "Pupal Stage",
+      "explanation": "The intermediate stage of order Diptera is the Pupal Stage.\n\nডিপ্টেরা বর্গের পতঙ্গের মধ্যবর্তী স্তর হলো পিউপাল স্টেজ। ডিপ্টেরা বর্গের পতঙ্গ সম্পূর্ণ রূপান্তর (Complete Metamorphosis) প্রক্রিয়ায় জীবনচক্র সম্পন্ন করে, যার ধাপগুলো হলো- ডিম, লার্ভা, পিউপা এবং পূর্ণাঙ্গ পতঙ্গ। উদাহরণ- মশা, মাছি।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "written",
+      "question": "What are the yield components of rice?",
+      "answer": "1. Number of panicles per unit area 2. Number of grains per panicle 3. Percentage of filled grains 4. 1000-grain weight.",
+      "explanation": "Yield components of rice are four: 1. Number of panicles per unit area, 2. Number of grains per panicle, 3. Percentage of filled grains, 4. 1000-grain weight.\n\nধানের ফলন উপাদান চারটি: ১. একক জমিতে শীষের সংখ্যা, ২. প্রতি শীষে দানার সংখ্যা, ৩. পূর্ণ (ভরাট) দানার শতকরা হার, এবং ৪. ১০০০ দানার ওজন। এই চারটি উপাদানের গুণফল থেকেই মূলত ধানের প্রকৃত ফলন নির্ধারিত হয়, যা ফসল বিজ্ঞানে ফলন বিশ্লেষণের ভিত্তি।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "written",
+      "question": "Write down the bases of RNA.",
+      "answer": "Adenine (A), Guanine (G), Cytosine (C), and Uracil (U).",
+      "explanation": "The four bases of RNA are adenine (A), guanine (G), cytosine (C), and uracil (U).\n\nআরএনএ-এর চারটি বেস হলো- অ্যাডেনিন (A), গুয়ানিন (G), সাইটোসিন (C) এবং ইউরাসিল (U)। ডিএনএ-তে থাইমিন (T) থাকে, কিন্তু আরএনএ-তে থাইমিনের পরিবর্তে ইউরাসিল থাকে- এটি ডিএনএ ও আরএনএ-এর মধ্যে একটি গুরুত্বপূর্ণ পার্থক্য।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "written",
+      "question": "Yield of BRRI dhan92 is 15 kg at 20% moisture content in an area of 20 m². What is the yield of BRRI dhan92 at 14% MC?",
+      "answer": "13.95 kg (in 20 m² area)",
+      "explanation": "Moisture Correction Formula: W2 = W1 × (100 - M1) / (100 - M2)\n\nwhere, W1 = Initial weight = 15 kg, M1 = Initial moisture content = 20%, M2 = Final moisture content = 14%.\n\nStep 1: 100 - 20 = 80\nStep 2: 100 - 14 = 86\nStep 3: W2 = 15 × 80 / 86\nStep 4: 15 × 80 = 1200\nStep 5: 1200 / 86 = 13.95 kg\n\nসুতরাং, ২০ বর্গমিটার এলাকায় ১৪% আর্দ্রতায় BRRI dhan92-এর ফলন হবে ১৩.৯৫ কেজি।\n\nআর্দ্রতা সংশোধন সূত্র (Moisture Correction Formula) ব্যবহার করে বীজ বা ফসলের ওজন এক আর্দ্রতা মাত্রা থেকে অন্য আর্দ্রতা মাত্রায় রূপান্তর করা হয়। এই সূত্রটি ধান গবেষণায় ফলন তুলনা ও প্রমিতকরণের জন্য অত্যন্ত গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "written",
+      "question": "When is RCB design used in an experiment?",
+      "answer": "RCB design is used when there is variability in the experimental field, treatments are few and can be included in every block, and precision needs to be increased.",
+      "explanation": "RCB design (Randomized Complete Block Design) is used when: 1. There is variability in the experimental field (the field is not uniform in soil fertility, moisture, slope, shade, etc.); 2. Treatments are few and can be included in every block (each block contains all treatments once); 3. To increase precision of the experiment.\n\nRCB ডিজাইন তখন ব্যবহার করা হয় যখন: ১. পরীক্ষার জমিতে অসমতা থাকে (মাটির উর্বরতা, আর্দ্রতা, ঢাল বা ছায়ার তারতম্য), ২. চিকিৎসার (treatment) সংখ্যা কম থাকে এবং প্রতিটি ব্লকে সবগুলো চিকিৎসা রাখা সম্ভব হয়, ৩. পরীক্ষার নির্ভুলতা (precision) বাড়ানোর প্রয়োজন হয়। কৃষি গবেষণায় এটি সবচেয়ে বেশি ব্যবহৃত পরীক্ষণ নকশা।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "written",
+      "question": "What is DUS Test?",
+      "answer": "DUS Test means Distinctness, Uniformity and Stability Test, used mainly for variety registration.",
+      "explanation": "A DUS Test is a scientific examination of a new plant variety to ensure that it is: 1. Distinct - clearly different from all existing varieties; 2. Uniform - plants of the variety show consistent characteristics; 3. Stable - characteristics remain unchanged over successive generations.\n\nDUS টেস্ট মানে Distinctness (স্বতন্ত্রতা), Uniformity (সমরূপতা) এবং Stability (স্থিতিশীলতা) পরীক্ষা। নতুন উদ্ভাবিত জাতের জাত নিবন্ধন (Variety Registration) ও মেধাস্বত্ব সুরক্ষার জন্য এই পরীক্ষা করা হয়। বাংলাদেশে জাত নিবন্ধনের ক্ষেত্রে জাতীয় বীজ বোর্ড এই পরীক্ষার মাধ্যমে নতুন জাতের অনুমোদন দেয়।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "written",
+      "question": "The Apical Dominance occurs due to the presence of-",
+      "answer": "Plant hormone Auxin",
+      "explanation": "Apical dominance occurs due to the presence of the plant hormone Auxin.\n\nউদ্ভিদের এপিক্যাল ডমিন্যান্স (শীর্ষ প্রভাবশীলতা) ঘটে অক্সিন হরমোনের উপস্থিতির কারণে। অক্সিন শীর্ষমুকুল থেকে উৎপন্ন হয়ে পার্শ্বমুকুলের বৃদ্ধি দমন করে, ফলে গাছ প্রধানত লম্বালম্বিভাবে বৃদ্ধি পায়। শীর্ষমুকুল ছেঁটে ফেললে অক্সিনের প্রভাব কমে গিয়ে পার্শ্বমুকুল বৃদ্ধি পেতে শুরু করে।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "written",
+      "question": "Define co-dominance.",
+      "answer": "When both alleles are expressed equally in a heterozygote, it is called codominance (e.g., human AB blood group).",
+      "explanation": "When both alleles are expressed equally in a heterozygote, it is called codominance. There is no blending; both traits appear side by side. Example: Human AB blood group (IA IB). Allele IA produces A antigen (A blood group), and IB produces B antigen (B blood group). F1: IA IB individuals express both A and B antigens, giving the AB blood group.\n\nকোডোমিন্যান্স বলতে বোঝায় যখন একজন হেটেরোজাইগোট ব্যক্তির মধ্যে দুটি অ্যালিলই সমানভাবে প্রকাশিত হয়, কোনো মিশ্রণ ঘটে না, বরং উভয় বৈশিষ্ট্য পাশাপাশি প্রকাশ পায়। উদাহরণ- মানুষের AB রক্তের গ্রুপ, যেখানে IA ও IB উভয় অ্যালিলই যথাক্রমে A ও B অ্যান্টিজেন উৎপন্ন করে।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "written",
+      "question": "What is linkage?",
+      "answer": "Linkage is the tendency of genes located close together on the same chromosome to be inherited together during meiosis.",
+      "explanation": "Linkage is the tendency of genes located close together on the same chromosome to be inherited together during meiosis.\n\nলিংকেজ বলতে বোঝায় একই ক্রোমোজোমে কাছাকাছি অবস্থিত জিনগুলোর একত্রে বংশগতির মাধ্যমে স্থানান্তরিত হওয়ার প্রবণতা। কাছাকাছি অবস্থিত জিনগুলোর মধ্যে ক্রসিং ওভারের সম্ভাবনা কম থাকায় তারা সাধারণত একসাথে পরবর্তী প্রজন্মে যায়, যা মেন্ডেলের স্বাধীন বিন্যাস সূত্রের ব্যতিক্রম হিসেবে বিবেচিত হয়।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "written",
+      "question": "What is Central Dogma?",
+      "answer": "Central Dogma explains the flow of genetic information: DNA → RNA → Protein.",
+      "explanation": "Central Dogma explains the flow of genetic information in biological systems: DNA → RNA → Protein.\n\nসেন্ট্রাল ডগমা জীবজগতের জেনেটিক তথ্য প্রবাহের প্রক্রিয়া ব্যাখ্যা করে: DNA থেকে RNA (ট্রান্সক্রিপশন) এবং RNA থেকে প্রোটিন (ট্রান্সলেশন) তৈরি হয়। ১৯৫৮ সালে ফ্রান্সিস ক্রিক এই তত্ত্ব প্রথম প্রস্তাব করেন, যা আণবিক জীববিজ্ঞানের একটি মৌলিক নীতি।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "written",
+      "question": "Define Cistron.",
+      "answer": "A functional unit of DNA that codes for a single polypeptide (gene); it is the smallest functional unit of a gene that can produce a specific protein.",
+      "explanation": "A Cistron is a functional unit of DNA that codes for a single polypeptide (gene). A cistron is the smallest functional unit of a gene that can produce a specific protein.\n\nসিস্ট্রন হলো DNA-এর একটি কার্যকরী একক যা একটি নির্দিষ্ট পলিপেপটাইড (জিন) সংকেতায়ন করে। এটি জিনের ক্ষুদ্রতম কার্যকরী একক যা নির্দিষ্ট একটি প্রোটিন উৎপাদন করতে পারে। জিনতত্ত্বে সিস্ট্রন, মিউটন ও রেকন- এই তিনটি ধারণা জিনের কার্যকরী গঠন বিশ্লেষণে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "written",
+      "question": "What is double haploid?",
+      "answer": "A double haploid is a fully homozygous diploid plant created by chromosome doubling of a haploid plant.",
+      "explanation": "A double haploid is a fully homozygous diploid plant created by chromosome doubling of a haploid plant.\n\nডাবল হ্যাপ্লয়েড হলো এমন একটি সম্পূর্ণ হোমোজাইগাস ডিপ্লয়েড উদ্ভিদ, যা একটি হ্যাপ্লয়েড উদ্ভিদের ক্রোমোজোম সংখ্যা দ্বিগুণ করে তৈরি করা হয়। এই পদ্ধতি (যেমন এন্থার কালচার) ব্যবহার করে দ্রুত সময়ে সম্পূর্ণ খাঁটি (pure line) জাত তৈরি করা যায়, যা প্রচলিত পদ্ধতিতে ৬-৭ প্রজন্ম সময় নিতে পারে।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "written",
+      "question": "What is physiological race?",
+      "answer": "A physiological race is a subgroup of a pathogen species that differs in its ability to infect different varieties of the same host plant.",
+      "explanation": "A physiological race is a subgroup of a pathogen species that differs in its ability to infect different varieties of the same host plant.\n\nফিজিওলজিক্যাল রেস হলো কোনো প্যাথোজেন প্রজাতির এমন একটি উপগোষ্ঠী, যা একই পোষক উদ্ভিদের বিভিন্ন জাতকে সংক্রমিত করার ক্ষমতায় ভিন্নতা প্রদর্শন করে। উদাহরণস্বরূপ, ধানের ব্লাস্ট রোগের জীবাণু (Magnaporthe oryzae)-এর বিভিন্ন ফিজিওলজিক্যাল রেস বিভিন্ন প্রতিরোধী জাতকে ভিন্নভাবে আক্রমণ করে, যা প্রতিরোধী জাত উদ্ভাবনে গুরুত্বপূর্ণ বিবেচ্য বিষয়।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "written",
+      "question": "Scientific name of root knot nematode?",
+      "answer": "Meloidogyne spp. (e.g., Meloidogyne incognita, Meloidogyne javanica, Meloidogyne graminicola).",
+      "explanation": "Meloidogyne spp. is the genus known as root-knot nematodes. Specific species include Meloidogyne incognita, Meloidogyne javanica, and Meloidogyne graminicola (which specifically attacks rice).\n\nরুট নট নেমাটোডের বৈজ্ঞানিক নাম Meloidogyne গণের অন্তর্ভুক্ত, যেমন- Meloidogyne incognita, Meloidogyne javanica এবং Meloidogyne graminicola। এদের মধ্যে Meloidogyne graminicola প্রধানত ধান গাছে আক্রমণ করে শিকড়ে গিঁট সৃষ্টি করে, যার ফলে গাছের পুষ্টি ও পানি শোষণ ব্যাহত হয়ে ফলন কমে যায়।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "written",
+      "question": "Define the term pandemic.",
+      "answer": "Pandemic is the epidemic that occurs over a continent and causes much mortality, e.g., late blight of potato.",
+      "explanation": "Pandemic: The epidemic that occurs over a continent and causes much mortality. Example - Late blight of potato.\n\nপ্যানডেমিক হলো এমন এক মহামারী যা একটি মহাদেশ জুড়ে বিস্তার লাভ করে এবং ব্যাপক ক্ষতি বা মৃত্যুর কারণ হয়। উদাহরণ- আলুর লেট ব্লাইট রোগ, যা ১৯৪০-এর দশকে আয়ারল্যান্ডের দুর্ভিক্ষের কারণ হয়েছিল। রোগবিস্তারের ব্যাপ্তি অনুযায়ী রোগকে এনডেমিক, এপিডেমিক ও প্যানডেমিক- এই তিন ভাগে ভাগ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "written",
+      "question": "Define Bacteriophage.",
+      "answer": "A bacteriophage is a virus that infects and multiplies within bacteria.",
+      "explanation": "A bacteriophage is a virus that infects and multiplies within bacteria. It attaches to bacterial cells, injects its genetic material, and uses the bacterial machinery to reproduce. Example: T2, T4, T6 phages infect Escherichia coli (E. coli).\n\nব্যাকটেরিওফাজ হলো এমন একটি ভাইরাস যা ব্যাকটেরিয়াকে সংক্রমিত করে এবং তার ভেতরে বংশবৃদ্ধি করে। এটি ব্যাকটেরিয়া কোষের সাথে যুক্ত হয়ে নিজের জিনগত উপাদান প্রবেশ করায় এবং ব্যাকটেরিয়ার কোষযন্ত্র ব্যবহার করে বংশবিস্তার করে। উদাহরণ- T2, T4, T6 ফাজ, যা Escherichia coli (E. coli) ব্যাকটেরিয়াকে সংক্রমিত করে।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "written",
+      "question": "What is mycorrhizae?",
+      "answer": "Mycorrhizae are a symbiotic association between a fungus and the roots of a plant, where both organisms benefit. Types: Ectomycorrhiza and Endomycorrhiza (Arbuscular mycorrhiza).",
+      "explanation": "Mycorrhizae are a symbiotic association between a fungus and the roots of a plant, where both organisms benefit. Types of Mycorrhizae: 1. Ectomycorrhiza - the fungus surrounds the root but does not penetrate root cells, common in trees like pine, oak, eucalyptus. 2. Endomycorrhiza (Arbuscular mycorrhiza) - the fungus penetrates root cells and forms structures like arbuscules or vesicles, common in crops like maize, rice, wheat, and legumes.\n\nমাইকোরাইজা হলো ছত্রাক ও উদ্ভিদের শিকড়ের মধ্যে একটি সহাবস্থানমূলক সম্পর্ক, যেখানে উভয়েই উপকৃত হয়। প্রকারভেদ: ১. এক্টোমাইকোরাইজা- ছত্রাক শিকড়কে ঘিরে থাকে কিন্তু কোষের ভেতরে প্রবেশ করে না (পাইন, ওক গাছে দেখা যায়); ২. এন্ডোমাইকোরাইজা (আরবাসকুলার মাইকোরাইজা)- ছত্রাক শিকড় কোষের ভেতরে প্রবেশ করে আরবাসকুল বা ভেসিকল তৈরি করে (ভুট্টা, ধান, গম, ডাল ফসলে সাধারণ)। মাইকোরাইজা উদ্ভিদের ফসফরাসসহ অন্যান্য পুষ্টি শোষণে সহায়তা করে।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "written",
+      "question": "Define cropping index.",
+      "answer": "Cropping Intensity (%) = (Total Cropped Area / Net Cropped Area) × 100.",
+      "explanation": "Cropping Intensity/Cropping Index is the number of crops grown on the same piece of land during a year, expressed as a percentage of the net sown area. Cropping Intensity (%) = (Total Cropped Area / Net Cropped Area) × 100.\n\nক্রপিং ইনটেনসিটি বা ক্রপিং ইনডেক্স হলো একই জমিতে এক বছরে যতগুলো ফসল উৎপাদিত হয় তার শতকরা হার, যা নিট চাষকৃত জমির সাপেক্ষে হিসাব করা হয়। সূত্র: ক্রপিং ইনটেনসিটি (%) = (মোট ফসলি জমি / নিট ফসলি জমি) × ১০০। বাংলাদেশে জমির স্বল্পতার কারণে ক্রপিং ইনটেনসিটি বাড়ানো খাদ্য নিরাপত্তার জন্য অত্যন্ত গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "written",
+      "question": "Define relay cropping.",
+      "answer": "Relay cropping is a practice where a second crop is sown into a standing first crop before it is harvested, so both crops overlap for a short period.",
+      "explanation": "Relay cropping is an agricultural practice where a second crop is sown into a standing (still growing) first crop before it is harvested, so that both crops overlap for a short period.\n\nরিলে ক্রপিং হলো এমন একটি চাষ পদ্ধতি যেখানে প্রথম ফসল কাটার আগেই দ্বিতীয় ফসলের বীজ বপন করা হয়, ফলে কিছু সময়ের জন্য দুটি ফসল একসাথে জমিতে থাকে। এই পদ্ধতি জমির সর্বোচ্চ ব্যবহার নিশ্চিত করে এবং ফসলের নিবিড়তা (cropping intensity) বৃদ্ধি করে। বাংলাদেশে ধান-সরিষা বা ধান-মসুর রিলে পদ্ধতিতে চাষ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "written",
+      "question": "Write down the name of the first zinc-enriched rice variety in the world.",
+      "answer": "BRRI dhan62",
+      "explanation": "BRRI dhan62 is the first zinc-enriched rice variety in the world.\n\nBRRI dhan62 বিশ্বের প্রথম জিংক সমৃদ্ধ ধানের জাত, যা ২০১৩ সালে বাংলাদেশ ধান গবেষণা ইনস্টিটিউট (BRRI) কর্তৃক উদ্ভাবিত ও অবমুক্ত করা হয়। এটি আউশ মৌসুমের একটি স্বল্পজীবনকালীন জাত, যাতে সাধারণ জাতের তুলনায় বেশি পরিমাণে জিংক থাকে, যা মানুষের জিংকের ঘাটতি পূরণে সহায়ক। এরপর BRRI আরও কয়েকটি জিংক সমৃদ্ধ জাত (যেমন BRRI dhan72, BRRI dhan74, BRRI dhan84, BRRI dhan100, BRRI dhan102) উদ্ভাবন করেছে।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "written",
+      "question": "What is stridulatory organ?",
+      "answer": "A specialized body part found in many animals like insects, spiders, and snakes, that produces sound when rubbed together.",
+      "explanation": "A stridulatory organ is a specialized body part, found in many animals like insects, spiders, and snakes, that produces sound when rubbed together.\n\nস্ট্রিডুলেটরি অর্গান হলো পতঙ্গ, মাকড়সা ও সাপসহ বিভিন্ন প্রাণীর দেহের একটি বিশেষায়িত অংশ, যা একে অপরের সাথে ঘর্ষণের মাধ্যমে শব্দ উৎপন্ন করে। উদাহরণ- ঝিঁঝিঁ পোকা ও ফড়িং তাদের পাখা বা পা ঘষে শব্দ তৈরি করে, যা মূলত সঙ্গী আকর্ষণ বা বিপদ সংকেত প্রদানে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "written",
+      "question": "Which hormone is responsible for fruit ripening?",
+      "answer": "Ethylene",
+      "explanation": "Ethylene is responsible for fruit ripening.\n\nইথিলিন হরমোন ফল পাকাতে দায়ী। এটি একটি গ্যাসীয় উদ্ভিদ হরমোন, যা ফলের শ্বসন হার বৃদ্ধি করে (Climacteric রেসপিরেশন) এবং ফলের রঙ, গন্ধ ও নরমতা পরিবর্তনে ভূমিকা রাখে। কৃত্রিমভাবে ফল পাকাতে ইথিফন (ইথিলিন উৎপাদনকারী রাসায়নিক) ব্যবহার করা হয়।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "written",
+      "question": "Define parthenogenesis.",
+      "answer": "Parthenogenesis is a type of apomixis where an embryo develops directly from the egg without fertilization.",
+      "explanation": "Parthenogenesis is a type of apomixis where the egg cell helps in the development of an embryo. The embryo is formed directly from the egg without the fertilization process. It is typical among single-celled organisms and some animals and plants. Organisms with no sex chromosomes can also reproduce by parthenogenesis.\n\nপার্থেনোজেনেসিস হলো অ্যাপোমিক্সিসের একটি প্রকার, যেখানে নিষেকের প্রক্রিয়া ছাড়াই সরাসরি ডিম্বাণু থেকে ভ্রূণ তৈরি হয়। এটি এককোষী জীব এবং কিছু প্রাণী ও উদ্ভিদের মধ্যে সাধারণ। লিঙ্গ ক্রোমোজোমবিহীন জীবও পার্থেনোজেনেসিসের মাধ্যমে প্রজনন করতে পারে। উদাহরণ- মৌমাছি, কিছু টিকটিকি ও উদ্ভিদ প্রজাতি।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "written",
+      "question": "What is hyperparasite?",
+      "answer": "A hyperparasite is an organism that parasitizes another parasite.",
+      "explanation": "A hyperparasite is an organism that parasitizes another parasite.\n\nহাইপারপ্যারাসাইট হলো এমন একটি জীব যা অন্য একটি পরজীবীকে পরজীবী হিসেবে আক্রমণ করে। এটি জৈবিক নিয়ন্ত্রণে (Biological Control) গুরুত্বপূর্ণ ভূমিকা রাখে, কারণ এটি ক্ষতিকর পরজীবীর জনসংখ্যা প্রাকৃতিকভাবে নিয়ন্ত্রণ করতে সহায়তা করে।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "written",
+      "question": "What is bulk density?",
+      "answer": "Mass of dry soil (solids + pore space) per unit volume is called bulk density.",
+      "explanation": "Bulk density is the mass of dry soil (solids + pore space) per unit volume.\n\nবাল্ক ডেনসিটি হলো শুষ্ক মাটির (কঠিন কণা ও ছিদ্রের স্থানসহ) একক আয়তনে ভর। এটি মাটির সংকোচন, বায়ু চলাচল ও শিকড়ের বৃদ্ধি নির্ণয়ে গুরুত্বপূর্ণ সূচক। সাধারণত এঁটেল মাটির বাল্ক ডেনসিটি কম এবং বেলে মাটির বাল্ক ডেনসিটি বেশি হয়।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "written",
+      "question": "Define soil consistency.",
+      "answer": "Soil consistency refers to the strength and nature of the forces that hold soil particles together and determine the soil's resistance to deformation and rupture.",
+      "explanation": "Soil consistency refers to the strength and nature of the forces that hold soil particles together and determine the soil's resistance to deformation and rupture.\n\nসয়েল কনসিসটেন্সি বলতে মাটির কণাগুলোকে একত্রে ধরে রাখার শক্তি ও প্রকৃতি বোঝায়, যা মাটির আকৃতি পরিবর্তন ও ভাঙনের প্রতিরোধ ক্ষমতা নির্ধারণ করে। এটি সাধারণত মাটির আর্দ্রতার অবস্থার (শুষ্ক, ভেজা, আর্দ্র) উপর নির্ভর করে পরিমাপ করা হয় এবং কৃষিকাজে জমি চাষের উপযুক্ত সময় নির্ধারণে সহায়ক।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "written",
+      "question": "What is particle density?",
+      "answer": "Mass of soil solids only per unit volume is called particle density.",
+      "explanation": "Particle density is the mass of soil solids only per unit volume.\n\nপার্টিকেল ডেনসিটি হলো মাটির শুধুমাত্র কঠিন কণার একক আয়তনে ভর (ছিদ্রের স্থান বাদে)। সাধারণত খনিজ মাটির পার্টিকেল ডেনসিটি প্রায় ২.৬৫ গ্রাম/সেমি³ হয়ে থাকে। বাল্ক ডেনসিটি ও পার্টিকেল ডেনসিটি ব্যবহার করে মাটির ছিদ্রতা (Porosity) নির্ণয় করা হয়।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "written",
+      "question": "What is log frame?",
+      "answer": "A Log Frame (Logical Framework) is a planning and management tool used to design, monitor, and evaluate development projects or research and extension activities.",
+      "explanation": "A Log Frame, or Logical Framework, is a planning and management tool used to design, monitor, and evaluate development projects/Research & Extension Activities. It presents a project in a structured table showing: Goal (overall objective), Purpose/Outcome, Outputs, Activities, Indicators, Means of verification, and Assumptions/Risks.\n\nলগ ফ্রেম বা লজিক্যাল ফ্রেমওয়ার্ক একটি পরিকল্পনা ও ব্যবস্থাপনা টুল, যা উন্নয়ন প্রকল্প বা গবেষণা ও সম্প্রসারণ কার্যক্রম নকশা, পর্যবেক্ষণ ও মূল্যায়নে ব্যবহৃত হয়। এতে লক্ষ্য (Goal), উদ্দেশ্য (Purpose), ফলাফল (Outputs), কার্যক্রম (Activities), সূচক (Indicators), যাচাইয়ের মাধ্যম এবং অনুমান/ঝুঁকি- এই উপাদানগুলো কাঠামোবদ্ধভাবে উপস্থাপন করা হয়। কৃষি গবেষণা প্রকল্প প্রস্তাবনায় এটি ব্যাপকভাবে ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "written",
+      "question": "Define gene stacking.",
+      "answer": "Gene stacking is the process of combining two or more desirable genes into a single plant variety to provide multiple beneficial traits.",
+      "explanation": "Gene stacking is the process of combining two or more desirable genes into a single plant variety to provide multiple beneficial traits, such as disease resistance, insect resistance, or stress tolerance.\n\nজিন স্ট্যাকিং হলো একটি একক উদ্ভিদ জাতে দুই বা ততোধিক কাঙ্ক্ষিত জিন সংযুক্ত করার প্রক্রিয়া, যাতে একসাথে একাধিক উপকারী বৈশিষ্ট্য (যেমন রোগ প্রতিরোধ, পোকা প্রতিরোধ, বা প্রতিকূলতা সহনশীলতা) পাওয়া যায়। জিন স্ট্যাকিং প্রচলিত প্রজনন পদ্ধতি বা জিনগত প্রকৌশল (Genetic Engineering) উভয়ের মাধ্যমেই করা যায়।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "written",
+      "question": "What is bakanae?",
+      "answer": "Bakanae is a seed-borne fungal disease of rice, also known as 'foolish seedling' disease, caused by Gibberella fujikuroi (Fusarium fujikuroi).",
+      "explanation": "Bakanae is a seed-borne fungal disease of rice plants, also known as 'foolish seedling' disease, caused by the fungus Gibberella fujikuroi (anamorph Fusarium fujikuroi). It causes infected plants to grow unusually tall, thin, and pale, often leading to poor grain yield or seedling death.\n\nবাকানে রোগ ধানের একটি বীজবাহিত ছত্রাকজনিত রোগ, যা 'ফুলিশ সিডলিং' রোগ নামেও পরিচিত এবং Gibberella fujikuroi (Fusarium fujikuroi) ছত্রাক দ্বারা সৃষ্ট হয়। আক্রান্ত গাছ স্বাভাবিকের চেয়ে অস্বাভাবিকভাবে লম্বা, সরু ও ফ্যাকাশে হয়ে যায় এবং অনেক সময় চারা মারা যায় বা ফলন কমে যায়। এই ছত্রাক অতিরিক্ত জিব্বেরেলিন হরমোন তৈরি করে বলে গাছ অস্বাভাবিক লম্বা হয়।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "written",
+      "question": "What is the difference between parasites and parasitoids?",
+      "answer": "A parasite feeds on a single host without immediately killing it, while a parasitoid develops inside/on a host and eventually kills it.",
+      "explanation": "Difference between parasites and parasitoids:\n\n• Definition: Parasite - an organism that feeds on a host without immediately killing it; Parasitoid - an organism that develops inside/on a host and eventually kills it.\n• Number of Hosts: Parasite - usually one host throughout life; Parasitoid - one host per life cycle.\n• Effect on Host: Parasite - usually does not kill the host (may weaken it); Parasitoid - host is eventually killed.\n• Examples: Parasite - lice, ticks, aphids on plants; Parasitoid - braconid wasps (lay eggs in caterpillars), tachinid flies.\n• Use in Biological Control: Parasite - weakens host populations; Parasitoid - kills pests efficiently, hence more effective as a biocontrol agent.\n\nপরজীবী (Parasite) হলো এমন জীব যা পোষককে সরাসরি মেরে না ফেলে দীর্ঘদিন খাদ্য গ্রহণ করে (যেমন উকুন, টিক), অন্যদিকে প্যারাসাইটয়েড (Parasitoid) পোষকের দেহে বা দেহে বৃদ্ধি পেয়ে শেষ পর্যন্ত পোষককে মেরে ফেলে (যেমন ব্র্যাকোনিড বোলতা)। জৈবিক পোকা দমনে প্যারাসাইটয়েড বেশি কার্যকর কারণ এটি ক্ষতিকর পোকা সরাসরি ধ্বংস করে।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "written",
+      "question": "Write the chemical group of deltamethrin and fenvalerate.",
+      "answer": "Both are Type-II synthetic pyrethroid insecticides.",
+      "explanation": "Both deltamethrin and fenvalerate are Type-II synthetic pyrethroid insecticides, widely used in agriculture and public health.\n\nডেল্টামেথ্রিন এবং ফেনভ্যালারেট উভয়ই টাইপ-II সিন্থেটিক পাইরেথ্রয়েড গোত্রের কীটনাশক, যা কৃষি ও জনস্বাস্থ্য উভয় ক্ষেত্রেই ব্যাপকভাবে ব্যবহৃত হয়। এই গোত্রের কীটনাশক পোকার স্নায়ুতন্ত্রের সোডিয়াম চ্যানেলে কাজ করে দ্রুত পক্ষাঘাত (paralysis) ঘটায়।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "written",
+      "question": "Write the appropriate cause for diapause.",
+      "answer": "Shorter daylight, low or high temperature, lack of food, or high abundance of predators.",
+      "explanation": "Diapause is a period of arrested development in insects, where growth and metabolic activities slow down or stop. Shorter daylight, low or high temperature, lack of food, or high abundance of predators are the causes of diapause.\n\nডায়াপজ হলো পতঙ্গের বৃদ্ধি ও বিপাকীয় কার্যক্রম সাময়িকভাবে বন্ধ বা মন্থর হয়ে যাওয়ার একটি অবস্থা। এর কারণগুলো হলো- দিনের দৈর্ঘ্য কমে যাওয়া, খুব বেশি বা কম তাপমাত্রা, খাদ্যের অভাব এবং শিকারির আধিক্য। প্রতিকূল পরিবেশে টিকে থাকার জন্য পতঙ্গ এই কৌশল অবলম্বন করে।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "written",
+      "question": "Which pest causes white head?",
+      "answer": "Rice yellow stem borer",
+      "explanation": "Rice yellow stem borer causes white head.\n\nধানের হলুদ কাণ্ড ছিদ্রকারী পোকা (Rice Yellow Stem Borer, Scirpophaga incertulas) সাদা শীষ (White Head) রোগের কারণ। এই পোকার লার্ভা কাণ্ডের ভেতরে প্রবেশ করে খাদ্য ও পানি চলাচলের নালী ধ্বংস করে দেয়, ফলে শীষ সাদা ও চিটা হয়ে যায় এবং সহজেই টেনে তোলা যায়। প্রজনন পর্যায়ে আক্রান্ত হলে এই লক্ষণ দেখা দেয়, যেখানে অপক্ব পর্যায়ে আক্রান্ত হলে 'ডেড হার্ট' লক্ষণ দেখা দেয়।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "written",
+      "question": "Write the mode of action of organophosphorus.",
+      "answer": "Organophosphorus insecticides irreversibly inhibit acetylcholinesterase, causing accumulation of acetylcholine, continuous nerve impulse transmission, paralysis, and death.",
+      "explanation": "Organophosphorus (OP) insecticides are generally systemic and contact insecticides, but their primary mode of entry depends on the formulation and target insect. Organophosphorus insecticides irreversibly inhibit acetylcholinesterase, causing accumulation of acetylcholine, continuous nerve impulse transmission, paralysis, and death.\n\nঅর্গানোফসফরাস কীটনাশক সাধারণত সিস্টেমিক ও স্পর্শ উভয় ধরনের কীটনাশক হিসেবে কাজ করে, তবে এর প্রয়োগ পদ্ধতি ফরমুলেশন ও লক্ষ্য পোকার উপর নির্ভর করে। এই কীটনাশক পোকার দেহে অ্যাসিটাইলকোলিনএস্টারেজ এনজাইমকে অপরিবর্তনীয়ভাবে (irreversibly) নিষ্ক্রিয় করে দেয়, ফলে অ্যাসিটাইলকোলিন জমা হতে থাকে, স্নায়ু আবেগ ক্রমাগত সঞ্চালিত হয়, যার ফলে পক্ষাঘাত ও অবশেষে পোকার মৃত্যু ঘটে।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "written",
+      "question": "What is collar blast?",
+      "answer": "Collar blast is a serious disease of rice affecting the collar region (junction of leaf blade and leaf sheath), causing significant yield loss.",
+      "explanation": "Collar Blast is a serious disease of rice that affects the collar region (the junction of leaf blade and leaf sheath) of the rice plant, causing significant yield loss.\n\nকলার ব্লাস্ট ধানের একটি মারাত্মক রোগ, যা পাতার ফলক ও পাতার খোলের সংযোগস্থল (কলার অঞ্চল)-কে আক্রমণ করে। এটি Magnaporthe oryzae ছত্রাক দ্বারা সৃষ্ট এবং আক্রান্ত স্থান দুর্বল হয়ে ভেঙে যায়, যার ফলে উপরের অংশ শুকিয়ে যায় এবং ব্যাপক ফলন ক্ষতি হয়। এটি ব্লাস্ট রোগের সবচেয়ে ক্ষতিকর রূপগুলোর একটি।",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "written",
+      "question": "What is the critical moisture content of rice seed?",
+      "answer": "12-14%",
+      "explanation": "The critical moisture content of rice seed is 12-14%.\n\nধান বীজের সংকট আর্দ্রতা (Critical Moisture Content) হলো ১২-১৪%। এই আর্দ্রতা মাত্রায় বীজ সংরক্ষণ করলে বীজের অঙ্কুরোদগম ক্ষমতা দীর্ঘদিন বজায় থাকে এবং ছত্রাক আক্রমণের ঝুঁকি কমে যায়। বীজ সংরক্ষণের পূর্বে সঠিক আর্দ্রতায় শুকানো অত্যন্ত গুরুত্বপূর্ণ, বিশেষ করে দীর্ঘমেয়াদী বীজ ব্যাংকে সংরক্ষণের ক্ষেত্রে।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "written",
+      "question": "Define heterobeltiosis.",
+      "answer": "Heterobeltiosis is the phenomenon where the hybrid offspring (F1) performs better than the better-performing parent for a specific trait, usually yield.",
+      "explanation": "Heterobeltiosis refers to the phenomenon where the hybrid offspring (F1) performs better than the better-performing parent for a specific trait, usually yield. In other words, the hybrid shows superiority over the best parent.\n\nহেটেরোবেলটিওসিস বলতে বোঝায় এমন একটি প্রপঞ্চ যেখানে হাইব্রিড সন্তান (F1) কোনো নির্দিষ্ট বৈশিষ্ট্যে (সাধারণত ফলনে) দুই মাতা-পিতার মধ্যে যেটি ভালো, তার চেয়েও ভালো ফলাফল প্রদর্শন করে। এটি হাইব্রিড ভিগর বা হেটেরোসিসের একটি বিশেষ রূপ, যা হাইব্রিড ধান জাত উদ্ভাবনে গুরুত্বপূর্ণ ভূমিকা রাখে।",
+      "image": null
+    }
+  ]
+}
