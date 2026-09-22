@@ -236,18 +236,18 @@ const EXAM_STATUS = {
 
   "exam-31": {
     title: "SSC 1st Chapter",
-    category: "live",
+    category: "draft",
     startDate: "2026-09-19T06:00:00+06:00",
     endDate: "2026-09-21T11:00:00+06:00",
     codes: ["exam5522"]
   },
 
   "exam-32": {
-    title: "SSC 2nd Chapter",
-    category: "draft",
-    startDate: "2026-07-22T06:00:00+06:00",
-    endDate: "2026-09-25T11:00:00+06:00",
-    codes: ["exam2222"]
+    title: "SSC 2nd Chapter🔴",
+    category: "live",
+    startDate: "2026-09-22T06:00:00+06:00",
+    endDate: "2026-09-23T11:00:00+06:00",
+    codes: ["7272"]
   },
 
   "exam-33": {
