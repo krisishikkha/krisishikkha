@@ -246,7 +246,7 @@ const EXAM_STATUS = {
     title: "SSC 2nd Chapter🔴",
     category: "live",
     startDate: "2026-09-22T06:00:00+06:00",
-    endDate: "2026-09-23T11:00:00+06:00",
+    endDate: "2026-09-24T11:00:00+06:00",
     codes: ["7272"]
   },
 
