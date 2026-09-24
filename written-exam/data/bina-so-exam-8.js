@@ -1,4 +1,4 @@
-var EXAM_BINA_SO_1 = {
+var EXAM_BINA_SO_8 = {
     id: "bina-so-exam-8",
     title: "BINA SO Exam – 08",
     status: "live",
