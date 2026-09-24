@@ -236,7 +236,7 @@ const EXAM_STATUS = {
 
   "exam-31": {
     title: "SSC 1st Chapter",
-    category: "draft",
+    category: "live",
     startDate: "2026-09-19T06:00:00+06:00",
     endDate: "2026-09-21T11:00:00+06:00",
     codes: ["exam5522"]
