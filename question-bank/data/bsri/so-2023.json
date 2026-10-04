@@ -1,0 +1,487 @@
+{
+  "meta": {
+    "title": "BSRI Question 2023",
+    "institute": "Bangladesh Sugarcrop Research Institute (BSRI)",
+    "year": 2023,
+    "position": "Scientific Officer",
+    "totalQuestions": 59,
+    "type": "free",
+    "examDate": "2023",
+    "duration": "1 hours",
+    "totalMarks": 100
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "written",
+      "question": "দ্বৈপায়ন (সন্ধি বিচ্ছেদ করো)",
+      "answer": "দ্বীপ + আয়ন",
+      "explanation": "দ্বীপ + আয়ন = দ্বৈপায়ন। দ্বৈপায়ন হলো মহর্ষি বেদব্যাসের অপর নাম। তিনি দ্বীপে জন্মগ্রহণ করেছিলেন বলে তাঁকে এই নামে ডাকা হয়। পরীক্ষায় সন্ধি বিচ্ছেদ করার সময় শব্দের মূল অংশ ও প্রত্যয়-অংশ আলাদা করে চেনা জরুরি।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "written",
+      "question": "বৈষম্য এর বিপরীত শব্দ কী?",
+      "answer": "সাম্য",
+      "explanation": "বৈষম্য অর্থ অসমতা বা ভেদাভেদ। এর বিপরীত শব্দ সাম্য, অর্থাৎ সমতা। বিপরীত শব্দ প্রশ্নে শব্দের সঠিক অর্থ জানা থাকলে ভুল অপশন সহজেই বাদ দেওয়া যায়।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "written",
+      "question": "অষ্টম পঞ্চবার্ষিক পরিকল্পনার সময়কাল কত?",
+      "answer": "জুলাই ২০২০ – জুন ২০২৫",
+      "explanation": "বাংলাদেশের অষ্টম পঞ্চবার্ষিক পরিকল্পনার সময়কাল ২০২০-২১ থেকে ২০২৪-২৫ অর্থবছর, অর্থাৎ জুলাই ২০২০ থেকে জুন ২০২৫। বাংলাদেশের অর্থবছর জুলাই থেকে জুনে শেষ হয়। এই পরিকল্পনা প্রেক্ষিত পরিকল্পনা ২০২১-২০৪১-এর প্রথম ধাপ। কৃষিসহ সব খাতের উন্নয়ন এই পরিকল্পনার অন্তর্ভুক্ত।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "written",
+      "question": "আমি কুকুরটিকে খাওয়াচ্ছি – ইংরেজিতে অনুবাদ করো।",
+      "answer": "I am feeding the dog.",
+      "explanation": "বাক্যটি Present Continuous Tense-এর। এর গঠন: Subject + am/is/are + verb-এর সাথে ing + object। এখানে Subject I হওয়ায় am বসেছে এবং feed-এর সাথে ing যুক্ত হয়ে feeding হয়েছে। 'কুকুরটিকে' নির্দিষ্ট কুকুর বোঝায়, তাই আগে the বসেছে।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "written",
+      "question": "বুলবুলিতে ধান খেয়েছে – কোন কারকে কোন বিভক্তি?",
+      "answer": "কর্তৃ কারকে সপ্তমী বিভক্তি",
+      "explanation": "এখানে 'বুলবুলিতে' শব্দের 'তে' চিহ্নটি সপ্তমী বিভক্তি। শব্দটি ক্রিয়া সম্পাদন করছে, তাই এটি কর্তা। যখন কর্তায় কর্তৃকারকের স্বাভাবিক বিভক্তির বদলে অন্য বিভক্তি বসে, তখন তাকে অনুক্ত কর্তা বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "written",
+      "question": "Nobel Prize for his contribution to agriculture – who?",
+      "answer": "Norman Borlaug",
+      "explanation": "Norman Ernest Borlaug was an American agronomist who received the Nobel Peace Prize in 1970 for his contribution to agriculture. He is known as the Father of the Green Revolution. He developed high-yielding semi-dwarf wheat varieties.\n\nনরম্যান আর্নেস্ট বোরলগ একজন মার্কিন কৃষিবিজ্ঞানী। কৃষিতে অবদানের জন্য তিনি ১৯৭০ সালে নোবেল শান্তি পুরস্কার পান। তাঁকে সবুজ বিপ্লবের জনক বলা হয়। তিনি উচ্চফলনশীল খর্বাকার গমের জাত উদ্ভাবন করেছিলেন। এসব জাত দক্ষিণ এশিয়ায়, বাংলাদেশসহ, খাদ্যশস্য উৎপাদন বাড়াতে ভূমিকা রেখেছে।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "written",
+      "question": "Fortune favors the brave – (passive)",
+      "answer": "The brave are favoured by fortune.",
+      "explanation": "বাক্যটি Present Indefinite Tense-এর। Active থেকে Passive করার নিয়ম: Object + am/is/are + verb-এর past participle + by + Subject। 'The brave' বহুবচন অর্থ প্রকাশ করে, তাই are বসেছে। Fortune একটি abstract noun, তাই এর আগে the বসে না।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "written",
+      "question": "বাহুতে ভর দিয়ে চলে – (এক কথায় প্রকাশ)",
+      "answer": "ভুজঙ্গ",
+      "explanation": "'বাহুতে ভর দিয়ে চলে যে' এর এক কথায় প্রকাশ ভুজঙ্গ, যার অর্থ সাপ। একই ধরনের আরেকটি উদাহরণ হলো 'বুকে ভর দিয়ে চলে যা' = উরগ। ভুজঙ্গ, উরগ ও ফণী সাপের সমার্থক শব্দ।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "written",
+      "question": "Which organization has launched an award in the name of Bangabandhu?",
+      "answer": "UNESCO",
+      "explanation": "UNESCO has launched the UNESCO-Sheikh Mujibur Rahman International Prize for Creative Economy, in the name of Bangabandhu.\n\nইউনেস্কো বঙ্গবন্ধু শেখ মুজিবুর রহমানের নামে 'ইউনেস্কো-বঙ্গবন্ধু আন্তর্জাতিক পুরস্কার' চালু করেছে। সৃজনশীল অর্থনীতির (creative economy) ক্ষেত্রে অসামান্য অবদানের জন্য এই পুরস্কার দেওয়া হয়। এটি বাংলাদেশের জন্য একটি আন্তর্জাতিক সম্মান।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "written",
+      "question": "Make a sentence: pay lip service",
+      "answer": "Many politicians pay lip service to the welfare of farmers but do very little for them.",
+      "explanation": "'Pay lip service' একটি idiom। এর অর্থ মুখে সমর্থন বা শ্রদ্ধা দেখানো, কিন্তু কাজে কিছু না করা। Idiom দিয়ে বাক্য লেখার সময় অর্থ স্পষ্ট বোঝা যায় এমন প্রসঙ্গ বেছে নিতে হয়। Tense অনুযায়ী pay-এর রূপ বদলাতে পারে, যেমন paid বা paying।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "written",
+      "question": "Verb of cool",
+      "answer": "cool",
+      "explanation": "Cool শব্দটি adjective, noun এবং verb তিনভাবেই ব্যবহৃত হয়। Verb হিসেবে এর অর্থ ঠান্ডা করা বা ঠান্ডা হওয়া। এর রূপ: cool – cooled – cooled। এর noun রূপ coolness এবং adverb রূপ coolly।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "written",
+      "question": "That lawyer has plenty of customer's – (correction)",
+      "answer": "The lawyer has plenty of clients.",
+      "explanation": "আইনজীবীর সেবা গ্রহণকারীকে client (মক্কেল) বলা হয়। Customer বলতে দোকান বা ব্যবসার ক্রেতা বোঝায়। 'Plenty of'-এর পরে বহুবচন noun বসে, তাই customer's নয়, clients হবে। এখানে apostrophe-s (মালিকানা বোঝানোর চিহ্ন) ভুলভাবে ব্যবহৃত হয়েছে।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "written",
+      "question": "Efficiency of heat engines",
+      "answer": "Heat engines often operate at around 30% to 50% efficiency",
+      "explanation": "Heat engines often operate at around 30% to 50% efficiency\n\nতাপ ইঞ্জিন সাধারণত প্রায় ৩০% থেকে ৫০% দক্ষতায় কাজ করে।\n\nদক্ষতা = (কাজের আউটপুট ÷ তাপের ইনপুট) × ১০০। তাপগতিবিদ্যার দ্বিতীয় সূত্র অনুযায়ী কোনো তাপ ইঞ্জিনই ১০০% দক্ষ হতে পারে না। বাস্তবে পেট্রোল ইঞ্জিনের দক্ষতা তুলনামূলক কম, আর ডিজেল ইঞ্জিনের দক্ষতা বেশি। কৃষিতে ব্যবহৃত ডিজেলচালিত পাওয়ার টিলার ও ট্রাক্টর তাপ ইঞ্জিনের উদাহরণ।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "written",
+      "question": "What are the types of variables?",
+      "answer": "Dependent and independent variables",
+      "explanation": "চলক (variable) প্রধানত দুই ধরনের। স্বাধীন চলক (independent variable) গবেষক নিজে পরিবর্তন বা নিয়ন্ত্রণ করেন, যেমন সারের মাত্রা বা জাত। অধীন চলক (dependent variable) হলো যার ফলাফল পরিমাপ করা হয়, যেমন ফলন। উদাহরণ: আখে নাইট্রোজেনের মাত্রা (স্বাধীন চলক) বদলালে আখের ফলন (অধীন চলক) কীভাবে বদলায়, তা দেখা। এছাড়া নিয়ন্ত্রিত চলকও গবেষণায় থাকে।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "written",
+      "question": "Probability of sample (Probability sampling)",
+      "answer": "Selection of a sample from a population based on principle of randomization.",
+      "explanation": "Selection of a sample from a population based on principle of randomization.\n\nএকটি জনসমষ্টি থেকে দৈবচয়নের (randomization) নীতির ভিত্তিতে নমুনা বাছাই করাকে সম্ভাবনা নমুনায়ন (probability sampling) বলে।\n\nএই পদ্ধতিতে জনসমষ্টির প্রতিটি একক নমুনায় আসার একটি জানা ও শূন্যের চেয়ে বেশি সুযোগ পায়। এর প্রধান ধরন: সরল দৈব নমুনায়ন (simple random), স্তরিত (stratified), পদ্ধতিগত (systematic), গুচ্ছ (cluster) ও বহুস্তর (multistage)। কৃষি গবেষণায় জরিপ ও মাঠ পরীক্ষায় পক্ষপাত কমাতে এটি ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "written",
+      "question": "What is LUI? What do you mean by LUI 0.5?",
+      "answer": "LUI (Land Utilization Index) measures how intensively land is used by crops in a year. LUI 0.5 means the land is occupied by crops for half of the year.",
+      "explanation": "land utilization index (Chuang, 1973) is calculated by summing the products of land area planted to each crop, multiplied by the actual duration of that crop divided by the total cultivated land area times 365 days. LUI 0.5 means the land area is occupied for half of the year.\n\nভূমি ব্যবহার সূচক (Chuang, 1973) নির্ণয় করা হয় প্রতিটি ফসলের জমির আয়তনকে ওই ফসলের প্রকৃত জীবনকাল দিয়ে গুণ করে সবগুলো যোগ করে। এরপর যোগফলকে মোট চাষযোগ্য জমি ও ৩৬৫ দিনের গুণফল দিয়ে ভাগ করা হয়। LUI ০.৫ মানে জমি বছরের অর্ধেক সময় ফসলের দখলে থাকে।\n\nসূত্র: LUI = Σ (ফসলের জমির আয়তন × ফসলের জীবনকাল) ÷ (মোট জমি × ৩৬৫)\n\n৩৬৫ × ০.৫ = ১৮২.৫ দিন\n\nঅর্থাৎ জমি প্রায় ১৮২ দিন ফসলের অধীনে থাকে। আখ ১২ মাসের ফসল হওয়ায় শুধু আখ চাষে LUI প্রায় ১ হয়।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "written",
+      "question": "IISR?",
+      "answer": "Indian Institute of Sugarcane Research",
+      "explanation": "IISR-এর পূর্ণরূপ Indian Institute of Sugarcane Research। এটি ভারতের লখনউ-এ অবস্থিত আখ বিষয়ক গবেষণা প্রতিষ্ঠান। বাংলাদেশে আখ গবেষণার দায়িত্বে আছে বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট (BSRI), যার কেন্দ্র ঈশ্বরদী, পাবনায়। মনে রাখুন, IISR বলতে Indian Institute of Spices Research-ও বোঝায়, তবে আখের প্রসঙ্গে এটি Sugarcane Research।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "written",
+      "question": "MBCR, BCR, NPV – full form",
+      "answer": "MBCR – Marginal Benefit Cost Ratio; BCR – Benefit Cost Ratio; NPV – Net Present Value",
+      "explanation": "BCR-Benefit cost ratio = ∑ Present Value of Future Benefits / Present Value of Future Costs. MBCR: Marginal benefit cost ratio. NPV: Net present value.\n\nBCR (সুবিধা-ব্যয় অনুপাত) = ভবিষ্যৎ সুবিধার বর্তমান মূল্যের যোগফল ÷ ভবিষ্যৎ ব্যয়ের বর্তমান মূল্য। MBCR হলো প্রান্তিক সুবিধা-ব্যয় অনুপাত। NPV হলো নিট বর্তমান মূল্য।\n\nMBCR = অতিরিক্ত আয় ÷ অতিরিক্ত ব্যয়। এটি কোনো নতুন প্রযুক্তিকে কৃষকের প্রচলিত পদ্ধতির সাথে তুলনা করতে ব্যবহৃত হয়। NPV = সুবিধার বর্তমান মূল্য − ব্যয়ের বর্তমান মূল্য। BCR বা MBCR এক-এর বেশি হলে প্রযুক্তিটি লাভজনক ধরা হয়।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "written",
+      "question": "AWD",
+      "answer": "Alternate Wetting and Drying",
+      "explanation": "AWD (পর্যায়ক্রমে ভেজা ও শুকনো) একটি পানি সাশ্রয়ী সেচ পদ্ধতি। বাংলাদেশে এটি বিশেষ করে বোরো ধানে ব্যবহার করা হয়। জমিতে ছিদ্রযুক্ত পানি-পাইপ বসিয়ে পানির স্তর দেখা হয়। স্তর মাটির প্রায় ১৫ সেমি নিচে নামলে সেচ দেওয়া হয়। এতে সেচের পানি সাশ্রয় হয় এবং মিথেন গ্যাস নির্গমন কমে।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "written",
+      "question": "ETL, EIL",
+      "answer": "ETL – Economic Threshold Level; EIL – Economic Injury Level",
+      "explanation": "EIL (অর্থনৈতিক ক্ষতির স্তর) হলো পোকার সেই সর্বনিম্ন সংখ্যা, যে সংখ্যায় পোকা যে ক্ষতি করে তার মূল্য দমন খরচের সমান হয়। ETL (অর্থনৈতিক সহনশীল স্তর) হলো পোকার সেই সংখ্যা, যেখানে পৌঁছালে EIL-এ পৌঁছানোর আগেই দমন ব্যবস্থা নিতে হয়। তাই ETL সবসময় EIL-এর চেয়ে কম হয়। সমন্বিত বালাইব্যবস্থাপনায় (IPM) এই ধারণা খুব গুরুত্বপূর্ণ।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "written",
+      "question": "Write down the full names: ICARDA, IRRI, CIMMYT, ICRISAT, IITA",
+      "answer": "ICARDA – International Center for Agricultural Research in the Dry Areas; IRRI – International Rice Research Institute; CIMMYT – International Maize and Wheat Improvement Center; ICRISAT – International Crops Research Institute for the Semi-Arid Tropics; IITA – International Institute of Tropical Agriculture",
+      "explanation": "এগুলো আন্তর্জাতিক কৃষি গবেষণা কেন্দ্র। ICARDA শুষ্ক অঞ্চলের কৃষি নিয়ে কাজ করে, এর সদর দপ্তর বৈরুত, লেবানন। IRRI ধান নিয়ে কাজ করে, এর সদর দপ্তর লস বানোস, ফিলিপাইন। CIMMYT ভুট্টা ও গমের গবেষণা করে, সদর দপ্তর মেক্সিকোতে। ICRISAT আধা-শুষ্ক ক্রান্তীয় অঞ্চলের ফসল নিয়ে কাজ করে, সদর দপ্তর হায়দরাবাদ, ভারত। IITA ক্রান্তীয় অঞ্চলের কৃষি নিয়ে কাজ করে, সদর দপ্তর ইবাদান, নাইজেরিয়া।",
+      "image": null
+    },
+    {
+      "id": 22,
+      "type": "written",
+      "question": "Critical stage of irrigation of wheat",
+      "answer": "Crown root initiation, tillering and booting",
+      "explanation": "যেসব বৃদ্ধি-পর্যায়ে পানির অভাব হলে ফলন বেশি কমে, সেগুলোকে সেচের ক্রান্তিকাল বলে। গমের ক্রান্তিকাল হলো মুকুট মূল গঠন (crown root initiation), কুশি গজানো (tillering) ও শীষ আসার আগের পর্যায় (booting)। এর মধ্যে মুকুট মূল গঠন সবচেয়ে গুরুত্বপূর্ণ। বাংলাদেশে বপনের প্রায় ১৭–২১ দিন পর এই পর্যায় আসে এবং তখন প্রথম সেচ দেওয়া হয়।",
+      "image": null
+    },
+    {
+      "id": 23,
+      "type": "written",
+      "question": "Scientific name of jackfruit",
+      "answer": "Artocarpus heterophyllus",
+      "explanation": "কাঁঠালের বৈজ্ঞানিক নাম Artocarpus heterophyllus। এটি Moraceae পরিবারের অন্তর্ভুক্ত। কাঁঠাল বাংলাদেশের জাতীয় ফল। Heterophyllus শব্দের অর্থ ভিন্ন ভিন্ন আকারের পাতা।",
+      "image": null
+    },
+    {
+      "id": 24,
+      "type": "written",
+      "question": "Causal organism of smut of sugarcane?",
+      "answer": "Ustilago scitaminea (Sporisorium scitamineum)",
+      "explanation": "আখের কালো চাবুক রোগ (whip smut) একটি ছত্রাকজনিত রোগ। এর কারণ Ustilago scitaminea, যার বর্তমান নাম Sporisorium scitamineum। আক্রান্ত আখের মাথা থেকে চাবুকের মতো কালো দণ্ড বের হয়। দমনের উপায়: রোগ-প্রতিরোধী জাত চাষ, আক্রান্ত ঝাড় তুলে ফেলা এবং বীজ আখের টুকরো MHAT (৫৪°C তাপমাত্রায় ২.৫ ঘণ্টা) দিয়ে শোধন করা।",
+      "image": null
+    },
+    {
+      "id": 25,
+      "type": "written",
+      "question": "Causal organism name of red stripe of sugarcane?",
+      "answer": "Acidovorax avenae subsp. avenae",
+      "explanation": "আখের রেড স্ট্রাইপ বা লাল ডোরা রোগ ব্যাকটেরিয়াজনিত। এর কারণ Acidovorax avenae subsp. avenae। আক্রান্ত পাতায় লালচে-বাদামি ডোরা দেখা যায়। রোগমুক্ত বীজ ব্যবহার এবং প্রতিরোধী জাত চাষ করা এর প্রধান প্রতিকার।",
+      "image": null
+    },
+    {
+      "id": 26,
+      "type": "written",
+      "question": "Temperature and duration of MHAT",
+      "answer": "54°C for 2.5 hours",
+      "explanation": "MHAT-এর পূর্ণরূপ Moist Hot Air Treatment। এই পদ্ধতিতে আখের বীজ টুকরো ৫৪°C তাপমাত্রার আর্দ্র গরম বাতাসে ২.৫ ঘণ্টা রাখা হয়। এতে বীজবাহিত রোগ, যেমন কালো চাবুক রোগ, ঘাসি রোগ ও রেটুন স্টান্টিং রোগ, দমন হয়।",
+      "image": null
+    },
+    {
+      "id": 27,
+      "type": "written",
+      "question": "Write down the name of sweetening agent of stevia?",
+      "answer": "Stevioside (steviol glycoside)",
+      "explanation": "স্টেভিয়া (Stevia rebaudiana) পাতার মিষ্টি স্বাদের কারণ স্টেভিওসাইড, যা একটি স্টেভিওল গ্লাইকোসাইড। এছাড়া রিবাউডিওসাইড-এ নামের যৌগও মিষ্টতার জন্য দায়ী। এটি চিনির চেয়ে প্রায় ২০০–৩০০ গুণ বেশি মিষ্টি এবং ক্যালরিমুক্ত। তাই ডায়াবেটিস রোগীদের জন্য উপযোগী।",
+      "image": null
+    },
+    {
+      "id": 28,
+      "type": "written",
+      "question": "RNA contains which N bases?",
+      "answer": "Adenine (A), Guanine (G), Cytosine (C), Uracil (U)",
+      "explanation": "RNA-তে চারটি নাইট্রোজেনযুক্ত ক্ষার থাকে: অ্যাডেনিন (A), গুয়ানিন (G), সাইটোসিন (C) ও ইউরাসিল (U)। DNA-তে ইউরাসিলের বদলে থাইমিন (T) থাকে। অ্যাডেনিন ও গুয়ানিন পিউরিন, আর সাইটোসিন, ইউরাসিল ও থাইমিন পিরিমিডিন গ্রুপের অন্তর্ভুক্ত।",
+      "image": null
+    },
+    {
+      "id": 29,
+      "type": "written",
+      "question": "3 chewing type varieties name",
+      "answer": "BSRI Akh 41, BSRI Akh 42, LJC",
+      "explanation": "চিবিয়ে খাওয়ার উপযোগী আখের জাতে বাকল নরম, রস বেশি এবং আঁশ কম থাকে। এসব আখ সরাসরি চিবিয়ে খাওয়া হয়। বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট (BSRI) ঈশ্বরদীতে আখের উন্নত জাত উদ্ভাবন করে। চিবিয়ে খাওয়ার জাত ও চিনি তৈরির জাতের বৈশিষ্ট্য আলাদা, তাই পরীক্ষায় জাতের ধরন জানা জরুরি।",
+      "image": null
+    },
+    {
+      "id": 30,
+      "type": "written",
+      "question": "Waterlogging variety name",
+      "answer": "BSRI Akh 40, BSRI Akh 43, BSRI Akh 45, BSRI Akh 46",
+      "explanation": "জলাবদ্ধতা সহনশীল জাত নিচু জমি বা পানি জমে থাকা এলাকায় ভালো ফলন দেয়। জলাবদ্ধ অবস্থায় মাটিতে অক্সিজেনের ঘাটতি হয় এবং আখের বৃদ্ধি কমে যায়। এ ধরনের জমিতে সহনশীল জাতের পাশাপাশি পানি নিষ্কাশনের ব্যবস্থা রাখা প্রয়োজন।",
+      "image": null
+    },
+    {
+      "id": 31,
+      "type": "written",
+      "question": "Banglamoti rice variety name",
+      "answer": "BRRI dhan 50",
+      "explanation": "বাংলামতি ধানের জাতের নাম ব্রি ধান৫০। এটি বাসমতি ধরনের সরু, সুগন্ধি ও উন্নতমানের চালের জাত। ধান গবেষণা ইনস্টিটিউট (BRRI) জাতটি উদ্ভাবন করেছে। বোরো মৌসুমে এর চাষ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 32,
+      "type": "written",
+      "question": "Percentage of N in urea and ammonium sulphate",
+      "answer": "Urea – 46%; Ammonium sulphate – 21%",
+      "explanation": "ইউরিয়ায় ৪৬% নাইট্রোজেন (N) থাকে। এটি বাংলাদেশে সবচেয়ে বেশি ব্যবহৃত নাইট্রোজেন সার। অ্যামোনিয়াম সালফেটে ২১% নাইট্রোজেন এবং প্রায় ২৪% সালফার (S) থাকে। তাই সালফারের ঘাটতিযুক্ত মাটিতে এটি বিশেষভাবে উপকারী।",
+      "image": null
+    },
+    {
+      "id": 33,
+      "type": "written",
+      "question": "5% = ? ppm",
+      "answer": "50,000 ppm",
+      "explanation": "১% = ১০,০০০ ppm\n\n৫ × ১০,০০০ = ৫০,০০০ ppm\n\nPPM-এর পূর্ণরূপ parts per million। সারের দ্রবণ ও কীটনাশক মেশানোর হিসাবে এই রূপান্তর কাজে লাগে।",
+      "image": null
+    },
+    {
+      "id": 34,
+      "type": "written",
+      "question": "Physiologically sugarcane is a ___ plant",
+      "answer": "C4",
+      "explanation": "আখ একটি C4 উদ্ভিদ। C4 উদ্ভিদে ক্যালভিন চক্রের আগে হ্যাচ-স্ল্যাক পথে প্রথম স্থায়ী যৌগ হিসেবে চার কার্বনের অক্সালো অ্যাসিটিক অ্যাসিড তৈরি হয়। এতে আলোক-শ্বসন প্রায় হয় না। তাই উচ্চ তাপমাত্রা ও তীব্র আলোতে আখের সালোকসংশ্লেষণ দক্ষ হয় এবং ফলন বেশি হয়।",
+      "image": null
+    },
+    {
+      "id": 35,
+      "type": "written",
+      "question": "Write down the structure of DAP and percentage of N",
+      "answer": "(NH₄)₂HPO₄; N = 18%",
+      "explanation": "DAP-এর পূর্ণরূপ Diammonium Phosphate এবং রাসায়নিক সংকেত (NH₄)₂HPO₄। এতে ১৮% নাইট্রোজেন ও ৪৬% P₂O₅ থাকে। এটি একই সাথে নাইট্রোজেন ও ফসফরাসের উৎস।",
+      "image": null
+    },
+    {
+      "id": 36,
+      "type": "written",
+      "question": "Percentage of N in sodium nitrate",
+      "answer": "16%",
+      "explanation": "সোডিয়াম নাইট্রেটে (NaNO₃) ১৬% নাইট্রোজেন থাকে। এটি চিলি সল্টপিটার নামেও পরিচিত। এতে নাইট্রোজেন নাইট্রেট রূপে থাকে, তাই গাছ দ্রুত গ্রহণ করতে পারে।",
+      "image": null
+    },
+    {
+      "id": 37,
+      "type": "written",
+      "question": "Percentage of N of ammonium nitrate",
+      "answer": "33%",
+      "explanation": "অ্যামোনিয়াম নাইট্রেটে (NH₄NO₃) প্রায় ৩৩% নাইট্রোজেন থাকে। এতে অর্ধেক নাইট্রোজেন অ্যামোনিয়াম রূপে এবং বাকি অর্ধেক নাইট্রেট রূপে আছে। এটি বিস্ফোরক হতে পারে, তাই সংরক্ষণে সতর্কতা দরকার।",
+      "image": null
+    },
+    {
+      "id": 38,
+      "type": "written",
+      "question": "2,4-D is a ___ herbicide",
+      "answer": "Selective, post-emergence, systemic growth-regulator herbicide",
+      "explanation": "2,4-D একটি বাছাইকারী, উদ্ভব-পরবর্তী (post-emergence) ও বৃদ্ধি-নিয়ন্ত্রক ধরনের আগাছানাশক। এটি অক্সিন হরমোনের মতো কাজ করে। এটি চওড়া পাতার আগাছা মারে, কিন্তু ধান, গম ও আখের মতো সরু পাতার ফসলের ক্ষতি করে না।",
+      "image": null
+    },
+    {
+      "id": 39,
+      "type": "written",
+      "question": "Mouthparts name of honey bee?",
+      "answer": "Chewing-lapping type",
+      "explanation": "মৌমাছির মুখোপাঙ্গ চর্বণ-লেহন ধরনের। এর ম্যান্ডিবল দিয়ে মোম চিবানো হয় এবং জিহ্বা (প্রোবোসিস) দিয়ে ফুলের মধু চেটে নেওয়া হয়।",
+      "image": null
+    },
+    {
+      "id": 40,
+      "type": "written",
+      "question": "মৌমাছি প্রতিপালন কক্ষকে কি বলে?",
+      "answer": "Apiary",
+      "explanation": "মৌমাছি প্রতিপালনের স্থান বা মৌখামারকে Apiary বলে। মৌমাছি পালনের পদ্ধতিকে বলে Apiculture। বাংলাদেশে সরিষার মৌসুমে মৌ চাষ বেশি হয়, কারণ তখন প্রচুর ফুল পাওয়া যায়। এখানে Apis mellifera ও Apis cerana জাতের মৌমাছি পালন করা হয়।",
+      "image": null
+    },
+    {
+      "id": 41,
+      "type": "written",
+      "question": "Gross margin",
+      "answer": "Gross margin = Net Sales − Cost of Goods Sold",
+      "explanation": "ব্যবসায়িক হিসাবে মোট মুনাফা (gross margin) = নিট বিক্রয় − বিক্রিত পণ্যের ব্যয় (Cost of Goods Sold)। কৃষি অর্থনীতিতে এটি নির্ণয় করা হয় মোট আয় থেকে মোট পরিবর্তনশীল ব্যয় (variable cost) বাদ দিয়ে। এই সূচক দিয়ে ফসল চাষের লাভজনকতা তুলনা করা হয়।",
+      "image": null
+    },
+    {
+      "id": 42,
+      "type": "written",
+      "question": "Two structural carbohydrate names",
+      "answer": "Cellulose and Chitin (Hemicellulose is also structural)",
+      "explanation": "কাঠামোগত কার্বোহাইড্রেট জীবের দেহের গঠনে অংশ নেয়। সেলুলোজ ও হেমিসেলুলোজ উদ্ভিদের কোষ প্রাচীরে থাকে। কাইটিন ছত্রাকের কোষ প্রাচীরে এবং পোকামাকড়ের বহিঃকঙ্কালে থাকে। স্টার্চ ও গ্লাইকোজেন সঞ্চিত কার্বোহাইড্রেট, কাঠামোগত নয়।",
+      "image": null
+    },
+    {
+      "id": 43,
+      "type": "written",
+      "question": "Percentage of homozygosity in F3 generation",
+      "answer": "75%",
+      "explanation": "বংশানুক্রমে স্বপরাগায়ণে প্রতি প্রজন্মে হেটেরোজাইগোসিটি অর্ধেক হয়ে যায়। F₁ প্রজন্মে হেটেরোজাইগোসিটি ১০০%।\n\nF₃ প্রজন্মে হেটেরোজাইগোসিটি = (১/২)^(৩−১)\n\n(১/২)² = ১/৪\n\n১/৪ = ২৫%\n\nহোমোজাইগোসিটি = ১০০% − ২৫% = ৭৫%\n\nতুলনার জন্য F₂ প্রজন্মে হোমোজাইগোসিটি ৫০%।",
+      "image": null
+    },
+    {
+      "id": 44,
+      "type": "written",
+      "question": "Edible part name of cabbage and cauliflower",
+      "answer": "Cabbage – head; Cauliflower – curd",
+      "explanation": "বাঁধাকপির খাওয়ার অংশ হেড (head), যা ঘনভাবে জড়ানো পাতার গোলক। ফুলকপির খাওয়ার অংশ কার্ড (curd), যা অপরিপক্ব ও ঘনীভূত পুষ্পমঞ্জরি। দুটিই শীতকালীন সবজি এবং Brassicaceae পরিবারের অন্তর্ভুক্ত।",
+      "image": null
+    },
+    {
+      "id": 45,
+      "type": "written",
+      "question": "Sprinkler irrigation is applied in",
+      "answer": "Sandy soil, where there is shortage of water",
+      "explanation": "স্প্রিংকলার সেচ বালুময় মাটিতে এবং পানির সংকটযুক্ত এলাকায় উপযোগী। বালুময় মাটিতে পানি দ্রুত চুইয়ে যায়, তাই প্লাবন সেচে অপচয় বেশি হয়। স্প্রিংকলারে পানি সমানভাবে ছড়িয়ে পড়ে এবং পানির সাশ্রয় হয়। তবে এর প্রাথমিক খরচ বেশি এবং বাতাসে পানি ছিটকে যেতে পারে।",
+      "image": null
+    },
+    {
+      "id": 46,
+      "type": "written",
+      "question": "Mustard is grown between which crops in a cropping pattern?",
+      "answer": "Between Aman rice and Boro rice",
+      "explanation": "সরিষা স্বল্পমেয়াদি ফসল। তাই আমন ধান ও বোরো ধানের মাঝের সময়ে জমি ফাঁকা না রেখে সরিষা চাষ করা যায়। এই ফসল বিন্যাস আমন – সরিষা – বোরো নামে পরিচিত। বারি সরিষা-১৪ ও বারি সরিষা-১৫ এরকম স্বল্পমেয়াদি জাত। এতে জমির সর্বোচ্চ ব্যবহার হয় এবং কৃষকের আয় বাড়ে।",
+      "image": null
+    },
+    {
+      "id": 47,
+      "type": "written",
+      "question": "Black ant due to the infestation of ___",
+      "answer": "কালো পাতা ফড়িং",
+      "explanation": "পাতা ফড়িং রস চোষা পোকা। এরা গাছের রস খেয়ে মধু-নিঃসরণ (honeydew) করে। মধুর গন্ধে কালো পিঁপড়া আকৃষ্ট হয় এবং মধুর ওপর কালো ছত্রাক (sooty mould) জন্মে পাতা কালো হয়ে যায়। এতে সালোকসংশ্লেষণ কমে এবং আখের ফলন ও চিনির পরিমাণ কমে যায়।",
+      "image": null
+    },
+    {
+      "id": 48,
+      "type": "written",
+      "question": "Companion crop of sugarcane",
+      "answer": "Potato, onion, garlic, carrot, cauliflower, cabbage, broccoli, mustard, radish, lentil, khesari, mung bean and green manure crops etc.",
+      "explanation": "Relay crop/companion crop of sugarcane: Potato, onion, garlic, carrot, cauliflower, cabbage, Broccoli, mustard, radish, lentil, khesari, mung bean, and green manure crops etc.\n\nআখের রিলে ফসল বা সাথী ফসল: আলু, পেঁয়াজ, রসুন, গাজর, ফুলকপি, বাঁধাকপি, ব্রোকলি, সরিষা, মূলা, মসুর, খেসারি, মুগ এবং সবুজ সার ফসল ইত্যাদি।\n\nআখের শুরুর বৃদ্ধি ধীর হয়, তাই সারির ফাঁকে স্বল্পমেয়াদি সাথী ফসল চাষ করা যায়। এতে জমির কার্যকর ব্যবহার হয়, বাড়তি আয় আসে এবং আগাছা কম জন্মে।",
+      "image": null
+    },
+    {
+      "id": 49,
+      "type": "written",
+      "question": "By-product of sugarcane",
+      "answer": "Bagasse, Molasses and Filter mud",
+      "explanation": "Bagasse (Used as fuel and for making paper) Molasses (Used for making spirit and ethanol) and Filter muds (Used for making compost)\n\nবাগাস (জ্বালানি ও কাগজ তৈরিতে ব্যবহৃত), মোলাসেস বা চিটাগুড় (স্পিরিট ও ইথানল তৈরিতে ব্যবহৃত) এবং ফিল্টার মাড (কম্পোস্ট তৈরিতে ব্যবহৃত)।\n\nবাগাস থেকে পার্টিকেল বোর্ড ও বিদ্যুৎ উৎপাদনও করা যায়। চিটাগুড় পশুখাদ্য হিসেবেও ব্যবহৃত হয়। ফিল্টার মাড বা প্রেসমাড জৈব সার হিসেবে জমিতে প্রয়োগ করা হয়।",
+      "image": null
+    },
+    {
+      "id": 50,
+      "type": "written",
+      "question": "Which hormone helps in fruit ripening?",
+      "answer": "Ethylene",
+      "explanation": "Ethylene (Gaseous Phytohormone)\n\nইথিলিন (গ্যাসীয় উদ্ভিদ হরমোন)।\n\nইথিলিন ফল পাকাতে সাহায্য করে। আম, কলা ও টমেটোর মতো ক্লাইম্যাক্টেরিক ফল পাকার সময় বেশি ইথিলিন তৈরি করে। বাণিজ্যিকভাবে ইথেফন (ইথ্রেল) ব্যবহার করে ফল পাকানো হয়।",
+      "image": null
+    },
+    {
+      "id": 51,
+      "type": "written",
+      "question": "Polybag in guava (peyara) to protect from",
+      "answer": "Fruit fly",
+      "explanation": "পেয়ারা ফলে পলিব্যাগ বা ব্যাগিং করা হয় ফল ছিদ্রকারী মাছি পোকা (fruit fly) থেকে রক্ষার জন্য। মাছি ফলে ডিম পাড়ে, ডিম থেকে কীড়া বের হয়ে ফল নষ্ট করে। ব্যাগিং ছাড়াও ফেরোমন ফাঁদ ব্যবহার এবং আক্রান্ত ও ঝরা ফল সংগ্রহ করে নষ্ট করা কার্যকর দমন পদ্ধতি।",
+      "image": null
+    },
+    {
+      "id": 52,
+      "type": "written",
+      "question": "To increase agricultural production, we have to consider",
+      "answer": "Input and management",
+      "explanation": "কৃষি উৎপাদন বাড়াতে ইনপুট ও ব্যবস্থাপনা দুটিই বিবেচনা করতে হয়। ইনপুট হলো মানসম্পন্ন বীজ, সার, সেচ, বালাইনাশক, শ্রম ও যন্ত্রপাতি। ব্যবস্থাপনা হলো সঠিক সময়ে কাজ করা, উন্নত প্রযুক্তি ব্যবহার এবং বাজারজাতকরণ। শুধু ইনপুট থাকলেই হয় না, সঠিক ব্যবস্থাপনাও দরকার।",
+      "image": null
+    },
+    {
+      "id": 53,
+      "type": "written",
+      "question": "Black soil contains",
+      "answer": "Fe, Mg, Al",
+      "explanation": "Black soil contains Fe, Mg, Al (other name of black soil is regur soil)\n\nকালো মাটিতে আয়রন (Fe), ম্যাগনেসিয়াম (Mg) ও অ্যালুমিনিয়াম (Al) থাকে। কালো মাটির আরেক নাম রেগুর মাটি।\n\nএই মাটিতে কাদার পরিমাণ বেশি। ভিজলে মাটি ফুলে ওঠে এবং শুকালে ফেটে যায়। এজন্য একে কালো তুলা মাটিও বলা হয়।",
+      "image": null
+    },
+    {
+      "id": 54,
+      "type": "written",
+      "question": "Tensiometer is used for",
+      "answer": "Soil water measurement",
+      "explanation": "টেনসিওমিটার দিয়ে মাটির পানির টান (soil water tension) বা আর্দ্রতা মাপা হয়। এর ছিদ্রযুক্ত সিরামিক কাপ মাটির সাথে পানির আদান-প্রদান করে এবং যন্ত্রে পাঠ দেখায়। এটি ভেজা মাটিতে ভালো কাজ করে এবং কখন সেচ দিতে হবে তা ঠিক করতে সাহায্য করে।",
+      "image": null
+    },
+    {
+      "id": 55,
+      "type": "written",
+      "question": "Lowest EC of saline soil",
+      "answer": "4 dS/m",
+      "explanation": "লবণাক্ত মাটির বৈদ্যুতিক পরিবাহিতা (EC) ২৫°C তাপমাত্রায় ৪ dS/m বা তার বেশি হলে মাটিকে লবণাক্ত বলা হয়। সোডিক মাটিতে বিনিময়যোগ্য সোডিয়াম শতাংশ (ESP) ১৫-এর বেশি এবং pH ৮.৫-এর বেশি হয়। বাংলাদেশের উপকূলীয় এলাকায় লবণাক্ত মাটির সমস্যা বেশি।",
+      "image": null
+    },
+    {
+      "id": 56,
+      "type": "written",
+      "question": "Hand refractometer is used for",
+      "answer": "Brix % measurement",
+      "explanation": "হ্যান্ড রিফ্র্যাক্টোমিটার দিয়ে ব্রিক্স (Brix %) মাপা হয়, অর্থাৎ রসে দ্রবীভূত শর্করার মোট পরিমাণ (TSS)। আখের পরিপক্বতা মাঠেই দ্রুত যাচাই করতে এটি ব্যবহৃত হয়। আখের রস যন্ত্রের প্রিজমে দিয়ে আলোর প্রতিসরণ থেকে ব্রিক্স পড়া হয়।",
+      "image": null
+    },
+    {
+      "id": 57,
+      "type": "written",
+      "question": "Root structure or type of sugarcane",
+      "answer": "Fibrous",
+      "explanation": "আখের মূল গুচ্ছমূল (fibrous root) ধরনের। এগুলো অস্থানিক মূল। আখের মূল দুই ধরনের: বীজ টুকরো থেকে গজানো অস্থায়ী মূল এবং নতুন কুশি থেকে গজানো স্থায়ী মূল। আখ একবীজপত্রী উদ্ভিদ, তাই এর প্রধান মূল নেই।",
+      "image": null
+    },
+    {
+      "id": 58,
+      "type": "written",
+      "question": "Vermicompost – derived from which word?",
+      "answer": "Vermis (Latin), meaning worm",
+      "explanation": "Vermicompost শব্দের 'vermi' এসেছে ল্যাটিন শব্দ vermis থেকে, যার অর্থ কৃমি বা কেঁচো। কেঁচো জৈব বর্জ্য খেয়ে যে সার তৈরি করে, তাকে ভার্মিকম্পোস্ট বা কেঁচো সার বলে। এ কাজে সাধারণত Eisenia fetida জাতের কেঁচো ব্যবহৃত হয়। এই সার মাটির উর্বরতা ও গঠন উন্নত করে।",
+      "image": null
+    },
+    {
+      "id": 59,
+      "type": "written",
+      "question": "4IR",
+      "answer": "Fourth Industrial Revolution",
+      "explanation": "4IR-এর পূর্ণরূপ Fourth Industrial Revolution (চতুর্থ শিল্প বিপ্লব)। বিশ্ব অর্থনৈতিক ফোরামের প্রতিষ্ঠাতা ক্লাউস শোয়াব এই ধারণা জনপ্রিয় করেন। এতে কৃত্রিম বুদ্ধিমত্তা (AI), ইন্টারনেট অব থিংস (IoT), রোবটিক্স, বিগ ডেটা ও বায়োটেকনোলজির সমন্বয় ঘটে। কৃষিতে এর প্রয়োগ হলো সেন্সর, ড্রোন দিয়ে স্প্রে ও স্মার্ট সেচের মতো নির্ভুল কৃষি প্রযুক্তি।",
+      "image": null
+    }
+  ]
+}
