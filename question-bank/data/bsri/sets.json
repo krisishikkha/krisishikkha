@@ -13,15 +13,15 @@
       "description": "BSRI Scientific Officer পরীক্ষা ২০১৬"
     },
     {
-      "id": "so-2023",
-      "title": "Scientific Officer 2023",
-      "year": 2023,
+      "id": "so-2014",
+      "title": "Scientific Officer 2014",
+      "year": 2014,
       "position": "Scientific Officer",
       "visible": true,
-      "type": "premium",
-      "format": ["pdf"],
-      "totalQuestions": 70,
-      "description": "BSRI Scientific Officer পরীক্ষা ২০২৩"
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 60,
+      "description": "BSRI Scientific Officer পরীক্ষা ২০১৪"
     }
   ]
 }
