@@ -2,22 +2,22 @@
   "instituteId": "bfri-fisheries",
   "sets": [
     {
-      "id": "so-2020",
-      "title": "Scientific Officer 2020",
-      "year": 2020,
-      "position": "Scientific Officer",
+      "id": "so-2025",
+      "title": "উপ সহকারী কৃষি কর্মকর্তা নিয়োগ পরীক্ষা ২০২৫",
+      "year": 2025,
+      "position": "উপ সহকারী কৃষি কর্মকর্তা নিয়োগ পরীক্ষা",
       "visible": true,
       "type": "free",
       "format": ["article"],
-      "totalQuestions": 60,
-      "description": "BFRI (Fisheries) Scientific Officer পরীক্ষা ২০২০"
+      "totalQuestions": 100,
+      "description": "কৃষি সম্প্রসারণ অধিদপ্তর (DAE) ২০২৫"
     },
     {
       "id": "ad-2024",
       "title": "Assistant Director 2024",
       "year": 2024,
       "position": "Assistant Director",
-      "visible": true,
+      "visible": false,
       "type": "premium",
       "format": ["article", "pdf"],
       "totalQuestions": 85,
