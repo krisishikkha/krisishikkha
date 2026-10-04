@@ -1,5 +1,13 @@
 {
   "institutes": [
+   {
+      "id": "saao",
+      "nameEn": "SAAO/SA/FA",
+      "nameBn": "SAAO/SA/FA",
+      "fullName": "SAAO/SA/FA",
+      "visible": true,
+      "icon": "🎋"
+    },
     {
       "id": "bari",
       "nameEn": "BARI",
@@ -47,14 +55,6 @@
       "fullName": "Bangladesh Forestry Research Institute",
       "visible": false,
       "icon": "🌳"
-    },
-    {
-      "id": "saao",
-      "nameEn": "SAAO/SA/FA",
-      "nameBn": "SAAO/SA/FA",
-      "fullName": "SAAO/SA/FA",
-      "visible": true,
-      "icon": "🎋"
     },
     {
       "id": "btri",
