@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "BSRI-SO-2016",
+    "institute": "BSRI",
+    "year": 2016,
+    "position": "SO",
+    "totalQuestions": 21,
+    "type": "free",
+    "examDate": "2016",
+    "duration": null,
+    "totalMarks": null
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Which of the following is a linear polysaccharide?",
+      "options": ["Cellulose", "Pentose", "All of these", "None of these"],
+      "answer": 0,
+      "explanation": "সেলুলোজ (Cellulose) একটি রৈখিক ও শাখাবিহীন পলিস্যাকারাইড। এটি β-1,4 গ্লাইকোসিডিক বন্ধনে যুক্ত অসংখ্য গ্লুকোজ অণু দিয়ে তৈরি। উদ্ভিদের কোষপ্রাচীরের প্রধান উপাদান সেলুলোজ। পেন্টোজ ৫ কার্বনযুক্ত একটি মনোস্যাকারাইড (সরল শর্করা), তাই এটি পলিস্যাকারাইড নয়। পাট ও তুলার তন্তুতে সেলুলোজের পরিমাণ বেশি।",
+      "image": null
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which one is moderately salt tolerant?",
+      "options": ["Tomato", "Potato", "Rice", "Brinjal", "None of these"],
+      "answer": 0,
+      "explanation": "টমেটো (Tomato) মাঝারি লবণসহনশীল ফসল। আলু, ধান ও বেগুন লবণাক্ততার প্রতি তুলনামূলক বেশি সংবেদনশীল। বাংলাদেশের দক্ষিণ ও উপকূলীয় লবণাক্ত এলাকায় রবি মৌসুমে টমেটো চাষ করা যায়, তবে লবণাক্ততা বেশি হলে ফলন কমে যায়।",
+      "image": null
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "First cross breeding program in -",
+      "options": ["Wheat", "Maize", "Potato", "Rice", "None of these"],
+      "answer": 1,
+      "explanation": "ফসল প্রজননে সংকরায়ণ (crossing) প্রথম ব্যাপকভাবে ভুট্টায় (Maize) প্রয়োগ করা হয়। ভুট্টা পরপরাগী ফসল এবং একই গাছে পুরুষ ও স্ত্রী ফুল আলাদা থাকে, তাই সংকরায়ণ সহজ। G. H. Shull ও D. F. Jones এর কাজের মাধ্যমে হাইব্রিড ভুট্টা (double cross hybrid) জনপ্রিয় হয়। বাংলাদেশে বর্তমানে হাইব্রিড ভুট্টার চাষ দ্রুত বাড়ছে।",
+      "image": null
+    },
+    {
+      "id": 4,
+      "type": "written",
+      "question": "Available form of molybdenum is",
+      "answer": "MoO₄²⁻ (Molybdate ion)",
+      "explanation": "উদ্ভিদ মাটি থেকে মলিবডেনাম মলিবডেট আয়ন (MoO₄²⁻) রূপে গ্রহণ করে। মাটির pH বাড়লে এর প্রাপ্যতা বাড়ে, আর অম্লীয় মাটিতে কমে যায়। মলিবডেনাম নাইট্রেট রিডাক্টেজ ও নাইট্রোজিনেজ এনজাইমের উপাদান, তাই ডালজাতীয় ফসলে এটি গুরুত্বপূর্ণ। এর অভাবে ফুলকপিতে হুইপটেইল (Whiptail) রোগ হয়।",
+      "image": null
+    },
+    {
+      "id": 5,
+      "type": "written",
+      "question": "Outgrower scheme",
+      "answer": "Contact farming",
+      "explanation": "আউটগ্রোয়ার স্কিম (Outgrower scheme) হলো চুক্তিভিত্তিক চাষ (Contract/Contact farming)। এতে কোনো কোম্পানি বা মিল কৃষকের সঙ্গে আগেই চুক্তি করে। কোম্পানি বীজ, সার ও পরামর্শ দেয় এবং কৃষকের উৎপাদিত ফসল নির্ধারিত দামে কিনে নেয়। বাংলাদেশে চিনিকলের আখ চাষ, তামাক চাষ এবং আলু ও সবজি চাষে এই পদ্ধতি দেখা যায়।",
+      "image": null
+    },
+    {
+      "id": 6,
+      "type": "written",
+      "question": "Mollic epipedon is",
+      "answer": "A thick, dark-colored surface mineral horizon rich in organic matter and bases (base saturation more than 50%)",
+      "explanation": "মলিক এপিপিডন (Mollic epipedon) মাটির উপরের স্তরের একটি পুরু ও গাঢ় রঙের খনিজ হরাইজন। এতে জৈব পদার্থ প্রচুর থাকে এবং ক্ষারীয় ক্যাটায়নের (বেস) সম্পৃক্ততা ৫০% এর বেশি হয়। এটি মলিসল (Mollisol) মাটির বৈশিষ্ট্যসূচক স্তর। পুরোপুরি জৈব পদার্থে গঠিত উপরের স্তরকে বলা হয় হিস্টিক এপিপিডন।",
+      "image": null
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "In various plants, the metabolic process \"PPP\" is the abbreviation of",
+      "options": ["Plant protection procedures", "Produce per plant", "Pentose phosphate pathway", "Plant production process", "None of these"],
+      "answer": 2,
+      "explanation": "PPP এর পূর্ণরূপ Pentose Phosphate Pathway, যা HMP shunt নামেও পরিচিত। এটি গ্লুকোজ ভাঙার একটি বিকল্প পথ এবং কোষের সাইটোসলে ঘটে। এই পথে NADPH ও ৫ কার্বনযুক্ত শর্করা (রাইবোজ-৫-ফসফেট) তৈরি হয়। NADPH চর্বি সংশ্লেষে লাগে এবং রাইবোজ নিউক্লিক অ্যাসিড (DNA ও RNA) গঠনে লাগে।",
+      "image": null
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Papain is a",
+      "options": ["Cysteine protease enzyme", "Aspartate protease enzyme", "Threonine protease enzyme", "Serine protease enzyme"],
+      "answer": 0,
+      "explanation": "পাপাইন (Papain) একটি সিস্টেইন প্রোটিয়েজ (Cysteine protease) এনজাইম। এটি কাঁচা পেঁপের (Carica papaya) দুধ বা ল্যাটেক্স থেকে পাওয়া যায়। এর সক্রিয় স্থানে সিস্টেইন অ্যামিনো অ্যাসিড থাকে। মাংস নরম করতে এবং ওষুধ ও প্রসাধনী শিল্পে এটি ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Some plants have ______ on their leaves to protect themselves from herbivores?",
+      "options": ["Cu", "Si", "None of these"],
+      "answer": 1,
+      "explanation": "অনেক উদ্ভিদ পাতায় সিলিকন (Si) জমা করে, যাকে ফাইটোলিথ বলা হয়। এতে পাতা শক্ত ও ঘর্ষণকারী হয়ে যায়, ফলে তৃণভোজী পোকা বা প্রাণী সহজে খেতে পারে না। ধান ও ঘাসজাতীয় উদ্ভিদে সিলিকন বেশি থাকে। বাংলাদেশে ধানে সিলিকন কাণ্ড ছিদ্রকারী পোকা ও ব্লাস্ট রোগ প্রতিরোধে সাহায্য করে।",
+      "image": null
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Destructive insect pest in temperate region?",
+      "options": ["Aphid", "Calosoma", "Coccinellidae", "Carabid", "None of these"],
+      "answer": 0,
+      "explanation": "এফিড (Aphid) নাতিশীতোষ্ণ অঞ্চলের একটি ক্ষতিকর পোকা। এটি গাছের রস চুষে খায় এবং ভাইরাস রোগ ছড়ায়। Calosoma, Coccinellidae (লেডিবার্ড বিটল) ও Carabid উপকারী শিকারি পোকা, যা এফিডসহ অন্য ক্ষতিকর পোকা খেয়ে দমন করে। বাংলাদেশে সরিষার জাব পোকা ও আখের উলি এফিড পরিচিত ক্ষতিকর পোকা।",
+      "image": null
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Primary protein to build up cuticle of nematode?",
+      "options": ["Globin", "Secretins", "Tubulins", "Collagen", "None of these"],
+      "answer": 3,
+      "explanation": "নিমাটোডের দেহের বাইরের আবরণ কিউটিকল (cuticle) প্রধানত কোলাজেন (Collagen) প্রোটিন দিয়ে তৈরি। এটি দেহকে সুরক্ষা ও আকৃতি দেয়। গ্লোবিন রক্তের প্রোটিন এবং টিউবিউলিন কোষের মাইক্রোটিউবিউলের উপাদান। বাংলাদেশে ধান ও সবজিতে রুট-নট নিমাটোড ক্ষতি করে।",
+      "image": null
+    },
+    {
+      "id": 12,
+      "type": "written",
+      "question": "Which gene based technique is used in dicot?",
+      "answer": "Ti plasmid",
+      "explanation": "Agrobacterium tumefaciens ব্যাকটেরিয়ার Ti (Tumor-inducing) প্লাজমিড ব্যবহার করে জিন স্থানান্তর করা হয়। এই পদ্ধতিকে Agrobacterium-mediated transformation বলে। এটি প্রধানত দ্বিবীজপত্রী উদ্ভিদে কার্যকর, কারণ প্রাকৃতিকভাবে এই ব্যাকটেরিয়া দ্বিবীজপত্রীতে সংক্রমণ ঘটায়। একবীজপত্রী উদ্ভিদে সাধারণত জিন গান (gene gun) পদ্ধতি বেশি ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Phytophthora is a --",
+      "options": ["Bacteria", "Fungi", "Virus", "Oomycetes", "None of these"],
+      "answer": 3,
+      "explanation": "ফাইটোফথোরা (Phytophthora) একটি ঔমাইসিট (Oomycetes)। আগে একে ছত্রাক ধরা হতো, কিন্তু এর কোষপ্রাচীর সেলুলোজ দিয়ে তৈরি, যেখানে প্রকৃত ছত্রাকের কোষপ্রাচীর কাইটিন দিয়ে তৈরি। বাংলাদেশে শীতকালে আলুর লেট ব্লাইট রোগ Phytophthora infestans এর কারণে হয়।",
+      "image": null
+    },
+    {
+      "id": 14,
+      "type": "written",
+      "question": "Which one is coconut leaf beetle?",
+      "answer": "Brontispa longissima",
+      "explanation": "Brontispa longissima হলো নারিকেলের পাতার বিটল (Coconut leaf beetle বা Coconut hispid beetle)। এর পূর্ণাঙ্গ পোকা ও কীড়া নতুন কুঁড়ি পাতার ভেতরে থেকে সবুজ অংশ খায়। এতে পাতা শুকিয়ে যায় এবং গাছ দুর্বল হয়ে পড়ে।",
+      "image": null
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Micro irrigation technique is used in -",
+      "options": ["Grapes", "Potato", "Tomato", "Rice", "None of these"],
+      "answer": 0,
+      "explanation": "মাইক্রো ইরিগেশনে (ড্রিপ ও স্প্রিংকলার) পানি সরাসরি গাছের শিকড় অঞ্চলে অল্প পরিমাণে দেওয়া হয়, তাই পানি সাশ্রয় হয়। এটি আঙুরের মতো বহুবর্ষজীবী ও উচ্চমূল্যের বাগানজাতীয় ফসলে বেশি ব্যবহৃত হয়। ধান ও আলুতে সাধারণত নালা বা প্লাবন পদ্ধতিতে সেচ দেওয়া হয়।",
+      "image": null
+    },
+    {
+      "id": 16,
+      "type": "written",
+      "question": "Most popular method of fertilizer application in Bangladesh?",
+      "answer": "Broadcasting",
+      "explanation": "বাংলাদেশে কৃষকরা সবচেয়ে বেশি ব্রডকাস্টিং (Broadcasting) বা ছিটিয়ে সার প্রয়োগ করেন। এটি সহজ ও কম শ্রমসাপেক্ষ। তবে এতে সারের অপচয় বেশি হয়। ইউরিয়া সুপার গ্রানুল (USG) গুঁজে দিলে (deep placement) সারের দক্ষতা অনেক বেশি পাওয়া যায়।",
+      "image": null
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Spined soldier bug is a predator of",
+      "options": ["Larvae of beetles", "Gypsy moth", "Bees", "Both a & b", "None of these"],
+      "answer": 3,
+      "explanation": "স্পাইনড সোলজার বাগ (Podisus maculiventris) একটি শিকারি পোকা। এটি বিটলের লার্ভা এবং জিপসি মথের শূককীট (caterpillar) শিকার করে খায়। তাই a ও b উভয়ই সঠিক। মৌমাছি এর শিকার নয়। জৈব দমনে (biological control) এবং সমন্বিত বালাই ব্যবস্থাপনায় (IPM) এটি ব্যবহৃত হয়।",
+      "image": null
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "The most efficient use of potassium is achieved by",
+      "options": ["Broadcasting at the time of sowing", "Top dressing after one month of sowing", "Basal placement at the sowing time", "Foliar spray", "None of these"],
+      "answer": 2,
+      "explanation": "পটাশিয়াম মাটিতে কম চলাচল করে, তাই শিকড়ের কাছে বপনের সময় বেসাল প্রয়োগ (Basal placement) করলে এর দক্ষতা সবচেয়ে বেশি হয়। বাংলাদেশে MoP (মিউরেট অব পটাশ) সাধারণত শেষ চাষের সময় বা জমি তৈরির সময় মাটিতে মিশিয়ে দেওয়া হয়।",
+      "image": null
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "In traditional landscaping, leaves are raked off the ground and bagged. In which of the following ways does this practice most significantly disrupt natural nutrient cycling?",
+      "options": ["It carries away microorganisms that can perform nitrogen fixation", "It reduces the rate of oxygen and carbon cycling via photosynthesis", "It prevents carbon, oxygen and nitrogen from being returned to the soil", "It increases the amount of carbon dioxide that is released to the atmosphere", "None of these"],
+      "answer": 2,
+      "explanation": "মাটিতে পড়া পাতা পচে জৈব পদার্থ (humus) তৈরি করে এবং কার্বন ও নাইট্রোজেনসহ বিভিন্ন পুষ্টি উপাদান মাটিতে ফিরিয়ে দেয়। পাতা তুলে ফেললে এই চক্র ব্যাহত হয়, ফলে মাটির উর্বরতা কমে যায়। বাংলাদেশের অনেক মাটিতে জৈব পদার্থ আগে থেকেই কম (প্রায় ২% এর নিচে), তাই পাতা ও ফসলের অবশিষ্টাংশ মাটিতে ফেরানো জরুরি।",
+      "image": null
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "Which is the main function of zinc in the plants?",
+      "options": ["Synthesis of nitrogen", "Synthesis of phosphorus", "Required for synthesis of tryptophan", "To increase activity of boron", "None of these"],
+      "answer": 2,
+      "explanation": "জিংক (Zn) ট্রিপটোফ্যান অ্যামিনো অ্যাসিড সংশ্লেষণে প্রয়োজন হয়। ট্রিপটোফ্যান থেকে অক্সিন (IAA) নামক বৃদ্ধি হরমোন তৈরি হয়, তাই জিংকের অভাবে গাছ খর্বাকৃতি হয়। বাংলাদেশে ধানের খায়রা রোগ জিংকের অভাবে হয়। এজন্য ধানে জিংক সালফেট সার দেওয়া হয়।",
+      "image": null
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Which elements are useful in energy storage, transfer and bonding?",
+      "options": ["NPK", "NSP", "NKS", "None of these"],
+      "answer": 1,
+      "explanation": "শক্তি সঞ্চয়, স্থানান্তর ও রাসায়নিক বন্ধন গঠনে N, S ও P তিনটি মৌলই গুরুত্বপূর্ণ। ফসফরাস (P) ATP ও ADP এর উচ্চশক্তির ফসফেট বন্ধনে থাকে। নাইট্রোজেন (N) ATP, নিউক্লিওটাইড ও প্রোটিনের অংশ। সালফার (S) ডাইসালফাইড বন্ধন ও Acetyl-CoA এর উচ্চশক্তির থায়োএস্টার বন্ধনে থাকে। পটাশিয়াম (K) প্রধানত অসমোসিস ও এনজাইম সক্রিয়করণে কাজ করে, বন্ধন গঠনে নয়। তাই সঠিক উত্তর NSP।",
+      "image": null
+    }
+  ]
+}
