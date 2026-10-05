@@ -13,6 +13,17 @@
       "description": "কৃষি সম্প্রসারণ অধিদপ্তর (DAE) ২০২৫"
     },
     {
+      "id": "saao-20255",
+      "title": "বৈজ্ঞানিক সহকারী নিয়োগ পরীক্ষা (লিখিত) ২০২৫",
+      "year": 2025,
+      "position": "বৈজ্ঞানিক সহকারী নিয়োগ পরীক্ষা (লিখিত)",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 20,
+      "description": "কৃষি সম্প্রসারণ অধিদপ্তর (DAE) ২০২৫"
+    },
+    {
       "id": "ad-2024",
       "title": "Assistant Director 2024",
       "year": 2024,
