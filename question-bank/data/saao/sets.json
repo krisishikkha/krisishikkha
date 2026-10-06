@@ -44,6 +44,17 @@
       "format": ["article", "pdf"],
       "totalQuestions": 85,
       "description": "BFRI (Fisheries) Assistant Director পরীক্ষা ২০২৪"
+    },
+    {
+      "id": "sa-2022",
+      "title": "বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট - বৈজ্ঞানিক কর্মকর্তা নিয়োগ পরীক্ষা ২০২২",
+      "year": 2022,
+      "position": "বৈজ্ঞানিক সহকারী নিয়োগ পরীক্ষা",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 31,
+      "description": "বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট - বৈজ্ঞানিক কর্মকর্তা নিয়োগ পরীক্ষা ২০২২"
     }
   ]
 }
