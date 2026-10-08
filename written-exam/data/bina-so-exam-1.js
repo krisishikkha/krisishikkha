@@ -1,8 +1,8 @@
-var EXAM_BINA_SO_1 = {
+var EXAM_BSRI_SO_1 = {
     id: "bina-so-exam-1",
-    title: "BINA SO Exam – 1 access code:2025",
+    title: "BSRI SO Exam – 1 access code:2025",
 status: "live",   // এখানে: "draft" | "live" | "locked" | "archive"
-    institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
+    institute: "Bangladesh Sugarcrop Research Institute",
     setName: "Model Test – 01",
     accessCode: "2025",
     durationMinutes: 60,
