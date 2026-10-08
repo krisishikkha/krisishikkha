@@ -1,7 +1,7 @@
 var EXAM_BINA_SO_11 = {
     id: "bina-so-exam-11",
     title: "BINA SO Exam – 11",
-    status: "live",
+    status: "draft",
     institute: "Bangladesh Institute of Nuclear Agriculture (BINA)",
     setName: "Model Test – 11",
     accessCode: "8383",
