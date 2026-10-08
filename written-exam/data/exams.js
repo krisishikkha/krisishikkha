@@ -74,54 +74,54 @@ var EXAMS_REGISTRY = [
         file: 'bina-so-exam-12.js',
         dataVar: 'EXAM_BINA_SO_12'
     },
-    {
-        id: 'bina-so-exam-13',
-        title: 'BINA SO Exam – 13',
-        file: 'bina-so-exam-13.js',
-        dataVar: 'EXAM_BINA_SO_13'
-    },
-    {
-        id: 'bina-so-exam-14',
-        title: 'BINA SO Exam – 14',
-        file: 'bina-so-exam-14.js',
-        dataVar: 'EXAM_BINA_SO_14'
-    },
-    {
-        id: 'bina-so-exam-15',
-        title: 'BINA SO Exam – 15',
-        file: 'bina-so-exam-15.js',
-        dataVar: 'EXAM_BINA_SO_15'
-    },
-    {
-        id: 'bina-so-exam-16',
-        title: 'BINA SO Exam – 16',
-        file: 'bina-so-exam-16.js',
-        dataVar: 'EXAM_BINA_SO_16'
-    },
-    {
-        id: 'bina-so-exam-17',
-        title: 'BINA SO Exam – 17',
-        file: 'bina-so-exam-17.js',
-        dataVar: 'EXAM_BINA_SO_17'
-    },
-    {
-        id: 'bina-so-exam-18',
-        title: 'BINA SO Exam – 18',
-        file: 'bina-so-exam-18.js',
-        dataVar: 'EXAM_BINA_SO_18'
-    },
-    {
-        id: 'bina-so-exam-19',
-        title: 'BINA SO Exam – 19',
-        file: 'bina-so-exam-19.js',
-        dataVar: 'EXAM_BINA_SO_19'
-    },
-    {
-        id: 'bina-so-exam-20',
-        title: 'BINA SO Exam – 20',
-        file: 'bina-so-exam-20.js',
-        dataVar: 'EXAM_BINA_SO_20'
-    }
+   {
+    id: 'bsri-so-exam-13',
+    title: 'BSRI SO Exam – 13',
+    file: 'bsri-so-exam-13.js',
+    dataVar: 'EXAM_BSRI_SO_13'
+},
+{
+    id: 'bsri-so-exam-14',
+    title: 'BSRI SO Exam – 14',
+    file: 'bsri-so-exam-14.js',
+    dataVar: 'EXAM_BSRI_SO_14'
+},
+{
+    id: 'bsri-so-exam-15',
+    title: 'BSRI SO Exam – 15',
+    file: 'bsri-so-exam-15.js',
+    dataVar: 'EXAM_BSRI_SO_15'
+},
+{
+    id: 'bsri-so-exam-16',
+    title: 'BSRI SO Exam – 16',
+    file: 'bsri-so-exam-16.js',
+    dataVar: 'EXAM_BSRI_SO_16'
+},
+{
+    id: 'bsri-so-exam-17',
+    title: 'BSRI SO Exam – 17',
+    file: 'bsri-so-exam-17.js',
+    dataVar: 'EXAM_BSRI_SO_17'
+},
+{
+    id: 'bsri-so-exam-18',
+    title: 'BSRI SO Exam – 18',
+    file: 'bsri-so-exam-18.js',
+    dataVar: 'EXAM_BSRI_SO_18'
+},
+{
+    id: 'bsri-so-exam-19',
+    title: 'BSRI SO Exam – 19',
+    file: 'bsri-so-exam-19.js',
+    dataVar: 'EXAM_BSRI_SO_19'
+},
+{
+    id: 'bsri-so-exam-20',
+    title: 'BSRI SO Exam – 20',
+    file: 'bsri-so-exam-20.js',
+    dataVar: 'EXAM_BSRI_SO_20'
+}
     // নতুন exam যোগ করতে এখানে কমা দিয়ে আরেকটা object বসান, উদাহরণ:
     // { id: 'bari-so-exam-3', title: 'BARI SO Exam – 03', file: 'bari-so-exam-3.js', dataVar: 'EXAM_BARI_SO_3' }
 ];
