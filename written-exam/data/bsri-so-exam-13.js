@@ -1,7 +1,7 @@
 var EXAM_BSRI_SO_13 = {
     id: "bsri-so-exam-13",
     title: "BSRI SO Exam – 13",
-    status: "live",
+    status: "draft",
     institute: "Bangladesh Sugarcrop Research Institute",
     setName: "Model Test – 1",
     accessCode: "1313",
