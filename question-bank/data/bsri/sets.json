@@ -1,6 +1,17 @@
 {
   "instituteId": "bsri",
   "sets": [
+       {
+      "id": "so-2026",
+      "title": "Scientific Officer 2026",
+      "year": 2026,
+      "position": "Scientific Officer",
+      "visible": true,
+      "type": "free",
+      "format": ["article"],
+      "totalQuestions": 61,
+      "description": "BSRI Scientific Officer পরীক্ষা ২০২৬"
+     },
      {
       "id": "so-2023",
       "title": "Scientific Officer 2023",
