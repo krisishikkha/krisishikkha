@@ -74,5 +74,3 @@
     {"id": 61, "type": "written", "question": "২০২৫ সালে একটি পণ্যের মূল্য ৬৫ টাকা/কেজি, ২০২৬ সালে একই পণ্যের মূল্য ৫২ টাকা/কেজি হলে Devaluation rate কত?", "answer": "২০%", "explanation": "মূল্য হ্রাসের হার বের করার সূত্র: (পুরাতন মূল্য − নতুন মূল্য) ÷ পুরাতন মূল্য × ১০০\n\nমূল্য হ্রাস = ৬৫ − ৫২ = ১৩ টাকা\n\n১৩ ÷ ৬৫ = ০.২\n\n০.২ × ১০০ = ২০%\n\nসুতরাং হ্রাসের হার ২০%।\n\nমনে রাখুন: প্রকৃত ‘Devaluation’ বলতে অন্য মুদ্রার তুলনায় দেশীয় মুদ্রার মূল্য কমানো বোঝায়। পণ্যের দাম কমাকে সাধারণত মূল্য হ্রাস (price decrease) বলে।", "image": null}
   ]
 }
-// Note: duration ("1 hours") and totalMarks (61) in meta were not given in the file, so they are assumed. Please correct them.
-// Note: Q39 answer changed to 8-10 months (the standard BSRI recommendation); Q17 uses the sugarcane meaning (Spaced Transplanting); Q22 was blank and is filled from the official Nobel announcement.
